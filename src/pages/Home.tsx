@@ -15,7 +15,9 @@ const Home = () => {
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-primary">Midterm Exam Simulator</h1>
+            <h1 className="text-2xl font-bold text-primary">
+              NET4009 Practice Exam
+            </h1>
             <p className="text-sm text-muted-foreground">Modules 1-5</p>
           </div>
           <Button
@@ -23,7 +25,11 @@ const Home = () => {
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {theme === "dark" ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
           </Button>
         </div>
       </header>
@@ -43,15 +49,18 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <Card className="p-8 hover:border-primary transition-all cursor-pointer group" onClick={() => navigate("/practice")}>
+            <Card
+              className="p-8 hover:border-primary transition-all cursor-pointer group"
+              onClick={() => navigate("/practice")}
+            >
               <div className="flex flex-col items-center text-center space-y-4">
                 <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <BookOpen className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold">Practice Mode</h3>
                 <p className="text-muted-foreground">
-                  Study at your own pace with immediate feedback. Filter by module and review
-                  correct answers instantly.
+                  Study at your own pace with immediate feedback. Filter by
+                  module and review correct answers instantly.
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>✓ Immediate feedback</li>
@@ -65,15 +74,18 @@ const Home = () => {
               </div>
             </Card>
 
-            <Card className="p-8 hover:border-primary transition-all cursor-pointer group" onClick={() => navigate("/exam")}>
+            <Card
+              className="p-8 hover:border-primary transition-all cursor-pointer group"
+              onClick={() => navigate("/exam")}
+            >
               <div className="flex flex-col items-center text-center space-y-4">
                 <div className="h-16 w-16 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                   <Timer className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-2xl font-bold">Exam Mode</h3>
                 <p className="text-muted-foreground">
-                  Simulate the real exam experience with 40 random questions and a 30-minute
-                  time limit.
+                  Simulate the real exam experience with 40 random questions and
+                  a 30-minute time limit.
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>✓ 40 random questions</li>
@@ -102,7 +114,9 @@ const Home = () => {
 
           <div className="mt-12 text-center text-sm text-muted-foreground">
             <p>All questions are multiple choice with all-or-nothing grading</p>
-            <p className="mt-1">Module 6 questions are excluded from this simulator</p>
+            <p className="mt-1">
+              Module 6 questions are excluded from this simulator
+            </p>
           </div>
         </div>
       </main>
