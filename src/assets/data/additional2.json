@@ -1,0 +1,131 @@
+[
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Which two commands can be used to verify the interfaces participating in an OSPFv3 process? (Choose two.)",
+    "options": [
+      "show ipv6 ospf interface brief",
+      "show ipv6 ospf neighbors",
+      "show ipv6 ospf interface",
+      "show ipv6 protocols"
+    ],
+    "correct_answers": [
+      "show ipv6 ospf interface brief",
+      "show ipv6 ospf interface"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Refer to the exhibit.\n\n```\nR1#show ipv6 ospf\nRouting Process \"ospf 10\" with ID 1.1.1.1\nSupports only single TOS(TOS0) routes\nRouter is not originating router-LSAs with maximum metric\nReference bandwidth unit is 100 Mbps\nSPF schedule delay 5 secs, Hold time between two SPFs 10 secs\nArea 0: SPF algorithm executed 3 times\n```\n\nBased on the output, what can you verify about R1?",
+    "options": [
+      "R1 is an ASBR redistributing external routes",
+      "R1 is an ABR between two OSPFv3 areas",
+      "R1 has a stub area configured",
+      "R1 is part of a totally NSSA area"
+    ],
+    "correct_answers": ["R1 is an ABR between two OSPFv3 areas"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "When troubleshooting OSPFv3 adjacencies, which two multicast addresses should be verified in the output of the `show ipv6 interface` command? (Choose two.)",
+    "options": ["FF02::5", "FF02::6", "FF02::9", "FF02::A"],
+    "correct_answers": ["FF02::5", "FF02::6"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "True or False: OSPFv3 for IPv6 uses the same multicast address as EIGRPv6 for neighbor discovery.",
+    "options": ["True", "False"],
+    "correct_answers": ["False"],
+    "question_type": "true_false",
+    "points": 0.5
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Refer to the exhibit.\n\n```\nR1#show ipv6 ospf neighbor\nNeighbor ID     Pri   State          Dead Time   Interface ID\n2.2.2.2         1     FULL/DR        00:00:36    Gi0/0\n3.3.3.3         1     2WAY/DROTHER   00:00:33    Gi0/1\n```\n\nWhat can be concluded about the OSPFv3 neighbor relationship?",
+    "options": [
+      "R1 is the DR on both interfaces",
+      "R1 has a full adjacency with both neighbors",
+      "Gi0/1 interface is in a broadcast network but not fully adjacent",
+      "Neighbor 3.3.3.3 is in a different area"
+    ],
+    "correct_answers": [
+      "Gi0/1 interface is in a broadcast network but not fully adjacent"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Which command displays all LSAs collected in the OSPFv3 LSDB?",
+    "options": [
+      "show ipv6 ospf routes",
+      "show ipv6 ospf database",
+      "show ipv6 ospf lsa",
+      "show ospfv3 database"
+    ],
+    "correct_answers": ["show ipv6 ospf database"],
+    "question_type": "single_choice",
+    "points": 0.5
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Which statement accurately describes OSPFv3 Address Families (AFs)?",
+    "options": [
+      "They require separate OSPF processes for IPv4 and IPv6",
+      "They share a single database for both IPv4 and IPv6",
+      "They require different router IDs for each address family",
+      "They are backward compatible with OSPFv2 for IPv4"
+    ],
+    "correct_answers": ["They share a single database for both IPv4 and IPv6"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Refer to the configuration snippet:\n\n```\ninterface GigabitEthernet0/0\n ipv6 enable\n ospfv3 10 ipv4 area 23\n ospfv3 10 ipv6 area 23\n```\n\nWhat is true about this configuration?",
+    "options": [
+      "The interface participates only in the IPv6 address family",
+      "Both IPv4 and IPv6 OSPFv3 adjacencies can form on this interface",
+      "The OSPFv3 process ID must match between neighbors for adjacency",
+      "IPv6 unicast-routing is optional in this setup"
+    ],
+    "correct_answers": [
+      "Both IPv4 and IPv6 OSPFv3 adjacencies can form on this interface"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Which command can verify the OSPFv3 IPv4 routes installed in the routing table when using address families?",
+    "options": [
+      "show ip route ospf",
+      "show ip route ospfv3",
+      "show ipv6 route ospfv3",
+      "show ospfv3 ipv4 route"
+    ],
+    "correct_answers": ["show ip route ospfv3"],
+    "question_type": "single_choice",
+    "points": 0.5
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Refer to the exhibit.\n\n```\nR1(config)#debug ospfv3 ipv6 hello\nOSPFv3-HELLO: Interface GigabitEthernet0/1, Sending Hello to FF02::5\nOSPFv3-HELLO: Interface GigabitEthernet0/1, Received Hello from 2001:db8:10::2\n```\n\nWhat is verified by this output?",
+    "options": [
+      "The router is successfully exchanging OSPFv3 hellos with its neighbor",
+      "The router is missing its router ID configuration",
+      "The router is failing to receive LSAs from its neighbor",
+      "The interface MTU is mismatched with its peer"
+    ],
+    "correct_answers": [
+      "The router is successfully exchanging OSPFv3 hellos with its neighbor"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

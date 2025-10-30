@@ -1,0 +1,190 @@
+[
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "Customer observed an error message after enabling an OSPF debug command. Which debug command was used to reveal this problem?",
+    "options": [
+      "debug ip ospf area",
+      "debug ip ospf mismatch",
+      "debug ip ospf hello",
+      "debug ip ospf adjacency"
+    ],
+    "correct_answers": ["debug ip ospf hello"],
+    "question_type": "single_choice",
+    "points": 1.5
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "Which command can be used with Classic OSPFv3 IPv6 to display configured interface timers?",
+    "options": [
+      "show ipv6 ospfv3 interface",
+      "show ipv6 ospf interface",
+      "show ipv6 protocols",
+      "show ipv6 ospf interface timers"
+    ],
+    "correct_answers": ["show ipv6 ospf interface timers"],
+    "question_type": "single_choice",
+    "points": 0.5
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "A router using OSPFv3 Address Family (OSPFv3 AF) for IPv4 will peer with a router using the classic OSPFv2 configuration for IPv4 because they are compatible.",
+    "options": ["True", "False"],
+    "correct_answers": ["False"],
+    "question_type": "true_false",
+    "points": 0.75
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "Refer to the exhibit of the routing table from a router that is a backbone router and ABR for Area 1. How will this routing table change if Area 1 is configured as a Stub area?",
+    "options": [
+      "None of the routes will be removed as a result of Area 1 and this ABR being configured as a stub",
+      "Only the O IA routes and the two O E2 subnet routes to the 192.168.0.0 networks will be removed from the routing table",
+      "Only the O E2 routes will be removed from the routing table",
+      "All of the O IA and O E2 routes will be removed from the routing table"
+    ],
+    "correct_answers": [
+      "Only the O E2 routes will be removed from the routing table"
+    ],
+    "question_type": "single_choice",
+    "points": 1.5
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "Which command is used to verify that Classic OSPFv3 is enabled and also provides a list of the networks that are being advertised by the network?",
+    "options": [
+      "sh ipv6 ospf protocols",
+      "sh ipv6 ospf details",
+      "sh ipv6 ospf protocols",
+      "sh ipv6 protocols"
+    ],
+    "correct_answers": ["sh ipv6 ospf protocols"],
+    "question_type": "single_choice",
+    "points": 0.25
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "Refer to the exhibit. Which would be chosen as the router ID of R2?",
+    "options": [
+      "The router ID has to be manually configured",
+      "FE80::2",
+      "2001:DB8:CAFE:2::1/64",
+      "2001:DB8:CAFE:A002::1/64"
+    ],
+    "correct_answers": ["2001:DB8:CAFE:A002::1/64"],
+    "question_type": "single_choice",
+    "points": 1.5
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "Based on the hub and spoke topology, which router should be elected as the OSPFv2 DR?",
+    "options": ["R1", "R2", "R3", "R4"],
+    "correct_answers": ["R1"],
+    "question_type": "single_choice",
+    "points": 0.5
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "Customer was checking the routing table on an OSPFv2 ABR router and noticed the entry 'O 10.1.0.0/16 is a summary, 00:16:07, Null0'. What two items can be concluded from the output?",
+    "options": [
+      "Null0 summary route is created on ABR router to enable default route propagation",
+      "Automatic summarization has been enabled on ABR router",
+      "Manual summarization has been enabled on ABR router",
+      "Null0 summary route is created on ABR router to prevent routing loops"
+    ],
+    "correct_answers": [
+      "Manual summarization has been enabled on ABR router",
+      "Null0 summary route is created on ABR router to prevent routing loops"
+    ],
+    "question_type": "multiple_choice",
+    "points": 0.75
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "R1 and R2 are connected to the same LAN segment and configured to run OSPFv3. What two items can be concluded based on this output?",
+    "options": [
+      "\"debug ipv6 ospf hello\" can be used to troubleshoot this problem",
+      "\"debug ip ospf hello\" can be used to troubleshoot this problem",
+      "Neighbor adjacency will not be formed between R1 and R2",
+      "Neighbor adjacency will be formed between R1 and R2"
+    ],
+    "correct_answers": [
+      "\"debug ipv6 ospf hello\" can be used to troubleshoot this problem",
+      "Neighbor adjacency will not be formed between R1 and R2"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1.75
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "A customer is troubleshooting an OSPFv2 issue related to a 'totally stub' area configuration. Routes that appear on R4 should be only intra-area and a default route; however, inter-area routes are also showing. Which configuration correction is required to fix this issue?",
+    "options": [
+      "issue 'area 2 stub no-summary' command on R3",
+      "remove 'area 2 stub' command from R4",
+      "issue 'area 2 stub totally' command on both R3 and R4",
+      "issue 'area 2 totally stub' command on R3"
+    ],
+    "correct_answers": ["issue 'area 2 stub no-summary' command on R3"],
+    "question_type": "single_choice",
+    "points": 1.5
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "What are two features of OSPFv3 Address Family (OSPFv3 AF)?",
+    "options": [
+      "128 bit router-id is used",
+      "32 bit router-id is used",
+      "Supports both IPv4 and IPv6 address families within a single instance",
+      "Supports redistribution only for IPv6"
+    ],
+    "correct_answers": [
+      "32 bit router-id is used",
+      "Supports both IPv4 and IPv6 address families within a single instance"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "A customer is troubleshooting load balancing on 8x100 Mbps links between two routers configured with OSPFv2. All 8 links are in UP/UP operational state. Which two OSPFv2 configuration parameters should the customer check and adjust if needed?",
+    "options": [
+      "\"maximum-paths <maximum paths value>\" parameter",
+      "OSPFv2 variance parameter",
+      "auto-cost reference bandwidth set to 100 Mbps",
+      "auto-cost reference bandwidth set to 1000 Mbps"
+    ],
+    "correct_answers": [
+      "\"maximum-paths <maximum paths value>\" parameter",
+      "auto-cost reference bandwidth set to 1000 Mbps"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1.25
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "Directly connected networks configured on router R1 are not being shared with neighboring routers through Classic OSPFv3 IPv6. What is the cause of the issue?",
+    "options": [
+      "Gigabit interfaces are not enabled for ospfv3 advertisement",
+      "ospfv3 requires network statements under 'ospfv3 routing process' for proper operation",
+      "ospfv3 routing process is shutdown by default, no shutdown is required",
+      "router id should be 128 bits IPv6 address"
+    ],
+    "correct_answers": [
+      "ospfv3 requires network statements under 'ospfv3 routing process' for proper operation"
+    ],
+    "question_type": "single_choice",
+    "points": 0.5
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "question": "What is the result of a router being configured with OSPFv3 for IPv6 when no explicit RID is configured and there are no active IPv4 interfaces?",
+    "options": [
+      "OSPFv3 does not require a RID and neighbor adjacencies will form normally",
+      "OSPFv3 will automatically generate a RID once an adjacency with another OSPFv3 router is formed",
+      "OSPFv3 will automatically assign a RID that is based on the highest IPv6 link-local address configured on the router",
+      "OSPFv3 will not allow neighbor adjacencies to form"
+    ],
+    "correct_answers": ["OSPFv3 will not allow neighbor adjacencies to form"],
+    "question_type": "single_choice",
+    "points": 0.75
+  }
+]

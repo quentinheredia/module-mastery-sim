@@ -1,0 +1,119 @@
+[
+  {
+    "module": "Module 1 - Troubleshooting Basics",
+    "question": "Which two structured troubleshooting approaches are best suited for identifying misconfiguration issues in a Layer 3 topology?",
+    "options": [
+      "Top-down approach",
+      "Bottom-up approach",
+      "Compare-configurations approach",
+      "Swap-components approach"
+    ],
+    "correct_answers": ["Compare-configurations approach", "Top-down approach"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 1 - Troubleshooting Basics",
+    "question": "Refer to the exhibit. A network engineer enables the following command on R1:\n\n```\nR1#debug ip packet detail 101\nR1(config)#access-list 101 permit tcp any any eq telnet\n```\n\nWhat is the purpose of this configuration?",
+    "options": [
+      "To capture Telnet packets for analysis while minimizing CPU usage",
+      "To filter all packets destined for port 23 from being forwarded",
+      "To debug only Telnet traffic matching the ACL and send results to the console",
+      "To allow Telnet access to router R1 for remote management"
+    ],
+    "correct_answers": [
+      "To debug only Telnet traffic matching the ACL and send results to the console"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 1 - Troubleshooting Basics",
+    "question": "A router acting as a DHCP relay agent is not forwarding DHCPDISCOVER messages to the server. Which command should be verified to ensure the router is correctly configured for this role?",
+    "options": [
+      "ip helper-address",
+      "ip dhcp excluded-address",
+      "ip relay enable",
+      "service dhcp"
+    ],
+    "correct_answers": ["ip helper-address"],
+    "question_type": "single_choice",
+    "points": 0.5
+  },
+  {
+    "module": "Module 1 - Troubleshooting Basics",
+    "question": "Which of the following conditions could result in high CPU utilization on a router? (Choose two.)",
+    "options": [
+      "CEF disabled or misconfigured",
+      "Hardware encryption enabled",
+      "Packet fragmentation and reassembly",
+      "Low MTU size on serial interfaces"
+    ],
+    "correct_answers": [
+      "CEF disabled or misconfigured",
+      "Packet fragmentation and reassembly"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Refer to the exhibit.\n\n```\nR1#show ip protocols\nRouting Protocol is \"eigrp 100\"\nK-values: K1=1, K2=0, K3=1, K4=0, K5=0\nNeighbor 10.1.12.2 (GigabitEthernet1/0) is down: K-value mismatch\n```\n\nWhat is the most likely cause of the issue?",
+    "options": [
+      "AS number mismatch",
+      "Interface shutdown",
+      "Metric calculation parameters differ between neighbors",
+      "Split horizon is enabled on the interface"
+    ],
+    "correct_answers": [
+      "Metric calculation parameters differ between neighbors"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Which two authentication parameters must match for EIGRPv6 to form a neighbor relationship?",
+    "options": ["Key ID", "Key Chain", "Key AS", "Key String"],
+    "correct_answers": ["Key ID", "Key String"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "question": "True or False: In EIGRPv4, mismatched hello and hold timers between routers prevent adjacency formation.",
+    "options": ["True", "False"],
+    "correct_answers": ["False"],
+    "question_type": "true_false",
+    "points": 0.5
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "question": "A router is not receiving any EIGRPv6 hello packets on GigabitEthernet0/1. Which two causes should be verified? (Choose two.)",
+    "options": [
+      "Interface is configured as passive",
+      "IPv6 unicast-routing is not enabled",
+      "Interface is not included in the EIGRPv6 process",
+      "Interface link-local address is in the wrong subnet"
+    ],
+    "correct_answers": [
+      "Interface is configured as passive",
+      "Interface is not included in the EIGRPv6 process"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Refer to the exhibit.\n\n```\nR1#show ip eigrp interfaces\nEIGRP-IPv4 Interfaces for AS(100)\nXmit Queue PeerQ Mean Pacing Time Multicast Flow Timer Routes\nGi0/0       0     0    0    10    123     5\nGi1/0       0     0    0    10    224     5\n```\n\nOnly Gi1/0 shows an active neighbor. What is the most likely explanation?",
+    "options": [
+      "Gi0/0 is configured as passive",
+      "Gi0/0 has a mismatched K value",
+      "Gi0/0 is using a different hello timer",
+      "Gi0/0 is filtering routes with a distribute list"
+    ],
+    "correct_answers": ["Gi0/0 is configured as passive"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]
