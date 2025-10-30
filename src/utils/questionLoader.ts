@@ -21,11 +21,33 @@ const allDataSources = [
   ...module5,
 ];
 
-// Filter out Module 6 questions
+// Standardized module names
+const MODULE_NAMES: Record<string, string> = {
+  "1": "Module 1 - Basic Forwarding & Troubleshooting",
+  "2": "Module 2 - Troubleshooting EIGRPv4/v6",
+  "3": "Module 3 - Troubleshooting OSPFv3",
+  "4": "Module 4 - Troubleshooting BGP",
+  "5": "Module 5 - Conditional Forwarding and Redistribution",
+};
+
+// Normalize module name to standard format
+const normalizeModuleName = (moduleName: string): string => {
+  const match = moduleName.match(/Module (\d+)/i);
+  if (match) {
+    const moduleNumber = match[1];
+    return MODULE_NAMES[moduleNumber] || moduleName;
+  }
+  return moduleName;
+};
+
+// Filter out Module 6 questions and normalize module names
 export const loadQuestions = (): Question[] => {
-  return allDataSources.filter((q: Question) => 
-    !q.module.toLowerCase().includes("module 6")
-  ) as Question[];
+  return allDataSources
+    .filter((q: Question) => !q.module.toLowerCase().includes("module 6"))
+    .map((q: Question) => ({
+      ...q,
+      module: normalizeModuleName(q.module),
+    })) as Question[];
 };
 
 // Get unique modules
