@@ -5,6 +5,7 @@ export interface Question {
   correct_answers: string[];
   question_type: "multiple_choice" | "single_choice" | "true_false";
   points: number;
+  image?: string;
 }
 
 export interface UserAnswer {

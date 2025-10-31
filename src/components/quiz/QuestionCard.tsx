@@ -66,6 +66,15 @@ export const QuestionCard = ({
                 {isSingleChoice ? "Single Choice" : "Multiple Choice"}
               </Badge>
             </div>
+            {question.image && (
+              <div className="mb-4">
+                <img 
+                  src={question.image} 
+                  alt="Question diagram" 
+                  className="max-w-full h-auto rounded-lg border"
+                />
+              </div>
+            )}
             <p className="text-base font-medium leading-relaxed whitespace-pre-wrap">
               {question.question}
             </p>
