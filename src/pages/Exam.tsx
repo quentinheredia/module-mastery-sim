@@ -18,8 +18,12 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Exam = () => {
   const navigate = useNavigate();
+<<<<<<< HEAD
   const { quizState, startQuiz, answerQuestion, submitQuiz, resetQuiz } =
     useQuiz();
+=======
+  const { quizState, startQuiz, answerQuestion, submitQuiz, resetQuiz, goToQuestion } = useQuiz();
+>>>>>>> 6d326bf9a40d4f62d6ac1cfba2c7d7ed67c6a43b
   const [questionsPerPage, setQuestionsPerPage] = useState<1 | 5 | 10>(1);
 
   const handleStart = () => {
@@ -210,7 +214,7 @@ const Exam = () => {
                   variant="outline"
                   onClick={() => {
                     const newIdx = Math.max(0, startIdx - questionsPerPage);
-                    // This is a simple navigation - in a real app you'd update context
+                    goToQuestion(newIdx);
                   }}
                 >
                   Previous Page
@@ -222,11 +226,7 @@ const Exam = () => {
               {endIdx < quizState.questions.length && (
                 <Button
                   onClick={() => {
-                    const newIdx = Math.min(
-                      quizState.questions.length - 1,
-                      endIdx
-                    );
-                    // This is a simple navigation - in a real app you'd update context
+                    goToQuestion(endIdx);
                   }}
                 >
                   Next Page

@@ -18,6 +18,7 @@ interface QuizContextType {
   answerQuestion: (questionIndex: number, selectedAnswers: string[]) => void;
   nextQuestion: () => void;
   previousQuestion: () => void;
+  goToQuestion: (index: number) => void;
   submitQuiz: () => void;
   resetQuiz: () => void;
   setQuestionsPerPage: (count: 1 | 5 | 10) => void;
@@ -148,6 +149,16 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
     }));
   };
 
+  const goToQuestion = (index: number) => {
+    setQuizState((prev) => ({
+      ...prev,
+      currentQuestionIndex: Math.max(
+        0,
+        Math.min(index, prev.questions.length - 1)
+      ),
+    }));
+  };
+
   const calculateModuleBreakdown = (
     questions: Question[],
     userAnswers: UserAnswer[]
@@ -237,6 +248,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
         answerQuestion,
         nextQuestion,
         previousQuestion,
+        goToQuestion,
         submitQuiz,
         resetQuiz,
         setQuestionsPerPage,
