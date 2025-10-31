@@ -39,7 +39,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Refer to the exhibit of the routing table from a router that is a backbone router and ABR for Area 1. How will this routing table change if Area 1 is configured as a Stub area?",
-    "image": null,
+    "image": "./src/assets/images/mod3_q4.png",
     "options": [
       "None of the routes will be removed as a result of Area 1 and this ABR being configured as a stub",
       "Only the O IA routes and the two O E2 subnet routes to the 192.168.0.0 networks will be removed from the routing table",
@@ -69,7 +69,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Refer to the exhibit. Which would be chosen as the router ID of R2?",
-    "image": null,
+    "image": "./src/assets/images/mod3_q6.png",
     "options": [
       "The router ID has to be manually configured",
       "FE80::2",
@@ -83,7 +83,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Based on the hub and spoke topology, which router should be elected as the OSPFv2 DR?",
-    "image": null,
+    "image": "./src/assets/images/mod3_q7.png",
     "options": ["R1", "R2", "R3", "R4"],
     "correct_answers": ["R1"],
     "question_type": "single_choice",
@@ -109,7 +109,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "R1 and R2 are connected to the same LAN segment and configured to run OSPFv3. What two items can be concluded based on this output?",
-    "image": null,
+    "image": "./src/assets/images/mod3_q9.png",
     "options": [
       "\"debug ipv6 ospf hello\" can be used to troubleshoot this problem",
       "\"debug ip ospf hello\" can be used to troubleshoot this problem",
@@ -126,7 +126,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "A customer is troubleshooting an OSPFv2 issue related to a 'totally stub' area configuration. Routes that appear on R4 should be only intra-area and a default route; however, inter-area routes are also showing. Which configuration correction is required to fix this issue?",
-    "image": null,
+    "image": "./src/assets/images/mod3_q10.png",
     "options": [
       "issue 'area 2 stub no-summary' command on R3",
       "remove 'area 2 stub' command from R4",
@@ -174,7 +174,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Directly connected networks configured on router R1 are not being shared with neighboring routers through Classic OSPFv3 IPv6. What is the cause of the issue?",
-    "image": null,
+    "image": "./src/assets/images/mod3_q13.png",
     "options": [
       "Gigabit interfaces are not enabled for ospfv3 advertisement",
       "ospfv3 requires network statements under 'ospfv3 routing process' for proper operation",
@@ -190,7 +190,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "What is the result of a router being configured with OSPFv3 for IPv6 when no explicit RID is configured and there are no active IPv4 interfaces?",
-    "image": null,
+    "image": "./src/assets/images/mod3_q14.png",
     "options": [
       "OSPFv3 does not require a RID and neighbor adjacencies will form normally",
       "OSPFv3 will automatically generate a RID once an adjacency with another OSPFv3 router is formed",
