@@ -26,6 +26,22 @@ export const QuestionCard = ({
   const isSingleChoice = question.question_type === "single_choice" || question.question_type === "true_false";
   const selectedAnswers = userAnswer?.selectedAnswers || [];
 
+  const resolveImageSrc = (imagePath: string) => {
+    // Return absolute URLs and data URLs unchanged
+    if (imagePath.startsWith('http://') || imagePath.startsWith('https://') || imagePath.startsWith('data:')) {
+      return imagePath;
+    }
+    
+    // If already prefixed with BASE_URL, return as-is
+    if (imagePath.startsWith(import.meta.env.BASE_URL)) {
+      return imagePath;
+    }
+    
+    // Strip leading slash if present and prepend BASE_URL
+    const cleanPath = imagePath.replace(/^\//, '');
+    return import.meta.env.BASE_URL + cleanPath;
+  };
+
   const handleSingleChoiceChange = (value: string) => {
     if (!disabled) {
       onAnswerChange([value]);
@@ -69,9 +85,12 @@ export const QuestionCard = ({
             {question.image && (
               <div className="mb-4">
                 <img 
-                  src={question.image} 
+                  src={resolveImageSrc(question.image)} 
                   alt="Question diagram" 
                   className="max-w-full h-auto rounded-lg border"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.currentTarget.src);
+                  }}
                 />
               </div>
             )}
