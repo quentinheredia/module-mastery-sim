@@ -19,7 +19,7 @@
       "EIGRP Authentication will succeed and EIGRP updates can be exchanged"
     ],
     "correct_answers": [
-      "EIGRP Authentication will fail because the key chain names do not match"
+      "EIGRP Authentication will succeed and EIGRP updates can be exchanged"
     ],
     "question_type": "single_choice",
     "points": 1.5

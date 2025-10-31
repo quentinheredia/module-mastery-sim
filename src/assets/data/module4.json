@@ -23,9 +23,7 @@
       "The adjacency is formed but routes are not exchanged.",
       "The adjacency is idle."
     ],
-    "correct_answers": [
-      "Because the neighbor command is wrong, the adjacency is not formed."
-    ],
+    "correct_answers": ["The adjacency is successfully formed."],
     "question_type": "single_choice",
     "points": 1
   },

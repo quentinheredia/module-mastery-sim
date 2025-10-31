@@ -47,7 +47,7 @@
       "All of the O IA and O E2 routes will be removed from the routing table"
     ],
     "correct_answers": [
-      "Only the O E2 routes will be removed from the routing table"
+      "None of the routes will be removed as a result of Area 1 and this ABR being configured as a stub"
     ],
     "question_type": "single_choice",
     "points": 1.5
