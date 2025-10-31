@@ -5,11 +5,15 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/module-mastery-sim/", // 👈 must match your GitHub repo name
+  plugins: [
+    react(),
+    ...(mode === "development" ? [componentTagger()] : []), // conditionally add dev plugin
+  ],
   server: {
-    host: "::",
+    host: "::", // allows access via localhost and LAN
     port: 8080,
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
