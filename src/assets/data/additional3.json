@@ -2,6 +2,7 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "Refer to the exhibit.\n\n```\nR1#show bgp ipv4 unicast summary\nBGP router identifier 1.1.1.1, local AS number 65001\nNeighbor        V   AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd\n10.1.12.2       4 65002      0      0        0    0    0 00:00:35   Idle\n```\n\nWhat does the 'Idle' state indicate in this output?",
+    "image": null,
     "options": [
       "BGP session is established and routes are exchanged",
       "The local router cannot establish a TCP session with the neighbor",
@@ -17,15 +18,16 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "Which two conditions must be met for a successful BGP neighbor adjacency? (Choose two.)",
+    "image": null,
     "options": [
       "Both routers must use the same autonomous system number",
       "The neighbor IP must match the source address of the TCP session",
-      "A static route must exist to the peer’s loopback address",
+      "A static route must exist to the peer's loopback address",
       "Both routers must have identical router IDs"
     ],
     "correct_answers": [
       "The neighbor IP must match the source address of the TCP session",
-      "A static route must exist to the peer’s loopback address"
+      "A static route must exist to the peer's loopback address"
     ],
     "question_type": "multiple_choice",
     "points": 1
@@ -33,6 +35,7 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "True or False: BGP allows an eBGP neighbor relationship to form over a multi-hop path without additional configuration.",
+    "image": null,
     "options": ["True", "False"],
     "correct_answers": ["False"],
     "question_type": "true_false",
@@ -41,6 +44,7 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "Which command is used to manually increase the TTL value to allow eBGP peers to form adjacencies over multiple hops?",
+    "image": null,
     "options": [
       "neighbor ip-address keepalive",
       "neighbor ip-address ebgp-multihop",
@@ -54,6 +58,7 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "Refer to the exhibit.\n\n```\nR1#show bgp ipv4 unicast summary\nNeighbor        V   AS MsgRcvd MsgSent TblVer InQ OutQ Up/Down State/PfxRcd\n10.1.13.3       4 65003     10     12      5   0   0 00:01:02 2\n```\n\nWhat does the number '2' in the State/PfxRcd column represent?",
+    "image": null,
     "options": [
       "Two prefixes were received from the neighbor",
       "Two prefixes were advertised to the neighbor",
@@ -67,6 +72,7 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "Which two problems can prevent BGP routes from appearing in the routing table? (Choose two.)",
+    "image": null,
     "options": [
       "Next-hop address is unreachable",
       "Missing or incorrect network mask command",
@@ -83,6 +89,7 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "Refer to the configuration snippet:\n\n```\nrouter bgp 65001\n neighbor 10.1.12.2 remote-as 65002\n neighbor 10.1.12.2 password CISCO123\n```\n\nWhat will happen if the peer uses a different password?",
+    "image": null,
     "options": [
       "The session will form but no routes will be exchanged",
       "The session will fail and a TCP authentication error will appear",
@@ -98,6 +105,7 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "Which BGP attribute is preferred first when determining the best path to a destination?",
+    "image": null,
     "options": [
       "Local preference",
       "AS_Path",
@@ -111,6 +119,7 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "Refer to the exhibit.\n\n```\nR2#show ip route bgp\nB   10.1.10.0/24 [20/0] via 10.1.12.1, 00:00:13\nB   10.1.11.0/24 [20/0] via 10.1.13.1, 00:00:14\n```\n\nWhat does the administrative distance value '20' signify in this output?",
+    "image": null,
     "options": [
       "The route is an external BGP route",
       "The route is an internal BGP route",
@@ -124,6 +133,7 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "In Multiprotocol BGP (MP-BGP), which command activates IPv6 unicast routing for an existing IPv4 BGP neighbor?",
+    "image": null,
     "options": [
       "neighbor ipv6-address activate",
       "address-family ipv6 unicast; neighbor ip-address activate",
@@ -139,6 +149,7 @@
   {
     "module": "Module 4 - Troubleshooting BGP",
     "question": "Refer to the exhibit.\n\n```\nR1#show bgp ipv6 unicast\n*> 2001:db8:2::/64  2001:db8:12::2\n                      0 65002 i\n```\n\nWhat does the symbol '*>' indicate for the listed route?",
+    "image": null,
     "options": [
       "The route is valid and the best path",
       "The route is invalid and ignored",

@@ -2,6 +2,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "What is one of the key challenges of route redistribution?",
+    "image": null,
     "options": [
       "Maintaining unique router IDs across domains",
       "Preventing routing loops and suboptimal routing",
@@ -15,6 +16,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "Which statement about mutual redistribution is true?",
+    "image": null,
     "options": [
       "It is always recommended for OSPF and EIGRP domains",
       "It should be avoided unless route filtering is carefully applied",
@@ -30,6 +32,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "A network engineer is redistributing OSPF routes into EIGRP. Which two EIGRP parameters must be defined during redistribution?",
+    "image": null,
     "options": [
       "Bandwidth and Delay",
       "MTU and Reliability",
@@ -43,6 +46,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "Refer to the exhibit. R1 is redistributing EIGRP routes into OSPF. After configuration, the OSPF routes appear as Type 5 LSAs. What does this indicate?",
+    "image": null,
     "options": [
       "Routes were redistributed from an external routing domain",
       "Routes were summarized inside OSPF area 0",
@@ -58,6 +62,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "When redistributing from EIGRP into OSPF, which metric is used for the redistributed routes if not explicitly defined?",
+    "image": null,
     "options": ["20", "110", "170", "1"],
     "correct_answers": ["20"],
     "question_type": "single_choice",
@@ -66,6 +71,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "A customer reports suboptimal routing after performing mutual redistribution between OSPF and EIGRP. What can be implemented to avoid routing loops?",
+    "image": null,
     "options": [
       "Use route-maps with tag filtering",
       "Enable OSPF authentication",
@@ -79,6 +85,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "Which command can be used to verify if a route has been redistributed from EIGRP into OSPF?",
+    "image": null,
     "options": [
       "show ip route",
       "show ip protocols",
@@ -92,6 +99,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "In OSPF, what is the function of the route tag when performing redistribution?",
+    "image": null,
     "options": [
       "Used to indicate external route type (Type 1 or Type 2)",
       "Used to distinguish between routes learned from different protocols",
@@ -107,6 +115,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "A network administrator redistributes EIGRP routes into OSPF, but not all routes are appearing in the OSPF domain. What is the most likely cause?",
+    "image": null,
     "options": [
       "Missing 'subnets' keyword in the redistribute command",
       "OSPF process is in shutdown state",
@@ -122,6 +131,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "When redistributing static routes into a dynamic routing protocol, which two conditions must be true?",
+    "image": null,
     "options": [
       "The static routes must be installed in the routing table",
       "The interface associated with the static route must be up",
@@ -138,6 +148,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "Which OSPF external route type will always have a constant cost regardless of internal topology changes?",
+    "image": null,
     "options": ["E1", "E2", "IA", "N1"],
     "correct_answers": ["E2"],
     "question_type": "single_choice",
@@ -146,6 +157,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "A customer has EIGRP routes redistributed into OSPF. The customer notices that EIGRP metric information is lost. Which statement explains this behavior?",
+    "image": null,
     "options": [
       "OSPF does not recognize EIGRP metrics",
       "The redistribute command must use the 'metric' keyword",
@@ -159,6 +171,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "Refer to the exhibit. R1 is redistributing routes from EIGRP to OSPF. The OSPF database shows Type 5 LSAs for these routes. Which conclusion is correct?",
+    "image": null,
     "options": [
       "Routes were redistributed from an external routing domain",
       "Routes were redistributed within an NSSA area",
@@ -174,6 +187,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "What is the effect of using the 'match route-type external' command under a route-map during redistribution?",
+    "image": null,
     "options": [
       "Filters internal routes from being redistributed",
       "Redistributes only external routes from the source protocol",
@@ -189,6 +203,7 @@
   {
     "module": "Module 5 - Route Redistribution",
     "question": "Which two routing protocols support the 'metric-type' keyword for redistribution?",
+    "image": null,
     "options": ["EIGRP", "BGP", "OSPF", "RIP"],
     "correct_answers": ["OSPF", "RIP"],
     "question_type": "multiple_choice",

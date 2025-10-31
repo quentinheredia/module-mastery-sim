@@ -2,6 +2,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
     "question": "Which two commands can be used to verify the interfaces participating in an OSPFv3 process? (Choose two.)",
+    "image": null,
     "options": [
       "show ipv6 ospf interface brief",
       "show ipv6 ospf neighbors",
@@ -18,6 +19,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
     "question": "Refer to the exhibit.\n\n```\nR1#show ipv6 ospf\nRouting Process \"ospf 10\" with ID 1.1.1.1\nSupports only single TOS(TOS0) routes\nRouter is not originating router-LSAs with maximum metric\nReference bandwidth unit is 100 Mbps\nSPF schedule delay 5 secs, Hold time between two SPFs 10 secs\nArea 0: SPF algorithm executed 3 times\n```\n\nBased on the output, what can you verify about R1?",
+    "image": null,
     "options": [
       "R1 is an ASBR redistributing external routes",
       "R1 is an ABR between two OSPFv3 areas",
@@ -31,6 +33,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
     "question": "When troubleshooting OSPFv3 adjacencies, which two multicast addresses should be verified in the output of the `show ipv6 interface` command? (Choose two.)",
+    "image": null,
     "options": ["FF02::5", "FF02::6", "FF02::9", "FF02::A"],
     "correct_answers": ["FF02::5", "FF02::6"],
     "question_type": "multiple_choice",
@@ -39,6 +42,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
     "question": "True or False: OSPFv3 for IPv6 uses the same multicast address as EIGRPv6 for neighbor discovery.",
+    "image": null,
     "options": ["True", "False"],
     "correct_answers": ["False"],
     "question_type": "true_false",
@@ -47,6 +51,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
     "question": "Refer to the exhibit.\n\n```\nR1#show ipv6 ospf neighbor\nNeighbor ID     Pri   State          Dead Time   Interface ID\n2.2.2.2         1     FULL/DR        00:00:36    Gi0/0\n3.3.3.3         1     2WAY/DROTHER   00:00:33    Gi0/1\n```\n\nWhat can be concluded about the OSPFv3 neighbor relationship?",
+    "image": null,
     "options": [
       "R1 is the DR on both interfaces",
       "R1 has a full adjacency with both neighbors",
@@ -62,6 +67,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
     "question": "Which command displays all LSAs collected in the OSPFv3 LSDB?",
+    "image": null,
     "options": [
       "show ipv6 ospf routes",
       "show ipv6 ospf database",
@@ -75,6 +81,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
     "question": "Which statement accurately describes OSPFv3 Address Families (AFs)?",
+    "image": null,
     "options": [
       "They require separate OSPF processes for IPv4 and IPv6",
       "They share a single database for both IPv4 and IPv6",
@@ -88,6 +95,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
     "question": "Refer to the configuration snippet:\n\n```\ninterface GigabitEthernet0/0\n ipv6 enable\n ospfv3 10 ipv4 area 23\n ospfv3 10 ipv6 area 23\n```\n\nWhat is true about this configuration?",
+    "image": null,
     "options": [
       "The interface participates only in the IPv6 address family",
       "Both IPv4 and IPv6 OSPFv3 adjacencies can form on this interface",
@@ -103,6 +111,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
     "question": "Which command can verify the OSPFv3 IPv4 routes installed in the routing table when using address families?",
+    "image": null,
     "options": [
       "show ip route ospf",
       "show ip route ospfv3",
@@ -116,6 +125,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
     "question": "Refer to the exhibit.\n\n```\nR1(config)#debug ospfv3 ipv6 hello\nOSPFv3-HELLO: Interface GigabitEthernet0/1, Sending Hello to FF02::5\nOSPFv3-HELLO: Interface GigabitEthernet0/1, Received Hello from 2001:db8:10::2\n```\n\nWhat is verified by this output?",
+    "image": null,
     "options": [
       "The router is successfully exchanging OSPFv3 hellos with its neighbor",
       "The router is missing its router ID configuration",
@@ -131,6 +141,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "Which two conditions must match for OSPFv2 neighbors to form an adjacency? (Choose two.)",
+    "image": null,
     "options": [
       "Hello and dead timers",
       "OSPF process ID",
@@ -144,6 +155,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "Refer to the exhibit.\n\n```\nR1#show ip ospf neighbor\nNeighbor ID     Pri   State           Dead Time   Address         Interface\n2.2.2.2           1   EXSTART/DR      00:00:32    10.1.12.2       Gig0/0\n```\n\nWhat is the most likely cause of this adjacency being stuck in the EXSTART state?",
+    "image": null,
     "options": [
       "Mismatched MTU between neighbors",
       "Mismatched authentication key",
@@ -157,6 +169,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "True or False: OSPFv2 neighbor adjacencies can form if routers are in different subnets as long as the same area ID is used.",
+    "image": null,
     "options": ["True", "False"],
     "correct_answers": ["False"],
     "question_type": "true_false",
@@ -165,6 +178,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "Which command verifies mismatched area numbers between OSPF routers?",
+    "image": null,
     "options": [
       "debug ip ospf adjacency",
       "debug ip ospf hello",
@@ -178,6 +192,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "Refer to the exhibit.\n\n```\nR2(config)#interface GigabitEthernet0/0\nR2(config-if)#ip ospf mtu-ignore\n```\n\nWhat effect does this command have on OSPF adjacency formation?",
+    "image": null,
     "options": [
       "Disables MTU checking during adjacency formation",
       "Increases the default MTU to 1500 bytes",
@@ -191,6 +206,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "Which of the following can prevent OSPFv2 adjacencies from forming? (Choose two.)",
+    "image": null,
     "options": [
       "Passive interface misconfiguration",
       "ACL blocking 224.0.0.5 traffic",
@@ -207,6 +223,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "Refer to the exhibit.\n\n```\nR1#show ip ospf\nRouting Process \"ospf 1\" with ID 1.1.1.1\nSupports only single TOS routes\nIt is an area border router\nArea 0 includes interface Gig0/0\nArea 1 includes interface Gig0/1\n```\n\nBased on this output, what role does R1 serve in the OSPF topology?",
+    "image": null,
     "options": [
       "Autonomous System Boundary Router (ASBR)",
       "Area Border Router (ABR)",
@@ -220,6 +237,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "Which OSPF area type suppresses Type 5 LSAs and replaces them with a default route generated by the ABR?",
+    "image": null,
     "options": ["Stub Area", "Totally Stubby Area", "NSSA", "Totally NSSA"],
     "correct_answers": ["Stub Area"],
     "question_type": "single_choice",
@@ -228,6 +246,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "Refer to the exhibit.\n\n```\nR3#show ip route\nO IA 10.10.20.0/24 [110/20] via 10.1.12.1, 00:00:10, Gig0/0\n```\n\nWhat does the 'IA' code indicate in the routing table?",
+    "image": null,
     "options": [
       "Interarea route learned from an ABR",
       "Intra-area route learned from an ASBR",
@@ -241,6 +260,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "Which two commands can verify if route summarization is correctly configured on an OSPF ABR or ASBR? (Choose two.)",
+    "image": null,
     "options": [
       "show ip ospf",
       "show ip route | include Null0",
@@ -254,6 +274,7 @@
   {
     "module": "Module 3 - Troubleshooting OSPFv2",
     "question": "True or False: OSPF supports unequal-cost load balancing when multiple paths exist to the same destination.",
+    "image": null,
     "options": ["True", "False"],
     "correct_answers": ["False"],
     "question_type": "true_false",

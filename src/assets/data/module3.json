@@ -2,6 +2,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Customer observed an error message after enabling an OSPF debug command. Which debug command was used to reveal this problem?",
+    "image": null,
     "options": [
       "debug ip ospf area",
       "debug ip ospf mismatch",
@@ -15,6 +16,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Which command can be used with Classic OSPFv3 IPv6 to display configured interface timers?",
+    "image": null,
     "options": [
       "show ipv6 ospfv3 interface",
       "show ipv6 ospf interface",
@@ -28,6 +30,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "A router using OSPFv3 Address Family (OSPFv3 AF) for IPv4 will peer with a router using the classic OSPFv2 configuration for IPv4 because they are compatible.",
+    "image": null,
     "options": ["True", "False"],
     "correct_answers": ["False"],
     "question_type": "true_false",
@@ -36,6 +39,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Refer to the exhibit of the routing table from a router that is a backbone router and ABR for Area 1. How will this routing table change if Area 1 is configured as a Stub area?",
+    "image": null,
     "options": [
       "None of the routes will be removed as a result of Area 1 and this ABR being configured as a stub",
       "Only the O IA routes and the two O E2 subnet routes to the 192.168.0.0 networks will be removed from the routing table",
@@ -51,6 +55,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Which command is used to verify that Classic OSPFv3 is enabled and also provides a list of the networks that are being advertised by the network?",
+    "image": null,
     "options": [
       "sh ipv6 ospf protocols",
       "sh ipv6 ospf details",
@@ -64,6 +69,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Refer to the exhibit. Which would be chosen as the router ID of R2?",
+    "image": null,
     "options": [
       "The router ID has to be manually configured",
       "FE80::2",
@@ -77,6 +83,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Based on the hub and spoke topology, which router should be elected as the OSPFv2 DR?",
+    "image": null,
     "options": ["R1", "R2", "R3", "R4"],
     "correct_answers": ["R1"],
     "question_type": "single_choice",
@@ -85,6 +92,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Customer was checking the routing table on an OSPFv2 ABR router and noticed the entry 'O 10.1.0.0/16 is a summary, 00:16:07, Null0'. What two items can be concluded from the output?",
+    "image": null,
     "options": [
       "Null0 summary route is created on ABR router to enable default route propagation",
       "Automatic summarization has been enabled on ABR router",
@@ -101,6 +109,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "R1 and R2 are connected to the same LAN segment and configured to run OSPFv3. What two items can be concluded based on this output?",
+    "image": null,
     "options": [
       "\"debug ipv6 ospf hello\" can be used to troubleshoot this problem",
       "\"debug ip ospf hello\" can be used to troubleshoot this problem",
@@ -117,6 +126,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "A customer is troubleshooting an OSPFv2 issue related to a 'totally stub' area configuration. Routes that appear on R4 should be only intra-area and a default route; however, inter-area routes are also showing. Which configuration correction is required to fix this issue?",
+    "image": null,
     "options": [
       "issue 'area 2 stub no-summary' command on R3",
       "remove 'area 2 stub' command from R4",
@@ -130,6 +140,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "What are two features of OSPFv3 Address Family (OSPFv3 AF)?",
+    "image": null,
     "options": [
       "128 bit router-id is used",
       "32 bit router-id is used",
@@ -146,6 +157,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "A customer is troubleshooting load balancing on 8x100 Mbps links between two routers configured with OSPFv2. All 8 links are in UP/UP operational state. Which two OSPFv2 configuration parameters should the customer check and adjust if needed?",
+    "image": null,
     "options": [
       "\"maximum-paths <maximum paths value>\" parameter",
       "OSPFv2 variance parameter",
@@ -162,6 +174,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Directly connected networks configured on router R1 are not being shared with neighboring routers through Classic OSPFv3 IPv6. What is the cause of the issue?",
+    "image": null,
     "options": [
       "Gigabit interfaces are not enabled for ospfv3 advertisement",
       "ospfv3 requires network statements under 'ospfv3 routing process' for proper operation",
@@ -177,6 +190,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "What is the result of a router being configured with OSPFv3 for IPv6 when no explicit RID is configured and there are no active IPv4 interfaces?",
+    "image": null,
     "options": [
       "OSPFv3 does not require a RID and neighbor adjacencies will form normally",
       "OSPFv3 will automatically generate a RID once an adjacency with another OSPFv3 router is formed",

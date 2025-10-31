@@ -2,6 +2,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "What are the two CEF data structures?",
+    "image": null,
     "options": ["Adjacency Table", "FIB", "CAM table", "SDM template"],
     "correct_answers": ["Adjacency Table", "FIB"],
     "question_type": "multiple_choice",
@@ -10,6 +11,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "Which of the following are two requirements for stateless address autoconfiguration (SLAAC) to function?",
+    "image": null,
     "options": [
       "The router must be sending RS messages",
       "The prefix must be /64",
@@ -28,6 +30,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "Which statement reflects the effect of the configuration sequence listed below?\n\nR1(config)# access-list 199 permit tcp host 10.1.1.1 host 172.16.1.1\nR1(config)# access-list 199 permit tcp host 172.16.1.1 host 10.1.1.1\nR1(config)# end\nR1# debug ip packet 199 detail",
+    "image": null,
     "options": [
       "These commands will have no effect at all. The debug ip packet command will work as normal and display debugging information for all IP packets",
       "These commands will generate an error message because you cannot use an access list with any debug commands",
@@ -43,6 +46,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "Customer is trying to enable the debug command to troubleshoot a network problem, what should you recommend to the customer?",
+    "image": null,
     "options": [
       "enable debug ip packet command after disabling CEF",
       "enable debug ip packet summary command",
@@ -58,6 +62,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "Customer enabled logging services using the following commands:\n\nR2(config)# logging trap error\nR2(config)# logging 10.1.10.10\n\nWhich logging messages will be sent to the Syslog server?",
+    "image": null,
     "options": [
       "logging messages 'error' only",
       "logging messages 'critical,alert,emergency'",
@@ -71,6 +76,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "Which approach can be used and suited to troubleshoot routing loops?",
+    "image": null,
     "options": ["Top-down", "Swap-Components", "Bottom-Up", "Follow-the-path"],
     "correct_answers": ["Follow-the-path"],
     "question_type": "single_choice",
@@ -79,6 +85,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "What is not a reason that may cause high CPU utilization on a network device?",
+    "image": null,
     "options": [
       "Spanning tree loop",
       "Encrypted data packets",
@@ -92,6 +99,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "The output of 'show processes cpu' command on a switch displays the following:\n\nCPU utilization for five seconds: 10%/7%; one minute: 12%; five minutes: 6%.\n\nWhich two pieces of information can be concluded from the above output?",
+    "image": null,
     "options": [
       "Total CPU load spent on scheduled processes for past 5 seconds is 3%",
       "Total CPU load spent on scheduled processes for past 5 seconds is 10%",
@@ -108,6 +116,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "What is the last step in the Troubleshooting process?",
+    "image": null,
     "options": [
       "Gathering information",
       "Eliminating potential causes",
@@ -121,6 +130,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "Based on the output below, will the users be able to get IPv6 addresses?\n\nR1# show ipv6 interface gigabitEthernet 0/0\nGigabitEthernet0/0 is up, line protocol is up\nIPv6 is enabled, link-local address is FE80::C80A:EFF:FE3C:8\nNo Virtual link-local address(es):\nGlobal unicast address(es):\n2001:DB8:A:A::1, subnet is 2001:DB8:A:A::/64\nJoined group address(es):\nFF02::1\nFF02::2\nFF02::1:2\nFF02::1:FF00:1\nFF02::1:FF3C:8\nMTU is 1500 bytes\nND DAD is enabled, number of DAD attempts: 1\nND RAs are suppressed (all)\nHosts use stateless autoconfig for addresses.\nHosts use DHCP to obtain other configuration.",
+    "image": null,
     "options": [
       "No, users will fail to get their IPv6 addresses via SLAAC",
       "Yes, users will get successfully their IPv6 addresses using DHCPv6 stateless method",
@@ -136,6 +146,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "The output of 'show processes CPU' command on a switch displays the following:\n\nCPU utilization for five seconds: 20%/15%; one minute: 12%; five minutes: 6%\n\nBased on the output, what percent of the switch's CPU is being spent on interrupts within the 5-second interval?",
+    "image": null,
     "options": ["5%", "35%", "15%", "20%"],
     "correct_answers": ["15%"],
     "question_type": "single_choice",
@@ -144,6 +155,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "If you are troubleshooting a spanning-tree loop on a VLAN, which standard troubleshooting approach is most appropriate for identifying the cause of the loop?",
+    "image": null,
     "options": [
       "Divide-and-Conquer",
       "Bottom-Up",
@@ -157,6 +169,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "Which two commands are recommended to use to troubleshoot CEF related problems?",
+    "image": null,
     "options": [
       "sh ip cef summary",
       "sh cef drops",

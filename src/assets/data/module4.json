@@ -2,6 +2,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "What could be one reason that BGP state is showing as idle between two neighbors?",
+    "image": null,
     "options": [
       "Mismatching BGP timers",
       "Layer 3 connectivity is broken",
@@ -15,6 +16,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "A network administrator issues the 'show bgp ipv4 unicast summary' command on a router to check the adjacency state with a neighbor. The value under the State/PfxRcd field shows 0. Which statement describes the status of adjacency between the two routers?",
+    "image": null,
     "options": [
       "Because the neighbor command is wrong, the adjacency is not formed.",
       "The adjacency is successfully formed.",
@@ -30,6 +32,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "What are two reasons that may cause an eBGP neighbor relationship not to form?",
+    "image": null,
     "options": [
       "Mismatched BGP AS numbers",
       "Incorrect neighbor statement",
@@ -46,6 +49,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "Refer to the exhibit. A network administrator is troubleshooting an eBGP adjacency issue between routers R2 and R5. R2 uses Loopback0 2.2.2.2 and R5 uses Loopback0 5.5.5.5 in the neighbor configuration, and eBGP multihop has been enabled. However, an adjacency does not form. What is the reason?",
+    "image": null,
     "options": [
       "R2 local AS is misconfigured, it should be 65501",
       "eBGP peering with loopback addresses is only supported with iBGP peering",
@@ -61,6 +65,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "Refer to the BGP topology below. All links are operational and are of equal bandwidth, with default BGP weight and local preference. Which next-hop router will be chosen by Router R1 to reach network 10.1.5.0/24 on R5?",
+    "image": null,
     "options": [
       "R2",
       "R3",
@@ -74,6 +79,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "Based on the configuration, R1 and R2 are directly connected and using loopback addresses for eBGP peering. The link is working fine and loopback addresses are reachable. What can be concluded?",
+    "image": null,
     "options": [
       "eBGP peering using loopback addresses is unsupported, direct link addresses should be used instead",
       "eBGP peering will be established but no routes will be exchanged",
@@ -89,6 +95,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "A network administrator issues the 'show bgp ipv6 unicast' command on a BGP router. What is the purpose of using this command?",
+    "image": null,
     "options": [
       "To verify the IPv4 unicast BGP-learned routes or routes locally injected into the BGP table",
       "To verify the status of BGP IPv6 peering",
@@ -104,6 +111,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "Refer to the configuration. Which two statements describe the result of the configuration?",
+    "image": null,
     "options": [
       "Received routes that match the prefix list are treated with lower priority than the weight attribute when calculating the best path",
       "Received routes that do not match the prefix list are set with a local preference of 100",
@@ -120,6 +128,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "Which debug command is useful to use with BGP?",
+    "image": null,
     "options": [
       "debug bgp packets",
       "debug ip bgp updates",
@@ -133,6 +142,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "A network administrator in AS 65100 has set up a dual-homed BGP connection with an ISP and wants all inbound traffic from the ISP to enter through router R1. Which BGP attribute can the administrator configure to accomplish this?",
+    "image": null,
     "options": [
       "Configure local preference attribute only on both routers R1 and R2",
       "Configure multiple-exit discriminator on the ISP router",
@@ -148,6 +158,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "A network administrator issues 'show bgp ipv6 unicast | begin Network' on router R1 to verify routes. Which statement describes the status of the route 2001:DB8:2::/64?",
+    "image": null,
     "options": [
       "Next hop for the prefix 2001:DB8:2::/64 is '::' which is a valid next hop",
       "Route 2001:DB8:2::/64 can be reached via the local address ::FFFF:2.2.2.2",
@@ -163,6 +174,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "What are two reasons that can cause missing routes in the BGP routing table?",
+    "image": null,
     "options": [
       "TCP port 179 is blocked by ACL",
       "Mismatched authentication",
@@ -180,6 +192,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "What is the role of the BGP Split Horizon rule?",
+    "image": null,
     "options": [
       "A BGP router that receives a route from an iBGP peer shall not advertise that route to another router that is an eBGP peer",
       "A BGP router that receives a route from an eBGP peer shall not advertise that route to another eBGP peer",
@@ -194,6 +207,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "Refer to the exhibit. A network administrator issues 'show bgp ipv4 unicast | begin Network' to check the routes in the BGP table. What does the symbol '?' at the end of a route indicate?",
+    "image": null,
     "options": [
       "The route is the best path for the network prefix",
       "The route is originated from a connected network to the router",
@@ -207,6 +221,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "A network administrator issues 'show bgp ipv4 unicast' to check the routes. What does the indication of 0.0.0.0 under Next Hop mean?",
+    "image": null,
     "options": [
       "The route is the best path for the network prefix",
       "The route is originated from a connected network to the router",
@@ -222,6 +237,7 @@
   {
     "module": "Module 4 - Border Gateway Protocol (BGP)",
     "question": "Based on the output of a BGP command from router R1, what can be concluded?",
+    "image": null,
     "options": [
       "eBGP session with neighbor in AS 65502 has been established",
       "eBGP session with neighbor in AS 65502 has not been established",

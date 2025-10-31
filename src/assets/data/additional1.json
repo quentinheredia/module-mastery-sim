@@ -2,6 +2,7 @@
   {
     "module": "Module 1 - Troubleshooting Basics",
     "question": "Which two structured troubleshooting approaches are best suited for identifying misconfiguration issues in a Layer 3 topology?",
+    "image": null,
     "options": [
       "Top-down approach",
       "Bottom-up approach",
@@ -15,6 +16,7 @@
   {
     "module": "Module 1 - Troubleshooting Basics",
     "question": "Refer to the exhibit. A network engineer enables the following command on R1:\n\n```\nR1#debug ip packet detail 101\nR1(config)#access-list 101 permit tcp any any eq telnet\n```\n\nWhat is the purpose of this configuration?",
+    "image": null,
     "options": [
       "To capture Telnet packets for analysis while minimizing CPU usage",
       "To filter all packets destined for port 23 from being forwarded",
@@ -30,6 +32,7 @@
   {
     "module": "Module 1 - Troubleshooting Basics",
     "question": "A router acting as a DHCP relay agent is not forwarding DHCPDISCOVER messages to the server. Which command should be verified to ensure the router is correctly configured for this role?",
+    "image": null,
     "options": [
       "ip helper-address",
       "ip dhcp excluded-address",
@@ -43,6 +46,7 @@
   {
     "module": "Module 1 - Troubleshooting Basics",
     "question": "Which of the following conditions could result in high CPU utilization on a router? (Choose two.)",
+    "image": null,
     "options": [
       "CEF disabled or misconfigured",
       "Hardware encryption enabled",
@@ -59,6 +63,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Refer to the exhibit.\n\n```\nR1#show ip protocols\nRouting Protocol is \"eigrp 100\"\nK-values: K1=1, K2=0, K3=1, K4=0, K5=0\nNeighbor 10.1.12.2 (GigabitEthernet1/0) is down: K-value mismatch\n```\n\nWhat is the most likely cause of the issue?",
+    "image": null,
     "options": [
       "AS number mismatch",
       "Interface shutdown",
@@ -74,6 +79,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Which two authentication parameters must match for EIGRPv6 to form a neighbor relationship?",
+    "image": null,
     "options": ["Key ID", "Key Chain", "Key AS", "Key String"],
     "correct_answers": ["Key ID", "Key String"],
     "question_type": "multiple_choice",
@@ -82,6 +88,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "True or False: In EIGRPv4, mismatched hello and hold timers between routers prevent adjacency formation.",
+    "image": null,
     "options": ["True", "False"],
     "correct_answers": ["False"],
     "question_type": "true_false",
@@ -90,6 +97,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "A router is not receiving any EIGRPv6 hello packets on GigabitEthernet0/1. Which two causes should be verified? (Choose two.)",
+    "image": null,
     "options": [
       "Interface is configured as passive",
       "IPv6 unicast-routing is not enabled",
@@ -106,6 +114,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Refer to the exhibit.\n\n```\nR1#show ip eigrp interfaces\nEIGRP-IPv4 Interfaces for AS(100)\nXmit Queue PeerQ Mean Pacing Time Multicast Flow Timer Routes\nGi0/0       0     0    0    10    123     5\nGi1/0       0     0    0    10    224     5\n```\n\nOnly Gi1/0 shows an active neighbor. What is the most likely explanation?",
+    "image": null,
     "options": [
       "Gi0/0 is configured as passive",
       "Gi0/0 has a mismatched K value",

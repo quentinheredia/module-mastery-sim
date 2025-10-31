@@ -2,6 +2,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Customer enabled EIGRPv4 with authentication between two routers, however neighbor adjacency is not established. Which two authentication parameters need to match in EIGRPv4 authentication configuration?",
+    "image": null,
     "options": ["Key Variance", "Key ID", "Key chain", "Key AS", "Key String"],
     "correct_answers": ["Key ID", "Key chain"],
     "question_type": "multiple_choice",
@@ -10,6 +11,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Refer to the exhibit. What can the field engineer conclude about the EIGRP authentication between RouterA and RouterB?",
+    "image": null,
     "options": [
       "EIGRP Authentication will fail because the key chain names do not match",
       "EIGRP Authentication will fail because MD5 authentication is only supported with EIGRP named mode",
@@ -25,6 +27,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Customer is having an EIGRP summarization issue and needs to know in which scenario the use of EIGRP automatic summarization can cause inconsistent routing in a network.",
+    "image": null,
     "options": [
       "When the routers in an IPv4 network have unique Router IDs",
       "When the routers in an IPv4 network have mismatching EIGRP AS numbers",
@@ -40,6 +43,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Which two commands can be used to verify EIGRP IPv6 authentication?",
+    "image": null,
     "options": [
       "show eigrp authentication detail",
       "show ipv6 eigrp interfaces detail",
@@ -53,6 +57,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Which show command can be used with EIGRP IPv6 to display the K metric values?",
+    "image": null,
     "options": [
       "show ipv6 eigrp interfaces detail",
       "show ipv6 protocols",
@@ -66,6 +71,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "What are two reasons that can cause an IPv4 route to be missing in EIGRP IPv4 routing table?",
+    "image": null,
     "options": [
       "Passive Interface",
       "Mismatched timers",
@@ -79,6 +85,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Which EIGRP IPv4 command can be used to verify if split horizon is enabled and if authentication is being used?",
+    "image": null,
     "options": [
       "show ip eigrp interfaces detail",
       "show ip eigrp details",
@@ -92,6 +99,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Based on the show command output from EIGRP IPv4 on router R2, what two statements can be concluded?",
+    "image": null,
     "options": [
       "The K metric parameters are left at their default values",
       "R2 is configured as a stub",
@@ -108,6 +116,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Refer to the exhibit. The EIGRP routing table on R2 does not include all networks that are attached to R1. The network statements are properly configured on R1. What is a possible cause of the issue?",
+    "image": null,
     "options": [
       "R2 is configured as a stub",
       "Variance value has been modified to allow for unequal cost load balancing",
@@ -121,6 +130,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Router R1 has recently been configured to operate in an IPv6-only network and is connected via GigabitEthernet 0/0 to router R2. R2 is configured correctly and the link is working fine, but R2 will not form a neighbor relationship with R1. What is the problem?",
+    "image": null,
     "options": [
       "Default route is missing on R2",
       "The interfaces connected to these networks are configured as passive",
@@ -134,6 +144,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "After the configuration shown is applied on router R1, the exhibited status message is displayed after enabling EIGRP debug command on R1. Router R1 is unable to form a neighbor relationship with R2 on Serial 0/1/0. What is the most likely cause?",
+    "image": null,
     "options": [
       "IPv6 Link local address must be configured on interface Gig0/0",
       "The router ID has not been created on R1",
@@ -147,6 +158,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Which debug command can be used to troubleshoot mismatched Autonomous Systems with EIGRP?",
+    "image": null,
     "options": [
       "debug eigrp mismatch parameters",
       "debug eigrp packets",
@@ -160,6 +172,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Which address will EIGRP for IPv6 use as the Router ID (RID)?",
+    "image": null,
     "options": [
       "The highest MAC address that is configured on any enabled interface",
       "The highest IPv6 link-local address configured on any enabled interface",
@@ -175,6 +188,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Which statement is true when enabling EIGRPv4 with DMVPN technology?",
+    "image": null,
     "options": [
       "Load balancing must be disabled on hub node",
       "Split horizon must be disabled on hub node",
@@ -188,6 +202,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "What are two reasons that may result in an IPv6 route missing from EIGRP IPv6 routing table?",
+    "image": null,
     "options": [
       "Interface not participating in EIGRP IPv4 routing process",
       "Route filtering",
@@ -201,6 +216,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Router CiscoVille has been partially configured for EIGRP authentication. What is missing that would allow successful authentication between EIGRP neighbors?",
+    "image": null,
     "options": [
       "Key chain must be all lower case letters",
       "MD5 authentication is unsupported with EIGRP",
