@@ -1,6 +1,16 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { QuizState, QuizAttempt, UserAnswer, Question, ModulePerformance } from "@/types/quiz";
-import { getRandomQuestions, loadQuestions, checkAnswer } from "@/utils/questionLoader";
+import {
+  QuizState,
+  QuizAttempt,
+  UserAnswer,
+  Question,
+  ModulePerformance,
+} from "@/types/quiz";
+import {
+  getRandomQuestions,
+  loadQuestions,
+  checkAnswer,
+} from "@/utils/questionLoader";
 
 interface QuizContextType {
   quizState: QuizState;
@@ -20,7 +30,9 @@ const QuizContext = createContext<QuizContextType | undefined>(undefined);
 const EXAM_TIME = 30 * 60; // 30 minutes in seconds
 const STORAGE_KEY = "quiz_attempts";
 
-export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [quizState, setQuizState] = useState<QuizState>({
     currentQuestionIndex: 0,
     questions: [],
@@ -32,13 +44,20 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     questionsPerPage: 1,
   });
 
-  const [currentAttempt, setCurrentAttempt] = useState<QuizAttempt | null>(null);
+  const [currentAttempt, setCurrentAttempt] = useState<QuizAttempt | null>(
+    null
+  );
 
   // Timer effect for exam mode
   useEffect(() => {
-    if (quizState.mode === "exam" && quizState.isStarted && !quizState.isCompleted && quizState.timeRemaining > 0) {
+    if (
+      quizState.mode === "exam" &&
+      quizState.isStarted &&
+      !quizState.isCompleted &&
+      quizState.timeRemaining > 0
+    ) {
       const timer = setInterval(() => {
-        setQuizState(prev => ({
+        setQuizState((prev) => ({
           ...prev,
           timeRemaining: Math.max(0, prev.timeRemaining - 1),
         }));
@@ -46,20 +65,30 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       return () => clearInterval(timer);
     }
-  }, [quizState.mode, quizState.isStarted, quizState.isCompleted, quizState.timeRemaining]);
+  }, [
+    quizState.mode,
+    quizState.isStarted,
+    quizState.isCompleted,
+    quizState.timeRemaining,
+  ]);
 
   // Auto-submit when time runs out
   useEffect(() => {
-    if (quizState.mode === "exam" && quizState.timeRemaining === 0 && quizState.isStarted && !quizState.isCompleted) {
+    if (
+      quizState.mode === "exam" &&
+      quizState.timeRemaining === 0 &&
+      quizState.isStarted &&
+      !quizState.isCompleted
+    ) {
       submitQuiz();
     }
   }, [quizState.timeRemaining]);
 
   const startQuiz = (mode: "practice" | "exam", selectedModule?: string) => {
     let questions: Question[] = [];
-    
+
     if (mode === "practice" && selectedModule) {
-      questions = loadQuestions().filter(q => q.module === selectedModule);
+      questions = loadQuestions().filter((q) => q.module === selectedModule);
     } else if (mode === "exam") {
       questions = getRandomQuestions(40);
     } else {
@@ -84,11 +113,11 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const answerQuestion = (questionIndex: number, selectedAnswers: string[]) => {
-    setQuizState(prev => {
+    setQuizState((prev) => {
       const newAnswers = [...prev.userAnswers];
       const question = prev.questions[questionIndex];
       const isCorrect = checkAnswer(question, selectedAnswers);
-      
+
       newAnswers[questionIndex] = {
         questionId: questionIndex,
         selectedAnswers,
@@ -103,20 +132,26 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const nextQuestion = () => {
-    setQuizState(prev => ({
+    setQuizState((prev) => ({
       ...prev,
-      currentQuestionIndex: Math.min(prev.currentQuestionIndex + 1, prev.questions.length - 1),
+      currentQuestionIndex: Math.min(
+        prev.currentQuestionIndex + 1,
+        prev.questions.length - 1
+      ),
     }));
   };
 
   const previousQuestion = () => {
-    setQuizState(prev => ({
+    setQuizState((prev) => ({
       ...prev,
       currentQuestionIndex: Math.max(prev.currentQuestionIndex - 1, 0),
     }));
   };
 
-  const calculateModuleBreakdown = (questions: Question[], userAnswers: UserAnswer[]): ModulePerformance[] => {
+  const calculateModuleBreakdown = (
+    questions: Question[],
+    userAnswers: UserAnswer[]
+  ): ModulePerformance[] => {
     const moduleStats: Record<string, { correct: number; total: number }> = {};
 
     questions.forEach((question, idx) => {
@@ -139,10 +174,15 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const submitQuiz = () => {
-    const correctAnswers = quizState.userAnswers.filter(a => a.isCorrect).length;
+    const correctAnswers = quizState.userAnswers.filter(
+      (a) => a.isCorrect
+    ).length;
     const score = (correctAnswers / quizState.questions.length) * 100;
     const timeSpent = EXAM_TIME - quizState.timeRemaining;
-    const moduleBreakdown = calculateModuleBreakdown(quizState.questions, quizState.userAnswers);
+    const moduleBreakdown = calculateModuleBreakdown(
+      quizState.questions,
+      quizState.userAnswers
+    );
 
     const attempt: QuizAttempt = {
       id: Date.now().toString(),
@@ -163,7 +203,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     localStorage.setItem(STORAGE_KEY, JSON.stringify(attempts));
 
     setCurrentAttempt(attempt);
-    setQuizState(prev => ({ ...prev, isCompleted: true }));
+    setQuizState((prev) => ({ ...prev, isCompleted: true }));
   };
 
   const resetQuiz = () => {
@@ -181,7 +221,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const setQuestionsPerPage = (count: 1 | 5 | 10) => {
-    setQuizState(prev => ({ ...prev, questionsPerPage: count }));
+    setQuizState((prev) => ({ ...prev, questionsPerPage: count }));
   };
 
   const getAttemptHistory = (): QuizAttempt[] => {

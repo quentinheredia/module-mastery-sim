@@ -2,7 +2,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { Timer } from "@/components/quiz/Timer";
 import { ProgressBar } from "@/components/quiz/ProgressBar";
@@ -12,32 +18,46 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Exam = () => {
   const navigate = useNavigate();
-  const { quizState, startQuiz, answerQuestion, submitQuiz, resetQuiz } = useQuiz();
+  const { quizState, startQuiz, answerQuestion, submitQuiz, resetQuiz } =
+    useQuiz();
   const [questionsPerPage, setQuestionsPerPage] = useState<1 | 5 | 10>(1);
 
   const handleStart = () => {
     startQuiz("exam");
   };
 
-  const handleAnswerChange = (questionIndex: number, selectedAnswers: string[]) => {
+  const handleAnswerChange = (
+    questionIndex: number,
+    selectedAnswers: string[]
+  ) => {
     answerQuestion(questionIndex, selectedAnswers);
   };
 
   const handleSubmit = () => {
-    if (window.confirm("Are you sure you want to submit your exam? You cannot change answers after submission.")) {
+    if (
+      window.confirm(
+        "Are you sure you want to submit your exam? You cannot change answers after submission."
+      )
+    ) {
       submitQuiz();
       navigate("/results");
     }
   };
 
   const handleExit = () => {
-    if (window.confirm("Are you sure you want to exit? Your progress will be lost.")) {
+    if (
+      window.confirm(
+        "Are you sure you want to exit? Your progress will be lost."
+      )
+    ) {
       resetQuiz();
       navigate("/");
     }
   };
 
-  const answeredCount = quizState.userAnswers.filter(a => a.selectedAnswers.length > 0).length;
+  const answeredCount = quizState.userAnswers.filter(
+    (a) => a.selectedAnswers.length > 0
+  ).length;
   const unansweredCount = quizState.questions.length - answeredCount;
 
   if (!quizState.isStarted) {
@@ -45,7 +65,11 @@ const Exam = () => {
       <div className="min-h-screen bg-background">
         <header className="border-b bg-card">
           <div className="container mx-auto px-4 py-4">
-            <Button variant="ghost" onClick={() => navigate("/")} className="mb-2">
+            <Button
+              variant="ghost"
+              onClick={() => navigate("/")}
+              className="mb-2"
+            >
               <Home className="mr-2 h-4 w-4" />
               Back to Home
             </Button>
@@ -58,8 +82,9 @@ const Exam = () => {
             <Alert>
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>
-                This exam will consist of 40 randomly selected questions from Modules 1-5. You will have 30 minutes to complete it.
-                All questions are multiple choice with all-or-nothing grading.
+                This exam will consist of 40 randomly selected questions from
+                Modules 1-5. You will have 30 minutes to complete it. All
+                questions are multiple choice with all-or-nothing grading.
               </AlertDescription>
             </Alert>
 
@@ -67,10 +92,14 @@ const Exam = () => {
               <h2 className="text-2xl font-bold mb-6">Exam Settings</h2>
               <div className="space-y-4">
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Questions per Page</label>
+                  <label className="text-sm font-medium mb-2 block">
+                    Questions per Page
+                  </label>
                   <Select
                     value={String(questionsPerPage)}
-                    onValueChange={(value) => setQuestionsPerPage(Number(value) as 1 | 5 | 10)}
+                    onValueChange={(value) =>
+                      setQuestionsPerPage(Number(value) as 1 | 5 | 10)
+                    }
                   >
                     <SelectTrigger>
                       <SelectValue />
@@ -85,7 +114,9 @@ const Exam = () => {
 
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Total Questions:</span>
+                    <span className="text-muted-foreground">
+                      Total Questions:
+                    </span>
                     <span className="font-semibold">40</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
@@ -93,7 +124,9 @@ const Exam = () => {
                     <span className="font-semibold">30 minutes</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Passing Score:</span>
+                    <span className="text-muted-foreground">
+                      Passing Score:
+                    </span>
                     <span className="font-semibold">70%</span>
                   </div>
                 </div>
@@ -109,8 +142,13 @@ const Exam = () => {
     );
   }
 
-  const startIdx = Math.floor(quizState.currentQuestionIndex / questionsPerPage) * questionsPerPage;
-  const endIdx = Math.min(startIdx + questionsPerPage, quizState.questions.length);
+  const startIdx =
+    Math.floor(quizState.currentQuestionIndex / questionsPerPage) *
+    questionsPerPage;
+  const endIdx = Math.min(
+    startIdx + questionsPerPage,
+    quizState.questions.length
+  );
   const currentPageQuestions = quizState.questions.slice(startIdx, endIdx);
 
   return (
@@ -141,7 +179,8 @@ const Exam = () => {
             <Alert variant="destructive">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>
-                You have {unansweredCount} unanswered question{unansweredCount > 1 ? "s" : ""}
+                You have {unansweredCount} unanswered question
+                {unansweredCount > 1 ? "s" : ""}
               </AlertDescription>
             </Alert>
           )}
@@ -155,7 +194,9 @@ const Exam = () => {
                   question={question}
                   questionNumber={questionIndex + 1}
                   userAnswer={quizState.userAnswers[questionIndex]}
-                  onAnswerChange={(answers) => handleAnswerChange(questionIndex, answers)}
+                  onAnswerChange={(answers) =>
+                    handleAnswerChange(questionIndex, answers)
+                  }
                   showFeedback={false}
                 />
               );
@@ -181,7 +222,10 @@ const Exam = () => {
               {endIdx < quizState.questions.length && (
                 <Button
                   onClick={() => {
-                    const newIdx = Math.min(quizState.questions.length - 1, endIdx);
+                    const newIdx = Math.min(
+                      quizState.questions.length - 1,
+                      endIdx
+                    );
                     // This is a simple navigation - in a real app you'd update context
                   }}
                 >
