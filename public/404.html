@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // Remove the repo base from the URL (adjust for your repo name)
+      const base = "/module-mastery-sim";
+      const path = window.location.pathname.replace(base, "");
+      // Remember route so React Router can restore it
+      sessionStorage.redirect =
+        path + window.location.search + window.location.hash;
+      // Go back to the index.html entry point
+      window.location.replace(base + "/");
+    </script>
+  </head>
+  <body></body>
+</html>
