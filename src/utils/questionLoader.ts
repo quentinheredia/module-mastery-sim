@@ -19,7 +19,7 @@ const allDataSources = [
   ...module3,
   ...module4,
   ...module5,
-];
+] as Question[];
 
 // Standardized module names
 const MODULE_NAMES: Record<string, string> = {
