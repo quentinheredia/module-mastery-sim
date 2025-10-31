@@ -30,7 +30,7 @@
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
     "question": "Which statement reflects the effect of the configuration sequence listed below?\n\nR1(config)# access-list 199 permit tcp host 10.1.1.1 host 172.16.1.1\nR1(config)# access-list 199 permit tcp host 172.16.1.1 host 10.1.1.1\nR1(config)# end\nR1# debug ip packet 199 detail",
-    "image": "./src/assets/images/mod_1_q3.png",
+    "image": "/module-mastery-sim/images/mod_1_q3.png",
     "options": [
       "These commands will have no effect at all. The debug ip packet command will work as normal and display debugging information for all IP packets",
       "These commands will generate an error message because you cannot use an access list with any debug commands",
