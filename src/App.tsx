@@ -21,14 +21,13 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
+          <BrowserRouter basename="/module-mastery-sim">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/practice" element={<Practice />} />
               <Route path="/exam" element={<Exam />} />
               <Route path="/results" element={<Results />} />
               <Route path="/history" element={<History />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
