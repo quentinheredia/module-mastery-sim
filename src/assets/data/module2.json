@@ -11,7 +11,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Refer to the exhibit. What can the field engineer conclude about the EIGRP authentication between RouterA and RouterB?",
-    "image": "/images/mod2_q2.png",
+    "image": "/images/quizzes/mod2_q2.png",
     "options": [
       "EIGRP Authentication will fail because the key chain names do not match",
       "EIGRP Authentication will fail because MD5 authentication is only supported with EIGRP named mode",
@@ -99,7 +99,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Based on the show command output from EIGRP IPv4 on router R2, what two statements can be concluded?",
-    "image": "/images/mod2_q8.png",
+    "image": "/images/quizzes/mod2_q8.png",
     "options": [
       "The K metric parameters are left at their default values",
       "R2 is configured as a stub",
@@ -116,7 +116,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Refer to the exhibit. The EIGRP routing table on R2 does not include all networks that are attached to R1. The network statements are properly configured on R1. What is a possible cause of the issue?",
-    "image": "/images/mod2_q9.png",
+    "image": "/images/quizzes/mod2_q9.png",
     "options": [
       "R2 is configured as a stub",
       "Variance value has been modified to allow for unequal cost load balancing",
@@ -130,7 +130,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Router R1 has recently been configured to operate in an IPv6-only network and is connected via GigabitEthernet 0/0 to router R2. R2 is configured correctly and the link is working fine, but R2 will not form a neighbor relationship with R1. What is the problem?",
-    "image": "/images/mod2_q10.png",
+    "image": "/images/quizzes/mod2_q10.png",
     "options": [
       "Default route is missing on R2",
       "The interfaces connected to these networks are configured as passive",
@@ -144,7 +144,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "After the configuration shown is applied on router R1, the exhibited status message is displayed after enabling EIGRP debug command on R1. Router R1 is unable to form a neighbor relationship with R2 on Serial 0/1/0. What is the most likely cause?",
-    "image": "/images/mod2_q11.png",
+    "image": "/images/quizzes/mod2_q11.png",
     "options": [
       "IPv6 Link local address must be configured on interface Gig0/0",
       "The router ID has not been created on R1",
@@ -216,7 +216,7 @@
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "question": "Router CiscoVille has been partially configured for EIGRP authentication. What is missing that would allow successful authentication between EIGRP neighbors?",
-    "image": "/images/mod2_q16.png",
+    "image": "/images/quizzes/mod2_q16.png",
     "options": [
       "Key chain must be all lower case letters",
       "MD5 authentication is unsupported with EIGRP",
