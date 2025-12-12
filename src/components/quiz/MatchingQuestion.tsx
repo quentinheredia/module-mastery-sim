@@ -3,7 +3,7 @@ import { Question, MatchingPairs, UserAnswer } from "@/types/quiz";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CheckCircle2, XCircle, ArrowRight } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowRight, Link2 } from "lucide-react";
 import { shuffleArray } from "@/utils/questionLoader";
 
 interface MatchingQuestionProps {
@@ -29,7 +29,6 @@ export const MatchingQuestion = ({
   const correctAnswers = question.correct_answers as MatchingPairs;
 
   useEffect(() => {
-    // Shuffle options once on mount
     setShuffledOptions(shuffleArray([...question.options]));
   }, [question.options]);
 
@@ -53,83 +52,113 @@ export const MatchingQuestion = ({
     return Object.values(matchingAnswers);
   };
 
+  const getPairState = (pairKey: string) => {
+    const selectedOption = matchingAnswers[pairKey];
+    if (showFeedback) {
+      if (isCorrectPair(pairKey)) return "correct";
+      if (selectedOption) return "incorrect";
+      return "neutral";
+    }
+    if (selectedOption) return "selected";
+    return "default";
+  };
+
+  const pairStyles = {
+    default: "border-border bg-card hover:border-primary/30",
+    selected: "border-primary bg-primary/5 shadow-sm",
+    correct: "border-success bg-success/10",
+    incorrect: "border-destructive bg-destructive/10",
+    neutral: "border-border bg-card",
+  };
+
   const pairKeys = Object.keys(pairs).sort();
 
   return (
-    <Card className="p-6 border-2">
-      <div className="space-y-4">
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-3">
-              <Badge variant="outline" className="text-sm">
-                Question {questionNumber}
-              </Badge>
-              <Badge variant="secondary" className="text-xs">
-                {question.points} {question.points === 1 ? "point" : "points"}
-              </Badge>
-              <Badge variant="secondary" className="text-xs bg-accent/10 text-accent border-accent/20">
-                Matching
-              </Badge>
-            </div>
-            <p className="text-base font-medium leading-relaxed whitespace-pre-wrap mb-6">
-              {question.question}
-            </p>
-          </div>
+    <Card variant="elevated" className="overflow-hidden animate-fade-up">
+      {/* Question header */}
+      <div className="p-6 pb-4 border-b border-border/50 bg-muted/30">
+        <div className="flex items-center gap-3 flex-wrap">
+          <Badge 
+            variant="outline" 
+            className="text-sm font-semibold bg-background border-primary/30 text-primary"
+          >
+            Question {questionNumber}
+          </Badge>
+          <Badge 
+            variant="secondary" 
+            className="text-xs font-medium"
+          >
+            {question.points} {question.points === 1 ? "pt" : "pts"}
+          </Badge>
+          <Badge 
+            variant="outline" 
+            className="text-xs flex items-center gap-1.5 bg-accent/10 text-accent border-accent/30"
+          >
+            <Link2 className="h-3 w-3" />
+            Matching
+          </Badge>
         </div>
+      </div>
 
+      {/* Question content */}
+      <div className="p-6 space-y-6">
+        <p className="text-base font-medium leading-relaxed whitespace-pre-wrap">
+          {question.question}
+        </p>
+
+        {/* Matching pairs */}
         <div className="space-y-3">
-          {pairKeys.map((pairKey) => {
+          {pairKeys.map((pairKey, idx) => {
             const pairDescription = pairs[pairKey];
             const selectedOption = matchingAnswers[pairKey];
             const usedOptions = getUsedOptions();
+            const state = getPairState(pairKey);
             
             return (
               <div
                 key={pairKey}
-                className={`flex items-center gap-4 p-4 rounded-lg border-2 transition-colors ${
-                  showFeedback
-                    ? isCorrectPair(pairKey)
-                      ? "border-success bg-success/5"
-                      : selectedOption
-                      ? "border-destructive bg-destructive/5"
-                      : "border-border"
-                    : selectedOption
-                    ? "border-primary bg-primary/5"
-                    : "border-border"
-                }`}
+                className={`
+                  flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 p-4 rounded-xl border-2 
+                  transition-all duration-200 ease-out
+                  ${pairStyles[state]}
+                `}
+                style={{ animationDelay: `${idx * 50}ms` }}
               >
                 {/* Left side - Label */}
-                <div className="flex items-center gap-3 min-w-[200px]">
-                  <Badge variant="outline" className="h-8 w-8 flex items-center justify-center font-bold">
+                <div className="flex items-center gap-3 sm:min-w-[200px]">
+                  <Badge 
+                    variant="outline" 
+                    className="h-8 w-8 flex items-center justify-center font-bold bg-background border-primary/30 text-primary"
+                  >
                     {pairKey}
                   </Badge>
                   <span className="text-sm font-medium">{pairDescription}</span>
                 </div>
 
-                <ArrowRight className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                <ArrowRight className="hidden sm:block h-4 w-4 text-muted-foreground flex-shrink-0" />
 
                 {/* Right side - Dropdown */}
-                <div className="flex-1 min-w-[250px]">
+                <div className="flex-1 sm:min-w-[250px]">
                   <Select
                     value={selectedOption || ""}
                     onValueChange={(value) => handleMatch(pairKey, value)}
                     disabled={disabled}
                   >
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger className="w-full rounded-lg border-border/50 bg-background/50 backdrop-blur-sm">
                       <SelectValue placeholder="Select matching option..." />
                     </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="__clear__">
-                        <span className="text-muted-foreground">Clear selection</span>
+                    <SelectContent className="rounded-xl border-border bg-popover shadow-elevation-lg">
+                      <SelectItem value="__clear__" className="rounded-lg">
+                        <span className="text-muted-foreground italic">Clear selection</span>
                       </SelectItem>
-                      {shuffledOptions.map((option, idx) => {
+                      {shuffledOptions.map((option, optIdx) => {
                         const isUsedElsewhere = usedOptions.includes(option) && matchingAnswers[pairKey] !== option;
                         return (
                           <SelectItem 
-                            key={idx} 
+                            key={optIdx} 
                             value={option}
                             disabled={isUsedElsewhere}
-                            className={isUsedElsewhere ? "opacity-50" : ""}
+                            className={`rounded-lg ${isUsedElsewhere ? "opacity-50" : ""}`}
                           >
                             {option}
                           </SelectItem>
@@ -142,9 +171,9 @@ export const MatchingQuestion = ({
                 {/* Feedback icons */}
                 {showFeedback && selectedOption && (
                   isCorrectPair(pairKey) ? (
-                    <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 animate-scale-in" />
                   ) : (
-                    <XCircle className="h-5 w-5 text-destructive flex-shrink-0" />
+                    <XCircle className="h-5 w-5 text-destructive flex-shrink-0 animate-scale-in" />
                   )
                 )}
               </div>
@@ -152,28 +181,44 @@ export const MatchingQuestion = ({
           })}
         </div>
 
+        {/* Feedback panel */}
         {showFeedback && (
           <div
-            className={`mt-4 p-4 rounded-lg ${
-              userAnswer?.isCorrect
-                ? "bg-success/10 border border-success"
-                : "bg-destructive/10 border border-destructive"
-            }`}
+            className={`
+              p-4 rounded-xl border-2 animate-fade-up
+              ${userAnswer?.isCorrect 
+                ? "bg-success/10 border-success/30" 
+                : "bg-destructive/10 border-destructive/30"
+              }
+            `}
           >
-            <p className="font-semibold mb-2">
-              {userAnswer?.isCorrect ? "✓ Correct!" : "✗ Incorrect"}
-            </p>
-            <div className="text-sm space-y-1">
-              <span className="font-medium">Correct matches:</span>
-              <ul className="list-disc list-inside mt-1 space-y-1">
+            <div className="flex items-center gap-2 mb-3">
+              {userAnswer?.isCorrect ? (
+                <CheckCircle2 className="h-5 w-5 text-success" />
+              ) : (
+                <XCircle className="h-5 w-5 text-destructive" />
+              )}
+              <p className="font-semibold font-display">
+                {userAnswer?.isCorrect ? "Correct!" : "Incorrect"}
+              </p>
+            </div>
+            <div className="text-sm space-y-2">
+              <span className="font-medium text-foreground">Correct matches:</span>
+              <div className="grid gap-2 mt-2">
                 {pairKeys.map((key) => (
-                  <li key={key}>
-                    <span className="font-medium">{key}. {pairs[key]}</span>
-                    {" → "}
+                  <div 
+                    key={key} 
+                    className="flex items-center gap-2 text-muted-foreground bg-background/50 rounded-lg px-3 py-2"
+                  >
+                    <Badge variant="outline" className="h-6 w-6 flex items-center justify-center text-xs">
+                      {key}
+                    </Badge>
+                    <span className="font-medium text-foreground">{pairs[key]}</span>
+                    <ArrowRight className="h-3 w-3 mx-1" />
                     <span>{correctAnswers[key]}</span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         )}
