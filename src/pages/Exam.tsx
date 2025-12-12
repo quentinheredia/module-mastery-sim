@@ -34,7 +34,9 @@ const Exam = () => {
   const courseId = activeCourse?.id || "net4009";
 
   const handleStart = () => {
-    startQuiz("exam", courseId);
+    const currentCourseId = activeCourse?.id || "net4009";
+    console.log("Starting exam with courseId:", currentCourseId);
+    startQuiz("exam", currentCourseId);
   };
 
   const handleAnswerChange = (

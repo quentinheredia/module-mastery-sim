@@ -90,6 +90,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
   const startQuiz = (mode: "practice" | "exam", courseId: string, selectedModule?: string) => {
     let questions: Question[] = [];
     setCurrentCourseId(courseId);
+    console.log("QuizContext.startQuiz called with courseId:", courseId, "mode:", mode);
 
     if (mode === "practice" && selectedModule) {
       questions = loadQuestions(courseId).filter((q) => q.module === selectedModule);
@@ -98,6 +99,8 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
     } else {
       questions = getRandomQuestions(courseId, 40);
     }
+    
+    console.log("Loaded questions count:", questions.length, "First question module:", questions[0]?.module);
 
     setQuizState({
       currentQuestionIndex: 0,
