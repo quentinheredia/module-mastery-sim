@@ -103,11 +103,46 @@ export const shuffleArray = <T>(array: T[]): T[] => {
   return shuffled;
 };
 
-// Get random questions for exam (40 questions) from a specific course
+// Get random questions for exam from a specific course
 export const getRandomQuestions = (courseId: string = "net4009", count: number = 40): Question[] => {
   const allQuestions = loadQuestions(courseId);
+  
+  // Special logic for NET4005: 10 questions with specific distribution
+  if (courseId === "net4005") {
+    return getNet4005ExamQuestions(allQuestions);
+  }
+  
+  // Default behavior for other courses
   const shuffled = shuffleArray(allQuestions);
   return shuffled.slice(0, Math.min(count, shuffled.length));
+};
+
+// NET4005 specific exam question selection
+const getNet4005ExamQuestions = (allQuestions: Question[]): Question[] => {
+  const matchingQuestions = allQuestions.filter(q => q.question_type === "matching");
+  const multiAnswerQuestions = allQuestions.filter(q => q.question_type === "multiple_answer");
+  const singleAnswerQuestions = allQuestions.filter(q => q.question_type === "multiple_choice");
+  
+  const selectedQuestions: Question[] = [];
+  
+  // 1 random matching question
+  const shuffledMatching = shuffleArray(matchingQuestions);
+  if (shuffledMatching.length > 0) {
+    selectedQuestions.push(shuffledMatching[0]);
+  }
+  
+  // 2-3 multi-answer questions (randomly pick 2 or 3)
+  const multiAnswerCount = Math.random() < 0.5 ? 2 : 3;
+  const shuffledMultiAnswer = shuffleArray(multiAnswerQuestions);
+  selectedQuestions.push(...shuffledMultiAnswer.slice(0, Math.min(multiAnswerCount, shuffledMultiAnswer.length)));
+  
+  // Fill remaining spots with single-answer questions (to reach 10 total)
+  const remainingCount = 10 - selectedQuestions.length;
+  const shuffledSingleAnswer = shuffleArray(singleAnswerQuestions);
+  selectedQuestions.push(...shuffledSingleAnswer.slice(0, Math.min(remainingCount, shuffledSingleAnswer.length)));
+  
+  // Shuffle the final selection so question types are mixed
+  return shuffleArray(selectedQuestions);
 };
 
 // Check if answer is correct (handles both regular and matching questions)
