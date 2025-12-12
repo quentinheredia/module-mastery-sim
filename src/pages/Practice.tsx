@@ -5,10 +5,12 @@ import { Card } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { ProgressBar } from "@/components/quiz/ProgressBar";
-import { ArrowLeft, ArrowRight, Home, RotateCcw } from "lucide-react";
+import { Header } from "@/components/layout/Header";
+import { ArrowLeft, ArrowRight, Home, RotateCcw, BookOpen, Layers, Eye, Keyboard } from "lucide-react";
 import { getAvailableModules, loadQuestions, shuffleArray, checkAnswer } from "@/utils/questionLoader";
 import { Question, UserAnswer, MatchingPairs } from "@/types/quiz";
 import { useCourse } from "@/contexts/CourseContext";
+import { Badge } from "@/components/ui/badge";
 
 const Practice = () => {
   const navigate = useNavigate();
@@ -110,49 +112,97 @@ const Practice = () => {
 
   if (!activeCourse) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <p>Loading...</p>
+      <div className="min-h-screen bg-gradient-surface flex items-center justify-center">
+        <div className="animate-pulse-soft">
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
       </div>
     );
   }
 
   if (!isStarted) {
     return (
-      <div className="min-h-screen bg-background">
-        <header className="border-b bg-card">
-          <div className="container mx-auto px-4 py-4">
-            <Button variant="ghost" onClick={() => navigate("/")} className="mb-2">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Home
-            </Button>
-            <h1 className="text-2xl font-bold">Practice Mode - {activeCourse.name}</h1>
-          </div>
-        </header>
+      <div className="min-h-screen bg-gradient-surface">
+        <Header title={`Practice Mode`} subtitle={activeCourse.name}>
+          <Button variant="outline" size="sm" onClick={() => navigate("/")}>
+            <Home className="mr-2 h-4 w-4" />
+            Home
+          </Button>
+        </Header>
 
         <main className="container mx-auto px-4 py-12">
-          <div className="max-w-2xl mx-auto">
-            <Card className="p-8">
-              <h2 className="text-2xl font-bold mb-6">Select Study Module</h2>
-              <div className="space-y-4">
+          <div className="max-w-2xl mx-auto space-y-6">
+            {/* Module Selection Card */}
+            <Card variant="elevated" className="p-8 animate-fade-up">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-12 w-12 rounded-xl bg-gradient-primary flex items-center justify-center shadow-elevation-sm">
+                  <Layers className="h-6 w-6 text-primary-foreground" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold font-display">Select Module</h2>
+                  <p className="text-muted-foreground">Choose a module to practice</p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
                 <div>
                   <label className="text-sm font-medium mb-2 block">Module</label>
                   <Select value={selectedModule} onValueChange={setSelectedModule}>
-                    <SelectTrigger>
+                    <SelectTrigger className="h-12 rounded-xl border-border/50 bg-background/50">
                       <SelectValue placeholder="Select a module" />
                     </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">All Modules</SelectItem>
-                      {modules.slice(1).map((module) => (
-                        <SelectItem key={module} value={module}>
-                          {module}
-                        </SelectItem>
-                      ))}
+                    <SelectContent className="rounded-xl border-border bg-popover shadow-elevation-lg">
+                      <SelectItem value="all" className="rounded-lg">
+                        <div className="flex items-center gap-2">
+                          <BookOpen className="h-4 w-4 text-primary" />
+                          <span className="font-medium">All Modules</span>
+                          <Badge variant="secondary" className="ml-2 text-xs">
+                            {loadQuestions(courseId).length} questions
+                          </Badge>
+                        </div>
+                      </SelectItem>
+                      {modules.slice(1).map((module) => {
+                        const count = loadQuestions(courseId).filter(q => q.module === module).length;
+                        return (
+                          <SelectItem key={module} value={module} className="rounded-lg">
+                            <div className="flex items-center gap-2">
+                              <span className="font-medium">{module}</span>
+                              <Badge variant="outline" className="ml-2 text-xs">
+                                {count} questions
+                              </Badge>
+                            </div>
+                          </SelectItem>
+                        );
+                      })}
                     </SelectContent>
                   </Select>
                 </div>
-                <Button size="lg" className="w-full" onClick={handleStart}>
+
+                <Button 
+                  size="lg" 
+                  className="w-full bg-gradient-primary hover:opacity-90 shadow-elevation-sm transition-all duration-300" 
+                  onClick={handleStart}
+                >
+                  <BookOpen className="mr-2 h-5 w-5" />
                   Start Practice Session
                 </Button>
+              </div>
+            </Card>
+
+            {/* Info Card */}
+            <Card variant="glass" className="p-6 animate-fade-up" style={{ animationDelay: "100ms" }}>
+              <div className="flex items-start gap-3">
+                <div className="h-10 w-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Keyboard className="h-5 w-5 text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-semibold font-display mb-1">Practice Tips</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Use ← → arrow keys to navigate questions</li>
+                    <li>• Check answers instantly with Show Answer</li>
+                    <li>• No time limit - learn at your own pace</li>
+                  </ul>
+                </div>
               </div>
             </Card>
           </div>
@@ -163,27 +213,30 @@ const Practice = () => {
 
   if (questions.length === 0) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <Card className="p-8 text-center">
+      <div className="min-h-screen bg-gradient-surface flex items-center justify-center p-4">
+        <Card variant="glass" className="p-8 text-center max-w-md animate-fade-up">
           <p className="text-lg mb-4">No questions available for this module</p>
-          <Button onClick={handleReset}>Go Back</Button>
+          <Button onClick={handleReset} className="bg-gradient-primary">Go Back</Button>
         </Card>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b bg-card sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between mb-4">
-            <h1 className="text-xl font-bold">Practice Mode - {activeCourse.name}</h1>
+    <div className="min-h-screen bg-gradient-surface">
+      <header className="sticky top-0 z-40 border-b border-border/50 bg-card/80 backdrop-blur-md">
+        <div className="container mx-auto px-4 py-4 space-y-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-xl font-bold font-display text-gradient-primary">Practice Mode</h1>
+              <p className="text-sm text-muted-foreground">{activeCourse.name}</p>
+            </div>
             <div className="flex gap-2">
-              <Button variant="outline" size="sm" onClick={handleReset}>
+              <Button variant="outline" size="sm" onClick={handleReset} className="rounded-xl">
                 <RotateCcw className="mr-2 h-4 w-4" />
                 Reset
               </Button>
-              <Button variant="outline" size="sm" onClick={() => navigate("/")}>
+              <Button variant="outline" size="sm" onClick={() => navigate("/")} className="rounded-xl">
                 <Home className="mr-2 h-4 w-4" />
                 Home
               </Button>
@@ -207,35 +260,41 @@ const Practice = () => {
             showFeedback={showFeedback}
           />
 
-          <div className="flex flex-wrap gap-3 justify-between">
-            <Button
-              variant="outline"
-              onClick={handlePrevious}
-              disabled={currentIndex === 0}
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Previous
-            </Button>
-
-            <div className="flex gap-3">
-              {!showFeedback && (userAnswers[currentIndex]?.selectedAnswers.length > 0 || 
-                (userAnswers[currentIndex]?.matchingAnswers && Object.keys(userAnswers[currentIndex].matchingAnswers!).length > 0)) && (
-                <Button onClick={handleShowAnswer} variant="secondary">
-                  Show Answer
-                </Button>
-              )}
+          <Card variant="elevated" className="p-4">
+            <div className="flex flex-wrap gap-3 justify-between items-center">
               <Button
-                onClick={handleNext}
-                disabled={currentIndex === questions.length - 1}
+                variant="outline"
+                onClick={handlePrevious}
+                disabled={currentIndex === 0}
+                className="rounded-xl"
               >
-                Next
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Previous
               </Button>
-            </div>
-          </div>
 
-          <div className="text-center text-sm text-muted-foreground">
-            Use keyboard: ← Previous | → Next
+              <div className="flex gap-3">
+                {!showFeedback && (userAnswers[currentIndex]?.selectedAnswers.length > 0 || 
+                  (userAnswers[currentIndex]?.matchingAnswers && Object.keys(userAnswers[currentIndex].matchingAnswers!).length > 0)) && (
+                  <Button onClick={handleShowAnswer} variant="secondary" className="rounded-xl">
+                    <Eye className="mr-2 h-4 w-4" />
+                    Show Answer
+                  </Button>
+                )}
+                <Button
+                  onClick={handleNext}
+                  disabled={currentIndex === questions.length - 1}
+                  className="rounded-xl bg-gradient-primary hover:opacity-90"
+                >
+                  Next
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          </Card>
+
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <Keyboard className="h-4 w-4" />
+            <span>Use arrow keys to navigate</span>
           </div>
         </div>
       </main>

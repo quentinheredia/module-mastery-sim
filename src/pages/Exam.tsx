@@ -12,11 +12,25 @@ import {
 import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { Timer } from "@/components/quiz/Timer";
 import { ProgressBar } from "@/components/quiz/ProgressBar";
+import { Header } from "@/components/layout/Header";
 import { useQuiz } from "@/contexts/QuizContext";
 import { useCourse } from "@/contexts/CourseContext";
-import { AlertCircle, Home } from "lucide-react";
+import { 
+  AlertCircle, 
+  Home, 
+  Timer as TimerIcon, 
+  FileQuestion, 
+  Target,
+  ChevronLeft,
+  ChevronRight,
+  Send,
+  Settings2,
+  Zap
+} from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { MatchingPairs } from "@/types/quiz";
+import { Badge } from "@/components/ui/badge";
+import { loadQuestions } from "@/utils/questionLoader";
 
 const Exam = () => {
   const navigate = useNavigate();
@@ -32,6 +46,8 @@ const Exam = () => {
   const [questionsPerPage, setQuestionsPerPage] = useState<1 | 5 | 10>(1);
 
   const courseId = activeCourse?.id || "net4009";
+  const totalQuestions = activeCourse ? loadQuestions(activeCourse.id).length : 0;
+  const examQuestionCount = Math.min(40, totalQuestions);
 
   const handleStart = () => {
     const currentCourseId = activeCourse?.id || "net4009";
@@ -76,43 +92,48 @@ const Exam = () => {
 
   if (!activeCourse) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <p>Loading...</p>
+      <div className="min-h-screen bg-gradient-surface flex items-center justify-center">
+        <div className="animate-pulse-soft">
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
       </div>
     );
   }
 
   if (!quizState.isStarted) {
     return (
-      <div className="min-h-screen bg-background">
-        <header className="border-b bg-card">
-          <div className="container mx-auto px-4 py-4">
-            <Button
-              variant="ghost"
-              onClick={() => navigate("/")}
-              className="mb-2"
-            >
-              <Home className="mr-2 h-4 w-4" />
-              Back to Home
-            </Button>
-            <h1 className="text-2xl font-bold">Exam Mode - {activeCourse.name}</h1>
-          </div>
-        </header>
+      <div className="min-h-screen bg-gradient-surface">
+        <Header title="Exam Mode" subtitle={activeCourse.name}>
+          <Button variant="outline" size="sm" onClick={() => navigate("/")}>
+            <Home className="mr-2 h-4 w-4" />
+            Home
+          </Button>
+        </Header>
 
         <main className="container mx-auto px-4 py-12">
           <div className="max-w-2xl mx-auto space-y-6">
-            <Alert>
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>
-                This exam will consist of 40 randomly selected questions from{" "}
-                {activeCourse.name}. You will have 30 minutes to complete it. Questions
-                include single choice, multiple choice, and matching types.
+            {/* Info Alert */}
+            <Alert className="border-accent/30 bg-accent/5 animate-fade-up">
+              <Zap className="h-4 w-4 text-accent" />
+              <AlertDescription className="text-foreground">
+                This exam consists of <span className="font-semibold">{examQuestionCount} randomly selected questions</span> from{" "}
+                {activeCourse.name}. You have <span className="font-semibold">30 minutes</span> to complete it.
               </AlertDescription>
             </Alert>
 
-            <Card className="p-8">
-              <h2 className="text-2xl font-bold mb-6">Exam Settings</h2>
-              <div className="space-y-4">
+            {/* Settings Card */}
+            <Card variant="elevated" className="p-8 animate-fade-up" style={{ animationDelay: "100ms" }}>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-12 w-12 rounded-xl bg-gradient-accent flex items-center justify-center shadow-elevation-sm">
+                  <Settings2 className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold font-display">Exam Settings</h2>
+                  <p className="text-muted-foreground">Configure your exam experience</p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
                 <div>
                   <label className="text-sm font-medium mb-2 block">
                     Questions per Page
@@ -123,37 +144,42 @@ const Exam = () => {
                       setQuestionsPerPage(Number(value) as 1 | 5 | 10)
                     }
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="h-12 rounded-xl border-border/50 bg-background/50">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="1">1 question at a time</SelectItem>
-                      <SelectItem value="5">5 questions at a time</SelectItem>
-                      <SelectItem value="10">10 questions at a time</SelectItem>
+                    <SelectContent className="rounded-xl border-border bg-popover shadow-elevation-lg">
+                      <SelectItem value="1" className="rounded-lg">1 question at a time</SelectItem>
+                      <SelectItem value="5" className="rounded-lg">5 questions at a time</SelectItem>
+                      <SelectItem value="10" className="rounded-lg">10 questions at a time</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
-                <div className="pt-4 space-y-3">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">
-                      Total Questions:
-                    </span>
-                    <span className="font-semibold">40</span>
+                {/* Exam Details Grid */}
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="p-4 rounded-xl bg-muted/30 border border-border/50 text-center">
+                    <FileQuestion className="h-5 w-5 text-primary mx-auto mb-2" />
+                    <p className="text-2xl font-bold font-display">{examQuestionCount}</p>
+                    <p className="text-xs text-muted-foreground">Questions</p>
                   </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Time Limit:</span>
-                    <span className="font-semibold">30 minutes</span>
+                  <div className="p-4 rounded-xl bg-muted/30 border border-border/50 text-center">
+                    <TimerIcon className="h-5 w-5 text-accent mx-auto mb-2" />
+                    <p className="text-2xl font-bold font-display">30</p>
+                    <p className="text-xs text-muted-foreground">Minutes</p>
                   </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">
-                      Passing Score:
-                    </span>
-                    <span className="font-semibold">70%</span>
+                  <div className="p-4 rounded-xl bg-muted/30 border border-border/50 text-center">
+                    <Target className="h-5 w-5 text-success mx-auto mb-2" />
+                    <p className="text-2xl font-bold font-display">70%</p>
+                    <p className="text-xs text-muted-foreground">Passing</p>
                   </div>
                 </div>
 
-                <Button size="lg" className="w-full mt-6" onClick={handleStart}>
+                <Button 
+                  size="lg" 
+                  className="w-full bg-gradient-accent hover:opacity-90 shadow-elevation-sm transition-all duration-300" 
+                  onClick={handleStart}
+                >
+                  <Zap className="mr-2 h-5 w-5" />
                   Start Exam
                 </Button>
               </div>
@@ -174,14 +200,17 @@ const Exam = () => {
   const currentPageQuestions = quizState.questions.slice(startIdx, endIdx);
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b bg-card sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between mb-4 flex-wrap gap-4">
-            <h1 className="text-xl font-bold">Exam in Progress - {activeCourse.name}</h1>
-            <div className="flex gap-3 flex-wrap">
+    <div className="min-h-screen bg-gradient-surface">
+      <header className="sticky top-0 z-40 border-b border-border/50 bg-card/80 backdrop-blur-md">
+        <div className="container mx-auto px-4 py-4 space-y-4">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <h1 className="text-xl font-bold font-display text-gradient-primary">Exam in Progress</h1>
+              <p className="text-sm text-muted-foreground">{activeCourse.name}</p>
+            </div>
+            <div className="flex gap-3 items-center flex-wrap">
               <Timer timeRemaining={quizState.timeRemaining} />
-              <Button variant="outline" size="sm" onClick={handleExit}>
+              <Button variant="outline" size="sm" onClick={handleExit} className="rounded-xl">
                 <Home className="mr-2 h-4 w-4" />
                 Exit
               </Button>
@@ -197,12 +226,11 @@ const Exam = () => {
 
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto space-y-6">
-          {unansweredCount > 0 && (
-            <Alert variant="destructive">
-              <AlertCircle className="h-4 w-4" />
+          {unansweredCount > 0 && unansweredCount < quizState.questions.length && (
+            <Alert variant="destructive" className="animate-fade-up border-warning/30 bg-warning/5 text-foreground">
+              <AlertCircle className="h-4 w-4 text-warning" />
               <AlertDescription>
-                You have {unansweredCount} unanswered question
-                {unansweredCount > 1 ? "s" : ""}
+                You have <span className="font-semibold">{unansweredCount} unanswered question{unansweredCount > 1 ? "s" : ""}</span>
               </AlertDescription>
             </Alert>
           )}
@@ -225,36 +253,51 @@ const Exam = () => {
             })}
           </div>
 
-          <div className="flex flex-wrap gap-3 justify-between items-center">
-            <div className="flex gap-3">
-              {startIdx > 0 && (
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    const newIdx = Math.max(0, startIdx - questionsPerPage);
-                    goToQuestion(newIdx);
-                  }}
-                >
-                  Previous Page
-                </Button>
-              )}
-            </div>
+          <Card variant="elevated" className="p-4">
+            <div className="flex flex-wrap gap-3 justify-between items-center">
+              <div className="flex gap-3">
+                {startIdx > 0 && (
+                  <Button
+                    variant="outline"
+                    className="rounded-xl"
+                    onClick={() => {
+                      const newIdx = Math.max(0, startIdx - questionsPerPage);
+                      goToQuestion(newIdx);
+                    }}
+                  >
+                    <ChevronLeft className="mr-2 h-4 w-4" />
+                    Previous Page
+                  </Button>
+                )}
+              </div>
 
-            <div className="flex gap-3">
-              {endIdx < quizState.questions.length && (
-                <Button
-                  onClick={() => {
-                    goToQuestion(endIdx);
-                  }}
+              <div className="flex gap-3 items-center">
+                <Badge variant="outline" className="text-sm px-3 py-1">
+                  {answeredCount} / {quizState.questions.length} answered
+                </Badge>
+                
+                {endIdx < quizState.questions.length && (
+                  <Button
+                    className="rounded-xl"
+                    onClick={() => {
+                      goToQuestion(endIdx);
+                    }}
+                  >
+                    Next Page
+                    <ChevronRight className="ml-2 h-4 w-4" />
+                  </Button>
+                )}
+                <Button 
+                  onClick={handleSubmit} 
+                  size="lg" 
+                  className="rounded-xl bg-gradient-success hover:opacity-90 shadow-elevation-sm"
                 >
-                  Next Page
+                  <Send className="mr-2 h-5 w-5" />
+                  Submit Exam
                 </Button>
-              )}
-              <Button onClick={handleSubmit} size="lg" variant="default">
-                Submit Exam
-              </Button>
+              </div>
             </div>
-          </div>
+          </Card>
         </div>
       </main>
     </div>
