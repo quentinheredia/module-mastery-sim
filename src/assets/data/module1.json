@@ -33,7 +33,7 @@
     "image": "/images/quizzes/mod_1_q3.png",
     "options": [
       "These commands will have no effect at all. The debug ip packet command will work as normal and display debugging information for all IP packets",
-      "These commands will generate an error message because you cannot use an access list with any debug commands",
+      "These commands will generate an error message because you c   annot use an access list with any debug commands",
       "These commands will turn on IP packet debugging only for packets between hosts 10.1.1.1 and 172.16.1.1",
       "These commands will only work when you specify only one host rather than two."
     ],
