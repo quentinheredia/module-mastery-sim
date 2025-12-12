@@ -1,0 +1,294 @@
+[
+  {
+    "module": "Crypto/TLS",
+    "question": "Which statements about TLS 1.3 are correct?",
+    "image": null,
+    "options": [
+      "TLS 1.3 requires Diffie-Hellman for key exchange",
+      "TLS 1.3 separates encryption and authentication",
+      "TLS 1.3 reduces handshake latency",
+      "TLS 1.3 supports 0-RTT data with replay risk",
+      "TLS 1.3 allows RSA key exchange"
+    ],
+    "correct_answers": [
+      "TLS 1.3 requires Diffie-Hellman for key exchange",
+      "TLS 1.3 reduces handshake latency",
+      "TLS 1.3 supports 0-RTT data with replay risk"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What problem do nonces primarily prevent in authentication protocols?",
+    "image": null,
+    "options": [
+      "Man-in-the-middle attacks",
+      "Ciphertext-only attacks",
+      "Replay attacks",
+      "Brute-force attacks"
+    ],
+    "correct_answers": [
+      "Replay attacks"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why is symmetric encryption preferred for data transfer after the TLS handshake?",
+    "image": null,
+    "options": [
+      "It provides stronger authentication",
+      "It eliminates hashing",
+      "It is computationally more efficient",
+      "It prevents replay attacks"
+    ],
+    "correct_answers": [
+      "It is computationally more efficient"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Match each step with the correct cryptographic action.",
+    "image": null,
+    "options": [
+      "Alice encrypts hash using her private key",
+      "Bob decrypts with private key",
+      "Alice encrypts message with a symmetric key",
+      "Bob decrypts symmetric ciphertext",
+      "Alice hashes the message"
+    ],
+    "pairs": {
+      "A": "Alice generates message digest",
+      "B": "Alice ensures confidentiality for Bob",
+      "C": "Bob verifies sender identity",
+      "D": "Bob recovers symmetric key",
+      "E": "Alice binds identity to integrity"
+    },
+    "correct_answers": {
+      "A": "Alice hashes the message",
+      "B": "Alice encrypts message with a symmetric key",
+      "C": "Bob decrypts with private key",
+      "D": "Bob decrypts symmetric ciphertext",
+      "E": "Alice encrypts hash using her private key"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Match each TLS component to its purpose.",
+    "image": null,
+    "options": [
+      "Confirm server identity",
+      "Establish shared secrets",
+      "Protect handshake integrity",
+      "Encrypt data efficiently",
+      "Detect message modification"
+    ],
+    "pairs": {
+      "A": "Certificate verification",
+      "B": "Session key derivation",
+      "C": "Public key operations",
+      "D": "Symmetric key",
+      "E": "Handshake hashing"
+    },
+    "correct_answers": {
+      "A": "Confirm server identity",
+      "B": "Establish shared secrets",
+      "C": "Protect handshake integrity",
+      "D": "Encrypt data efficiently",
+      "E": "Detect message modification"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which statements about digital certificates and CAs are correct?",
+    "image": null,
+    "options": [
+      "A CA signs an entity’s public key",
+      "Certificates eliminate the need for public-key crypto",
+      "Trust depends on the CA",
+      "Certificates prevent MITM",
+      "Certificates encrypt data"
+    ],
+    "correct_answers": [
+      "A CA signs an entity’s public key",
+      "Trust depends on the CA",
+      "Certificates prevent MITM"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Match each secure email crypto component to its role.",
+    "image": null,
+    "options": [
+      "Hash function",
+      "Sender private key",
+      "Receiver public key",
+      "Symmetric session key",
+      "Digital signature"
+    ],
+    "pairs": {
+      "A": "Provides message integrity",
+      "B": "Binds sender identity to message",
+      "C": "Encrypts session key",
+      "D": "Provides efficient confidentiality",
+      "E": "Verifies sender authenticity"
+    },
+    "correct_answers": {
+      "A": "Hash function",
+      "B": "Sender private key",
+      "C": "Receiver public key",
+      "D": "Symmetric session key",
+      "E": "Digital signature"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which TLS 1.3 statements are correct?",
+    "image": null,
+    "options": [
+      "Session keys derived after handshake",
+      "Diffie-Hellman required",
+      "0-RTT data is encrypted",
+      "RSA key exchange allowed",
+      "0-RTT can be replayed"
+    ],
+    "correct_answers": [
+      "Session keys derived after handshake",
+      "Diffie-Hellman required",
+      "0-RTT data is encrypted",
+      "0-RTT can be replayed"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which are properties of cryptographic hash functions?",
+    "image": null,
+    "options": [
+      "Fixed-length output",
+      "Confidentiality",
+      "Integrity protection",
+      "Hard to invert",
+      "Authentication"
+    ],
+    "correct_answers": [
+      "Fixed-length output",
+      "Integrity protection",
+      "Hard to invert"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which statements about TLS session resumption are correct?",
+    "image": null,
+    "options": [
+      "It reduces handshake latency",
+      "It prevents replay attacks",
+      "It safely reuses key material",
+      "0-RTT may be replayed",
+      "It requires certificate renegotiation"
+    ],
+    "correct_answers": [
+      "It reduces handshake latency",
+      "0-RTT may be replayed"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is the purpose of the server’s private key in TLS?",
+    "image": null,
+    "options": [
+      "To derive session keys",
+      "To sign handshake messages proving identity",
+      "To encrypt application data",
+      "To compute MACs",
+      "To generate nonces"
+    ],
+    "correct_answers": [
+      "To sign handshake messages proving identity"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Match each cryptographic objective with its mechanism.",
+    "image": null,
+    "options": [
+      "Confidentiality",
+      "Integrity",
+      "Non-repudiation",
+      "Authentication",
+      "Replay protection"
+    ],
+    "pairs": {
+      "A": "Symmetric encryption",
+      "B": "Hash function",
+      "C": "Digital signature",
+      "D": "Certificate validation",
+      "E": "Nonce"
+    },
+    "correct_answers": {
+      "A": "Confidentiality",
+      "B": "Integrity",
+      "C": "Non-repudiation",
+      "D": "Authentication",
+      "E": "Replay protection"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which statements about CA certificate chains are correct?",
+    "image": null,
+    "options": [
+      "Leaf certificates are signed by intermediate or root",
+      "The trust anchor is the client's root CA",
+      "Certificate chains eliminate the need for hashing",
+      "Chains reduce handshake size",
+      "A certificate signature protects against tampering"
+    ],
+    "correct_answers": [
+      "Leaf certificates are signed by intermediate or root",
+      "The trust anchor is the client's root CA",
+      "A certificate signature protects against tampering"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is the purpose of the TLS Finished message?",
+    "image": null,
+    "options": [
+      "Negotiate ciphersuites",
+      "Confirm both sides derived the same session keys",
+      "Exchange certificates",
+      "Authenticate the client",
+      "Transmit random nonces"
+    ],
+    "correct_answers": [
+      "Confirm both sides derived the same session keys"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  }
+]

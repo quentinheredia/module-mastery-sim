@@ -1,0 +1,200 @@
+[
+  {
+    "module": "Cloud Computing",
+    "question": "Which characteristics apply to stateless architectures that enable horizontal scaling? (Select ALL)",
+    "image": null,
+    "options": [
+      "Each request is processed independently",
+      "Server-side session data must be shared",
+      "Workload can be distributed across identical instances",
+      "Failure of one instance does not affect client state",
+      "Persistent connections are required"
+    ],
+    "correct_answers": [
+      "Each request is processed independently",
+      "Workload can be distributed across identical instances",
+      "Failure of one instance does not affect client state"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which cloud service model provides the most control over operating systems and networking?",
+    "image": null,
+    "options": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "FaaS"
+    ],
+    "correct_answers": [
+      "IaaS"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which cloud feature enables automatic scaling based on load metrics?",
+    "image": null,
+    "options": [
+      "Elasticity",
+      "Bare-metal computing",
+      "Vertical scaling",
+      "Replication",
+      "Synchronous mirroring"
+    ],
+    "correct_answers": [
+      "Elasticity"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Match each cloud model with its correct responsibility split.",
+    "image": null,
+    "options": [
+      "User manages VM instances",
+      "User manages only application code",
+      "Provider manages everything below the application",
+      "Full OS/runtime control by the user",
+      "Provider offers compute via event-driven execution"
+    ],
+    "pairs": {
+      "A": "IaaS",
+      "B": "PaaS",
+      "C": "SaaS",
+      "D": "Bare-metal cloud",
+      "E": "FaaS"
+    },
+    "correct_answers": {
+      "A": "User manages VM instances",
+      "B": "User manages only application code",
+      "C": "Provider manages everything below the application",
+      "D": "Full OS/runtime control by the user",
+      "E": "Provider offers compute via event-driven execution"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which cloud scaling method involves adding additional identical resources?",
+    "image": null,
+    "options": [
+      "Vertical scaling",
+      "Horizontal scaling",
+      "Nested virtualization",
+      "Over-provisioning",
+      "Dynamic throttling"
+    ],
+    "correct_answers": [
+      "Horizontal scaling"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why does store-and-forward design improve reliability in distributed systems?",
+    "image": null,
+    "options": [
+      "It encrypts all data automatically",
+      "It allows intermediate nodes to retry delivery",
+      "It forces all processing through a central node",
+      "It eliminates congestion completely"
+    ],
+    "correct_answers": [
+      "It allows intermediate nodes to retry delivery"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which technology creates an abstraction layer between software and hardware?",
+    "image": null,
+    "options": [
+      "Virtual Machine",
+      "Containers",
+      "Virtualization",
+      "VNF"
+    ],
+    "correct_answers": [
+      "Virtualization"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Match cloud infrastructure mechanisms with their descriptions.",
+    "image": null,
+    "options": [
+      "Hypervisor",
+      "Virtual Servers",
+      "Virtual Switch",
+      "Container"
+    ],
+    "pairs": {
+      "A": "Fundamental virtualization part used to create VMs",
+      "B": "Provides VM management including scale/shutdown",
+      "C": "Enables VM-to-VM and VM-to-network communication",
+      "D": "Software L2 Switch",
+      "E": "Emulates a physical server",
+      "F": "Hosted environment optimized for required resources",
+      "G": "Provides isolation for applications at OS level"
+    },
+    "correct_answers": {
+      "A": "Hypervisor",
+      "B": "Virtual Servers",
+      "C": "Virtual Switch",
+      "D": "Virtual Switch",
+      "E": "Virtual Servers",
+      "F": "Virtual Servers",
+      "G": "Container"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Match scaling types with their definitions.",
+    "image": null,
+    "options": [
+      "Horizontal Scaling",
+      "Vertical Scaling"
+    ],
+    "pairs": {
+      "A": "Replace a resource with bigger/smaller capacity",
+      "B": "Add or remove identical resources",
+      "C": "Scaling up/down",
+      "D": "Scaling in/out"
+    },
+    "correct_answers": {
+      "A": "Vertical Scaling",
+      "B": "Horizontal Scaling",
+      "C": "Vertical Scaling",
+      "D": "Horizontal Scaling"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which component in NFV architecture manages the lifecycle of VNFs?",
+    "image": null,
+    "options": [
+      "Virtualized Infrastructure Manager (VIM)",
+      "VNF Manager",
+      "NFV Orchestrator"
+    ],
+    "correct_answers": [
+      "VNF Manager"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  }
+]

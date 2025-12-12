@@ -5,6 +5,7 @@ import {
   UserAnswer,
   Question,
   ModulePerformance,
+  MatchingPairs,
 } from "@/types/quiz";
 import {
   getRandomQuestions,
@@ -14,15 +15,15 @@ import {
 
 interface QuizContextType {
   quizState: QuizState;
-  startQuiz: (mode: "practice" | "exam", selectedModule?: string) => void;
-  answerQuestion: (questionIndex: number, selectedAnswers: string[]) => void;
+  startQuiz: (mode: "practice" | "exam", courseId: string, selectedModule?: string) => void;
+  answerQuestion: (questionIndex: number, selectedAnswers: string[], matchingAnswers?: MatchingPairs) => void;
   nextQuestion: () => void;
   previousQuestion: () => void;
   goToQuestion: (index: number) => void;
-  submitQuiz: () => void;
+  submitQuiz: (courseId: string) => void;
   resetQuiz: () => void;
   setQuestionsPerPage: (count: 1 | 5 | 10) => void;
-  getAttemptHistory: () => QuizAttempt[];
+  getAttemptHistory: (courseId?: string) => QuizAttempt[];
   currentAttempt: QuizAttempt | null;
 }
 
@@ -48,6 +49,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
   const [currentAttempt, setCurrentAttempt] = useState<QuizAttempt | null>(
     null
   );
+  const [currentCourseId, setCurrentCourseId] = useState<string>("net4009");
 
   // Timer effect for exam mode
   useEffect(() => {
@@ -81,19 +83,20 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
       quizState.isStarted &&
       !quizState.isCompleted
     ) {
-      submitQuiz();
+      submitQuiz(currentCourseId);
     }
   }, [quizState.timeRemaining]);
 
-  const startQuiz = (mode: "practice" | "exam", selectedModule?: string) => {
+  const startQuiz = (mode: "practice" | "exam", courseId: string, selectedModule?: string) => {
     let questions: Question[] = [];
+    setCurrentCourseId(courseId);
 
     if (mode === "practice" && selectedModule) {
-      questions = loadQuestions().filter((q) => q.module === selectedModule);
+      questions = loadQuestions(courseId).filter((q) => q.module === selectedModule);
     } else if (mode === "exam") {
-      questions = getRandomQuestions(40);
+      questions = getRandomQuestions(courseId, 40);
     } else {
-      questions = getRandomQuestions(40);
+      questions = getRandomQuestions(courseId, 40);
     }
 
     setQuizState({
@@ -113,15 +116,16 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
     });
   };
 
-  const answerQuestion = (questionIndex: number, selectedAnswers: string[]) => {
+  const answerQuestion = (questionIndex: number, selectedAnswers: string[], matchingAnswers?: MatchingPairs) => {
     setQuizState((prev) => {
       const newAnswers = [...prev.userAnswers];
       const question = prev.questions[questionIndex];
-      const isCorrect = checkAnswer(question, selectedAnswers);
+      const isCorrect = checkAnswer(question, selectedAnswers, matchingAnswers);
 
       newAnswers[questionIndex] = {
         questionId: questionIndex,
         selectedAnswers,
+        matchingAnswers,
         isCorrect,
       };
 
@@ -184,7 +188,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
     }));
   };
 
-  const submitQuiz = () => {
+  const submitQuiz = (courseId: string) => {
     const correctAnswers = quizState.userAnswers.filter(
       (a) => a.isCorrect
     ).length;
@@ -198,6 +202,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
     const attempt: QuizAttempt = {
       id: Date.now().toString(),
       mode: quizState.mode,
+      courseId,
       date: new Date(),
       score,
       totalQuestions: quizState.questions.length,
@@ -235,9 +240,13 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
     setQuizState((prev) => ({ ...prev, questionsPerPage: count }));
   };
 
-  const getAttemptHistory = (): QuizAttempt[] => {
+  const getAttemptHistory = (courseId?: string): QuizAttempt[] => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    return stored ? JSON.parse(stored) : [];
+    const attempts = stored ? JSON.parse(stored) : [];
+    if (courseId) {
+      return attempts.filter((a: QuizAttempt) => a.courseId === courseId);
+    }
+    return attempts;
   };
 
   return (

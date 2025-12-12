@@ -1,0 +1,222 @@
+[
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which SDN component maintains the global network view?",
+    "image": null,
+    "options": [
+      "Data-plane switch",
+      "Network control application",
+      "SDN controller",
+      "Southbound API"
+    ],
+    "correct_answers": [
+      "SDN controller"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which interface do SDN applications use to request forwarding behavior?",
+    "image": null,
+    "options": [
+      "Southbound interface",
+      "Northbound interface",
+      "Data-plane interface",
+      "OpenFlow pipeline"
+    ],
+    "correct_answers": [
+      "Northbound interface"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which interface allows controllers to program forwarding devices?",
+    "image": null,
+    "options": [
+      "Northbound API",
+      "Southbound API",
+      "East-West API",
+      "Forwarding Plane API"
+    ],
+    "correct_answers": [
+      "Southbound API"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which SDN feature most directly lowers OpEx?",
+    "image": null,
+    "options": [
+      "Higher link bandwidth",
+      "Proprietary hardware",
+      "Centralized control and automation",
+      "Encrypted controller messages"
+    ],
+    "correct_answers": [
+      "Centralized control and automation"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why does a centralized SDN controller improve debugging?",
+    "image": null,
+    "options": [
+      "Switches store logs for all flows",
+      "There is no need for forwarding tables",
+      "The controller sees global network state",
+      "All traffic uses the same physical path"
+    ],
+    "correct_answers": [
+      "The controller sees global network state"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which statement best describes a flow rule in SDN?",
+    "image": null,
+    "options": [
+      "A stateless per-packet action",
+      "A match-action entry defined by the controller",
+      "A routing table entry computed via OSPF",
+      "A hardware-enforced ACL applied automatically"
+    ],
+    "correct_answers": [
+      "A match-action entry defined by the controller"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why does SDN enable more flexible traffic engineering than traditional routing?",
+    "image": null,
+    "options": [
+      "Routers execute distributed routing algorithms",
+      "Forwarding decisions are destination-based",
+      "Forwarding rules are programmable and flow-based",
+      "Link weights are encrypted and dynamic"
+    ],
+    "correct_answers": [
+      "Forwarding rules are programmable and flow-based"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which factor most directly reduces CapEx when deploying SDN?",
+    "image": null,
+    "options": [
+      "Centralized routing computation",
+      "Use of proprietary routers",
+      "Use of commodity switches with simple forwarding",
+      "Encrypted control channels"
+    ],
+    "correct_answers": [
+      "Use of commodity switches with simple forwarding"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which SDN concept enables rapid reconfiguration of the forwarding plane?",
+    "image": null,
+    "options": [
+      "Northbound APIs",
+      "Applications modifying flow rules via the controller",
+      "Distributed link-state routing",
+      "Switch-based learning"
+    ],
+    "correct_answers": [
+      "Applications modifying flow rules via the controller"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which SDN concept allows the controller to observe traffic patterns globally?",
+    "image": null,
+    "options": [
+      "Northbound API",
+      "Southbound API",
+      "Global network view",
+      "Distributed control plane"
+    ],
+    "correct_answers": [
+      "Global network view"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "OpenFlow is an example of which type of SDN abstraction?",
+    "image": null,
+    "options": [
+      "Forwarding abstraction",
+      "Distribution abstraction",
+      "Network abstraction",
+      "Specification abstraction"
+    ],
+    "correct_answers": [
+      "Forwarding abstraction"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which component manages the lifecycle of Virtual Network Functions (VNFs)?",
+    "image": null,
+    "options": [
+      "Virtualized Infrastructure Manager (VIM)",
+      "VNF Manager",
+      "NFV Orchestrator"
+    ],
+    "correct_answers": [
+      "VNF Manager"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Match each cloud networking mechanism with its description.",
+    "image": null,
+    "options": [
+      "Load Balancer",
+      "Automated Scaling Listener",
+      "Failover",
+      "Resource Replication"
+    ],
+    "pairs": {
+      "A": "Monitors communication for scaling",
+      "B": "Improves reliability via redundancy",
+      "C": "Enhances availability/performance",
+      "D": "Tracks workload status",
+      "E": "Active-Active or Active-Passive",
+      "F": "Balances workload"
+    },
+    "correct_answers": {
+      "A": "Automated Scaling Listener",
+      "B": "Resource Replication",
+      "C": "Load Balancer",
+      "D": "Automated Scaling Listener",
+      "E": "Failover",
+      "F": "Load Balancer"
+    },
+    "question_type": "matching",
+    "points": 1
+  }
+]

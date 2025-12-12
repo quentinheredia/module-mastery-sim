@@ -3,12 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useQuiz } from "@/contexts/QuizContext";
+import { useCourse } from "@/contexts/CourseContext";
 import { ArrowLeft, Calendar, Clock, Target } from "lucide-react";
 
 const History = () => {
   const navigate = useNavigate();
   const { getAttemptHistory } = useQuiz();
-  const attempts = getAttemptHistory();
+  const { activeCourse } = useCourse();
+  const attempts = getAttemptHistory(activeCourse?.id);
 
   const getScoreBadge = (score: number) => {
     if (score >= 80) return { variant: "default" as const, label: "Excellent" };
@@ -25,7 +27,7 @@ const History = () => {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Button>
-          <h1 className="text-2xl font-bold">Attempt History</h1>
+          <h1 className="text-2xl font-bold">Attempt History - {activeCourse?.name}</h1>
           <p className="text-sm text-muted-foreground">Review your past exam attempts</p>
         </div>
       </header>
@@ -34,7 +36,7 @@ const History = () => {
         <div className="max-w-4xl mx-auto">
           {attempts.length === 0 ? (
             <Card className="p-12 text-center">
-              <p className="text-lg mb-4 text-muted-foreground">No exam attempts yet</p>
+              <p className="text-lg mb-4 text-muted-foreground">No exam attempts yet for {activeCourse?.name}</p>
               <p className="text-sm text-muted-foreground mb-6">
                 Take an exam to see your results here
               </p>
@@ -44,7 +46,7 @@ const History = () => {
             </Card>
           ) : (
             <div className="space-y-4">
-              {attempts.reverse().map((attempt) => {
+              {[...attempts].reverse().map((attempt) => {
                 const badge = getScoreBadge(attempt.score);
                 return (
                   <Card key={attempt.id} className="p-6 hover:border-primary transition-colors">

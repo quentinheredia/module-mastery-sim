@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { QuizProvider } from "@/contexts/QuizContext";
+import { CourseProvider } from "@/contexts/CourseContext";
 import Home from "./pages/Home";
 import Practice from "./pages/Practice";
 import Exam from "./pages/Exam";
@@ -17,22 +18,24 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light">
-      <QuizProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter basename={import.meta.env.BASE_URL}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/practice" element={<Practice />} />
-              <Route path="/exam" element={<Exam />} />
-              <Route path="/results" element={<Results />} />
-              <Route path="/history" element={<History />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
-      </QuizProvider>
+      <CourseProvider>
+        <QuizProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter basename={import.meta.env.BASE_URL}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/practice" element={<Practice />} />
+                <Route path="/exam" element={<Exam />} />
+                <Route path="/results" element={<Results />} />
+                <Route path="/history" element={<History />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+          </TooltipProvider>
+        </QuizProvider>
+      </CourseProvider>
     </ThemeProvider>
   </QueryClientProvider>
 );
