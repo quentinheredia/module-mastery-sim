@@ -105,7 +105,7 @@ const Exam = () => {
     return (
       <div className="min-h-screen bg-gradient-surface">
         <Header title="Exam Mode" subtitle={activeCourse.name}>
-          <Button variant="outline" size="sm" onClick={() => navigate("/")}>
+          <Button variant="outline" size="sm" onClick={() => navigate("/")} className="rounded-xl">
             <Home className="mr-2 h-4 w-4" />
             Home
           </Button>
@@ -114,7 +114,7 @@ const Exam = () => {
         <main className="container mx-auto px-4 py-12">
           <div className="max-w-2xl mx-auto space-y-6">
             {/* Info Alert */}
-            <Alert className={`${courseColors.border} border ${courseColors.bg} animate-fade-up`}>
+            <Alert className={`border ${courseColors.border} ${courseColors.bg} animate-fade-up`}>
               <Zap className={`h-4 w-4 ${courseColors.text}`} />
               <AlertDescription className="text-foreground">
                 This exam consists of <span className="font-semibold">{examQuestionCount} randomly selected questions</span> from{" "}
@@ -125,7 +125,7 @@ const Exam = () => {
             {/* Settings Card */}
             <Card variant="elevated" className="p-8 animate-fade-up" style={{ animationDelay: "100ms" }}>
               <div className="flex items-center gap-3 mb-6">
-                <div className={`h-12 w-12 rounded-xl ${courseColors.bg} ${courseColors.border} border flex items-center justify-center shadow-elevation-sm`}>
+                <div className={`h-12 w-12 rounded-xl ${courseColors.bg} border ${courseColors.border} flex items-center justify-center shadow-elevation-sm`}>
                   <Settings2 className={`h-6 w-6 ${courseColors.text}`} />
                 </div>
                 <div>
@@ -158,12 +158,12 @@ const Exam = () => {
 
                 {/* Exam Details Grid */}
                 <div className="grid grid-cols-3 gap-3">
-                  <div className={`p-4 rounded-xl ${courseColors.bg} ${courseColors.border} border text-center`}>
+                  <div className={`p-4 rounded-xl ${courseColors.bg} border ${courseColors.border} text-center`}>
                     <FileQuestion className={`h-5 w-5 ${courseColors.text} mx-auto mb-2`} />
                     <p className={`text-2xl font-bold font-display ${courseColors.text}`}>{examQuestionCount}</p>
                     <p className="text-xs text-muted-foreground">Questions</p>
                   </div>
-                  <div className={`p-4 rounded-xl ${courseColors.bg} ${courseColors.border} border text-center`}>
+                  <div className={`p-4 rounded-xl ${courseColors.bg} border ${courseColors.border} text-center`}>
                     <TimerIcon className={`h-5 w-5 ${courseColors.text} mx-auto mb-2`} />
                     <p className={`text-2xl font-bold font-display ${courseColors.text}`}>30</p>
                     <p className="text-xs text-muted-foreground">Minutes</p>
@@ -177,7 +177,7 @@ const Exam = () => {
 
                 <Button 
                   size="lg" 
-                  className={`w-full ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90 shadow-elevation-sm transition-all duration-300`}
+                  className={`w-full ${courseColors.dot} text-white border-transparent hover:opacity-90 shadow-elevation-sm transition-all duration-300`}
                   onClick={handleStart}
                 >
                   <Zap className="mr-2 h-5 w-5" />
@@ -274,13 +274,13 @@ const Exam = () => {
               </div>
 
               <div className="flex gap-3 items-center">
-                <Badge variant="outline" className={`text-sm px-3 py-1 ${courseColors.border} ${courseColors.text}`}>
+                <Badge variant="outline" className={`text-sm px-3 py-1 border ${courseColors.border} ${courseColors.text}`}>
                   {answeredCount} / {quizState.questions.length} answered
                 </Badge>
                 
                 {endIdx < quizState.questions.length && (
                   <Button
-                    className={`rounded-xl ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90`}
+                    className={`rounded-xl ${courseColors.dot} text-white border-transparent hover:opacity-90`}
                     onClick={() => {
                       goToQuestion(endIdx);
                     }}
@@ -292,7 +292,7 @@ const Exam = () => {
                 <Button 
                   onClick={handleSubmit} 
                   size="lg" 
-                  className="rounded-xl bg-gradient-success hover:opacity-90 shadow-elevation-sm"
+                  className="rounded-xl bg-success hover:bg-success/90 text-white shadow-elevation-sm"
                 >
                   <Send className="mr-2 h-5 w-5" />
                   Submit Exam

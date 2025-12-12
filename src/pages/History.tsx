@@ -41,7 +41,7 @@ const History = () => {
         <div className="max-w-4xl mx-auto">
           {attempts.length === 0 ? (
             <Card variant="glass" className="p-12 text-center animate-fade-up">
-              <div className={`h-16 w-16 rounded-2xl ${courseColors.bg} ${courseColors.border} border flex items-center justify-center mx-auto mb-4`}>
+              <div className={`h-16 w-16 rounded-2xl ${courseColors.bg} border ${courseColors.border} flex items-center justify-center mx-auto mb-4`}>
                 <FileQuestion className={`h-8 w-8 ${courseColors.text}`} />
               </div>
               <p className="text-lg font-semibold font-display mb-2">No Exam Attempts Yet</p>
@@ -50,7 +50,7 @@ const History = () => {
               </p>
               <Button 
                 onClick={() => navigate("/exam")}
-                className={`${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90`}
+                className={`${courseColors.dot} text-white border-transparent hover:opacity-90`}
               >
                 Start Your First Exam
               </Button>
@@ -90,13 +90,13 @@ const History = () => {
                   <Card 
                     key={attempt.id} 
                     variant="elevated" 
-                    className="p-6 hover:shadow-elevation-lg transition-all duration-300 animate-fade-up"
+                    className={`p-6 transition-all duration-300 animate-fade-up cursor-pointer ${attemptCourseColors.hover}`}
                     style={{ animationDelay: `${(index + 1) * 100}ms` }}
                   >
                     <div className="flex flex-wrap items-start justify-between gap-4">
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-3 mb-4 flex-wrap">
-                          <div className={`h-10 w-10 rounded-xl ${attemptCourseColors.bg} ${attemptCourseColors.border} border flex items-center justify-center`}>
+                          <div className={`h-10 w-10 rounded-xl ${attemptCourseColors.bg} border ${attemptCourseColors.border} flex items-center justify-center`}>
                             <BadgeIcon className={`h-5 w-5 ${badge.variant === 'destructive' ? 'text-destructive' : attemptCourseColors.text}`} />
                           </div>
                           <div>
@@ -123,7 +123,7 @@ const History = () => {
                             </div>
                           </div>
 
-                          <div className={`flex items-center gap-3 p-3 rounded-lg ${attemptCourseColors.bg} ${attemptCourseColors.border} border`}>
+                          <div className={`flex items-center gap-3 p-3 rounded-lg ${attemptCourseColors.bg} border ${attemptCourseColors.border}`}>
                             <Target className={`h-4 w-4 ${attemptCourseColors.text}`} />
                             <div>
                               <p className="text-xs text-muted-foreground">Score</p>
