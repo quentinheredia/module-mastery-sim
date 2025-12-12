@@ -11,6 +11,7 @@ const Home = () => {
   const { activeCourse } = useCourse();
   
   const totalQuestions = activeCourse ? loadQuestions(activeCourse.id).length : 0;
+  const examQuestionCount = Math.min(40, totalQuestions);
 
   if (!activeCourse) {
     return (
@@ -77,11 +78,11 @@ const Home = () => {
                 </div>
                 <h3 className="text-2xl font-bold">Exam Mode</h3>
                 <p className="text-muted-foreground">
-                  Simulate the real exam experience with 40 random questions and
+                  Simulate the real exam experience with {examQuestionCount} random questions and
                   a 30-minute time limit.
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>✓ 40 random questions</li>
+                  <li>✓ {examQuestionCount} random questions</li>
                   <li>✓ 30-minute timer</li>
                   <li>✓ Performance analytics</li>
                   <li>✓ Module breakdown</li>
