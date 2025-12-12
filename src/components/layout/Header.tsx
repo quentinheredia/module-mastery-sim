@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { CourseSelector } from "./CourseSelector";
+import { CourseSelector, courseColorClasses } from "./CourseSelector";
 import { useCourse } from "@/contexts/CourseContext";
+import { CourseColor } from "@/types/quiz";
 
 interface HeaderProps {
   title?: string;
@@ -13,13 +14,20 @@ interface HeaderProps {
 export const Header = ({ title, subtitle, children }: HeaderProps) => {
   const { theme, setTheme } = useTheme();
   const { activeCourse } = useCourse();
+  
+  const courseColors = activeCourse ? courseColorClasses[activeCourse.color as CourseColor] : null;
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/50 bg-card/80 backdrop-blur-md supports-[backdrop-filter]:bg-card/60">
+      {/* Course color accent bar */}
+      {courseColors && (
+        <div className={`h-1 w-full ${courseColors.dot}`} />
+      )}
+      
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <div className="space-y-1">
-            <h1 className="text-2xl font-bold font-display text-gradient-primary">
+            <h1 className={`text-2xl font-bold font-display ${courseColors?.text || 'text-primary'}`}>
               {title || `${activeCourse?.name || ''} Practice Exam`}
             </h1>
             {subtitle && (

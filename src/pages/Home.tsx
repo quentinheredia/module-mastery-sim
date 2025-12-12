@@ -5,6 +5,8 @@ import { BookOpen, Timer, History, Sparkles, Zap, CheckCircle2 } from "lucide-re
 import { loadQuestions } from "@/utils/questionLoader";
 import { useCourse } from "@/contexts/CourseContext";
 import { Header } from "@/components/layout/Header";
+import { courseColorClasses } from "@/components/layout/CourseSelector";
+import { CourseColor } from "@/types/quiz";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,6 +14,7 @@ const Home = () => {
   
   const totalQuestions = activeCourse ? loadQuestions(activeCourse.id).length : 0;
   const examQuestionCount = Math.min(40, totalQuestions);
+  const courseColors = activeCourse ? courseColorClasses[activeCourse.color as CourseColor] : courseColorClasses.blue;
 
   if (!activeCourse) {
     return (
@@ -34,8 +37,8 @@ const Home = () => {
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-12 animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              <Sparkles className="h-4 w-4" />
+            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${courseColors.bg} ${courseColors.text} text-sm font-medium mb-6 border ${courseColors.border}`}>
+              <div className={`h-2 w-2 rounded-full ${courseColors.dot}`} />
               <span>{totalQuestions} questions across {activeCourse.modules.length} modules</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">

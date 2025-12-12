@@ -49,6 +49,18 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    /* Course Colors */
+    --course-blue: 210 80% 48%;
+    --course-blue-light: 210 80% 95%;
+    --course-violet: 270 70% 55%;
+    --course-violet-light: 270 70% 95%;
+    --course-emerald: 160 70% 40%;
+    --course-emerald-light: 160 70% 95%;
+    --course-amber: 38 90% 50%;
+    --course-amber-light: 38 90% 95%;
+    --course-rose: 350 75% 55%;
+    --course-rose-light: 350 75% 95%;
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(210 80% 48%) 0%, hsl(200 85% 45%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(200 85% 45%) 0%, hsl(180 70% 45%) 100%);
@@ -113,6 +125,18 @@ All colors MUST be HSL.
     --border: 215 20% 22%;
     --input: 215 20% 22%;
     --ring: 210 75% 55%;
+
+    /* Course Colors - Dark Mode */
+    --course-blue: 210 75% 55%;
+    --course-blue-light: 210 50% 20%;
+    --course-violet: 270 65% 60%;
+    --course-violet-light: 270 40% 20%;
+    --course-emerald: 160 65% 45%;
+    --course-emerald-light: 160 40% 18%;
+    --course-amber: 38 85% 55%;
+    --course-amber-light: 38 50% 18%;
+    --course-rose: 350 70% 58%;
+    --course-rose-light: 350 45% 18%;
 
     /* Dark mode gradients */
     --gradient-primary: linear-gradient(135deg, hsl(210 75% 55%) 0%, hsl(200 80% 50%) 100%);
