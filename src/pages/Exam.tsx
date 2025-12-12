@@ -13,6 +13,7 @@ import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { Timer } from "@/components/quiz/Timer";
 import { ProgressBar } from "@/components/quiz/ProgressBar";
 import { Header } from "@/components/layout/Header";
+import { courseColorClasses } from "@/components/layout/CourseSelector";
 import { useQuiz } from "@/contexts/QuizContext";
 import { useCourse } from "@/contexts/CourseContext";
 import { 
@@ -28,7 +29,7 @@ import {
   Zap
 } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { MatchingPairs } from "@/types/quiz";
+import { MatchingPairs, CourseColor } from "@/types/quiz";
 import { Badge } from "@/components/ui/badge";
 import { loadQuestions } from "@/utils/questionLoader";
 
@@ -48,10 +49,10 @@ const Exam = () => {
   const courseId = activeCourse?.id || "net4009";
   const totalQuestions = activeCourse ? loadQuestions(activeCourse.id).length : 0;
   const examQuestionCount = Math.min(40, totalQuestions);
+  const courseColors = activeCourse ? courseColorClasses[activeCourse.color as CourseColor] : courseColorClasses.blue;
 
   const handleStart = () => {
     const currentCourseId = activeCourse?.id || "net4009";
-    console.log("Starting exam with courseId:", currentCourseId);
     startQuiz("exam", currentCourseId);
   };
 
@@ -113,8 +114,8 @@ const Exam = () => {
         <main className="container mx-auto px-4 py-12">
           <div className="max-w-2xl mx-auto space-y-6">
             {/* Info Alert */}
-            <Alert className="border-accent/30 bg-accent/5 animate-fade-up">
-              <Zap className="h-4 w-4 text-accent" />
+            <Alert className={`${courseColors.border} border ${courseColors.bg} animate-fade-up`}>
+              <Zap className={`h-4 w-4 ${courseColors.text}`} />
               <AlertDescription className="text-foreground">
                 This exam consists of <span className="font-semibold">{examQuestionCount} randomly selected questions</span> from{" "}
                 {activeCourse.name}. You have <span className="font-semibold">30 minutes</span> to complete it.
@@ -124,8 +125,8 @@ const Exam = () => {
             {/* Settings Card */}
             <Card variant="elevated" className="p-8 animate-fade-up" style={{ animationDelay: "100ms" }}>
               <div className="flex items-center gap-3 mb-6">
-                <div className="h-12 w-12 rounded-xl bg-gradient-accent flex items-center justify-center shadow-elevation-sm">
-                  <Settings2 className="h-6 w-6 text-accent-foreground" />
+                <div className={`h-12 w-12 rounded-xl ${courseColors.bg} ${courseColors.border} border flex items-center justify-center shadow-elevation-sm`}>
+                  <Settings2 className={`h-6 w-6 ${courseColors.text}`} />
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold font-display">Exam Settings</h2>
@@ -157,26 +158,26 @@ const Exam = () => {
 
                 {/* Exam Details Grid */}
                 <div className="grid grid-cols-3 gap-3">
-                  <div className="p-4 rounded-xl bg-muted/30 border border-border/50 text-center">
-                    <FileQuestion className="h-5 w-5 text-primary mx-auto mb-2" />
-                    <p className="text-2xl font-bold font-display">{examQuestionCount}</p>
+                  <div className={`p-4 rounded-xl ${courseColors.bg} ${courseColors.border} border text-center`}>
+                    <FileQuestion className={`h-5 w-5 ${courseColors.text} mx-auto mb-2`} />
+                    <p className={`text-2xl font-bold font-display ${courseColors.text}`}>{examQuestionCount}</p>
                     <p className="text-xs text-muted-foreground">Questions</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-muted/30 border border-border/50 text-center">
-                    <TimerIcon className="h-5 w-5 text-accent mx-auto mb-2" />
-                    <p className="text-2xl font-bold font-display">30</p>
+                  <div className={`p-4 rounded-xl ${courseColors.bg} ${courseColors.border} border text-center`}>
+                    <TimerIcon className={`h-5 w-5 ${courseColors.text} mx-auto mb-2`} />
+                    <p className={`text-2xl font-bold font-display ${courseColors.text}`}>30</p>
                     <p className="text-xs text-muted-foreground">Minutes</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-muted/30 border border-border/50 text-center">
+                  <div className="p-4 rounded-xl bg-success/10 border border-success/20 text-center">
                     <Target className="h-5 w-5 text-success mx-auto mb-2" />
-                    <p className="text-2xl font-bold font-display">70%</p>
+                    <p className="text-2xl font-bold font-display text-success">70%</p>
                     <p className="text-xs text-muted-foreground">Passing</p>
                   </div>
                 </div>
 
                 <Button 
                   size="lg" 
-                  className="w-full bg-gradient-accent hover:opacity-90 shadow-elevation-sm transition-all duration-300" 
+                  className={`w-full ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90 shadow-elevation-sm transition-all duration-300`}
                   onClick={handleStart}
                 >
                   <Zap className="mr-2 h-5 w-5" />
@@ -202,10 +203,11 @@ const Exam = () => {
   return (
     <div className="min-h-screen bg-gradient-surface">
       <header className="sticky top-0 z-40 border-b border-border/50 bg-card/80 backdrop-blur-md">
+        <div className={`h-1 w-full ${courseColors.dot}`} />
         <div className="container mx-auto px-4 py-4 space-y-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div>
-              <h1 className="text-xl font-bold font-display text-gradient-primary">Exam in Progress</h1>
+              <h1 className={`text-xl font-bold font-display ${courseColors.text}`}>Exam in Progress</h1>
               <p className="text-sm text-muted-foreground">{activeCourse.name}</p>
             </div>
             <div className="flex gap-3 items-center flex-wrap">
@@ -272,13 +274,13 @@ const Exam = () => {
               </div>
 
               <div className="flex gap-3 items-center">
-                <Badge variant="outline" className="text-sm px-3 py-1">
+                <Badge variant="outline" className={`text-sm px-3 py-1 ${courseColors.border} ${courseColors.text}`}>
                   {answeredCount} / {quizState.questions.length} answered
                 </Badge>
                 
                 {endIdx < quizState.questions.length && (
                   <Button
-                    className="rounded-xl"
+                    className={`rounded-xl ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90`}
                     onClick={() => {
                       goToQuestion(endIdx);
                     }}
