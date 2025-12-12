@@ -118,7 +118,7 @@
     "image": null,
     "options": [
       "Virtual Machine",
-      "Containers",
+      "Hypervisor",
       "Virtualization",
       "VNF"
     ],
@@ -126,37 +126,6 @@
       "Virtualization"
     ],
     "question_type": "multiple_choice",
-    "points": 1
-  },
-  {
-    "module": "Cloud Computing",
-    "question": "Match cloud infrastructure mechanisms with their descriptions.",
-    "image": null,
-    "options": [
-      "Hypervisor",
-      "Virtual Servers",
-      "Virtual Switch",
-      "Container"
-    ],
-    "pairs": {
-      "A": "Fundamental virtualization part used to create VMs",
-      "B": "Provides VM management including scale/shutdown",
-      "C": "Enables VM-to-VM and VM-to-network communication",
-      "D": "Software L2 Switch",
-      "E": "Emulates a physical server",
-      "F": "Hosted environment optimized for required resources",
-      "G": "Provides isolation for applications at OS level"
-    },
-    "correct_answers": {
-      "A": "Hypervisor",
-      "B": "Virtual Servers",
-      "C": "Virtual Switch",
-      "D": "Virtual Switch",
-      "E": "Virtual Servers",
-      "F": "Virtual Servers",
-      "G": "Container"
-    },
-    "question_type": "matching",
     "points": 1
   },
   {
