@@ -52,9 +52,12 @@ export interface QuizState {
   questionsPerPage: 1 | 5 | 10;
 }
 
+export type CourseColor = "blue" | "violet" | "emerald" | "amber" | "rose";
+
 export interface Course {
   id: string;
   name: string;
   description: string;
+  color: CourseColor;
   modules: string[];
 }

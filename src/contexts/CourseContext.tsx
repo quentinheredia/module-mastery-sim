@@ -11,12 +11,13 @@ const CourseContext = createContext<CourseContextType | undefined>(undefined);
 
 const STORAGE_KEY = "active_course";
 
-// Define available courses
+// Define available courses with color coding
 const AVAILABLE_COURSES: Course[] = [
   {
     id: "net4009",
     name: "NET4009",
     description: "CCNP ENARSI - Advanced Routing & Services",
+    color: "blue",
     modules: [
       "Module 1 - Basic Forwarding & Troubleshooting",
       "Module 2 - Troubleshooting EIGRPv4/v6",
@@ -29,6 +30,7 @@ const AVAILABLE_COURSES: Course[] = [
     id: "net4005",
     name: "NET4005",
     description: "Network Security & Cloud Fundamentals",
+    color: "violet",
     modules: [
       "Crypto/TLS",
       "Application Layer Protocols",
