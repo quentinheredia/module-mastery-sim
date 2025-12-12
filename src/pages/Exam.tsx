@@ -48,7 +48,8 @@ const Exam = () => {
 
   const courseId = activeCourse?.id || "net4009";
   const totalQuestions = activeCourse ? loadQuestions(activeCourse.id).length : 0;
-  const examQuestionCount = Math.min(40, totalQuestions);
+  // NET4005 has 10 exam questions, NET4009 has up to 40
+  const examQuestionCount = courseId === "net4005" ? 10 : Math.min(40, totalQuestions);
   const courseColors = activeCourse ? courseColorClasses[activeCourse.color as CourseColor] : courseColorClasses.blue;
 
   const handleStart = () => {
