@@ -1,0 +1,41 @@
+[
+  {
+    "module": "Module 6 - DMVPN & Troubleshooting GRE",
+    "question": "Which NHRP message is designed to locate and provide the address resolution information of the egress router toward the destination?",
+    "options": ["Resolution", "Redirect", "Registration", "Purge"],
+    "correct_answers": ["Resolution"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 6 - DMVPN & Troubleshooting GRE",
+    "question": "Based on the error message from a configured point-to-point GRE tunnel, which reason could cause the tunnel to flap between up and down states?",
+    "options": [
+      "Incorrect tunnel key",
+      "Tunnel destination is resolved via the tunnel itself",
+      "Mismatched tunnel mode",
+      "Timers mismatch on the GRE tunnel interface"
+    ],
+    "correct_answers": ["Tunnel destination is resolved via the tunnel itself"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 6 - DMVPN & Troubleshooting GRE",
+    "question": "Which three (3) methods can be implemented to avoid recursive routing errors with GRE tunnels?",
+    "options": [
+      "Use a separate IGP process",
+      "Implement static routes",
+      "Filter routing updates",
+      "Adjust tunnel keepalive timers",
+      "Modify tunnel path MTU"
+    ],
+    "correct_answers": [
+      "Use a separate IGP process",
+      "Implement static routes",
+      "Filter routing updates"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  }
+]
