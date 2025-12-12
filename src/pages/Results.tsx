@@ -5,18 +5,24 @@ import { ScoreBreakdown } from "@/components/quiz/ScoreBreakdown";
 import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { useQuiz } from "@/contexts/QuizContext";
 import { useCourse } from "@/contexts/CourseContext";
+import { courseColorClasses } from "@/components/layout/CourseSelector";
 import { Home, RotateCcw, History, Clock, Calendar, FileQuestion, ChevronRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Header } from "@/components/layout/Header";
+import { CourseColor } from "@/types/quiz";
 
 const Results = () => {
   const navigate = useNavigate();
   const { currentAttempt, resetQuiz } = useQuiz();
   const { courses } = useCourse();
   
-  const courseName = currentAttempt?.courseId 
-    ? courses.find(c => c.id === currentAttempt.courseId)?.name || currentAttempt.courseId.toUpperCase()
-    : "Unknown";
+  const attemptCourse = currentAttempt?.courseId 
+    ? courses.find(c => c.id === currentAttempt.courseId)
+    : null;
+  const courseName = attemptCourse?.name || currentAttempt?.courseId?.toUpperCase() || "Unknown";
+  const courseColors = attemptCourse 
+    ? courseColorClasses[attemptCourse.color as CourseColor] 
+    : courseColorClasses.blue;
 
   if (!currentAttempt) {
     return (
@@ -55,7 +61,7 @@ const Results = () => {
   return (
     <div className="min-h-screen bg-gradient-surface">
       <Header title="Exam Results" subtitle={courseName}>
-        <Button variant="outline" size="sm" onClick={() => navigate("/history")} className="hidden sm:flex">
+        <Button variant="outline" size="sm" onClick={() => navigate("/history")} className="hidden sm:flex rounded-xl">
           <History className="mr-2 h-4 w-4" />
           History
         </Button>
@@ -78,7 +84,7 @@ const Results = () => {
               <Button 
                 size="lg" 
                 onClick={handleNewExam}
-                className="flex-1 bg-gradient-primary hover:opacity-90 shadow-elevation-sm"
+                className={`flex-1 ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90 shadow-elevation-sm`}
               >
                 <RotateCcw className="mr-2 h-5 w-5" />
                 Take Another Exam
@@ -87,7 +93,7 @@ const Results = () => {
                 size="lg" 
                 variant="outline" 
                 onClick={() => navigate("/practice")}
-                className="flex-1"
+                className="flex-1 rounded-xl"
               >
                 Practice Mode
               </Button>
@@ -95,7 +101,7 @@ const Results = () => {
                 size="lg" 
                 variant="outline" 
                 onClick={handleHome}
-                className="flex-1"
+                className="flex-1 rounded-xl"
               >
                 <Home className="mr-2 h-5 w-5" />
                 Home
@@ -148,12 +154,12 @@ const Results = () => {
                     <p className="text-xs text-muted-foreground">Time spent</p>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-muted/30 border border-border/50">
-                    <div className="flex items-center gap-2 text-muted-foreground mb-2">
+                  <div className={`p-4 rounded-xl ${courseColors.bg} ${courseColors.border} border`}>
+                    <div className={`flex items-center gap-2 ${courseColors.text} mb-2`}>
                       <FileQuestion className="h-4 w-4" />
                       <span className="text-xs font-medium">Questions</span>
                     </div>
-                    <p className="font-semibold">{currentAttempt.totalQuestions}</p>
+                    <p className={`font-semibold ${courseColors.text}`}>{currentAttempt.totalQuestions}</p>
                     <p className="text-xs text-muted-foreground">Total questions</p>
                   </div>
 
