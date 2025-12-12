@@ -242,11 +242,18 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const getAttemptHistory = (courseId?: string): QuizAttempt[] => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    const attempts = stored ? JSON.parse(stored) : [];
+    const attempts: QuizAttempt[] = stored ? JSON.parse(stored) : [];
+    
+    // Normalize legacy attempts that don't have courseId (treat as net4009)
+    const normalizedAttempts = attempts.map((a: QuizAttempt) => ({
+      ...a,
+      courseId: a.courseId || "net4009",
+    }));
+    
     if (courseId) {
-      return attempts.filter((a: QuizAttempt) => a.courseId === courseId);
+      return normalizedAttempts.filter((a: QuizAttempt) => a.courseId === courseId);
     }
-    return attempts;
+    return normalizedAttempts;
   };
 
   return (

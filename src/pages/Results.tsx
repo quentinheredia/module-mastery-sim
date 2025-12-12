@@ -4,12 +4,19 @@ import { Card } from "@/components/ui/card";
 import { ScoreBreakdown } from "@/components/quiz/ScoreBreakdown";
 import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { useQuiz } from "@/contexts/QuizContext";
+import { useCourse } from "@/contexts/CourseContext";
 import { Home, RotateCcw, History } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Results = () => {
   const navigate = useNavigate();
   const { currentAttempt, resetQuiz } = useQuiz();
+  const { courses } = useCourse();
+  
+  // Get course name from attempt or fallback
+  const courseName = currentAttempt?.courseId 
+    ? courses.find(c => c.id === currentAttempt.courseId)?.name || currentAttempt.courseId.toUpperCase()
+    : "Unknown";
 
   if (!currentAttempt) {
     return (
@@ -37,7 +44,10 @@ const Results = () => {
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">Exam Results</h1>
+            <div>
+              <h1 className="text-2xl font-bold">Exam Results</h1>
+              <p className="text-sm text-muted-foreground">{courseName}</p>
+            </div>
             <div className="flex gap-2">
               <Button variant="outline" onClick={() => navigate("/history")}>
                 <History className="mr-2 h-4 w-4" />
