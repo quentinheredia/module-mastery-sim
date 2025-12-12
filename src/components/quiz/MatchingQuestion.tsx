@@ -48,9 +48,8 @@ export const MatchingQuestion = ({
     return matchingAnswers[pairKey] === correctAnswers[pairKey];
   };
 
-  const getUsedOptions = () => {
-    return Object.values(matchingAnswers);
-  };
+  // Check if question allows reusing options (more pairs than options)
+  const allowsReuse = Object.keys(pairs).length > question.options.length;
 
   const getPairState = (pairKey: string) => {
     const selectedOption = matchingAnswers[pairKey];
@@ -111,7 +110,7 @@ export const MatchingQuestion = ({
           {pairKeys.map((pairKey, idx) => {
             const pairDescription = pairs[pairKey];
             const selectedOption = matchingAnswers[pairKey];
-            const usedOptions = getUsedOptions();
+            const usedOptions = Object.values(matchingAnswers);
             const state = getPairState(pairKey);
             
             return (
@@ -152,7 +151,7 @@ export const MatchingQuestion = ({
                         <span className="text-muted-foreground italic">Clear selection</span>
                       </SelectItem>
                       {shuffledOptions.map((option, optIdx) => {
-                        const isUsedElsewhere = usedOptions.includes(option) && matchingAnswers[pairKey] !== option;
+                        const isUsedElsewhere = !allowsReuse && usedOptions.includes(option) && matchingAnswers[pairKey] !== option;
                         return (
                           <SelectItem 
                             key={optIdx} 
