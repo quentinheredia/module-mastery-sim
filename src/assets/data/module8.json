@@ -1,0 +1,31 @@
+[
+  {
+    "module": "Module 8 - VRF Lite",
+    "question": "Which two (2) statements are true regarding VRF LITE operation?",
+    "options": [
+      "VRF LITE requires MPLS LDP to be enabled",
+      "VRF LITE does not require MPLS LDP to be enabled",
+      "VRF LITE allows multiple customers to have isolated routing tables separate from the global routing table",
+      "VRF LITE automatically propagates routes between VRFs"
+    ],
+    "correct_answers": [
+      "VRF LITE does not require MPLS LDP to be enabled",
+      "VRF LITE allows multiple customers to have isolated routing tables separate from the global routing table"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 8 - VRF Lite",
+    "question": "Which two (2) VRF Lite commands can be used to verify proper operation?",
+    "options": [
+      "show ip vrf interfaces",
+      "show ip vrf detail",
+      "show mpls forwarding-table",
+      "show ip cef vrf"
+    ],
+    "correct_answers": ["show ip vrf interfaces", "show ip vrf detail"],
+    "question_type": "multiple_choice",
+    "points": 1
+  }
+]

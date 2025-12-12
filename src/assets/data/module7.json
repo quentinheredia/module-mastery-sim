@@ -1,0 +1,131 @@
+[
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "question": "Which piece of information can be obtained from the AAA configuration shown?",
+    "options": [
+      "The authentication method list used by the console port is named ACCESS",
+      "The local database is checked first when console and Telnet access is authenticated",
+      "The authentication method list used for Telnet is named ACCESS",
+      "If the TACACS+ server is unavailable, no Telnet sessions can be established"
+    ],
+    "correct_answers": [
+      "The authentication method list used for Telnet is named ACCESS"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "question": "Which IPv6 First-Hop Security feature can block IPv6 traffic if the traffic is from an unknown origin?",
+    "options": [
+      "IPv6 ND inspection/snooping",
+      "Source Guard",
+      "RA Guard",
+      "DHCPv6 Guard"
+    ],
+    "correct_answers": ["Source Guard"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "question": "An SNMP manager is unable to change configuration variables on the R1 SNMP agent. What could be the problem?",
+    "options": [
+      "Incorrect SNMP community string",
+      "SNMP agent is not configured for write access",
+      "ACL is blocking SNMP traffic",
+      "SNMP version mismatch"
+    ],
+    "correct_answers": ["SNMP agent is not configured for write access"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "question": "Customer enabled CoPP. Based on the configuration, which two actions will occur?",
+    "options": [
+      "ICMP packets will be policed at 10 pps with exceed action to drop",
+      "All SSH packets will be dropped",
+      "All Telnet packets will be dropped",
+      "All Telnet packets will be allowed but policed"
+    ],
+    "correct_answers": [
+      "ICMP packets will be policed at 10 pps with exceed action to drop",
+      "All Telnet packets will be dropped"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "question": "Refer to the exhibit. An SNMP manager is unable to change configuration variables on the R1 SNMP agent. What could be the problem?",
+    "options": [
+      "The SNMP community string is incorrect",
+      "The SNMP agent is not configured for write access",
+      "The ACL applied on the interface is blocking SNMP traffic",
+      "SNMP version mismatch between manager and agent"
+    ],
+    "correct_answers": ["The SNMP agent is not configured for write access"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "question": "Customer enabled CoPP on router R1 based on the configuration below. Which two (2) actions will result from applying this policy?",
+    "options": [
+      "ICMP packets will be policed at 10 pps with exceed action drop",
+      "All Telnet packets will be dropped",
+      "SSH packets will be policed at 8000 kbps",
+      "Only Telnet packets from 192.168.1.1 will be permitted"
+    ],
+    "correct_answers": [
+      "ICMP packets will be policed at 10 pps with exceed action drop",
+      "All Telnet packets will be dropped"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "question": "An administrative user attempts to telnet from R2 to R1 using IP 10.10.10.1 but access is denied. What conclusion can be drawn?",
+    "options": [
+      "The password was mistyped",
+      "R1 is blocking Telnet traffic globally",
+      "VTY lines must be configured with the 'login authentication ACCESS' command",
+      "The access-class command is misconfigured"
+    ],
+    "correct_answers": ["The password was mistyped"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "question": "Customer configures uRPF on a Cisco router interface with the 'ip verify unicast source reachable-via rx allow-default' command to eliminate spoofed IP packets. Which conclusion can be drawn?",
+    "options": [
+      "All packets must arrive on the best return-path interface",
+      "uRPF strict mode is applied, and a default route may satisfy return-path requirements",
+      "uRPF loose mode is applied, requiring at least one matching route",
+      "Packets without TCP flags are dropped"
+    ],
+    "correct_answers": [
+      "uRPF strict mode is applied, and a default route may satisfy return-path requirements"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "question": "Customer enabled the CoPP policy. Which statement is true when this policy is applied?",
+    "options": [
+      "Host 192.168.1.1 will forward Telnet packets to the control plane and will not be policed",
+      "Telnet packets from unknown hosts will be permitted",
+      "SSH traffic will be dropped",
+      "The ACL deny statement overrides class-map matching"
+    ],
+    "correct_answers": [
+      "Host 192.168.1.1 will forward Telnet packets to the control plane and will not be policed"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

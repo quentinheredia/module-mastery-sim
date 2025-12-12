@@ -10,6 +10,10 @@ import module2 from "@/assets/data/module2.json";
 import module3 from "@/assets/data/module3.json";
 import module4 from "@/assets/data/module4.json";
 import module5 from "@/assets/data/module5.json";
+import module6 from "@/assets/data/module6.json";
+import module7 from "@/assets/data/module7.json";
+import module8 from "@/assets/data/module8.json";
+import examAdditional from "@/assets/data/exam_additional.json";
 
 // NET4005 course data
 import cloudData from "@/assets/data/net4005/cloud.json";
@@ -29,6 +33,10 @@ const courseData: Record<string, Question[]> = {
     ...module3,
     ...module4,
     ...module5,
+    ...module6,
+    ...module7,
+    ...module8,
+    ...examAdditional,
   ] as Question[],
   net4005: [
     ...cloudData,
@@ -45,6 +53,9 @@ const NET4009_MODULE_NAMES: Record<string, string> = {
   "3": "Module 3 - Troubleshooting OSPFv3",
   "4": "Module 4 - Troubleshooting BGP",
   "5": "Module 5 - Conditional Forwarding and Redistribution",
+  "6": "Module 6 - DMVPN & Troubleshooting GRE",
+  "7": "Module 7 - Infra-Security Management Tools",
+  "8": "Module 8 - VRF Lite",
 };
 
 // Normalize module name to standard format
@@ -63,7 +74,6 @@ const normalizeModuleName = (moduleName: string, courseId: string): string => {
 export const loadQuestions = (courseId: string = "net4009"): Question[] => {
   const data = courseData[courseId] || [];
   return data
-    .filter((q: Question) => !q.module.toLowerCase().includes("module 6"))
     .map((q: Question) => ({
       ...q,
       module: normalizeModuleName(q.module, courseId),

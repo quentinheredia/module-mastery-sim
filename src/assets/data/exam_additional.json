@@ -1,0 +1,282 @@
+[
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Customer enabled OSPFv3 between two routers as shown in the topology and configurations below. Link is operational and no filters are applied. OSPFv3 adjacency is not established due to an MTU mismatch. Which configuration command can be applied to stop OSPFv3 from comparing MTU?",
+    "options": [
+      "Apply command \"ip ospfv3 mtu-ignore\" to both routers R3 and R4 GigabitEthernet interfaces",
+      "Apply command \"ipv6 ospf mtu-ignore\" to both routers R3 and R4 GigabitEthernet interfaces",
+      "Apply command \"ip mtu-ignore\" under \"ipv6 router ospf\" on both R3 and R4",
+      "Apply command \"ipv6 mtu-ignore\" under \"ipv6 router ospf\" on both R3 and R4"
+    ],
+    "correct_answers": [
+      "Apply command \"ipv6 ospf mtu-ignore\" to both routers R3 and R4 GigabitEthernet interfaces"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "question": "What are the three (3) reasons that may cause eBGP neighbor relationship not to form?",
+    "options": [
+      "Mismatched BGP RIDs",
+      "Incorrect neighbor statement",
+      "Mismatched authentication",
+      "Mismatched BGP AS numbers",
+      "Expired TTL value"
+    ],
+    "correct_answers": [
+      "Incorrect neighbor statement",
+      "Mismatched authentication",
+      "Expired TTL value"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 1 - Basic Forwarding & Troubleshooting",
+    "question": "Where should a system administrator apply the policy-based routing configuration to direct packets from the 10.0.0.0/8 network through the R2 router to the Internet?",
+    "options": [
+      "RTA interface G0/0",
+      "RTB interface G1/0",
+      "RTB interface G0/0",
+      "RTB interface G0/1"
+    ],
+    "correct_answers": ["RTB interface G1/0"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Directly connected networks configured on router R1 are not being shared with neighboring routers through OSPFv3 IPv6. What is the cause of the issue?",
+    "options": [
+      "GigabitEthernet interfaces are not enabled for OSPFv3 route advertisement",
+      "IPv6 network statements are missing under the OSPFv3 process",
+      "Link-local IPv6 addresses must be manually configured",
+      "OSPFv3 router ID should be an IPv6 address"
+    ],
+    "correct_answers": [
+      "GigabitEthernet interfaces are not enabled for OSPFv3 route advertisement"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Customer enabled OSPFv3 single area 0 and all links are operational. No filters are enabled but R1 and R2 cannot share routes. What is the problem?",
+    "options": [
+      "OSPFv3 router ID is invalid",
+      "There is no DR or BDR election due to OSPFv3 interface priority set to 0 on both R1 and R2",
+      "Interfaces require IPv6 addressing",
+      "OSPFv3 area types are mismatched"
+    ],
+    "correct_answers": [
+      "There is no DR or BDR election due to OSPFv3 interface priority set to 0 on both R1 and R2"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "question": "A network administrator is troubleshooting a BGP network where some BGP routes are missing. BGP peers are formed. What are two (2) possible reasons?",
+    "options": [
+      "BGP split horizon rule",
+      "Incorrect neighbor statement",
+      "Missing or bad network mask command",
+      "Mismatched authentication"
+    ],
+    "correct_answers": [
+      "Incorrect neighbor statement",
+      "Missing or bad network mask command"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "Customer enabled OSPFv3 between two routers but adjacency is not forming. Based on the output, what is the cause?",
+    "options": [
+      "IPv6 link-local address mismatch",
+      "Router ID mismatch",
+      "GigabitEthernet network type mismatch",
+      "OSPFv3 process ID mismatch"
+    ],
+    "correct_answers": ["GigabitEthernet network type mismatch"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "question": "R2 is redistributing OSPFv3 into EIGRPv6. The route map is supposed to deny two IPv6 loopbacks but allow all other prefixes. No prefixes are being redistributed. How can this be fixed?",
+    "options": [
+      "Configure a \"route-map ospf2eigrp deny 5\" statement with no match criteria",
+      "Change \"route-map ospf2eigrp deny 10\" to \"route-map ospf2eigrp permit 10\"",
+      "Configure a \"route-map ospf2eigrp permit 20\" statement with no match criteria",
+      "Configure a \"route-map ospf2eigrp deny 20\" statement with no match criteria"
+    ],
+    "correct_answers": [
+      "Configure a \"route-map ospf2eigrp permit 20\" statement with no match criteria"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "question": "A network administrator issues the 'show bgp ipv4 unicast summary' command and sees the State/PfxRcd field showing Active. Which statement best describes the situation?",
+    "options": [
+      "The BGP adjacency is established",
+      "The neighbor has not responded to the BGP Open message",
+      "TCP session is up but no prefixes exchanged",
+      "The BGP table is full"
+    ],
+    "correct_answers": [
+      "The neighbor has not responded to the BGP Open message"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "question": "Which three (3) methods can be used to solve routing issues caused by multipoint redistribution?",
+    "options": [
+      "Modify the administrative distance",
+      "Tag routes to avoid redistribution loops",
+      "Modify the seed metrics of redistributed routes",
+      "Clear the routing table",
+      "Use GRE encapsulation"
+    ],
+    "correct_answers": [
+      "Modify the administrative distance",
+      "Tag routes to avoid redistribution loops",
+      "Modify the seed metrics of redistributed routes"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "question": "A network administrator issues the 'show bgp ipv4 unicast summary' command on a router to check adjacency with a neighbor. The value under the State/PfxRcd field shows Active. The link is working fine between the routers. Which statement describes the status of the BGP adjacency?",
+    "options": [
+      "The BGP adjacency is established",
+      "The neighbor router has not responded to the BGP Open message and the adjacency is not formed",
+      "The router is receiving prefixes but has not advertised any",
+      "The BGP session is in Idle state"
+    ],
+    "correct_answers": [
+      "The neighbor router has not responded to the BGP Open message and the adjacency is not formed"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "question": "Which of the following are three (3) methods that can be used to solve routing issues caused by multipoint redistribution?",
+    "options": [
+      "Modify the AD of the redistributed routes",
+      "Tag routes to avoid them being redistributed back into the originating routing source",
+      "Modify the seed metrics of the redistributed routes",
+      "Enable split-horizon on all interfaces",
+      "Disable load balancing"
+    ],
+    "correct_answers": [
+      "Modify the AD of the redistributed routes",
+      "Tag routes to avoid them being redistributed back into the originating routing source",
+      "Modify the seed metrics of the redistributed routes"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Refer to the exhibit. EIGRP is configured on RouterA and RouterB, and the link is working fine. What can be concluded about the EIGRP authentication between the two routers?",
+    "options": [
+      "EIGRP authentication will fail due to key mismatch",
+      "EIGRP authentication will succeed",
+      "EIGRP adjacency will remain stuck in Init state",
+      "EIGRP uses MD5 hashing by default"
+    ],
+    "correct_answers": ["EIGRP authentication will succeed"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "question": "Redistribution between two EIGRP routing processes does not require a seed metric.",
+    "options": ["True", "False"],
+    "correct_answers": ["True"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "question": "Customer is trying to establish eBGP peering using a directly connected Serial IP. The eBGP session is not forming. Suggest what should be done to correct the configuration.",
+    "options": [
+      "Remove 'update-source Loopback0' from both routers",
+      "Add ebgp-multihop 2",
+      "Use loopback for all BGP neighbor statements",
+      "Disable synchronization"
+    ],
+    "correct_answers": ["Remove 'update-source Loopback0' from both routers"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "question": "Based on the exhibit, which command is needed on R2 to redistribute iBGP routes into OSPF process 100?",
+    "options": [
+      "redistribute bgp 100",
+      "redistribute bgp 100 metric 10",
+      "bgp redistribute-internal",
+      "redistribute internal"
+    ],
+    "correct_answers": ["bgp redistribute-internal"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "question": "An administrator is configuring a prefix list to stop advertising 172.18.100.0/24, but the route is still being advertised. How can the administrator fix the error?",
+    "options": [
+      "Place the deny statement before the permit statement",
+      "Add the ge/le mask qualifiers",
+      "Add 'gateway' keyword to match next hop",
+      "Enable prefix-list length inheritance"
+    ],
+    "correct_answers": ["Place the deny statement before the permit statement"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "question": "Refer to the exhibit. What metric will RIP routes have when redistributed into EIGRP?",
+    "options": ["0", "1", "Infinity", "Unreachable"],
+    "correct_answers": ["Infinity"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "question": "Customer is exchanging IPv6 routes using eBGP over an IPv4 TCP session. Which two next-hop addresses should be used in the route-map on R1 and R2?",
+    "options": [
+      "set ipv6 next-hop 2001:db8:209::1",
+      "set ipv6 next-hop 2001:db8:209::2",
+      "set ipv6 next-hop 192.168.0.1",
+      "set ipv6 next-hop peer-address"
+    ],
+    "correct_answers": ["set ipv6 next-hop 2001:db8:209::2"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - Troubleshooting OSPFv3",
+    "question": "What is the result when OSPFv3 is configured with no explicit router ID and there are no active IPv4 interfaces on the router?",
+    "options": [
+      "The router ID is automatically set to ::1",
+      "The router ID defaults to 0.0.0.0",
+      "OSPFv3 process will not start",
+      "Router ID is derived from the lowest IPv6 address"
+    ],
+    "correct_answers": ["OSPFv3 process will not start"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

@@ -24,6 +24,9 @@ const AVAILABLE_COURSES: Course[] = [
       "Module 3 - Troubleshooting OSPFv3",
       "Module 4 - Troubleshooting BGP",
       "Module 5 - Conditional Forwarding and Redistribution",
+      "Module 6 - DMVPN & Troubleshooting GRE",
+      "Module 7 - Infra-Security Management Tools",
+      "Module 8 - VRF Lite",
     ],
   },
   {
