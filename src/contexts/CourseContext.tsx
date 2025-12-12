@@ -15,7 +15,7 @@ const STORAGE_KEY = "active_course";
 const AVAILABLE_COURSES: Course[] = [
   {
     id: "net4009",
-    name: "NET4009",
+    name: "Troubleshooting IP",
     description: "CCNP ENARSI - Advanced Routing & Services",
     color: "blue",
     modules: [
@@ -31,7 +31,7 @@ const AVAILABLE_COURSES: Course[] = [
   },
   {
     id: "net4005",
-    name: "NET4005",
+    name: "Networked Applications",
     description: "Network Security & Cloud Fundamentals",
     color: "violet",
     modules: [
