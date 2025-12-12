@@ -351,5 +351,52 @@
     "correct_answers": ["SMTP uses persistent connections and push delivery"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which characteristics correctly describe HTTP cookies?",
+    "image": null,
+    "options": [
+      "Cookies allow servers to maintain state",
+      "Cookies are stored only on the server",
+      "Cookies are included in HTTP request headers",
+      "Cookies can be used for user tracking",
+      "Cookies eliminate the need for caching"
+    ],
+    "correct_answers": [
+      "Cookies allow servers to maintain state",
+      "Cookies are included in HTTP request headers",
+      "Cookies can be used for user tracking"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why does DNS use UDP for most queries?",
+    "image": null,
+    "options": [
+      "UDP guarantees reliable delivery",
+      "DNS responses are always encrypted",
+      "UDP reduces latency and overhead",
+      "UDP prevents packet loss"
+    ],
+    "correct_answers": ["UDP reduces latency and overhead"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which HTTP response code is most closely associated with web caching validation?",
+    "image": null,
+    "options": [
+      "200 OK",
+      "301 Moved Permanently",
+      "304 Not Modified",
+      "404 Not Found"
+    ],
+    "correct_answers": ["304 Not Modified"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]
