@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { BookOpen, Timer, History, Sparkles, Zap, CheckCircle2 } from "lucide-react";
+import { BookOpen, Timer, History, Zap, CheckCircle2 } from "lucide-react";
 import { loadQuestions } from "@/utils/questionLoader";
 import { useCourse } from "@/contexts/CourseContext";
 import { Header } from "@/components/layout/Header";
@@ -43,7 +43,7 @@ const Home = () => {
             </div>
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">
               Welcome to Your{" "}
-              <span className="text-gradient-primary">Exam Prep</span>
+              <span className={courseColors.text}>Exam Prep</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Choose your study mode below to master the material
@@ -55,17 +55,16 @@ const Home = () => {
             {/* Practice Mode Card */}
             <Card
               variant="interactive"
-              glow="primary"
-              className="p-8 group relative overflow-hidden border-primary/10 animate-fade-up"
+              className={`p-8 group relative overflow-hidden ${courseColors.border} border animate-fade-up`}
               style={{ animationDelay: "100ms" }}
               onClick={() => navigate("/practice")}
             >
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className={`absolute inset-0 ${courseColors.bg} opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
               
               <div className="relative flex flex-col items-center text-center space-y-4">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-elevation-md group-hover:scale-110 transition-transform duration-300">
-                  <BookOpen className="h-8 w-8 text-primary-foreground" />
+                <div className={`h-16 w-16 rounded-2xl ${courseColors.bg} ${courseColors.border} border flex items-center justify-center shadow-elevation-md group-hover:scale-110 transition-transform duration-300`}>
+                  <BookOpen className={`h-8 w-8 ${courseColors.text}`} />
                 </div>
                 <h3 className="text-2xl font-bold font-display">Practice Mode</h3>
                 <p className="text-muted-foreground">
@@ -75,12 +74,15 @@ const Home = () => {
                 <ul className="text-sm text-muted-foreground space-y-2 w-full">
                   {["Immediate feedback", "Filter by module", "No time limit", "Navigate freely"].map((item) => (
                     <li key={item} className="flex items-center justify-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-primary" />
+                      <CheckCircle2 className={`h-4 w-4 ${courseColors.text}`} />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-                <Button size="lg" className="w-full mt-4 bg-gradient-primary hover:opacity-90 transition-opacity shadow-elevation-sm group-hover:shadow-glow-primary">
+                <Button 
+                  size="lg" 
+                  className={`w-full mt-4 ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90 transition-opacity shadow-elevation-sm`}
+                >
                   Start Practice
                 </Button>
               </div>
@@ -89,17 +91,16 @@ const Home = () => {
             {/* Exam Mode Card */}
             <Card
               variant="interactive"
-              glow="accent"
-              className="p-8 group relative overflow-hidden border-accent/10 animate-fade-up"
+              className={`p-8 group relative overflow-hidden ${courseColors.border} border animate-fade-up`}
               style={{ animationDelay: "200ms" }}
               onClick={() => navigate("/exam")}
             >
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className={`absolute inset-0 ${courseColors.bg} opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
               
               <div className="relative flex flex-col items-center text-center space-y-4">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-accent flex items-center justify-center shadow-elevation-md group-hover:scale-110 transition-transform duration-300">
-                  <Timer className="h-8 w-8 text-accent-foreground" />
+                <div className={`h-16 w-16 rounded-2xl ${courseColors.bg} ${courseColors.border} border flex items-center justify-center shadow-elevation-md group-hover:scale-110 transition-transform duration-300`}>
+                  <Timer className={`h-8 w-8 ${courseColors.text}`} />
                 </div>
                 <h3 className="text-2xl font-bold font-display">Exam Mode</h3>
                 <p className="text-muted-foreground">
@@ -109,12 +110,15 @@ const Home = () => {
                 <ul className="text-sm text-muted-foreground space-y-2 w-full">
                   {[`${examQuestionCount} random questions`, "30-minute timer", "Performance analytics", "Module breakdown"].map((item) => (
                     <li key={item} className="flex items-center justify-center gap-2">
-                      <Zap className="h-4 w-4 text-accent" />
+                      <Zap className={`h-4 w-4 ${courseColors.text}`} />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-                <Button size="lg" className="w-full mt-4 bg-gradient-accent hover:opacity-90 transition-opacity shadow-elevation-sm group-hover:shadow-glow-accent">
+                <Button 
+                  size="lg" 
+                  className={`w-full mt-4 ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90 transition-opacity shadow-elevation-sm`}
+                >
                   Start Exam
                 </Button>
               </div>
@@ -129,11 +133,11 @@ const Home = () => {
           >
             <Button
               variant="outline"
-              className="w-full justify-start group"
+              className={`w-full justify-start group ${courseColors.border} border hover:${courseColors.bg}`}
               size="lg"
               onClick={() => navigate("/history")}
             >
-              <History className="mr-2 h-5 w-5 group-hover:rotate-[-20deg] transition-transform" />
+              <History className={`mr-2 h-5 w-5 ${courseColors.text} group-hover:rotate-[-20deg] transition-transform`} />
               View Attempt History
             </Button>
           </Card>
@@ -141,7 +145,7 @@ const Home = () => {
           {/* Footer info */}
           <div className="mt-12 text-center text-sm text-muted-foreground animate-fade-up" style={{ animationDelay: "400ms" }}>
             <p className="flex items-center justify-center gap-2">
-              <Sparkles className="h-4 w-4 text-primary/50" />
+              <div className={`h-2 w-2 rounded-full ${courseColors.dot}`} />
               All questions include single choice, multiple choice, and matching types
             </p>
             <p className="mt-2">
