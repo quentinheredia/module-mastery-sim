@@ -251,5 +251,105 @@
     ],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which HTTP mechanism allows a web server to maintain user state despite HTTP being stateless?",
+    "image": null,
+    "options": [
+      "Persistent TCP connections",
+      "Cookies",
+      "Web caching",
+      "Conditional GET"
+    ],
+    "correct_answers": ["Cookies"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What is the primary function of a web cache (proxy server)?",
+    "image": null,
+    "options": [
+      "Encrypt HTTP traffic",
+      "Reduce server processing load only",
+      "Serve content closer to clients to reduce latency",
+      "Replace origin servers"
+    ],
+    "correct_answers": ["Serve content closer to clients to reduce latency"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which statement best explains why DNS is distributed and hierarchical?",
+    "image": null,
+    "options": [
+      "To minimize cryptographic overhead",
+      "To avoid a single point of failure and scale globally",
+      "To improve packet forwarding speed",
+      "To allow peer-to-peer name resolution"
+    ],
+    "correct_answers": [
+      "To avoid a single point of failure and scale globally"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why does SMTP primarily use a push-based communication model?",
+    "image": null,
+    "options": [
+      "Email servers poll for new messages",
+      "Messages are delivered only when requested",
+      "Sending servers initiate message delivery",
+      "SMTP uses UDP"
+    ],
+    "correct_answers": ["Sending servers initiate message delivery"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why does HTTP/1.1 persistent connections reduce overall page load time?",
+    "image": null,
+    "options": [
+      "They eliminate DNS lookups",
+      "They reduce repeated TCP handshakes",
+      "They compress HTTP headers",
+      "They avoid packet loss"
+    ],
+    "correct_answers": ["They reduce repeated TCP handshakes"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is DNS caching essential for Internet scalability?",
+    "image": null,
+    "options": [
+      "It improves cryptographic security",
+      "It reduces repeated queries to root and TLD servers",
+      "It eliminates the need for authoritative servers",
+      "It ensures reliable transport"
+    ],
+    "correct_answers": ["It reduces repeated queries to root and TLD servers"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which statement about SMTP vs HTTP is correct?",
+    "image": null,
+    "options": [
+      "Both are pull-based protocols",
+      "SMTP transfers one object per response",
+      "SMTP uses persistent connections and push delivery",
+      "HTTP requires ASCII-only messages"
+    ],
+    "correct_answers": ["SMTP uses persistent connections and push delivery"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]

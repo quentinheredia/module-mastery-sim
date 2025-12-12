@@ -196,5 +196,24 @@
     ],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which characteristics apply to stateless application designs, making them suitable for horizontal scaling?",
+    "image": null,
+    "options": [
+      "Each request can be processed independently",
+      "Server-side session data must be shared",
+      "Load can be distributed across identical instances",
+      "Failure of one instance does not break client state",
+      "Persistent connections are required"
+    ],
+    "correct_answers": [
+      "Each request can be processed independently",
+      "Load can be distributed across identical instances",
+      "Failure of one instance does not break client state"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
   }
 ]

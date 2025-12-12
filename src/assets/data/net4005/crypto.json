@@ -111,14 +111,14 @@
     "question": "Which statements about digital certificates and CAs are correct?",
     "image": null,
     "options": [
-      "A CA signs an entity’s public key",
+      "A CA signs an entity's public key",
       "Certificates eliminate the need for public-key crypto",
       "Trust depends on the CA",
       "Certificates prevent MITM",
       "Certificates encrypt data"
     ],
     "correct_answers": [
-      "A CA signs an entity’s public key",
+      "A CA signs an entity's public key",
       "Trust depends on the CA",
       "Certificates prevent MITM"
     ],
@@ -212,7 +212,7 @@
   },
   {
     "module": "Crypto/TLS",
-    "question": "What is the purpose of the server’s private key in TLS?",
+    "question": "What is the purpose of the server's private key in TLS?",
     "image": null,
     "options": [
       "To derive session keys",
@@ -288,6 +288,148 @@
     "correct_answers": [
       "Confirm both sides derived the same session keys"
     ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Match each step in a TLS-style secure communication setup to its correct purpose.",
+    "image": null,
+    "options": [
+      "Client verifies server certificate",
+      "Client and server derive session keys",
+      "Public key used during handshake",
+      "Symmetric key used for bulk data",
+      "Hashing used during authentication"
+    ],
+    "pairs": {
+      "A": "Ensure fast, efficient encrypted data transfer",
+      "B": "Confirm server identity via a trusted authority",
+      "C": "Protect handshake messages from tampering",
+      "D": "Establish shared secrets without prior trust",
+      "E": "Detect message modification"
+    },
+    "correct_answers": {
+      "A": "Confirm server identity via a trusted authority",
+      "B": "Establish shared secrets without prior trust",
+      "C": "Protect handshake messages from tampering",
+      "D": "Ensure fast, efficient encrypted data transfer",
+      "E": "Detect message modification"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which statements about digital certificates and Certificate Authorities (CAs) are correct?",
+    "image": null,
+    "options": [
+      "A CA digitally signs an entity's public key",
+      "Certificates eliminate the need for public-key cryptography",
+      "Trust in a certificate depends on trust in the CA",
+      "Certificates prevent man-in-the-middle attacks",
+      "A certificate encrypts application data"
+    ],
+    "correct_answers": [
+      "A CA digitally signs an entity's public key",
+      "Trust in a certificate depends on trust in the CA",
+      "Certificates prevent man-in-the-middle attacks"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why is symmetric encryption preferred for data transfer after a TLS handshake?",
+    "image": null,
+    "options": [
+      "It provides stronger authentication",
+      "It eliminates the need for hashing",
+      "It is computationally more efficient",
+      "It prevents replay attacks"
+    ],
+    "correct_answers": ["It is computationally more efficient"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Match each cryptographic component to its role in a secure email system.",
+    "image": null,
+    "options": [
+      "Hash function",
+      "Sender's private key",
+      "Receiver's public key",
+      "Symmetric session key",
+      "Digital signature"
+    ],
+    "pairs": {
+      "A": "Ensures message confidentiality efficiently",
+      "B": "Provides message integrity check",
+      "C": "Encrypts session key for secure delivery",
+      "D": "Binds message integrity to sender identity",
+      "E": "Verifies sender authenticity"
+    },
+    "correct_answers": {
+      "A": "Provides message integrity check",
+      "B": "Binds message integrity to sender identity",
+      "C": "Encrypts session key for secure delivery",
+      "D": "Ensures message confidentiality efficiently",
+      "E": "Verifies sender authenticity"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which statements about TLS 1.3 handshakes are correct?",
+    "image": null,
+    "options": [
+      "Session keys are derived after the handshake",
+      "TLS 1.3 requires Diffie-Hellman",
+      "TLS 1.3 supports encrypted application data in 0-RTT",
+      "TLS 1.3 allows RSA key exchange",
+      "0-RTT may introduce replay risks"
+    ],
+    "correct_answers": [
+      "Session keys are derived after the handshake",
+      "TLS 1.3 requires Diffie-Hellman",
+      "TLS 1.3 supports encrypted application data in 0-RTT",
+      "0-RTT may introduce replay risks"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which properties are provided by hash functions in secure communications?",
+    "image": null,
+    "options": [
+      "Fixed-length output",
+      "Confidentiality",
+      "Message integrity",
+      "Computational infeasibility of inversion",
+      "Authentication"
+    ],
+    "correct_answers": [
+      "Fixed-length output",
+      "Message integrity",
+      "Computational infeasibility of inversion"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which TLS component ensures message integrity during data transfer?",
+    "image": null,
+    "options": [
+      "Session key",
+      "Certificate",
+      "Hash-based MAC",
+      "Public key"
+    ],
+    "correct_answers": ["Hash-based MAC"],
     "question_type": "multiple_choice",
     "points": 1
   }
