@@ -1,16 +1,17 @@
-import { Question, UserAnswer } from "@/types/quiz";
+import { Question, UserAnswer, MatchingPairs } from "@/types/quiz";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, XCircle } from "lucide-react";
+import { MatchingQuestion } from "./MatchingQuestion";
 
 interface QuestionCardProps {
   question: Question;
   questionNumber: number;
   userAnswer?: UserAnswer;
-  onAnswerChange: (selectedAnswers: string[]) => void;
+  onAnswerChange: (selectedAnswers: string[], matchingAnswers?: MatchingPairs) => void;
   showFeedback?: boolean;
   disabled?: boolean;
 }
@@ -23,21 +24,31 @@ export const QuestionCard = ({
   showFeedback = false,
   disabled = false,
 }: QuestionCardProps) => {
-  const isSingleChoice = question.question_type === "single_choice" || question.question_type === "true_false";
+  // Handle matching questions with dedicated component
+  if (question.question_type === "matching") {
+    return (
+      <MatchingQuestion
+        question={question}
+        questionNumber={questionNumber}
+        userAnswer={userAnswer}
+        onMatchingChange={(matchingAnswers) => onAnswerChange([], matchingAnswers)}
+        showFeedback={showFeedback}
+        disabled={disabled}
+      />
+    );
+  }
+
+  const isSingleChoice = question.question_type === "single_choice" || question.question_type === "true_false" || question.question_type === "multiple_choice";
   const selectedAnswers = userAnswer?.selectedAnswers || [];
+  const correctAnswers = question.correct_answers as string[];
 
   const resolveImageSrc = (imagePath: string) => {
-    // Return absolute URLs and data URLs unchanged
     if (imagePath.startsWith('http://') || imagePath.startsWith('https://') || imagePath.startsWith('data:')) {
       return imagePath;
     }
-    
-    // If already prefixed with BASE_URL, return as-is
     if (imagePath.startsWith(import.meta.env.BASE_URL)) {
       return imagePath;
     }
-    
-    // Strip leading slash if present and prepend BASE_URL
     const cleanPath = imagePath.replace(/^\//, '');
     return import.meta.env.BASE_URL + cleanPath;
   };
@@ -59,7 +70,7 @@ export const QuestionCard = ({
   };
 
   const isCorrectOption = (option: string) => {
-    return question.correct_answers.includes(option);
+    return correctAnswers.includes(option);
   };
 
   const isSelectedOption = (option: string) => {
@@ -191,8 +202,8 @@ export const QuestionCard = ({
               {userAnswer?.isCorrect ? "✓ Correct!" : "✗ Incorrect"}
             </p>
             <p className="text-sm">
-              <span className="font-medium">Correct answer{question.correct_answers.length > 1 ? "s" : ""}:</span>{" "}
-              {question.correct_answers.join(", ")}
+              <span className="font-medium">Correct answer{correctAnswers.length > 1 ? "s" : ""}:</span>{" "}
+              {correctAnswers.join(", ")}
             </p>
           </div>
         )}

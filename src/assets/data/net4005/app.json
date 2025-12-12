@@ -1,0 +1,255 @@
+[
+  {
+    "module": "Application Layer Protocols",
+    "question": "What problem does HTTP/2 multiplexing primarily solve?",
+    "image": null,
+    "options": [
+      "Packet loss recovery",
+      "Head-of-line blocking within a single TCP connection",
+      "DNS resolution delays",
+      "TLS handshake overhead"
+    ],
+    "correct_answers": [
+      "Head-of-line blocking within a single TCP connection"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which statement correctly describes SMTP compared to HTTP?",
+    "image": null,
+    "options": [
+      "SMTP is client-pull; HTTP is client-push",
+      "SMTP is client-push; HTTP is client-pull",
+      "Both are client-pull",
+      "Both are client-push"
+    ],
+    "correct_answers": [
+      "SMTP is client-push; HTTP is client-pull"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which DNS behavior reduces lookup latency for repeated queries?",
+    "image": null,
+    "options": [
+      "Recursive resolution",
+      "Authoritative response signing",
+      "Local caching at the resolver",
+      "Transport-layer encryption",
+      "Load balancing hashes"
+    ],
+    "correct_answers": [
+      "Local caching at the resolver"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which HTTP feature allows conditional retrieval of cached objects?",
+    "image": null,
+    "options": [
+      "ETags",
+      "Cookies",
+      "DNS caching",
+      "TCP persistence"
+    ],
+    "correct_answers": [
+      "ETags"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which protocols are needed when retrieving a webpage AND the IP address is unknown? (Select ALL)",
+    "image": null,
+    "options": [
+      "HTTP",
+      "SNMP",
+      "SMTP",
+      "FTP",
+      "TCP",
+      "UDP",
+      "DNS"
+    ],
+    "correct_answers": [
+      "HTTP",
+      "TCP",
+      "UDP",
+      "DNS"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which DHCP features are correct? (Select ALL)",
+    "image": null,
+    "options": [
+      "Application layer protocol",
+      "Uses TCP",
+      "Provides gateway IP",
+      "Provides DNS IP",
+      "Assigns IP addresses dynamically"
+    ],
+    "correct_answers": [
+      "Application layer protocol",
+      "Provides gateway IP",
+      "Provides DNS IP",
+      "Assigns IP addresses dynamically"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What is the total delay for DNS lookup plus HTTP object retrieval?",
+    "image": null,
+    "options": [
+      "RTT₀",
+      "RTT₁…RTT + RTT₀",
+      "RTT₁…RTT + 2RTT₀",
+      "RTT₁…RTT + 4RTT₀"
+    ],
+    "correct_answers": [
+      "RTT₁…RTT + 2RTT₀"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which HTTP feature allows multiple objects to be fetched concurrently over a single connection?",
+    "image": null,
+    "options": [
+      "HTTP/2 multiplexing",
+      "Conditional GET",
+      "Cookies",
+      "Persistent TCP connections"
+    ],
+    "correct_answers": [
+      "HTTP/2 multiplexing"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What does a DNS A record map?",
+    "image": null,
+    "options": [
+      "Domain name to IPv6 address",
+      "Domain name to IPv4 address",
+      "Domain alias to canonical name",
+      "Domain to mail server"
+    ],
+    "correct_answers": [
+      "Domain name to IPv4 address"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is HTTP considered stateless?",
+    "image": null,
+    "options": [
+      "Each request is independent with no server memory of prior requests",
+      "Connections close after every response",
+      "The server cannot use cookies",
+      "DNS provides state for HTTP"
+    ],
+    "correct_answers": [
+      "Each request is independent with no server memory of prior requests"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "A web proxy reduces bandwidth consumption primarily by:",
+    "image": null,
+    "options": [
+      "Encrypting all traffic",
+      "Caching frequently accessed content",
+      "Terminating TLS connections",
+      "Replacing DNS queries"
+    ],
+    "correct_answers": [
+      "Caching frequently accessed content"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which characteristic applies ONLY to SMTP (not HTTP)? (Select ALL)",
+    "image": null,
+    "options": [
+      "Uses port 25",
+      "ASCII command/response interaction",
+      "Uses CRLF blank line to end headers",
+      "Operates as client-push"
+    ],
+    "correct_answers": [
+      "Uses port 25",
+      "ASCII command/response interaction",
+      "Operates as client-push"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is store-and-forward used in SMTP?",
+    "image": null,
+    "options": [
+      "To eliminate encryption",
+      "To allow intermediate servers to retry delivery",
+      "To accelerate DNS",
+      "To reduce packet size"
+    ],
+    "correct_answers": [
+      "To allow intermediate servers to retry delivery"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which protocol uses UDP for simple network monitoring?",
+    "image": null,
+    "options": [
+      "SMTP",
+      "HTTP",
+      "SNMP",
+      "DHCP"
+    ],
+    "correct_answers": [
+      "SNMP"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What is the difference between message confidentiality and integrity?",
+    "image": null,
+    "options": [
+      "Confidentiality protects against unauthorized reading; integrity protects against unauthorized changes",
+      "Confidentiality protects against modification; integrity protects secrecy",
+      "Both prevent unauthorized reading",
+      "Both require symmetric keys"
+    ],
+    "correct_answers": [
+      "Confidentiality protects against unauthorized reading; integrity protects against unauthorized changes"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  }
+]

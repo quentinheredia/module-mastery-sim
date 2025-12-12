@@ -7,10 +7,12 @@ import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { ProgressBar } from "@/components/quiz/ProgressBar";
 import { ArrowLeft, ArrowRight, Home, RotateCcw } from "lucide-react";
 import { getAvailableModules, loadQuestions, shuffleArray, checkAnswer } from "@/utils/questionLoader";
-import { Question, UserAnswer } from "@/types/quiz";
+import { Question, UserAnswer, MatchingPairs } from "@/types/quiz";
+import { useCourse } from "@/contexts/CourseContext";
 
 const Practice = () => {
   const navigate = useNavigate();
+  const { activeCourse } = useCourse();
   const [selectedModule, setSelectedModule] = useState<string>("all");
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,16 +20,17 @@ const Practice = () => {
   const [showFeedback, setShowFeedback] = useState(false);
   const [isStarted, setIsStarted] = useState(false);
 
-  const modules = ["all", ...getAvailableModules()];
+  const courseId = activeCourse?.id || "net4009";
+  const modules = ["all", ...getAvailableModules(courseId)];
 
   useEffect(() => {
-    if (isStarted) {
+    if (isStarted && activeCourse) {
       loadQuestionsForModule(selectedModule);
     }
-  }, [selectedModule, isStarted]);
+  }, [selectedModule, isStarted, activeCourse]);
 
   const loadQuestionsForModule = (module: string) => {
-    const allQuestions = loadQuestions();
+    const allQuestions = loadQuestions(courseId);
     const filtered = module === "all" 
       ? allQuestions 
       : allQuestions.filter(q => q.module === module);
@@ -48,12 +51,13 @@ const Practice = () => {
     loadQuestionsForModule(selectedModule);
   };
 
-  const handleAnswerChange = (selectedAnswers: string[]) => {
+  const handleAnswerChange = (selectedAnswers: string[], matchingAnswers?: MatchingPairs) => {
     const newAnswers = [...userAnswers];
-    const isCorrect = checkAnswer(questions[currentIndex], selectedAnswers);
+    const isCorrect = checkAnswer(questions[currentIndex], selectedAnswers, matchingAnswers);
     newAnswers[currentIndex] = {
       questionId: currentIndex,
       selectedAnswers,
+      matchingAnswers,
       isCorrect,
     };
     setUserAnswers(newAnswers);
@@ -84,7 +88,9 @@ const Practice = () => {
     setShowFeedback(false);
   };
 
-  const answeredCount = userAnswers.filter(a => a.selectedAnswers.length > 0).length;
+  const answeredCount = userAnswers.filter(a => 
+    a.selectedAnswers.length > 0 || (a.matchingAnswers && Object.keys(a.matchingAnswers).length > 0)
+  ).length;
 
   // Keyboard navigation
   useEffect(() => {
@@ -102,6 +108,14 @@ const Practice = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isStarted, currentIndex, questions.length]);
 
+  if (!activeCourse) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
   if (!isStarted) {
     return (
       <div className="min-h-screen bg-background">
@@ -111,7 +125,7 @@ const Practice = () => {
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Home
             </Button>
-            <h1 className="text-2xl font-bold">Practice Mode</h1>
+            <h1 className="text-2xl font-bold">Practice Mode - {activeCourse.name}</h1>
           </div>
         </header>
 
@@ -127,7 +141,7 @@ const Practice = () => {
                       <SelectValue placeholder="Select a module" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="all">All Modules (1-5)</SelectItem>
+                      <SelectItem value="all">All Modules</SelectItem>
                       {modules.slice(1).map((module) => (
                         <SelectItem key={module} value={module}>
                           {module}
@@ -163,7 +177,7 @@ const Practice = () => {
       <header className="border-b bg-card sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-4">
-            <h1 className="text-xl font-bold">Practice Mode</h1>
+            <h1 className="text-xl font-bold">Practice Mode - {activeCourse.name}</h1>
             <div className="flex gap-2">
               <Button variant="outline" size="sm" onClick={handleReset}>
                 <RotateCcw className="mr-2 h-4 w-4" />
@@ -204,7 +218,8 @@ const Practice = () => {
             </Button>
 
             <div className="flex gap-3">
-              {!showFeedback && userAnswers[currentIndex]?.selectedAnswers.length > 0 && (
+              {!showFeedback && (userAnswers[currentIndex]?.selectedAnswers.length > 0 || 
+                (userAnswers[currentIndex]?.matchingAnswers && Object.keys(userAnswers[currentIndex].matchingAnswers!).length > 0)) && (
                 <Button onClick={handleShowAnswer} variant="secondary">
                   Show Answer
                 </Button>

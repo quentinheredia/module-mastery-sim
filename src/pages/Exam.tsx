@@ -13,8 +13,10 @@ import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { Timer } from "@/components/quiz/Timer";
 import { ProgressBar } from "@/components/quiz/ProgressBar";
 import { useQuiz } from "@/contexts/QuizContext";
+import { useCourse } from "@/contexts/CourseContext";
 import { AlertCircle, Home } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { MatchingPairs } from "@/types/quiz";
 
 const Exam = () => {
   const navigate = useNavigate();
@@ -26,17 +28,21 @@ const Exam = () => {
     resetQuiz,
     goToQuestion,
   } = useQuiz();
+  const { activeCourse } = useCourse();
   const [questionsPerPage, setQuestionsPerPage] = useState<1 | 5 | 10>(1);
 
+  const courseId = activeCourse?.id || "net4009";
+
   const handleStart = () => {
-    startQuiz("exam");
+    startQuiz("exam", courseId);
   };
 
   const handleAnswerChange = (
     questionIndex: number,
-    selectedAnswers: string[]
+    selectedAnswers: string[],
+    matchingAnswers?: MatchingPairs
   ) => {
-    answerQuestion(questionIndex, selectedAnswers);
+    answerQuestion(questionIndex, selectedAnswers, matchingAnswers);
   };
 
   const handleSubmit = () => {
@@ -45,7 +51,7 @@ const Exam = () => {
         "Are you sure you want to submit your exam? You cannot change answers after submission."
       )
     ) {
-      submitQuiz();
+      submitQuiz(courseId);
       navigate("/results");
     }
   };
@@ -62,9 +68,17 @@ const Exam = () => {
   };
 
   const answeredCount = quizState.userAnswers.filter(
-    (a) => a.selectedAnswers.length > 0
+    (a) => a.selectedAnswers.length > 0 || (a.matchingAnswers && Object.keys(a.matchingAnswers).length > 0)
   ).length;
   const unansweredCount = quizState.questions.length - answeredCount;
+
+  if (!activeCourse) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   if (!quizState.isStarted) {
     return (
@@ -79,7 +93,7 @@ const Exam = () => {
               <Home className="mr-2 h-4 w-4" />
               Back to Home
             </Button>
-            <h1 className="text-2xl font-bold">Exam Mode</h1>
+            <h1 className="text-2xl font-bold">Exam Mode - {activeCourse.name}</h1>
           </div>
         </header>
 
@@ -88,9 +102,9 @@ const Exam = () => {
             <Alert>
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>
-                This exam will consist of 40 randomly selected questions from
-                Modules 1-5. You will have 30 minutes to complete it. All
-                questions are multiple choice with all-or-nothing grading.
+                This exam will consist of 40 randomly selected questions from{" "}
+                {activeCourse.name}. You will have 30 minutes to complete it. Questions
+                include single choice, multiple choice, and matching types.
               </AlertDescription>
             </Alert>
 
@@ -162,7 +176,7 @@ const Exam = () => {
       <header className="border-b bg-card sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-4 flex-wrap gap-4">
-            <h1 className="text-xl font-bold">Exam in Progress</h1>
+            <h1 className="text-xl font-bold">Exam in Progress - {activeCourse.name}</h1>
             <div className="flex gap-3 flex-wrap">
               <Timer timeRemaining={quizState.timeRemaining} />
               <Button variant="outline" size="sm" onClick={handleExit}>
@@ -200,8 +214,8 @@ const Exam = () => {
                   question={question}
                   questionNumber={questionIndex + 1}
                   userAnswer={quizState.userAnswers[questionIndex]}
-                  onAnswerChange={(answers) =>
-                    handleAnswerChange(questionIndex, answers)
+                  onAnswerChange={(answers, matching) =>
+                    handleAnswerChange(questionIndex, answers, matching)
                   }
                   showFeedback={false}
                 />

@@ -1,38 +1,31 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { BookOpen, Timer, History, Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import { BookOpen, Timer, History } from "lucide-react";
 import { loadQuestions } from "@/utils/questionLoader";
+import { useCourse } from "@/contexts/CourseContext";
+import { Header } from "@/components/layout/Header";
 
 const Home = () => {
   const navigate = useNavigate();
-  const { theme, setTheme } = useTheme();
-  const totalQuestions = loadQuestions().length;
+  const { activeCourse } = useCourse();
+  
+  const totalQuestions = activeCourse ? loadQuestions(activeCourse.id).length : 0;
+
+  if (!activeCourse) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b bg-card">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold text-primary">
-              NET4009 Practice Exam
-            </h1>
-            <p className="text-sm text-muted-foreground">Modules 1-5</p>
-          </div>
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          >
-            {theme === "dark" ? (
-              <Sun className="h-5 w-5" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
-          </Button>
-        </div>
-      </header>
+      <Header 
+        title={`${activeCourse.name} Practice Exam`}
+        subtitle={activeCourse.description}
+      />
 
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -41,7 +34,7 @@ const Home = () => {
               Welcome to Your Exam Prep
             </h2>
             <p className="text-xl text-muted-foreground mb-2">
-              {totalQuestions} questions covering Modules 1 through 5
+              {totalQuestions} questions covering {activeCourse.modules.length} modules
             </p>
             <p className="text-muted-foreground">
               Choose your study mode below to get started
@@ -113,9 +106,9 @@ const Home = () => {
           </Card>
 
           <div className="mt-12 text-center text-sm text-muted-foreground">
-            <p>All questions are multiple choice with all-or-nothing grading</p>
+            <p>All questions include single choice, multiple choice, and matching types</p>
             <p className="mt-1">
-              Module 6 questions are excluded from this simulator
+              Switch courses using the dropdown in the header
             </p>
           </div>
         </div>
