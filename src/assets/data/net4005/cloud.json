@@ -215,5 +215,19 @@
     ],
     "question_type": "multiple_answer",
     "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which cloud characteristic best enables elastic scaling?",
+    "image": null,
+    "options": [
+      "Static resource allocation",
+      "On-demand self-service",
+      "Manual provisioning",
+      "Dedicated hardware"
+    ],
+    "correct_answers": ["On-demand self-service"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]

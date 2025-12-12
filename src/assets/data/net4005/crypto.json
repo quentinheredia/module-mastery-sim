@@ -432,5 +432,80 @@
     "correct_answers": ["Hash-based MAC"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Match each PKI-related operation to its correct purpose.",
+    "image": null,
+    "options": [
+      "Certificate signing by a CA",
+      "Verification of a certificate chain",
+      "Use of sender's private key",
+      "Use of receiver's public key",
+      "Hashing of message content"
+    ],
+    "pairs": {
+      "A": "Confirms authenticity of a public key",
+      "B": "Enables only the intended receiver to read data",
+      "C": "Ensures message integrity",
+      "D": "Establishes trust without prior direct contact",
+      "E": "Binds sender identity to message contents"
+    },
+    "correct_answers": {
+      "A": "Confirms authenticity of a public key",
+      "B": "Establishes trust without prior direct contact",
+      "C": "Binds sender identity to message contents",
+      "D": "Enables only the intended receiver to read data",
+      "E": "Ensures message integrity"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which statements about TLS session keys are correct?",
+    "image": null,
+    "options": [
+      "Session keys are symmetric keys",
+      "Session keys are exchanged directly in plaintext",
+      "Session keys are used for bulk data encryption",
+      "Session keys are derived during the TLS handshake",
+      "Session keys provide server authentication"
+    ],
+    "correct_answers": [
+      "Session keys are symmetric keys",
+      "Session keys are used for bulk data encryption",
+      "Session keys are derived during the TLS handshake"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why are hash functions used before creating a digital signature?",
+    "image": null,
+    "options": [
+      "To encrypt the message",
+      "To reduce message size and fix input length",
+      "To provide confidentiality",
+      "To generate session keys"
+    ],
+    "correct_answers": ["To reduce message size and fix input length"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is the primary security risk introduced by TLS 0-RTT?",
+    "image": null,
+    "options": [
+      "Loss of confidentiality",
+      "Weak authentication",
+      "Replay attacks",
+      "Certificate forgery"
+    ],
+    "correct_answers": ["Replay attacks"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]

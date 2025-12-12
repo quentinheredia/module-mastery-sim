@@ -274,5 +274,33 @@
     "correct_answers": ["Commodity switches with simple forwarding"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "In SDN, why is separating the control plane from the data plane beneficial?",
+    "image": null,
+    "options": [
+      "It increases packet forwarding speed",
+      "It allows centralized policy and decision-making",
+      "It eliminates the need for routing protocols",
+      "It prevents link failures"
+    ],
+    "correct_answers": ["It allows centralized policy and decision-making"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which statement best describes the role of northbound APIs in SDN?",
+    "image": null,
+    "options": [
+      "They forward packets between switches",
+      "They allow switches to communicate with each other",
+      "They allow applications to program network behavior",
+      "They provide physical link redundancy"
+    ],
+    "correct_answers": ["They allow applications to program network behavior"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]
