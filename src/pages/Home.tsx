@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { BookOpen, Timer, History, Zap, CheckCircle2 } from "lucide-react";
+import { BookOpen, Timer, History, Zap, CheckCircle2, Bug } from "lucide-react";
 import { loadQuestions } from "@/utils/questionLoader";
 import { useCourse } from "@/contexts/CourseContext";
 import { Header } from "@/components/layout/Header";
@@ -130,10 +130,10 @@ const Home = () => {
             </Card>
           </div>
 
-          {/* History Card */}
+          {/* History & Bug Fixes Cards */}
           <Card 
             variant="glass" 
-            className="p-6 animate-fade-up"
+            className="p-6 animate-fade-up space-y-3"
             style={{ animationDelay: "300ms" }}
           >
             <Button
@@ -144,6 +144,15 @@ const Home = () => {
             >
               <History className={`mr-2 h-5 w-5 ${courseColors.text} group-hover:rotate-[-20deg] transition-transform`} />
               <span>View Attempt History</span>
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full justify-start group border-border hover:bg-muted/50 transition-colors duration-300"
+              size="lg"
+              onClick={() => navigate("/bug-fixes")}
+            >
+              <Bug className="mr-2 h-5 w-5 text-muted-foreground group-hover:rotate-12 transition-transform" />
+              <span>Bug Fixes & Updates</span>
             </Button>
           </Card>
 

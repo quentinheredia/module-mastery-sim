@@ -11,6 +11,7 @@ import Practice from "./pages/Practice";
 import Exam from "./pages/Exam";
 import Results from "./pages/Results";
 import History from "./pages/History";
+import BugFixes from "./pages/BugFixes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
                 <Route path="/exam" element={<Exam />} />
                 <Route path="/results" element={<Results />} />
                 <Route path="/history" element={<History />} />
+                <Route path="/bug-fixes" element={<BugFixes />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
