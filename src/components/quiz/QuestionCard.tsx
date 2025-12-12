@@ -4,7 +4,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, XCircle, CircleDot, SquareCheck } from "lucide-react";
 import { MatchingQuestion } from "./MatchingQuestion";
 
 interface QuestionCardProps {
@@ -77,132 +77,192 @@ export const QuestionCard = ({
     return selectedAnswers.includes(option);
   };
 
-  return (
-    <Card className="p-6 border-2">
-      <div className="space-y-4">
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-3">
-              <Badge variant="outline" className="text-sm">
-                Question {questionNumber}
-              </Badge>
-              <Badge variant="secondary" className="text-xs">
-                {question.points} {question.points === 1 ? "point" : "points"}
-              </Badge>
-              <Badge variant="secondary" className="text-xs">
-                {isSingleChoice ? "Single Choice" : "Multiple Choice"}
-              </Badge>
-            </div>
-            {question.image && (
-              <div className="mb-4">
-                <img 
-                  src={resolveImageSrc(question.image)} 
-                  alt="Question diagram" 
-                  className="max-w-full h-auto rounded-lg border"
-                  onError={(e) => {
-                    console.error('Failed to load image:', e.currentTarget.src);
-                  }}
-                />
-              </div>
-            )}
-            <p className="text-base font-medium leading-relaxed whitespace-pre-wrap">
-              {question.question}
-            </p>
-          </div>
-        </div>
+  const getOptionState = (option: string) => {
+    if (showFeedback) {
+      if (isCorrectOption(option)) return "correct";
+      if (isSelectedOption(option) && !isCorrectOption(option)) return "incorrect";
+      return "neutral";
+    }
+    if (isSelectedOption(option)) return "selected";
+    return "default";
+  };
 
-        <div className="space-y-3 mt-6">
+  const optionStyles = {
+    default: "border-border bg-card hover:border-primary/50 hover:bg-primary/5",
+    selected: "border-primary bg-primary/5 shadow-sm",
+    correct: "border-success bg-success/10",
+    incorrect: "border-destructive bg-destructive/10",
+    neutral: "border-border bg-card",
+  };
+
+  return (
+    <Card variant="elevated" className="overflow-hidden animate-fade-up">
+      {/* Question header */}
+      <div className="p-6 pb-4 border-b border-border/50 bg-muted/30">
+        <div className="flex items-center gap-3 flex-wrap">
+          <Badge 
+            variant="outline" 
+            className="text-sm font-semibold bg-background border-primary/30 text-primary"
+          >
+            Question {questionNumber}
+          </Badge>
+          <Badge 
+            variant="secondary" 
+            className="text-xs font-medium"
+          >
+            {question.points} {question.points === 1 ? "pt" : "pts"}
+          </Badge>
+          <Badge 
+            variant="outline" 
+            className="text-xs flex items-center gap-1.5 bg-background"
+          >
+            {isSingleChoice ? (
+              <>
+                <CircleDot className="h-3 w-3" />
+                Single Choice
+              </>
+            ) : (
+              <>
+                <SquareCheck className="h-3 w-3" />
+                Multiple Choice
+              </>
+            )}
+          </Badge>
+        </div>
+      </div>
+
+      {/* Question content */}
+      <div className="p-6 space-y-6">
+        {/* Image if present */}
+        {question.image && (
+          <div className="rounded-xl overflow-hidden border border-border/50 shadow-elevation-sm">
+            <img 
+              src={resolveImageSrc(question.image)} 
+              alt="Question diagram" 
+              className="w-full h-auto"
+              onError={(e) => {
+                console.error('Failed to load image:', e.currentTarget.src);
+              }}
+            />
+          </div>
+        )}
+
+        {/* Question text */}
+        <p className="text-base font-medium leading-relaxed whitespace-pre-wrap">
+          {question.question}
+        </p>
+
+        {/* Options */}
+        <div className="space-y-3">
           {isSingleChoice ? (
             <RadioGroup
               value={selectedAnswers[0] || ""}
               onValueChange={handleSingleChoiceChange}
               disabled={disabled}
+              className="space-y-3"
             >
-              {question.options.map((option, idx) => (
-                <div
-                  key={idx}
-                  className={`flex items-center space-x-3 p-3 rounded-lg border-2 transition-colors ${
-                    showFeedback
-                      ? isCorrectOption(option)
-                        ? "border-success bg-success/5"
-                        : isSelectedOption(option) && !isCorrectOption(option)
-                        ? "border-destructive bg-destructive/5"
-                        : "border-border"
-                      : isSelectedOption(option)
-                      ? "border-primary bg-primary/5"
-                      : "border-border hover:border-primary/50"
-                  }`}
-                >
-                  <RadioGroupItem value={option} id={`q${questionNumber}-opt${idx}`} />
-                  <Label
-                    htmlFor={`q${questionNumber}-opt${idx}`}
-                    className="flex-1 cursor-pointer font-normal"
+              {question.options.map((option, idx) => {
+                const state = getOptionState(option);
+                return (
+                  <div
+                    key={idx}
+                    className={`
+                      flex items-center space-x-4 p-4 rounded-xl border-2 
+                      transition-all duration-200 ease-out
+                      ${optionStyles[state]}
+                      ${!disabled && !showFeedback ? "cursor-pointer" : ""}
+                    `}
+                    onClick={() => !disabled && !showFeedback && handleSingleChoiceChange(option)}
                   >
-                    {option}
-                  </Label>
-                  {showFeedback && isCorrectOption(option) && (
-                    <CheckCircle2 className="h-5 w-5 text-success" />
-                  )}
-                  {showFeedback && isSelectedOption(option) && !isCorrectOption(option) && (
-                    <XCircle className="h-5 w-5 text-destructive" />
-                  )}
-                </div>
-              ))}
+                    <RadioGroupItem 
+                      value={option} 
+                      id={`q${questionNumber}-opt${idx}`}
+                      className="border-2"
+                    />
+                    <Label
+                      htmlFor={`q${questionNumber}-opt${idx}`}
+                      className="flex-1 cursor-pointer font-normal leading-relaxed"
+                    >
+                      {option}
+                    </Label>
+                    {showFeedback && isCorrectOption(option) && (
+                      <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 animate-scale-in" />
+                    )}
+                    {showFeedback && isSelectedOption(option) && !isCorrectOption(option) && (
+                      <XCircle className="h-5 w-5 text-destructive flex-shrink-0 animate-scale-in" />
+                    )}
+                  </div>
+                );
+              })}
             </RadioGroup>
           ) : (
             <div className="space-y-3">
-              {question.options.map((option, idx) => (
-                <div
-                  key={idx}
-                  className={`flex items-center space-x-3 p-3 rounded-lg border-2 transition-colors ${
-                    showFeedback
-                      ? isCorrectOption(option)
-                        ? "border-success bg-success/5"
-                        : isSelectedOption(option) && !isCorrectOption(option)
-                        ? "border-destructive bg-destructive/5"
-                        : "border-border"
-                      : isSelectedOption(option)
-                      ? "border-primary bg-primary/5"
-                      : "border-border hover:border-primary/50"
-                  }`}
-                >
-                  <Checkbox
-                    id={`q${questionNumber}-opt${idx}`}
-                    checked={isSelectedOption(option)}
-                    onCheckedChange={(checked) =>
-                      handleMultipleChoiceChange(option, checked as boolean)
-                    }
-                    disabled={disabled}
-                  />
-                  <Label
-                    htmlFor={`q${questionNumber}-opt${idx}`}
-                    className="flex-1 cursor-pointer font-normal"
+              {question.options.map((option, idx) => {
+                const state = getOptionState(option);
+                return (
+                  <div
+                    key={idx}
+                    className={`
+                      flex items-center space-x-4 p-4 rounded-xl border-2 
+                      transition-all duration-200 ease-out
+                      ${optionStyles[state]}
+                      ${!disabled && !showFeedback ? "cursor-pointer" : ""}
+                    `}
+                    onClick={() => !disabled && !showFeedback && handleMultipleChoiceChange(option, !isSelectedOption(option))}
                   >
-                    {option}
-                  </Label>
-                  {showFeedback && isCorrectOption(option) && (
-                    <CheckCircle2 className="h-5 w-5 text-success" />
-                  )}
-                  {showFeedback && isSelectedOption(option) && !isCorrectOption(option) && (
-                    <XCircle className="h-5 w-5 text-destructive" />
-                  )}
-                </div>
-              ))}
+                    <Checkbox
+                      id={`q${questionNumber}-opt${idx}`}
+                      checked={isSelectedOption(option)}
+                      onCheckedChange={(checked) =>
+                        handleMultipleChoiceChange(option, checked as boolean)
+                      }
+                      disabled={disabled}
+                      className="border-2"
+                    />
+                    <Label
+                      htmlFor={`q${questionNumber}-opt${idx}`}
+                      className="flex-1 cursor-pointer font-normal leading-relaxed"
+                    >
+                      {option}
+                    </Label>
+                    {showFeedback && isCorrectOption(option) && (
+                      <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 animate-scale-in" />
+                    )}
+                    {showFeedback && isSelectedOption(option) && !isCorrectOption(option) && (
+                      <XCircle className="h-5 w-5 text-destructive flex-shrink-0 animate-scale-in" />
+                    )}
+                  </div>
+                );
+              })}
             </div>
           )}
         </div>
 
+        {/* Feedback panel */}
         {showFeedback && (
           <div
-            className={`mt-4 p-4 rounded-lg ${
-              userAnswer?.isCorrect ? "bg-success/10 border border-success" : "bg-destructive/10 border border-destructive"
-            }`}
+            className={`
+              p-4 rounded-xl border-2 animate-fade-up
+              ${userAnswer?.isCorrect 
+                ? "bg-success/10 border-success/30" 
+                : "bg-destructive/10 border-destructive/30"
+              }
+            `}
           >
-            <p className="font-semibold mb-2">
-              {userAnswer?.isCorrect ? "✓ Correct!" : "✗ Incorrect"}
-            </p>
-            <p className="text-sm">
-              <span className="font-medium">Correct answer{correctAnswers.length > 1 ? "s" : ""}:</span>{" "}
+            <div className="flex items-center gap-2 mb-2">
+              {userAnswer?.isCorrect ? (
+                <CheckCircle2 className="h-5 w-5 text-success" />
+              ) : (
+                <XCircle className="h-5 w-5 text-destructive" />
+              )}
+              <p className="font-semibold font-display">
+                {userAnswer?.isCorrect ? "Correct!" : "Incorrect"}
+              </p>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              <span className="font-medium text-foreground">
+                Correct answer{correctAnswers.length > 1 ? "s" : ""}:
+              </span>{" "}
               {correctAnswers.join(", ")}
             </p>
           </div>
