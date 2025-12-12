@@ -7,6 +7,7 @@ import { useCourse } from "@/contexts/CourseContext";
 import { Header } from "@/components/layout/Header";
 import { courseColorClasses } from "@/components/layout/CourseSelector";
 import { CourseColor } from "@/types/quiz";
+import { OnlineCounter } from "@/components/OnlineCounter";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -37,9 +38,12 @@ const Home = () => {
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-12 animate-fade-up">
-            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${courseColors.bg} ${courseColors.text} text-sm font-medium mb-6 border ${courseColors.border}`}>
-              <div className={`h-2 w-2 rounded-full ${courseColors.dot}`} />
-              <span>{totalQuestions} questions across {activeCourse.modules.length} modules</span>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${courseColors.bg} ${courseColors.text} text-sm font-medium border ${courseColors.border}`}>
+                <div className={`h-2 w-2 rounded-full ${courseColors.dot}`} />
+                <span>{totalQuestions} questions across {activeCourse.modules.length} modules</span>
+              </div>
+              <OnlineCounter />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">
               Welcome to Your{" "}
