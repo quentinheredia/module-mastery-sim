@@ -33,7 +33,7 @@ const Results = () => {
           </div>
           <p className="text-lg font-medium mb-2">No Results Available</p>
           <p className="text-muted-foreground mb-6">Complete an exam to see your results here.</p>
-          <Button onClick={() => navigate("/")} className="bg-gradient-primary">
+          <Button onClick={() => navigate("/")} className="bg-primary text-white hover:bg-primary/90">
             Go Home
             <ChevronRight className="h-4 w-4 ml-1" />
           </Button>
@@ -84,7 +84,7 @@ const Results = () => {
               <Button 
                 size="lg" 
                 onClick={handleNewExam}
-                className={`flex-1 ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90 shadow-elevation-sm`}
+                className={`flex-1 ${courseColors.dot} text-white border-transparent hover:opacity-90 shadow-elevation-sm`}
               >
                 <RotateCcw className="mr-2 h-5 w-5" />
                 Take Another Exam
@@ -93,7 +93,7 @@ const Results = () => {
                 size="lg" 
                 variant="outline" 
                 onClick={() => navigate("/practice")}
-                className="flex-1 rounded-xl"
+                className={`flex-1 rounded-xl ${courseColors.hover} transition-colors`}
               >
                 Practice Mode
               </Button>
@@ -101,7 +101,7 @@ const Results = () => {
                 size="lg" 
                 variant="outline" 
                 onClick={handleHome}
-                className="flex-1 rounded-xl"
+                className={`flex-1 rounded-xl ${courseColors.hover} transition-colors`}
               >
                 <Home className="mr-2 h-5 w-5" />
                 Home
@@ -154,7 +154,7 @@ const Results = () => {
                     <p className="text-xs text-muted-foreground">Time spent</p>
                   </div>
 
-                  <div className={`p-4 rounded-xl ${courseColors.bg} ${courseColors.border} border`}>
+                  <div className={`p-4 rounded-xl ${courseColors.bg} border ${courseColors.border}`}>
                     <div className={`flex items-center gap-2 ${courseColors.text} mb-2`}>
                       <FileQuestion className="h-4 w-4" />
                       <span className="text-xs font-medium">Questions</span>

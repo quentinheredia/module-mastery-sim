@@ -126,7 +126,7 @@ const Practice = () => {
     return (
       <div className="min-h-screen bg-gradient-surface">
         <Header title={`Practice Mode`} subtitle={activeCourse.name}>
-          <Button variant="outline" size="sm" onClick={() => navigate("/")}>
+          <Button variant="outline" size="sm" onClick={() => navigate("/")} className="rounded-xl">
             <Home className="mr-2 h-4 w-4" />
             Home
           </Button>
@@ -137,7 +137,7 @@ const Practice = () => {
             {/* Module Selection Card */}
             <Card variant="elevated" className="p-8 animate-fade-up">
               <div className="flex items-center gap-3 mb-6">
-                <div className={`h-12 w-12 rounded-xl ${courseColors.bg} ${courseColors.border} border flex items-center justify-center shadow-elevation-sm`}>
+                <div className={`h-12 w-12 rounded-xl ${courseColors.bg} border ${courseColors.border} flex items-center justify-center shadow-elevation-sm`}>
                   <Layers className={`h-6 w-6 ${courseColors.text}`} />
                 </div>
                 <div>
@@ -182,7 +182,7 @@ const Practice = () => {
 
                 <Button 
                   size="lg" 
-                  className={`w-full ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90 shadow-elevation-sm transition-all duration-300`}
+                  className={`w-full ${courseColors.dot} text-white border-transparent hover:opacity-90 shadow-elevation-sm transition-all duration-300`}
                   onClick={handleStart}
                 >
                   <BookOpen className="mr-2 h-5 w-5" />
@@ -194,7 +194,7 @@ const Practice = () => {
             {/* Info Card */}
             <Card variant="glass" className="p-6 animate-fade-up" style={{ animationDelay: "100ms" }}>
               <div className="flex items-start gap-3">
-                <div className={`h-10 w-10 rounded-xl ${courseColors.bg} ${courseColors.border} border flex items-center justify-center flex-shrink-0`}>
+                <div className={`h-10 w-10 rounded-xl ${courseColors.bg} border ${courseColors.border} flex items-center justify-center flex-shrink-0`}>
                   <Keyboard className={`h-5 w-5 ${courseColors.text}`} />
                 </div>
                 <div>
@@ -218,7 +218,7 @@ const Practice = () => {
       <div className="min-h-screen bg-gradient-surface flex items-center justify-center p-4">
         <Card variant="glass" className="p-8 text-center max-w-md animate-fade-up">
           <p className="text-lg mb-4">No questions available for this module</p>
-          <Button onClick={handleReset} className={`${courseColors.bg} ${courseColors.text}`}>Go Back</Button>
+          <Button onClick={handleReset} className={`${courseColors.dot} text-white`}>Go Back</Button>
         </Card>
       </div>
     );
@@ -286,7 +286,7 @@ const Practice = () => {
                 <Button
                   onClick={handleNext}
                   disabled={currentIndex === questions.length - 1}
-                  className={`rounded-xl ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90`}
+                  className={`rounded-xl ${courseColors.dot} text-white border-transparent hover:opacity-90`}
                 >
                   Next
                   <ArrowRight className="ml-2 h-4 w-4" />

@@ -9,36 +9,53 @@ import {
 import { GraduationCap } from "lucide-react";
 import { CourseColor } from "@/types/quiz";
 
-const courseColorClasses: Record<CourseColor, { bg: string; text: string; border: string; dot: string }> = {
+const courseColorClasses: Record<CourseColor, { 
+  bg: string; 
+  text: string; 
+  border: string; 
+  dot: string;
+  hover: string;
+  hoverBg: string;
+}> = {
   blue: {
-    bg: "bg-[hsl(var(--course-blue-light))]",
-    text: "text-[hsl(var(--course-blue))]",
-    border: "border-[hsl(var(--course-blue)/0.3)]",
-    dot: "bg-[hsl(var(--course-blue))]",
+    bg: "bg-[hsl(210_80%_95%)] dark:bg-[hsl(210_50%_20%)]",
+    text: "text-[hsl(210_80%_45%)] dark:text-[hsl(210_80%_65%)]",
+    border: "border-[hsl(210_80%_80%)] dark:border-[hsl(210_50%_35%)]",
+    dot: "bg-[hsl(210_80%_48%)] dark:bg-[hsl(210_75%_55%)]",
+    hover: "hover:bg-[hsl(210_80%_90%)] dark:hover:bg-[hsl(210_50%_25%)]",
+    hoverBg: "group-hover:bg-[hsl(210_80%_90%)] dark:group-hover:bg-[hsl(210_50%_25%)]",
   },
   violet: {
-    bg: "bg-[hsl(var(--course-violet-light))]",
-    text: "text-[hsl(var(--course-violet))]",
-    border: "border-[hsl(var(--course-violet)/0.3)]",
-    dot: "bg-[hsl(var(--course-violet))]",
+    bg: "bg-[hsl(270_70%_95%)] dark:bg-[hsl(270_40%_20%)]",
+    text: "text-[hsl(270_70%_50%)] dark:text-[hsl(270_70%_70%)]",
+    border: "border-[hsl(270_70%_85%)] dark:border-[hsl(270_40%_35%)]",
+    dot: "bg-[hsl(270_70%_55%)] dark:bg-[hsl(270_65%_60%)]",
+    hover: "hover:bg-[hsl(270_70%_90%)] dark:hover:bg-[hsl(270_40%_25%)]",
+    hoverBg: "group-hover:bg-[hsl(270_70%_90%)] dark:group-hover:bg-[hsl(270_40%_25%)]",
   },
   emerald: {
-    bg: "bg-[hsl(var(--course-emerald-light))]",
-    text: "text-[hsl(var(--course-emerald))]",
-    border: "border-[hsl(var(--course-emerald)/0.3)]",
-    dot: "bg-[hsl(var(--course-emerald))]",
+    bg: "bg-[hsl(160_70%_95%)] dark:bg-[hsl(160_40%_18%)]",
+    text: "text-[hsl(160_70%_35%)] dark:text-[hsl(160_65%_55%)]",
+    border: "border-[hsl(160_70%_80%)] dark:border-[hsl(160_40%_30%)]",
+    dot: "bg-[hsl(160_70%_40%)] dark:bg-[hsl(160_65%_45%)]",
+    hover: "hover:bg-[hsl(160_70%_90%)] dark:hover:bg-[hsl(160_40%_22%)]",
+    hoverBg: "group-hover:bg-[hsl(160_70%_90%)] dark:group-hover:bg-[hsl(160_40%_22%)]",
   },
   amber: {
-    bg: "bg-[hsl(var(--course-amber-light))]",
-    text: "text-[hsl(var(--course-amber))]",
-    border: "border-[hsl(var(--course-amber)/0.3)]",
-    dot: "bg-[hsl(var(--course-amber))]",
+    bg: "bg-[hsl(38_90%_95%)] dark:bg-[hsl(38_50%_18%)]",
+    text: "text-[hsl(38_90%_40%)] dark:text-[hsl(38_85%_60%)]",
+    border: "border-[hsl(38_90%_80%)] dark:border-[hsl(38_50%_30%)]",
+    dot: "bg-[hsl(38_90%_50%)] dark:bg-[hsl(38_85%_55%)]",
+    hover: "hover:bg-[hsl(38_90%_90%)] dark:hover:bg-[hsl(38_50%_22%)]",
+    hoverBg: "group-hover:bg-[hsl(38_90%_90%)] dark:group-hover:bg-[hsl(38_50%_22%)]",
   },
   rose: {
-    bg: "bg-[hsl(var(--course-rose-light))]",
-    text: "text-[hsl(var(--course-rose))]",
-    border: "border-[hsl(var(--course-rose)/0.3)]",
-    dot: "bg-[hsl(var(--course-rose))]",
+    bg: "bg-[hsl(350_75%_95%)] dark:bg-[hsl(350_45%_18%)]",
+    text: "text-[hsl(350_75%_50%)] dark:text-[hsl(350_70%_65%)]",
+    border: "border-[hsl(350_75%_85%)] dark:border-[hsl(350_45%_30%)]",
+    dot: "bg-[hsl(350_75%_55%)] dark:bg-[hsl(350_70%_58%)]",
+    hover: "hover:bg-[hsl(350_75%_90%)] dark:hover:bg-[hsl(350_45%_22%)]",
+    hoverBg: "group-hover:bg-[hsl(350_75%_90%)] dark:group-hover:bg-[hsl(350_45%_22%)]",
   },
 };
 

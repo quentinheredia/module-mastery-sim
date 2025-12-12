@@ -55,15 +55,15 @@ const Home = () => {
             {/* Practice Mode Card */}
             <Card
               variant="interactive"
-              className={`p-8 group relative overflow-hidden ${courseColors.border} border animate-fade-up`}
+              className={`p-8 group relative overflow-hidden border ${courseColors.border} animate-fade-up cursor-pointer`}
               style={{ animationDelay: "100ms" }}
               onClick={() => navigate("/practice")}
             >
-              {/* Gradient overlay */}
-              <div className={`absolute inset-0 ${courseColors.bg} opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
+              {/* Hover overlay with proper contrast */}
+              <div className={`absolute inset-0 ${courseColors.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
               
               <div className="relative flex flex-col items-center text-center space-y-4">
-                <div className={`h-16 w-16 rounded-2xl ${courseColors.bg} ${courseColors.border} border flex items-center justify-center shadow-elevation-md group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`h-16 w-16 rounded-2xl ${courseColors.bg} border ${courseColors.border} flex items-center justify-center shadow-elevation-md group-hover:scale-110 transition-transform duration-300`}>
                   <BookOpen className={`h-8 w-8 ${courseColors.text}`} />
                 </div>
                 <h3 className="text-2xl font-bold font-display">Practice Mode</h3>
@@ -81,7 +81,7 @@ const Home = () => {
                 </ul>
                 <Button 
                   size="lg" 
-                  className={`w-full mt-4 ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90 transition-opacity shadow-elevation-sm`}
+                  className={`w-full mt-4 ${courseColors.dot} text-white border-transparent hover:opacity-90 transition-opacity shadow-elevation-sm`}
                 >
                   Start Practice
                 </Button>
@@ -91,15 +91,15 @@ const Home = () => {
             {/* Exam Mode Card */}
             <Card
               variant="interactive"
-              className={`p-8 group relative overflow-hidden ${courseColors.border} border animate-fade-up`}
+              className={`p-8 group relative overflow-hidden border ${courseColors.border} animate-fade-up cursor-pointer`}
               style={{ animationDelay: "200ms" }}
               onClick={() => navigate("/exam")}
             >
-              {/* Gradient overlay */}
-              <div className={`absolute inset-0 ${courseColors.bg} opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
+              {/* Hover overlay with proper contrast */}
+              <div className={`absolute inset-0 ${courseColors.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
               
               <div className="relative flex flex-col items-center text-center space-y-4">
-                <div className={`h-16 w-16 rounded-2xl ${courseColors.bg} ${courseColors.border} border flex items-center justify-center shadow-elevation-md group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`h-16 w-16 rounded-2xl ${courseColors.bg} border ${courseColors.border} flex items-center justify-center shadow-elevation-md group-hover:scale-110 transition-transform duration-300`}>
                   <Timer className={`h-8 w-8 ${courseColors.text}`} />
                 </div>
                 <h3 className="text-2xl font-bold font-display">Exam Mode</h3>
@@ -117,7 +117,7 @@ const Home = () => {
                 </ul>
                 <Button 
                   size="lg" 
-                  className={`w-full mt-4 ${courseColors.bg} ${courseColors.text} border ${courseColors.border} hover:opacity-90 transition-opacity shadow-elevation-sm`}
+                  className={`w-full mt-4 ${courseColors.dot} text-white border-transparent hover:opacity-90 transition-opacity shadow-elevation-sm`}
                 >
                   Start Exam
                 </Button>
@@ -133,12 +133,12 @@ const Home = () => {
           >
             <Button
               variant="outline"
-              className={`w-full justify-start group ${courseColors.border} border hover:${courseColors.bg}`}
+              className={`w-full justify-start group border ${courseColors.border} ${courseColors.hover} transition-colors duration-300`}
               size="lg"
               onClick={() => navigate("/history")}
             >
               <History className={`mr-2 h-5 w-5 ${courseColors.text} group-hover:rotate-[-20deg] transition-transform`} />
-              View Attempt History
+              <span>View Attempt History</span>
             </Button>
           </Card>
 
