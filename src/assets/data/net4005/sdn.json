@@ -221,62 +221,6 @@
   },
   {
     "module": "Software Defined Networking (SDN)",
-    "question": "In Software-Defined Networking, what is the role of the southbound interface?",
-    "image": null,
-    "options": [
-      "Communicate between SDN applications",
-      "Provide abstractions to cloud platforms",
-      "Allow controllers to program forwarding devices",
-      "Exchange routing information between controllers"
-    ],
-    "correct_answers": ["Allow controllers to program forwarding devices"],
-    "question_type": "multiple_choice",
-    "points": 1
-  },
-  {
-    "module": "Software Defined Networking (SDN)",
-    "question": "Which SDN advantage most directly contributes to lower OpEx (Operational Expenditure)?",
-    "image": null,
-    "options": [
-      "Higher link bandwidth",
-      "Commodity switching hardware",
-      "Centralized control and simplified management",
-      "Encryption of control messages"
-    ],
-    "correct_answers": ["Centralized control and simplified management"],
-    "question_type": "multiple_choice",
-    "points": 1
-  },
-  {
-    "module": "Software Defined Networking (SDN)",
-    "question": "What is the primary reason SDN enables more flexible traffic engineering than traditional routing?",
-    "image": null,
-    "options": [
-      "Routers execute distributed routing algorithms",
-      "Forwarding decisions are destination-based",
-      "Forwarding rules are programmable and flow-based",
-      "Link weights are dynamically encrypted"
-    ],
-    "correct_answers": ["Forwarding rules are programmable and flow-based"],
-    "question_type": "multiple_choice",
-    "points": 1
-  },
-  {
-    "module": "Software Defined Networking (SDN)",
-    "question": "Which factor most directly reduces CapEx when deploying SDN?",
-    "image": null,
-    "options": [
-      "Centralized routing computation",
-      "Use of proprietary hardware",
-      "Commodity switches with simple forwarding",
-      "Encrypted control channels"
-    ],
-    "correct_answers": ["Commodity switches with simple forwarding"],
-    "question_type": "multiple_choice",
-    "points": 1
-  },
-  {
-    "module": "Software Defined Networking (SDN)",
     "question": "In SDN, why is separating the control plane from the data plane beneficial?",
     "image": null,
     "options": [
