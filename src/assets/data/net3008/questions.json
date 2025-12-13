@@ -49,6 +49,7 @@
   {
     "module": "Module 3a - BGP Basics",
     "question": "A network administrator in AS 65100 has set up a dual-homed BGP connection with an ISP. The administrator would like to ensure that all traffic from the ISP enters the Autonomous System through router R1. Which BGP path attribute can be configured?",
+    "image": "images/quizzes/net3008_q4_bgp.png",
     "options": [
       "Multi-exit discriminator",
       "Next-Hop",
@@ -63,6 +64,7 @@
   {
     "module": "Module 1b - Advanced EIGRP",
     "question": "Study the EIGRP topology and output command below. Which statement is true and can be concluded from the output?",
+    "image": "images/quizzes/net3008_q5.png",
     "options": [
       "R3 is not enabled to perform unequal cost load balancing to destination 10.12.0.0/24",
       "R3's variance parameter has not been modified from its default value",
@@ -92,6 +94,7 @@
   {
     "module": "Module 4 - Routing Protocols Redistribution",
     "question": "Based on the topology below, routing protocols are configured and working properly. Which command is required on router R3 to allow internal BGP routes to be redistributed into OSPF?",
+    "image": "images/quizzes/net3008_q7.png",
     "options": [
       "router ospf 1 → bgp redistribute-subnets",
       "router bgp 64532 → bgp match internal external",
@@ -163,6 +166,7 @@
   {
     "module": "Module 4 - Routing Protocols Redistribution",
     "question": "How will seed metrics be applied to RIP and OSPF routes redistributed into EIGRP?",
+    "image": "images/quizzes/net3008_q12.png",
     "options": [
       "Only RIP routes redistributed with seed metric 170",
       "Both RIP and OSPF redistributed with same seed metric",
@@ -177,6 +181,7 @@
   {
     "module": "Module 2b - OSPFv2 Advanced",
     "question": "On an ABR, how will the routing table change if Area 1 is configured as an OSPF Stub area?",
+    "image": "images/quizzes/net3008_q13.png",
     "options": [
       "None of the routes will be removed",
       "Only O IA and O E2 subnet routes to 192.168.0.0 removed",
@@ -207,6 +212,7 @@
   {
     "module": "Module 4 - Routing Protocols Redistribution",
     "question": "OSPF internal and external routes are redistributed into BGP. What is the outcome?",
+    "image": "images/quizzes/net3008_q15.png",
     "options": [
       "Only internal OSPF routes redistributed",
       "BGP cannot process routes without a seed metric",
@@ -252,6 +258,7 @@
   {
     "module": "Module 2b - OSPFv2 Advanced",
     "question": "R2 must summarize Area 15 networks. What configuration is required?",
+    "image": "images/quizzes/net3008_q18.png",
     "options": [
       "area 15 range 172.16.8.0 255.255.248.0",
       "summary-address area 15 range 172.16.8.0 255.255.248.0",
@@ -280,6 +287,7 @@
   {
     "module": "Module 4 - Routing Protocols Redistribution",
     "question": "EIGRP network 10.10.0.1/32 is redistributed into IS-IS. Which statement is true?",
+    "image": "images/quizzes/net3008_q20.png",
     "options": [
       "Will not be redistributed",
       "Redistributed with seed metric 0",
