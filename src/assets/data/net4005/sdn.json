@@ -9,9 +9,7 @@
       "SDN controller",
       "Southbound API"
     ],
-    "correct_answers": [
-      "SDN controller"
-    ],
+    "correct_answers": ["SDN controller"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -25,9 +23,7 @@
       "Data-plane interface",
       "OpenFlow pipeline"
     ],
-    "correct_answers": [
-      "Northbound interface"
-    ],
+    "correct_answers": ["Northbound interface"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -41,9 +37,7 @@
       "East-West API",
       "Forwarding Plane API"
     ],
-    "correct_answers": [
-      "Southbound API"
-    ],
+    "correct_answers": ["Southbound API"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -57,9 +51,7 @@
       "Centralized control and automation",
       "Encrypted controller messages"
     ],
-    "correct_answers": [
-      "Centralized control and automation"
-    ],
+    "correct_answers": ["Centralized control and automation"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -73,9 +65,7 @@
       "The controller sees global network state",
       "All traffic uses the same physical path"
     ],
-    "correct_answers": [
-      "The controller sees global network state"
-    ],
+    "correct_answers": ["The controller sees global network state"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -89,9 +79,7 @@
       "A routing table entry computed via OSPF",
       "A hardware-enforced ACL applied automatically"
     ],
-    "correct_answers": [
-      "A match-action entry defined by the controller"
-    ],
+    "correct_answers": ["A match-action entry defined by the controller"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -105,9 +93,7 @@
       "Forwarding rules are programmable and flow-based",
       "Link weights are encrypted and dynamic"
     ],
-    "correct_answers": [
-      "Forwarding rules are programmable and flow-based"
-    ],
+    "correct_answers": ["Forwarding rules are programmable and flow-based"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -121,9 +107,7 @@
       "Use of commodity switches with simple forwarding",
       "Encrypted control channels"
     ],
-    "correct_answers": [
-      "Use of commodity switches with simple forwarding"
-    ],
+    "correct_answers": ["Use of commodity switches with simple forwarding"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -137,9 +121,7 @@
       "Distributed link-state routing",
       "Switch-based learning"
     ],
-    "correct_answers": [
-      "Applications modifying flow rules via the controller"
-    ],
+    "correct_answers": ["Applications modifying flow rules via the controller"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -153,9 +135,7 @@
       "Global network view",
       "Distributed control plane"
     ],
-    "correct_answers": [
-      "Global network view"
-    ],
+    "correct_answers": ["Global network view"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -169,9 +149,7 @@
       "Network abstraction",
       "Specification abstraction"
     ],
-    "correct_answers": [
-      "Forwarding abstraction"
-    ],
+    "correct_answers": ["Forwarding abstraction"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -184,9 +162,7 @@
       "VNF Manager",
       "NFV Orchestrator"
     ],
-    "correct_answers": [
-      "VNF Manager"
-    ],
+    "correct_answers": ["VNF Manager"],
     "question_type": "multiple_choice",
     "points": 1
   },

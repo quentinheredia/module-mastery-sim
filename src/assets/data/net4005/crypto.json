@@ -28,9 +28,7 @@
       "Replay attacks",
       "Brute-force attacks"
     ],
-    "correct_answers": [
-      "Replay attacks"
-    ],
+    "correct_answers": ["Replay attacks"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -44,9 +42,7 @@
       "It is computationally more efficient",
       "It prevents replay attacks"
     ],
-    "correct_answers": [
-      "It is computationally more efficient"
-    ],
+    "correct_answers": ["It is computationally more efficient"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -221,9 +217,7 @@
       "To compute MACs",
       "To generate nonces"
     ],
-    "correct_answers": [
-      "To sign handshake messages proving identity"
-    ],
+    "correct_answers": ["To sign handshake messages proving identity"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -285,9 +279,7 @@
       "Authenticate the client",
       "Transmit random nonces"
     ],
-    "correct_answers": [
-      "Confirm both sides derived the same session keys"
-    ],
+    "correct_answers": ["Confirm both sides derived the same session keys"],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -323,12 +315,7 @@
     "module": "Crypto/TLS",
     "question": "Which TLS component ensures message integrity during data transfer?",
     "image": null,
-    "options": [
-      "Session key",
-      "Certificate",
-      "Hash-based MAC",
-      "Public key"
-    ],
+    "options": ["Session key", "Certificate", "Hash-based MAC", "Public key"],
     "correct_answers": ["Hash-based MAC"],
     "question_type": "multiple_choice",
     "points": 1
