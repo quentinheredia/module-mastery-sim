@@ -594,5 +594,215 @@
     "correct_answers": ["Via DNS-based redirection"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is DNS implemented as an application-layer protocol, even though it performs a core Internet function?",
+    "image": null,
+    "options": [
+      "DNS must use TCP exclusively",
+      "DNS requires encryption at the transport layer",
+      "DNS keeps complexity at the network edge rather than the core",
+      "DNS performs packet forwarding decisions"
+    ],
+    "correct_answers": ["DNS keeps complexity at the network edge rather than the core"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why would a centralized DNS database fail to scale for the global Internet?",
+    "image": null,
+    "options": [
+      "DNS queries are too small",
+      "Centralized databases increase packet loss",
+      "Centralization introduces single points of failure and excessive traffic",
+      "DNS servers cannot cache responses"
+    ],
+    "correct_answers": ["Centralization introduces single points of failure and excessive traffic"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which statement best describes the role of root DNS servers?",
+    "image": null,
+    "options": [
+      "They store IP addresses for all hosts",
+      "They resolve names for end hosts directly",
+      "They act as a contact-of-last-resort, directing queries down the hierarchy",
+      "They cache all DNS records permanently"
+    ],
+    "correct_answers": ["They act as a contact-of-last-resort, directing queries down the hierarchy"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What is the key difference between TLD DNS servers and authoritative DNS servers?",
+    "image": null,
+    "options": [
+      "TLD servers map hostnames to IP addresses",
+      "Authoritative servers provide final mappings for an organization's hosts",
+      "Authoritative servers exist only at the root level",
+      "TLD servers store mail server records"
+    ],
+    "correct_answers": ["Authoritative servers provide final mappings for an organization's hosts"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which statement best characterizes the role of a local DNS server?",
+    "image": null,
+    "options": [
+      "It belongs strictly to the DNS hierarchy",
+      "It resolves all queries without forwarding",
+      "It acts as a proxy and caches recent name-to-address mappings",
+      "It stores authoritative records for all domains"
+    ],
+    "correct_answers": ["It acts as a proxy and caches recent name-to-address mappings"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "In iterative DNS resolution, what does a DNS server typically return if it does not know the requested mapping?",
+    "image": null,
+    "options": [
+      "An error message",
+      "The IP address of the destination host",
+      "The name of another DNS server to contact",
+      "A cached but unverifiable response"
+    ],
+    "correct_answers": ["The name of another DNS server to contact"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is recursive DNS resolution less commonly used at higher levels of the DNS hierarchy?",
+    "image": null,
+    "options": [
+      "It increases RTT",
+      "It places higher processing load on upper-level DNS servers",
+      "It prevents caching",
+      "It breaks DNSSEC"
+    ],
+    "correct_answers": ["It places higher processing load on upper-level DNS servers"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "How does DNS caching improve overall Internet performance?",
+    "image": null,
+    "options": [
+      "Eliminates DNS traffic entirely",
+      "Reduces repeated queries to root and TLD servers",
+      "Prevents stale records",
+      "Guarantees correct mappings"
+    ],
+    "correct_answers": ["Reduces repeated queries to root and TLD servers"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is DNS considered a best-effort name-to-address translation service?",
+    "image": null,
+    "options": [
+      "DNS queries may be dropped",
+      "Cached entries may become stale until TTLs expire",
+      "DNS does not support updates",
+      "Root servers do not replicate data"
+    ],
+    "correct_answers": ["Cached entries may become stale until TTLs expire"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which DNS record type maps an alias hostname to its canonical name?",
+    "image": null,
+    "options": [
+      "A",
+      "NS",
+      "MX",
+      "CNAME"
+    ],
+    "correct_answers": ["CNAME"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "How does DNS support load distribution for replicated web servers?",
+    "image": null,
+    "options": [
+      "By routing packets dynamically",
+      "By returning different IP addresses for the same hostname",
+      "By using TCP congestion control",
+      "By redirecting HTTP traffic"
+    ],
+    "correct_answers": ["By returning different IP addresses for the same hostname"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why have DDoS attacks on root DNS servers largely failed so far?",
+    "image": null,
+    "options": [
+      "Root servers block all traffic",
+      "Root servers use TCP only",
+      "Local DNS servers cache TLD server IPs",
+      "DNS queries are encrypted"
+    ],
+    "correct_answers": ["Local DNS servers cache TLD server IPs"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What enables a DNS poisoning attack?",
+    "image": null,
+    "options": [
+      "Encrypted DNS queries",
+      "Bogus replies being cached by DNS servers",
+      "Recursive queries only",
+      "High TTL values"
+    ],
+    "correct_answers": ["Bogus replies being cached by DNS servers"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is DNS attractive for amplification attacks?",
+    "image": null,
+    "options": [
+      "DNS uses TCP",
+      "Small queries can trigger large responses",
+      "DNS servers authenticate clients",
+      "DNS blocks spoofed packets"
+    ],
+    "correct_answers": ["Small queries can trigger large responses"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What primary security properties does DNSSEC add to DNS?",
+    "image": null,
+    "options": [
+      "Confidentiality and anonymity",
+      "Authentication and message integrity",
+      "Load balancing and caching",
+      "Encryption of all DNS traffic"
+    ],
+    "correct_answers": ["Authentication and message integrity"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]
