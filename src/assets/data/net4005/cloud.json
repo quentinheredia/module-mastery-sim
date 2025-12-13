@@ -223,5 +223,275 @@
     "correct_answers": ["IaaS, because it offers control over OS and system software"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which cloud service model provides users with the least control over the underlying system?",
+    "image": null,
+    "options": ["IaaS", "PaaS", "SaaS", "Bare metal"],
+    "correct_answers": ["SaaS"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "In an IaaS model, which component is still managed by the customer?",
+    "image": null,
+    "options": ["Physical servers", "Virtualization layer", "Operating system and applications", "Network hardware"],
+    "correct_answers": ["Operating system and applications"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "What is the main tradeoff when using PaaS instead of IaaS?",
+    "image": null,
+    "options": ["Reduced scalability", "Less control in exchange for simplified deployment", "Higher hardware cost", "Inability to run applications"],
+    "correct_answers": ["Less control in exchange for simplified deployment"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which scenario best fits a SaaS model?",
+    "image": null,
+    "options": ["Deploying a custom Linux kernel", "Running your own database server", "Using web-based email or document editing", "Managing container clusters"],
+    "correct_answers": ["Using web-based email or document editing"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why does deploying multiple applications on a single bare-metal host often become problematic?",
+    "image": null,
+    "options": ["Applications cannot share CPU", "Dependency conflicts and poor isolation", "Lack of networking support", "Inability to install software"],
+    "correct_answers": ["Dependency conflicts and poor isolation"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why is horizontal scaling difficult in bare-metal deployments?",
+    "image": null,
+    "options": ["Hardware is unreliable", "Applications are tightly coupled to the host", "IP addressing is unavailable", "DNS does not work"],
+    "correct_answers": ["Applications are tightly coupled to the host"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "What key problem do virtual machines solve compared to bare metal?",
+    "image": null,
+    "options": ["Faster packet forwarding", "Application isolation using separate operating systems", "Elimination of operating systems", "Automatic load balancing"],
+    "correct_answers": ["Application isolation using separate operating systems"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why did VMs fail to fully deliver on-demand scalability?",
+    "image": null,
+    "options": ["Hypervisors are slow", "VMs require full OS boot and service startup", "VMs cannot be automated", "VMs lack isolation"],
+    "correct_answers": ["VMs require full OS boot and service startup"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "What is the primary role of a hypervisor?",
+    "image": null,
+    "options": ["Package applications", "Schedule containers", "Manage and isolate virtual machines", "Route network packets"],
+    "correct_answers": ["Manage and isolate virtual machines"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why are containers considered lighter-weight than VMs?",
+    "image": null,
+    "options": ["They eliminate virtualization", "They share the host operating system kernel", "They do not require networking", "They run without dependencies"],
+    "correct_answers": ["They share the host operating system kernel"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "What does a container image typically include?",
+    "image": null,
+    "options": ["Entire guest OS", "Hardware drivers", "Application and its dependencies", "Hypervisor configuration"],
+    "correct_answers": ["Application and its dependencies"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which type of isolation do containers primarily rely on?",
+    "image": null,
+    "options": ["Hardware-level isolation", "Kernel-level isolation", "Physical isolation", "Network-layer isolation"],
+    "correct_answers": ["Kernel-level isolation"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why do containers start much faster than VMs?",
+    "image": null,
+    "options": ["Containers bypass memory allocation", "Containers reuse an existing OS kernel", "Containers ignore security checks", "Containers skip networking"],
+    "correct_answers": ["Containers reuse an existing OS kernel"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why do containers allow higher workload density than VMs?",
+    "image": null,
+    "options": ["Containers consume less CPU", "Containers eliminate disk usage", "Containers avoid per-VM OS overhead", "Containers restrict memory usage"],
+    "correct_answers": ["Containers avoid per-VM OS overhead"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "What is the main purpose of the container development life cycle?",
+    "image": null,
+    "options": ["Encrypt container traffic", "Package, version, and deploy applications consistently", "Replace operating systems", "Eliminate testing"],
+    "correct_answers": ["Package, version, and deploy applications consistently"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why are container images stored in a repository/registry?",
+    "image": null,
+    "options": ["To execute containers remotely", "To version, distribute, and reuse images", "To replace source code", "To store logs"],
+    "correct_answers": ["To version, distribute, and reuse images"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "What is the primary role of a Dockerfile?",
+    "image": null,
+    "options": ["Run containers", "Define how an image is built", "Monitor container health", "Schedule containers"],
+    "correct_answers": ["Define how an image is built"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which task is performed by the Docker daemon?",
+    "image": null,
+    "options": ["Writing application code", "Verifying local images and pulling from registries", "Serving HTTP traffic", "Managing DNS"],
+    "correct_answers": ["Verifying local images and pulling from registries"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "What happens when docker run is executed and the image is not available locally?",
+    "image": null,
+    "options": ["The command fails", "Docker builds the image automatically", "Docker pulls the image from a registry", "Docker skips image creation"],
+    "correct_answers": ["Docker pulls the image from a registry"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which statement correctly distinguishes images from containers?",
+    "image": null,
+    "options": ["Images are running instances", "Containers are immutable templates", "Images are static templates, containers are runtime instances", "Containers store application code"],
+    "correct_answers": ["Images are static templates, containers are runtime instances"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "What is Flask's primary function in a web application?",
+    "image": null,
+    "options": ["Database management", "Handling HTTP requests and responses", "DNS resolution", "Container orchestration"],
+    "correct_answers": ["Handling HTTP requests and responses"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why is Flask useful for dynamic web applications?",
+    "image": null,
+    "options": ["It runs directly in the browser", "It allows server-side logic to generate responses", "It replaces HTML", "It eliminates networking"],
+    "correct_answers": ["It allows server-side logic to generate responses"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "What is the purpose of Flask templates?",
+    "image": null,
+    "options": ["Encrypt user input", "Embed Python logic into HTML responses", "Replace HTTP headers", "Store session keys"],
+    "correct_answers": ["Embed Python logic into HTML responses"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why is container orchestration necessary at scale?",
+    "image": null,
+    "options": ["Containers cannot communicate", "Manual container management does not scale", "Containers cannot fail", "Containers lack images"],
+    "correct_answers": ["Manual container management does not scale"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which task is NOT typically handled by a container orchestrator?",
+    "image": null,
+    "options": ["Scheduling containers", "Scaling services", "Managing failures", "Writing application code"],
+    "correct_answers": ["Writing application code"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why is Kubernetes widely adopted?",
+    "image": null,
+    "options": ["It replaces Docker", "It automates deployment, scaling, and management", "It eliminates containers", "It is hardware-specific"],
+    "correct_answers": ["It automates deployment, scaling, and management"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which statement best explains why containers improve cloud application life cycles?",
+    "image": null,
+    "options": ["Containers reduce network latency", "Containers simplify testing, deployment, and scaling", "Containers remove the need for servers", "Containers eliminate application bugs"],
+    "correct_answers": ["Containers simplify testing, deployment, and scaling"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Why do containers improve resource utilization in cloud environments?",
+    "image": null,
+    "options": ["They require more memory", "They reduce CPU speed", "They enable higher compute density", "They disable isolation"],
+    "correct_answers": ["They enable higher compute density"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "How do orchestration platforms improve ease of management?",
+    "image": null,
+    "options": ["By eliminating failures", "By automating deployment and scaling", "By reducing application size", "By removing networking"],
+    "correct_answers": ["By automating deployment and scaling"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "Which statement best summarizes the evolution from bare metal → VMs → containers?",
+    "image": null,
+    "options": ["Increasing hardware dependence", "Decreasing abstraction", "Increasing abstraction, automation, and scalability", "Eliminating operating systems"],
+    "correct_answers": ["Increasing abstraction, automation, and scalability"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]
