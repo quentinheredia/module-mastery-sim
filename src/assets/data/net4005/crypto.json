@@ -340,10 +340,10 @@
     },
     "correct_answers": {
       "A": "Certificate signing by a CA",
-      "B": "Verification of a certificate chain",
-      "C": "Use of sender's private key",
-      "D": "Use of receiver's public key",
-      "E": "Hashing of message content"
+      "B": "Use of receiver's public key",
+      "C": "Hashing of message content",
+      "D": "Verification of a certificate chain",
+      "E": "Use of sender's private key"
     },
     "question_type": "matching",
     "points": 1
@@ -405,7 +405,9 @@
       "TLS operates independently per connection using session keys",
       "TLS requires centralized state storage"
     ],
-    "correct_answers": ["TLS operates independently per connection using session keys"],
+    "correct_answers": [
+      "TLS operates independently per connection using session keys"
+    ],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -461,7 +463,9 @@
       "After verifying the server certificate and deriving keys",
       "At any time during the handshake"
     ],
-    "correct_answers": ["After verifying the server certificate and deriving keys"],
+    "correct_answers": [
+      "After verifying the server certificate and deriving keys"
+    ],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -475,7 +479,9 @@
       "To establish security parameters before data exchange",
       "To improve compression efficiency"
     ],
-    "correct_answers": ["To establish security parameters before data exchange"],
+    "correct_answers": [
+      "To establish security parameters before data exchange"
+    ],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -568,7 +574,9 @@
       "Transport mode uses ESP; tunnel mode uses AH",
       "Tunnel mode does not authenticate packets"
     ],
-    "correct_answers": ["Tunnel mode encapsulates the entire original IP packet"],
+    "correct_answers": [
+      "Tunnel mode encapsulates the entire original IP packet"
+    ],
     "question_type": "multiple_choice",
     "points": 1
   },
@@ -590,7 +598,12 @@
     "module": "Crypto/TLS",
     "question": "Which security service is NOT provided by AH?",
     "image": null,
-    "options": ["Integrity", "Source authentication", "Confidentiality", "Anti-replay"],
+    "options": [
+      "Integrity",
+      "Source authentication",
+      "Confidentiality",
+      "Anti-replay"
+    ],
     "correct_answers": ["Confidentiality"],
     "question_type": "multiple_choice",
     "points": 1
@@ -599,7 +612,12 @@
     "module": "Crypto/TLS",
     "question": "What additional capability does ESP provide compared to AH?",
     "image": null,
-    "options": ["NAT traversal", "Confidentiality", "Packet filtering", "Certificate validation"],
+    "options": [
+      "NAT traversal",
+      "Confidentiality",
+      "Packet filtering",
+      "Certificate validation"
+    ],
     "correct_answers": ["Confidentiality"],
     "question_type": "multiple_choice",
     "points": 1
