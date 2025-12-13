@@ -398,5 +398,61 @@
     "correct_answers": ["304 Not Modified"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why do traditional web applications rely on TCP rather than UDP?",
+    "image": null,
+    "options": [
+      "TCP eliminates congestion entirely",
+      "TCP guarantees ordered, reliable data delivery",
+      "TCP reduces latency compared to UDP",
+      "TCP supports multicast transmission"
+    ],
+    "correct_answers": ["TCP guarantees ordered, reliable data delivery"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which limitation of TCP most directly motivated the design of QUIC?",
+    "image": null,
+    "options": [
+      "TCP's inability to encrypt payloads",
+      "TCP's dependency on IP routing",
+      "TCP's head-of-line blocking at the transport layer",
+      "TCP's lack of congestion control"
+    ],
+    "correct_answers": ["TCP's head-of-line blocking at the transport layer"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is QUIC particularly well-suited for mobile and high-latency networks?",
+    "image": null,
+    "options": [
+      "It eliminates encryption overhead",
+      "It avoids connection establishment entirely",
+      "It supports multiplexed streams without transport-layer blocking",
+      "It relies on persistent TCP connections"
+    ],
+    "correct_answers": ["It supports multiplexed streams without transport-layer blocking"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "HTTP/2 improves performance but still suffers from head-of-line blocking because:",
+    "image": null,
+    "options": [
+      "It uses UDP for transport",
+      "It encrypts headers",
+      "It runs multiple streams over a single TCP connection",
+      "It avoids persistent connections"
+    ],
+    "correct_answers": ["It runs multiple streams over a single TCP connection"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]
