@@ -41,6 +41,25 @@ const AVAILABLE_COURSES: Course[] = [
       "Software Defined Networking (SDN)",
     ],
   },
+  {
+    id: "net3008",
+    name: "NET3008",
+    description: "Advanced Routing",
+    color: "emerald",
+    modules: [
+      "Module 1a - EIGRP Basics",
+      "Module 1b - Advanced EIGRP",
+      "Module 1c - EIGRPv6",
+      "Module 2b - OSPFv2 Advanced",
+      "Module 2c - OSPFv3",
+      "Module 3a - BGP Basics",
+      "Module 3b - Advanced BGP",
+      "Module 3c - BGP Path Selection",
+      "Module 4 - Routing Protocols Redistribution",
+      "Module 5 - IS-IS Routing",
+      "Module 6 - Route Maps & PBR",
+    ],
+  },
 ];
 
 export const CourseProvider: React.FC<{ children: React.ReactNode }> = ({
