@@ -310,11 +310,11 @@
       "E": "Detect message modification"
     },
     "correct_answers": {
-      "A": "Confirm server identity via a trusted authority",
-      "B": "Establish shared secrets without prior trust",
-      "C": "Protect handshake messages from tampering",
-      "D": "Ensure fast, efficient encrypted data transfer",
-      "E": "Detect message modification"
+      "A": "Symmetric key used for bulk data",
+      "B": "Client verifies server certificate",
+      "C": "Hashing used during authentication",
+      "D": "Client and server derive session keys",
+      "E": "Hashing used during authentication"
     },
     "question_type": "matching",
     "points": 1
@@ -352,11 +352,11 @@
       "E": "Binds sender identity to message contents"
     },
     "correct_answers": {
-      "A": "Confirms authenticity of a public key",
-      "B": "Establishes trust without prior direct contact",
-      "C": "Binds sender identity to message contents",
-      "D": "Enables only the intended receiver to read data",
-      "E": "Ensures message integrity"
+      "A": "Certificate signing by a CA",
+      "B": "Verification of a certificate chain",
+      "C": "Use of sender's private key",
+      "D": "Use of receiver's public key",
+      "E": "Hashing of message content"
     },
     "question_type": "matching",
     "points": 1
