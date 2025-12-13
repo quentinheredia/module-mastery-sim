@@ -288,5 +288,425 @@
     "correct_answers": ["Commodity hardware and centralized management"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why is the traditional Internet control plane described as distributed and per-router?",
+    "image": null,
+    "options": [
+      "Each router forwards packets independently",
+      "Each router runs its own control algorithms locally",
+      "Routing tables are computed centrally",
+      "Forwarding decisions are application-aware"
+    ],
+    "correct_answers": ["Each router runs its own control algorithms locally"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "What is the main drawback of per-router control planes when managing large networks?",
+    "image": null,
+    "options": [
+      "Routers cannot forward packets fast enough",
+      "Network-wide behavior is hard to reason about or control",
+      "Routers lack memory for routing tables",
+      "Protocols like OSPF cannot scale"
+    ],
+    "correct_answers": ["Network-wide behavior is hard to reason about or control"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why is traffic engineering difficult with traditional destination-based routing?",
+    "image": null,
+    "options": [
+      "Routing algorithms are proprietary",
+      "Link weights are the only control 'knobs' available",
+      "Routers cannot detect congestion",
+      "TCP congestion control prevents optimization"
+    ],
+    "correct_answers": ["Link weights are the only control 'knobs' available"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "What primary limitation of traditional routing motivated SDN?",
+    "image": null,
+    "options": [
+      "Lack of encryption",
+      "Inability to perform destination-based forwarding",
+      "Lack of flexible control over traffic flows",
+      "Incompatibility with IP"
+    ],
+    "correct_answers": ["Lack of flexible control over traffic flows"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which statement best describes the SDN control plane?",
+    "image": null,
+    "options": [
+      "Control logic is replicated inside every router",
+      "Control logic is removed entirely",
+      "Control logic is logically centralized in a controller",
+      "Control logic is embedded in switches"
+    ],
+    "correct_answers": ["Control logic is logically centralized in a controller"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why is SDN described as logically centralized rather than physically centralized?",
+    "image": null,
+    "options": [
+      "The controller runs on one physical server",
+      "Control logic may be distributed but behaves as one system",
+      "Switches perform routing independently",
+      "Only one switch exists"
+    ],
+    "correct_answers": ["Control logic may be distributed but behaves as one system"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "The SDN analogy to the mainframe-to-PC revolution highlights which shift?",
+    "image": null,
+    "options": [
+      "Hardware to software forwarding",
+      "Closed proprietary systems to open programmable interfaces",
+      "Centralized routing to peer-to-peer routing",
+      "TCP to UDP"
+    ],
+    "correct_answers": ["Closed proprietary systems to open programmable interfaces"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why does SDN enable faster innovation?",
+    "image": null,
+    "options": [
+      "Routers run faster hardware",
+      "Control logic is implemented in software, not proprietary hardware",
+      "SDN eliminates routing protocols",
+      "Forwarding tables are static"
+    ],
+    "correct_answers": ["Control logic is implemented in software, not proprietary hardware"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "What is the key benefit of separating the control plane from the data plane?",
+    "image": null,
+    "options": [
+      "Faster packet forwarding",
+      "Centralized policy enforcement and easier management",
+      "Elimination of packet loss",
+      "Reduced memory usage"
+    ],
+    "correct_answers": ["Centralized policy enforcement and easier management"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "In SDN, data-plane switches are best described as:",
+    "image": null,
+    "options": [
+      "Running routing algorithms",
+      "Making independent forwarding decisions",
+      "Executing rules installed by the controller",
+      "Maintaining global network state"
+    ],
+    "correct_answers": ["Executing rules installed by the controller"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "How does SDN forwarding differ from traditional destination-based forwarding?",
+    "image": null,
+    "options": [
+      "Forwarding is based only on MAC addresses",
+      "Forwarding rules can match on multiple packet header fields",
+      "Forwarding decisions are probabilistic",
+      "Forwarding uses UDP"
+    ],
+    "correct_answers": ["Forwarding rules can match on multiple packet header fields"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "What is a flow in SDN?",
+    "image": null,
+    "options": [
+      "A TCP connection only",
+      "A sequence of packets matching specific header fields",
+      "All packets sent by one host",
+      "A routing table entry"
+    ],
+    "correct_answers": ["A sequence of packets matching specific header fields"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "What is the role of the southbound API?",
+    "image": null,
+    "options": [
+      "Communication between SDN applications",
+      "Controller-to-switch communication",
+      "Switch-to-switch coordination",
+      "Application-to-application messaging"
+    ],
+    "correct_answers": ["Controller-to-switch communication"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "What does the northbound API enable?",
+    "image": null,
+    "options": [
+      "Packet forwarding",
+      "Flow table installation",
+      "Network applications to express policies",
+      "Switch discovery"
+    ],
+    "correct_answers": ["Network applications to express policies"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "What is OpenFlow primarily used for?",
+    "image": null,
+    "options": [
+      "Routing packet payloads",
+      "Defining DNS queries",
+      "Communication between controller and switches",
+      "Encryption of control traffic"
+    ],
+    "correct_answers": ["Communication between controller and switches"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which OpenFlow message is typically sent from switch to controller when no matching rule exists?",
+    "image": null,
+    "options": [
+      "FLOW_MOD",
+      "PACKET_OUT",
+      "PACKET_IN",
+      "PORT_STATUS"
+    ],
+    "correct_answers": ["PACKET_IN"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which OpenFlow message allows the controller to add or modify flow rules?",
+    "image": null,
+    "options": [
+      "PACKET_IN",
+      "FLOW_MOD",
+      "STATS_REPLY",
+      "PORT_STATUS"
+    ],
+    "correct_answers": ["FLOW_MOD"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which message informs the controller about link or port status changes?",
+    "image": null,
+    "options": [
+      "FLOW_MOD",
+      "PACKET_OUT",
+      "PORT_STATUS",
+      "PACKET_IN"
+    ],
+    "correct_answers": ["PORT_STATUS"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why does the controller maintain a global network view?",
+    "image": null,
+    "options": [
+      "To forward packets directly",
+      "To compute consistent network-wide policies",
+      "To replace switches",
+      "To increase latency"
+    ],
+    "correct_answers": ["To compute consistent network-wide policies"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "When a link fails in an SDN network, what typically happens?",
+    "image": null,
+    "options": [
+      "Switches recompute routes independently",
+      "Controller updates network state and installs new rules",
+      "Traffic stops permanently",
+      "TCP handles rerouting"
+    ],
+    "correct_answers": ["Controller updates network state and installs new rules"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which function is NOT typically part of an SDN controller?",
+    "image": null,
+    "options": [
+      "Network state management",
+      "Routing computation",
+      "Packet forwarding at line rate",
+      "Policy enforcement"
+    ],
+    "correct_answers": ["Packet forwarding at line rate"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why can SDN controllers scale despite centralized logic?",
+    "image": null,
+    "options": [
+      "Controllers handle all packets",
+      "Controllers only manage control traffic, not data traffic",
+      "Controllers eliminate flow tables",
+      "Controllers do not maintain state"
+    ],
+    "correct_answers": ["Controllers only manage control traffic, not data traffic"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "What distinguishes OpenDaylight as an SDN controller?",
+    "image": null,
+    "options": [
+      "It is hardware-specific",
+      "It provides modular services and northbound APIs",
+      "It embeds routing protocols in switches",
+      "It eliminates OpenFlow"
+    ],
+    "correct_answers": ["It provides modular services and northbound APIs"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "ONOS places strong emphasis on which controller property?",
+    "image": null,
+    "options": [
+      "Single-node performance",
+      "Service reliability and fault tolerance",
+      "Minimal feature set",
+      "Packet encryption"
+    ],
+    "correct_answers": ["Service reliability and fault tolerance"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why is ONOS particularly suitable for carrier-grade networks?",
+    "image": null,
+    "options": [
+      "It removes distributed systems concerns",
+      "It emphasizes scalability, replication, and fault tolerance",
+      "It uses proprietary protocols",
+      "It runs on switches"
+    ],
+    "correct_answers": ["It emphasizes scalability, replication, and fault tolerance"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why is traffic engineering easier with SDN?",
+    "image": null,
+    "options": [
+      "SDN eliminates congestion",
+      "Controllers can explicitly program desired traffic paths",
+      "TCP becomes unnecessary",
+      "Link weights are no longer needed"
+    ],
+    "correct_answers": ["Controllers can explicitly program desired traffic paths"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which SDN feature allows operators to express high-level policies?",
+    "image": null,
+    "options": [
+      "Flow tables only",
+      "Northbound APIs",
+      "Southbound protocols",
+      "MAC learning"
+    ],
+    "correct_answers": ["Northbound APIs"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "How does SDN reduce vendor lock-in?",
+    "image": null,
+    "options": [
+      "By eliminating routing protocols",
+      "By using open, standardized control interfaces",
+      "By requiring proprietary switches",
+      "By disabling middleboxes"
+    ],
+    "correct_answers": ["By using open, standardized control interfaces"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Why are middleboxes (firewalls, load balancers) easier to manage with SDN?",
+    "image": null,
+    "options": [
+      "They disappear entirely",
+      "Their behavior can be centrally programmed and coordinated",
+      "They no longer process packets",
+      "They use TCP only"
+    ],
+    "correct_answers": ["Their behavior can be centrally programmed and coordinated"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which statement best summarizes why SDN exists?",
+    "image": null,
+    "options": [
+      "To replace IP",
+      "To improve packet forwarding speed",
+      "To make networks programmable, flexible, and easier to manage",
+      "To eliminate switches"
+    ],
+    "correct_answers": ["To make networks programmable, flexible, and easier to manage"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]
