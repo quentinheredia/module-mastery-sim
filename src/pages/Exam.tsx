@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -9,6 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Slider } from "@/components/ui/slider";
 import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { Timer } from "@/components/quiz/Timer";
 import { ProgressBar } from "@/components/quiz/ProgressBar";
@@ -16,7 +17,7 @@ import { Header } from "@/components/layout/Header";
 import { courseColorClasses } from "@/components/layout/CourseSelector";
 import { useQuiz } from "@/contexts/QuizContext";
 import { useCourse } from "@/contexts/CourseContext";
-import { 
+import {
   AlertCircle, 
   Home, 
   Timer as TimerIcon, 
@@ -26,7 +27,8 @@ import {
   ChevronRight,
   Send,
   Settings2,
-  Zap
+  Zap,
+  Clock
 } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { MatchingPairs, CourseColor } from "@/types/quiz";
@@ -42,19 +44,33 @@ const Exam = () => {
     submitQuiz,
     resetQuiz,
     goToQuestion,
+    examDuration,
   } = useQuiz();
   const { activeCourse } = useCourse();
   const [questionsPerPage, setQuestionsPerPage] = useState<1 | 5 | 10>(1);
+  const [customQuestionCount, setCustomQuestionCount] = useState<number>(10);
+  const [customDuration, setCustomDuration] = useState<number>(30);
 
   const courseId = activeCourse?.id || "net4009";
   const totalQuestions = activeCourse ? loadQuestions(activeCourse.id).length : 0;
-  // NET4005 has 10 exam questions, NET4009 has up to 40
-  const examQuestionCount = courseId === "net4005" ? 10 : Math.min(40, totalQuestions);
+  const isNet4005 = courseId === "net4005";
+  // Default question counts
+  const defaultQuestionCount = isNet4005 ? 10 : Math.min(40, totalQuestions);
+  const maxQuestions = Math.min(totalQuestions, 50);
   const courseColors = activeCourse ? courseColorClasses[activeCourse.color as CourseColor] : courseColorClasses.blue;
+
+  // Set defaults on course change
+  useEffect(() => {
+    setCustomQuestionCount(defaultQuestionCount);
+    setCustomDuration(30);
+  }, [courseId, defaultQuestionCount]);
 
   const handleStart = () => {
     const currentCourseId = activeCourse?.id || "net4009";
-    startQuiz("exam", currentCourseId);
+    startQuiz("exam", currentCourseId, undefined, {
+      questionCount: customQuestionCount,
+      duration: customDuration,
+    });
   };
 
   const handleAnswerChange = (
@@ -118,8 +134,8 @@ const Exam = () => {
             <Alert className={`border ${courseColors.border} ${courseColors.bg} animate-fade-up`}>
               <Zap className={`h-4 w-4 ${courseColors.text}`} />
               <AlertDescription className="text-foreground">
-                This exam consists of <span className="font-semibold">{examQuestionCount} randomly selected questions</span> from{" "}
-                {activeCourse.name}. You have <span className="font-semibold">30 minutes</span> to complete it.
+                Customize your exam settings below. Default: <span className="font-semibold">{defaultQuestionCount} questions</span> in{" "}
+                <span className="font-semibold">30 minutes</span>.
               </AlertDescription>
             </Alert>
 
@@ -136,6 +152,53 @@ const Exam = () => {
               </div>
 
               <div className="space-y-6">
+                {/* Number of Questions */}
+                <div>
+                  <label className="text-sm font-medium mb-3 flex items-center justify-between">
+                    <span className="flex items-center gap-2">
+                      <FileQuestion className="h-4 w-4" />
+                      Number of Questions
+                    </span>
+                    <span className={`font-bold ${courseColors.text}`}>{customQuestionCount}</span>
+                  </label>
+                  <Slider
+                    value={[customQuestionCount]}
+                    onValueChange={(value) => setCustomQuestionCount(value[0])}
+                    min={5}
+                    max={maxQuestions}
+                    step={5}
+                    className="py-2"
+                  />
+                  <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                    <span>5</span>
+                    <span>{maxQuestions}</span>
+                  </div>
+                </div>
+
+                {/* Exam Duration */}
+                <div>
+                  <label className="text-sm font-medium mb-3 flex items-center justify-between">
+                    <span className="flex items-center gap-2">
+                      <Clock className="h-4 w-4" />
+                      Time Limit
+                    </span>
+                    <span className={`font-bold ${courseColors.text}`}>{customDuration} min</span>
+                  </label>
+                  <Slider
+                    value={[customDuration]}
+                    onValueChange={(value) => setCustomDuration(value[0])}
+                    min={5}
+                    max={120}
+                    step={5}
+                    className="py-2"
+                  />
+                  <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                    <span>5 min</span>
+                    <span>120 min</span>
+                  </div>
+                </div>
+
+                {/* Questions per Page */}
                 <div>
                   <label className="text-sm font-medium mb-2 block">
                     Questions per Page
@@ -157,16 +220,16 @@ const Exam = () => {
                   </Select>
                 </div>
 
-                {/* Exam Details Grid */}
+                {/* Summary Grid */}
                 <div className="grid grid-cols-3 gap-3">
                   <div className={`p-4 rounded-xl ${courseColors.bg} border ${courseColors.border} text-center`}>
                     <FileQuestion className={`h-5 w-5 ${courseColors.text} mx-auto mb-2`} />
-                    <p className={`text-2xl font-bold font-display ${courseColors.text}`}>{examQuestionCount}</p>
+                    <p className={`text-2xl font-bold font-display ${courseColors.text}`}>{customQuestionCount}</p>
                     <p className="text-xs text-muted-foreground">Questions</p>
                   </div>
                   <div className={`p-4 rounded-xl ${courseColors.bg} border ${courseColors.border} text-center`}>
                     <TimerIcon className={`h-5 w-5 ${courseColors.text} mx-auto mb-2`} />
-                    <p className={`text-2xl font-bold font-display ${courseColors.text}`}>30</p>
+                    <p className={`text-2xl font-bold font-display ${courseColors.text}`}>{customDuration}</p>
                     <p className="text-xs text-muted-foreground">Minutes</p>
                   </div>
                   <div className="p-4 rounded-xl bg-success/10 border border-success/20 text-center">

@@ -16,6 +16,17 @@
 
   <body>
     <div id="root"></div>
+    <script>
+      // Restore redirect from 404.html for GitHub Pages SPA routing
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== '/') {
+          var base = '/module-mastery-sim';
+          history.replaceState(null, null, base + redirect);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

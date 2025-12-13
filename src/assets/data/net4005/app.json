@@ -398,5 +398,411 @@
     "correct_answers": ["304 Not Modified"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why do traditional web applications rely on TCP rather than UDP?",
+    "image": null,
+    "options": [
+      "TCP eliminates congestion entirely",
+      "TCP guarantees ordered, reliable data delivery",
+      "TCP reduces latency compared to UDP",
+      "TCP supports multicast transmission"
+    ],
+    "correct_answers": ["TCP guarantees ordered, reliable data delivery"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which limitation of TCP most directly motivated the design of QUIC?",
+    "image": null,
+    "options": [
+      "TCP's inability to encrypt payloads",
+      "TCP's dependency on IP routing",
+      "TCP's head-of-line blocking at the transport layer",
+      "TCP's lack of congestion control"
+    ],
+    "correct_answers": ["TCP's head-of-line blocking at the transport layer"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is QUIC particularly well-suited for mobile and high-latency networks?",
+    "image": null,
+    "options": [
+      "It eliminates encryption overhead",
+      "It avoids connection establishment entirely",
+      "It supports multiplexed streams without transport-layer blocking",
+      "It relies on persistent TCP connections"
+    ],
+    "correct_answers": ["It supports multiplexed streams without transport-layer blocking"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "HTTP/2 improves performance but still suffers from head-of-line blocking because:",
+    "image": null,
+    "options": [
+      "It uses UDP for transport",
+      "It encrypts headers",
+      "It runs multiple streams over a single TCP connection",
+      "It avoids persistent connections"
+    ],
+    "correct_answers": ["It runs multiple streams over a single TCP connection"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why does Variable Bit Rate (VBR) video encoding generally achieve better efficiency than Constant Bit Rate (CBR)?",
+    "image": null,
+    "options": [
+      "VBR eliminates the need for buffering",
+      "VBR adapts encoding rate based on spatial and temporal redundancy",
+      "VBR guarantees constant network throughput",
+      "VBR prevents packet loss"
+    ],
+    "correct_answers": ["VBR adapts encoding rate based on spatial and temporal redundancy"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which factor is the primary reason client-side buffering is required when streaming stored video over the Internet?",
+    "image": null,
+    "options": [
+      "Video files are too large to transmit",
+      "Server encoding rates are fixed",
+      "Network delay and jitter vary over time",
+      "TCP retransmissions are disabled"
+    ],
+    "correct_answers": ["Network delay and jitter vary over time"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What does the continuous playout constraint imply for a video streaming client?",
+    "image": null,
+    "options": [
+      "Playback speed must adapt to network congestion",
+      "Playback timing must match original video timing once started",
+      "Video frames must arrive in fixed-size packets",
+      "All video data must be downloaded before playback"
+    ],
+    "correct_answers": ["Playback timing must match original video timing once started"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why does a streaming client introduce an initial playout delay before starting video playback?",
+    "image": null,
+    "options": [
+      "To maximize encoding quality",
+      "To eliminate packet loss entirely",
+      "To absorb network-added delay and jitter",
+      "To reduce server load"
+    ],
+    "correct_answers": ["To absorb network-added delay and jitter"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What fundamental architectural change does DASH introduce compared to traditional streaming?",
+    "image": null,
+    "options": [
+      "Intelligence is moved entirely to the server",
+      "Video is sent using UDP instead of TCP",
+      "Adaptation decisions are made at the client",
+      "Congestion control is disabled"
+    ],
+    "correct_answers": ["Adaptation decisions are made at the client"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which decision is explicitly made by the DASH client during streaming?",
+    "image": null,
+    "options": [
+      "How video chunks are encoded",
+      "When and at what bitrate to request the next chunk",
+      "How chunks are replicated across CDNs",
+      "How packets are routed through the network"
+    ],
+    "correct_answers": ["When and at what bitrate to request the next chunk"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is DASH implemented over HTTP rather than a specialized streaming protocol?",
+    "image": null,
+    "options": [
+      "HTTP eliminates buffering requirements",
+      "HTTP allows reuse of existing caching and CDN infrastructure",
+      "HTTP guarantees low latency",
+      "HTTP provides built-in video compression"
+    ],
+    "correct_answers": ["HTTP allows reuse of existing caching and CDN infrastructure"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why does a single large 'mega-server' fail to scale for Internet video delivery?",
+    "image": null,
+    "options": [
+      "It cannot encode video at multiple bitrates",
+      "It creates congestion and long paths to distant users",
+      "It prevents adaptive bitrate selection",
+      "It lacks DNS support"
+    ],
+    "correct_answers": ["It creates congestion and long paths to distant users"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What is the key scalability advantage of deploying CDN servers close to users?",
+    "image": null,
+    "options": [
+      "Reduces server-side encoding complexity",
+      "Eliminates need for adaptive streaming",
+      "Reduces latency and access-link congestion",
+      "Guarantees constant throughput"
+    ],
+    "correct_answers": ["Reduces latency and access-link congestion"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "How does a CDN typically direct a client to an appropriate content copy?",
+    "image": null,
+    "options": [
+      "Using IP multicast",
+      "Through TCP connection migration",
+      "Via DNS-based redirection",
+      "Using HTTP cookies"
+    ],
+    "correct_answers": ["Via DNS-based redirection"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is DNS implemented as an application-layer protocol, even though it performs a core Internet function?",
+    "image": null,
+    "options": [
+      "DNS must use TCP exclusively",
+      "DNS requires encryption at the transport layer",
+      "DNS keeps complexity at the network edge rather than the core",
+      "DNS performs packet forwarding decisions"
+    ],
+    "correct_answers": ["DNS keeps complexity at the network edge rather than the core"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why would a centralized DNS database fail to scale for the global Internet?",
+    "image": null,
+    "options": [
+      "DNS queries are too small",
+      "Centralized databases increase packet loss",
+      "Centralization introduces single points of failure and excessive traffic",
+      "DNS servers cannot cache responses"
+    ],
+    "correct_answers": ["Centralization introduces single points of failure and excessive traffic"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which statement best describes the role of root DNS servers?",
+    "image": null,
+    "options": [
+      "They store IP addresses for all hosts",
+      "They resolve names for end hosts directly",
+      "They act as a contact-of-last-resort, directing queries down the hierarchy",
+      "They cache all DNS records permanently"
+    ],
+    "correct_answers": ["They act as a contact-of-last-resort, directing queries down the hierarchy"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What is the key difference between TLD DNS servers and authoritative DNS servers?",
+    "image": null,
+    "options": [
+      "TLD servers map hostnames to IP addresses",
+      "Authoritative servers provide final mappings for an organization's hosts",
+      "Authoritative servers exist only at the root level",
+      "TLD servers store mail server records"
+    ],
+    "correct_answers": ["Authoritative servers provide final mappings for an organization's hosts"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which statement best characterizes the role of a local DNS server?",
+    "image": null,
+    "options": [
+      "It belongs strictly to the DNS hierarchy",
+      "It resolves all queries without forwarding",
+      "It acts as a proxy and caches recent name-to-address mappings",
+      "It stores authoritative records for all domains"
+    ],
+    "correct_answers": ["It acts as a proxy and caches recent name-to-address mappings"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "In iterative DNS resolution, what does a DNS server typically return if it does not know the requested mapping?",
+    "image": null,
+    "options": [
+      "An error message",
+      "The IP address of the destination host",
+      "The name of another DNS server to contact",
+      "A cached but unverifiable response"
+    ],
+    "correct_answers": ["The name of another DNS server to contact"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is recursive DNS resolution less commonly used at higher levels of the DNS hierarchy?",
+    "image": null,
+    "options": [
+      "It increases RTT",
+      "It places higher processing load on upper-level DNS servers",
+      "It prevents caching",
+      "It breaks DNSSEC"
+    ],
+    "correct_answers": ["It places higher processing load on upper-level DNS servers"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "How does DNS caching improve overall Internet performance?",
+    "image": null,
+    "options": [
+      "Eliminates DNS traffic entirely",
+      "Reduces repeated queries to root and TLD servers",
+      "Prevents stale records",
+      "Guarantees correct mappings"
+    ],
+    "correct_answers": ["Reduces repeated queries to root and TLD servers"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is DNS considered a best-effort name-to-address translation service?",
+    "image": null,
+    "options": [
+      "DNS queries may be dropped",
+      "Cached entries may become stale until TTLs expire",
+      "DNS does not support updates",
+      "Root servers do not replicate data"
+    ],
+    "correct_answers": ["Cached entries may become stale until TTLs expire"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which DNS record type maps an alias hostname to its canonical name?",
+    "image": null,
+    "options": [
+      "A",
+      "NS",
+      "MX",
+      "CNAME"
+    ],
+    "correct_answers": ["CNAME"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "How does DNS support load distribution for replicated web servers?",
+    "image": null,
+    "options": [
+      "By routing packets dynamically",
+      "By returning different IP addresses for the same hostname",
+      "By using TCP congestion control",
+      "By redirecting HTTP traffic"
+    ],
+    "correct_answers": ["By returning different IP addresses for the same hostname"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why have DDoS attacks on root DNS servers largely failed so far?",
+    "image": null,
+    "options": [
+      "Root servers block all traffic",
+      "Root servers use TCP only",
+      "Local DNS servers cache TLD server IPs",
+      "DNS queries are encrypted"
+    ],
+    "correct_answers": ["Local DNS servers cache TLD server IPs"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What enables a DNS poisoning attack?",
+    "image": null,
+    "options": [
+      "Encrypted DNS queries",
+      "Bogus replies being cached by DNS servers",
+      "Recursive queries only",
+      "High TTL values"
+    ],
+    "correct_answers": ["Bogus replies being cached by DNS servers"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is DNS attractive for amplification attacks?",
+    "image": null,
+    "options": [
+      "DNS uses TCP",
+      "Small queries can trigger large responses",
+      "DNS servers authenticate clients",
+      "DNS blocks spoofed packets"
+    ],
+    "correct_answers": ["Small queries can trigger large responses"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What primary security properties does DNSSEC add to DNS?",
+    "image": null,
+    "options": [
+      "Confidentiality and anonymity",
+      "Authentication and message integrity",
+      "Load balancing and caching",
+      "Encryption of all DNS traffic"
+    ],
+    "correct_answers": ["Authentication and message integrity"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]

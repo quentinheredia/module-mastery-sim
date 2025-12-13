@@ -48,8 +48,8 @@ export const MatchingQuestion = ({
     return matchingAnswers[pairKey] === correctAnswers[pairKey];
   };
 
-  // Check if question allows reusing options (more pairs than options)
-  const allowsReuse = Object.keys(pairs).length > question.options.length;
+  // Always allow reusing options for matching questions
+  const allowsReuse = true;
 
   const getPairState = (pairKey: string) => {
     const selectedOption = matchingAnswers[pairKey];
