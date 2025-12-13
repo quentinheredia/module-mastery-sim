@@ -485,5 +485,21 @@
       "show ip ospf interface"
     ],
     "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 3a - BGP Basics",
+    "question": "Refer to the topology and configurations below. Which two statements are true regarding the next-hop-self feature? (Choose 2)",
+    "image": "images/quizzes/net3008_nhs.png",
+    "options": [
+      "The next-hop-self feature ensures that the next-hop address check passes by advertising peering networks into a routing protocol",
+      "The next-hop-self feature ensures that the next-hop address check passes without advertising peering networks into a routing protocol",
+      "The next-hop-self feature modifies the next-hop address in the NLRI for internal BGP prefixes in the IP address sourcing the BGP session",
+      "The next-hop-self feature modifies the next-hop address in the NLRI for external BGP prefixes in the IP address sourcing the BGP session"
+    ],
+    "correct_answers": [
+      "The next-hop-self feature ensures that the next-hop address check passes without advertising peering networks into a routing protocol",
+      "The next-hop-self feature modifies the next-hop address in the NLRI for external BGP prefixes in the IP address sourcing the BGP session"
+    ],
+    "question_type": "multiple_answer"
   }
 ]
