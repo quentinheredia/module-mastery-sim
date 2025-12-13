@@ -7,16 +7,19 @@ import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { ProgressBar } from "@/components/quiz/ProgressBar";
 import { Header } from "@/components/layout/Header";
 import { courseColorClasses } from "@/components/layout/CourseSelector";
-import { ArrowLeft, ArrowRight, Home, RotateCcw, BookOpen, Layers, Eye, Keyboard } from "lucide-react";
+import { ArrowLeft, ArrowRight, Home, RotateCcw, BookOpen, Layers, Eye, Keyboard, Filter } from "lucide-react";
 import { getAvailableModules, loadQuestions, shuffleArray, checkAnswer } from "@/utils/questionLoader";
 import { Question, UserAnswer, MatchingPairs, CourseColor } from "@/types/quiz";
 import { useCourse } from "@/contexts/CourseContext";
 import { Badge } from "@/components/ui/badge";
 
+type QuestionTypeFilter = "all" | "matching" | "multiple_answer" | "multiple_choice";
+
 const Practice = () => {
   const navigate = useNavigate();
   const { activeCourse } = useCourse();
   const [selectedModule, setSelectedModule] = useState<string>("all");
+  const [selectedQuestionType, setSelectedQuestionType] = useState<QuestionTypeFilter>("all");
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
@@ -24,20 +27,28 @@ const Practice = () => {
   const [isStarted, setIsStarted] = useState(false);
 
   const courseId = activeCourse?.id || "net4009";
+  const isNet4005 = courseId === "net4005";
   const modules = ["all", ...getAvailableModules(courseId)];
   const courseColors = activeCourse ? courseColorClasses[activeCourse.color as CourseColor] : courseColorClasses.blue;
 
   useEffect(() => {
     if (isStarted && activeCourse) {
-      loadQuestionsForModule(selectedModule);
+      loadQuestionsForModule(selectedModule, selectedQuestionType);
     }
-  }, [selectedModule, isStarted, activeCourse]);
+  }, [selectedModule, selectedQuestionType, isStarted, activeCourse]);
 
-  const loadQuestionsForModule = (module: string) => {
-    const allQuestions = loadQuestions(courseId);
-    const filtered = module === "all" 
+  const loadQuestionsForModule = (module: string, questionType: QuestionTypeFilter) => {
+    let allQuestions = loadQuestions(courseId);
+    
+    // Filter by module
+    let filtered = module === "all" 
       ? allQuestions 
       : allQuestions.filter(q => q.module === module);
+    
+    // Filter by question type (only for NET4005)
+    if (isNet4005 && questionType !== "all") {
+      filtered = filtered.filter(q => q.question_type === questionType);
+    }
     
     const shuffled = shuffleArray(filtered);
     setQuestions(shuffled);
@@ -52,7 +63,17 @@ const Practice = () => {
 
   const handleStart = () => {
     setIsStarted(true);
-    loadQuestionsForModule(selectedModule);
+    loadQuestionsForModule(selectedModule, selectedQuestionType);
+  };
+
+  const getQuestionTypeCount = (type: QuestionTypeFilter) => {
+    const allQuestions = loadQuestions(courseId);
+    const moduleFiltered = selectedModule === "all" 
+      ? allQuestions 
+      : allQuestions.filter(q => q.module === selectedModule);
+    
+    if (type === "all") return moduleFiltered.length;
+    return moduleFiltered.filter(q => q.question_type === type).length;
   };
 
   const handleAnswerChange = (selectedAnswers: string[], matchingAnswers?: MatchingPairs) => {
@@ -179,6 +200,55 @@ const Practice = () => {
                     </SelectContent>
                   </Select>
                 </div>
+
+                {/* Question Type Filter - NET4005 only */}
+                {isNet4005 && (
+                  <div>
+                    <label className="text-sm font-medium mb-2 block flex items-center gap-2">
+                      <Filter className="h-4 w-4" />
+                      Question Type
+                    </label>
+                    <Select value={selectedQuestionType} onValueChange={(v) => setSelectedQuestionType(v as QuestionTypeFilter)}>
+                      <SelectTrigger className="h-12 rounded-xl border-border/50 bg-background/50">
+                        <SelectValue placeholder="Select question type" />
+                      </SelectTrigger>
+                      <SelectContent className="rounded-xl border-border bg-popover shadow-elevation-lg">
+                        <SelectItem value="all" className="rounded-lg">
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium">All Types</span>
+                            <Badge variant="secondary" className="ml-2 text-xs">
+                              {getQuestionTypeCount("all")}
+                            </Badge>
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="multiple_choice" className="rounded-lg">
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium">Single Answer MCQ</span>
+                            <Badge variant="outline" className="ml-2 text-xs">
+                              {getQuestionTypeCount("multiple_choice")}
+                            </Badge>
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="multiple_answer" className="rounded-lg">
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium">Multi-Answer MCQ</span>
+                            <Badge variant="outline" className="ml-2 text-xs">
+                              {getQuestionTypeCount("multiple_answer")}
+                            </Badge>
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="matching" className="rounded-lg">
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium">Matching</span>
+                            <Badge variant="outline" className="ml-2 text-xs">
+                              {getQuestionTypeCount("matching")}
+                            </Badge>
+                          </div>
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                )}
 
                 <Button 
                   size="lg" 
