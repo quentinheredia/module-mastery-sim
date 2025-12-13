@@ -21,6 +21,9 @@ import cryptoData from "@/assets/data/net4005/crypto.json";
 import sdnData from "@/assets/data/net4005/sdn.json";
 import appData from "@/assets/data/net4005/app.json";
 
+// NET3008 course data
+import net3008Questions from "@/assets/data/net3008/questions.json";
+
 // Organize data by course
 const courseData: Record<string, Question[]> = {
   net4009: [
@@ -43,6 +46,9 @@ const courseData: Record<string, Question[]> = {
     ...cryptoData,
     ...sdnData,
     ...appData,
+  ] as Question[],
+  net3008: [
+    ...net3008Questions,
   ] as Question[],
 };
 

@@ -1,0 +1,473 @@
+[
+  {
+    "module": "Module 3a - BGP Basics",
+    "question": "Refer to BGP topology that is shown below. R1 and R4 have advertised their loopback interfaces into BGP: 192.168.1.1/32 and 192.168.4.4/32, respectively. Assume all BGP sessions are in Established state. Based on the outputs of routing tables of R1, R2, R3 and R4, which two statements are true and can be concluded?",
+    "options": [
+      "The peering links 10.12.1.0/24 and 10.34.1.0/24 are in both R2's and R3's routing tables",
+      "R1's BGP table is missing the 192.168.4.4/32 prefix because the prefix did not pass R2's next hop accessibility check",
+      "The BGP best-path symbol is missing for the 192.168.1.1/32 prefix on R2 because the prefix did not pass R2's next hop accessibility check",
+      "The BGP best-path symbol is missing for the 192.168.4.4/32 prefix on R2 and for the 192.168.1.1/32 prefix on R3"
+    ],
+    "correct_answers": [
+      "The BGP best-path symbol is missing for the 192.168.1.1/32 prefix on R2 because the prefix did not pass R2's next hop accessibility check",
+      "The BGP best-path symbol is missing for the 192.168.4.4/32 prefix on R2 and for the 192.168.1.1/32 prefix on R3"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 2b - OSPFv2 Advanced",
+    "question": "Based on the OSPFv2 topology below, Area 34 is configured as Totally Not-So-Stubby Area, which default route type will be injected into Area 34?",
+    "options": [
+      "O*N1 0.0.0.0/0 default route type 7 LSA from router R3",
+      "O*E2 0.0.0.0/0 default route type 5 LSA from router R3",
+      "O*IA 0.0.0.0/0 default route type 3 LSA from router R3",
+      "O*N1 0.0.0.0/0 default route type 3 LSA from router R3"
+    ],
+    "correct_answers": [
+      "O*IA 0.0.0.0/0 default route type 3 LSA from router R3"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 3b - Advanced BGP",
+    "question": "Which two statements are untrue regarding BGP Route Reflector (RR)?",
+    "options": [
+      "If an RR receives an NLRI from an RR client, it will not advertise the NLRI to non-RR clients",
+      "Route Reflector solves the iBGP scalability issues within an Autonomous System (AS)",
+      "Route Reflector solves the eBGP scalability issues between Autonomous Systems (ASs)",
+      "The router that is receiving reflected routes is a route reflector client",
+      "If an RR receives a route from an eBGP peer, it advertises the route to RR clients and non-RR clients"
+    ],
+    "correct_answers": [
+      "Route Reflector solves the eBGP scalability issues between Autonomous Systems (ASs)",
+      "If an RR receives an NLRI from an RR client, it will not advertise the NLRI to non-RR clients"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 3a - BGP Basics",
+    "question": "A network administrator in AS 65100 has set up a dual-homed BGP connection with an ISP. The administrator would like to ensure that all traffic from the ISP enters the Autonomous System through router R1. Which BGP path attribute can be configured?",
+    "options": [
+      "Multi-exit discriminator",
+      "Next-Hop",
+      "Local preference",
+      "Weight"
+    ],
+    "correct_answers": [
+      "Local preference"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 1b - Advanced EIGRP",
+    "question": "Study the EIGRP topology and output command below. Which statement is true and can be concluded from the output?",
+    "options": [
+      "R3 is not enabled to perform unequal cost load balancing to destination 10.12.0.0/24",
+      "R3's variance parameter has not been modified from its default value",
+      "R3's Feasible Distance (FD) of successor is 768256 to network 10.12.0.0/24",
+      "R3's variance parameter has been modified from its default value"
+    ],
+    "correct_answers": [
+      "R3's variance parameter has been modified from its default value"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 3a - BGP Basics",
+    "question": "Which two statements are true regarding iBGP?",
+    "options": [
+      "Next hop remains unchanged when route is advertised to an iBGP peer",
+      "iBGP uses AS Path for loop prevention",
+      "AS Path is not prepended to the route when advertised to an iBGP peer",
+      "Next hop is changed when route is advertised to an iBGP peer"
+    ],
+    "correct_answers": [
+      "Next hop remains unchanged when route is advertised to an iBGP peer",
+      "AS Path is not prepended to the route when advertised to an iBGP peer"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 4 - Routing Protocols Redistribution",
+    "question": "Based on the topology below, routing protocols are configured and working properly. Which command is required on router R3 to allow internal BGP routes to be redistributed into OSPF?",
+    "options": [
+      "router ospf 1 → bgp redistribute-subnets",
+      "router bgp 64532 → bgp match internal external",
+      "router bgp 64532 → bgp redistribute-internal",
+      "router ospf 1 → bgp redistribute-internal"
+    ],
+    "correct_answers": [
+      "router bgp 64532 → bgp redistribute-internal"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 1c - EIGRPv6",
+    "question": "Which address is used by an IPv6 EIGRP router as the source for Hello messages?",
+    "options": [
+      "The IPv6 global unicast address configured on the interface",
+      "The 32-bit router ID",
+      "The interface IPv6 link-local address",
+      "FF02::A"
+    ],
+    "correct_answers": [
+      "The interface IPv6 link-local address"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 5 - IS-IS Routing",
+    "question": "Which two statements are true regarding IS-IS Overload bit?",
+    "options": [
+      "Overload bit is configured on routers during startup to avoid traffic black-holes until convergence",
+      "If Overload-bit is set on both Level-1/Level-2 router, the router will allow both types of traffic",
+      "Value of Overload-bit is 1 if set and 0 if not set",
+      "If Overload-bit is set on a Level-2 router, other Level-2 routers continue using it for forwarding"
+    ],
+    "correct_answers": [
+      "Overload bit is configured on routers during startup to avoid traffic black-holes until convergence",
+      "Value of Overload-bit is 1 if set and 0 if not set"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 5 - IS-IS Routing",
+    "question": "Which statement is untrue about the Designated IS (DIS) router in IS-IS?",
+    "options": [
+      "DIS reduces adjacencies and flooding over LAN subnets",
+      "All routers establish adjacencies with DIS and backup DIS",
+      "DIS election is preemptive",
+      "DIS is elected based on interface priority"
+    ],
+    "correct_answers": [
+      "All routers establish adjacencies with DIS and backup DIS"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 5 - IS-IS Routing",
+    "question": "Which statement is true about IS-IS routing protocol?",
+    "options": [
+      "PSNP acknowledges receipt of an LSP, CSNP distributes the complete LSDB",
+      "Timers must match for adjacency to be established",
+      "IS-IS has three hierarchy levels and two adjacency levels",
+      "An IS-IS backbone is contiguous Level-1/Level-2 adjacencies"
+    ],
+    "correct_answers": [
+      "PSNP acknowledges receipt of an LSP, CSNP distributes the complete LSDB"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 4 - Routing Protocols Redistribution",
+    "question": "How will seed metrics be applied to RIP and OSPF routes redistributed into EIGRP?",
+    "options": [
+      "Only RIP routes redistributed with seed metric 170",
+      "Both RIP and OSPF redistributed with same seed metric",
+      "Only OSPF routes redistributed with seed metric 170",
+      "Both RIP and OSPF will not be redistributed"
+    ],
+    "correct_answers": [
+      "Both RIP and OSPF redistributed with same seed metric"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 2b - OSPFv2 Advanced",
+    "question": "On an ABR, how will the routing table change if Area 1 is configured as an OSPF Stub area?",
+    "options": [
+      "None of the routes will be removed",
+      "Only O IA and O E2 subnet routes to 192.168.0.0 removed",
+      "Only O E2 routes removed",
+      "All O IA and O E2 routes removed"
+    ],
+    "correct_answers": [
+      "Only O IA and O E2 subnet routes to 192.168.0.0 removed"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 1a - EIGRP Basics",
+    "question": "Which two statements are true regarding Split Horizon on an EIGRP network?",
+    "options": [
+      "Split horizon needs to be disabled on hub-and-spoke topologies",
+      "Split horizon is disabled by default on all interfaces",
+      "Split horizon is enabled by default on all interfaces",
+      "Split horizon needs to be enabled on hub-and-spoke topologies",
+      "Split horizon can only be disabled in global configuration mode"
+    ],
+    "correct_answers": [
+      "Split horizon needs to be disabled on hub-and-spoke topologies",
+      "Split horizon is enabled by default on all interfaces"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 4 - Routing Protocols Redistribution",
+    "question": "OSPF internal and external routes are redistributed into BGP. What is the outcome?",
+    "options": [
+      "Only internal OSPF routes redistributed",
+      "BGP cannot process routes without a seed metric",
+      "Only local interfaces redistributed",
+      "All internal and external OSPF routes redistributed",
+      "Cannot tell from configuration"
+    ],
+    "correct_answers": [
+      "All internal and external OSPF routes redistributed"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 3c - BGP Path Selection",
+    "question": "Which class of BGP path attributes is recognized by all BGP implementations and is not advertised between ASs?",
+    "options": [
+      "Well-known discretionary",
+      "Optional transitive",
+      "Well-known mandatory",
+      "Optional nontransitive"
+    ],
+    "correct_answers": [
+      "Well-known mandatory"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 1c - EIGRPv6",
+    "question": "Which two commands can be used to verify EIGRP IPv6 authentication?",
+    "options": [
+      "show ip eigrp interface detail",
+      "show ipv6 eigrp key chain",
+      "show key chain",
+      "show ipv6 eigrp interface detail",
+      "show ipv6 eigrp authentication"
+    ],
+    "correct_answers": [
+      "show ipv6 eigrp key chain",
+      "show ipv6 eigrp interface detail"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 2b - OSPFv2 Advanced",
+    "question": "R2 must summarize Area 15 networks. What configuration is required?",
+    "options": [
+      "area 15 range 172.16.8.0 255.255.248.0",
+      "summary-address area 15 range 172.16.8.0 255.255.248.0",
+      "summary-address 172.16.8.0 255.255.248.0",
+      "area 0 range 172.16.8.0 255.255.248.0"
+    ],
+    "correct_answers": [
+      "area 15 range 172.16.8.0 255.255.248.0"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 5 - IS-IS Routing",
+    "question": "Which statement is untrue about IS-IS routing protocol?",
+    "options": [
+      "IS-IS uses IP protocol number 89",
+      "Router resides in a specific area",
+      "IS-IS rides directly over Ethernet",
+      "All routers are Level-1/Level-2 by default"
+    ],
+    "correct_answers": [
+      "All routers are Level-1/Level-2 by default"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 4 - Routing Protocols Redistribution",
+    "question": "EIGRP network 10.10.0.1/32 is redistributed into IS-IS. Which statement is true?",
+    "options": [
+      "Will not be redistributed",
+      "Redistributed with seed metric 0",
+      "Redistributed with seed metric 10",
+      "Cannot tell from configuration"
+    ],
+    "correct_answers": [
+      "Redistributed with seed metric 0"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 2b - OSPFv2 Advanced",
+    "question": "Which three statements can be concluded about OSPF Area 34?",
+    "options": [
+      "External route 172.16.1.0/24 will not be injected",
+      "Area 34 blocks LSAs type 3, 4, and 5",
+      "External route injected as Type 7 LSA",
+      "Area 34 is NSSA",
+      "Area 34 is Totally NSSA"
+    ],
+    "correct_answers": [
+      "Area 34 blocks LSAs type 3, 4, and 5",
+      "External route injected as Type 7 LSA",
+      "Area 34 is Totally NSSA"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 1a - EIGRP Basics",
+    "question": "Which two conditions will cause an EIGRP route to enter the Active state?",
+    "options": [
+      "No feasible successor in routing table",
+      "No feasible successor in topology table",
+      "A feasible successor exists",
+      "The successor goes down"
+    ],
+    "correct_answers": [
+      "No feasible successor in topology table",
+      "The successor goes down"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 2b - OSPFv2 Advanced",
+    "question": "How is an inter-area summarized route inserted into the ABR routing table?",
+    "options": [
+      "O IA route entry",
+      "Discard route to Null0",
+      "O E1 route",
+      "O E2 route"
+    ],
+    "correct_answers": [
+      "Discard route to Null0"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 2b - OSPFv2 Advanced",
+    "question": "Which two commands produced the OSPF output shown?",
+    "options": [
+      "show ospf virtual-links detail",
+      "show virtual-links interface detail",
+      "show ip ospf interface brief",
+      "show ip ospf virtual-links"
+    ],
+    "correct_answers": [
+      "show virtual-links interface detail",
+      "show ip ospf virtual-links"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 6 - Route Maps & PBR",
+    "question": "Which two statements describe the result of the route-map configuration?",
+    "options": [
+      "Matching prefixes set local preference to 250",
+      "Non-matching prefixes dropped",
+      "Non-matching prefixes set local preference to 100",
+      "Prefix list has higher priority than weight"
+    ],
+    "correct_answers": [
+      "Matching prefixes set local preference to 250",
+      "Prefix list has higher priority than weight"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 2b - OSPFv2 Advanced",
+    "question": "Which two statements are true regarding OSPF NSSA?",
+    "options": [
+      "Default route not injected automatically",
+      "ABR allowed to flood LSAs 4 and 5",
+      "ABR not allowed to flood LSAs 4 and 5",
+      "Default route injected automatically"
+    ],
+    "correct_answers": [
+      "ABR not allowed to flood LSAs 4 and 5",
+      "Default route injected automatically"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 2c - OSPFv3",
+    "question": "Which address will R1 use as the source for all OSPFv3 messages?",
+    "options": [
+      "FF02::1",
+      "FF02::1:FF00:1",
+      "FE80::1",
+      "FF02::5",
+      "2001:DB8:ACAD:A::1",
+      "FF02::2"
+    ],
+    "correct_answers": [
+      "FE80::1"
+    ],
+    "question_type": "multiple_choice"
+  },
+  {
+    "module": "Module 2c - OSPFv3",
+    "question": "Which two statements are true regarding OSPFv3 Address Family?",
+    "options": [
+      "32-bit Router ID used regardless of IP version",
+      "IPv4 transports IPv4 AF, IPv6 transports IPv6 AF",
+      "IPv6 transports both IPv4 and IPv6 AF",
+      "IPv6 AF uses 128-bit Router ID"
+    ],
+    "correct_answers": [
+      "32-bit Router ID used regardless of IP version",
+      "IPv6 transports both IPv4 and IPv6 AF"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 3c - BGP Path Selection",
+    "question": "Which two statements describe MP-BGP IPv6 differences vs IPv4?",
+    "options": [
+      "IPv4 addresses cannot define BGP RID",
+      "IPv6 uses multicast to establish neighbors",
+      "IPv6 AF must be initialized and neighbor activated",
+      "IPv6-only routers must statically define BGP RID"
+    ],
+    "correct_answers": [
+      "IPv6 AF must be initialized and neighbor activated",
+      "IPv6-only routers must statically define BGP RID"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 1b - Advanced EIGRP",
+    "question": "Which two actions does EIGRP DUAL take when a link goes down?",
+    "options": [
+      "Query neighbors",
+      "Search topology table for feasible successor",
+      "Run SPF",
+      "Search routing table"
+    ],
+    "correct_answers": [
+      "Query neighbors",
+      "Search topology table for feasible successor"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 3a - BGP Basics",
+    "question": "Which two BGP commands are required to peer using Loopback0?",
+    "options": [
+      "neighbor <peer-lo0> remote-as <AS>",
+      "neighbor <peer-lo0> update-source lo0",
+      "neighbor <peer-lo0> ebgp-multihop 2",
+      "neighbor <peer-lo0> password CISCO"
+    ],
+    "correct_answers": [
+      "neighbor <peer-lo0> remote-as <AS>",
+      "neighbor <peer-lo0> update-source lo0"
+    ],
+    "question_type": "multiple_answer"
+  },
+  {
+    "module": "Module 2b - OSPFv2 Advanced",
+    "question": "Which OSPF command produced the output shown?",
+    "options": [
+      "show ip ospf interface",
+      "show ip ospf interface brief",
+      "show ip protocols",
+      "show ip ospf neighbor"
+    ],
+    "correct_answers": [
+      "show ip ospf interface"
+    ],
+    "question_type": "multiple_choice"
+  }
+]
