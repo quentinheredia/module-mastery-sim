@@ -246,5 +246,47 @@
     "correct_answers": ["They allow applications to program network behavior"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "What is the primary architectural advantage of separating the control plane from the data plane in SDN?",
+    "image": null,
+    "options": [
+      "Packet forwarding becomes faster due to distributed routing",
+      "Network policies can be defined and enforced centrally",
+      "Switches no longer require forwarding tables",
+      "Encryption of data traffic becomes mandatory"
+    ],
+    "correct_answers": ["Network policies can be defined and enforced centrally"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "In a typical SDN deployment, what best characterizes the northbound interface?",
+    "image": null,
+    "options": [
+      "It enables packet forwarding between switches",
+      "It allows switches to report link failures",
+      "It allows applications to specify network behavior and policies",
+      "It distributes routing tables across routers"
+    ],
+    "correct_answers": ["It allows applications to specify network behavior and policies"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Software Defined Networking (SDN)",
+    "question": "Which combination best explains why SDN reduces both CapEx and OpEx?",
+    "image": null,
+    "options": [
+      "Proprietary hardware and distributed control",
+      "Commodity hardware and centralized management",
+      "Higher link bandwidth and encryption",
+      "Static routing and manual configuration"
+    ],
+    "correct_answers": ["Commodity hardware and centralized management"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]

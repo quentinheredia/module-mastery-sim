@@ -407,5 +407,19 @@
     "correct_answers": ["Replay attacks"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why does using TLS not interfere with horizontal scaling in cloud applications?",
+    "image": null,
+    "options": [
+      "TLS stores encryption keys permanently on the server",
+      "TLS eliminates the need for load balancing",
+      "TLS operates independently per connection using session keys",
+      "TLS requires centralized state storage"
+    ],
+    "correct_answers": ["TLS operates independently per connection using session keys"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]

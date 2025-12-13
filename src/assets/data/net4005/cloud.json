@@ -195,5 +195,33 @@
     "correct_answers": ["On-demand self-service"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "A startup deploys a web application on a cloud platform and wants to use horizontal scaling to handle unpredictable traffic spikes. Which application property is most essential before horizontal scaling can be effective?",
+    "image": null,
+    "options": [
+      "Each request must be served over a persistent TCP connection",
+      "Application servers must store user session state locally",
+      "Requests must be independent of server-side state",
+      "The application must use UDP instead of TCP"
+    ],
+    "correct_answers": ["Requests must be independent of server-side state"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud Computing",
+    "question": "A company requires a custom operating system and customized platform software to deliver its service, while still wanting elastic scaling. Which cloud service model best fits this requirement?",
+    "image": null,
+    "options": [
+      "SaaS, because infrastructure management is fully abstracted",
+      "PaaS, because the OS and platform are hidden from the user",
+      "IaaS, because it offers control over OS and system software",
+      "SaaS, because it scales automatically without customization"
+    ],
+    "correct_answers": ["IaaS, because it offers control over OS and system software"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]
