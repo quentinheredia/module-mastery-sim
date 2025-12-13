@@ -133,17 +133,33 @@ export const QuestionCard = ({
 
       {/* Question content */}
       <div className="p-6 space-y-6">
-        {/* Image if present */}
-        {question.image && (
-          <div className="rounded-xl overflow-hidden border border-border/50 shadow-elevation-sm">
-            <img 
-              src={resolveImageSrc(question.image)} 
-              alt="Question diagram" 
-              className="w-full h-auto"
-              onError={(e) => {
-                console.error('Failed to load image:', e.currentTarget.src);
-              }}
-            />
+        {/* Images if present */}
+        {(question.image || question.image2) && (
+          <div className="space-y-4">
+            {question.image && (
+              <div className="rounded-xl overflow-hidden border border-border/50 shadow-elevation-sm">
+                <img 
+                  src={resolveImageSrc(question.image)} 
+                  alt="Question diagram" 
+                  className="w-full h-auto"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.currentTarget.src);
+                  }}
+                />
+              </div>
+            )}
+            {question.image2 && (
+              <div className="rounded-xl overflow-hidden border border-border/50 shadow-elevation-sm">
+                <img 
+                  src={resolveImageSrc(question.image2)} 
+                  alt="Question diagram 2" 
+                  className="w-full h-auto"
+                  onError={(e) => {
+                    console.error('Failed to load image2:', e.currentTarget.src);
+                  }}
+                />
+              </div>
+            )}
           </div>
         )}
 

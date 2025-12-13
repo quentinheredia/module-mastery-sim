@@ -301,8 +301,9 @@
   },
   {
     "module": "Module 2b - OSPFv2 Advanced",
-    "question": "Which three statements can be concluded about OSPF Area 34?",
-    "image": "images/quizzes/net3008_q21_config.png",
+    "question": "Which three statements can be concluded about OSPF Area 34? (Choose 3)",
+    "image": "images/quizzes/net3008_q21_topo.png",
+    "image2": "images/quizzes/net3008_q21_config.png",
     "options": [
       "External route 172.16.1.0/24 will not be injected",
       "Area 34 blocks LSAs type 3, 4, and 5",

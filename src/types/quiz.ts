@@ -10,6 +10,7 @@ export interface Question {
   question_type: "multiple_choice" | "single_choice" | "true_false" | "multiple_answer" | "matching";
   points: number;
   image?: string;
+  image2?: string;
   pairs?: MatchingPairs;
 }
 
