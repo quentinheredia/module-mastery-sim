@@ -313,7 +313,7 @@
       "A": "Symmetric key used for bulk data",
       "B": "Client verifies server certificate",
       "C": "Hashing used during authentication",
-      "D": "Client and server derive session keys",
+      "D": "Public key used during handshake",
       "E": "Hashing used during authentication"
     },
     "question_type": "matching",
