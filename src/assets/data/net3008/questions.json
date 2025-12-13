@@ -48,7 +48,7 @@
   },
   {
     "module": "Module 3a - BGP Basics",
-    "question": "A network administrator in AS 65100 has set up a dual-homed BGP connection with an ISP. The administrator would like to ensure that all traffic from the ISP enters the Autonomous System through router R1. Which BGP path attribute can be configured?",
+    "question": "Refer to the exhibit. A network administrator in Autonomous System 65100 has set up a dual-homed BGP connection with an ISP. The administrator would like to ensure that all traffic from the ISP enters the Autonomous System through the router R1. Which BGP path attribute can the administrator configure on routers R1 and R2 to accomplish this?",
     "image": "images/quizzes/net3008_q4_bgp.png",
     "options": [
       "Multi-exit discriminator",
