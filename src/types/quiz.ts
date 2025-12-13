@@ -2,22 +2,33 @@ export interface MatchingPairs {
   [key: string]: string;
 }
 
+export interface MultiStepSubpart {
+  id: string;
+  text: string;
+  answer: string;
+  explanation: string;
+}
+
 export interface Question {
+  id?: string;
   module: string;
   question: string;
   options: string[];
   correct_answers: string[] | MatchingPairs;
-  question_type: "multiple_choice" | "single_choice" | "true_false" | "multiple_answer" | "matching";
+  question_type: "multiple_choice" | "single_choice" | "true_false" | "multiple_answer" | "matching" | "multi_step";
   points: number;
   image?: string;
   image2?: string;
   pairs?: MatchingPairs;
+  subparts?: MultiStepSubpart[];
+  explanation?: string;
 }
 
 export interface UserAnswer {
   questionId: number;
   selectedAnswers: string[];
   matchingAnswers?: MatchingPairs;
+  multiStepAnswers?: { [subpartId: string]: string };
   isCorrect: boolean;
 }
 

@@ -2,7 +2,7 @@
   {
     "id": "net4001_mcq_001",
     "module": "Inverse Transform Method",
-    "type": "multiple-choice",
+    "question_type": "multiple_choice",
     "question": "Which of the following statements is false about the inverse transform technique?",
     "options": [
       "You need a source of random numbers between [0,1].",
@@ -11,16 +11,13 @@
       "F⁻¹ is called the inverse and represented by 1/F."
     ],
     "correct_answers": ["F⁻¹ is called the inverse and represented by 1/F."],
-    "explanation": "F⁻¹ is not 1/F; it is the inverse CDF (cumulative distribution function), not the reciprocal of F.",
-    "metadata": {
-      "source": "PDF",
-      "topic": "Inverse Transform"
-    }
+    "points": 1,
+    "explanation": "F⁻¹ is not 1/F; it is the inverse CDF (cumulative distribution function), not the reciprocal of F."
   },
   {
     "id": "net4001_mcq_002",
     "module": "Random Number Generation",
-    "type": "multiple-choice",
+    "question_type": "multiple_choice",
     "question": "What is the maximum period for a Linear Congruential Generator (LCG) with modulus m?",
     "options": [
       "m",
@@ -29,16 +26,13 @@
       "2m"
     ],
     "correct_answers": ["m"],
-    "explanation": "The maximum period of an LCG is m (the modulus). For a multiplicative congruential generator (MCG), the maximum period is m-1.",
-    "metadata": {
-      "source": "PDF",
-      "topic": "LCG"
-    }
+    "points": 1,
+    "explanation": "The maximum period of an LCG is m (the modulus). For a multiplicative congruential generator (MCG), the maximum period is m-1."
   },
   {
     "id": "net4001_mcq_003",
     "module": "Queueing Theory",
-    "type": "multiple-choice",
+    "question_type": "multiple_choice",
     "question": "In M/M/1 queueing notation, what does the first 'M' represent?",
     "options": [
       "Markovian (exponential) arrival process",
@@ -47,16 +41,13 @@
       "Mean service time"
     ],
     "correct_answers": ["Markovian (exponential) arrival process"],
-    "explanation": "In Kendall notation, the first letter represents the arrival process. 'M' stands for Markovian (memoryless), meaning exponentially distributed inter-arrival times.",
-    "metadata": {
-      "source": "PDF",
-      "topic": "Queueing Theory"
-    }
+    "points": 1,
+    "explanation": "In Kendall notation, the first letter represents the arrival process. 'M' stands for Markovian (memoryless), meaning exponentially distributed inter-arrival times."
   },
   {
     "id": "net4001_mcq_004",
     "module": "Queueing Theory",
-    "type": "multiple-choice",
+    "question_type": "multiple_choice",
     "question": "Which queueing model is appropriate for a system with Poisson arrivals, exponential service times, one server, and finite capacity?",
     "options": [
       "M/M/1",
@@ -65,16 +56,13 @@
       "M/M/k/k"
     ],
     "correct_answers": ["M/M/1/k"],
-    "explanation": "M/M/1/k represents: M (Poisson arrivals), M (exponential service), 1 server, and k (finite system capacity).",
-    "metadata": {
-      "source": "PDF",
-      "topic": "Queueing Theory"
-    }
+    "points": 1,
+    "explanation": "M/M/1/k represents: M (Poisson arrivals), M (exponential service), 1 server, and k (finite system capacity)."
   },
   {
     "id": "net4001_mcq_005",
     "module": "Chi-Square Test",
-    "type": "multiple-choice",
+    "question_type": "multiple_choice",
     "question": "When performing a Chi-square goodness-of-fit test, why do we combine categories with expected frequencies less than 4?",
     "options": [
       "To reduce computation time",
@@ -83,17 +71,167 @@
       "To decrease the degrees of freedom"
     ],
     "correct_answers": ["To ensure the Chi-square approximation is valid"],
-    "explanation": "The Chi-square distribution is only a good approximation when expected frequencies are sufficiently large (typically ≥4 or ≥5). Combining small categories ensures the approximation remains valid.",
-    "metadata": {
-      "source": "PDF",
-      "topic": "Chi-Square Test"
-    }
+    "points": 1,
+    "explanation": "The Chi-square distribution is only a good approximation when expected frequencies are sufficiently large (typically ≥4 or ≥5). Combining small categories ensures the approximation remains valid."
+  },
+  {
+    "id": "net4001_mcq_006",
+    "module": "Queueing Theory",
+    "question_type": "multiple_choice",
+    "question": "In an M/M/1/k queue, what happens when a customer arrives and the system is at capacity k?",
+    "options": [
+      "The customer waits in an external queue",
+      "The customer is lost/blocked",
+      "Service rate increases",
+      "A customer in queue is ejected"
+    ],
+    "correct_answers": ["The customer is lost/blocked"],
+    "points": 1,
+    "explanation": "In M/M/1/k, the 'k' represents maximum system capacity. When full, arriving customers are blocked and lost."
+  },
+  {
+    "id": "net4001_mcq_007",
+    "module": "Inverse Transform Method",
+    "question_type": "multiple_choice",
+    "question": "To generate a random variable X using the inverse transform method, you need:",
+    "options": [
+      "Only the PDF f(x)",
+      "The CDF F(x) and its inverse F⁻¹",
+      "The mean and variance of X",
+      "A normal distribution table"
+    ],
+    "correct_answers": ["The CDF F(x) and its inverse F⁻¹"],
+    "points": 1,
+    "explanation": "The inverse transform method requires: (1) uniform random numbers R∈[0,1], and (2) the inverse CDF F⁻¹ to compute X = F⁻¹(R)."
+  },
+  {
+    "id": "net4001_mcq_008",
+    "module": "Random Number Generation",
+    "question_type": "multiple_choice",
+    "question": "For a Multiplicative Congruential Generator (MCG) with m = 2^k, the maximum achievable period is:",
+    "options": [
+      "m",
+      "m - 1",
+      "m / 4",
+      "m / 2"
+    ],
+    "correct_answers": ["m / 4"],
+    "points": 1,
+    "explanation": "For MCG with modulus m = 2^k (k ≥ 3), the maximum period is m/4, achieved when a ≡ 3 or 5 (mod 8) and X₀ is odd."
+  },
+  {
+    "id": "net4001_mcq_009",
+    "module": "Chi-Square Test",
+    "question_type": "multiple_choice",
+    "question": "In a Chi-square goodness-of-fit test, what is the null hypothesis H₀?",
+    "options": [
+      "The data do not follow the proposed distribution",
+      "The data follow the proposed distribution",
+      "The sample mean equals the population mean",
+      "The variance is zero"
+    ],
+    "correct_answers": ["The data follow the proposed distribution"],
+    "points": 1,
+    "explanation": "H₀ states that the observed data follow the hypothesized distribution. We reject H₀ if χ² statistic exceeds the critical value."
+  },
+  {
+    "id": "net4001_mcq_010",
+    "module": "Queueing Theory",
+    "question_type": "multiple_choice",
+    "question": "The Erlang-B formula is used to calculate:",
+    "options": [
+      "Average waiting time in queue",
+      "Blocking probability in loss systems",
+      "Average number in system",
+      "Server utilization"
+    ],
+    "correct_answers": ["Blocking probability in loss systems"],
+    "points": 1,
+    "explanation": "Erlang-B calculates the blocking probability for M/M/k/k systems (no waiting queue, calls blocked when all servers busy)."
+  },
+  {
+    "id": "net4001_mcq_011",
+    "module": "Queueing Theory",
+    "question_type": "multiple_choice",
+    "question": "In an M/M/k/k system (Erlang-B), what does having k servers and k capacity mean?",
+    "options": [
+      "There is a buffer of k customers",
+      "There is no waiting queue - customers are blocked when all servers busy",
+      "Each server can handle k customers simultaneously",
+      "The arrival rate is k times the service rate"
+    ],
+    "correct_answers": ["There is no waiting queue - customers are blocked when all servers busy"],
+    "points": 1,
+    "explanation": "M/M/k/k means k servers with system capacity k (no buffer). When all k servers are busy, new arrivals are blocked/lost."
+  },
+  {
+    "id": "net4001_mcq_012",
+    "module": "Random Number Generation",
+    "question_type": "multiple_choice",
+    "question": "For a Linear Congruential Generator Xₙ₊₁ = (aXₙ + c) mod m to achieve full period m, which condition must be satisfied?",
+    "options": [
+      "c must equal zero",
+      "c and m must be coprime (relatively prime)",
+      "a must equal m",
+      "The seed X₀ must be prime"
+    ],
+    "correct_answers": ["c and m must be coprime (relatively prime)"],
+    "points": 1,
+    "explanation": "For full period m in an LCG: c and m must be coprime, a-1 must be divisible by all prime factors of m, and if m is divisible by 4, a-1 must also be divisible by 4."
+  },
+  {
+    "id": "net4001_mcq_013",
+    "module": "Inverse Transform Method",
+    "question_type": "multiple_choice",
+    "question": "Given a uniform random number R = 0.5 and the inverse transform X = F⁻¹(R) = 3R for 0 ≤ R ≤ 2/3, what is X?",
+    "options": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0"
+    ],
+    "correct_answers": ["1.5"],
+    "points": 1,
+    "explanation": "X = 3R = 3(0.5) = 1.5. Since R = 0.5 is within [0, 2/3], we use the given inverse formula."
+  },
+  {
+    "id": "net4001_mcq_014",
+    "module": "Chi-Square Test",
+    "question_type": "multiple_choice",
+    "question": "How are degrees of freedom calculated in a Chi-square goodness-of-fit test for a Poisson distribution?",
+    "options": [
+      "Number of categories minus 1",
+      "Number of categories minus 1 minus number of estimated parameters",
+      "Sample size minus 1",
+      "Number of categories times sample size"
+    ],
+    "correct_answers": ["Number of categories minus 1 minus number of estimated parameters"],
+    "points": 1,
+    "explanation": "df = k - 1 - p, where k is the number of categories (after combining) and p is the number of parameters estimated from data (1 for Poisson: λ)."
+  },
+  {
+    "id": "net4001_mcq_015",
+    "module": "Queueing Theory",
+    "question_type": "multiple_choice",
+    "question": "What is the traffic intensity ρ in a queueing system with arrival rate λ = 6 and service rate μ = 8?",
+    "options": [
+      "0.75",
+      "1.33",
+      "2",
+      "14"
+    ],
+    "correct_answers": ["0.75"],
+    "points": 1,
+    "explanation": "Traffic intensity ρ = λ/μ = 6/8 = 0.75"
   },
   {
     "id": "net4001_ms_001",
     "module": "Queueing Theory",
-    "type": "multi-step",
+    "question_type": "multi_step",
     "question": "Packets arrive to a router according to a Poisson process with rate λ=5/sec. The router can only process 1 packet at a time and there is a buffer with a capacity of 5 packets. If a packet arrives and finds no space in the buffer, then it will be discarded. The average time taken to process a packet is 0.1 sec (exponentially distributed).",
+    "options": [],
+    "correct_answers": [],
+    "points": 20,
     "subparts": [
       {
         "id": "a",
@@ -137,17 +275,16 @@
         "answer": "0.00794",
         "explanation": "Fraction lost equals Pₖ (probability system is full when packet arrives) = 0.00794"
       }
-    ],
-    "metadata": {
-      "source": "constructed-model",
-      "topic": "M/M/1/k Queueing"
-    }
+    ]
   },
   {
     "id": "net4001_ms_002",
     "module": "Inverse Transform Method",
-    "type": "multi-step",
+    "question_type": "multi_step",
     "question": "You are given the following piecewise PDF for a random variable X:\n\nf(x) = { 1/3 for 0 ≤ x ≤ 2\n       { 1/24 for 2 < x ≤ 10",
+    "options": [],
+    "correct_answers": [],
+    "points": 20,
     "subparts": [
       {
         "id": "a",
@@ -179,17 +316,16 @@
         "answer": "5.2",
         "explanation": "Since 0.8 > 2/3, use second function: For 2 < x ≤ 10, F(x) = 2/3 + (x-2)/24. Solving 0.8 = 2/3 + (x-2)/24: x = 2 + 24(0.8 - 2/3) = 2 + 24(0.133) = 5.2"
       }
-    ],
-    "metadata": {
-      "source": "constructed-model",
-      "topic": "Inverse Transform"
-    }
+    ]
   },
   {
     "id": "net4001_ms_003",
     "module": "Random Number Generation",
-    "type": "multi-step",
+    "question_type": "multi_step",
     "question": "Consider the Multiplicative Congruential Generator (MCG) with the formula: Xₙ₊₁ = (a × Xₙ) mod m",
+    "options": [],
+    "correct_answers": [],
+    "points": 15,
     "subparts": [
       {
         "id": "a",
@@ -209,17 +345,16 @@
         "answer": "25",
         "explanation": "For LCG to achieve full period m, conditions are: (1) c and m are coprime, (2) a-1 is divisible by all prime factors of m, (3) if m divisible by 4, a-1 must be too. Since m=16=2^4, need a≡1(mod 4). Among choices: 25-1=24, divisible by 4. Answer: 25."
       }
-    ],
-    "metadata": {
-      "source": "constructed-model",
-      "topic": "MCG/LCG"
-    }
+    ]
   },
   {
     "id": "net4001_ms_004",
     "module": "Queueing Theory",
-    "type": "multi-step",
+    "question_type": "multi_step",
     "question": "As a networking expert, you are asked to plan a telephone network. The expected traffic is 15 Erlang and you want to make sure that you won't drop more than 1% of the total number of requests. Use the Erlang-B loss table provided.",
+    "options": [],
+    "correct_answers": [],
+    "points": 20,
     "subparts": [
       {
         "id": "a",
@@ -245,17 +380,16 @@
         "answer": "0.71513",
         "explanation": "From Erlang-B table: at 15 Erlang (column 0.1), row n=3, blocking probability ≈ 0.71513"
       }
-    ],
-    "metadata": {
-      "source": "constructed-model",
-      "topic": "M/M/k/k Erlang-B"
-    }
+    ]
   },
   {
     "id": "net4001_ms_005",
     "module": "Chi-Square Test",
-    "type": "multi-step",
+    "question_type": "multi_step",
     "question": "Test whether the following data are Poisson distributed using a Chi-square test. Combine rows only if Eᵢ is smaller than 4. Use α = 0.01.\n\nData matrix (10 observations of 5 values each):\n1 0 1 0 0\n0 0 0 0 0\n1 0 1 0 1\n0 0 3 0 1\n1 0 0 0 0\n0 2 0 0 0\n1 0 1 1 1\n0 1 0 0 0\n2 0 1 0 1\n0 1 0 0 2",
+    "options": [],
+    "correct_answers": [],
+    "points": 25,
     "subparts": [
       {
         "id": "a",
@@ -305,17 +439,16 @@
         "answer": "accept",
         "explanation": "Since χ₀² = 1.52 < critical value, we fail to reject H₀. Accept that data follows Poisson distribution."
       }
-    ],
-    "metadata": {
-      "source": "constructed-model",
-      "topic": "Poisson Chi-Square"
-    }
+    ]
   },
   {
     "id": "net4001_ms_006",
     "module": "Queueing Theory",
-    "type": "multi-step",
+    "question_type": "multi_step",
     "question": "We have a system in which 3 types of clients are arriving according to a Poisson process with rate λ (i.e., each type arrives with rate λ). Clients of type 1 always enter. Type 2 clients only enter if there are less than 3 clients in the system. Type 3 clients only enter if there are less than 2 clients in the system. The system has 2 servers with exponential service rate μ each. Total capacity is 4.",
+    "options": [],
+    "correct_answers": [],
+    "points": 25,
     "subparts": [
       {
         "id": "a",
@@ -359,100 +492,6 @@
         "answer": "0.024",
         "explanation": "From balance equations: P₄ = (18λ⁴P₀)/(8μ⁴) with λ=3, μ=6: P₄ ≈ 0.024"
       }
-    ],
-    "metadata": {
-      "source": "constructed-model",
-      "topic": "Multi-class Queueing"
-    }
-  },
-  {
-    "id": "net4001_mcq_006",
-    "module": "Queueing Theory",
-    "type": "multiple-choice",
-    "question": "In an M/M/1/k queue, what happens when a customer arrives and the system is at capacity k?",
-    "options": [
-      "The customer waits in an external queue",
-      "The customer is lost/blocked",
-      "Service rate increases",
-      "A customer in queue is ejected"
-    ],
-    "correct_answers": ["The customer is lost/blocked"],
-    "explanation": "In M/M/1/k, the 'k' represents maximum system capacity. When full, arriving customers are blocked and lost.",
-    "metadata": {
-      "source": "PDF",
-      "topic": "Queueing Theory"
-    }
-  },
-  {
-    "id": "net4001_mcq_007",
-    "module": "Inverse Transform Method",
-    "type": "multiple-choice",
-    "question": "To generate a random variable X using the inverse transform method, you need:",
-    "options": [
-      "Only the PDF f(x)",
-      "The CDF F(x) and its inverse F⁻¹",
-      "The mean and variance of X",
-      "A normal distribution table"
-    ],
-    "correct_answers": ["The CDF F(x) and its inverse F⁻¹"],
-    "explanation": "The inverse transform method requires: (1) uniform random numbers R∈[0,1], and (2) the inverse CDF F⁻¹ to compute X = F⁻¹(R).",
-    "metadata": {
-      "source": "PDF",
-      "topic": "Inverse Transform"
-    }
-  },
-  {
-    "id": "net4001_mcq_008",
-    "module": "Random Number Generation",
-    "type": "multiple-choice",
-    "question": "For a Multiplicative Congruential Generator (MCG) with m = 2^k, the maximum achievable period is:",
-    "options": [
-      "m",
-      "m - 1",
-      "m / 4",
-      "m / 2"
-    ],
-    "correct_answers": ["m / 4"],
-    "explanation": "For MCG with modulus m = 2^k (k ≥ 3), the maximum period is m/4, achieved when a ≡ 3 or 5 (mod 8) and X₀ is odd.",
-    "metadata": {
-      "source": "PDF",
-      "topic": "MCG"
-    }
-  },
-  {
-    "id": "net4001_mcq_009",
-    "module": "Chi-Square Test",
-    "type": "multiple-choice",
-    "question": "In a Chi-square goodness-of-fit test, what is the null hypothesis H₀?",
-    "options": [
-      "The data do not follow the proposed distribution",
-      "The data follow the proposed distribution",
-      "The sample mean equals the population mean",
-      "The variance is zero"
-    ],
-    "correct_answers": ["The data follow the proposed distribution"],
-    "explanation": "H₀ states that the observed data follow the hypothesized distribution. We reject H₀ if χ² statistic exceeds the critical value.",
-    "metadata": {
-      "source": "PDF",
-      "topic": "Chi-Square Test"
-    }
-  },
-  {
-    "id": "net4001_mcq_010",
-    "module": "Queueing Theory",
-    "type": "multiple-choice",
-    "question": "The Erlang-B formula is used to calculate:",
-    "options": [
-      "Average waiting time in queue",
-      "Blocking probability in loss systems",
-      "Average number in system",
-      "Server utilization"
-    ],
-    "correct_answers": ["Blocking probability in loss systems"],
-    "explanation": "Erlang-B calculates the blocking probability for M/M/k/k systems (no waiting queue, calls blocked when all servers busy).",
-    "metadata": {
-      "source": "PDF",
-      "topic": "Erlang-B"
-    }
+    ]
   }
 ]
