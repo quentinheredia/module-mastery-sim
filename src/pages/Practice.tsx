@@ -76,13 +76,14 @@ const Practice = () => {
     return moduleFiltered.filter(q => q.question_type === type).length;
   };
 
-  const handleAnswerChange = (selectedAnswers: string[], matchingAnswers?: MatchingPairs) => {
+  const handleAnswerChange = (selectedAnswers: string[], matchingAnswers?: MatchingPairs, multiStepAnswers?: { [subpartId: string]: string }) => {
     const newAnswers = [...userAnswers];
-    const isCorrect = checkAnswer(questions[currentIndex], selectedAnswers, matchingAnswers);
+    const isCorrect = checkAnswer(questions[currentIndex], selectedAnswers, matchingAnswers, multiStepAnswers);
     newAnswers[currentIndex] = {
       questionId: currentIndex,
       selectedAnswers,
       matchingAnswers,
+      multiStepAnswers,
       isCorrect,
     };
     setUserAnswers(newAnswers);
@@ -114,7 +115,9 @@ const Practice = () => {
   };
 
   const answeredCount = userAnswers.filter(a => 
-    a.selectedAnswers.length > 0 || (a.matchingAnswers && Object.keys(a.matchingAnswers).length > 0)
+    a.selectedAnswers.length > 0 || 
+    (a.matchingAnswers && Object.keys(a.matchingAnswers).length > 0) ||
+    (a.multiStepAnswers && Object.keys(a.multiStepAnswers).length > 0)
   ).length;
 
   // Keyboard navigation

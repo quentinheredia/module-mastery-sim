@@ -60,6 +60,18 @@ const AVAILABLE_COURSES: Course[] = [
       "Module 6 - Route Maps & PBR",
     ],
   },
+  {
+    id: "net4001",
+    name: "NET4001",
+    description: "Network Simulation",
+    color: "amber",
+    modules: [
+      "Inverse Transform Method",
+      "Random Number Generation",
+      "Queueing Theory",
+      "Chi-Square Test",
+    ],
+  },
 ];
 
 export const CourseProvider: React.FC<{ children: React.ReactNode }> = ({

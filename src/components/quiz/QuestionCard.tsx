@@ -6,12 +6,13 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, XCircle, CircleDot, SquareCheck } from "lucide-react";
 import { MatchingQuestion } from "./MatchingQuestion";
+import { MultiStepQuestion } from "./MultiStepQuestion";
 
 interface QuestionCardProps {
   question: Question;
   questionNumber: number;
   userAnswer?: UserAnswer;
-  onAnswerChange: (selectedAnswers: string[], matchingAnswers?: MatchingPairs) => void;
+  onAnswerChange: (selectedAnswers: string[], matchingAnswers?: MatchingPairs, multiStepAnswers?: { [subpartId: string]: string }) => void;
   showFeedback?: boolean;
   disabled?: boolean;
 }
@@ -32,6 +33,20 @@ export const QuestionCard = ({
         questionNumber={questionNumber}
         userAnswer={userAnswer}
         onMatchingChange={(matchingAnswers) => onAnswerChange([], matchingAnswers)}
+        showFeedback={showFeedback}
+        disabled={disabled}
+      />
+    );
+  }
+
+  // Handle multi-step questions with dedicated component
+  if (question.question_type === "multi_step") {
+    return (
+      <MultiStepQuestion
+        question={question}
+        questionNumber={questionNumber}
+        userAnswer={userAnswer}
+        onAnswerChange={(multiStepAnswers) => onAnswerChange([], undefined, multiStepAnswers)}
         showFeedback={showFeedback}
         disabled={disabled}
       />

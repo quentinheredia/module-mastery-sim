@@ -24,6 +24,9 @@ import appData from "@/assets/data/net4005/app.json";
 // NET3008 course data
 import net3008Questions from "@/assets/data/net3008/questions.json";
 
+// NET4001 course data
+import net4001Questions from "@/assets/data/net4001/questions.json";
+
 // Organize data by course
 const courseData: Record<string, Question[]> = {
   net4009: [
@@ -49,6 +52,9 @@ const courseData: Record<string, Question[]> = {
   ] as Question[],
   net3008: [
     ...net3008Questions,
+  ] as Question[],
+  net4001: [
+    ...net4001Questions,
   ] as Question[],
 };
 
@@ -151,11 +157,12 @@ const getNet4005ExamQuestions = (allQuestions: Question[]): Question[] => {
   return shuffleArray(selectedQuestions);
 };
 
-// Check if answer is correct (handles both regular and matching questions)
+// Check if answer is correct (handles regular, matching, and multi-step questions)
 export const checkAnswer = (
   question: Question,
   selectedAnswers: string[],
-  matchingAnswers?: MatchingPairs
+  matchingAnswers?: MatchingPairs,
+  multiStepAnswers?: { [subpartId: string]: string }
 ): boolean => {
   if (question.question_type === "matching") {
     if (!matchingAnswers || !question.correct_answers) return false;
@@ -165,6 +172,28 @@ export const checkAnswer = (
     
     // All pairs must be answered correctly
     return pairs.every(key => matchingAnswers[key] === correctAnswers[key]);
+  }
+  
+  if (question.question_type === "multi_step") {
+    if (!multiStepAnswers || !question.subparts) return false;
+    
+    // Check each subpart - all must be correct for full credit
+    return question.subparts.every(subpart => {
+      const userValue = (multiStepAnswers[subpart.id] || "").trim().toLowerCase();
+      const correctValue = subpart.answer.trim().toLowerCase();
+      
+      if (userValue === correctValue) return true;
+      
+      // Numeric tolerance check
+      const userNum = parseFloat(userValue);
+      const correctNum = parseFloat(correctValue);
+      if (!isNaN(userNum) && !isNaN(correctNum)) {
+        const tolerance = Math.abs(correctNum) * 0.01 || 0.01;
+        return Math.abs(userNum - correctNum) <= tolerance;
+      }
+      
+      return false;
+    });
   }
   
   // Regular question types

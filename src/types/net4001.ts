@@ -10,21 +10,13 @@ export interface MultiStepSubpart {
 export interface NET4001Question {
   id: string;
   module: string;
-  type: 'multiple-choice' | 'multi-step';
+  question_type: 'multiple_choice' | 'multiple_answer' | 'multi_step';
   question: string;
-  // For multiple-choice
-  options?: string[];
-  correct_answers?: string[];
+  options: string[];
+  correct_answers: string[];
+  points: number;
   explanation?: string;
-  // For multi-step
   subparts?: MultiStepSubpart[];
-  // Metadata
-  metadata: {
-    source: 'PDF' | 'constructed-model';
-    topic: string;
-    page?: number;
-    randomSeed?: number;
-  };
 }
 
 export interface MultiStepUserAnswers {
@@ -38,3 +30,8 @@ export interface MultiStepResult {
   isCorrect: boolean;
   explanation: string;
 }
+
+// Check if a question is multi-step type
+export const isMultiStepQuestion = (question: any): boolean => {
+  return question.question_type === 'multi_step' && Array.isArray(question.subparts);
+};
