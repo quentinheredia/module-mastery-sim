@@ -421,5 +421,578 @@
     "correct_answers": ["TLS operates independently per connection using session keys"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "In a TLS 1.3 1-RTT handshake, which information is included in the ClientHello message?",
+    "image": null,
+    "options": [
+      "Server certificate and chosen cipher suite",
+      "Client-supported cipher suites and key share",
+      "Session key for application data",
+      "Encrypted application payload"
+    ],
+    "correct_answers": ["Client-supported cipher suites and key share"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why does the server select the cipher suite in TLS rather than the client?",
+    "image": null,
+    "options": [
+      "To reduce handshake latency",
+      "To ensure compatibility with client hardware",
+      "To enforce server security policy",
+      "To prevent replay attacks"
+    ],
+    "correct_answers": ["To enforce server security policy"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is the primary role of Diffie-Hellman in TLS 1.3?",
+    "image": null,
+    "options": [
+      "Authenticate the server",
+      "Encrypt application data",
+      "Derive a shared session secret",
+      "Verify certificates"
+    ],
+    "correct_answers": ["Derive a shared session secret"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "In TLS 1.3 (1-RTT), when can the client safely send application data?",
+    "image": null,
+    "options": [
+      "Immediately after ClientHello",
+      "After receiving ServerHello",
+      "After verifying the server certificate and deriving keys",
+      "At any time during the handshake"
+    ],
+    "correct_answers": ["After verifying the server certificate and deriving keys"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which statement best explains why TLS separates the handshake phase from data transfer?",
+    "image": null,
+    "options": [
+      "To allow UDP transport",
+      "To negotiate routing paths",
+      "To establish security parameters before data exchange",
+      "To improve compression efficiency"
+    ],
+    "correct_answers": ["To establish security parameters before data exchange"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What condition must exist before TLS 1.3 can use 0-RTT?",
+    "image": null,
+    "options": [
+      "A valid certificate chain",
+      "A previously established session",
+      "A trusted third party",
+      "Mutual authentication"
+    ],
+    "correct_answers": ["A previously established session"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why is 0-RTT vulnerable to replay attacks?",
+    "image": null,
+    "options": [
+      "Session keys are reused",
+      "Certificates are not verified",
+      "Early data is not bound to freshness guarantees",
+      "Encryption is disabled"
+    ],
+    "correct_answers": ["Early data is not bound to freshness guarantees"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why are only idempotent requests recommended for 0-RTT?",
+    "image": null,
+    "options": [
+      "They use smaller payloads",
+      "They tolerate replay without changing server state",
+      "They require fewer keys",
+      "They do not require authentication"
+    ],
+    "correct_answers": ["They tolerate replay without changing server state"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Even when using 0-RTT, why does TLS still derive new session keys?",
+    "image": null,
+    "options": [
+      "To enable compression",
+      "To preserve forward secrecy",
+      "To reduce packet loss",
+      "To authenticate clients"
+    ],
+    "correct_answers": ["To preserve forward secrecy"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What layer of the network stack does IPsec operate at?",
+    "image": null,
+    "options": ["Application", "Transport", "Network", "Data link"],
+    "correct_answers": ["Network"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why can IPsec protect both application traffic and routing protocols?",
+    "image": null,
+    "options": [
+      "It encrypts ports",
+      "It operates above TCP",
+      "It secures IP datagrams directly",
+      "It requires application support"
+    ],
+    "correct_answers": ["It secures IP datagrams directly"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is the key difference between transport mode and tunnel mode in IPsec?",
+    "image": null,
+    "options": [
+      "Transport mode encrypts headers; tunnel mode does not",
+      "Tunnel mode encapsulates the entire original IP packet",
+      "Transport mode uses ESP; tunnel mode uses AH",
+      "Tunnel mode does not authenticate packets"
+    ],
+    "correct_answers": ["Tunnel mode encapsulates the entire original IP packet"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why is tunnel mode commonly used in VPNs?",
+    "image": null,
+    "options": [
+      "It provides faster encryption",
+      "It hides internal network addressing",
+      "It eliminates the need for keys",
+      "It supports UDP"
+    ],
+    "correct_answers": ["It hides internal network addressing"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Which security service is NOT provided by AH?",
+    "image": null,
+    "options": ["Integrity", "Source authentication", "Confidentiality", "Anti-replay"],
+    "correct_answers": ["Confidentiality"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What additional capability does ESP provide compared to AH?",
+    "image": null,
+    "options": ["NAT traversal", "Confidentiality", "Packet filtering", "Certificate validation"],
+    "correct_answers": ["Confidentiality"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why is ESP more widely deployed than AH?",
+    "image": null,
+    "options": [
+      "ESP is simpler to configure",
+      "ESP works better with NAT",
+      "ESP does not require keys",
+      "ESP uses TCP"
+    ],
+    "correct_answers": ["ESP works better with NAT"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is a Security Association (SA) in IPsec?",
+    "image": null,
+    "options": [
+      "A bidirectional encrypted tunnel",
+      "A policy defining firewall behavior",
+      "A unidirectional logical security connection",
+      "A certificate binding"
+    ],
+    "correct_answers": ["A unidirectional logical security connection"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why are two SAs required for bidirectional IPsec communication?",
+    "image": null,
+    "options": [
+      "One for encryption and one for authentication",
+      "One per endpoint",
+      "Each SA is unidirectional",
+      "Each SA uses a different protocol"
+    ],
+    "correct_answers": ["Each SA is unidirectional"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is the purpose of the Security Parameters Index (SPI)?",
+    "image": null,
+    "options": [
+      "Identify the encryption algorithm",
+      "Select the appropriate SA at the receiver",
+      "Prevent replay attacks",
+      "Authenticate the sender"
+    ],
+    "correct_answers": ["Select the appropriate SA at the receiver"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is the primary purpose of IPsec sequence numbers?",
+    "image": null,
+    "options": [
+      "Ensure packet ordering",
+      "Prevent replay attacks",
+      "Enable routing",
+      "Identify applications"
+    ],
+    "correct_answers": ["Prevent replay attacks"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why is manual key management impractical for IPsec at scale?",
+    "image": null,
+    "options": [
+      "Keys expire too quickly",
+      "Manual configuration does not scale with endpoints",
+      "Keys cannot be revoked",
+      "Manual keys are insecure"
+    ],
+    "correct_answers": ["Manual configuration does not scale with endpoints"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is the primary purpose of IKE?",
+    "image": null,
+    "options": [
+      "Encrypt application data",
+      "Negotiate IPsec security parameters and keys",
+      "Authenticate applications",
+      "Replace TLS"
+    ],
+    "correct_answers": ["Negotiate IPsec security parameters and keys"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What must a mobile device do before encrypted WiFi communication can begin?",
+    "image": null,
+    "options": [
+      "Associate with AP only",
+      "Authenticate and derive keys",
+      "Obtain IP address",
+      "Register with DNS"
+    ],
+    "correct_answers": ["Authenticate and derive keys"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why does association with an access point not imply authentication?",
+    "image": null,
+    "options": [
+      "Association uses encryption",
+      "Authentication occurs later",
+      "APs do not authenticate clients",
+      "Keys are already exchanged"
+    ],
+    "correct_answers": ["Authentication occurs later"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is the role of the Authentication Server (AS) in secure WiFi?",
+    "image": null,
+    "options": [
+      "Forward data packets",
+      "Assign IP addresses",
+      "Authenticate clients and derive keys",
+      "Filter traffic"
+    ],
+    "correct_answers": ["Authenticate clients and derive keys"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why is mutual authentication important in WiFi security?",
+    "image": null,
+    "options": [
+      "To prevent packet loss",
+      "To ensure both client and network are legitimate",
+      "To reduce latency",
+      "To enable roaming"
+    ],
+    "correct_answers": ["To ensure both client and network are legitimate"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why does LTE rely on SIM cards for authentication?",
+    "image": null,
+    "options": [
+      "SIMs store IP addresses",
+      "SIMs contain shared secrets",
+      "SIMs generate certificates",
+      "SIMs provide encryption"
+    ],
+    "correct_answers": ["SIMs contain shared secrets"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why is the Home Subscriber Server (HSS) considered the ultimate authenticator?",
+    "image": null,
+    "options": [
+      "It forwards packets",
+      "It stores long-term subscriber credentials",
+      "It manages routing",
+      "It controls radio access"
+    ],
+    "correct_answers": ["It stores long-term subscriber credentials"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why is the IMSI encrypted in 5G but not in 4G?",
+    "image": null,
+    "options": [
+      "To reduce overhead",
+      "To improve privacy",
+      "To speed authentication",
+      "To enable roaming"
+    ],
+    "correct_answers": ["To improve privacy"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What cryptographic technique is newly used in 5G to protect identity?",
+    "image": null,
+    "options": [
+      "Symmetric encryption",
+      "Hashing",
+      "Public-key cryptography",
+      "MACs"
+    ],
+    "correct_answers": ["Public-key cryptography"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What is the primary purpose of a firewall?",
+    "image": null,
+    "options": [
+      "Encrypt packets",
+      "Authenticate users",
+      "Enforce network access policy",
+      "Detect malware"
+    ],
+    "correct_answers": ["Enforce network access policy"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why are stateless packet filters limited in security capability?",
+    "image": null,
+    "options": [
+      "They cannot inspect headers",
+      "They do not track connection state",
+      "They block all UDP traffic",
+      "They require certificates"
+    ],
+    "correct_answers": ["They do not track connection state"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What additional capability does a stateful firewall provide?",
+    "image": null,
+    "options": [
+      "Payload inspection",
+      "Application awareness",
+      "Connection state tracking",
+      "Encryption"
+    ],
+    "correct_answers": ["Connection state tracking"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why can stateful firewalls automatically allow return traffic?",
+    "image": null,
+    "options": [
+      "They trust all internal hosts",
+      "They track established connections",
+      "They use routing tables",
+      "They use NAT"
+    ],
+    "correct_answers": ["They track established connections"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "What security gap does an Intrusion Detection System (IDS) fill?",
+    "image": null,
+    "options": [
+      "Packet forwarding",
+      "Key exchange",
+      "Detecting attacks missed by firewalls",
+      "User authentication"
+    ],
+    "correct_answers": ["Detecting attacks missed by firewalls"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why is deep packet inspection useful for IDS?",
+    "image": null,
+    "options": [
+      "It improves routing",
+      "It reduces latency",
+      "It examines payload content for attack signatures",
+      "It encrypts packets"
+    ],
+    "correct_answers": ["It examines payload content for attack signatures"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why are IDS often deployed at multiple locations in a network?",
+    "image": null,
+    "options": [
+      "To reduce cost",
+      "To improve redundancy",
+      "To observe attacks at different vantage points",
+      "To replace firewalls"
+    ],
+    "correct_answers": ["To observe attacks at different vantage points"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "How does an application gateway differ from packet filtering?",
+    "image": null,
+    "options": [
+      "It operates only at the network layer",
+      "It filters based on application-layer data",
+      "It forwards packets without inspection",
+      "It disables encryption"
+    ],
+    "correct_answers": ["It filters based on application-layer data"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why must client software be aware of an application gateway?",
+    "image": null,
+    "options": [
+      "To configure routing tables",
+      "To authenticate users",
+      "To explicitly connect through the gateway",
+      "To manage encryption keys"
+    ],
+    "correct_answers": ["To explicitly connect through the gateway"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why can firewalls not fully prevent IP spoofing attacks?",
+    "image": null,
+    "options": [
+      "Firewalls cannot inspect payloads",
+      "Routers cannot verify claimed source addresses",
+      "Encryption hides addresses",
+      "NAT disables filtering"
+    ],
+    "correct_answers": ["Routers cannot verify claimed source addresses"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why do firewalls struggle with UDP traffic?",
+    "image": null,
+    "options": [
+      "UDP packets are encrypted",
+      "UDP has no connection state",
+      "UDP uses dynamic ports",
+      "UDP bypasses routers"
+    ],
+    "correct_answers": ["UDP has no connection state"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Crypto/TLS",
+    "question": "Why do highly protected networks still suffer successful attacks?",
+    "image": null,
+    "options": [
+      "Encryption is too slow",
+      "Firewalls block too much traffic",
+      "Attacks may bypass or exploit allowed behavior",
+      "IDS systems replace firewalls"
+    ],
+    "correct_answers": ["Attacks may bypass or exploit allowed behavior"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]
