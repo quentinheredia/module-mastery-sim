@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Module Mastery - Exam Prep</title>
-    <meta name="description" content="Exam prep site for NET4009 & NET4005." />
+    <meta
+      name="description"
+      content="Exam prep site for NET4009, NET4001, NET3008."
+    />
     <meta name="author" content="Q" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,11 +21,11 @@
     <div id="root"></div>
     <script>
       // Restore redirect from 404.html for GitHub Pages SPA routing
-      (function() {
+      (function () {
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
-        if (redirect && redirect !== '/') {
-          var base = '/module-mastery-sim';
+        if (redirect && redirect !== "/") {
+          var base = "/module-mastery-sim";
           history.replaceState(null, null, base + redirect);
         }
       })();
