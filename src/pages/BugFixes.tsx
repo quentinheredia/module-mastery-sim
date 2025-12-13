@@ -15,6 +15,30 @@ interface BugFix {
 const bugFixes: BugFix[] = [
   {
     date: "2025-12-13",
+    title: "Added 42 new Crypto/TLS questions",
+    description: "Added comprehensive questions covering TLS 1.3 handshake, IPsec (modes, AH/ESP, SAs, IKE), WiFi/LTE/5G authentication, and firewalls/IDS. NET4005 Crypto module now has 63 total questions.",
+    status: "fixed",
+  },
+  {
+    date: "2025-12-13",
+    title: "Added 30 Cloud Computing questions",
+    description: "New questions covering IaaS/PaaS/SaaS, bare metal vs VMs vs containers, container lifecycle, Flask basics, and orchestration concepts.",
+    status: "fixed",
+  },
+  {
+    date: "2025-12-13",
+    title: "Added 30 SDN questions",
+    description: "New questions covering traditional vs SDN control planes, OpenFlow messages, controller architecture (OpenDaylight, ONOS), and SDN benefits.",
+    status: "fixed",
+  },
+  {
+    date: "2025-12-13",
+    title: "Added 15 DNS/Application Layer questions",
+    description: "New questions covering DNS hierarchy, caching, record types, security (DNSSEC, poisoning, amplification attacks).",
+    status: "fixed",
+  },
+  {
+    date: "2025-12-13",
     title: "Fixed matching question correct answers display",
     description: "Fixed an issue where some matching questions showed pair descriptions as correct answers instead of the actual options.",
     status: "fixed",
