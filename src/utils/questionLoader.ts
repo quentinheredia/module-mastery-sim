@@ -107,12 +107,12 @@ export const shuffleArray = <T>(array: T[]): T[] => {
 export const getRandomQuestions = (courseId: string = "net4009", count: number = 40): Question[] => {
   const allQuestions = loadQuestions(courseId);
   
-  // Special logic for NET4005: 10 questions with specific distribution
-  if (courseId === "net4005") {
+  // Special logic for NET4005 with specific distribution (only for default 10 questions)
+  if (courseId === "net4005" && count === 10) {
     return getNet4005ExamQuestions(allQuestions);
   }
   
-  // Default behavior for other courses
+  // Default behavior: random selection up to requested count
   const shuffled = shuffleArray(allQuestions);
   return shuffled.slice(0, Math.min(count, shuffled.length));
 };
