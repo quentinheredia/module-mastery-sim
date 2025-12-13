@@ -454,5 +454,145 @@
     "correct_answers": ["It runs multiple streams over a single TCP connection"],
     "question_type": "multiple_choice",
     "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why does Variable Bit Rate (VBR) video encoding generally achieve better efficiency than Constant Bit Rate (CBR)?",
+    "image": null,
+    "options": [
+      "VBR eliminates the need for buffering",
+      "VBR adapts encoding rate based on spatial and temporal redundancy",
+      "VBR guarantees constant network throughput",
+      "VBR prevents packet loss"
+    ],
+    "correct_answers": ["VBR adapts encoding rate based on spatial and temporal redundancy"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which factor is the primary reason client-side buffering is required when streaming stored video over the Internet?",
+    "image": null,
+    "options": [
+      "Video files are too large to transmit",
+      "Server encoding rates are fixed",
+      "Network delay and jitter vary over time",
+      "TCP retransmissions are disabled"
+    ],
+    "correct_answers": ["Network delay and jitter vary over time"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What does the continuous playout constraint imply for a video streaming client?",
+    "image": null,
+    "options": [
+      "Playback speed must adapt to network congestion",
+      "Playback timing must match original video timing once started",
+      "Video frames must arrive in fixed-size packets",
+      "All video data must be downloaded before playback"
+    ],
+    "correct_answers": ["Playback timing must match original video timing once started"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why does a streaming client introduce an initial playout delay before starting video playback?",
+    "image": null,
+    "options": [
+      "To maximize encoding quality",
+      "To eliminate packet loss entirely",
+      "To absorb network-added delay and jitter",
+      "To reduce server load"
+    ],
+    "correct_answers": ["To absorb network-added delay and jitter"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What fundamental architectural change does DASH introduce compared to traditional streaming?",
+    "image": null,
+    "options": [
+      "Intelligence is moved entirely to the server",
+      "Video is sent using UDP instead of TCP",
+      "Adaptation decisions are made at the client",
+      "Congestion control is disabled"
+    ],
+    "correct_answers": ["Adaptation decisions are made at the client"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Which decision is explicitly made by the DASH client during streaming?",
+    "image": null,
+    "options": [
+      "How video chunks are encoded",
+      "When and at what bitrate to request the next chunk",
+      "How chunks are replicated across CDNs",
+      "How packets are routed through the network"
+    ],
+    "correct_answers": ["When and at what bitrate to request the next chunk"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why is DASH implemented over HTTP rather than a specialized streaming protocol?",
+    "image": null,
+    "options": [
+      "HTTP eliminates buffering requirements",
+      "HTTP allows reuse of existing caching and CDN infrastructure",
+      "HTTP guarantees low latency",
+      "HTTP provides built-in video compression"
+    ],
+    "correct_answers": ["HTTP allows reuse of existing caching and CDN infrastructure"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "Why does a single large 'mega-server' fail to scale for Internet video delivery?",
+    "image": null,
+    "options": [
+      "It cannot encode video at multiple bitrates",
+      "It creates congestion and long paths to distant users",
+      "It prevents adaptive bitrate selection",
+      "It lacks DNS support"
+    ],
+    "correct_answers": ["It creates congestion and long paths to distant users"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "What is the key scalability advantage of deploying CDN servers close to users?",
+    "image": null,
+    "options": [
+      "Reduces server-side encoding complexity",
+      "Eliminates need for adaptive streaming",
+      "Reduces latency and access-link congestion",
+      "Guarantees constant throughput"
+    ],
+    "correct_answers": ["Reduces latency and access-link congestion"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Application Layer Protocols",
+    "question": "How does a CDN typically direct a client to an appropriate content copy?",
+    "image": null,
+    "options": [
+      "Using IP multicast",
+      "Through TCP connection migration",
+      "Via DNS-based redirection",
+      "Using HTTP cookies"
+    ],
+    "correct_answers": ["Via DNS-based redirection"],
+    "question_type": "multiple_choice",
+    "points": 1
   }
 ]
