@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -6,14 +7,17 @@ import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { useQuiz } from "@/contexts/QuizContext";
 import { useCourse } from "@/contexts/CourseContext";
 import { courseColorClasses } from "@/components/layout/CourseSelector";
-import { Home, RotateCcw, History, Clock, Calendar, FileQuestion, ChevronRight } from "lucide-react";
+import { Home, RotateCcw, History, Clock, Calendar, FileQuestion, ChevronRight, Filter } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
 import { Header } from "@/components/layout/Header";
 import { CourseColor } from "@/types/quiz";
 
 const Results = () => {
   const navigate = useNavigate();
   const { currentAttempt, resetQuiz } = useQuiz();
+  const [showWrongOnly, setShowWrongOnly] = useState(false);
   const { courses } = useCourse();
   
   const attemptCourse = currentAttempt?.courseId 
@@ -179,17 +183,42 @@ const Results = () => {
             </TabsContent>
 
             <TabsContent value="review" className="space-y-6 mt-6">
-              {currentAttempt.questions.map((question, idx) => (
-                <QuestionCard
-                  key={idx}
-                  question={question}
-                  questionNumber={idx + 1}
-                  userAnswer={currentAttempt.answers[idx]}
-                  onAnswerChange={() => {}}
-                  showFeedback={true}
-                  disabled={true}
-                />
-              ))}
+              {/* Filter Toggle */}
+              <Card variant="elevated" className="p-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Filter className="h-4 w-4 text-muted-foreground" />
+                    <Label htmlFor="wrong-only" className="text-sm font-medium cursor-pointer">
+                      Show wrong answers only
+                    </Label>
+                  </div>
+                  <Switch
+                    id="wrong-only"
+                    checked={showWrongOnly}
+                    onCheckedChange={setShowWrongOnly}
+                  />
+                </div>
+                {showWrongOnly && (
+                  <p className="text-xs text-muted-foreground mt-2">
+                    Showing {currentAttempt.answers.filter(a => !a.isCorrect).length} incorrect answers
+                  </p>
+                )}
+              </Card>
+
+              {currentAttempt.questions
+                .map((question, idx) => ({ question, idx, answer: currentAttempt.answers[idx] }))
+                .filter(({ answer }) => !showWrongOnly || !answer.isCorrect)
+                .map(({ question, idx, answer }) => (
+                  <QuestionCard
+                    key={idx}
+                    question={question}
+                    questionNumber={idx + 1}
+                    userAnswer={answer}
+                    onAnswerChange={() => {}}
+                    showFeedback={true}
+                    disabled={true}
+                  />
+                ))}
             </TabsContent>
           </Tabs>
         </div>
