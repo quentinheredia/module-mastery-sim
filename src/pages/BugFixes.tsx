@@ -15,6 +15,12 @@ interface BugFix {
 const bugFixes: BugFix[] = [
   {
     date: "2025-12-13",
+    title: "Fixed page refresh losing base URL",
+    description: "Fixed GitHub Pages SPA routing issue where refreshing on any page other than the home page would lose the /module-mastery-sim/ base path.",
+    status: "fixed",
+  },
+  {
+    date: "2025-12-13",
     title: "Added 42 new Crypto/TLS questions",
     description: "Added comprehensive questions covering TLS 1.3 handshake, IPsec (modes, AH/ESP, SAs, IKE), WiFi/LTE/5G authentication, and firewalls/IDS. NET4005 Crypto module now has 63 total questions.",
     status: "fixed",
