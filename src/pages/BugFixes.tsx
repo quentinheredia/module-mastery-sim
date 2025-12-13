@@ -14,6 +14,12 @@ interface BugFix {
 
 const bugFixes: BugFix[] = [
   {
+    date: "2024-12-13",
+    title: "Fixed matching question correct answers display",
+    description: "Fixed an issue where some matching questions showed pair descriptions as correct answers instead of the actual options.",
+    status: "fixed",
+  },
+  {
     date: "2024-12-12",
     title: "Matching questions now allow option reuse",
     description: "Fixed an issue where matching questions with more pairs than options couldn't be completed because options couldn't be selected more than once.",
