@@ -14,7 +14,7 @@ interface BugFix {
 
 const bugFixes: BugFix[] = [
   {
-    date: "2024-12-13",
+    date: "2025-12-13",
     title: "Fixed matching question correct answers display",
     description: "Fixed an issue where some matching questions showed pair descriptions as correct answers instead of the actual options.",
     status: "fixed",
