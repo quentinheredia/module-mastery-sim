@@ -2,7 +2,7 @@
   {
     "module": "Module 3a - BGP Basics",
     "question": "Refer to BGP topology that is shown below. R1 and R4 have advertised their loopback interfaces into BGP: 192.168.1.1/32 and 192.168.4.4/32, respectively. Assume all BGP sessions are in Established state. Based on the outputs of routing tables of R1, R2, R3 and R4, which two statements are true and can be concluded?",
-    "image": "images/quizzes/net3008_q4.png",
+    "image": "images/quizzes/net3008_q1.png",
     "options": [
       "The peering links 10.12.1.0/24 and 10.34.1.0/24 are in both R2's and R3's routing tables",
       "R1's BGP table is missing the 192.168.4.4/32 prefix because the prefix did not pass R2's next hop accessibility check",
@@ -302,6 +302,7 @@
   {
     "module": "Module 2b - OSPFv2 Advanced",
     "question": "Which three statements can be concluded about OSPF Area 34?",
+    "image": "images/quizzes/net3008_q21_config.png",
     "options": [
       "External route 172.16.1.0/24 will not be injected",
       "Area 34 blocks LSAs type 3, 4, and 5",
@@ -363,6 +364,7 @@
   {
     "module": "Module 6 - Route Maps & PBR",
     "question": "Which two statements describe the result of the route-map configuration?",
+    "image": "images/quizzes/net3008_q25.png",
     "options": [
       "Matching prefixes set local preference to 250",
       "Non-matching prefixes dropped",
@@ -393,6 +395,7 @@
   {
     "module": "Module 2c - OSPFv3",
     "question": "Which address will R1 use as the source for all OSPFv3 messages?",
+    "image": "images/quizzes/net3008_q27.png",
     "options": [
       "FF02::1",
       "FF02::1:FF00:1",
@@ -454,6 +457,7 @@
   {
     "module": "Module 3a - BGP Basics",
     "question": "Which two BGP commands are required to peer using Loopback0?",
+    "image": "images/quizzes/net3008_q31.png",
     "options": [
       "neighbor <peer-lo0> remote-as <AS>",
       "neighbor <peer-lo0> update-source lo0",
@@ -469,6 +473,7 @@
   {
     "module": "Module 2b - OSPFv2 Advanced",
     "question": "Which OSPF command produced the output shown?",
+    "image": "images/quizzes/net3008_q32.png",
     "options": [
       "show ip ospf interface",
       "show ip ospf interface brief",
