@@ -18,6 +18,7 @@
   {
     "module": "Module 2b - OSPFv2 Advanced",
     "question": "Based on the OSPFv2 topology below, Area 34 is configured as Totally Not-So-Stubby Area, which default route type will be injected into Area 34?",
+    "image": "images/quizzes/net3008_q2.png",
     "options": [
       "O*N1 0.0.0.0/0 default route type 7 LSA from router R3",
       "O*E2 0.0.0.0/0 default route type 5 LSA from router R3",
