@@ -13,9 +13,14 @@ import {
   checkAnswer,
 } from "@/utils/questionLoader";
 
+interface ExamSettings {
+  questionCount: number;
+  duration: number; // in minutes
+}
+
 interface QuizContextType {
   quizState: QuizState;
-  startQuiz: (mode: "practice" | "exam", courseId: string, selectedModule?: string) => void;
+  startQuiz: (mode: "practice" | "exam", courseId: string, selectedModule?: string, examSettings?: ExamSettings) => void;
   answerQuestion: (questionIndex: number, selectedAnswers: string[], matchingAnswers?: MatchingPairs) => void;
   nextQuestion: () => void;
   previousQuestion: () => void;
@@ -25,16 +30,18 @@ interface QuizContextType {
   setQuestionsPerPage: (count: 1 | 5 | 10) => void;
   getAttemptHistory: (courseId?: string) => QuizAttempt[];
   currentAttempt: QuizAttempt | null;
+  examDuration: number;
 }
 
 const QuizContext = createContext<QuizContextType | undefined>(undefined);
 
-const EXAM_TIME = 30 * 60; // 30 minutes in seconds
+const DEFAULT_EXAM_TIME = 30 * 60; // 30 minutes in seconds
 const STORAGE_KEY = "quiz_attempts";
 
 export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  const [examDuration, setExamDuration] = useState(DEFAULT_EXAM_TIME);
   const [quizState, setQuizState] = useState<QuizState>({
     currentQuestionIndex: 0,
     questions: [],
@@ -42,7 +49,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
     mode: "practice",
     isStarted: false,
     isCompleted: false,
-    timeRemaining: EXAM_TIME,
+    timeRemaining: DEFAULT_EXAM_TIME,
     questionsPerPage: 1,
   });
 
@@ -87,20 +94,24 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
     }
   }, [quizState.timeRemaining]);
 
-  const startQuiz = (mode: "practice" | "exam", courseId: string, selectedModule?: string) => {
+  const startQuiz = (mode: "practice" | "exam", courseId: string, selectedModule?: string, examSettings?: ExamSettings) => {
     let questions: Question[] = [];
     setCurrentCourseId(courseId);
-    console.log("QuizContext.startQuiz called with courseId:", courseId, "mode:", mode);
+    console.log("QuizContext.startQuiz called with courseId:", courseId, "mode:", mode, "examSettings:", examSettings);
 
     if (mode === "practice" && selectedModule) {
       questions = loadQuestions(courseId).filter((q) => q.module === selectedModule);
     } else if (mode === "exam") {
-      questions = getRandomQuestions(courseId, 40);
+      const questionCount = examSettings?.questionCount || (courseId === "net4005" ? 10 : 40);
+      questions = getRandomQuestions(courseId, questionCount);
     } else {
       questions = getRandomQuestions(courseId, 40);
     }
     
     console.log("Loaded questions count:", questions.length, "First question module:", questions[0]?.module);
+
+    const duration = examSettings?.duration ? examSettings.duration * 60 : DEFAULT_EXAM_TIME;
+    setExamDuration(duration);
 
     setQuizState({
       currentQuestionIndex: 0,
@@ -113,7 +124,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
       mode,
       isStarted: true,
       isCompleted: false,
-      timeRemaining: EXAM_TIME,
+      timeRemaining: duration,
       selectedModule,
       questionsPerPage: mode === "exam" ? 1 : 1,
     });
@@ -196,7 +207,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
       (a) => a.isCorrect
     ).length;
     const score = (correctAnswers / quizState.questions.length) * 100;
-    const timeSpent = EXAM_TIME - quizState.timeRemaining;
+    const timeSpent = examDuration - quizState.timeRemaining;
     const moduleBreakdown = calculateModuleBreakdown(
       quizState.questions,
       quizState.userAnswers
@@ -233,7 +244,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
       mode: "practice",
       isStarted: false,
       isCompleted: false,
-      timeRemaining: EXAM_TIME,
+      timeRemaining: DEFAULT_EXAM_TIME,
       questionsPerPage: 1,
     });
     setCurrentAttempt(null);
@@ -273,6 +284,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
         setQuestionsPerPage,
         getAttemptHistory,
         currentAttempt,
+        examDuration,
       }}
     >
       {children}
