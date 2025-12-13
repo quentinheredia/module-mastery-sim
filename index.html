@@ -21,8 +21,9 @@
       (function() {
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
-        if (redirect && redirect !== location.pathname) {
-          history.replaceState(null, null, redirect);
+        if (redirect && redirect !== '/') {
+          var base = '/module-mastery-sim';
+          history.replaceState(null, null, base + redirect);
         }
       })();
     </script>
