@@ -318,7 +318,7 @@ const Home = () => {
                   <div
                     className={`h-16 w-16 rounded-2xl ${courseColors.bg} border ${courseColors.border} flex items-center justify-center shadow-elevation-md group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <Timer className={`h-8 w-8 ${courseColors.text}`} />
+                    <BookOpen className={`h-8 w-8 ${courseColors.text}`} />
                   </div>
                   <h3 className="text-2xl font-bold font-display">
                     Cheat Sheet & Important Formulas
@@ -379,6 +379,55 @@ const Home = () => {
                     className={`w-full mt-4 ${courseColors.dot} text-white border-transparent hover:opacity-90 transition-opacity shadow-elevation-sm`}
                   >
                     Start Exam
+                  </Button>
+                </div>
+              </Card>
+
+              {/* Textbook Questions */}
+              <Card
+                variant="interactive"
+                className={`p-8 group relative overflow-hidden border ${courseColors.border} animate-fade-up cursor-pointer`}
+                style={{ animationDelay: "200ms" }}
+                onClick={() => navigate("/textbook")}
+              >
+                {/* Hover overlay with proper contrast */}
+                <div
+                  className={`absolute inset-0 ${courseColors.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                />
+
+                <div className="relative flex flex-col items-center text-center space-y-4">
+                  <div
+                    className={`h-16 w-16 rounded-2xl ${courseColors.bg} border ${courseColors.border} flex items-center justify-center shadow-elevation-md group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <BookOpen className={`h-8 w-8 ${courseColors.text}`} />
+                  </div>
+                  <h3 className="text-2xl font-bold font-display">
+                    Textbook Questions
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Practice questions from the textbook without having to open
+                    it up.
+                  </p>
+                  <ul className="text-sm text-muted-foreground space-y-2 w-full">
+                    {["Textbook questions organized by slide sections"].map(
+                      (item) => (
+                        <li
+                          key={item}
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <CheckCircle2
+                            className={`h-4 w-4 ${courseColors.text}`}
+                          />
+                          <span>{item}</span>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                  <Button
+                    size="lg"
+                    className={`w-full mt-4 ${courseColors.dot} text-white border-transparent hover:opacity-90 transition-opacity shadow-elevation-sm`}
+                  >
+                    View Questions
                   </Button>
                 </div>
               </Card>

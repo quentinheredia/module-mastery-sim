@@ -65,6 +65,15 @@ const AVAILABLE_COURSES: Course[] = [
     name: "NET4001",
     description: "Network Simulation",
     color: "amber",
+    /*
+    Modules will need to updated to:
+      Queueing Models
+      RN Generation
+      Random Variate Generation
+      Input Modeling
+      Verification & Validation
+      Output Analysis
+    */
     modules: [
       "Inverse Transform Method",
       "Random Number Generation",
@@ -82,12 +91,14 @@ export const CourseProvider: React.FC<{ children: React.ReactNode }> = ({
   // Load saved course on mount
   useEffect(() => {
     const savedCourseId = localStorage.getItem(STORAGE_KEY);
-    const course = AVAILABLE_COURSES.find(c => c.id === savedCourseId) || AVAILABLE_COURSES[0];
+    const course =
+      AVAILABLE_COURSES.find((c) => c.id === savedCourseId) ||
+      AVAILABLE_COURSES[0];
     setActiveCourseState(course);
   }, []);
 
   const setActiveCourse = (courseId: string) => {
-    const course = AVAILABLE_COURSES.find(c => c.id === courseId);
+    const course = AVAILABLE_COURSES.find((c) => c.id === courseId);
     if (course) {
       setActiveCourseState(course);
       localStorage.setItem(STORAGE_KEY, courseId);
