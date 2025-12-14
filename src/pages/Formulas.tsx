@@ -25,6 +25,7 @@ import {
 import { ArrowLeft, Search } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 
+import { Math } from "@/components/math/Math";
 import {
   NET4001_FORMULA_SECTIONS,
   NET4001_SURVIVAL_KIT_IDS,
@@ -128,53 +129,69 @@ const Formulas = () => {
 
             {/* CHEAT SHEET */}
             <TabsContent value="cheatsheet" className="space-y-4">
-              {filteredSections.map((sec) => (
-                <Card key={sec.id} className="p-4">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <h2 className="text-lg font-semibold">{sec.title}</h2>
-                      {sec.description ? (
-                        <p className="text-sm text-muted-foreground mt-1">
-                          {sec.description}
-                        </p>
-                      ) : null}
-                    </div>
-                    <Badge variant="secondary">
-                      {sec.formulas.length} item
-                      {sec.formulas.length === 1 ? "" : "s"}
-                    </Badge>
-                  </div>
-
-                  <Separator className="my-4" />
-
-                  <Accordion type="multiple" className="w-full">
-                    {sec.formulas.map((f) => (
-                      <AccordionItem key={f.id} value={f.id}>
-                        <AccordionTrigger className="text-left">
-                          <div className="flex flex-col gap-1">
-                            <div className="flex items-center gap-2 flex-wrap">
-                              <span className="font-medium">{f.name}</span>
-                              {(f.tags ?? []).slice(0, 4).map((t) => (
-                                <Badge key={t} variant="outline">
-                                  {t}
-                                </Badge>
-                              ))}
-                            </div>
-                            <div className="text-xs text-muted-foreground">
-                              {f.source.pdf} • slide {f.source.slide}
-                              {f.source.section ? ` • ${f.source.section}` : ""}
-                            </div>
+              <Accordion type="multiple" className="w-full">
+                {filteredSections.map((sec) => (
+                  <AccordionItem key={sec.id} value={`section-${sec.id}`}>
+                    <Card className="p-0 overflow-hidden">
+                      <AccordionTrigger className="px-4 py-4 text-left hover:no-underline">
+                        <div className="flex items-start justify-between gap-3 w-full">
+                          <div>
+                            <h2 className="text-lg font-semibold">
+                              {sec.title}
+                            </h2>
+                            {sec.description ? (
+                              <p className="text-sm text-muted-foreground mt-1">
+                                {sec.description}
+                              </p>
+                            ) : null}
                           </div>
-                        </AccordionTrigger>
+                          <Badge variant="secondary" className="shrink-0">
+                            {sec.formulas.length} item
+                            {sec.formulas.length === 1 ? "" : "s"}
+                          </Badge>
+                        </div>
+                      </AccordionTrigger>
 
-                        <AccordionContent>
-                          <FormulaBlock f={f} />
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </Card>
-              ))}
+                      <AccordionContent className="px-4 pb-4">
+                        {/* Inner accordion for formulas in the section */}
+                        <Accordion type="multiple" className="w-full">
+                          {sec.formulas.map((f) => (
+                            <AccordionItem
+                              key={f.id}
+                              value={`formula-${sec.id}-${f.id}`}
+                            >
+                              <AccordionTrigger className="text-left">
+                                <div className="flex flex-col gap-1">
+                                  <div className="flex items-center gap-2 flex-wrap">
+                                    <span className="font-medium">
+                                      {f.name}
+                                    </span>
+                                    {(f.tags ?? []).slice(0, 4).map((t) => (
+                                      <Badge key={t} variant="outline">
+                                        {t}
+                                      </Badge>
+                                    ))}
+                                  </div>
+                                  <div className="text-xs text-muted-foreground">
+                                    {f.source.pdf} • slide {f.source.slide}
+                                    {f.source.section
+                                      ? ` • ${f.source.section}`
+                                      : ""}
+                                  </div>
+                                </div>
+                              </AccordionTrigger>
+
+                              <AccordionContent>
+                                <FormulaBlock f={f} />
+                              </AccordionContent>
+                            </AccordionItem>
+                          ))}
+                        </Accordion>
+                      </AccordionContent>
+                    </Card>
+                  </AccordionItem>
+                ))}
+              </Accordion>
 
               {filteredSections.length === 0 ? (
                 <Card className="p-6 text-sm text-muted-foreground">
@@ -299,9 +316,7 @@ function FormulaBlock({ f, compact }: { f: FormulaItem; compact?: boolean }) {
     <div className="space-y-3">
       <div className="rounded-lg border bg-background/60 p-3">
         <div className="text-xs text-muted-foreground mb-2">LaTeX</div>
-        <pre className="text-sm font-mono whitespace-pre-wrap break-words">
-          {f.latex}
-        </pre>
+        <Math latex={f.latex} block />
       </div>
 
       <p className="text-sm">{f.explanation}</p>

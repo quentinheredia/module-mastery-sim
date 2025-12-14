@@ -198,6 +198,298 @@ export const NET4001_FORMULA_SECTIONS: FormulaSection[] = [
         },
         tags: ["mmk"],
       },
+      // --- ADD THESE inside the "queueing" section formulas: [ ... ]
+
+      {
+        id: "mm1-L",
+        name: "M/M/1 Mean Number in System",
+        latex: String.raw`L=\frac{\rho}{1-\rho}`,
+        explanation:
+          "Average number of customers in the system (queue + service) for M/M/1.",
+        purpose: [
+          "Compute congestion level",
+          "Convert to delay via Little’s Law",
+        ],
+        assumptions: [
+          "M/M/1 (Poisson arrivals λ, exponential service μ, 1 server)",
+          "Steady state",
+          "Stability: ρ < 1",
+        ],
+        variables: [
+          { symbol: "L", meaning: "mean number in system" },
+          { symbol: "ρ", meaning: "utilization (ρ=λ/μ)" },
+        ],
+        exampleTypes: ["Find average number of packets/jobs in system"],
+        dependencies: ["mm1-rho"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "31/69 (deck slide 26)",
+          section: "M/M/1 – Equations",
+        },
+        tags: ["mm1", "core", "exam"],
+      },
+      {
+        id: "mm1-W",
+        name: "M/M/1 Mean Time in System",
+        latex: String.raw`W=\frac{L}{\lambda}=\frac{1}{\mu-\lambda}`,
+        explanation: "Average response time in system for M/M/1.",
+        purpose: ["Compute end-to-end delay (queueing + service)"],
+        assumptions: ["M/M/1 assumptions", "Steady state", "λ < μ"],
+        variables: [
+          { symbol: "W", meaning: "mean time in system" },
+          { symbol: "L", meaning: "mean number in system" },
+          { symbol: "λ", meaning: "arrival rate" },
+          { symbol: "μ", meaning: "service rate" },
+        ],
+        exampleTypes: ["Compute mean delay given λ and μ"],
+        dependencies: ["mm1-L", "little-law"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "31/69 (deck slide 26)",
+          section: "M/M/1 – Equations",
+        },
+        tags: ["mm1", "core", "exam"],
+      },
+      {
+        id: "mm1-Wq",
+        name: "M/M/1 Mean Waiting Time in Queue",
+        latex: String.raw`W_q=\frac{1}{\mu-\lambda}-\frac{1}{\mu}=\frac{\rho}{\mu-\lambda}`,
+        explanation: "Average waiting time before service begins in M/M/1.",
+        purpose: ["Separate queueing delay from service time"],
+        assumptions: ["M/M/1 assumptions", "Steady state", "λ < μ"],
+        variables: [
+          { symbol: "Wq", meaning: "mean waiting time in queue" },
+          { symbol: "λ", meaning: "arrival rate" },
+          { symbol: "μ", meaning: "service rate" },
+          { symbol: "ρ", meaning: "utilization (λ/μ)" },
+        ],
+        exampleTypes: ["Compute waiting time in queue for packets/jobs"],
+        dependencies: ["mm1-W", "mm1-rho"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "31/69 (deck slide 26)",
+          section: "M/M/1 – Equations",
+        },
+        tags: ["mm1", "core", "exam"],
+      },
+      {
+        id: "mm1-Lq",
+        name: "M/M/1 Mean Number in Queue",
+        latex: String.raw`L_q=\lambda W_q=\frac{\rho^2}{1-\rho}`,
+        explanation:
+          "Average number waiting (excluding the one in service) for M/M/1.",
+        purpose: ["Predict queue length/buffer pressure"],
+        assumptions: ["M/M/1 assumptions", "Steady state", "ρ < 1"],
+        variables: [
+          { symbol: "Lq", meaning: "mean number in queue" },
+          { symbol: "λ", meaning: "arrival rate" },
+          { symbol: "Wq", meaning: "mean waiting time in queue" },
+          { symbol: "ρ", meaning: "utilization" },
+        ],
+        exampleTypes: ["Compute expected queue length"],
+        dependencies: ["mm1-Wq", "little-law-queue"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "31/69 (deck slide 26)",
+          section: "M/M/1 – Equations",
+        },
+        tags: ["mm1", "core", "exam"],
+      },
+      {
+        id: "mm1-Ls",
+        name: "M/M/1 Mean Number in Service",
+        latex: String.raw`L_s=\frac{\lambda}{\mu}`,
+        explanation: "Average number being served (busy fraction) in M/M/1.",
+        purpose: ["Split system population into service + queue components"],
+        assumptions: ["M/M/1 assumptions", "Steady state"],
+        variables: [
+          { symbol: "Ls", meaning: "mean number in service" },
+          { symbol: "λ", meaning: "arrival rate" },
+          { symbol: "μ", meaning: "service rate" },
+        ],
+        exampleTypes: ["Compute service occupancy"],
+        dependencies: ["mm1-rho"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "32/69 (deck slide 27)",
+          section: "Decomposition",
+        },
+        tags: ["mm1"],
+      },
+      {
+        id: "mm1-decompose-L",
+        name: "M/M/1 Decomposition of Mean Number in System",
+        latex: String.raw`L=L_s+L_q`,
+        explanation:
+          "Total mean number in system equals mean in service plus mean in queue.",
+        purpose: ["Sanity-check values; connect L, Lq, Ls"],
+        assumptions: ["M/M/1 assumptions", "Steady state"],
+        variables: [
+          { symbol: "L", meaning: "mean number in system" },
+          { symbol: "Ls", meaning: "mean number in service" },
+          { symbol: "Lq", meaning: "mean number in queue" },
+        ],
+        exampleTypes: ["Given L and Ls, compute Lq"],
+        dependencies: ["mm1-Ls", "mm1-Lq"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "32/69 (deck slide 27)",
+          section: "Decomposition",
+        },
+        tags: ["mm1"],
+      },
+      {
+        id: "link-queue-packets",
+        name: "Packets in a Link Queue (Flow vs Capacity)",
+        latex: String.raw`N_{ij}=\frac{F_{ij}}{C_{ij}-F_{ij}}`,
+        explanation:
+          "Model relationship for average packets at link (i,j) based on flow and capacity (captures blow-up as F→C).",
+        purpose: ["Back-of-the-envelope congestion estimation on a link"],
+        assumptions: [
+          "Applies under the slide’s link-model assumptions",
+          "Requires Fij < Cij",
+        ],
+        variables: [
+          { symbol: "Nij", meaning: "avg packets associated with link (i,j)" },
+          { symbol: "Fij", meaning: "flow on link (i,j)" },
+          { symbol: "Cij", meaning: "capacity of link (i,j)" },
+        ],
+        exampleTypes: ["Estimate queue growth as utilization increases"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "30/69 (deck slide 25)",
+          section: "Link model",
+        },
+        tags: ["networks", "exam"],
+      },
+      {
+        id: "link-prop-processing-packets",
+        name: "Extra Packets Due to Propagation + Processing Delay",
+        latex: String.raw`N^{(delay)}_{ij}=(p_{ij}+t_i)\frac{F_{ij}}{L}`,
+        explanation:
+          "Estimates additional packets ‘in flight / in processing’ due to propagation delay pij and processing delay ti.",
+        purpose: ["Relate delays to how many packets exist in the system"],
+        assumptions: [
+          "Uses slide’s link-delay model",
+          "Requires consistent units",
+        ],
+        variables: [
+          { symbol: "pij", meaning: "propagation delay on link (i,j)" },
+          { symbol: "ti", meaning: "processing delay at node i" },
+          { symbol: "Fij", meaning: "flow on link (i,j)" },
+          { symbol: "L", meaning: "packet length (bits)" },
+        ],
+        exampleTypes: ["Estimate in-flight packets from RTT-ish parameters"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "30/69 (deck slide 25)",
+          section: "Link model",
+        },
+        tags: ["networks"],
+      },
+      {
+        id: "mmk-P0",
+        name: "M/M/k Normalization Constant (P0)",
+        latex: String.raw`P_0=\left[\sum_{n=0}^{k-1}\frac{\rho^n}{n!}+\frac{\rho^k}{k!}\frac{1}{1-\rho/k}\right]^{-1}`,
+        explanation:
+          "Probability the M/M/k system is empty (used to compute all steady-state probabilities).",
+        purpose: ["Compute waiting probability / queue metrics in M/M/k"],
+        assumptions: [
+          "Poisson arrivals, exponential service, k identical servers",
+          "Steady state",
+          "Stability: ρ/k < 1 (equivalently λ < kμ)",
+        ],
+        variables: [
+          { symbol: "P0", meaning: "probability system is empty" },
+          {
+            symbol: "ρ",
+            meaning: "offered load (commonly ρ=λ/μ in the slides)",
+          },
+          { symbol: "k", meaning: "number of servers" },
+        ],
+        exampleTypes: ["Compute P0 then compute P(wait) or Pn"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "41/69 (deck slide 35)",
+          section: "M/M/k – Probability of blocking/waiting",
+        },
+        tags: ["mmk", "exam"],
+      },
+      {
+        id: "erlang-c",
+        name: "Erlang C (Probability of Waiting in M/M/k)",
+        latex: String.raw`P(\text{wait})=\frac{\frac{\rho^k}{k!}\frac{1}{1-\rho/k}}{\sum_{n=0}^{k-1}\frac{\rho^n}{n!}+\frac{\rho^k}{k!}\frac{1}{1-\rho/k}}`,
+        explanation:
+          "Probability an arrival must wait because all k servers are busy (classic Erlang C).",
+        purpose: ["Sizing k to meet delay / waiting probability targets"],
+        assumptions: ["M/M/k with infinite queue", "Steady state", "ρ/k < 1"],
+        variables: [
+          {
+            symbol: "ρ",
+            meaning: "offered load (commonly λ/μ form per slides)",
+          },
+          { symbol: "k", meaning: "number of servers" },
+        ],
+        exampleTypes: ["Choose k so P(wait) ≤ threshold"],
+        dependencies: ["mmk-P0"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "41/69 (deck slide 35)",
+          section: "M/M/k – Probability of blocking/waiting",
+        },
+        tags: ["mmk", "exam"],
+      },
+      {
+        id: "erlang-b",
+        name: "Erlang B (Blocking Probability for M/M/k/k)",
+        latex: String.raw`B(A,C)=\frac{\frac{A^C}{C!}}{\sum_{n=0}^{C}\frac{A^n}{n!}}\quad\text{where }A=\frac{\lambda}{\mu}`,
+        explanation:
+          "Loss system (no queue). Probability an arrival is blocked because all C channels are busy.",
+        purpose: [
+          "Call admission / trunk sizing",
+          "Loss probability constraints",
+        ],
+        assumptions: [
+          "M/M/C/C (Poisson arrivals, exponential holding times)",
+          "No waiting room (blocked calls are lost)",
+        ],
+        variables: [
+          { symbol: "B(A,C)", meaning: "blocking probability" },
+          { symbol: "A", meaning: "offered traffic in Erlangs (λ/μ)" },
+          { symbol: "C", meaning: "number of channels/servers" },
+          { symbol: "λ", meaning: "arrival rate" },
+          { symbol: "μ", meaning: "service rate" },
+        ],
+        exampleTypes: ["Find C such that B(A,C) ≤ 0.01"],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "59/69 (deck slide 48)",
+          section: "M/M/k/k – Erlang Example 2",
+        },
+        tags: ["erlang", "exam"],
+      },
+      {
+        id: "erlang-units",
+        name: "Erlang Unit Conversions",
+        latex: String.raw`1\ \text{Erlang}=60\ \text{CM}=3600\ \text{CS}=36\ \text{CCS}`,
+        explanation:
+          "Traffic units: call-minutes (CM), call-seconds (CS), centum call-seconds (CCS).",
+        purpose: ["Convert measured traffic to Erlangs and vice-versa"],
+        assumptions: [
+          "Traffic measured over a 1-hour window (as defined in the slides)",
+        ],
+        variables: [],
+        exampleTypes: [
+          "Convert call seconds to Erlangs",
+          "Compute Erlangs from usage",
+        ],
+        source: {
+          pdf: "Queueing models - 2025.pdf",
+          slide: "57/69 (deck slide 46)",
+          section: "Erlang Definition",
+        },
+        tags: ["erlang"],
+      },
     ],
   },
 
@@ -478,6 +770,62 @@ export const NET4001_FORMULA_SECTIONS: FormulaSection[] = [
         },
         tags: ["implementation"],
       },
+      // --- ADD THESE inside the "output-analysis" section formulas: [ ... ]
+
+      {
+        id: "replication-variance",
+        name: "Replication Variance Estimate",
+        latex: String.raw`S^2=\frac{1}{R-1}\sum_{i=1}^{R}(Y_i-\bar{Y})^2`,
+        explanation:
+          "Sample variance across R independent replications (each replication outputs Yi).",
+        purpose: ["Build confidence intervals", "Measure output variability"],
+        assumptions: ["Replications are independent (different seeds)"],
+        variables: [
+          { symbol: "R", meaning: "number of replications" },
+          { symbol: "Y_i", meaning: "output from replication i" },
+          { symbol: "Ȳ", meaning: "mean output across replications" },
+          { symbol: "S^2", meaning: "sample variance across replications" },
+        ],
+        exampleTypes: ["Compute variance of mean delay over replications"],
+        source: {
+          pdf: "Output Analysis - 2025.pdf",
+          slide: "8/15 (deck slide 8)",
+          section: "Confidence intervals",
+        },
+        tags: ["core"],
+      },
+      {
+        id: "prediction-interval",
+        name: "Prediction Interval (Single Future Replication Output)",
+        latex: String.raw`\bar{Y}\ \pm\ t_{\alpha/2,\ R-1}\ S\sqrt{1+\frac{1}{R}}`,
+        explanation:
+          "Interval that predicts the output of ONE additional replication (wider than the mean CI).",
+        purpose: [
+          "Forecast what the next run might produce",
+          "Communicate run-to-run variability",
+        ],
+        assumptions: [
+          "Independent replications",
+          "Approx. normality of estimator (or R reasonably large)",
+        ],
+        variables: [
+          { symbol: "Ȳ", meaning: "mean across replications" },
+          { symbol: "t_{α/2,R-1}", meaning: "t critical value with R-1 df" },
+          {
+            symbol: "S",
+            meaning: "sample standard deviation across replications",
+          },
+          { symbol: "R", meaning: "number of replications" },
+        ],
+        exampleTypes: ["Predict next-run delay range from replication stats"],
+        dependencies: ["replication-variance"],
+        source: {
+          pdf: "Output Analysis - 2025.pdf",
+          slide: "8/15 (deck slide 8)",
+          section: "Prediction interval",
+        },
+        tags: ["exam"],
+      },
     ],
   },
 
@@ -616,6 +964,14 @@ export const NET4001_SURVIVAL_KIT_IDS: string[] = [
   "mm1-pn",
   "mm1-rho",
   "mmk-rho",
+  "mm1-L",
+  "mm1-W",
+  "mm1-Wq",
+  "mm1-Lq",
+  "mmk-P0",
+  "erlang-c",
+  "erlang-b",
+  "prediction-interval",
   "lcg",
   "inverse-transform",
   "exp-inv-sample",
