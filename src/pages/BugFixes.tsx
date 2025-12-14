@@ -15,6 +15,13 @@ interface BugFix {
 const bugFixes: BugFix[] = [
   {
     date: "2025-12-14",
+    title: "Fixed Multi-Selection Bug in 4009",
+    description:
+      "Fixed issue where multiple answer selection questions in 4009 only allowed you to select 1.",
+    status: "fixed",
+  },
+  {
+    date: "2025-12-14",
     title:
       "Added formula sheet section to 4001, added search bar for formulas.",
     description:

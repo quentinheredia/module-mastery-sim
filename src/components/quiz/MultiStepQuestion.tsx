@@ -39,14 +39,17 @@ export const MultiStepQuestion = ({
     onAnswerChange(newAnswers);
   };
 
-  const checkSubpartAnswer = (subpart: MultiStepSubpart, userValue: string): boolean => {
+  const checkSubpartAnswer = (
+    subpart: MultiStepSubpart,
+    userValue: string
+  ): boolean => {
     if (!userValue) return false;
     const normalizedUser = userValue.trim().toLowerCase();
     const normalizedCorrect = subpart.answer.trim().toLowerCase();
-    
+
     // Exact match
     if (normalizedUser === normalizedCorrect) return true;
-    
+
     // Try numeric comparison for numbers
     const userNum = parseFloat(normalizedUser);
     const correctNum = parseFloat(normalizedCorrect);
@@ -55,12 +58,13 @@ export const MultiStepQuestion = ({
       const tolerance = Math.abs(correctNum) * 0.01 || 0.01;
       return Math.abs(userNum - correctNum) <= tolerance;
     }
-    
+
     return false;
   };
 
   const getCorrectCount = (): number => {
-    return subparts.filter(sp => checkSubpartAnswer(sp, answers[sp.id] || "")).length;
+    return subparts.filter((sp) => checkSubpartAnswer(sp, answers[sp.id] || ""))
+      .length;
   };
 
   return (
@@ -68,20 +72,17 @@ export const MultiStepQuestion = ({
       {/* Question header */}
       <div className="p-6 pb-4 border-b border-border/50 bg-muted/30">
         <div className="flex items-center gap-3 flex-wrap">
-          <Badge 
-            variant="outline" 
+          <Badge
+            variant="outline"
             className="text-sm font-semibold bg-background border-primary/30 text-primary"
           >
             Question {questionNumber}
           </Badge>
-          <Badge 
-            variant="secondary" 
-            className="text-xs font-medium"
-          >
+          <Badge variant="secondary" className="text-xs font-medium">
             {question.points} {question.points === 1 ? "pt" : "pts"}
           </Badge>
-          <Badge 
-            variant="outline" 
+          <Badge
+            variant="outline"
             className="text-xs flex items-center gap-1.5 bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-300"
           >
             <Calculator className="h-3 w-3" />
@@ -101,21 +102,23 @@ export const MultiStepQuestion = ({
         <div className="space-y-4">
           {subparts.map((subpart, idx) => {
             const userValue = answers[subpart.id] || "";
-            const isCorrect = showFeedback ? checkSubpartAnswer(subpart, userValue) : null;
-            
+            const isCorrect = showFeedback
+              ? checkSubpartAnswer(subpart, userValue)
+              : null;
+
             return (
-              <div 
+              <div
                 key={subpart.id}
                 className={`p-4 rounded-xl border-2 transition-all duration-200 ${
                   showFeedback
                     ? isCorrect
                       ? "border-success bg-success/5"
                       : userValue
-                        ? "border-destructive bg-destructive/5"
-                        : "border-muted bg-muted/30"
+                      ? "border-destructive bg-destructive/5"
+                      : "border-muted bg-muted/30"
                     : userValue
-                      ? "border-primary/50 bg-primary/5"
-                      : "border-border bg-card"
+                    ? "border-primary/50 bg-primary/5"
+                    : "border-border bg-card"
                 }`}
               >
                 <div className="flex items-start gap-3">
@@ -130,7 +133,9 @@ export const MultiStepQuestion = ({
                       <Input
                         type="text"
                         value={userValue}
-                        onChange={(e) => handleInputChange(subpart.id, e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange(subpart.id, e.target.value)
+                        }
                         disabled={disabled}
                         placeholder="Enter your answer..."
                         className={`max-w-xs font-mono ${
@@ -138,8 +143,8 @@ export const MultiStepQuestion = ({
                             ? isCorrect
                               ? "border-success focus:border-success"
                               : userValue
-                                ? "border-destructive focus:border-destructive"
-                                : ""
+                              ? "border-destructive focus:border-destructive"
+                              : ""
                             : ""
                         }`}
                       />
@@ -153,16 +158,20 @@ export const MultiStepQuestion = ({
                         </>
                       )}
                     </div>
-                    
+
                     {/* Show explanation when feedback is enabled */}
                     {showFeedback && (
-                      <div className={`text-sm p-3 rounded-lg ${
-                        isCorrect 
-                          ? "bg-success/10 text-success-foreground" 
-                          : "bg-muted"
-                      }`}>
+                      <div
+                        className={`text-sm p-3 rounded-lg ${
+                          isCorrect
+                            ? "bg-success/10 text-success-foreground"
+                            : "bg-muted"
+                        }`}
+                      >
                         <p>
-                          <span className="font-semibold">Correct Answer: </span>
+                          <span className="font-semibold">
+                            Correct Answer:{" "}
+                          </span>
                           <span className="font-mono">{subpart.answer}</span>
                         </p>
                         {subpart.explanation && (
@@ -184,9 +193,10 @@ export const MultiStepQuestion = ({
           <div
             className={`
               p-4 rounded-xl border-2 animate-fade-up
-              ${getCorrectCount() === subparts.length
-                ? "bg-success/10 border-success/30" 
-                : getCorrectCount() > 0
+              ${
+                getCorrectCount() === subparts.length
+                  ? "bg-success/10 border-success/30"
+                  : getCorrectCount() > 0
                   ? "bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800"
                   : "bg-destructive/10 border-destructive/30"
               }
@@ -203,7 +213,11 @@ export const MultiStepQuestion = ({
               </p>
             </div>
             <p className="text-sm text-muted-foreground">
-              Score: {Math.round((getCorrectCount() / subparts.length) * question.points)} / {question.points} points
+              Score:{" "}
+              {Math.round(
+                (getCorrectCount() / subparts.length) * question.points
+              )}{" "}
+              / {question.points} points
             </p>
           </div>
         )}
