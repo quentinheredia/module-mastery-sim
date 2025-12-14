@@ -35,7 +35,17 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         tags: ["queueing", "mm1", "mmk", "modeling", "assumptions"],
         sourceNote:
           "Slides: Queueing Models → recommended textbook exercises (Ch.6 #23)",
-        solution: null,
+        solution:
+          "Model the copy shop as an M/M/c system.\n" +
+          "Arrivals: λ = 24/hour.\n" +
+          "Mean service time = 2 minutes → μ = 0.5/min = 30/hour.\n" +
+          "Current c=1; proposed c=2.\n\n" +
+          "‘Outside line’ happens when total in system ≥ 5 (since only 4 spots inside including service).\n" +
+          "So p = P(N ≥ 5) = Σ_{n=5..∞} Pn = 1 − Σ_{n=0..4} Pn.\n\n" +
+          "From the provided solution results:\n" +
+          "For M/M/1: p ≈ 0.33.\n" +
+          "For M/M/2: p ≈ 0.01.\n\n" +
+          "Impact: adding the second copier massively reduces the probability that the line spills outside.",
       },
       {
         id: "ch6-q26",
@@ -48,7 +58,18 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         tags: ["queueing", "mm1", "mm2", "pooling", "comparison"],
         sourceNote:
           "Slides: Queueing Models → recommended textbook exercises (Ch.6 #26)",
-        solution: null,
+        solution:
+          "Compare two separate M/M/1 queues vs a pooled M/M/2 queue.\n\n" +
+          "Two M/M/1 (each λ, μ):\n" +
+          "ρ = λ/μ\n" +
+          "L_total = 2·ρ/(1−ρ)\n" +
+          "W = 1/(μ(1−ρ))\n" +
+          "Wq = ρ/(μ(1−ρ))\n" +
+          "Lq_total = 2·ρ²/(1−ρ)\n\n" +
+          "Pooled M/M/2 (arrival 2λ, each server μ):\n" +
+          "Using the table result from the solution, the pooled system gives:\n" +
+          "L = 2ρ/(1−ρ²),  W = 1/(μ(1−ρ²)),  Wq = ρ²/(μ(1−ρ²)),  Lq = 2ρ³/(1−ρ²).\n\n" +
+          "Conclusion: pooling (M/M/2) yields smaller average queueing and system measures than splitting into two separate M/M/1 lines.",
       },
     ],
   },
@@ -68,7 +89,11 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         latex: String.raw`X_{i+1}=(aX_i+c)\bmod m,\ \ U_i=\frac{X_i}{m}`,
         tags: ["rng", "lcg", "implementation"],
         sourceNote: "Slides: RNG → recommended textbook exercises (Ch.7 #4)",
-        solution: null,
+        solution:
+          "LCG with X0=27, a=8, c=47, m=100.\n" +
+          "X1=(8·27+47) mod 100=63 → U1=63/100=0.63\n" +
+          "X2=(8·63+47) mod 100=51 → U2=0.51\n" +
+          "X3=(8·51+47) mod 100=55 → U3=0.55",
       },
       {
         id: "ch7-q5",
@@ -79,7 +104,9 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
           "In the LCG exercise above, would anything go wrong if the seed were X0=0? Explain what happens and why (based on the recurrence).",
         tags: ["rng", "lcg", "seeds", "period"],
         sourceNote: "Slides: RNG → recommended textbook exercises (Ch.7 #5)",
-        solution: null,
+        solution:
+          "With a mixed LCG (c ≠ 0), starting at X0=0 does NOT automatically break anything.\n" +
+          "A problem with X0=0 mainly happens in the purely multiplicative case (c=0), because 0 becomes an absorbing state.",
       },
       {
         id: "ch7-q6",
@@ -91,7 +118,12 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         latex: String.raw`X_{i+1}=(aX_i)\bmod m,\ \ U_i=\frac{X_i}{m}`,
         tags: ["rng", "mcg", "implementation"],
         sourceNote: "Slides: RNG → recommended textbook exercises (Ch.7 #6)",
-        solution: null,
+        solution:
+          "MCG with X0=117, a=43, m=1000.\n" +
+          "X1=(43·117) mod 1000=31 → U1=0.031\n" +
+          "X2=(43·31)  mod 1000=333 → U2=0.333\n" +
+          "X3=(43·333) mod 1000=319 → U3=0.319\n" +
+          "X4=(43·319) mod 1000=717 → U4=0.717",
       },
       {
         id: "ch7-q7",
@@ -102,7 +134,12 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
           "Given the generated sequence: 0.54, 0.73, 0.98, 0.11, 0.68, use the Kolmogorov–Smirnov test with α=0.05 to decide whether you can reject the hypothesis that the numbers are Uniform(0,1).",
         tags: ["rng", "ks-test", "hypothesis-testing"],
         sourceNote: "Slides: RNG → recommended textbook exercises (Ch.7 #7)",
-        solution: null,
+        solution:
+          "Sort the 5 values: R(i) = {0.11, 0.54, 0.68, 0.73, 0.98}, with N=5.\n" +
+          "Compute D+ = max(i/N − R(i)) = 0.09 and D− = max(R(i) − (i−1)/N) = 0.34.\n" +
+          "So D = max(D+, D−) = 0.34.\n" +
+          "At α=0.05, K-S critical value ≈ 1.36/√5 ≈ 0.61.\n" +
+          "Since 0.34 < 0.61, fail to reject Uniform(0,1).",
       },
       {
         id: "ch7-q8",
@@ -113,7 +150,10 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
           "Reverse the 100 two-digit random numbers from the referenced example to create a new list (so the new first value becomes 0.43). Using α=0.05, apply the chi-square test to decide whether Uniform(0,1) can be rejected.",
         tags: ["rng", "chi-square", "uniformity", "testing"],
         sourceNote: "Slides: RNG → recommended textbook exercises (Ch.7 #8)",
-        solution: null,
+        solution:
+          "Using 10 equal intervals with expected count Ei=10 each, the computed chi-square statistic is χ² = 14.2.\n" +
+          "df = 10−1 = 9. At α=0.05, χ²(0.95,9) ≈ 16.92.\n" +
+          "Because 14.2 < 16.92, fail to reject Uniform(0,1).",
       },
       {
         id: "ch7-q15",
@@ -124,7 +164,13 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
           "For each multiplicative congruential generator (MCG) case below, generate enough values to complete one full cycle. Then answer: what patterns/inferences do you see, and does the generator achieve the maximum possible period?\n\n(a) X0=7, a=11, m=16\n(b) X0=8, a=11, m=16\n(c) X0=7, a=7,  m=16\n(d) X0=8, a=7,  m=16",
         tags: ["rng", "mcg", "period", "cycle"],
         sourceNote: "Slides: RNG → recommended textbook exercises (Ch.7 #15)",
-        solution: null,
+        solution:
+          "Generate until the sequence repeats (m=16):\n" +
+          "(a) X0=7,a=11 → 7→13→15→5→7 (period 4)\n" +
+          "(b) X0=8,a=11 → 8→8→… (minimal period)\n" +
+          "(c) X0=7,a=7  → 7→1→7 (period 2)\n" +
+          "(d) X0=8,a=7  → 8→8→… (minimal period)\n\n" +
+          "Inference: maximum period p=4 happens when the seed is odd and a matches the form a = 3 + 8k (here a=11). Even seeds collapse to very short periods regardless of a (for this modulus).",
       },
     ],
   },
@@ -152,7 +198,11 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         tags: ["rvg", "inverse-transform", "piecewise-cdf", "histogram"],
         sourceNote:
           "Slides: Random Variate Generation → recommended textbook exercises (Ch.8 #5)",
-        solution: null,
+        solution:
+          "Inverse-transform generator (R ~ U(0,1)):\n" +
+          "If 0 ≤ R ≤ 1/2:  X = 6(R − 1/2)\n" +
+          "If 1/2 ≤ R ≤ 1:  X = sqrt(32(R − 1/2))\n" +
+          "Then generate 1000 samples using this mapping and plot a histogram.",
       },
       {
         id: "ch8-q6",
@@ -165,7 +215,10 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         tags: ["rvg", "inverse-transform", "cdf", "mean"],
         sourceNote:
           "Slides: Random Variate Generation → recommended textbook exercises (Ch.8 #6)",
-        solution: null,
+        solution:
+          "Given F(x)=x^4/16 on 0≤x≤2, set R=F(X) ⇒ X = 2·R^(1/4), 0≤R≤1.\n" +
+          "Generate 1000 samples with X=2R^(1/4).\n" +
+          "True mean: E[X]=∫0^2 x·(x^3/4) dx = 1.6 (compare to sample mean).",
       },
       {
         id: "ch8-q7",
@@ -178,7 +231,11 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         tags: ["rvg", "pdf", "cdf", "sampling", "mean"],
         sourceNote:
           "Slides: Random Variate Generation → recommended textbook exercises (Ch.8 #7)",
-        solution: null,
+        solution:
+          "Given f(x)=x^2/9 on 0≤x≤3, CDF is F(x)=x^3/27.\n" +
+          "Set R=F(X) ⇒ X = 3·R^(1/3), 0≤R≤1.\n" +
+          "Generate 1000 samples with X=3R^(1/3).\n" +
+          "True mean: E[X]=∫0^3 x·(x^2/9) dx = 2.25 (compare to sample mean).",
       },
       {
         id: "ch8-q8",
@@ -196,7 +253,15 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         tags: ["rvg", "piecewise-pdf", "histogram"],
         sourceNote:
           "Slides: Random Variate Generation → recommended textbook exercises (Ch.8 #8)",
-        solution: null,
+        solution:
+          "Step 1: Compute CDF:\n" +
+          "F(x)=x/3 for 0≤x≤2;\n" +
+          "F(x)=2/3 + (x−2)/24 for 2<x≤10.\n\n" +
+          "Step 2: Set R=F(X), with R~U(0,1).\n\n" +
+          "Step 3: Invert:\n" +
+          "If 0 ≤ R ≤ 2/3:  X = 3R\n" +
+          "If 2/3 < R ≤ 1:  X = 2 + 24(R − 2/3) = 24R − 14\n" +
+          "Generate 1000 samples and plot a histogram.",
       },
       {
         id: "ch8-q17",
@@ -209,7 +274,10 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         tags: ["rvg", "exponential", "inverse-transform"],
         sourceNote:
           "Slides: Random Variate Generation → recommended textbook exercises (Ch.8 #17)",
-        solution: null,
+        solution:
+          "Exponential with mean 3.7 days: use inverse transform.\n" +
+          "If R~U(0,1), then X = −3.7 ln(R).\n" +
+          "Generate 5 values by drawing 5 independent R’s.",
       },
     ],
   },
@@ -237,7 +305,11 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         sourceNote:
           "Slides: Input Modeling → recommended textbook exercises (Ch.9 #14)",
         // Data included so you can use it in the quiz UI
-        solution: null,
+        solution:
+          "K-S test for Uniform along the highway (after scaling to [0,1]).\n" +
+          "Computed: D+ = 0.0653, D− = 0.1720, so D = 0.1720.\n" +
+          "Critical value: D_(0.05,30) = 0.24.\n" +
+          "Since 0.1720 < 0.24, fail to reject H0 → data are consistent with Uniform.",
       },
 
       {
@@ -255,7 +327,11 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
           "76.6, 73.2, 27.3, 87.6, 87.2",
         tags: ["dataset"],
         sourceNote: "Ch.9 #14 dataset (from screenshot)",
-        solution: null,
+        solution:
+          "K-S test for Uniform along the highway (after scaling to [0,1]).\n" +
+          "Computed: D+ = 0.0653, D− = 0.1720, so D = 0.1720.\n" +
+          "Critical value: D_(0.05,30) = 0.24.\n" +
+          "Since 0.1720 < 0.24, fail to reject H0 → data are consistent with Uniform.",
       },
 
       {
@@ -275,7 +351,15 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         ],
         sourceNote:
           "Slides: Input Modeling → recommended textbook exercises (Ch.9 #16)",
-        solution: null,
+        solution:
+          "(a) Estimate Poisson mean from data: λ̂ = X̄ = 1.11.\n" +
+          "Chi-square statistic: χ0² = 3.404. Critical χ²_(0.05,2)=5.99.\n" +
+          "Decision: 3.404 < 5.99 → fail to reject Poisson.\n" +
+          "Note: grouped cells {3,4,5,≥6} into one to keep expected counts reasonable.\n\n" +
+          "(b) Test Poisson with fixed mean λ=1.\n" +
+          "Chi-square statistic: χ0² = 3.910. Critical χ²_(0.05,3)=7.81.\n" +
+          "Decision: 3.910 < 7.81 → fail to reject.\n" +
+          "Note: grouped {3,4,5,≥6} into one cell again.",
       },
 
       {
@@ -294,7 +378,15 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
           "6 → 1",
         tags: ["dataset"],
         sourceNote: "Ch.9 #16 frequency table (from screenshot)",
-        solution: null,
+        solution:
+          "(a) Estimate Poisson mean from data: λ̂ = X̄ = 1.11.\n" +
+          "Chi-square statistic: χ0² = 3.404. Critical χ²_(0.05,2)=5.99.\n" +
+          "Decision: 3.404 < 5.99 → fail to reject Poisson.\n" +
+          "Note: grouped cells {3,4,5,≥6} into one to keep expected counts reasonable.\n\n" +
+          "(b) Test Poisson with fixed mean λ=1.\n" +
+          "Chi-square statistic: χ0² = 3.910. Critical χ²_(0.05,3)=7.81.\n" +
+          "Decision: 3.910 < 7.81 → fail to reject.\n" +
+          "Note: grouped {3,4,5,≥6} into one cell again.",
       },
 
       {
@@ -312,7 +404,13 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         ],
         sourceNote:
           "Slides: Input Modeling → recommended textbook exercises (Ch.9 #22)",
-        solution: null,
+        solution:
+          "Model: Poisson.\n" +
+          "Estimate mean: λ̂ = X̄ = 0.48.\n" +
+          "After grouping tail cells to avoid tiny expected counts, χ0² = 0.0120.\n" +
+          "Critical value: χ²_(0.05,1)=3.84.\n" +
+          "Since 0.0120 < 3.84 → fail to reject H0 → Poisson is a reasonable fit.\n" +
+          "Grouping note (as in solution): combine {2,3} into one cell (O=4, E≈4.21).",
       },
 
       {
@@ -334,7 +432,13 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
           "1, 0, 0, 0, 0",
         tags: ["dataset"],
         sourceNote: "Ch.9 #22 dataset (from screenshot)",
-        solution: null,
+        solution:
+          "Model: Poisson.\n" +
+          "Estimate mean: λ̂ = X̄ = 0.48.\n" +
+          "After grouping tail cells to avoid tiny expected counts, χ0² = 0.0120.\n" +
+          "Critical value: χ²_(0.05,1)=3.84.\n" +
+          "Since 0.0120 < 3.84 → fail to reject H0 → Poisson is a reasonable fit.\n" +
+          "Grouping note (as in solution): combine {2,3} into one cell (O=4, E≈4.21).",
       },
     ],
   },
@@ -364,7 +468,15 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         ],
         sourceNote:
           "Slides: Verification & Validation → recommended textbook exercises (Ch.10 #2)",
-        solution: null,
+        solution:
+          "(a) One-sample t-test vs system mean μ0=4 days.\n" +
+          "Ȳ = 4.084, s = 0.2441, n=7.\n" +
+          "t0 = (4.084 − 4) / (0.2441/√7) = 0.91.\n" +
+          "At α=0.01, t_(0.005,6)=3.71.\n" +
+          "Since |0.91| < 3.71, fail to reject H0 → model output is consistent with system mean.\n\n" +
+          "(b) Detect difference of 0.5 with power 0.90 (β≤0.10):\n" +
+          "δ = 0.5/0.2441 = 2.05. For α=0.01 and δ≈2.05, required n ≈ 7.\n" +
+          "So with n=7 and σ≈0.2441, power is about 0.90.",
       },
     ],
   },
@@ -390,7 +502,15 @@ export const NET4001_TEXTBOOK_CHAPTERS: TextbookChapterGroup[] = [
         ],
         sourceNote:
           "Slides: Output Analysis → recommended textbook exercises (Ch.11 #4)",
-        solution: null,
+        solution:
+          "Half-width requirement for 95% CI: choose R so that\n" +
+          "t_(0.025,R−1)·S0/ε ≤ √R  (equivalently R ≥ (t_(0.025,R−1)·S0/ε)^2).\n\n" +
+          "Initial lower bound using z≈1.96:\n" +
+          "R > ((1.96·0.35236)/0.4)^2 = 2.98 → start with at least 3.\n" +
+          "Given initial R0=4, check candidates:\n" +
+          "R=4 → 7.86, R=5 → 5.98, R=6 → 5.12.\n" +
+          "Smallest R that satisfies the requirement is R=6 (since 6 ≥ 5.12). \n\n" +
+          "If ε is cut in half, required R increases by ≈ 4× (since R ∝ 1/ε^2).",
       },
     ],
   },
