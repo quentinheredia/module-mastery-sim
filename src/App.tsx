@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { QuizProvider } from "@/contexts/QuizContext";
 import { CourseProvider } from "@/contexts/CourseContext";
 import Home from "./pages/Home";
+import Formulas from "./pages/Formulas";
 import Practice from "./pages/Practice";
 import Exam from "./pages/Exam";
 import Results from "./pages/Results";
@@ -28,6 +29,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/practice" element={<Practice />} />
+                <Route path="/formulas" element={<Formulas />} />
                 <Route path="/exam" element={<Exam />} />
                 <Route path="/results" element={<Results />} />
                 <Route path="/history" element={<History />} />
