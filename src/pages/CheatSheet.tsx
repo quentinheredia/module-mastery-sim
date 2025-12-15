@@ -63,7 +63,11 @@ const CheatSheet = () => {
         {
           label: "Traffic (Erlang)",
           // IMPORTANT: escape # if you ever include it
-          latex: String.raw`\text{Traffic (Erlang)}=\text{average number of busy channels during 1 hour}`,
+          latex: String.raw`\text{Traffic (Erlang)} = \text{average number of busy}`,
+        },
+        {
+          label: "",
+          latex: String.raw`\text{channels during 1 hour}`,
         },
         { label: "Offered load", latex: String.raw`A=\frac{\lambda}{\mu}` },
         {
@@ -137,7 +141,11 @@ const CheatSheet = () => {
         { label: "General KS", latex: String.raw`D_n=\sup_x|F_n(x)-F(x)|` },
         {
           label: "RNG KS form",
-          latex: String.raw`D^+=\max_i\left(\frac{i}{n}-U_{(i)}\right),\quad D^-=\max_i\left(U_{(i)}-\frac{i-1}{n}\right),\quad D=\max(D^+,D^-)`,
+          latex: String.raw`D^+=\max_i\left(\frac{i}{n}-U_{(i)}\right),\quad D=\max(D^+,D^-)`,
+        },
+        {
+          label: "",
+          latex: String.raw`D^-=\max_i\left(U_{(i)}-\frac{i-1}{n}\right),\quad`,
         },
       ],
     },
