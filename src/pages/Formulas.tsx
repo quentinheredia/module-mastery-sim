@@ -25,6 +25,8 @@ import {
 import { ArrowLeft, Search } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 
+import { Printer } from "lucide-react";
+
 import { Math } from "@/components/math/Math";
 import {
   NET4001_FORMULA_SECTIONS,
@@ -305,6 +307,12 @@ const Formulas = () => {
               </Card>
             </TabsContent>
           </Tabs>
+          <Button asChild className="gap-2">
+            <Link to="/formulas/cheatsheet">
+              <Printer className="h-4 w-4" />
+              Cheat Sheet
+            </Link>
+          </Button>
         </div>
       </main>
     </div>

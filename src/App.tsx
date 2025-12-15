@@ -9,6 +9,7 @@ import { CourseProvider } from "@/contexts/CourseContext";
 import Home from "./pages/Home";
 import Textbook from "./pages/Textbook";
 import Formulas from "./pages/Formulas";
+import CheatSheet from "@/pages/CheatSheet";
 import Practice from "./pages/Practice";
 import Exam from "./pages/Exam";
 import Results from "./pages/Results";
@@ -32,6 +33,7 @@ const App = () => (
                 <Route path="/practice" element={<Practice />} />
                 <Route path="textbook" element={<Textbook />} />
                 <Route path="/formulas" element={<Formulas />} />
+                <Route path="/formulas/cheatsheet" element={<CheatSheet />} />
                 <Route path="/exam" element={<Exam />} />
                 <Route path="/results" element={<Results />} />
                 <Route path="/history" element={<History />} />
