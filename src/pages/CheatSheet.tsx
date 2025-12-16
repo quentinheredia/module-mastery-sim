@@ -3,38 +3,36 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { ArrowLeft, Printer } from "lucide-react";
-import { Header } from "@/components/layout/Header";
 import { Math } from "@/components/math/Math";
 
 type Formula = { label: string; latex: string };
 type Section = { title: string; bullets: string[]; formulas: Formula[] };
 
+// ----------------------------
+// Pages (Letter: 8.5" x 11")
+// Keep it dense: small fonts + 2-col grid.
+// ----------------------------
+
 const PAGE_1: Section[] = [
   {
-    title: "Queueing (M/M/1, M/M/k, M/M/1/K) — Step-by-step",
+    title: "Queueing — Identify model + givens",
     bullets: [
       "Goal: compute P0, Pn, L, Lq, W, Wq, loss fraction.",
-      "1) Identify model:",
-      "   • Infinite buffer + 1 server → M/M/1",
-      "   • Infinite buffer + k servers → M/M/k",
-      "   • Finite capacity (buffer) → M/M/1/K (or loss system M/M/k/k)",
-      "2) Extract givens: λ, μ (if mean service time E[S] given → μ=1/E[S]), k, K (if p waiting + 1 service → K=p+1).",
-      "3) Compute utilization/stability:",
-      "   • M/M/1: ρ=λ/μ must satisfy ρ<1",
-      "   • k servers (per-server): u=λ/(kμ) must be <1",
-      "4) Compute what you need (use closed forms if standard; otherwise use balance equations).",
-      "5) Link with Little’s Law when jumping between L and W.",
+      "Identify model:",
+      "• Infinite buffer + 1 server → M/M/1",
+      "• Infinite buffer + k servers → M/M/k",
+      "• Finite capacity K (includes service) → M/M/1/K",
+      "• Pure loss (no queue) with k servers → M/M/k/k (Erlang B)",
+      "Extract givens: λ, μ (if mean service time E[S] → μ=1/E[S]), k, K.",
+      "Stability: M/M/1 needs ρ<1; M/M/k needs u<1.",
     ],
     formulas: [
-      {
-        label: "Utilization (M/M/1)",
-        latex: String.raw`\rho=\frac{\lambda}{\mu},\quad \rho<1`,
-      },
-      {
-        label: "Per-server utilization",
-        latex: String.raw`u=\frac{\lambda}{k\mu},\quad u<1`,
-      },
       { label: "Mean service time", latex: String.raw`E[S]=\frac{1}{\mu}` },
+      { label: "Traffic / load", latex: String.raw`\rho=\frac{\lambda}{\mu}` },
+      {
+        label: "Per-server utilization (M/M/k)",
+        latex: String.raw`u=\frac{\lambda}{k\mu}`,
+      },
       {
         label: "Little’s Law",
         latex: String.raw`L=\lambda W,\quad L_q=\lambda W_q`,
@@ -42,48 +40,120 @@ const PAGE_1: Section[] = [
       { label: "System vs queue time", latex: String.raw`W=W_q+\frac{1}{\mu}` },
     ],
   },
-
   {
-    title: "M/M/1 (Infinite buffer) — Direct formulas",
-    bullets: ["Steps: compute ρ=λ/μ → plug into P0, Pn, L, Lq, W, Wq."],
+    title: "Queueing — M/M/1 (infinite buffer)",
+    bullets: [
+      "Steps: compute ρ=λ/μ → plug into P0, Pn, L, Lq, W, Wq.",
+      "State recursion (steady-state): Pn = ρ^n P0.",
+    ],
     formulas: [
       { label: "P0", latex: String.raw`P_0=1-\rho` },
+      { label: "Pn", latex: String.raw`P_n=(1-\rho)\rho^n` },
       {
-        label: "Pn",
-        latex: String.raw`P_n=(1-\rho)\rho^n,\quad n=0,1,2,\dots`,
+        label: "L",
+        latex: String.raw`L=\frac{\rho}{1-\rho}=\frac{\lambda}{\mu-\lambda}`,
       },
-      { label: "L", latex: String.raw`L=\frac{\rho}{1-\rho}` },
-      { label: "Lq", latex: String.raw`L_q=\frac{\rho^2}{1-\rho}` },
-      { label: "W", latex: String.raw`W=\frac{1}{\mu-\lambda}` },
-      { label: "Wq", latex: String.raw`W_q=\frac{\lambda}{\mu(\mu-\lambda)}` },
+      {
+        label: "W",
+        latex: String.raw`W=\frac{L}{\lambda}=\frac{1}{\mu-\lambda}`,
+      },
+      {
+        label: "Wq",
+        latex: String.raw`W_q=W-\frac{1}{\mu}=\frac{\rho}{\mu-\lambda}`,
+      },
+      { label: "Lq", latex: String.raw`L_q=\lambda W_q=\frac{\rho^2}{1-\rho}` },
     ],
   },
-
   {
-    title: "M/M/1/K (Finite capacity) — Loss / drop",
+    title: "Queueing — M/M/1 balance equations (exam)",
     bullets: [
-      "Use when: finite capacity K (includes service). If buffer has p waiting + 1 service → K=p+1.",
-      "Steps: compute ρ → compute P0 → compute Pn → loss fraction typically PK (system full).",
+      "Write: rate leaving state j = rate entering state j.",
+      "Used to derive Pn and check reasoning.",
+    ],
+    formulas: [
+      { label: "State 0", latex: String.raw`\lambda P_0=\mu P_1` },
+      {
+        label: "State 1",
+        latex: String.raw`(\lambda+\mu)P_1=\lambda P_0+\mu P_2`,
+      },
+      {
+        label: "State n≥1",
+        latex: String.raw`(\lambda+\mu)P_n=\lambda P_{n-1}+\mu P_{n+1}`,
+      },
+      { label: "Recursion", latex: String.raw`P_n=\rho^n P_0` },
+    ],
+  },
+  {
+    title: "Queueing — M/M/1/K (finite capacity → loss)",
+    bullets: [
+      "K = system capacity (includes service).",
+      "If buffer has p waiting + 1 in service → K=p+1.",
+      "Loss fraction is typically P(K) (system full).",
     ],
     formulas: [
       { label: "P0", latex: String.raw`P_0=\frac{1-\rho}{1-\rho^{K+1}}` },
-      { label: "Pn", latex: String.raw`P_n=\rho^nP_0,\quad n=0,1,\dots,K` },
+      { label: "Pn", latex: String.raw`P_n=\rho^n P_0,\quad n=0,1,\dots,K` },
+      { label: "Loss fraction", latex: String.raw`\mathrm{Loss}=P_K` },
       {
-        label: "Loss fraction",
-        latex: String.raw`\mathrm{Loss\ fraction}=P_K`,
-      },
-      {
-        label: "Sheet-form loss (K=p+1)",
-        latex: String.raw`P_{K=p+1}=\frac{(\lambda/\mu)^{p+1}\left(1-\lambda/\mu\right)}{1-(\lambda/\mu)^{p+2}}`,
+        label: "Sheet form (K=p+1)",
+        latex: String.raw`P_{K=p+1}=\frac{(\lambda/\mu)^{p+1}(1-\lambda/\mu)}{1-(\lambda/\mu)^{p+2}}`,
       },
     ],
   },
-
   {
-    title: "M/M/k Balance Equations (include these for exams)",
+    title: "Queueing — Networking delay (slide)",
     bullets: [
-      "State j = # in system. Write steady-state: rate leaving state j = rate entering state j.",
-      "Use when: k servers OR state-dependent arrivals/service OR multi-type clients.",
+      "Queue delay example uses queue length (bytes), link rate (bps), and utilization u.",
+      "Upper bound assumes u=1 (100%).",
+    ],
+    formulas: [
+      {
+        label: "Delay (as shown)",
+        latex: String.raw`\mathrm{Delay}=\frac{Q_{\text{bytes}}\cdot 8\cdot u}{C_{\text{bps}}}`,
+      },
+      {
+        label: "Upper bound (u=1)",
+        latex: String.raw`\mathrm{Upper\ Bound}=\frac{Q_{\text{bytes}}\cdot 8}{C_{\text{bps}}}`,
+      },
+    ],
+  },
+];
+
+const PAGE_2: Section[] = [
+  {
+    title: "Queueing — M/M/k (waiting allowed)",
+    bullets: [
+      "Use when: k parallel servers, infinite waiting room.",
+      "Compute P0 first → then waiting probability (Erlang C) → then Lq, Wq, W, L.",
+    ],
+    formulas: [
+      {
+        label: "P0 (slide form)",
+        latex: String.raw`P_0=\left[\sum_{n=0}^{k-1}\frac{(\lambda/\mu)^n}{n!}+\frac{(\lambda/\mu)^k\,k\mu}{k!\,(k\mu-\lambda)}\right]^{-1}`,
+      },
+      {
+        label: "Erlang C (prob. wait / all busy)",
+        latex: String.raw`C=P_B=\frac{k\,\rho^k\,P_0}{k!\,(k-\rho)}\quad(\rho=\lambda/\mu)`,
+      },
+      {
+        label: "Lq (slide)",
+        latex: String.raw`L_q=\frac{\lambda\,C}{\mu k-\lambda}`,
+      },
+      { label: "Wq", latex: String.raw`W_q=\frac{L_q}{\lambda}` },
+      { label: "W", latex: String.raw`W=W_q+\frac{1}{\mu}` },
+      { label: "L", latex: String.raw`L=\lambda W=L_q+\frac{\lambda}{\mu}` },
+      {
+        label: "Server utilization",
+        latex: String.raw`\text{utilization}=\frac{\rho}{k}=\frac{\lambda}{k\mu}`,
+      },
+    ],
+  },
+  {
+    title: "Queueing — M/M/k balance equations (general form)",
+    bullets: [
+      "State j = # in system.",
+      "Rate leaving state j = rate entering state j.",
+      "Use when k servers, finite cap, or state-dependent λj.",
     ],
     formulas: [
       { label: "State 0", latex: String.raw`\lambda P_0=\mu P_1` },
@@ -101,81 +171,102 @@ const PAGE_1: Section[] = [
       },
     ],
   },
-
   {
-    title: "State-dependent arrivals (multi-type clients) — Procedure",
+    title: "Blocking Probability — Erlang B (M/M/k/k, no queue)",
     bullets: [
-      "1) Define states j=0..K (finite) or j≥0 (infinite).",
-      "2) For each state j compute λj from the rules (who is allowed to enter).",
-      "3) Compute μj with k servers: μj = min(j,k)·μ.",
-      "4) Use balance equations + recursion in terms of P0, then normalize ΣPj=1.",
-      "5) Answer metrics: E[N]=Σ jPj; P(all servers busy)=Σ_{j≥k} Pj (or PK if finite).",
+      "Use when: blocked/dropped if all k servers busy and no waiting room.",
+      "Design: try k=1,2,3… until B ≤ target.",
     ],
     formulas: [
       {
-        label: "Departure rate by state",
-        latex: String.raw`\mu_j=\min(j,k)\mu`,
+        label: "Traffic (Erlang)",
+        latex: String.raw`\text{Traffic (Erlang)}=\text{average }\#\text{ of busy channels during 1 hour}`,
       },
-      {
-        label: "Expected number in system",
-        latex: String.raw`E[N]=\sum_j jP_j`,
-      },
-    ],
-  },
-
-  {
-    title: "Blocking Probability / Erlang B & C",
-    bullets: [
-      "Erlang B (loss, no queue): blocked/dropped when all servers busy and no waiting room.",
-      "Erlang C (queue allowed): arrivals can wait; compute probability of waiting.",
-      "Design: try c=1,2,3… until B ≤ target (e.g., ≤1%).",
-    ],
-    formulas: [
       { label: "Offered load", latex: String.raw`A=\frac{\lambda}{\mu}` },
       {
         label: "Erlang B",
-        latex: String.raw`B=\frac{A^c/c!}{\sum_{n=0}^{c}A^n/n!}`,
+        latex: String.raw`B=\frac{A^k/k!}{\sum_{n=0}^{k}A^n/n!}`,
+      },
+    ],
+  },
+  {
+    title: "Blocking Probability — Erlang C (probability of waiting)",
+    bullets: [
+      "Use when: k servers, waiting room exists.",
+      "Compute P0 then C (=prob wait) then Lq,Wq, etc.",
+    ],
+    formulas: [
+      {
+        label: "Erlang C",
+        latex: String.raw`C=P_B=\frac{k\,\rho^k\,P_0}{k!\,(k-\rho)}\quad(\rho=\lambda/\mu)`,
       },
       {
-        label: "Erlang C (sheet form)",
-        latex: String.raw`P_B=\frac{k\rho^kP_0}{k!(k-\rho)}`,
+        label: "All servers busy",
+        latex: String.raw`P\{L(\infty)\ge k\}=\frac{k\rho^k P_0}{k!(k-\rho)}=P_B`,
       },
+    ],
+  },
+  {
+    title: "Queueing — State-dependent arrivals (multi-type clients)",
+    bullets: [
+      "1) Define states j=0..K (or j≥0).",
+      "2) For each state j compute λj from the admission rules.",
+      "3) With k servers: μj = min(j,k)·μ.",
+      "4) Use balance equations + recursion in terms of P0; normalize ΣPj=1.",
+      "5) Metrics: E[N]=Σ jPj; P(all busy)=Σ_{j≥k}Pj (or PK if finite).",
+    ],
+    formulas: [
+      { label: "State departure rate", latex: String.raw`\mu_j=\min(j,k)\mu` },
+      { label: "Expected # in system", latex: String.raw`E[N]=\sum_j jP_j` },
     ],
   },
 ];
 
-const PAGE_2: Section[] = [
+const PAGE_3: Section[] = [
   {
-    title: "Chi-Square Goodness-of-Fit — Step-by-step",
+    title: "Chi-Square — Goodness-of-Fit",
     bullets: [
       "Goal: test if sample matches hypothesized distribution.",
-      "1) Pick k bins/classes (merge if expected Ei too small).",
-      "2) Observed Oi = count in bin i.",
-      "3) Expected Ei = n·pi where pi from hypothesized CDF over bin i.",
-      "4) Compute χ² and compare to χ² critical value (df from slides if used).",
+      "Choose bins/classes; merge so expected Ei is big enough.",
+      "Slides note: Chi-square needs larger N (e.g., N>50) and recommend Ei≥5.",
+      "Compute χ² and compare to χ² critical.",
     ],
     formulas: [
       { label: "Expected count", latex: String.raw`E_i=np_i` },
       {
-        label: "Chi-square statistic",
+        label: "Statistic",
         latex: String.raw`\chi^2=\sum_{i=1}^{k}\frac{(O_i-E_i)^2}{E_i}`,
       },
-      { label: "Degrees of freedom (if used)", latex: String.raw`df=k-1-m` },
+      { label: "df (if used)", latex: String.raw`df=k-1-m` },
       {
         label: "Decision",
-        latex: String.raw`\mathrm{Reject}\ H_0\ \mathrm{if}\ \chi^2>\chi^2_{\alpha,df}`,
+        latex: String.raw`\text{Reject }H_0\text{ if }\chi^2>\chi^2_{\alpha,df}`,
+      },
+      { label: "Rule (slides)", latex: String.raw`E_i\ge 5` },
+    ],
+  },
+  {
+    title: "Input modeling — parameter estimates (slides)",
+    bullets: [
+      "Used before GOF tests (fit parameters from data).",
+      "α is the Poisson mean parameter in slides.",
+    ],
+    formulas: [
+      { label: "Poisson", latex: String.raw`\alpha=\bar{X}` },
+      { label: "Exponential", latex: String.raw`\lambda=\frac{1}{\bar{X}}` },
+      { label: "Normal", latex: String.raw`\mu=\bar{X},\quad \sigma^2=S^2` },
+      {
+        label: "Poisson pmf",
+        latex: String.raw`P(X=x)=f(x)=\frac{e^{-\lambda}\lambda^x}{x!}`,
       },
     ],
   },
-
   {
-    title: "Kolmogorov–Smirnov (K–S) — Step-by-step",
+    title: "Kolmogorov–Smirnov (K–S)",
     bullets: [
       "Goal: compare empirical CDF Fn to target F.",
-      "1) Sort sample: X(1) ≤ … ≤ X(n).",
-      "2) General: Dn = supx |Fn(x) − F(x)|.",
-      "3) For uniform RNG test: sort U(i), compute D+, D−, then D=max(D+,D−).",
-      "4) Reject if D > Dα (from slide/table).",
+      "Slides: K–S is more powerful and can be applied to smaller instances.",
+      "Uniform RNG test: compute D+, D−, then D=max(D+,D−).",
     ],
     formulas: [
       { label: "General KS", latex: String.raw`D_n=\sup_x|F_n(x)-F(x)|` },
@@ -188,18 +279,44 @@ const PAGE_2: Section[] = [
         latex: String.raw`D^-=\max_i\left(U_{(i)}-\frac{i-1}{n}\right)`,
       },
       { label: "D", latex: String.raw`D=\max(D^+,D^-)` },
-      { label: "Decision", latex: String.raw`\mathrm{Reject\ if}\ D>D_\alpha` },
+      { label: "Decision", latex: String.raw`\text{Reject if }D>D_{\alpha}` },
     ],
   },
-
   {
-    title: "Confidence Interval (Mean output) — Step-by-step",
+    title: "Kolmogorov / Input modeling — Q–Q plot (slides)",
     bullets: [
-      "Goal: mean + uncertainty; choose n for target half-width if asked.",
-      "1) Run n replications: Y1,…,Yn.",
-      "2) Compute mean Ȳ and sample variance s².",
-      "3) CI: Ȳ ± t * s/√n. Half-width h = t*s/√n.",
-      "4) If need more runs: increase n until h ≤ target.",
+      "1) Sort data ascending: y1 ≤ y2 ≤ … ≤ yn.",
+      "2) j is the rank (j=1 smallest, j=n largest).",
+      "3) Compare yj to theoretical quantile F^{-1}((j-1/2)/n).",
+    ],
+    formulas: [
+      {
+        label: "Q–Q approx",
+        latex: String.raw`y_j\approx F^{-1}\!\left(\frac{j-1/2}{n}\right)`,
+      },
+    ],
+  },
+  {
+    title: "Random numbers — Uniformity (U[0,1])",
+    bullets: ["Used as base RNG assumptions: uniform + independent."],
+    formulas: [
+      {
+        label: "pdf",
+        latex: String.raw`f(x)=\begin{cases}1&0\le x\le 1\\0&\text{otherwise}\end{cases}`,
+      },
+      { label: "Mean", latex: String.raw`E[X]=\frac{1}{2}` },
+      { label: "Variance", latex: String.raw`V[X]=\frac{1}{12}` },
+    ],
+  },
+];
+
+const PAGE_4: Section[] = [
+  {
+    title: "Confidence Interval — mean output (simulation)",
+    bullets: [
+      "Goal: mean + uncertainty.",
+      "Steps: run n replications → compute Ȳ, s² → CI = Ȳ ± t·s/√n.",
+      "Half-width h = t·s/√n. Increase n until h ≤ target.",
     ],
     formulas: [
       {
@@ -220,12 +337,12 @@ const PAGE_2: Section[] = [
       },
     ],
   },
-
   {
-    title: "Random Number Generation — LCG & Multiplicative",
+    title: "Linear Congruential (Lehmer) + Multiplicative",
     bullets: [
-      "LCG steps: choose a,c,m and seed X0 → Xi+1=(aXi+c) mod m → Ui=Xi/m.",
-      "Multiplicative generator is the same with c=0.",
+      "Choose seed X0, modulus m, multiplier a, increment c.",
+      "Generates integers in [0,m-1]. Convert to Ui in (0,1) by dividing by m.",
+      "Multiplicative congruential is the special case c=0.",
     ],
     formulas: [
       { label: "LCG", latex: String.raw`X_{i+1}=(aX_i+c)\bmod m` },
@@ -233,25 +350,64 @@ const PAGE_2: Section[] = [
       { label: "Multiplicative (c=0)", latex: String.raw`X_{i+1}=aX_i\bmod m` },
     ],
   },
-
   {
-    title: "Inverse Transform (PDF/CDF → sampling)",
+    title: "Inverse Transform — Exponential (slides)",
     bullets: [
-      "1) Get CDF F(x)=P(X≤x). If starting from PDF: f(x)=d/dx F(x).",
-      "2) Generate U ~ Uniform(0,1).",
-      "3) Invert: X = F^{-1}(U).",
-      "Common exponential: X = -(1/λ) ln(1−U).",
+      "Given CDF: F(x)=1-e^{-lambda x} (x≥0).",
+      "Set F(X)=R and solve for X.",
+      "Slides note: ln(1−R) can be replaced by ln(R) since both are U(0,1).",
     ],
     formulas: [
-      { label: "CDF", latex: String.raw`F(x)=P(X\le x)` },
-      { label: "PDF", latex: String.raw`f(x)=\frac{d}{dx}F(x)` },
-      { label: "Inverse transform", latex: String.raw`X=F^{-1}(U)` },
       {
-        label: "Exponential sample",
-        latex: String.raw`X=-\frac{1}{\lambda}\ln(1-U)`,
+        label: "PDF",
+        latex: String.raw`f(x)=\lambda e^{-\lambda x},\quad x\ge 0`,
       },
+      { label: "CDF", latex: String.raw`F(x)=1-e^{-\lambda x},\quad x\ge 0` },
+      { label: "Set F(X)=R", latex: String.raw`R=1-e^{-\lambda X}` },
+      { label: "Solve", latex: String.raw`X=-\frac{1}{\lambda}\ln(1-R)` },
+      { label: "Common form", latex: String.raw`X=-\frac{1}{\lambda}\ln(R)` },
     ],
   },
+  {
+    title: "Poisson variate generation — acceptance / Knuth steps (slides)",
+    bullets: [
+      "Step 1: compute e^{-lambda}.",
+      "Step 2: set n=0 and P=1.",
+      "Step 3: generate uniform R_{n+1}; set P := P·R_{n+1}.",
+      "Step 4: if P < e^{-lambda}, accept N=n; else n := n+1 and repeat step 3.",
+      "Slide note: expected # of RN to generate 1 Poisson variate is λ+1.",
+    ],
+    formulas: [
+      { label: "Threshold", latex: String.raw`T=e^{-\lambda}` },
+      { label: "Init", latex: String.raw`n=0,\;P=1` },
+      { label: "Update", latex: String.raw`P\leftarrow P\cdot R_{n+1}` },
+      { label: "Accept", latex: String.raw`\text{If }P<T\text{ then }N=n` },
+      { label: "Expected RN", latex: String.raw`E[\#RN]=\lambda+1` },
+    ],
+  },
+  {
+    title: "Autocorrelation test (slides) — independence",
+    bullets: [
+      "Compute autocorrelation ρ_{i,m} for lag m starting at i:",
+      "Use sequence: (R_i, R_{i+m}, R_{i+2m}, …, R_{i+(M+1)m}).",
+      "Choose M largest so i+(M+1)m ≤ N.",
+      "When M is large, Z0 is approximately N(0,1).",
+    ],
+    formulas: [
+      {
+        label: "Test statistic",
+        latex: String.raw`Z_0=\frac{\rho_{i,m}}{\sigma_{\rho_{i,m}}}`,
+      },
+      { label: "Approx dist (large M)", latex: String.raw`Z_0\sim N(0,1)` },
+    ],
+  },
+];
+
+const PAGES: { label: string; sections: Section[] }[] = [
+  { label: "Page 1", sections: PAGE_1 },
+  { label: "Page 2", sections: PAGE_2 },
+  { label: "Page 3", sections: PAGE_3 },
+  { label: "Page 4", sections: PAGE_4 },
 ];
 
 export default function CheatSheet() {
@@ -276,15 +432,19 @@ export default function CheatSheet() {
           </div>
 
           <div className="mx-auto w-full max-w-[8.5in] space-y-4 print:space-y-0">
-            <PrintPage label="Page 1 (Front)" sections={PAGE_1} />
-            <div className="page-break" />
-            <PrintPage label="Page 2 (Back)" sections={PAGE_2} />
+            {PAGES.map((p, idx) => (
+              <div key={p.label}>
+                <PrintPage label={p.label} sections={p.sections} />
+                {idx < PAGES.length - 1 ? <div className="page-break" /> : null}
+              </div>
+            ))}
           </div>
         </div>
       </main>
 
       <style>{`
         @media print {
+          @page { size: letter; margin: 0.35in; }
           .no-print { display: none !important; }
           .page-break { break-after: page; page-break-after: always; }
           body { background: white !important; }
