@@ -14,7 +14,94 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      answer_versions: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          question_id: string
+          upvotes: number
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          question_id: string
+          upvotes?: number
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          question_id?: string
+          upvotes?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "answer_versions_question_id_fkey"
+            columns: ["question_id"]
+            isOneToOne: false
+            referencedRelation: "exam_questions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      answer_votes: {
+        Row: {
+          answer_id: string
+          created_at: string
+          id: string
+          session_id: string
+        }
+        Insert: {
+          answer_id: string
+          created_at?: string
+          id?: string
+          session_id: string
+        }
+        Update: {
+          answer_id?: string
+          created_at?: string
+          id?: string
+          session_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "answer_votes_answer_id_fkey"
+            columns: ["answer_id"]
+            isOneToOne: false
+            referencedRelation: "answer_versions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      exam_questions: {
+        Row: {
+          course_id: string
+          created_at: string
+          id: string
+          prompt: string
+          question_order: number
+          title: string
+        }
+        Insert: {
+          course_id?: string
+          created_at?: string
+          id?: string
+          prompt: string
+          question_order: number
+          title: string
+        }
+        Update: {
+          course_id?: string
+          created_at?: string
+          id?: string
+          prompt?: string
+          question_order?: number
+          title?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
