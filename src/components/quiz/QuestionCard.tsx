@@ -174,13 +174,6 @@ export const QuestionCard = ({
               </>
             )}
           </Badge>
-          <Badge
-            variant="outline"
-            className="text-xs flex items-center gap-1.5 bg-background"
-          >
-            {" "}
-            Source: {question.source}
-          </Badge>
         </div>
       </div>
 
