@@ -97,7 +97,7 @@
       "Mismatched authentication"
     ],
     "correct_answers": [
-      "Incorrect neighbor statement",
+      "BGP split horizon rule",
       "Missing or bad network mask command"
     ],
     "question_type": "multiple_choice",
@@ -474,6 +474,25 @@
       "show ip vrf interfaces"
     ],
     "correct_answers": ["show ip route vrf", "show ip vrf interfaces"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 6 - GRE",
+    "source": "Previous Exam",
+    "question": "Which three (3) method(s) can be implemented to avoid recursive routing error\nwith GRE tunnels, (Choose 3:)?",
+    "image": null,
+    "options": [
+      "Use separate IGPs for underlay and overlay",
+      "Use route filters to ensure tunnel destination is not learned over the GRE tunnel",
+      "Use route filters to ensure tunnel destination is learned over the GR tunnel",
+      "Ensure that the metric of the route learned through the tunnel should be higher than the path through the underlay network"
+    ],
+    "correct_answers": [
+      "Use separate IGPs for underlay and overlay",
+      "Use route filters to ensure tunnel destination is not learned over the GRE tunnel",
+      "Ensure that the metric of the route learned through the tunnel should be higher than the path through the underlay network"
+    ],
     "question_type": "multiple_choice",
     "points": 1
   }
