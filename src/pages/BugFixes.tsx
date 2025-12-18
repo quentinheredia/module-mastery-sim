@@ -14,6 +14,13 @@ interface BugFix {
 
 const bugFixes: BugFix[] = [
   {
+    date: "2025-12-17",
+    title: "Fixed EIGRP Auth Question",
+    description:
+      "Customer enabled EIGRPv4 with authentication between two routers, however neighbor adjacency is not established. Which two authentication parameters need to match in EIGRPv4 authentication configuration? [Key ID, Key String, Key Chain]",
+    status: "fixed",
+  },
+  {
     date: "2025-12-14",
     title: "Fixed Multi-Selection Bug in 4009",
     description:
