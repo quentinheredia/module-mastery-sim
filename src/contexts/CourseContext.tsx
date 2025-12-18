@@ -81,6 +81,13 @@ const AVAILABLE_COURSES: Course[] = [
       "Chi-Square Test",
     ],
   },
+  {
+    id: "net4007",
+    name: "NET4007",
+    description: "DAJUN DA GOAT",
+    color: "rose",
+    modules: ["Take Home Exam"],
+  },
 ];
 
 export const CourseProvider: React.FC<{ children: React.ReactNode }> = ({
