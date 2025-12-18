@@ -1,0 +1,153 @@
+[
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
+    "question": "What are two reasons that may result in an IPv6 route missing from EIGRP IPv6 routing table, {Assume EIGRP IPv6 neighbors are established} (Choose 2:)?",
+    "image": null,
+    "options": [
+      "Mismatched Autonomus System (AS) number",
+      "Route filtering",
+      "stub configuration",
+      "interface not participating in EIGRP IPv4 routing process"
+    ],
+    "correct_answers": ["Route filtering", "stub configuration"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Which debug command can be used to troubleshoot mismatched Autonomous Systems with EIGRP, (Choose 1:)?",
+    "image": null,
+    "options": [
+      "debug eigrp mismatch parameters",
+      "debug eigrp packets",
+      "debug eigrp adjacency",
+      "debug ip eigrp packets"
+    ],
+    "correct_answers": ["debug eigrp packets"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Which show command can be used with EIGRP IPv6 to display the K metric values, (Choose 1:)?",
+    "image": null,
+    "options": [
+      "show ipv6 protocols",
+      "show ipv6 routes detail",
+      "show ip protocols",
+      "show ipv6 eigrp detail"
+    ],
+    "correct_answers": ["show ipv6 protocols"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Which EIGRP IPv4 command can be used to verify if split horizon is enabled and if authentication is being used, (Choose 1:)?",
+    "image": null,
+    "options": [
+      "show ip eigrp details",
+      "show ip eigrp interfaces detail",
+      "show ip eigrp authentication",
+      "show ipv6 eigrp interfaces detail"
+    ],
+    "correct_answers": ["show ip eigrp interfaces detail"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Which two commands can be used to verify EIGRP IPv6 authentication, (Choose 2:)?",
+    "image": null,
+    "options": [
+      "show ip eigrp interfaces detail",
+      "show ipv6 eigrp interfaces detail",
+      "show ipv6 protocols",
+      "show eigrp authentication detail",
+      "show key chain"
+    ],
+    "correct_answers": ["show ipv6 protocols", "show key chain"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Which address will EIGRP for IPv6 use as the Router ID (RID),(Choose 1:)?",
+    "image": null,
+    "options": [
+      "the highest IPv4 address that is configured on any interface that is Shut down (disabled state)",
+      "the highest IPv6 link-local address that is configured on any enabled interface",
+      "the highest MAC address that is configured on any enabled interface",
+      "the highest IPv6 Global unicast address that is configured on any enabled interface",
+      "the highest IPv4 address that is configured on any enabled interface"
+    ],
+    "correct_answers": [
+      "the highest IPv4 address that is configured on any enabled interface"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Refer to the exhibit below. Router R1 has recently been configured to operate in an IPv6 only network and is connected via interface Gigabit Ethernet 0/0 to router R2. R2 is configured correctly and link is working fine between R1 and R2. R2 will not form a neighbor relationship with R1 What is the problem, (Choose 1:)?",
+    "image": "public/images/quizzes/4009_2/quiz2_q7.png",
+    "options": [
+      "IPv6 Link local address must be configured on interface Gig0/0",
+      "EIGRP IPv6 is not activated on Gig0/0",
+      "The router ID has not been created on R1",
+      "The EIGRP IPv6 process is in shutdown state on R1"
+    ],
+    "correct_answers": ["The router ID has not been created on R1"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Customer enabled EIGRPv4 with authentication between 2 routers, however neighbor adjacency is not established, which two authentication parameters need to match in EIGRPv4 authentication configuration, (Choose 2:)?",
+    "image": null,
+    "options": ["Key String", "Key Variance", "Key chain", "Key AS", "Key ID"],
+    "correct_answers": ["Key String", "Key ID"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
+    "question": "Refer to the exhibit below. What can the field engineer conclude about the EIGRP authentication between RouterA and RouterB, (Choose 1:)?",
+    "image": "/images/quizzes/4009_2/quiz2_q9.png",
+    "options": [
+      "EIGRP Authentication will fail because the key chain names do not match",
+      "EIGRP Authentication will succeed and EIGRP updates can be exchanged",
+      "EIGRP Authentication will fail because key ID and EIGRP AS number overlap",
+      "EIGRP Authentication will fail because MD5 authentication is only supported with EIGRP named mode"
+    ],
+    "correct_answers": [
+      "EIGRP Authentication will succeed and EIGRP updates can be exchanged"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
+    "question": "What are two reasons that can cause IPv4 routes to be missing in EIGRP IPv4 routing table, {assume EIGRP neighbors are properly established} (Choose 2:)?",
+    "image": null,
+    "options": [
+      "Better source of information",
+      "Split Horizon",
+      "Passive Interface",
+      "Mismatched authentication parameters"
+    ],
+    "correct_answers": ["Better source of information", "Split Horizon"],
+    "question_type": "multiple_choice",
+    "points": 1
+  }
+]

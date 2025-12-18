@@ -1,0 +1,58 @@
+[
+  {
+    "module": "Module 1 - Troubleshooting Basics",
+    "question": "Which two structured troubleshooting approaches are best suited for identifying misconfiguration issues in a Layer 3 topology?",
+    "image": null,
+    "options": [
+      "Top-down approach",
+      "Bottom-up approach",
+      "Compare-configurations approach",
+      "Swap-components approach"
+    ],
+    "correct_answers": ["Compare-configurations approach", "Top-down approach"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 1 - Troubleshooting Basics",
+    "question": "Which two structured troubleshooting approaches are best suited for identifying misconfiguration issues in a Layer 3 topology?",
+    "image": null,
+    "options": [
+      "Top-down approach",
+      "Bottom-up approach",
+      "Compare-configurations approach",
+      "Swap-components approach"
+    ],
+    "correct_answers": ["Compare-configurations approach", "Top-down approach"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 1 - Troubleshooting Basics",
+    "question": "Which two structured troubleshooting approaches are best suited for identifying misconfiguration issues in a Layer 3 topology?",
+    "image": null,
+    "options": [
+      "Top-down approach",
+      "Bottom-up approach",
+      "Compare-configurations approach",
+      "Swap-components approach"
+    ],
+    "correct_answers": ["Compare-configurations approach", "Top-down approach"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 1 - Troubleshooting Basics",
+    "question": "Which two structured troubleshooting approaches are best suited for identifying misconfiguration issues in a Layer 3 topology?",
+    "image": null,
+    "options": [
+      "Top-down approach",
+      "Bottom-up approach",
+      "Compare-configurations approach",
+      "Swap-components approach"
+    ],
+    "correct_answers": ["Compare-configurations approach", "Top-down approach"],
+    "question_type": "multiple_choice",
+    "points": 1
+  }
+]

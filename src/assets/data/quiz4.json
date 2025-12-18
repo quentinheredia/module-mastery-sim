@@ -1,0 +1,147 @@
+[
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "source": "Quiz 4 - BGP",
+    "question": "A network administrator is troubleshooting a BGP network and issues the \"show bgp ipv6 unicast\" command on a BGP router. What is a purpose of using this command, (Choose 1:)?",
+    "image": null,
+    "options": [
+      "To verify the IPv6 unicast BGP-learned routes or routes locally injected into the BGP table",
+      "To verify the IPv4 unicast BGP-learned routes or routes locally injected into the BGP table",
+      "to verify the status of BGP IPv6 peering",
+      "Display detailed information about the IPv6 BGP neighbors of a router"
+    ],
+    "correct_answers": [
+      "To verify the IPv6 unicast BGP-learned routes or routes locally injected into the BGP table"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "source": "Quiz 4 - BGP",
+    "question": "A network administrator issues the \"show bgp ipv4 unicast summary\" command on a router to check the adjacency state with a neighbor router. The value under the State/PfxRcd field shows 0. Which statement describes the status of adjacency between the two routers, (Choose 1:)?",
+    "image": null,
+    "options": [
+      "The adjacency is formed but no BGP keepalive messages are exchanged",
+      "Because the neighbor command is wrong, the adjacency is not formed.",
+      "Because there is no Layer 3 connectivity between the two routers, the adjacency is not formed.",
+      "The adjacency is successfully formed."
+    ],
+    "correct_answers": ["The adjacency is successfully formed."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "source": "Quiz 4 - BGP",
+    "question": "Refer to the BGP topology below, all links are operational and are of equal bandwidth, BGP weight and local preference attributes are left at their default values. Which next hop router will be chosen by Router R1 to reach network 10.1.5.0/24 on R5, (Choose 1:)?",
+    "image": "/images/quizzes/4009_2/quiz4_q3.png",
+    "options": [
+      "R2",
+      "R3",
+      "Traffic will be Load balanced between routers \"R2 and R3\"",
+      "Cannot tell from the topology"
+    ],
+    "correct_answers": ["R2"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "source": "Quiz 4 - BGP",
+    "question": "Based on the output of BGP command below from router R1, what can be concluded, (Choose 1:)?",
+    "image": "/images/quizzes/4009_2/quiz4_q4.png",
+    "options": [
+      "eBGP session with neighbor in AS 65502 has been established",
+      "Cannot tell from the output the BGP session state",
+      "eBGP session with neighbor in AS 65502 has not been established",
+      "iBGP session with neighbor in AS 65502 has not been established"
+    ],
+    "correct_answers": [
+      "eBGP session with neighbor in AS 65502 has not been established"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "source": "Quiz 4 - BGP",
+    "question": "What could be one reason that BGP state is showing as idle between 2 neighbors, (Choose 1:)?",
+    "image": null,
+    "options": [
+      "layer 3 connectivity is broken ",
+      "matching authentication ",
+      "mismatching bgp timers",
+      "mismatching bgp router Ids "
+    ],
+    "correct_answers": ["layer 3 connectivity is broken "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "source": "Quiz 4 - BGP",
+    "question": "Which debug command is useful to use with BGP, (Choose 1:)?",
+    "image": null,
+    "options": [
+      "debug bgp detail",
+      "debug ip bgp updates",
+      "debug bgp packets",
+      "debug ip packets all"
+    ],
+    "correct_answers": ["debug ip bgp updates"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "source": "Quiz 4 - BGP",
+    "question": "What is the role of BGP Split horizon rule, (Choose 1:)?",
+    "image": null,
+    "options": [
+      "a BGP router that receives a BGP route from an iBGP shall not advertise that route to another router that is an eBGP peer",
+      "a BGP router that receives a BGP route from an eBGP peering shall not advertise that route to another router that is an eBGP peer",
+      "a BGP router that receives a BGP route from an eBGP peering shall not advertise that route to another router that is an iBGP peer",
+      "a BGP router that receives a BGP route from an iBGP peering shall not advertise that route to another router that is an iBGP peer"
+    ],
+    "correct_answers": [
+      "a BGP router that receives a BGP route from an iBGP peering shall not advertise that route to another router that is an iBGP peer"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "source": "Quiz 4 - BGP",
+    "question": "What are two reasons that can cause missing routes in BGP routing table, (Choose 2)?",
+    "image": null,
+    "options": [
+      "BGP split horizon",
+      "mismatched authentication",
+      "bad network mask",
+      "layer 3 connectivity is broken",
+      "TCP port 179 is blocked by ACL"
+    ],
+    "correct_answers": ["BGP split horizon", "bad network mask"],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "source": "Quiz 4 - BGP",
+    "question": "What are two reasons that may cause eBGP neighbor relationship not to form, (Choose 2)?",
+    "image": null,
+    "options": [
+      "mismatched BGP AS numbers",
+      "incorrect neighbor statement",
+      "mismatched timers",
+      "mismatched authentication"
+    ],
+    "correct_answers": [
+      "incorrect neighbor statement",
+      "mismatched authentication"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  }
+]

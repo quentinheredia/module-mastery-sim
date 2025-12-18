@@ -14,6 +14,9 @@ import module6 from "@/assets/data/module6.json";
 import module7 from "@/assets/data/module7.json";
 import module8 from "@/assets/data/module8.json";
 import examAdditional from "@/assets/data/exam_additional.json";
+import quiz2 from "@/assets/data/quiz2.json";
+import quiz3 from "@/assets/data/quiz3.json";
+import quiz4 from "@/assets/data/quiz4.json";
 
 // NET4005 course data
 import cloudData from "@/assets/data/net4005/cloud.json";
@@ -29,7 +32,7 @@ import net4001Questions from "@/assets/data/net4001/questions.json";
 
 // Organize data by course
 const courseData: Record<string, Question[]> = {
-  net4009: [...examAdditional] as Question[],
+  net4009: [...examAdditional, ...quiz2, ...quiz3, ...quiz4] as Question[],
   net4005: [...cloudData, ...cryptoData, ...sdnData, ...appData] as Question[],
   net3008: [...net3008Questions] as Question[],
   net4001: [...net4001Questions] as Question[],
@@ -37,14 +40,14 @@ const courseData: Record<string, Question[]> = {
 
 // Standardized module names for NET4009
 const NET4009_MODULE_NAMES: Record<string, string> = {
-  "1": "Module 1 - Basic Forwarding & Troubleshooting",
+  "1": "Module 1 - Troubleshooting Basics",
   "2": "Module 2 - Troubleshooting EIGRPv4/v6",
-  "3": "Module 3 - Troubleshooting OSPFv3",
+  "3": "Module 3 - Troubleshooting OSPFv2/v3",
   "4": "Module 4 - Troubleshooting BGP",
   "5": "Module 5 - Conditional Forwarding and Redistribution",
   "6": "Module 6 - DMVPN & Troubleshooting GRE",
   "7": "Module 7 - Infra-Security Management Tools",
-  "8": "Module 8 - VRF Lite",
+  "8": "Module 8 - VRF Lite & IS-IS",
 };
 
 // Normalize module name to standard format

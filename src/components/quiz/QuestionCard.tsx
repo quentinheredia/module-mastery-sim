@@ -8,6 +8,19 @@ import { CheckCircle2, XCircle, CircleDot, SquareCheck } from "lucide-react";
 import { MatchingQuestion } from "./MatchingQuestion";
 import { MultiStepQuestion } from "./MultiStepQuestion";
 
+/*[
+  {
+    "module": "Module 4 - Troubleshooting BGP",
+    "source": "Quiz 4 - BGP",
+    "question": "",
+    "image": null,
+    "options": ["", "", "", ""],
+    "correct_answers": [""],
+    "question_type": "single_choice | multiple_choice",
+    "points": 1
+  }
+]*/
+
 interface QuestionCardProps {
   question: Question;
   questionNumber: number;

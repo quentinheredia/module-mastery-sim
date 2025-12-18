@@ -1,0 +1,174 @@
+[
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "Refer to the exhibit below of the routing table from a router that is a backbone router and the ABR router for Area 1. How will this routing table for this router will change, if any, if Area 1 is configured as a Stub area, (Choose 1:)?",
+    "image": "/images/quizzes/4009_2/quiz3_q1.png",
+    "options": [
+      "All of the O IA and O E2 routes will be removed from the routing table.",
+      "Only the O IA routes and the two O E2 subnet routes to the 192.168.0.0 networks will be removed from the routing table",
+      "Only the O E2 routes will be removed from the routing table",
+      "None of the routes will be removed as a result of Area 1 and this ABR being configured as a stub"
+    ],
+    "correct_answers": [
+      "None of the routes will be removed as a result of Area 1 and this ABR being configured as a stub"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "Based on the hub and spoke topology below, which router should be elected as the OSPFv2 DR, (Choose 1:)?",
+    "image": "/images/quizzes/4009_2/quiz3_q2.png",
+    "options": ["R1", "R4", "R2", "R3"],
+    "correct_answers": ["R1"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "Refer to the exhibit. R1 and R2 are connected to the same LAN segment and are configured to run OSPFv3. What two items can be concluded based on this output, (Choose 2:)?",
+    "image": "/images/quizzes/4009_2/quiz3_q3.png",
+    "options": [
+      "'debug ipv6 ospf hello' can be used to troubleshoot this problem",
+      "'debug ip ospf hello' can be used to troubleshoot this problem",
+      "neighbor adjacency is not formed between R1 and R2",
+      "neighbor adjacency is formed between R1 and R2"
+    ],
+    "correct_answers": [
+      "'debug ipv6 ospf hello' can be used to troubleshoot this problem",
+      "neighbor adjacency is not formed between R1 and R2"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "Which command is used to verify that Classic OSPFv3 is enabled and also provides a list of the networks that are being advertised by the network,(Choose 1:)?​",
+    "image": null,
+    "options": [
+      "sh ipv6 protocols",
+      "sh ipv6 ospf protocols",
+      "sh ipv6 ospf details",
+      "sh ipv6 ospf protocols"
+    ],
+    "correct_answers": ["sh ipv6 protocols"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "What is the result of a router being configured with OSPFv3 for IPv6 when no explicit RID is configured and there are no active IPv4 interfaces, (Choose 1:)?",
+    "image": null,
+    "options": [
+      "OSPFv3 will automatically assign a RID that is based on the highest IPv6 link-local address configured on the router",
+      "OSPFv3 does not require a RID and neighbor adjacencies will form normally",
+      "OSPFv3 will not allow neighbor adjacencies to form",
+      "OSPFv3 will automatically generate a RID once an adjacency with another OSPFv3 router is formed."
+    ],
+    "correct_answers": ["OSPFv3 will not allow neighbor adjacencies to form"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "Refer to the exhibit below, directly connected networks configured on router R1 are not being shared with neighboring routers through Classic OSPFv3 IPv6. What is the cause of the issue, (Choose 1:)?",
+    "image": "/images/quizzes/4009_2/quiz3_q6.png",
+    "options": [
+      "router id should be 128 bits IPv6 address",
+      "Gigabit interfaces are not enabled for OSPFv3 advertisement",
+      "OSPFv3 routing process is shutdown by default, no shutdown is required",
+      "OSPFv3 requires network statements under 'ospfv3 routing process' for proper operation"
+    ],
+    "correct_answers": [
+      "Gigabit interfaces are not enabled for OSPFv3 advertisement"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "Customer was checking the routing table on an OSPFv2 ABR router and noticed the entry below. Which two items can be concluded from the output below, (Choose 2:)? \nO 10.1.0.0/16 is a summary, 00:16:07, Null0",
+    "image": null,
+    "options": [
+      "manual summarization has been enabled on ABR router",
+      "automatic summarization has been enabled on ABR router",
+      "Null0 summary route is created on ABR router to enable default route propagation",
+      "Null0 summary route is created on ABR router to prevent routing loops"
+    ],
+    "correct_answers": [
+      "Null0 summary route is created on ABR router to prevent routing loops",
+      "manual summarization has been enabled on ABR router"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "Customer is troubleshooting load balancing on 8x100 Mbps links between 2 routers configured with OSPFv2. All 8 links are in UP/UP operational state and all links are set with the default OSPF reference bandwidth. Which two OSPFv2 configuration parameters should the customer check and adjust (if needed) to help troubleshoot this problem, (Choose 2:)?",
+    "image": null,
+    "options": [
+      "auto-cost reference bandwidth should be set to 100 Mbps to adjust cost for links between R1 and R2",
+      "\"maximum-paths <maximum paths value>\" should be adjusted under the OSPF process to modify the default setting",
+      "OSPFv2 variance parameter needs to be adjusted to allow for load balancing over equal cost links",
+      "All interfaces of 8 links connecting between 2 routers are  configured with equal OSPF cost",
+      "auto-cost reference bandwidth should be set to 1000 Mbps to adjust cost for links between R1 and R2"
+    ],
+    "correct_answers": [
+      "\"maximum-paths <maximum paths value>\" should be adjusted under the OSPF process to modify the default setting",
+      "All interfaces of 8 links connecting between 2 routers are  configured with equal OSPF cost"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "What are two features of OSPFv3 Address Family (OSPFv3 AF), (Choose 2:)?",
+    "image": null,
+    "options": [
+      "32 bit router-id is used",
+      "IPv4 is used to transport OSPFv3 AF messages for IPv4 while IPv6 is used to transport OSPFV3 AF messages for IPv6",
+      "128 bit router-id is used",
+      "IPv6 is used to transport OSPFv3 AF messages for both IPv4 and IPv6"
+    ],
+    "correct_answers": [
+      "IPv6 is used to transport OSPFv3 AF messages for both IPv4 and IPv6",
+      "32 bit router-id is used"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "Which command can be used with Classic OSPFv3 IPv6 to display configured interface timers, (Choose 1:)?",
+    "image": null,
+    "options": ["", "", "", ""],
+    "correct_answers": [""],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 3 - OSPFv2 and OSPFv3",
+    "source": "Quiz 3 - OSPFv2 and OSPFv3",
+    "question": "",
+    "image": null,
+    "options": [
+      "show ipv6 ospfv3 interface",
+      "show ipv6 protocols",
+      "show ipv6 ospf interface timers",
+      "show ipv6 ospf interface"
+    ],
+    "correct_answers": ["show ipv6 ospf interface"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]
