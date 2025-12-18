@@ -16,6 +16,7 @@ import Results from "./pages/Results";
 import History from "./pages/History";
 import BugFixes from "./pages/BugFixes";
 import NotFound from "./pages/NotFound";
+import { GlobalUpdateBanner } from "@/components/system/GlobalUpdateBanner";
 
 const queryClient = new QueryClient();
 
@@ -25,8 +26,12 @@ const App = () => (
       <CourseProvider>
         <QuizProvider>
           <TooltipProvider>
+            {/* 🔔 Global build-based update banner */}
+            <GlobalUpdateBanner />
+
             <Toaster />
             <Sonner />
+
             <BrowserRouter basename={import.meta.env.BASE_URL}>
               <Routes>
                 <Route path="/" element={<Home />} />
