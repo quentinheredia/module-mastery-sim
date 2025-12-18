@@ -1,23 +1,23 @@
-export interface ExamQuestion {
-  id: string;
-  course_id: string;
-  title: string;
-  prompt: string;
-  question_order: number;
-  created_at: string;
-}
+// net4007.ts
 
-export interface AnswerVersion {
+export type ExamSubsection = {
+  id: string; // e.g. "q1a"
+  label: string; // "(a)", "(b)", "(c)"
+  title: string; // Short title
+  prompt: string; // Markdown + LaTeX supported
+};
+
+export type ExamQuestion = {
+  id: string; // e.g. "q1"
+  title: string; // Main question title
+  prompt?: string; // Optional intro/context
+  subsections: ExamSubsection[];
+};
+
+export type AnswerVersion = {
   id: string;
-  question_id: string;
+  question_id: string; // MUST MATCH subsection.id
   content: string;
   upvotes: number;
   created_at: string;
-}
-
-export interface AnswerVote {
-  id: string;
-  answer_id: string;
-  session_id: string;
-  created_at: string;
-}
+};

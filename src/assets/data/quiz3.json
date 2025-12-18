@@ -151,8 +151,13 @@
     "source": "Quiz 3 - OSPFv2 and OSPFv3",
     "question": "Which command can be used with Classic OSPFv3 IPv6 to display configured interface timers, (Choose 1:)?",
     "image": null,
-    "options": ["", "", "", ""],
-    "correct_answers": [""],
+    "options": [
+      "show ipv6 ospfv3 interface",
+      "show ipv6 protocols",
+      "show ipv6 ospf interface timers",
+      "show ipv6 ospf interface"
+    ],
+    "correct_answers": ["show ipv6 ospf interface"],
     "question_type": "multiple_choice",
     "points": 1
   },

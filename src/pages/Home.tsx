@@ -58,11 +58,11 @@ const Home = () => {
                 <OnlineCounter />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">
-                Community Answers for{" "}
-                <span className={courseColors.text}>Take-Home Exam</span>
+                Collab Answers for{" "}
+                <span className={courseColors.text}>Dajun Exam</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Collaborative solutions with voting. Add your solution or upvote verified answers.
+                Everybody eats wallahi
               </p>
             </div>
 
