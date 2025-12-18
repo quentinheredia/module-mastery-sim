@@ -13,7 +13,7 @@ import module5 from "@/assets/data/module5.json";
 import module6 from "@/assets/data/module6.json";
 import module7 from "@/assets/data/module7.json";
 import module8 from "@/assets/data/module8.json";
-//import examAdditional from "@/assets/data/exam_additional.json";
+import examAdditional from "@/assets/data/exam_additional.json";
 
 // NET4005 course data
 import cloudData from "@/assets/data/net4005/cloud.json";
@@ -29,21 +29,7 @@ import net4001Questions from "@/assets/data/net4001/questions.json";
 
 // Organize data by course
 const courseData: Record<string, Question[]> = {
-  net4009: [
-    ...additional1,
-    ...additional2,
-    ...additional3,
-    ...additional4,
-    ...module1,
-    ...module2,
-    ...module3,
-    ...module4,
-    ...module5,
-    ...module6,
-    ...module7,
-    ...module8,
-    //...examAdditional,
-  ] as Question[],
+  net4009: [...examAdditional] as Question[],
   net4005: [...cloudData, ...cryptoData, ...sdnData, ...appData] as Question[],
   net3008: [...net3008Questions] as Question[],
   net4001: [...net4001Questions] as Question[],

@@ -20,8 +20,17 @@ interface ExamSettings {
 
 interface QuizContextType {
   quizState: QuizState;
-  startQuiz: (mode: "practice" | "exam", courseId: string, selectedModule?: string, examSettings?: ExamSettings) => void;
-  answerQuestion: (questionIndex: number, selectedAnswers: string[], matchingAnswers?: MatchingPairs) => void;
+  startQuiz: (
+    mode: "practice" | "exam",
+    courseId: string,
+    selectedModule?: string,
+    examSettings?: ExamSettings
+  ) => void;
+  answerQuestion: (
+    questionIndex: number,
+    selectedAnswers: string[],
+    matchingAnswers?: MatchingPairs
+  ) => void;
   nextQuestion: () => void;
   previousQuestion: () => void;
   goToQuestion: (index: number) => void;
@@ -94,23 +103,45 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
     }
   }, [quizState.timeRemaining]);
 
-  const startQuiz = (mode: "practice" | "exam", courseId: string, selectedModule?: string, examSettings?: ExamSettings) => {
+  const startQuiz = (
+    mode: "practice" | "exam",
+    courseId: string,
+    selectedModule?: string,
+    examSettings?: ExamSettings
+  ) => {
     let questions: Question[] = [];
     setCurrentCourseId(courseId);
-    console.log("QuizContext.startQuiz called with courseId:", courseId, "mode:", mode, "examSettings:", examSettings);
+    console.log(
+      "QuizContext.startQuiz called with courseId:",
+      courseId,
+      "mode:",
+      mode,
+      "examSettings:",
+      examSettings
+    );
 
     if (mode === "practice" && selectedModule) {
-      questions = loadQuestions(courseId).filter((q) => q.module === selectedModule);
+      questions = loadQuestions(courseId).filter(
+        (q) => q.module === selectedModule
+      );
     } else if (mode === "exam") {
-      const questionCount = examSettings?.questionCount || (courseId === "net4005" ? 10 : 40);
+      const questionCount =
+        examSettings?.questionCount || (courseId === "net4005" ? 10 : 40);
       questions = getRandomQuestions(courseId, questionCount);
     } else {
       questions = getRandomQuestions(courseId, 40);
     }
-    
-    console.log("Loaded questions count:", questions.length, "First question module:", questions[0]?.module);
 
-    const duration = examSettings?.duration ? examSettings.duration * 60 : DEFAULT_EXAM_TIME;
+    console.log(
+      "Loaded questions count:",
+      questions.length,
+      "First question module:",
+      questions[0]?.module
+    );
+
+    const duration = examSettings?.duration
+      ? examSettings.duration * 60
+      : DEFAULT_EXAM_TIME;
     setExamDuration(duration);
 
     setQuizState({
@@ -130,7 +161,11 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
     });
   };
 
-  const answerQuestion = (questionIndex: number, selectedAnswers: string[], matchingAnswers?: MatchingPairs) => {
+  const answerQuestion = (
+    questionIndex: number,
+    selectedAnswers: string[],
+    matchingAnswers?: MatchingPairs
+  ) => {
     setQuizState((prev) => {
       const newAnswers = [...prev.userAnswers];
       const question = prev.questions[questionIndex];
@@ -257,15 +292,17 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({
   const getAttemptHistory = (courseId?: string): QuizAttempt[] => {
     const stored = localStorage.getItem(STORAGE_KEY);
     const attempts: QuizAttempt[] = stored ? JSON.parse(stored) : [];
-    
+
     // Normalize legacy attempts that don't have courseId (treat as net4009)
     const normalizedAttempts = attempts.map((a: QuizAttempt) => ({
       ...a,
       courseId: a.courseId || "net4009",
     }));
-    
+
     if (courseId) {
-      return normalizedAttempts.filter((a: QuizAttempt) => a.courseId === courseId);
+      return normalizedAttempts.filter(
+        (a: QuizAttempt) => a.courseId === courseId
+      );
     }
     return normalizedAttempts;
   };

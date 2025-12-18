@@ -136,6 +136,12 @@ export const QuestionCard = ({
           >
             Question {questionNumber}
           </Badge>
+          <Badge
+            variant="outline"
+            className="text-sm font-semibold bg-background border-primary/30 text-primary"
+          >
+            {question.module}
+          </Badge>
           <Badge variant="secondary" className="text-xs font-medium">
             {question.points} {question.points === 1 ? "pt" : "pts"}
           </Badge>

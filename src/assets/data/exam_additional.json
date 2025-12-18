@@ -1,7 +1,9 @@
 [
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
+    "source": "Previous Exam",
     "question": "Customer enabled OSPFv3 between two routers as shown in the topology and configurations below. Link is operational and no filters are applied. OSPFv3 adjacency is not established due to an MTU mismatch. Which configuration command can be applied to stop OSPFv3 from comparing MTU?",
+    "image": "/images/exam/ex_q1.png",
     "options": [
       "Apply command \"ip ospfv3 mtu-ignore\" to both routers R3 and R4 GigabitEthernet interfaces",
       "Apply command \"ipv6 ospf mtu-ignore\" to both routers R3 and R4 GigabitEthernet interfaces",
@@ -16,7 +18,9 @@
   },
   {
     "module": "Module 4 - Troubleshooting BGP",
+    "source": "Previous Exam",
     "question": "What are the three (3) reasons that may cause eBGP neighbor relationship not to form?",
+    "image": "/images/exam/ex_q1.png",
     "options": [
       "Mismatched BGP RIDs",
       "Incorrect neighbor statement",
@@ -34,7 +38,9 @@
   },
   {
     "module": "Module 1 - Basic Forwarding & Troubleshooting",
+    "source": "Previous Exam",
     "question": "Where should a system administrator apply the policy-based routing configuration to direct packets from the 10.0.0.0/8 network through the R2 router to the Internet?",
+    "image": "/images/exam/ex_q4.png",
     "options": [
       "RTA interface G0/0",
       "RTB interface G1/0",
@@ -47,7 +53,9 @@
   },
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
+    "source": "Previous Exam",
     "question": "Directly connected networks configured on router R1 are not being shared with neighboring routers through OSPFv3 IPv6. What is the cause of the issue?",
+    "image": "/images/exam/ex_q5.png",
     "options": [
       "GigabitEthernet interfaces are not enabled for OSPFv3 route advertisement",
       "IPv6 network statements are missing under the OSPFv3 process",
@@ -62,7 +70,9 @@
   },
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
+    "source": "Previous Exam",
     "question": "Customer enabled OSPFv3 single area 0 and all links are operational. No filters are enabled but R1 and R2 cannot share routes. What is the problem?",
+    "image": "/images/exam/ex_q7.png",
     "options": [
       "OSPFv3 router ID is invalid",
       "There is no DR or BDR election due to OSPFv3 interface priority set to 0 on both R1 and R2",
@@ -77,7 +87,9 @@
   },
   {
     "module": "Module 4 - Troubleshooting BGP",
+    "source": "Previous Exam",
     "question": "A network administrator is troubleshooting a BGP network where some BGP routes are missing. BGP peers are formed. What are two (2) possible reasons?",
+    "image": null,
     "options": [
       "BGP split horizon rule",
       "Incorrect neighbor statement",
@@ -93,7 +105,9 @@
   },
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
+    "source": "Previous Exam",
     "question": "Customer enabled OSPFv3 between two routers but adjacency is not forming. Based on the output, what is the cause?",
+    "image": "/images/exam/ex_q10.png",
     "options": [
       "IPv6 link-local address mismatch",
       "Router ID mismatch",
@@ -105,8 +119,57 @@
     "points": 1
   },
   {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "source": "Previous Exam",
+    "question": "Refer to the exhibit. Which piece of information can be obtained from the AAA configuration commands?",
+    "image": "/images/exam/ex_q9.png",
+    "options": [
+      "The authentication method list used by the console port is named ACCESS.",
+      "The local database is checked first when console and Telnet access to the router is being authenticated.",
+      "The authentication method list used for Telnet is named ACCESS.",
+      "If the TACACS+ AAA server is not available, no users can establish a Telnet session with the router."
+    ],
+    "correct_answers": [
+      "The authentication method list used for Telnet is named ACCESS."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "source": "Previous Exam",
+    "question": "Which IPv6 First-Hop Security feature can block IPv6 traffic if this traffic is from an unknown origin?",
+    "image": null,
+    "options": [
+      "IPv6 ND inspection/snooping",
+      "Source Guard",
+      "RA Guard",
+      "DHCPv6 Guard"
+    ],
+    "correct_answers": ["Source Guard"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "source": "Previous Exam",
+    "question": "Refer to the exhibit below. An SNMP manager is unable to change configuration variables on the R1 SNMP agent. What could be the problem?",
+    "image": "/images/exam/ex_q19.png",
+    "options": [
+      "Access list 'ACL_SNMP' has not been implemented on an R1 interface yet",
+      "The last entry in ACL_SNMP should be permit any instead of deny any",
+      "The SNMP agent should have traps disabled",
+      "The SNMP agent is not configured for write access."
+    ],
+    "correct_answers": ["The SNMP agent is not configured for write access."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
     "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "source": "Previous Exam",
     "question": "R2 is redistributing OSPFv3 into EIGRPv6. The route map is supposed to deny two IPv6 loopbacks but allow all other prefixes. No prefixes are being redistributed. How can this be fixed?",
+    "image": "/images/exam/ex_q14.png",
     "options": [
       "Configure a \"route-map ospf2eigrp deny 5\" statement with no match criteria",
       "Change \"route-map ospf2eigrp deny 10\" to \"route-map ospf2eigrp permit 10\"",
@@ -121,39 +184,77 @@
   },
   {
     "module": "Module 4 - Troubleshooting BGP",
+    "source": "Previous Exam",
     "question": "A network administrator issues the 'show bgp ipv4 unicast summary' command and sees the State/PfxRcd field showing Active. Which statement best describes the situation?",
     "options": [
-      "The BGP adjacency is established",
-      "The neighbor has not responded to the BGP Open message",
-      "TCP session is up but no prefixes exchanged",
-      "The BGP table is full"
+      "Because the neighbor router has not responded to the BGP Open message the adjacency is not formed.",
+      "The neighbor adjacency is successfully formed and prefixes are exchanged",
+      "The neighbor adjacency is successfully formed but no prefixes are exchanged",
+      "There is an ACL configured on router that is blocking TCP port 179"
     ],
     "correct_answers": [
-      "The neighbor has not responded to the BGP Open message"
+      "Because the neighbor router has not responded to the BGP Open message the adjacency is not formed."
     ],
     "question_type": "single_choice",
     "points": 1
   },
   {
     "module": "Module 5 - Conditional Forwarding and Redistribution",
-    "question": "Which three (3) methods can be used to solve routing issues caused by multipoint redistribution?",
+    "source": "Previous Exam",
+    "question": "Which of the following are three (3) methods that can be used to solve routing issues caused by multipoint redistribution? (Choose 3:)?",
+    "image": "/images/exam/ex_q14.png",
     "options": [
-      "Modify the administrative distance",
-      "Tag routes to avoid redistribution loops",
-      "Modify the seed metrics of redistributed routes",
-      "Clear the routing table",
-      "Use GRE encapsulation"
+      "Modify the AD of the redistributed route",
+      "Tag routes to avoid them being redistributed back into originating routing source",
+      "Modify the seed metrics of the redistributed routes",
+      "Perform only one way routes redistribution"
     ],
     "correct_answers": [
-      "Modify the administrative distance",
-      "Tag routes to avoid redistribution loops",
-      "Modify the seed metrics of redistributed routes"
+      "Modify the AD of the redistributed route",
+      "Tag routes to avoid them being redistributed back into originating routing source",
+      "Modify the seed metrics of the redistributed routes"
     ],
     "question_type": "multiple_choice",
     "points": 1
   },
   {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "source": "Previous Exam",
+    "question": "Customer enabled CoPP feature on router R1 based on the configuration below. Study the configuration and choose the two (2) actions that will result fromapplying this service policy, (Choose 2:)?",
+    "image": "/images/exam/ex_q22.png",
+    "options": [
+      "ICMP packets will be policed at 10 pps with exceed action to drop",
+      "All SSH packets will be dropped",
+      "All telnet packets will be dropped",
+      "All telnet packets will be allowed but will be policed at 8000 kbps"
+    ],
+    "correct_answers": [
+      "ICMP packets will be policed at 10 pps with exceed action to drop",
+      "All telnet packets will be dropped"
+    ],
+    "question_type": "multiple_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 7 - Infra-Security Management Tools",
+    "source": "Previous Exam",
+    "question": "Customer enabled the CoPP policy based on the configuration below. Which statement is true when this CoPP policy is applied to the router configuration?",
+    "image": "/images/exam/ex_q37.png",
+    "options": [
+      "This CoPP policy allows host with source address of 192.168.1.1 to forward Telnet packets to the control plane and will be policed based on the configured CIR value",
+      "This CoPP policy allows host with source address of 192.168.1.1 to forward Telnet packets to the control plane and will not be policed",
+      "All Telnet packets will be denied access to the router control plane",
+      "This CoPP policy denies host with source address of 192.168.1.1 to forward Telnet packets to the control plane"
+    ],
+    "correct_answers": [
+      "This CoPP policy allows host with source address of 192.168.1.1 to forward Telnet packets to the control plane and will not be policed"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
     "module": "Module 4 - Troubleshooting BGP",
+    "source": "Previous Exam",
     "question": "A network administrator issues the 'show bgp ipv4 unicast summary' command on a router to check adjacency with a neighbor. The value under the State/PfxRcd field shows Active. The link is working fine between the routers. Which statement describes the status of the BGP adjacency?",
     "options": [
       "The BGP adjacency is established",
@@ -168,26 +269,27 @@
     "points": 1
   },
   {
-    "module": "Module 5 - Conditional Forwarding and Redistribution",
-    "question": "Which of the following are three (3) methods that can be used to solve routing issues caused by multipoint redistribution?",
+    "module": "Module 8 - VRF Lite",
+    "source": "Previous Exam",
+    "question": "Which two (2) statements are true regarding VRF LITE operation, (Choose 2:)?",
     "options": [
-      "Modify the AD of the redistributed routes",
-      "Tag routes to avoid them being redistributed back into the originating routing source",
-      "Modify the seed metrics of the redistributed routes",
-      "Enable split-horizon on all interfaces",
-      "Disable load balancing"
+      "VRF LITE does not require MPLS LDP to be enabled",
+      "VRF LITE configured for multiple customers will create multiple isolated VRF routing tables that is isolated from the global routing table",
+      "VRF LITE configured for multiple customers will create a single VRF routing table that is isolated from the global routing table",
+      "VRF LITE requires MPLS LDP to be enabled"
     ],
     "correct_answers": [
-      "Modify the AD of the redistributed routes",
-      "Tag routes to avoid them being redistributed back into the originating routing source",
-      "Modify the seed metrics of the redistributed routes"
+      "VRF LITE does not require MPLS LDP to be enabled",
+      "VRF LITE configured for multiple customers will create multiple isolated VRF routing tables that is isolated from the global routing table"
     ],
     "question_type": "multiple_choice",
     "points": 1
   },
   {
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
+    "source": "Previous Exam",
     "question": "Refer to the exhibit. EIGRP is configured on RouterA and RouterB, and the link is working fine. What can be concluded about the EIGRP authentication between the two routers?",
+    "image": "/images/exam/ex_q27.png",
     "options": [
       "EIGRP authentication will fail due to key mismatch",
       "EIGRP authentication will succeed",
@@ -200,6 +302,16 @@
   },
   {
     "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "source": "Previous Exam",
+    "question": "Which NHRP message is designed to locate and provide the address resolution information of the egress router toward the destination.",
+    "options": ["Purge", "Redirect", "Registration", "Resolution"],
+    "correct_answers": ["Resolution"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "source": "Previous Exam",
     "question": "Redistribution between two EIGRP routing processes does not require a seed metric.",
     "options": ["True", "False"],
     "correct_answers": ["True"],
@@ -208,46 +320,108 @@
   },
   {
     "module": "Module 4 - Troubleshooting BGP",
-    "question": "Customer is trying to establish eBGP peering using a directly connected Serial IP. The eBGP session is not forming. Suggest what should be done to correct the configuration.",
+    "source": "Previous Exam",
+    "question": "Customer is trying to establish eBGP peering to an ISP router using direct Serial link IPv4 address. \nThe topology and configuration(s) are listed below, the eBGP peering is not established. The link between R3 and ISP is working fine. No Access lists or firewall is blocking the TCP session. \nStudy the topology and configurations below and suggest what can be done to correct the configuration to properly establish eBGP peering?",
+    "image": "/images/exam/ex_q35.png",
     "options": [
-      "Remove 'update-source Loopback0' from both routers",
-      "Add ebgp-multihop 2",
-      "Use loopback for all BGP neighbor statements",
-      "Disable synchronization"
+      "add a default route on R3 to ISP router",
+      "add 'ebgp-multihop 2' BGP command on both R3 and ISP routers",
+      "Change BGP AS number on R3 to match ISP BGP AS number",
+      "remove 'update-source Loopback0' BGP command from both R3 and ISP routers"
     ],
-    "correct_answers": ["Remove 'update-source Loopback0' from both routers"],
+    "correct_answers": [
+      "remove 'update-source Loopback0' BGP command from both R3 and ISP routers"
+    ],
     "question_type": "single_choice",
     "points": 1
   },
   {
     "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "source": "Previous Exam",
     "question": "Based on the exhibit, which command is needed on R2 to redistribute iBGP routes into OSPF process 100?",
+    "image": "/images/exam/ex_q36.png",
     "options": [
-      "redistribute bgp 100",
-      "redistribute bgp 100 metric 10",
-      "bgp redistribute-internal",
-      "redistribute internal"
+      "R2(config)#router bgp 100 ->\nR2(config-router)#redistribute-internal",
+      "R2(config)#router ospf 100 ->\nR2(config-router)#bgp redistribute-internal",
+      "R2(config)#router bgp 100 ->\nR2(config-router)#bgp redistribute-internal",
+      "R2(config)#router bgp 100 ->\nR2(config-router)#bgp redistribute-external"
     ],
-    "correct_answers": ["bgp redistribute-internal"],
+    "correct_answers": [
+      "R2(config)#router bgp 100 ->\nR2(config-router)#bgp redistribute-internal"
+    ],
     "question_type": "single_choice",
     "points": 1
   },
   {
     "module": "Module 5 - Conditional Forwarding and Redistribution",
-    "question": "An administrator is configuring a prefix list to stop advertising 172.18.100.0/24, but the route is still being advertised. How can the administrator fix the error?",
+    "source": "Previous Exam",
+    "question": "Customer configures uRPF on a Cisco router interface with the 'ip verify unicast source reachable-via rx allow-default' command to eliminate spoofed IP packets on a network. Which conclusion can be drawn from this configuration?",
     "options": [
-      "Place the deny statement before the permit statement",
-      "Add the ge/le mask qualifiers",
-      "Add 'gateway' keyword to match next hop",
-      "Enable prefix-list length inheritance"
+      "The security feature uRPF is configured with loose mode, and the return traffic will take a route other than the one based on a default route.",
+      "The security feature uRPF is configured with strict mode, and the return path is associated with an interface chosen based on a default route.",
+      "The security feature uRPF is configured with strict mode, and the return path is associated with an interface other than the default route",
+      "The security feature uRPF is configured with loose mode, and the route for return traffic is chosen based on a default route."
     ],
-    "correct_answers": ["Place the deny statement before the permit statement"],
+    "correct_answers": [
+      "The security feature uRPF is configured with strict mode, and the return path is associated with an interface chosen based on a default route."
+    ],
     "question_type": "single_choice",
     "points": 1
   },
   {
     "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "source": "Previous Exam",
+    "question": "Refer to the exhibit. An administrator is configuring a prefix list to stop advertising 172.18.100.0/24, a secure Branch network, to the internet. After adding the prefix list, the administrator notices that the branch network is still being advertised. How can the administrator fix the error?",
+    "image": "/images/exam/ex_q38.png",
+    "options": [
+      "Modify the order of the statements so that the deny statement is before the permit statement",
+      "Modify the permit statement to use ge 32 instead of le 32",
+      "Modify the deny statement to seq 15 deny 172.18.0.0/16",
+      "The prefix list needs another statement to permit the advertisement of the default route."
+    ],
+    "correct_answers": [
+      "Modify the order of the statements so that the deny statement is before the permit statement"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 6 - GRE",
+    "source": "Previous Exam",
+    "question": "Based on the error message below from a configured point to point GRE tunnel, which reason this error may have occurred and would cause the Tunnel interface to enter an up/down flapping state?",
+    "image": "/images/exam/ex_q33.png",
+    "options": [
+      "passive interface command is used on GRE tunnel interface",
+      "timers mismatch on GRE tunnel interface",
+      "GRE tunnel source is using loopback address which is unsupported",
+      "The routers try to use the GRE tunnel to reach the tunnel destination address"
+    ],
+    "correct_answers": [
+      "The routers try to use the GRE tunnel to reach the tunnel destination address"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 1 - Basic Forwarding & Troubleshooting",
+    "source": "Previous Exam",
+    "question": "Refer to the exhibit. Router R1 is configured as shown. An administrative user attempts to use Telnet from router R2 to R1 using the interface IP address 10.10.10.1. However, Telnet access is denied. Which conclusion can be drawn from this scenario?",
+    "image": "/images/exam/ex_q28.png",
+    "options": [
+      "The password was mistyped.",
+      "The username entered should be scrypt",
+      "The vty lines must be configured with the login authentication scrypt command",
+      "The vty lines must be configured with the login authentication default command"
+    ],
+    "correct_answers": ["The password was mistyped."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 5 - Conditional Forwarding and Redistribution",
+    "source": "Previous Exam",
     "question": "Refer to the exhibit. What metric will RIP routes have when redistributed into EIGRP?",
+    "image": "/images/exam/ex_q43.png",
     "options": ["0", "1", "Infinity", "Unreachable"],
     "correct_answers": ["Infinity"],
     "question_type": "single_choice",
@@ -255,28 +429,52 @@
   },
   {
     "module": "Module 4 - Troubleshooting BGP",
-    "question": "Customer is exchanging IPv6 routes using eBGP over an IPv4 TCP session. Which two next-hop addresses should be used in the route-map on R1 and R2?",
+    "source": "Previous Exam",
+    "question": "Customer is exchanging IPv6 routes using eBGP over IPv4 TCP session. \nStudy the configuration below of both R1 and R2. \nSuggest to customer what would be the next hop address to use in the route map on both R1 and R2, (Choose 2:)?",
+    "image": "/images/exam/ex_q46.png",
     "options": [
-      "set ipv6 next-hop 2001:db8:209::1",
-      "set ipv6 next-hop 2001:db8:209::2",
-      "set ipv6 next-hop 192.168.0.1",
-      "set ipv6 next-hop peer-address"
+      "R1# \nroute-map set_next_hop permit 10->\n set ipv6 next-hop 2001:db8:209::1",
+      "R1# \nroute-map set_next_hop permit 10->\n set ip next-hop 209.165.200.1",
+      "R1# \nroute-map set_next_hop permit 10->\n set ip next-hop 2001:db8:209::2",
+      "R2# \nroute-map set_next_hop permit 10->\n set ipv6 next-hop 2001:db8:209::2",
+      "R2# \nroute-map set_next_hop permit 10->\n set ipv6 next-hop 2001:db8:209::1",
+      "R2# \nroute-map set_next_hop permit 10->\n set ip next-hop 209.165.200.2"
     ],
-    "correct_answers": ["set ipv6 next-hop 2001:db8:209::2"],
+    "correct_answers": [
+      "R1# \nroute-map set_next_hop permit 10->\n set ipv6 next-hop 2001:db8:209::1",
+      "R2# \nroute-map set_next_hop permit 10->\n set ipv6 next-hop 2001:db8:209::2"
+    ],
     "question_type": "single_choice",
     "points": 1
   },
   {
     "module": "Module 3 - Troubleshooting OSPFv3",
-    "question": "What is the result when OSPFv3 is configured with no explicit router ID and there are no active IPv4 interfaces on the router?",
+    "source": "Previous Exam",
+    "question": "What is the result when OSPFv3 is configured with no explicit RID, and there are no active IPv4 interfaces on the Router?",
     "options": [
-      "The router ID is automatically set to ::1",
-      "The router ID defaults to 0.0.0.0",
-      "OSPFv3 process will not start",
-      "Router ID is derived from the lowest IPv6 address"
+      "The RID must be manually configured and OSPFv3 adjacency will not form with router's neighbors",
+      "A RID will be automatically generated once an OSPFv3 adjacency with another OSPFv3 router is formed.",
+      "OSPFv3 running IPv6 does not require a RID and OSPFv3 adjacency will form normally.",
+      "The RID is set to the first 32 high order bits of the highest IPv6 interface address that is configured on the router."
     ],
-    "correct_answers": ["OSPFv3 process will not start"],
+    "correct_answers": [
+      "The RID must be manually configured and OSPFv3 adjacency will not form with router's neighbors"
+    ],
     "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Module 8 - VRF Lite",
+    "source": "Previous Exam",
+    "question": "Which two (2) statements are true regarding VRF LITE operation, (Choose 2:)?",
+    "options": [
+      "show ip route vrf",
+      "show ip route",
+      "show ip vrf details",
+      "show ip vrf interfaces"
+    ],
+    "correct_answers": ["show ip route vrf", "show ip vrf interfaces"],
+    "question_type": "multiple_choice",
     "points": 1
   }
 ]
