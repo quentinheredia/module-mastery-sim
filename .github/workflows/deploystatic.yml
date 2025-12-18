@@ -31,12 +31,15 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build
+        run: |
+          echo "VITE_BUILD_ID=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+          npm run build
+          echo "{ \"build\": \"$(git rev-parse --short HEAD)\" }" > dist/build.json
 
       - name: Upload built site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist   # 👈 Upload the built static files only
+          path: dist
 
   deploy:
     runs-on: ubuntu-latest
