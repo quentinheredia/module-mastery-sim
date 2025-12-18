@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/Header";
 import { courseColorClasses } from "@/components/layout/CourseSelector";
 import { CourseColor } from "@/types/quiz";
 import { OnlineCounter } from "@/components/OnlineCounter";
+import { CommunityExamDocument } from "@/components/community/CommunityExamDocument";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -57,14 +58,18 @@ const Home = () => {
                 <OnlineCounter />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">
-                Answers for{" "}
-                <span className={courseColors.text}>Dajun Exam</span>
+                Community Answers for{" "}
+                <span className={courseColors.text}>Take-Home Exam</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Add the answers here so everybody can eat.
+                Collaborative solutions with voting. Add your solution or upvote verified answers.
               </p>
             </div>
 
+            {/* Community Exam Document */}
+            <div className="mb-12">
+              <CommunityExamDocument />
+            </div>
             {/* History & Bug Fixes Cards */}
             <Card
               variant="glass"
