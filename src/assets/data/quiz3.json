@@ -160,20 +160,5 @@
     "correct_answers": ["show ipv6 ospf interface"],
     "question_type": "multiple_choice",
     "points": 1
-  },
-  {
-    "module": "Module 3 - OSPFv2 and OSPFv3",
-    "source": "Quiz 3 - OSPFv2 and OSPFv3",
-    "question": "",
-    "image": null,
-    "options": [
-      "show ipv6 ospfv3 interface",
-      "show ipv6 protocols",
-      "show ipv6 ospf interface timers",
-      "show ipv6 ospf interface"
-    ],
-    "correct_answers": ["show ipv6 ospf interface"],
-    "question_type": "single_choice",
-    "points": 1
   }
 ]

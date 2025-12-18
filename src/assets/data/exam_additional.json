@@ -444,7 +444,7 @@
       "R1# \nroute-map set_next_hop permit 10->\n set ipv6 next-hop 2001:db8:209::1",
       "R2# \nroute-map set_next_hop permit 10->\n set ipv6 next-hop 2001:db8:209::2"
     ],
-    "question_type": "single_choice",
+    "question_type": "multiple_choice",
     "points": 1
   },
   {
