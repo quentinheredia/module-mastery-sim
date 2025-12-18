@@ -4,7 +4,7 @@
     "question": "Customer enabled EIGRPv4 with authentication between two routers, however neighbor adjacency is not established. Which two authentication parameters need to match in EIGRPv4 authentication configuration?",
     "image": null,
     "options": ["Key Variance", "Key ID", "Key chain", "Key AS", "Key String"],
-    "correct_answers": ["Key ID", "Key chain"],
+    "correct_answers": ["Key ID", "Key chain", "Key String"],
     "question_type": "multiple_choice",
     "points": 1
   },

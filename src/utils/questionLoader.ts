@@ -13,7 +13,7 @@ import module5 from "@/assets/data/module5.json";
 import module6 from "@/assets/data/module6.json";
 import module7 from "@/assets/data/module7.json";
 import module8 from "@/assets/data/module8.json";
-import examAdditional from "@/assets/data/exam_additional.json";
+//import examAdditional from "@/assets/data/exam_additional.json";
 
 // NET4005 course data
 import cloudData from "@/assets/data/net4005/cloud.json";
@@ -42,20 +42,11 @@ const courseData: Record<string, Question[]> = {
     ...module6,
     ...module7,
     ...module8,
-    ...examAdditional,
+    //...examAdditional,
   ] as Question[],
-  net4005: [
-    ...cloudData,
-    ...cryptoData,
-    ...sdnData,
-    ...appData,
-  ] as Question[],
-  net3008: [
-    ...net3008Questions,
-  ] as Question[],
-  net4001: [
-    ...net4001Questions,
-  ] as Question[],
+  net4005: [...cloudData, ...cryptoData, ...sdnData, ...appData] as Question[],
+  net3008: [...net3008Questions] as Question[],
+  net4001: [...net4001Questions] as Question[],
 };
 
 // Standardized module names for NET4009
@@ -85,24 +76,26 @@ const normalizeModuleName = (moduleName: string, courseId: string): string => {
 // Load questions for a specific course
 export const loadQuestions = (courseId: string = "net4009"): Question[] => {
   const data = courseData[courseId] || [];
-  return data
-    .map((q: Question) => ({
-      ...q,
-      module: normalizeModuleName(q.module, courseId),
-    })) as Question[];
+  return data.map((q: Question) => ({
+    ...q,
+    module: normalizeModuleName(q.module, courseId),
+  })) as Question[];
 };
 
 // Get unique modules for a specific course
 export const getAvailableModules = (courseId: string = "net4009"): string[] => {
   const questions = loadQuestions(courseId);
-  const modules = new Set(questions.map(q => q.module));
+  const modules = new Set(questions.map((q) => q.module));
   return Array.from(modules).sort();
 };
 
 // Filter questions by module within a course
-export const filterByModule = (courseId: string, module: string): Question[] => {
+export const filterByModule = (
+  courseId: string,
+  module: string
+): Question[] => {
   const questions = loadQuestions(courseId);
-  return questions.filter(q => q.module === module);
+  return questions.filter((q) => q.module === module);
 };
 
 // Shuffle array using Fisher-Yates algorithm
@@ -116,14 +109,17 @@ export const shuffleArray = <T>(array: T[]): T[] => {
 };
 
 // Get random questions for exam from a specific course
-export const getRandomQuestions = (courseId: string = "net4009", count: number = 40): Question[] => {
+export const getRandomQuestions = (
+  courseId: string = "net4009",
+  count: number = 40
+): Question[] => {
   const allQuestions = loadQuestions(courseId);
-  
+
   // Special logic for NET4005 with specific distribution (only for default 10 questions)
   if (courseId === "net4005" && count === 10) {
     return getNet4005ExamQuestions(allQuestions);
   }
-  
+
   // Default behavior: random selection up to requested count
   const shuffled = shuffleArray(allQuestions);
   return shuffled.slice(0, Math.min(count, shuffled.length));
@@ -131,28 +127,44 @@ export const getRandomQuestions = (courseId: string = "net4009", count: number =
 
 // NET4005 specific exam question selection
 const getNet4005ExamQuestions = (allQuestions: Question[]): Question[] => {
-  const matchingQuestions = allQuestions.filter(q => q.question_type === "matching");
-  const multiAnswerQuestions = allQuestions.filter(q => q.question_type === "multiple_answer");
-  const singleAnswerQuestions = allQuestions.filter(q => q.question_type === "multiple_choice");
-  
+  const matchingQuestions = allQuestions.filter(
+    (q) => q.question_type === "matching"
+  );
+  const multiAnswerQuestions = allQuestions.filter(
+    (q) => q.question_type === "multiple_answer"
+  );
+  const singleAnswerQuestions = allQuestions.filter(
+    (q) => q.question_type === "multiple_choice"
+  );
+
   const selectedQuestions: Question[] = [];
-  
+
   // 1 random matching question
   const shuffledMatching = shuffleArray(matchingQuestions);
   if (shuffledMatching.length > 0) {
     selectedQuestions.push(shuffledMatching[0]);
   }
-  
+
   // 2-3 multi-answer questions (randomly pick 2 or 3)
   const multiAnswerCount = Math.random() < 0.5 ? 2 : 3;
   const shuffledMultiAnswer = shuffleArray(multiAnswerQuestions);
-  selectedQuestions.push(...shuffledMultiAnswer.slice(0, Math.min(multiAnswerCount, shuffledMultiAnswer.length)));
-  
+  selectedQuestions.push(
+    ...shuffledMultiAnswer.slice(
+      0,
+      Math.min(multiAnswerCount, shuffledMultiAnswer.length)
+    )
+  );
+
   // Fill remaining spots with single-answer questions (to reach 10 total)
   const remainingCount = 10 - selectedQuestions.length;
   const shuffledSingleAnswer = shuffleArray(singleAnswerQuestions);
-  selectedQuestions.push(...shuffledSingleAnswer.slice(0, Math.min(remainingCount, shuffledSingleAnswer.length)));
-  
+  selectedQuestions.push(
+    ...shuffledSingleAnswer.slice(
+      0,
+      Math.min(remainingCount, shuffledSingleAnswer.length)
+    )
+  );
+
   // Shuffle the final selection so question types are mixed
   return shuffleArray(selectedQuestions);
 };
@@ -166,24 +178,26 @@ export const checkAnswer = (
 ): boolean => {
   if (question.question_type === "matching") {
     if (!matchingAnswers || !question.correct_answers) return false;
-    
+
     const correctAnswers = question.correct_answers as MatchingPairs;
     const pairs = Object.keys(correctAnswers);
-    
+
     // All pairs must be answered correctly
-    return pairs.every(key => matchingAnswers[key] === correctAnswers[key]);
+    return pairs.every((key) => matchingAnswers[key] === correctAnswers[key]);
   }
-  
+
   if (question.question_type === "multi_step") {
     if (!multiStepAnswers || !question.subparts) return false;
-    
+
     // Check each subpart - all must be correct for full credit
-    return question.subparts.every(subpart => {
-      const userValue = (multiStepAnswers[subpart.id] || "").trim().toLowerCase();
+    return question.subparts.every((subpart) => {
+      const userValue = (multiStepAnswers[subpart.id] || "")
+        .trim()
+        .toLowerCase();
       const correctValue = subpart.answer.trim().toLowerCase();
-      
+
       if (userValue === correctValue) return true;
-      
+
       // Numeric tolerance check
       const userNum = parseFloat(userValue);
       const correctNum = parseFloat(correctValue);
@@ -191,19 +205,19 @@ export const checkAnswer = (
         const tolerance = Math.abs(correctNum) * 0.01 || 0.01;
         return Math.abs(userNum - correctNum) <= tolerance;
       }
-      
+
       return false;
     });
   }
-  
+
   // Regular question types
   const correctAnswers = question.correct_answers as string[];
   if (correctAnswers.length !== selectedAnswers.length) {
     return false;
   }
-  
+
   const sortedCorrect = [...correctAnswers].sort();
   const sortedSelected = [...selectedAnswers].sort();
-  
+
   return sortedCorrect.every((ans, idx) => ans === sortedSelected[idx]);
 };
