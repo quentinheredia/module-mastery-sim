@@ -20,7 +20,7 @@
     "module": "Module 4 - Troubleshooting BGP",
     "source": "Previous Exam",
     "question": "What are the three (3) reasons that may cause eBGP neighbor relationship not to form?",
-    "image": "/images/exam/ex_q1.png",
+    "image": null,
     "options": [
       "Mismatched BGP RIDs",
       "Incorrect neighbor statement",
