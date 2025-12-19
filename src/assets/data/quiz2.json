@@ -97,7 +97,7 @@
     "module": "Module 2 - Troubleshooting EIGRPv4/v6",
     "source": "Quiz 2 - Troubleshooting EIGRPv4/v6",
     "question": "Refer to the exhibit below. Router R1 has recently been configured to operate in an IPv6 only network and is connected via interface Gigabit Ethernet 0/0 to router R2. R2 is configured correctly and link is working fine between R1 and R2. R2 will not form a neighbor relationship with R1 What is the problem, (Choose 1:)?",
-    "image": "public/images/quizzes/4009_2/quiz2_q7.png",
+    "image": "/images/quizzes/4009_2/quiz2_q7.png",
     "options": [
       "IPv6 Link local address must be configured on interface Gig0/0",
       "EIGRP IPv6 is not activated on Gig0/0",
