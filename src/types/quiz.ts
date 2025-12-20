@@ -22,6 +22,7 @@ export interface Question {
   pairs?: MatchingPairs;
   subparts?: MultiStepSubpart[];
   explanation?: string;
+  source?: string;
 }
 
 export interface UserAnswer {

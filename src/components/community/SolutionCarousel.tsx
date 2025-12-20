@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
 import { AnswerVersion } from '@/types/net4007';
@@ -19,6 +19,14 @@ export const SolutionCarousel: React.FC<SolutionCarouselProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [editorOpen, setEditorOpen] = useState(false);
+  const [editingSolution, setEditingSolution] = useState<AnswerVersion | undefined>(undefined);
+
+  // Adjust index if current solution is deleted
+  useEffect(() => {
+    if (currentIndex >= solutions.length && solutions.length > 0) {
+      setCurrentIndex(solutions.length - 1);
+    }
+  }, [solutions.length, currentIndex]);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : solutions.length - 1));
@@ -26,6 +34,29 @@ export const SolutionCarousel: React.FC<SolutionCarouselProps> = ({
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev < solutions.length - 1 ? prev + 1 : 0));
+  };
+
+  const handleAddSolution = () => {
+    setEditingSolution(undefined);
+    setEditorOpen(true);
+  };
+
+  const handleEditSolution = () => {
+    setEditingSolution(solutions[currentIndex]);
+    setEditorOpen(true);
+  };
+
+  const handleDeleteSolution = () => {
+    // Refresh will happen via realtime, but we adjust index proactively
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+    onRefresh();
+  };
+
+  const handleEditorClose = () => {
+    setEditorOpen(false);
+    setEditingSolution(undefined);
   };
 
   if (solutions.length === 0) {
@@ -36,7 +67,7 @@ export const SolutionCarousel: React.FC<SolutionCarouselProps> = ({
             No solutions yet. Be the first to add one!
           </p>
           <Button
-            onClick={() => setEditorOpen(true)}
+            onClick={handleAddSolution}
             className="bg-course-rose hover:bg-course-rose/90 text-white"
           >
             <Plus className="h-4 w-4 mr-2" />
@@ -46,8 +77,9 @@ export const SolutionCarousel: React.FC<SolutionCarouselProps> = ({
         <SolutionEditor
           questionId={questionId}
           isOpen={editorOpen}
-          onClose={() => setEditorOpen(false)}
+          onClose={handleEditorClose}
           onSuccess={onRefresh}
+          existingSolution={editingSolution}
         />
       </div>
     );
@@ -68,7 +100,7 @@ export const SolutionCarousel: React.FC<SolutionCarouselProps> = ({
               variant="outline"
               size="icon"
               onClick={handlePrev}
-              className="h-8 w-8"
+              className="h-8 w-8 border-border text-foreground hover:bg-muted"
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
@@ -76,7 +108,7 @@ export const SolutionCarousel: React.FC<SolutionCarouselProps> = ({
               variant="outline"
               size="icon"
               onClick={handleNext}
-              className="h-8 w-8"
+              className="h-8 w-8 border-border text-foreground hover:bg-muted"
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
@@ -92,15 +124,18 @@ export const SolutionCarousel: React.FC<SolutionCarouselProps> = ({
       {/* Controls */}
       <SolutionControls
         solution={currentSolution}
-        onAddSolution={() => setEditorOpen(true)}
+        onAddSolution={handleAddSolution}
+        onEditSolution={handleEditSolution}
+        onDeleteSolution={handleDeleteSolution}
         onVoteSuccess={onRefresh}
       />
 
       <SolutionEditor
         questionId={questionId}
         isOpen={editorOpen}
-        onClose={() => setEditorOpen(false)}
+        onClose={handleEditorClose}
         onSuccess={onRefresh}
+        existingSolution={editingSolution}
       />
     </div>
   );

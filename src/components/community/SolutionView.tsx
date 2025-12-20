@@ -2,6 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import remarkGfm from 'remark-gfm';
 import 'katex/dist/katex.min.css';
 import { AnswerVersion } from '@/types/net4007';
 
@@ -13,7 +14,7 @@ export const SolutionView: React.FC<SolutionViewProps> = ({ solution }) => {
   return (
     <div className="prose prose-sm dark:prose-invert max-w-none">
       <ReactMarkdown
-        remarkPlugins={[remarkMath]}
+        remarkPlugins={[remarkMath, remarkGfm]}
         rehypePlugins={[rehypeKatex]}
         components={{
           // Style overrides for better visual consistency
@@ -39,6 +40,31 @@ export const SolutionView: React.FC<SolutionViewProps> = ({ solution }) => {
             <blockquote className="border-l-4 border-primary/50 pl-4 italic text-muted-foreground mb-4">
               {children}
             </blockquote>
+          ),
+          // Table support
+          table: ({ children }) => (
+            <div className="overflow-x-auto my-4">
+              <table className="min-w-full border border-border rounded-lg overflow-hidden">
+                {children}
+              </table>
+            </div>
+          ),
+          thead: ({ children }) => (
+            <thead className="bg-muted/50">{children}</thead>
+          ),
+          tbody: ({ children }) => (
+            <tbody className="divide-y divide-border/50">{children}</tbody>
+          ),
+          tr: ({ children }) => (
+            <tr className="hover:bg-muted/30 transition-colors">{children}</tr>
+          ),
+          th: ({ children }) => (
+            <th className="px-4 py-2 text-left font-semibold border-b border-border text-foreground">
+              {children}
+            </th>
+          ),
+          td: ({ children }) => (
+            <td className="px-4 py-2 text-foreground">{children}</td>
           ),
         }}
       >
