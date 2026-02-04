@@ -1,14 +1,15 @@
 import { useCourse } from "@/contexts/CourseContext";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-  SelectGroup, // Added
-  SelectLabel, // Added
-} from "@/components/ui/select";
-import { GraduationCap } from "lucide-react";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
+  DropdownMenuPortal,
+} from "@/components/ui/dropdown-menu";
+import { GraduationCap, ChevronDown } from "lucide-react";
 import { CourseColor } from "@/types/quiz";
 
 const courseColorClasses: Record<
@@ -74,7 +75,6 @@ export const CourseSelector = () => {
 
   if (!activeCourse) return null;
 
-  // activeCourse is safe because the Context flattens it correctly
   const activeColors = courseColorClasses[activeCourse.color];
 
   return (
@@ -83,54 +83,66 @@ export const CourseSelector = () => {
         <GraduationCap className="h-4 w-4" />
         <span className="text-sm">Course:</span>
       </div>
-      <Select value={activeCourse.id} onValueChange={setActiveCourse}>
-        <SelectTrigger
-          className={`w-[180px] h-10 rounded-xl border ${activeColors.border} ${activeColors.bg} backdrop-blur-sm hover:opacity-90 transition-all duration-300 focus:ring-primary/30`}
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          className={`flex items-center justify-between gap-2 w-[180px] h-10 px-3 rounded-xl border ${activeColors.border} ${activeColors.bg} backdrop-blur-sm hover:opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/30`}
         >
           <div className="flex items-center gap-2">
             <div className={`h-2.5 w-2.5 rounded-full ${activeColors.dot}`} />
-            <SelectValue />
+            <span className={`font-semibold font-display text-sm ${activeColors.text}`}>
+              {activeCourse.name}
+            </span>
           </div>
-        </SelectTrigger>
-        <SelectContent className="rounded-xl border-border/50 bg-popover/95 backdrop-blur-md shadow-elevation-lg max-h-[500px]">
-          {/* We now iterate over SEMESTERS first */}
+          <ChevronDown className="h-4 w-4 opacity-50" />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent 
+          className="rounded-xl border-border/50 bg-popover backdrop-blur-md shadow-elevation-lg min-w-[200px]"
+          align="start"
+        >
           {courses.map((semester: any) => (
-            <SelectGroup key={semester.id}>
-              <SelectLabel className="pl-3 py-2 text-xs font-bold text-muted-foreground uppercase tracking-wider">
-                {semester.name}
-              </SelectLabel>
+            <DropdownMenuSub key={semester.id}>
+              <DropdownMenuSubTrigger className="rounded-lg cursor-pointer py-2 focus:bg-muted">
+                <span className="text-sm font-semibold text-foreground">
+                  {semester.name}
+                </span>
+              </DropdownMenuSubTrigger>
+              <DropdownMenuPortal>
+                <DropdownMenuSubContent 
+                  className="rounded-xl border-border/50 bg-popover backdrop-blur-md shadow-elevation-lg min-w-[220px]"
+                  sideOffset={8}
+                >
+                  {semester.courses?.map((course: any) => {
+                    const colors = courseColorClasses[course.color as CourseColor];
+                    if (!colors) return null;
 
-              {/* Then we iterate over the COURSES inside the semester */}
-              {semester.courses?.map((course: any) => {
-                const colors = courseColorClasses[course.color as CourseColor];
-                if (!colors) return null; // Safety check
+                    const isActive = activeCourse.id === course.id;
 
-                return (
-                  <SelectItem
-                    key={course.id}
-                    value={course.id}
-                    className="rounded-lg cursor-pointer transition-colors duration-200 focus:bg-muted ml-1"
-                  >
-                    <div className="flex items-center gap-3 py-1">
-                      <div className={`h-3 w-3 rounded-full ${colors.dot}`} />
-                      <div className="flex flex-col items-start">
-                        <span
-                          className={`font-semibold font-display ${colors.text}`}
-                        >
-                          {course.name}
-                        </span>
-                        <span className="text-xs text-muted-foreground line-clamp-1 max-w-[180px]">
-                          {course.description}
-                        </span>
-                      </div>
-                    </div>
-                  </SelectItem>
-                );
-              })}
-            </SelectGroup>
+                    return (
+                      <DropdownMenuItem
+                        key={course.id}
+                        onClick={() => setActiveCourse(course.id)}
+                        className={`rounded-lg cursor-pointer transition-colors duration-200 focus:bg-muted py-2 ${isActive ? 'bg-muted' : ''}`}
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className={`h-3 w-3 rounded-full ${colors.dot}`} />
+                          <div className="flex flex-col items-start">
+                            <span className={`font-semibold font-display ${colors.text}`}>
+                              {course.name}
+                            </span>
+                            <span className="text-xs text-muted-foreground line-clamp-1 max-w-[180px]">
+                              {course.description}
+                            </span>
+                          </div>
+                        </div>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuSubContent>
+              </DropdownMenuPortal>
+            </DropdownMenuSub>
           ))}
-        </SelectContent>
-      </Select>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 };
