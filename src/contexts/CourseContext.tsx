@@ -142,7 +142,7 @@ const AVAILABLE_COURSES: any[] = [
           "Virtualization V2026",
           "Cloud and Fog Scheduling - I",
           "Cloud and Fog Scheduling - II",
-          "IN CLASS QUESTIONS",
+          "WEI SHI SAID THIS IN CLASS",
         ],
       },
     ],

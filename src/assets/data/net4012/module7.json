@@ -1,0 +1,841 @@
+[
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Which of the following is an example of performance isolation?",
+
+    "image": null,
+
+    "options": [
+      "Dynamically assigning and accounting for resources across different applications to prevent resource interference",
+
+      "Using a firewall to block unauthorized access to the hardware",
+
+      "Migrating an application to a new platform to ensure it stays online during a crash",
+
+      "Sharing the same OS kernel across all running applications"
+    ],
+
+    "correct_answers": [
+      "Dynamically assigning and accounting for resources across different applications to prevent resource interference"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Which of the following is an example of system security in a virtualized environment?",
+
+    "image": null,
+
+    "options": [
+      "Increasing the CPU clock speed of the host machine",
+
+      "Allowing isolation of services running on the same hardware to prevent cross-service attacks",
+
+      "Reducing the latency of memory access between VMs",
+
+      "Ensuring that all tasks are finished in a first-in-first-out order"
+    ],
+
+    "correct_answers": [
+      "Allowing isolation of services running on the same hardware to prevent cross-service attacks"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Which of the following is an example of performance reliability?",
+
+    "image": null,
+
+    "options": [
+      "Encrypting data at rest on the physical disk",
+
+      "Limiting the number of users that can log into the system",
+
+      "Allowing applications to migrate from one platform to another to maintain service availability",
+
+      "Using a Round Robin algorithm for task distribution"
+    ],
+
+    "correct_answers": [
+      "Allowing applications to migrate from one platform to another to maintain service availability"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Which of the following are considered resource management issues in the cloud?",
+
+    "image": null,
+
+    "options": [
+      "Provisioning for peak events (peak times)",
+
+      "Heterogeneity of hardware and software",
+
+      "Machine failures",
+
+      "Strictly using local storage only"
+    ],
+
+    "correct_answers": [
+      "Provisioning for peak events (peak times)",
+
+      "Heterogeneity of hardware and software",
+
+      "Machine failures"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "What is virtualization?",
+
+    "image": null,
+
+    "options": [
+      "Using software to create an abstraction of physical hardware",
+
+      "Abstracting underlying resources to simplify their use",
+
+      "Isolating users and supporting replication to increase elasticity",
+
+      "Physically upgrading RAM and CPU on a server"
+    ],
+
+    "correct_answers": [
+      "Using software to create an abstraction of physical hardware",
+
+      "Abstracting underlying resources to simplify their use",
+
+      "Isolating users and supporting replication to increase elasticity"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Why is cloud virtualization important?",
+
+    "image": null,
+
+    "options": [
+      "It enables performance isolation by dynamically assigning resources",
+
+      "It provides system security through isolation of services",
+
+      "It enhances performance and reliability by allowing application migration",
+
+      "It simplifies the development and management of services offered by providers"
+    ],
+
+    "correct_answers": [
+      "It enables performance isolation by dynamically assigning resources",
+
+      "It provides system security through isolation of services",
+
+      "It enhances performance and reliability by allowing application migration",
+
+      "It simplifies the development and management of services offered by providers"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "What is the primary difference between a Virtualized Deployment and a Container Deployment regarding the OS?",
+
+    "image": null,
+
+    "options": [
+      "Virtualized deployments run on a hypervisor where each VM has its own OS; Container deployments share the host OS",
+
+      "Container deployments require a separate OS for every container",
+
+      "Virtualized deployments do not use a hypervisor",
+
+      "There is no difference in OS management between the two"
+    ],
+
+    "correct_answers": [
+      "Virtualized deployments run on a hypervisor where each VM has its own OS; Container deployments share the host OS"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "What are well-known benefits of virtualization?",
+
+    "image": null,
+
+    "options": [
+      "Slashing IT expenses",
+
+      "Reducing downtime and enhancing resiliency in disaster recovery",
+
+      "Increasing efficiency and productivity",
+
+      "Supporting green-friendly initiatives",
+
+      "Requiring more physical hardware for every new application"
+    ],
+
+    "correct_answers": [
+      "Slashing IT expenses",
+
+      "Reducing downtime and enhancing resiliency in disaster recovery",
+
+      "Increasing efficiency and productivity",
+
+      "Supporting green-friendly initiatives"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "What is another name for the Virtual Machine Monitor (VMM)?",
+
+    "image": null,
+
+    "options": ["Hypervisor", "VMBR", "Supervisor", "Hypermanager"],
+
+    "correct_answers": ["Hypervisor"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "What are the key benefits of resource aggregation?",
+
+    "image": null,
+
+    "options": [
+      "Enables ultra large VMs",
+
+      "Better resource utilization",
+
+      "Supports memory intensive workloads",
+
+      "Guarantees the lowest possible latency"
+    ],
+
+    "correct_answers": [
+      "Enables ultra large VMs",
+
+      "Better resource utilization",
+
+      "Supports memory intensive workloads"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "What are the trade-offs or challenges of aggregation?",
+
+    "image": null,
+
+    "options": [
+      "Higher latency than local memory",
+
+      "Complex consistency management",
+
+      "Requires fast interconnects",
+
+      "Not suitable for latency critical workloads"
+    ],
+
+    "correct_answers": [
+      "Higher latency than local memory",
+
+      "Complex consistency management",
+
+      "Requires fast interconnects",
+
+      "Not suitable for latency critical workloads"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Which of the following are key characteristics of a Virtual Machine (VM)?",
+
+    "image": null,
+
+    "options": [
+      "Heavyweight",
+
+      "Hardware level virtualization",
+
+      "Each VM runs its own OS",
+
+      "Native performance"
+    ],
+
+    "correct_answers": [
+      "Heavyweight",
+
+      "Hardware level virtualization",
+
+      "Each VM runs its own OS"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Which of the following are key characteristics of a Container?",
+
+    "image": null,
+
+    "options": [
+      "Lightweight",
+
+      "OS level virtualization",
+
+      "All containers share the host OS",
+
+      "Hardware level virtualization"
+    ],
+
+    "correct_answers": [
+      "Lightweight",
+
+      "OS level virtualization",
+
+      "All containers share the host OS"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "In what situation should you choose to use a VM instead of a container?",
+
+    "image": null,
+
+    "options": [
+      "When you need to manage a variety of different Operating Systems",
+
+      "When you need to run an app that requires all functionalities of a full OS",
+
+      "When you want to maximize the number of apps on a single server",
+
+      "When you need native performance for a single microservice"
+    ],
+
+    "correct_answers": [
+      "When you need to manage a variety of different Operating Systems",
+
+      "When you need to run an app that requires all functionalities of a full OS"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Which service model performs virtual machine scheduling?",
+
+    "image": null,
+
+    "options": [
+      "IaaS (Infrastructure as a Service)",
+
+      "PaaS (Platform as a Service)",
+
+      "SaaS (Software as a Service)",
+
+      "FaaS (Function as a Service)"
+    ],
+
+    "correct_answers": ["IaaS (Infrastructure as a Service)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "What are the characteristics of an effective scheduler?",
+
+    "image": null,
+
+    "options": [
+      "Reduce operational costs",
+
+      "Reduce queue waiting time",
+
+      "Increase resource utilization",
+
+      "Increase manual intervention"
+    ],
+
+    "correct_answers": [
+      "Reduce operational costs",
+
+      "Reduce queue waiting time",
+
+      "Increase resource utilization"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "What are common cloud scheduling goals?",
+
+    "image": null,
+
+    "options": [
+      "Manage memory and CPU utilization",
+
+      "Maximizing utilization while minimizing execution time",
+
+      "Improving load balancing",
+
+      "Increasing the number of successfully completed tasks",
+
+      "Ensuring all tasks take the same amount of time regardless of complexity"
+    ],
+
+    "correct_answers": [
+      "Manage memory and CPU utilization",
+
+      "Maximizing utilization while minimizing execution time",
+
+      "Improving load balancing",
+
+      "Increasing the number of successfully completed tasks"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Match the following scheduling types to their correct definitions.",
+
+    "image": null,
+
+    "options": [
+      "When new tasks arrive they are scheduled to the VM directly",
+
+      "Tasks are grouped into a batch before being mapped to resources",
+
+      "Based on prior info; doesn't take current VM state into account",
+
+      "Considers the current state and capacity of available VMs",
+
+      "Task can be interrupted and moved to another resource",
+
+      "VMs are not re-allocated until the current task finishes"
+    ],
+
+    "pairs": {
+      "A": "Immediate scheduling",
+
+      "B": "Batch scheduling",
+
+      "C": "Static Scheduling",
+
+      "D": "Dynamic scheduling",
+
+      "E": "Preemptive Scheduling",
+
+      "F": "Non-preemptive"
+    },
+
+    "correct_answers": {
+      "A": "When new tasks arrive they are scheduled to the VM directly",
+
+      "B": "Tasks are grouped into a batch before being mapped to resources",
+
+      "C": "Based on prior info; doesn't take current VM state into account",
+
+      "D": "Considers the current state and capacity of available VMs",
+
+      "E": "Task can be interrupted and moved to another resource",
+
+      "F": "VMs are not re-allocated until the current task finishes"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "What does the acronym DAG stand for in the context of task scheduling?",
+
+    "image": null,
+
+    "options": [
+      "Directed Acyclic Graph",
+
+      "Direct Access Gateway",
+
+      "Digital Analysis Group",
+
+      "Distributed Acyclic Graph"
+    ],
+
+    "correct_answers": ["Directed Acyclic Graph"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Why is scheduling considered an NP-Hard problem?",
+
+    "image": null,
+
+    "options": [
+      "Because it cannot be solved in polynomial time",
+
+      "Because it is O(n log n)",
+
+      "Because it requires a Directed Acyclic Graph",
+
+      "Because hardware is too fast for software to keep up"
+    ],
+
+    "correct_answers": ["Because it cannot be solved in polynomial time"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Based on the class discussion, are the jobs described in the scheduling diagram preemptive or non-preemptive?",
+
+    "image": "/images/quizzes/4012_1/module7_10x10.png",
+
+    "options": ["Preemptive", "Non-preemptive", "Batch-only", "Static"],
+
+    "correct_answers": ["Preemptive"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Are the jobs illustrated in this specific diagram inter-related?",
+
+    "image": "/images/quizzes/4012_1/module7_10x10.png",
+
+    "options": [
+      "Yes, they form a DAG",
+
+      "No",
+
+      "Only during batch scheduling",
+
+      "Yes, via shared memory"
+    ],
+
+    "correct_answers": ["No"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Are the jobs shown in this diagram considered parallelized?",
+
+    "image": "/images/quizzes/4012_1/module7_10x10.png",
+
+    "options": [
+      "Yes",
+
+      "No",
+
+      "Only on specific VMs",
+
+      "Yes, if using aggregation"
+    ],
+
+    "correct_answers": ["No"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Why do jobs jump frequently between Virtual Machines (VMs) in this diagram?",
+
+    "image": "/images/quizzes/4012_1/module7_10x10.png",
+
+    "options": [
+      "VMs are heterogeneous with different hardware capabilities",
+
+      "The network latency is too high",
+
+      "To save on IT expenses and be green-friendly",
+
+      "Because the scheduler is using a simple Round Robin approach"
+    ],
+
+    "correct_answers": [
+      "VMs are heterogeneous with different hardware capabilities"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "What are the primary goals of Utility-driven scheduling?",
+
+    "image": null,
+
+    "options": [
+      "Optimizing resource utilization",
+
+      "Relaxed QoS (Quality of Service)",
+
+      "Strict performance isolation",
+
+      "Zero-latency execution"
+    ],
+
+    "correct_answers": [
+      "Optimizing resource utilization",
+
+      "Relaxed QoS (Quality of Service)"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Which of the following are main approaches for Utility-driven scheduling?",
+
+    "image": null,
+
+    "options": [
+      "Partial utility function",
+
+      "Continuous resource monitoring and feedback",
+
+      "Static scheduling without system feedback",
+
+      "Randomized task distribution"
+    ],
+
+    "correct_answers": [
+      "Partial utility function",
+
+      "Continuous resource monitoring and feedback"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Which of the following situations correctly describes Partial Utility Functions?",
+
+    "image": null,
+
+    "options": [
+      "Having a specific set of jobs (e.g., a-f) that are associated with users",
+
+      "Defining a utility function that only covers 50% of the total system load",
+
+      "Using a utility function that ignores user priority",
+
+      "Scheduling tasks only based on arrival time regardless of utility"
+    ],
+
+    "correct_answers": [
+      "Having a specific set of jobs (e.g., a-f) that are associated with users"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "WEI SHI SAID THIS IN CLASS",
+
+    "source": "WEI SHI SAID THIS IN CLASS",
+
+    "question": "Which of the following statements correctly describe 'relaxation' in scheduling context?",
+
+    "image": null,
+
+    "options": [
+      "It refers to the amount of leeway allowed; for example, 20% means exceeding a time limit slightly will not dissatisfy the customer",
+
+      "A 0% relaxation means there is no room for taking extra time beyond the limit",
+
+      "It refers to the process of VMs entering a low-power state during idle periods",
+
+      "It involves reducing the security overhead to improve processing speed"
+    ],
+
+    "correct_answers": [
+      "It refers to the amount of leeway allowed; for example, 20% means exceeding a time limit slightly will not dissatisfy the customer",
+
+      "A 0% relaxation means there is no room for taking extra time beyond the limit"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  }
+]

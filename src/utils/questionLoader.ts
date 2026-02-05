@@ -37,6 +37,7 @@ import net4012lecture3 from "@/assets/data/net4012/module3.json";
 import net4012lecture4 from "@/assets/data/net4012/module4.json";
 import net4012lecture5 from "@/assets/data/net4012/module5.json";
 import net4012lecture6 from "@/assets/data/net4012/module6.json";
+import net4012inclass from "@/assets/data/net4012/module7.json";
 
 // Organize data by course
 const courseData: Record<string, Question[]> = {
@@ -51,6 +52,7 @@ const courseData: Record<string, Question[]> = {
     ...net4012lecture4,
     ...net4012lecture5,
     ...net4012lecture6,
+    ...net4012inclass,
   ] as Question[],
 };
 
