@@ -1,0 +1,191 @@
+[
+  {
+    "module": "Cloud and Fog Scheduling - II",
+
+    "source": "Slide 39 - Cloud and Fog Scheduling - II",
+
+    "question": "What is the overall time complexity of the Min-CCV algorithm?",
+
+    "image": null,
+
+    "options": ["O(n + m)", "O(n log n)", "O(n x m)", "O(1)"],
+
+    "correct_answers": ["O(n x m)"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - II",
+
+    "source": "Slide 39 - Cloud and Fog Scheduling - II",
+
+    "question": "What is the overall time complexity of the Min-V algorithm?",
+
+    "image": null,
+
+    "options": ["O(n x m)", "O(n log n + n x m)", "O(n + m)", "O(log n)"],
+
+    "correct_answers": ["O(n log n + n x m)"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - II",
+
+    "source": "Slide 41 - Cloud and Fog Scheduling - II",
+
+    "question": "Based on the simulation settings, which environment has higher CPU processing rates?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": ["Fog", "Cloud", "They are identical", "Volunteer devices"],
+
+    "correct_answers": ["Cloud"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - II",
+
+    "source": "Slide 41 - Cloud and Fog Scheduling - II",
+
+    "question": "Which environment typically experiences higher delays in allocating tasks according to Table 7?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "Fog ([1, 5] ms)",
+
+      "Cloud ([50, 250] ms)",
+
+      "Fog ([50, 250] ms)",
+
+      "Cloud ([1, 5] ms)"
+    ],
+
+    "correct_answers": ["Cloud ([50, 250] ms)"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - II",
+
+    "source": "Slide 42 - Cloud and Fog Scheduling - II",
+
+    "question": "Match the task types to their sizes in Million Instructions (MI).",
+
+    "image": null,
+
+    "options": ["[100, 372]", "[1028, 4280]", "[5123, 9784]", "[50, 200]"],
+
+    "pairs": {
+      "A": "Type 1",
+
+      "B": "Type 2",
+
+      "C": "Type 3"
+    },
+
+    "correct_answers": {
+      "A": "[100, 372]",
+
+      "B": "[1028, 4280]",
+
+      "C": "[5123, 9784]"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - II",
+
+    "source": "Slide 43 - Cloud and Fog Scheduling - II",
+
+    "question": "What is the purpose of Experiment 2 in the performance evaluation?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "Impact of varying number of tasks",
+
+      "Impact of varying number of fog nodes",
+
+      "Impact of varying number of cloud nodes",
+
+      "Impact of varying network bandwidth"
+    ],
+
+    "correct_answers": ["Impact of varying number of fog nodes"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - II",
+
+    "source": "Slide 48 - Cloud and Fog Scheduling - II",
+
+    "question": "Which of the following is identified as a goal for future work?",
+
+    "image": null,
+
+    "options": [
+      "Considering energy consumption optimization",
+
+      "Reducing the number of cloud nodes",
+
+      "Limiting the system to only latency-tolerant tasks",
+
+      "Removing all heuristic methods"
+    ],
+
+    "correct_answers": ["Considering energy consumption optimization"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - II",
+
+    "source": "Slide 48 - Cloud and Fog Scheduling - II",
+
+    "question": "What kind of models are planned to be added to the heuristic approaches in the future?",
+
+    "image": null,
+
+    "options": [
+      "Manual rule-based models",
+
+      "Artificial intelligence methods",
+
+      "Single-platform engines",
+
+      "Non-distributed databases"
+    ],
+
+    "correct_answers": ["Artificial intelligence methods"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  }
+]

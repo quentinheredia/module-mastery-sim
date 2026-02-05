@@ -2,7 +2,7 @@
   {
     "module": "Cloud and Fog Scheduling - II",
 
-    "source": "Slide 27 - Cloud and Fog Scheduling - II",
+    "source": "Page 1 - Cloud and Fog Scheduling - II",
 
     "question": "Which of the following describes the nature of computing devices in a Volunteer Computing System (VCS)?",
 
@@ -20,7 +20,7 @@
 
     "correct_answers": ["Highly dynamic and heterogeneous"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -28,7 +28,7 @@
   {
     "module": "Cloud and Fog Scheduling - II",
 
-    "source": "Slide 28 - Cloud and Fog Scheduling - II",
+    "source": "Page 2 - Cloud and Fog Scheduling - II",
 
     "question": "Which of the following is considered an NP-hard problem in the context of Fog-Cloud systems?",
 
@@ -46,7 +46,7 @@
 
     "correct_answers": ["Task scheduling"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -54,7 +54,7 @@
   {
     "module": "Cloud and Fog Scheduling - II",
 
-    "source": "Slide 28 - Cloud and Fog Scheduling - II",
+    "source": "Page 2 - Cloud and Fog Scheduling - II",
 
     "question": "Which of these are classified as latency-sensitive IoT applications? (Select all that apply)",
 
@@ -88,7 +88,7 @@
   {
     "module": "Cloud and Fog Scheduling - II",
 
-    "source": "Slide 28 - Cloud and Fog Scheduling - II",
+    "source": "Page 2 - Cloud and Fog Scheduling - II",
 
     "question": "Which type of IoT application is Big Data analysis considered to be?",
 
@@ -106,7 +106,7 @@
 
     "correct_answers": ["Latency-tolerant"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -114,9 +114,9 @@
   {
     "module": "Cloud and Fog Scheduling - II",
 
-    "source": "Slide 29 - Cloud and Fog Scheduling - II",
+    "source": "Page 2 - Cloud and Fog Scheduling - II",
 
-    "question": "The problem statement for this study focuses on mitigating which factors for volunteer requests?",
+    "question": "What is a key problem for task scheduling in Volunteer Computing Systems?",
 
     "image": null,
 
@@ -132,7 +132,7 @@
 
     "correct_answers": ["Monetary cost and QoS"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -140,7 +140,7 @@
   {
     "module": "Cloud and Fog Scheduling - II",
 
-    "source": "Slide 31 - Cloud and Fog Scheduling - II",
+    "source": "Page 3 - Cloud and Fog Scheduling - II",
 
     "question": "Match the following evaluation criteria to their correct definitions.",
 
@@ -176,43 +176,25 @@
   {
     "module": "Cloud and Fog Scheduling - II",
 
-    "source": "Slide 31 - Cloud and Fog Scheduling - II",
+    "source": "Page 3 - Cloud and Fog Scheduling - II",
 
-    "question": "What are the two heuristic scheduling algorithms proposed in this study?",
+    "question": "What are the two types of scheduling algorithms mentioned in this module?",
 
     "image": null,
 
     "options": [
-      "Max-Delay and Min-Power",
+      "Heuristic & Deterministic",
 
-      "Min-CCV and Min-V",
+      "Deterministic & Metaheuristic",
 
-      "Cloud-First and Fog-Last",
+      "Heuristic & Metaheuristic",
 
-      "Genetic and Particle Swarm"
+      "Heuristic & Complex"
     ],
 
-    "correct_answers": ["Min-CCV and Min-V"],
+    "correct_answers": ["Heuristic & Metaheuristic"],
 
-    "question_type": "single choice",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 32 - Cloud and Fog Scheduling - II",
-
-    "question": "According to Table 1, which runtime category does the Min-CCV algorithm fall into?",
-
-    "image": "/images/quizzes/4012_1/",
-
-    "options": ["High", "Moderate", "Low", "Very Low"],
-
-    "correct_answers": ["Very Low"],
-
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -220,7 +202,25 @@
   {
     "module": "Cloud and Fog Scheduling - II",
 
-    "source": "Slide 33 - Cloud and Fog Scheduling - II",
+    "source": "Page 32 - Cloud and Fog Scheduling - II",
+
+    "question": "What is the time complexity of the Min-CCV algorithm?",
+
+    "image": "/images/quizzes/4012_1/module6_min_cvv.png",
+
+    "options": ["O(n)", "O(n x m)", "O(n^2)", "O(n log n * m)"],
+
+    "correct_answers": ["O(n x m)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - II",
+
+    "source": "Page 33 - Cloud and Fog Scheduling - II",
 
     "question": "Which algorithm type performs a random search to find a reasonable solution to an optimization problem?",
 
@@ -230,7 +230,7 @@
 
     "correct_answers": ["Metaheuristic"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -238,7 +238,7 @@
   {
     "module": "Cloud and Fog Scheduling - II",
 
-    "source": "Slide 34 - Cloud and Fog Scheduling - II",
+    "source": "Page 34 - Cloud and Fog Scheduling - II",
 
     "question": "In the Min-CCV algorithm, which three costs are being minimized? (Select all that apply)",
 
@@ -265,248 +265,6 @@
     ],
 
     "question_type": "multiple_answer",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 35 - Cloud and Fog Scheduling - II",
-
-    "question": "In the Min-V algorithm, how are tasks sorted before scheduling?",
-
-    "image": null,
-
-    "options": [
-      "By descending processing power",
-
-      "By ascending order of their predefined deadline",
-
-      "Alphabetically by task name",
-
-      "Randomly to ensure fairness"
-    ],
-
-    "correct_answers": ["By ascending order of their predefined deadline"],
-
-    "question_type": "single choice",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 35 - Cloud and Fog Scheduling - II",
-
-    "question": "Under the Min-V algorithm, if no node can fulfill a task's deadline, which node is chosen?",
-
-    "image": null,
-
-    "options": [
-      "The one with the highest processing rate",
-
-      "The one that offers the minimum violation cost",
-
-      "The one with the most available memory",
-
-      "The task is discarded and not scheduled"
-    ],
-
-    "correct_answers": ["The one that offers the minimum violation cost"],
-
-    "question_type": "single choice",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 39 - Cloud and Fog Scheduling - II",
-
-    "question": "What is the overall time complexity of the Min-CCV algorithm?",
-
-    "image": null,
-
-    "options": ["O(n + m)", "O(n log n)", "O(n x m)", "O(1)"],
-
-    "correct_answers": ["O(n x m)"],
-
-    "question_type": "single choice",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 39 - Cloud and Fog Scheduling - II",
-
-    "question": "What is the overall time complexity of the Min-V algorithm?",
-
-    "image": null,
-
-    "options": ["O(n x m)", "O(n log n + n x m)", "O(n + m)", "O(log n)"],
-
-    "correct_answers": ["O(n log n + n x m)"],
-
-    "question_type": "single choice",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 41 - Cloud and Fog Scheduling - II",
-
-    "question": "Based on the simulation settings, which environment has higher CPU processing rates?",
-
-    "image": "/images/quizzes/4012_1/",
-
-    "options": ["Fog", "Cloud", "They are identical", "Volunteer devices"],
-
-    "correct_answers": ["Cloud"],
-
-    "question_type": "single choice",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 41 - Cloud and Fog Scheduling - II",
-
-    "question": "Which environment typically experiences higher delays in allocating tasks according to Table 7?",
-
-    "image": "/images/quizzes/4012_1/",
-
-    "options": [
-      "Fog ([1, 5] ms)",
-
-      "Cloud ([50, 250] ms)",
-
-      "Fog ([50, 250] ms)",
-
-      "Cloud ([1, 5] ms)"
-    ],
-
-    "correct_answers": ["Cloud ([50, 250] ms)"],
-
-    "question_type": "single choice",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 42 - Cloud and Fog Scheduling - II",
-
-    "question": "Match the task types to their sizes in Million Instructions (MI).",
-
-    "image": null,
-
-    "options": ["[100, 372]", "[1028, 4280]", "[5123, 9784]", "[50, 200]"],
-
-    "pairs": {
-      "A": "Type 1",
-
-      "B": "Type 2",
-
-      "C": "Type 3"
-    },
-
-    "correct_answers": {
-      "A": "[100, 372]",
-
-      "B": "[1028, 4280]",
-
-      "C": "[5123, 9784]"
-    },
-
-    "question_type": "matching",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 43 - Cloud and Fog Scheduling - II",
-
-    "question": "What is the purpose of Experiment 2 in the performance evaluation?",
-
-    "image": "/images/quizzes/4012_1/",
-
-    "options": [
-      "Impact of varying number of tasks",
-
-      "Impact of varying number of fog nodes",
-
-      "Impact of varying number of cloud nodes",
-
-      "Impact of varying network bandwidth"
-    ],
-
-    "correct_answers": ["Impact of varying number of fog nodes"],
-
-    "question_type": "single choice",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 48 - Cloud and Fog Scheduling - II",
-
-    "question": "Which of the following is identified as a goal for future work?",
-
-    "image": null,
-
-    "options": [
-      "Considering energy consumption optimization",
-
-      "Reducing the number of cloud nodes",
-
-      "Limiting the system to only latency-tolerant tasks",
-
-      "Removing all heuristic methods"
-    ],
-
-    "correct_answers": ["Considering energy consumption optimization"],
-
-    "question_type": "single choice",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - II",
-
-    "source": "Slide 48 - Cloud and Fog Scheduling - II",
-
-    "question": "What kind of models are planned to be added to the heuristic approaches in the future?",
-
-    "image": null,
-
-    "options": [
-      "Manual rule-based models",
-
-      "Artificial intelligence methods",
-
-      "Single-platform engines",
-
-      "Non-distributed databases"
-    ],
-
-    "correct_answers": ["Artificial intelligence methods"],
-
-    "question_type": "single choice",
 
     "points": 1
   }
