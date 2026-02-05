@@ -1,0 +1,510 @@
+[
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 2 - Lecture 1 - 2 CloudServices",
+
+    "question": "According to the NIST definition, cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources. Which of the following are examples of these resources?",
+
+    "image": null,
+
+    "options": [
+      "Networks",
+
+      "Servers",
+
+      "Storage",
+
+      "Applications",
+
+      "All of the above"
+    ],
+
+    "correct_answers": ["All of the above"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 2 - Lecture 1 - 2 CloudServices",
+
+    "question": "The NIST cloud model is composed of which of the following components?",
+
+    "image": null,
+
+    "options": [
+      "Five essential characteristics",
+
+      "Three service models",
+
+      "Four deployment models",
+
+      "All of the above"
+    ],
+
+    "correct_answers": ["All of the above"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 5 - Lecture 1 - 2 CloudServices",
+
+    "question": "Which of the following are considered advantages (pros) of cloud computing?",
+
+    "image": null,
+
+    "options": [
+      "Scale and Cost",
+
+      "Choice and Agility",
+
+      "Encapsulated Change Management",
+
+      "Next-Generation Architectures",
+
+      "All of the above"
+    ],
+
+    "correct_answers": ["All of the above"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 5 - Lecture 1 - 2 CloudServices",
+
+    "question": "Which of the following are identified as disadvantages (cons) of cloud computing?",
+
+    "image": null,
+
+    "options": [
+      "Security",
+
+      "Lock-in",
+
+      "Reliability",
+
+      "Lack of Control",
+
+      "All of the above"
+    ],
+
+    "correct_answers": ["All of the above"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 9 - Lecture 1 - 2 CloudServices",
+
+    "question": "Which characteristic of cloud computing allows a user to unilaterally provision computing capabilities, such as server time and network storage, as needed without requiring human interaction with the service provider?",
+
+    "image": null,
+
+    "options": [
+      "Broad Network Access",
+
+      "Resource Pooling",
+
+      "On-Demand Self Service",
+
+      "Rapid Elasticity"
+    ],
+
+    "correct_answers": ["On-Demand Self Service"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 11 - Lecture 1 - 2 CloudServices",
+
+    "question": "The characteristic 'Broad Network Access' implies that cloud capabilities are available over the network and accessed through standard mechanisms by which of the following platforms?",
+
+    "image": null,
+
+    "options": [
+      "Smartphones",
+
+      "Tablets",
+
+      "Laptops",
+
+      "Office Computers",
+
+      "All of the above"
+    ],
+
+    "correct_answers": ["All of the above"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 12 - Lecture 1 - 2 CloudServices",
+
+    "question": "In 'Resource Pooling', who is responsible for managing all the physical resources of the cloud?",
+
+    "image": null,
+
+    "options": [
+      "The End User",
+
+      "The Cloud Service Provider",
+
+      "The Government",
+
+      "The Hardware Manufacturer"
+    ],
+
+    "correct_answers": ["The Cloud Service Provider"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 14 - Lecture 1 - 2 CloudServices",
+
+    "question": "Which cloud characteristic describes the ability to scale resources outward and inward commensurate with demand?",
+
+    "image": null,
+
+    "options": [
+      "Measured Service",
+
+      "Rapid Elasticity",
+
+      "Broad Network Access",
+
+      "On-Demand Self Service"
+    ],
+
+    "correct_answers": ["Rapid Elasticity"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 15 - Lecture 1 - 2 CloudServices",
+
+    "question": "What are the primary benefits of 'Measured Service' for both the provider and the consumer?",
+
+    "image": null,
+
+    "options": [
+      "It allows for accountability through monitoring and reporting",
+
+      "It makes the internet faster",
+
+      "The resources usage can be monitored, controlled, and reported",
+
+      "It provides free software to all users",
+
+      "It replaces the need for hardware",
+
+      "You get what you pay for"
+    ],
+
+    "correct_answers": [
+      "It allows for accountability through monitoring and reporting",
+      "The resources usage can be monitored, controlled, and reported",
+      "You get what you pay for"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slides 18,27,32 - Lecture 1 - 2 CloudServices",
+
+    "question": "Match the following cloud service models to their correct definitions.",
+
+    "image": null,
+
+    "options": [
+      "Software is hosted and updated at a central site and does not reside on client computers/servers",
+
+      "provides a platform allowing customers to develop, run and manage Web applications without the complexity of building and maintaining the infrastructure typically associated with developing and launching an app.",
+
+      "service model that delivers computer infrastructure on an outsourced basis to support enterprise operations. "
+    ],
+
+    "pairs": {
+      "A": "SaaS (Software as a Service)",
+
+      "B": "PaaS (Platform as a Service)",
+
+      "C": "IaaS (Infrastructure as a Service)"
+    },
+
+    "correct_answers": {
+      "A": "Software is hosted and updated at a central site and does not reside on client computers/servers",
+
+      "B": "provides a platform allowing customers to develop, run and manage Web applications without the complexity of building and maintaining the infrastructure typically associated with developing and launching an app.",
+
+      "C": "service model that delivers computer infrastructure on an outsourced basis to support enterprise operations. "
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 18 - Lecture 1 - 2 CloudServices",
+
+    "question": "In the SaaS model, where does the software reside?",
+
+    "image": null,
+
+    "options": [
+      "On the user's local hard drive",
+
+      "On a central site/server hosted by the provider",
+
+      "On a physical CD-ROM",
+
+      "On a private office server only"
+    ],
+
+    "correct_answers": ["On a central site/server hosted by the provider"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 19 - Lecture 1 - 2 CloudServices",
+
+    "question": "Which components does the customer manage in an IaaS model?",
+
+    "image": null,
+
+    "options": [
+      "Applications",
+      "Data",
+      "Runtime",
+      "Middleware",
+      "Operating System",
+      "Virtualization",
+      "Servers",
+      "Storage",
+      "Networking"
+    ],
+
+    "correct_answers": [
+      "Applications",
+
+      "Data",
+
+      "Runtime",
+
+      "Middleware",
+
+      "Operating System"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 21 - Lecture 1 - 2 CloudServices",
+
+    "question": "How are SaaS services typically billed to businesses?",
+
+    "image": null,
+
+    "options": [
+      "One-time perpetual license fee",
+
+      "Pay-as-you-go subscription (typically monthly)",
+
+      "Annual tax on hardware",
+
+      "They are always free for businesses"
+    ],
+
+    "correct_answers": ["Pay-as-you-go subscription (typically monthly)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 22 - Lecture 1 - 2 CloudServices",
+
+    "question": "What is a major financial benefit of SaaS for end users?",
+
+    "image": null,
+
+    "options": [
+      "No large up-front capital expense",
+
+      "Higher electrical bills",
+
+      "Requirement to buy new servers",
+
+      "Increased cost of software upgrades"
+    ],
+
+    "correct_answers": ["No large up-front capital expense"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 23 - Lecture 1 - 2 CloudServices",
+
+    "question": "Which of the following are listed as benefits of SaaS?",
+
+    "image": null,
+
+    "options": [
+      "Uptime (hosted in highly-available datacenters)",
+
+      "Access anywhere with an internet connection",
+
+      "Low maintenance and easy installation",
+
+      "All of the above"
+    ],
+
+    "correct_answers": ["All of the above"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 25 - Lecture 1 - 2 CloudServices",
+
+    "question": "SaaS makes sense for which of the following scenarios?",
+
+    "image": null,
+
+    "options": [
+      "Applications with a short-term need",
+
+      "Applications where demand spikes significantly (e.g., tax software)",
+
+      "Standard applications like email that don't confer competitive advantage",
+
+      "All of the above"
+    ],
+
+    "correct_answers": ["All of the above"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 27 - Lecture 1 - 2 CloudServices",
+
+    "question": "What is the primary purpose of Platform as a Service (PaaS)?",
+
+    "image": null,
+
+    "options": [
+      "To provide raw hardware only",
+
+      "To allow customers to develop, run, and manage apps without infrastructure complexity",
+
+      "To replace the need for an internet connection",
+
+      "To provide physical office space"
+    ],
+
+    "correct_answers": [
+      "To allow customers to develop, run, and manage apps without infrastructure complexity"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+  {
+    "module": "Lecture 1 - 2 CloudServices",
+
+    "source": "Slide 32 - Lecture 1 - 2 CloudServices",
+
+    "question": "Infrastructure as a Service (IaaS) delivers which of the following on an outsourced basis?",
+
+    "image": null,
+
+    "options": [
+      "Only software applications",
+
+      "Computer infrastructure to support enterprise operations",
+
+      "Marketing services",
+
+      "Human resource management"
+    ],
+
+    "correct_answers": [
+      "Computer infrastructure to support enterprise operations"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  }
+]

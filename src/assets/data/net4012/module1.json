@@ -1,0 +1,289 @@
+[
+  {
+    "module": "Lecture 1 - 1",
+
+    "question": "Match the Cloud Service Models to their respective descriptions or examples provided in the lecture.",
+
+    "image": null,
+
+    "options": [
+      "Provider licenses applications to users; avoids costs of installation and maintenance.",
+
+      "Provider offers software platform for building applications; e.g., Google's App-Engine.",
+
+      "Provider offers raw computing, storage, and network; e.g., Amazon's EC2."
+    ],
+
+    "pairs": {
+      "A": "Software as a Service (SaaS)",
+
+      "B": "Platform as a Service (PaaS)",
+
+      "C": "Infrastructure as a Service (IaaS)"
+    },
+
+    "correct_answers": {
+      "A": "Provider licenses applications to users; avoids costs of installation and maintenance.",
+
+      "B": "Provider offers software platform for building applications; e.g., Google's App-Engine.",
+
+      "C": "Provider offers raw computing, storage, and network; e.g., Amazon's EC2."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 1",
+
+    "question": "According to the lecture, which of the following are considered essential characteristics that Cloud Computing must fulfill?",
+
+    "image": null,
+
+    "options": [
+      "Elastic resources (Expand and contract)",
+
+      "Pay-per-use (Infrastructure on demand)",
+
+      "Multi-tenancy (Security and resource isolation)",
+
+      "Workload movement",
+
+      "Manual hardware provisioning"
+    ],
+
+    "correct_answers": [
+      "Elastic resources (Expand and contract)",
+
+      "Pay-per-use (Infrastructure on demand)",
+
+      "Multi-tenancy (Security and resource isolation)",
+
+      "Workload movement"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 1",
+
+    "question": "What are the criteria used to define a 'hyperscale' data center?",
+
+    "image": null,
+
+    "options": [
+      "At least 1,000 servers and 5,000 square feet",
+
+      "At least 5,000 servers and 10,000 square feet",
+
+      "At least 10,000 servers and 20,000 square feet",
+
+      "At least 50,000 square feet regardless of server count"
+    ],
+
+    "correct_answers": ["At least 5,000 servers and 10,000 square feet"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 1",
+
+    "question": "Which of the following is identified as the largest data center in the world by space?",
+
+    "image": null,
+
+    "options": [
+      "Switch's Citadel Campus",
+
+      "IBM Cloud Global Center",
+
+      "China Telecom Data Center",
+
+      "Google Cloud Northern Region"
+    ],
+
+    "correct_answers": ["China Telecom Data Center"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 1",
+
+    "question": "Based on the Data Center Costs breakdown from Encor Advisors (2024), which component accounts for the largest percentage (40% to 45%) of costs?",
+
+    "image": null,
+
+    "options": [
+      "Network Infrastructure and connectivity",
+
+      "Power draw (Electrical utility costs)",
+
+      "Other Infrastructures (HVAC, UPS, cooling)",
+
+      "Servers (CPU, memory, disk)"
+    ],
+
+    "correct_answers": ["Servers (CPU, memory, disk)"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 1",
+
+    "question": "Match the historical milestones of cloud and virtualization to their respective decades.",
+
+    "image": null,
+
+    "options": [
+      "Concept of Cloud Computing started with Mainframes.",
+
+      "Virtualization: creating something virtual rather than actual; isolated OS environments.",
+
+      "Virtualized Private Network connections offered by telecommunications companies."
+    ],
+
+    "pairs": {
+      "A": "1950s",
+
+      "B": "1970s",
+
+      "C": "1990s"
+    },
+
+    "correct_answers": {
+      "A": "Concept of Cloud Computing started with Mainframes.",
+
+      "B": "Virtualization: creating something virtual rather than actual; isolated OS environments.",
+
+      "C": "Virtualized Private Network connections offered by telecommunications companies."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 1",
+
+    "question": "Regarding the energy consumption of data centers, which of the following statements is true?",
+
+    "image": null,
+
+    "options": [
+      "Data centers use about 10% of the world's energy.",
+
+      "40% of all operating costs come from energy consumption.",
+
+      "Data centers are responsible for 5% of global greenhouse gas emissions.",
+
+      "Energy consumption is a negligible part of operating costs."
+    ],
+
+    "correct_answers": [
+      "40% of all operating costs come from energy consumption."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 1",
+
+    "question": "What are the key requirements for a Data Center (DC) Network?",
+
+    "image": null,
+
+    "options": [
+      "Scalability (Incremental build out)",
+
+      "Reliability (Loop free forwarding)",
+
+      "Support for VM migration",
+
+      "High human intervention for every task",
+
+      "Reasonable management burden"
+    ],
+
+    "correct_answers": [
+      "Scalability (Incremental build out)",
+
+      "Reliability (Loop free forwarding)",
+
+      "Support for VM migration",
+
+      "Reasonable management burden"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 1",
+
+    "question": "Which of the following are listed as 'Data Center Challenges' in the lecture materials?",
+
+    "image": null,
+
+    "options": [
+      "Traffic load balance",
+
+      "Achieving bisection bandwidth",
+
+      "Power savings / Cooling",
+
+      "Security (dealing with multiple tenants)",
+
+      "Reducing the number of servers to under 1,000"
+    ],
+
+    "correct_answers": [
+      "Traffic load balance",
+
+      "Achieving bisection bandwidth",
+
+      "Power savings / Cooling",
+
+      "Security (dealing with multiple tenants)"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Lecture 1 - 1",
+
+    "question": "According to the course grading scheme, what is the weight of the three in-person tests combined?",
+
+    "image": null,
+
+    "options": ["10%", "30%", "60%", "100%"],
+
+    "correct_answers": ["60%"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  }
+]

@@ -1,0 +1,596 @@
+[
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 2 - DatacenterNetworkTopology",
+
+    "question": "A Data Center consists of which of the following components?",
+
+    "image": null,
+
+    "options": [
+      "Servers (Physical machines)",
+
+      "Storage",
+
+      "Network devices (switch, router, cables)",
+
+      "Power distribution and cooling systems",
+
+      "All of the above"
+    ],
+
+    "correct_answers": ["All of the above"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 3 - DatacenterNetworkTopology",
+
+    "question": "Regarding Power Usage Effectiveness (PUE), which statement is true?",
+
+    "image": null,
+
+    "options": [
+      "PUE = Power Used / Power In",
+
+      "The closer PUE is to 1, the better it is",
+
+      "PUE = Power In / Power Used",
+
+      "A high PUE value indicates better energy efficiency"
+    ],
+
+    "correct_answers": [
+      "The closer PUE is to 1, the better it is",
+      "PUE = Power In / Power Used"
+    ],
+
+    "question_type": "multiple_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 3 - DatacenterNetworkTopology",
+
+    "question": "Which of the following are methods to lower PUE?",
+
+    "image": null,
+
+    "options": [
+      "Virtualize servers",
+
+      "Improve cooling systems",
+
+      "Use energy-efficient lighting",
+
+      "Replace inefficient hardware",
+
+      "Use an energy-efficient UPS"
+    ],
+
+    "correct_answers": [
+      "Virtualize servers",
+
+      "Improve cooling systems",
+
+      "Use energy-efficient lighting",
+
+      "Replace inefficient hardware",
+
+      "Use an energy-efficient UPS"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 4 - DatacenterNetworkTopology",
+
+    "question": "What is a key characteristic of Containerized Data Centers?",
+
+    "image": null,
+
+    "options": [
+      "They take months to deploy on-site",
+
+      "They are only suitable for static, indoor environments",
+
+      "They are suitable for disaster recovery (e.g., flood, earthquake)",
+
+      "They require manual cooling system installation after delivery",
+
+      "They are exclusively offered by Google"
+    ],
+
+    "correct_answers": [
+      "Suitable for disaster recovery (e.g., flood, earthquake)"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 4 & 5 - DatacenterNetworkTopology",
+
+    "question": "Match the cabling type to its description.",
+
+    "image": null,
+
+    "options": [
+      "Organized, reusable, and flexible cabling system.",
+
+      "Install a cable when you need it; single-use and unorganized."
+    ],
+
+    "pairs": {
+      "A": "Unstructured Cabling",
+
+      "B": "Structured Cabling"
+    },
+
+    "correct_answers": {
+      "A": "Install a cable when you need it; single-use and unorganized.",
+
+      "B": "Organized, reusable, and flexible cabling system."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 6 - DatacenterNetworkTopology",
+
+    "question": "In the family of direct networks (mesh, torus, hypercube), what variables determine the total number of endpoints (N)?",
+
+    "image": null,
+
+    "options": [
+      "Radix (k) and number of dimensions (n)",
+
+      "Bandwidth and latency",
+
+      "Number of core switches and aggregation switches",
+
+      "Power consumption and cooling capacity"
+    ],
+
+    "correct_answers": ["Radix (k) and number of dimensions (n)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 7 - DatacenterNetworkTopology",
+
+    "question": "Which of the following are types of applications typically run in data centers?",
+
+    "image": null,
+
+    "options": [
+      "Outward facing (e.g., serving web pages)",
+
+      "Internal computations (e.g., MapReduce)",
+
+      "Peer-to-peer file sharing",
+
+      "Personal desktop gaming"
+    ],
+
+    "correct_answers": [
+      "Outward facing (e.g., serving web pages)",
+
+      "Internal computations (e.g., MapReduce)"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 8 - DatacenterNetworkTopology",
+
+    "question": "According to traffic analysis, what is the typical ratio of internal traffic (between servers) to external traffic (entering/leaving the data center)?",
+
+    "image": null,
+
+    "options": ["1:1", "2:1", "4:1", "10:1"],
+
+    "correct_answers": ["4:1"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 8 - DatacenterNetworkTopology",
+
+    "question": "Regarding failure patterns in data centers, what percentage of networking equipment failures last less than 1 minute?",
+
+    "image": null,
+
+    "options": ["11%", "50%", "89%", "95%"],
+
+    "correct_answers": ["95%"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 9 - DatacenterNetworkTopology",
+
+    "question": "In the context of overall data center design goals, what does 'agility' mean?",
+
+    "image": null,
+
+    "options": [
+      "Servers can only run specific services based on their hardware",
+
+      "Any service can run on any server, turning servers into a single large fungible pool",
+
+      "The physical movement of servers within the data center must be fast",
+
+      "The network speed between racks is prioritized over latency"
+    ],
+
+    "correct_answers": [
+      "Any service can run on any server, turning servers into a single large fungible pool"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 10 - DatacenterNetworkTopology",
+
+    "question": "Match the Data Center Network (DCN) requirement to its functional implication.",
+
+    "image": null,
+
+    "options": [
+      "Any VM may migrate to any physical machine without changing its IP address.",
+
+      "Failure detection should be rapid and efficient.",
+
+      "An administrator should not need to configure any switch before deployment."
+    ],
+
+    "pairs": {
+      "A": "Requirement R1",
+
+      "B": "Requirement R2",
+
+      "C": "Requirement R5"
+    },
+
+    "correct_answers": {
+      "A": "Any VM may migrate to any physical machine without changing its IP address.",
+
+      "B": "An administrator should not need to configure any switch before deployment.",
+
+      "C": "Failure detection should be rapid and efficient."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 11 - DatacenterNetworkTopology",
+
+    "question": "What are the three levels of switches typically found in a basic tree topology?",
+
+    "image": null,
+
+    "options": [
+      "Primary, Secondary, Tertiary",
+
+      "Core, Aggregation, Access/Edge",
+
+      "Internal, External, DMZ",
+
+      "Master, Slave, Worker"
+    ],
+
+    "correct_answers": ["Core, Aggregation, Access/Edge"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 12 - DatacenterNetworkTopology",
+
+    "question": "In a hierarchical network design, where are Application Delivery Controllers (ADCs) like load balancers and firewalls typically located?",
+
+    "image": null,
+
+    "options": [
+      "Within the server racks only",
+
+      "Between the aggregation and core routers",
+
+      "At the edge router level only",
+
+      "Directly on the servers as software"
+    ],
+
+    "correct_answers": ["Between the aggregation and core routers"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 13 - DatacenterNetworkTopology",
+
+    "question": "The aggregation layer acts as a transition point between which two layers?",
+
+    "image": null,
+
+    "options": [
+      "L1 physical layer and L2 data link layer",
+
+      "L2-switched access layer and L3-routed core layer",
+
+      "L3-routed access layer and L2-switched core layer",
+
+      "The server farm and the database layer"
+    ],
+
+    "correct_answers": ["L2-switched access layer and L3-routed core layer"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 14 - DatacenterNetworkTopology",
+
+    "question": "Match the switch location strategy to its characteristic.",
+
+    "image": null,
+
+    "options": [
+      "Smaller cable between servers and switches; network team manages switches on all racks.",
+
+      "All network switches are located in one rack; involves longer cables."
+    ],
+
+    "pairs": {
+      "A": "Top-of-Rack (ToR)",
+
+      "B": "End-of-Row (EoR)"
+    },
+
+    "correct_answers": {
+      "A": "Smaller cable between servers and switches; network team manages switches on all racks.",
+
+      "B": "All network switches are located in one rack; involves longer cables."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 15 - DatacenterNetworkTopology",
+
+    "question": "Which of the following is an advantage of End-of-Row (EoR) architecture over Top-of-Rack (ToR)?",
+
+    "image": null,
+
+    "options": [
+      "Easier cabling",
+
+      "Reduced potential for overheating switch gear in server racks",
+
+      "Ports can be easily added or upgraded without a complete rack upgrade",
+
+      "Fewer unused ports if a rack is not fully populated",
+
+      "Both 'Reduced potential for overheating switch gear in server racks' and 'Ports can be easily added or upgraded' are correct"
+    ],
+
+    "correct_answers": [
+      "Both 'Reduced potential for overheating switch gear in server racks' and 'Ports can be easily added or upgraded' are correct"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 16 - DatacenterNetworkTopology",
+
+    "question": "The Clos Topology, proposed in 1953, was originally designed for what system?",
+
+    "image": null,
+
+    "options": [
+      "Internet routing protocols",
+
+      "Telephone switching systems",
+
+      "High-speed stock trading",
+
+      "Quantum computing clusters"
+    ],
+
+    "correct_answers": ["Telephone switching systems"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 17 - DatacenterNetworkTopology",
+
+    "question": "What is the distinctive feature of a Fat-Tree network?",
+
+    "image": null,
+
+    "options": [
+      "The number of links going down to siblings is equal to the number of links going up to the parent",
+
+      "Links get thinner towards the top of the tree",
+
+      "Processors are connected only to the core layer",
+
+      "The root of the tree has the fewest links"
+    ],
+
+    "correct_answers": [
+      "The number of links going down to siblings is equal to the number of links going up to the parent"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 18 - DatacenterNetworkTopology",
+
+    "question": "What is the primary function of a Load Balancer?",
+
+    "image": null,
+
+    "options": [
+      "To encrypt all traffic leaving the data center",
+
+      "To spread requests across server replicas",
+
+      "To manage physical power distribution to server racks",
+
+      "To increase the storage capacity of a server farm"
+    ],
+
+    "correct_answers": ["To spread requests across server replicas"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 18 - DatacenterNetworkTopology",
+
+    "question": "A Load Balancer...",
+
+    "image": null,
+
+    "options": [
+      "Decreases the overall bandwidth of a data center network",
+
+      "Presents a single public address (VIP) for a service",
+
+      "Presents a multiple public addresses (VIPs) for a service",
+
+      "Decreases the storage capacity of a server farm"
+    ],
+
+    "correct_answers": ["Presents a single public address (VIP) for a service"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "DatacenterNetworkTopology",
+
+    "source": "Page 19 - DatacenterNetworkTopology",
+
+    "question": "Which of the following are listed as Traffic Engineering challenges in a Data Center?",
+
+    "image": null,
+
+    "options": [
+      "Scale (many switches, hosts, and VMs)",
+
+      "Churn (component failures and VM migration)",
+
+      "Volatile and unpredictable traffic patterns",
+
+      "Resource isolation between tenants"
+    ],
+
+    "correct_answers": [
+      "Scale (many switches, hosts, and VMs)",
+
+      "Churn (component failures and VM migration)",
+
+      "Volatile and unpredictable traffic patterns",
+
+      "Resource isolation between tenants"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  }
+]
