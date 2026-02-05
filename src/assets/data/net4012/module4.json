@@ -2,7 +2,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 1 - Virtualization V2026",
+    "source": "Page 1 - Virtualization V2026",
 
     "question": "Which of the following are massive computing demands that have driven the increase in data center energy consumption?",
 
@@ -38,7 +38,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 3 - Virtualization V2026",
+    "source": "Page 2 - Virtualization V2026",
 
     "question": "What are the three fundamental abstractions necessary to describe the operation of computing systems?",
 
@@ -65,8 +65,7 @@
 
   {
     "module": "Virtualization V2026",
-
-    "source": "Slide 3 - Virtualization V2026",
+    "source": "Page 2 - Virtualization V2026",
 
     "question": "Which issue refers to the necessity of planning for peak demands, often leading to wasted resources?",
 
@@ -92,7 +91,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 3 - Virtualization V2026",
+    "source": "Page 2 - Virtualization V2026",
 
     "question": "Match the following resource management challenges with their descriptions.",
 
@@ -130,7 +129,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 4 - Virtualization V2026",
+    "source": "Page 2 - Virtualization V2026",
 
     "question": "According to the definition provided, virtualization refers to the act of creating a virtual version of which of the following?",
 
@@ -166,7 +165,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 5 - Virtualization V2026",
+    "source": "Page 2 - Virtualization V2026",
 
     "question": "Virtualization uses software to create an _________ layer over the physical hardware.",
 
@@ -184,7 +183,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 6 - Virtualization V2026",
+    "source": "Page 3 - Virtualization V2026",
 
     "question": "Why is performance isolation important in cloud resource virtualization?",
 
@@ -212,7 +211,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 8 - Virtualization V2026",
+    "source": "Page 4 - Virtualization V2026",
 
     "question": "Match the virtualization technique to its correct example.",
 
@@ -250,7 +249,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 8 - Virtualization V2026",
+    "source": "Page 4 - Virtualization V2026",
 
     "question": "Which virtualization method creates one virtual object from multiple physical objects?",
 
@@ -268,7 +267,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 9 - Virtualization V2026",
+    "source": "Page 5 - Virtualization V2026",
 
     "question": "Which of the following is NOT listed as one of the 5 well-known benefits of virtualization?",
 
@@ -296,7 +295,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 10 - Virtualization V2026",
+    "source": "Page 2 - Virtualization V2026",
 
     "question": "In the context of virtualization, what does VMM stand for?",
 
@@ -322,7 +321,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 12 - Virtualization V2026",
+    "source": "Page 6 - Virtualization V2026",
 
     "question": "Which technology is considered the foundation of the first generation of cloud computing?",
 
@@ -348,11 +347,11 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 13 - Virtualization V2026",
+    "source": "Page 7 - Virtualization V2026",
 
     "question": "In a 'Classic VM - Not Hosted' architecture, where does the VMM sit?",
 
-    "image": "/images/quizzes/4012_1/",
+    "image": null,
 
     "options": [
       "Directly on top of the hardware",
@@ -374,7 +373,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 18 - Virtualization V2026",
+    "source": "Page 9 - Virtualization V2026",
 
     "question": "When pooling resources for a High-Memory Analytics VM across multiple nodes, what technology is used for memory?",
 
@@ -400,11 +399,11 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 22 - Virtualization V2026",
+    "source": "Page 11 - Virtualization V2026",
 
     "question": "Why do containers generally offer faster resource provisioning than VMs?",
 
-    "image": "/images/quizzes/4012_1/",
+    "image": null,
 
     "options": [
       "They don't use a hypervisor.",
@@ -426,7 +425,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 24 - Virtualization V2026",
+    "source": "Page 12 - Virtualization V2026",
 
     "question": "Match the characteristic to the correct deployment type (VMs vs. Containers).",
 
@@ -470,7 +469,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 25 - Virtualization V2026",
+    "source": "Page 12 - Virtualization V2026",
 
     "question": "In which scenario would Virtual Machines be a better solution than containers?",
 
@@ -498,7 +497,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 26 - Virtualization V2026",
+    "source": "Page 13 - Virtualization V2026",
 
     "question": "Which of the following are features of Kubernetes?",
 
@@ -534,7 +533,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 27 - Virtualization V2026",
+    "source": "Pages 13-14 - Virtualization V2026",
 
     "question": "What is a Virtual-Machine Based Rootkit (VMBR)?",
 
@@ -562,7 +561,7 @@
   {
     "module": "Virtualization V2026",
 
-    "source": "Slide 30 - Virtualization V2026",
+    "source": "Page 15 - Virtualization V2026",
 
     "question": "Which set of tools allows users to build and manage cloud computing platforms for both public and private clouds?",
 
