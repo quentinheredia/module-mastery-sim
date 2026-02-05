@@ -2,7 +2,7 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 1 - Cloud and Fog Scheduling - I",
+    "source": "Page 1 - Cloud and Fog Scheduling - I",
 
     "question": "Which of the following best defines a 'cloud' according to the provided material?",
 
@@ -22,7 +22,7 @@
       "A collection of interconnected and virtualized computers presented as unified computing resources based on SLAs."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -30,7 +30,7 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 2 - Cloud and Fog Scheduling - I",
+    "source": "Page 2 - Cloud and Fog Scheduling - I",
 
     "question": "What are the two primary areas identified as needing further improvement in Clouds?",
 
@@ -48,7 +48,7 @@
 
     "correct_answers": ["Resource management and task scheduling"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -56,7 +56,7 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 3 - Cloud and Fog Scheduling - I",
+    "source": "Page 3 - Cloud and Fog Scheduling - I",
 
     "question": "An effective scheduler can help achieve which of the following benefits? (Select all that apply)",
 
@@ -88,7 +88,7 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 3 - Cloud and Fog Scheduling - I",
+    "source": "Page 3 - Cloud and Fog Scheduling - I",
 
     "question": "Match the Cloud Service Model to its corresponding scheduling type.",
 
@@ -124,7 +124,7 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 4 - Cloud and Fog Scheduling - I",
+    "source": "Page 4 - Cloud and Fog Scheduling - I",
 
     "question": "In the context of Cloud Computing, scheduling is defined as a mapping mechanism from users' tasks to the appropriate selection of resources.",
 
@@ -134,7 +134,7 @@
 
     "correct_answers": ["True"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -142,9 +142,9 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 4 - Cloud and Fog Scheduling - I",
+    "source": "Page 4 - Cloud and Fog Scheduling - I",
 
-    "question": "What is the primary aim of scheduling in a cloud environment?",
+    "question": "What is a primary goal of scheduling in a cloud environment?",
 
     "image": null,
 
@@ -160,7 +160,7 @@
 
     "correct_answers": ["High throughput with least execution time"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -168,7 +168,7 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 5 - Cloud and Fog Scheduling - I",
+    "source": "Page 5 - Cloud and Fog Scheduling - I",
 
     "question": "Which of the following are listed as goals of scheduling? (Select all that apply)",
 
@@ -200,7 +200,7 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 5 - Cloud and Fog Scheduling - I",
+    "source": "Page 5 - Cloud and Fog Scheduling - I",
 
     "question": "Which type of scheduling involves grouping tasks before sending them to resources, also known as 'mapping events'?",
 
@@ -218,7 +218,7 @@
 
     "correct_answers": ["Batch scheduling"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -226,7 +226,7 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 5 - Cloud and Fog Scheduling - I",
+    "source": "Page 5 - Cloud and Fog Scheduling - I",
 
     "question": "Static scheduling is characterized by which of the following?",
 
@@ -246,7 +246,7 @@
       "It requires prior information of the global state of the system."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -254,7 +254,7 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 6 - Cloud and Fog Scheduling - I",
+    "source": "Page 6 - Cloud and Fog Scheduling - I",
 
     "question": "Match the task scheduling type to its description.",
 
@@ -294,9 +294,9 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 6 - Cloud and Fog Scheduling - I",
+    "source": "Page 6 - Cloud and Fog Scheduling - I",
 
-    "question": "Which of these are examples of static tasks scheduling algorithms mentioned in the slides?",
+    "question": "Which of these are examples of static tasks scheduling algorithms mentioned in the Pages?",
 
     "image": null,
 
@@ -312,7 +312,7 @@
 
     "correct_answers": ["First Come First Serve and Prioritized Scheduling"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -320,7 +320,7 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 7 - Cloud and Fog Scheduling - I",
+    "source": "Page 7 - Cloud and Fog Scheduling - I",
 
     "question": "In workflow scheduling, workflows are usually defined as a DAG. What does DAG stand for and what do its components represent?",
 
@@ -338,7 +338,7 @@
 
     "correct_answers": ["Directed Acyclic Graph; Nodes = tasks, Edges = flow"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -346,9 +346,9 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 7 - Cloud and Fog Scheduling - I",
+    "source": "Page 7 - Cloud and Fog Scheduling - I",
 
-    "question": "According to the workflow scheduling slide, job completion time depends on which of the following? (Select all that apply)",
+    "question": "According to the workflow scheduling Page, job completion time depends on which of the following? (Select all that apply)",
 
     "image": null,
 
@@ -378,9 +378,9 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 8 - Cloud and Fog Scheduling - I",
+    "source": "Page 8 - Cloud and Fog Scheduling - I",
 
-    "question": "What is a major drawback of basic VM scheduling as described on slide 15?",
+    "question": "What are 2 major drawback of basic VM scheduling as described on Page 8?",
 
     "image": null,
 
@@ -389,14 +389,19 @@
 
       "It does not take the hypervisor into the loop.",
 
+      "No Guarantee of optimized resource utilization.",
+
       "It requires too much prior knowledge of the user.",
 
       "It cannot be used with Linux-based hardware."
     ],
 
-    "correct_answers": ["It does not take the hypervisor into the loop."],
+    "correct_answers": [
+      "It does not take the hypervisor into the loop.",
+      "No Guarantee of optimized resource utilization."
+    ],
 
-    "question_type": "single choice",
+    "question_type": "multiple_answer",
 
     "points": 1
   },
@@ -404,27 +409,30 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 9 - Cloud and Fog Scheduling - I",
+    "source": "Page 9 - Cloud and Fog Scheduling - I",
 
     "question": "What are the primary goals of the 'Utility Driven Scheduling' paradigm?",
 
     "image": null,
 
     "options": [
-      "Optimized resource utilization and relaxed QoS in overcommitted scenarios",
+      "Optimized resource utilization",
 
       "Reducing hardware costs and increasing physical security",
 
       "Eliminating the need for a scheduler and monitor",
 
+      "Relaxed QoS in overcommitted scenarios",
+
       "Providing 100% QoS to all users regardless of load"
     ],
 
     "correct_answers": [
-      "Optimized resource utilization and relaxed QoS in overcommitted scenarios"
+      "Optimized resource utilization",
+      "Relaxed QoS in overcommitted scenarios"
     ],
 
-    "question_type": "single choice",
+    "question_type": "multiple_answer",
 
     "points": 1
   },
@@ -432,17 +440,17 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 9 - Cloud and Fog Scheduling - I",
+    "source": "Page 9 - Cloud and Fog Scheduling - I",
 
     "question": "Based on the Partial Utility Function table, which job has the highest CPU requirement and what is its relaxation percentage?",
 
-    "image": "/images/quizzes/4012_1/",
+    "image": "/images/quizzes/4012_1/module5_partial_utility.png",
 
     "options": ["Job D; 40%", "Job E; 20%", "Job F; 25%", "Job A; 20%"],
 
     "correct_answers": ["Job E; 20%"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -450,11 +458,11 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 10 - Cloud and Fog Scheduling - I",
+    "source": "Page 10 - Cloud and Fog Scheduling - I",
 
     "question": "In the Utility Scheduler architecture, the Monitor tracks which specific resource metrics?",
 
-    "image": "/images/quizzes/4012_1/",
+    "image": null,
 
     "options": [
       "Power consumption and temperature",
@@ -468,7 +476,7 @@
 
     "correct_answers": ["CPU, Memory, and Disk"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -476,35 +484,24 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 11 - Cloud and Fog Scheduling - I",
+    "source": "Page 11 - Cloud and Fog Scheduling - I",
 
-    "question": "Based on the 'Result 1' graph, the Utility Scheduler achieved what percentage of gain in CPU utilization per core compared to Condor?",
+    "question": "Based on the graph, what conclusions can be drawn about the effect of relaxation?",
 
-    "image": "/images/quizzes/4012_1/",
+    "image": "/images/quizzes/4012_1/module5_relaxation.png",
 
-    "options": ["10%", "25%", "33%", "50%"],
+    "options": [
+      "Relaxation increases total job completion time",
+      "Relaxation decreases total job completion & uses more resources at a given period of time",
+      "Relaxation decreases overall resource utilization",
+      "Relaxation has no effect on job completion time or resource utilization"
+    ],
 
-    "correct_answers": ["33%"],
+    "correct_answers": [
+      "Relaxation decreases total job completion & uses more resources at a given period of time"
+    ],
 
-    "question_type": "single choice",
-
-    "points": 1
-  },
-
-  {
-    "module": "Cloud and Fog Scheduling - I",
-
-    "source": "Slide 12 - Cloud and Fog Scheduling - I",
-
-    "question": "Comparing Result 3 and Result 4, how much time was saved using the relaxed scheduling approach to complete all jobs?",
-
-    "image": "/images/quizzes/4012_1/",
-
-    "options": ["50 seconds", "100 seconds", "180 seconds", "280 seconds"],
-
-    "correct_answers": ["100 seconds"],
-
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -512,7 +509,32 @@
   {
     "module": "Cloud and Fog Scheduling - I",
 
-    "source": "Slide 13 - Cloud and Fog Scheduling - I",
+    "source": "Page 12 - Cloud and Fog Scheduling - I",
+
+    "question": "Comparing Result 3 and Result 4, what conclusion be drawn about effects on the individual jobs & total completion time?",
+
+    "image": "/images/quizzes/4012_1/module5_results_comparison.png",
+
+    "options": [
+      "Overall job completion time was reduced at the cost of individual job completion time",
+      "Overall job completion time was reduced without affecting individual job completion time",
+      "There was no change in overall job completion time but individual job completion time was reduced",
+      "No affect at all on either overall or individual job completion time"
+    ],
+
+    "correct_answers": [
+      "Overall job completion time was reduced at the cost of individual job completion time"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Page 13 - Cloud and Fog Scheduling - I",
 
     "question": "According to the conclusions, although QoS might degrade during execution, Partial Utility is considered good because: (Select all that apply)",
 
