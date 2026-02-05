@@ -1,0 +1,579 @@
+[
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 1 - Virtualization V2026",
+
+    "question": "Which of the following are massive computing demands that have driven the increase in data center energy consumption?",
+
+    "image": null,
+
+    "options": [
+      "Communications",
+
+      "Banking",
+
+      "Online retail",
+
+      "Entertainment services",
+
+      "Manual data entry"
+    ],
+
+    "correct_answers": [
+      "Communications",
+
+      "Banking",
+
+      "Online retail",
+
+      "Entertainment services"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 3 - Virtualization V2026",
+
+    "question": "What are the three fundamental abstractions necessary to describe the operation of computing systems?",
+
+    "image": null,
+
+    "options": [
+      "Interpreters/processors, memory, and communications links",
+
+      "SaaS, PaaS, and IaaS",
+
+      "Hardware, software, and firmware",
+
+      "Input, output, and storage"
+    ],
+
+    "correct_answers": [
+      "Interpreters/processors, memory, and communications links"
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 3 - Virtualization V2026",
+
+    "question": "Which issue refers to the necessity of planning for peak demands, often leading to wasted resources?",
+
+    "image": null,
+
+    "options": [
+      "Overprovisioning",
+
+      "Heterogeneity",
+
+      "Machine failure",
+
+      "Multiplexing"
+    ],
+
+    "correct_answers": ["Overprovisioning"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 3 - Virtualization V2026",
+
+    "question": "Match the following resource management challenges with their descriptions.",
+
+    "image": null,
+
+    "options": [
+      "Provisioning for peak demands",
+
+      "Diversity of hardware and software types",
+
+      "Unexpected hardware breakdowns"
+    ],
+
+    "pairs": {
+      "A": "Overprovisioning",
+
+      "B": "Heterogeneity",
+
+      "C": "Machine failures"
+    },
+
+    "correct_answers": {
+      "A": "Provisioning for peak demands",
+
+      "B": "Diversity of hardware and software types",
+
+      "C": "Unexpected hardware breakdowns"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 4 - Virtualization V2026",
+
+    "question": "According to the definition provided, virtualization refers to the act of creating a virtual version of which of the following?",
+
+    "image": null,
+
+    "options": [
+      "Computer hardware platform",
+
+      "Operating system (OS)",
+
+      "Storage device",
+
+      "Computer network resources",
+
+      "Physical human resources"
+    ],
+
+    "correct_answers": [
+      "Computer hardware platform",
+
+      "Operating system (OS)",
+
+      "Storage device",
+
+      "Computer network resources"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 5 - Virtualization V2026",
+
+    "question": "Virtualization uses software to create an _________ layer over the physical hardware.",
+
+    "image": null,
+
+    "options": ["abstraction", "encryption", "application", "authentication"],
+
+    "correct_answers": ["abstraction"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 6 - Virtualization V2026",
+
+    "question": "Why is performance isolation important in cloud resource virtualization?",
+
+    "image": null,
+
+    "options": [
+      "It allows for the dynamic assignment of resources across different applications.",
+
+      "It prevents users from accessing the internet.",
+
+      "It ensures that hardware never fails.",
+
+      "It makes the operating system faster than the hardware."
+    ],
+
+    "correct_answers": [
+      "It allows for the dynamic assignment of resources across different applications."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 8 - Virtualization V2026",
+
+    "question": "Match the virtualization technique to its correct example.",
+
+    "image": null,
+
+    "options": [
+      "A processor shared among multiple threads",
+
+      "Multiple physical disks combined into a RAID disk",
+
+      "A physical disk being used to act as RAM"
+    ],
+
+    "pairs": {
+      "A": "Multiplexing",
+
+      "B": "Aggregation",
+
+      "C": "Emulation"
+    },
+
+    "correct_answers": {
+      "A": "A processor shared among multiple threads",
+
+      "B": "Multiple physical disks combined into a RAID disk",
+
+      "C": "A physical disk being used to act as RAM"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 8 - Virtualization V2026",
+
+    "question": "Which virtualization method creates one virtual object from multiple physical objects?",
+
+    "image": null,
+
+    "options": ["Aggregation", "Multiplexing", "Emulation", "Abstraction"],
+
+    "correct_answers": ["Aggregation"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 9 - Virtualization V2026",
+
+    "question": "Which of the following is NOT listed as one of the 5 well-known benefits of virtualization?",
+
+    "image": null,
+
+    "options": [
+      "Slashing IT expenses",
+
+      "Reducing downtime in disaster recovery",
+
+      "Eliminating the need for any physical hardware",
+
+      "Increasing efficiency and productivity",
+
+      "Moving to be more green-friendly"
+    ],
+
+    "correct_answers": ["Eliminating the need for any physical hardware"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 10 - Virtualization V2026",
+
+    "question": "In the context of virtualization, what does VMM stand for?",
+
+    "image": null,
+
+    "options": [
+      "Virtual Machine Monitor",
+
+      "Visual Memory Manager",
+
+      "Virtual Metadata Module",
+
+      "Variable Machine Mode"
+    ],
+
+    "correct_answers": ["Virtual Machine Monitor"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 12 - Virtualization V2026",
+
+    "question": "Which technology is considered the foundation of the first generation of cloud computing?",
+
+    "image": null,
+
+    "options": [
+      "Virtual Machines (VMs)",
+
+      "Containers",
+
+      "Serverless functions",
+
+      "Physical mainframes"
+    ],
+
+    "correct_answers": ["Virtual Machines (VMs)"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 13 - Virtualization V2026",
+
+    "question": "In a 'Classic VM - Not Hosted' architecture, where does the VMM sit?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "Directly on top of the hardware",
+
+      "On top of a Host OS",
+
+      "Inside the Guest OS",
+
+      "Inside the application layer"
+    ],
+
+    "correct_answers": ["Directly on top of the hardware"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 18 - Virtualization V2026",
+
+    "question": "When pooling resources for a High-Memory Analytics VM across multiple nodes, what technology is used for memory?",
+
+    "image": null,
+
+    "options": [
+      "Distributed shared memory (DSM)",
+
+      "Local cache only",
+
+      "Direct attached storage",
+
+      "Read-only memory (ROM)"
+    ],
+
+    "correct_answers": ["Distributed shared memory (DSM)"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 22 - Virtualization V2026",
+
+    "question": "Why do containers generally offer faster resource provisioning than VMs?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "They don't use a hypervisor.",
+
+      "They use a larger OS kernel.",
+
+      "They are stored on physical tape drives.",
+
+      "They require more hardware resources."
+    ],
+
+    "correct_answers": ["They don't use a hypervisor."],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 24 - Virtualization V2026",
+
+    "question": "Match the characteristic to the correct deployment type (VMs vs. Containers).",
+
+    "image": null,
+
+    "options": ["VMs", "Containers"],
+
+    "pairs": {
+      "A": "Startup time in minutes",
+
+      "B": "Startup time in milliseconds",
+
+      "C": "Hardware-level virtualization",
+
+      "D": "OS virtualization",
+
+      "E": "Heavyweight",
+
+      "F": "Lightweight"
+    },
+
+    "correct_answers": {
+      "A": "VMs",
+
+      "B": "Containers",
+
+      "C": "VMs",
+
+      "D": "Containers",
+
+      "E": "VMs",
+
+      "F": "Containers"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 25 - Virtualization V2026",
+
+    "question": "In which scenario would Virtual Machines be a better solution than containers?",
+
+    "image": null,
+
+    "options": [
+      "When you need to manage a variety of different operating systems.",
+
+      "When you need a system that starts in milliseconds.",
+
+      "When you want to maximize the number of apps on a single server.",
+
+      "When you want to deploy multiple instances of one single application."
+    ],
+
+    "correct_answers": [
+      "When you need to manage a variety of different operating systems."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 26 - Virtualization V2026",
+
+    "question": "Which of the following are features of Kubernetes?",
+
+    "image": null,
+
+    "options": [
+      "Service discovery and load balancing",
+
+      "Self-healing",
+
+      "Automated rollouts and rollbacks",
+
+      "Physical hardware manufacturing",
+
+      "Secret and configuration management"
+    ],
+
+    "correct_answers": [
+      "Service discovery and load balancing",
+
+      "Self-healing",
+
+      "Automated rollouts and rollbacks",
+
+      "Secret and configuration management"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 27 - Virtualization V2026",
+
+    "question": "What is a Virtual-Machine Based Rootkit (VMBR)?",
+
+    "image": null,
+
+    "options": [
+      "Malware inserted between the physical hardware and an OS.",
+
+      "A tool used to increase VM performance.",
+
+      "A legitimate security patch for the Hypervisor.",
+
+      "A type of distributed database."
+    ],
+
+    "correct_answers": [
+      "Malware inserted between the physical hardware and an OS."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Virtualization V2026",
+
+    "source": "Slide 30 - Virtualization V2026",
+
+    "question": "Which set of tools allows users to build and manage cloud computing platforms for both public and private clouds?",
+
+    "image": null,
+
+    "options": ["OpenStack", "VMBR", "RAID", "DSM"],
+
+    "correct_answers": ["OpenStack"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  }
+]

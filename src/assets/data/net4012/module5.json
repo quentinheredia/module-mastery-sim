@@ -1,0 +1,543 @@
+[
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 1 - Cloud and Fog Scheduling - I",
+
+    "question": "Which of the following best defines a 'cloud' according to the provided material?",
+
+    "image": null,
+
+    "options": [
+      "A local network of physical servers with fixed resource allocation.",
+
+      "A collection of interconnected and virtualized computers presented as unified computing resources based on SLAs.",
+
+      "A single supercomputer that provides static services to all users regardless of negotiation.",
+
+      "A decentralized set of sensors and controllers that operate independently of data centers."
+    ],
+
+    "correct_answers": [
+      "A collection of interconnected and virtualized computers presented as unified computing resources based on SLAs."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 2 - Cloud and Fog Scheduling - I",
+
+    "question": "What are the two primary areas identified as needing further improvement in Clouds?",
+
+    "image": null,
+
+    "options": [
+      "Hardware cooling and storage capacity",
+
+      "Network security and user interface design",
+
+      "Resource management and task scheduling",
+
+      "SLA negotiation and billing systems"
+    ],
+
+    "correct_answers": ["Resource management and task scheduling"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 3 - Cloud and Fog Scheduling - I",
+
+    "question": "An effective scheduler can help achieve which of the following benefits? (Select all that apply)",
+
+    "image": null,
+
+    "options": [
+      "Reduce operational costs",
+
+      "Reduce queue waiting time",
+
+      "Increase resource utilization",
+
+      "Eliminate the need for Service Level Agreements"
+    ],
+
+    "correct_answers": [
+      "Reduce operational costs",
+
+      "Reduce queue waiting time",
+
+      "Increase resource utilization"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 3 - Cloud and Fog Scheduling - I",
+
+    "question": "Match the Cloud Service Model to its corresponding scheduling type.",
+
+    "image": null,
+
+    "options": [
+      "Workflow (job) Scheduling",
+
+      "Virtual Machines (VM) Scheduling",
+
+      "Sensor Network Scheduling",
+
+      "Hardware Lifecycle Scheduling"
+    ],
+
+    "pairs": {
+      "A": "PaaS model",
+
+      "B": "IaaS model"
+    },
+
+    "correct_answers": {
+      "A": "Workflow (job) Scheduling",
+
+      "B": "Virtual Machines (VM) Scheduling"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 4 - Cloud and Fog Scheduling - I",
+
+    "question": "In the context of Cloud Computing, scheduling is defined as a mapping mechanism from users' tasks to the appropriate selection of resources.",
+
+    "image": null,
+
+    "options": ["True", "False"],
+
+    "correct_answers": ["True"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 4 - Cloud and Fog Scheduling - I",
+
+    "question": "What is the primary aim of scheduling in a cloud environment?",
+
+    "image": null,
+
+    "options": [
+      "Maximizing the number of physical machines used",
+
+      "High throughput with least execution time",
+
+      "Reducing the number of users connected to the network",
+
+      "Prioritizing hardware maintenance over task execution"
+    ],
+
+    "correct_answers": ["High throughput with least execution time"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 5 - Cloud and Fog Scheduling - I",
+
+    "question": "Which of the following are listed as goals of scheduling? (Select all that apply)",
+
+    "image": null,
+
+    "options": [
+      "Improving load balance",
+
+      "Improving fairness for all tasks",
+
+      "Increasing the number of successfully completed tasks",
+
+      "Decreasing system throughput to save energy"
+    ],
+
+    "correct_answers": [
+      "Improving load balance",
+
+      "Improving fairness for all tasks",
+
+      "Increasing the number of successfully completed tasks"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 5 - Cloud and Fog Scheduling - I",
+
+    "question": "Which type of scheduling involves grouping tasks before sending them to resources, also known as 'mapping events'?",
+
+    "image": null,
+
+    "options": [
+      "Immediate scheduling",
+
+      "Batch scheduling",
+
+      "Static scheduling",
+
+      "Preemptive scheduling"
+    ],
+
+    "correct_answers": ["Batch scheduling"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 5 - Cloud and Fog Scheduling - I",
+
+    "question": "Static scheduling is characterized by which of the following?",
+
+    "image": null,
+
+    "options": [
+      "It requires prior information of the global state of the system.",
+
+      "It takes into account the current real-time state of VMs.",
+
+      "It is more complex than dynamic scheduling.",
+
+      "It re-allocates tasks during execution to improve speed."
+    ],
+
+    "correct_answers": [
+      "It requires prior information of the global state of the system."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 6 - Cloud and Fog Scheduling - I",
+
+    "question": "Match the task scheduling type to its description.",
+
+    "image": null,
+
+    "options": [
+      "Takes into account current state of VMs and distributes tasks according to capacity.",
+
+      "Task is interrupted during execution and can be moved to another resource.",
+
+      "VMs are not re-allocated to new tasks until the current task finishes.",
+
+      "Tasks are scheduled to VMs directly upon arrival."
+    ],
+
+    "pairs": {
+      "A": "Dynamic scheduling",
+
+      "B": "Preemptive scheduling",
+
+      "C": "Non-preemptive scheduling"
+    },
+
+    "correct_answers": {
+      "A": "Takes into account current state of VMs and distributes tasks according to capacity.",
+
+      "B": "Task is interrupted during execution and can be moved to another resource.",
+
+      "C": "VMs are not re-allocated to new tasks until the current task finishes."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 6 - Cloud and Fog Scheduling - I",
+
+    "question": "Which of these are examples of static tasks scheduling algorithms mentioned in the slides?",
+
+    "image": null,
+
+    "options": [
+      "First Come First Serve and Prioritized Scheduling",
+
+      "Round Robin and Genetic Algorithms",
+
+      "Shortest Job First and Ant Colony Optimization",
+
+      "Dynamic Migration and Resource Monitoring"
+    ],
+
+    "correct_answers": ["First Come First Serve and Prioritized Scheduling"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 7 - Cloud and Fog Scheduling - I",
+
+    "question": "In workflow scheduling, workflows are usually defined as a DAG. What does DAG stand for and what do its components represent?",
+
+    "image": null,
+
+    "options": [
+      "Directed Acyclic Graph; Nodes = tasks, Edges = flow",
+
+      "Distributed Access Gateway; Nodes = servers, Edges = data",
+
+      "Direct Allocation Grid; Nodes = users, Edges = priority",
+
+      "Dynamic Acyclic Group; Nodes = VMs, Edges = migration"
+    ],
+
+    "correct_answers": ["Directed Acyclic Graph; Nodes = tasks, Edges = flow"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 7 - Cloud and Fog Scheduling - I",
+
+    "question": "According to the workflow scheduling slide, job completion time depends on which of the following? (Select all that apply)",
+
+    "image": null,
+
+    "options": [
+      "DAG design",
+
+      "Scope of parallelism",
+
+      "Wait time in queue",
+
+      "The physical location of the user"
+    ],
+
+    "correct_answers": [
+      "DAG design",
+
+      "Scope of parallelism",
+
+      "Wait time in queue"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 8 - Cloud and Fog Scheduling - I",
+
+    "question": "What is a major drawback of basic VM scheduling as described on slide 15?",
+
+    "image": null,
+
+    "options": [
+      "It is too complex for modern data centers.",
+
+      "It does not take the hypervisor into the loop.",
+
+      "It requires too much prior knowledge of the user.",
+
+      "It cannot be used with Linux-based hardware."
+    ],
+
+    "correct_answers": ["It does not take the hypervisor into the loop."],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 9 - Cloud and Fog Scheduling - I",
+
+    "question": "What are the primary goals of the 'Utility Driven Scheduling' paradigm?",
+
+    "image": null,
+
+    "options": [
+      "Optimized resource utilization and relaxed QoS in overcommitted scenarios",
+
+      "Reducing hardware costs and increasing physical security",
+
+      "Eliminating the need for a scheduler and monitor",
+
+      "Providing 100% QoS to all users regardless of load"
+    ],
+
+    "correct_answers": [
+      "Optimized resource utilization and relaxed QoS in overcommitted scenarios"
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 9 - Cloud and Fog Scheduling - I",
+
+    "question": "Based on the Partial Utility Function table, which job has the highest CPU requirement and what is its relaxation percentage?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": ["Job D; 40%", "Job E; 20%", "Job F; 25%", "Job A; 20%"],
+
+    "correct_answers": ["Job E; 20%"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 10 - Cloud and Fog Scheduling - I",
+
+    "question": "In the Utility Scheduler architecture, the Monitor tracks which specific resource metrics?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "Power consumption and temperature",
+
+      "CPU, Memory, and Disk",
+
+      "Network latency and packet loss",
+
+      "User login times and session duration"
+    ],
+
+    "correct_answers": ["CPU, Memory, and Disk"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 11 - Cloud and Fog Scheduling - I",
+
+    "question": "Based on the 'Result 1' graph, the Utility Scheduler achieved what percentage of gain in CPU utilization per core compared to Condor?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": ["10%", "25%", "33%", "50%"],
+
+    "correct_answers": ["33%"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 12 - Cloud and Fog Scheduling - I",
+
+    "question": "Comparing Result 3 and Result 4, how much time was saved using the relaxed scheduling approach to complete all jobs?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": ["50 seconds", "100 seconds", "180 seconds", "280 seconds"],
+
+    "correct_answers": ["100 seconds"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "Cloud and Fog Scheduling - I",
+
+    "source": "Slide 13 - Cloud and Fog Scheduling - I",
+
+    "question": "According to the conclusions, although QoS might degrade during execution, Partial Utility is considered good because: (Select all that apply)",
+
+    "image": null,
+
+    "options": [
+      "It optimizes resources",
+
+      "It reduces operational costs",
+
+      "It allows more jobs to run in parallel",
+
+      "It guarantees the highest possible QoS at all times"
+    ],
+
+    "correct_answers": [
+      "It optimizes resources",
+
+      "It reduces operational costs",
+
+      "It allows more jobs to run in parallel"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  }
+]
