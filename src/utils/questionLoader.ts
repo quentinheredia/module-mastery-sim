@@ -30,12 +30,28 @@ import net3008Questions from "@/assets/data/net3008/questions.json";
 // NET4001 course data
 import net4001Questions from "@/assets/data/net4001/questions.json";
 
+// NET4012 Course Data
+import net4012lecture1 from "@/assets/data/net4012/module1.json";
+import net4012lecture2 from "@/assets/data/net4012/module2.json";
+import net4012lecture3 from "@/assets/data/net4012/module3.json";
+import net4012lecture4 from "@/assets/data/net4012/module4.json";
+import net4012lecture5 from "@/assets/data/net4012/module5.json";
+import net4012lecture6 from "@/assets/data/net4012/module6.json";
+
 // Organize data by course
 const courseData: Record<string, Question[]> = {
   net4009: [...examAdditional, ...quiz2, ...quiz3, ...quiz4] as Question[],
   net4005: [...cloudData, ...cryptoData, ...sdnData, ...appData] as Question[],
   net3008: [...net3008Questions] as Question[],
   net4001: [...net4001Questions] as Question[],
+  net4012: [
+    ...net4012lecture1,
+    ...net4012lecture2,
+    ...net4012lecture3,
+    ...net4012lecture4,
+    ...net4012lecture5,
+    ...net4012lecture6,
+  ] as Question[],
 };
 
 // Standardized module names for NET4009
@@ -81,7 +97,7 @@ export const getAvailableModules = (courseId: string = "net4009"): string[] => {
 // Filter questions by module within a course
 export const filterByModule = (
   courseId: string,
-  module: string
+  module: string,
 ): Question[] => {
   const questions = loadQuestions(courseId);
   return questions.filter((q) => q.module === module);
@@ -100,7 +116,7 @@ export const shuffleArray = <T>(array: T[]): T[] => {
 // Get random questions for exam from a specific course
 export const getRandomQuestions = (
   courseId: string = "net4009",
-  count: number = 40
+  count: number = 40,
 ): Question[] => {
   const allQuestions = loadQuestions(courseId);
 
@@ -117,13 +133,13 @@ export const getRandomQuestions = (
 // NET4005 specific exam question selection
 const getNet4005ExamQuestions = (allQuestions: Question[]): Question[] => {
   const matchingQuestions = allQuestions.filter(
-    (q) => q.question_type === "matching"
+    (q) => q.question_type === "matching",
   );
   const multiAnswerQuestions = allQuestions.filter(
-    (q) => q.question_type === "multiple_answer"
+    (q) => q.question_type === "multiple_answer",
   );
   const singleAnswerQuestions = allQuestions.filter(
-    (q) => q.question_type === "multiple_choice"
+    (q) => q.question_type === "multiple_choice",
   );
 
   const selectedQuestions: Question[] = [];
@@ -140,8 +156,8 @@ const getNet4005ExamQuestions = (allQuestions: Question[]): Question[] => {
   selectedQuestions.push(
     ...shuffledMultiAnswer.slice(
       0,
-      Math.min(multiAnswerCount, shuffledMultiAnswer.length)
-    )
+      Math.min(multiAnswerCount, shuffledMultiAnswer.length),
+    ),
   );
 
   // Fill remaining spots with single-answer questions (to reach 10 total)
@@ -150,8 +166,8 @@ const getNet4005ExamQuestions = (allQuestions: Question[]): Question[] => {
   selectedQuestions.push(
     ...shuffledSingleAnswer.slice(
       0,
-      Math.min(remainingCount, shuffledSingleAnswer.length)
-    )
+      Math.min(remainingCount, shuffledSingleAnswer.length),
+    ),
   );
 
   // Shuffle the final selection so question types are mixed
@@ -163,7 +179,7 @@ export const checkAnswer = (
   question: Question,
   selectedAnswers: string[],
   matchingAnswers?: MatchingPairs,
-  multiStepAnswers?: { [subpartId: string]: string }
+  multiStepAnswers?: { [subpartId: string]: string },
 ): boolean => {
   if (question.question_type === "matching") {
     if (!matchingAnswers || !question.correct_answers) return false;
