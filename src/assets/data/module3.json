@@ -39,7 +39,7 @@
   {
     "module": "Module 3 - OSPFv2 and OSPFv3",
     "question": "Refer to the exhibit of the routing table from a router that is a backbone router and ABR for Area 1. How will this routing table change if Area 1 is configured as a Stub area?",
-    "image": "/images/quizzes/quizzes/mod3_q4.png",
+    "image": "/images/quizzes/mod3_q4.png",
     "options": [
       "None of the routes will be removed as a result of Area 1 and this ABR being configured as a stub",
       "Only the O IA routes and the two O E2 subnet routes to the 192.168.0.0 networks will be removed from the routing table",
