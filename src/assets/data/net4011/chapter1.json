@@ -1,0 +1,665 @@
+[
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 3 - 1.1 Fundamental goals of computer security",
+
+    "question": "Match the following high-level computer security goals with their correct definitions.",
+
+    "image": null,
+
+    "options": [
+      "Non-public information remains accessible only to authorized parties",
+
+      "Data, software, or hardware remains unaltered except by authorized parties",
+
+      "Computing resources are accessible only by authorized entities approved by the owner",
+
+      "Information and services remain accessible for authorized use",
+
+      "Assurance that a principal, data, or software is genuine relative to expectations",
+
+      "The ability to identify principals responsible for past actions"
+    ],
+
+    "pairs": {
+      "A": "Confidentiality",
+
+      "B": "Integrity",
+
+      "C": "Authorization",
+
+      "D": "Availability",
+
+      "E": "Authentication",
+
+      "F": "Accountability"
+    },
+
+    "correct_answers": {
+      "A": "Non-public information remains accessible only to authorized parties",
+
+      "B": "Data, software, or hardware remains unaltered except by authorized parties",
+
+      "C": "Computing resources are accessible only by authorized entities approved by the owner",
+
+      "D": "Information and services remain accessible for authorized use",
+
+      "E": "Assurance that a principal, data, or software is genuine relative to expectations",
+
+      "F": "The ability to identify principals responsible for past actions"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 4 - TRUSTED VS. TRUSTWORTHY",
+
+    "question": "According to the text, what is the key difference between something being 'trusted' and something being 'trustworthy'?",
+
+    "image": null,
+
+    "options": [
+      "Something trusted deserves our confidence, while something trustworthy merely has it.",
+
+      "Something trustworthy deserves confidence because it will reliably meet expectations, while something trusted is simply relied upon, whether that confidence is deserved or not.",
+
+      "There is no functional difference; the terms are used interchangeably in security.",
+
+      "Trustworthy refers only to people, while trusted refers only to hardware and software."
+    ],
+
+    "correct_answers": [
+      "Something trustworthy deserves confidence because it will reliably meet expectations, while something trusted is simply relied upon, whether that confidence is deserved or not."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 5 - ASSETS, POLICY",
+
+    "question": "How is 'security' formally defined in a computer system?",
+
+    "image": null,
+
+    "options": [
+      "By the amount of money spent on defensive software",
+
+      "Relative to a security policy that specifies allowed and disallowed rules and practices",
+
+      "By the absence of any successful attacks over a one-year period",
+
+      "By the physical isolation of the server room"
+    ],
+
+    "correct_answers": [
+      "Relative to a security policy that specifies allowed and disallowed rules and practices"
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 5 - ATTACKS, AGENTS",
+
+    "question": "Match the following security terms to their correct descriptions.",
+
+    "image": null,
+
+    "options": [
+      "Deliberate execution of steps intended to cause a security violation",
+
+      "A system characteristic such as a design or implementation flaw",
+
+      "The source or threat agent behind a potential attack",
+
+      "Specific methods or sequences of steps by which attacks are carried out"
+    ],
+
+    "pairs": {
+      "A": "Attack",
+
+      "B": "Vulnerability",
+
+      "C": "Adversary",
+
+      "D": "Attack Vector"
+    },
+
+    "correct_answers": {
+      "A": "Deliberate execution of steps intended to cause a security violation",
+
+      "B": "A system characteristic such as a design or implementation flaw",
+
+      "C": "The source or threat agent behind a potential attack",
+
+      "D": "Specific methods or sequences of steps by which attacks are carried out"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 6 - 1.3 Risk, risk assessment, and modeling expected losses",
+
+    "question": "In the context of computer security, how is 'Risk' defined?",
+
+    "image": null,
+
+    "options": [
+      "The total number of vulnerabilities found in a system",
+
+      "The expected loss due to harmful future events over a fixed time period",
+
+      "The probability that an attacker is motivated to target a system",
+
+      "The cost of the security software used for defense"
+    ],
+
+    "correct_answers": [
+      "The expected loss due to harmful future events over a fixed time period"
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 6 - RISK EQUATIONS",
+
+    "question": "In the risk equation R = T \u22c5 V \u22c5 C, what does each variable represent?",
+
+    "image": null,
+
+    "options": [
+      "R: Risk; T: Threats; V: Vulnerabilities; C: Asset Value/Impact",
+
+      "R: Resources; T: Time; V: Velocity; C: Cost",
+
+      "R: Recovery; T: Trust; V: Validation; C: Communication",
+
+      "R: Risk; T: Target; V: Vector; C: Countermeasure"
+    ],
+
+    "correct_answers": [
+      "R: Risk; T: Threats; V: Vulnerabilities; C: Asset Value/Impact"
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 8 - COST-BENEFIT ANALYSIS",
+
+    "question": "A defense is considered unjustifiable from a cost-benefit analysis viewpoint if:",
+
+    "image": null,
+
+    "options": [
+      "It is too difficult for the average user to understand",
+
+      "The total cost of the new defense exceeds the anticipated benefits (lower expected losses)",
+
+      "It relies on open-source cryptographic libraries",
+
+      "It does not prevent 100% of all possible attacks"
+    ],
+
+    "correct_answers": [
+      "The total cost of the new defense exceeds the anticipated benefits (lower expected losses)"
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 9 - RISK MANAGEMENT VS. MITIGATION",
+
+    "question": "Which of the following are recognized options for managing risk?",
+
+    "image": null,
+
+    "options": [
+      "Mitigating risk by technical or procedural countermeasures",
+
+      "Transferring risk to third parties through insurance",
+
+      "Accepting risk if the cost of defense is too high",
+
+      "Eliminating risk by decommissioning the system",
+
+      "Ignoring the risk until a breach occurs"
+    ],
+
+    "correct_answers": [
+      "Mitigating risk by technical or procedural countermeasures",
+
+      "Transferring risk to third parties through insurance",
+
+      "Accepting risk if the cost of defense is too high",
+
+      "Eliminating risk by decommissioning the system"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 9 - ADVERSARY ATTRIBUTES",
+
+    "question": "Which of the following attributes should be considered when building an adversary model?",
+
+    "image": null,
+
+    "options": [
+      "Objectives and methods",
+
+      "Capabilities (CPU, skills, knowledge)",
+
+      "Funding level",
+
+      "Outsider vs. insider status",
+
+      "The physical weight of the attacker's hardware"
+    ],
+
+    "correct_answers": [
+      "Objectives and methods",
+
+      "Capabilities (CPU, skills, knowledge)",
+
+      "Funding level",
+
+      "Outsider vs. insider status"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 10 - Table 1.2: Named groups of adversaries",
+
+    "question": "Match the following adversary groups to their typical descriptions.",
+
+    "image": null,
+
+    "options": [
+      "Government-funded agencies looking for intelligence",
+
+      "Competitor-funded agents seeking trade secrets",
+
+      "Disgruntled employees within the organization",
+
+      "Security-unaware staff who cause accidental harm"
+    ],
+
+    "pairs": {
+      "A": "Foreign Intelligence",
+
+      "B": "Industrial Espionage Agents",
+
+      "C": "Malicious Insiders",
+
+      "D": "Non-malicious Employees"
+    },
+
+    "correct_answers": {
+      "A": "Government-funded agencies looking for intelligence",
+
+      "B": "Competitor-funded agents seeking trade secrets",
+
+      "C": "Disgruntled employees within the organization",
+
+      "D": "Security-unaware staff who cause accidental harm"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 10 - SECURITY EVALUATIONS AND PENETRATION TESTING",
+
+    "question": "What is 'black-box' penetration testing?",
+
+    "image": null,
+
+    "options": [
+      "Testing performed with full access to source code and design documents",
+
+      "Testing that proceeds without the use of insights from design documents or source code",
+
+      "Testing only the physical security of the server room",
+
+      "Testing performed only after a major security breach has occurred"
+    ],
+
+    "correct_answers": [
+      "Testing that proceeds without the use of insights from design documents or source code"
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 12 - Figure 1.5: Examples of threat modeling approaches",
+
+    "question": "Which of the following are recognized approaches to threat modeling mentioned in the text?",
+
+    "image": null,
+
+    "options": [
+      "Architectural diagrams",
+
+      "Attack trees",
+
+      "Checklists",
+
+      "STRIDE",
+
+      "Social media monitoring"
+    ],
+
+    "correct_answers": [
+      "Architectural diagrams",
+
+      "Attack trees",
+
+      "Checklists",
+
+      "STRIDE"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 13 - 1.5.2 Attack trees for threat modeling",
+
+    "question": "In an attack tree, what does a 'path connecting a leaf node to the root' represent?",
+
+    "image": "/images/quizzes/4012_1/Chapter1_Page13.png",
+
+    "options": [
+      "A single security vulnerability",
+
+      "One full attack vector (steps to reach the goal)",
+
+      "The budget required for defense",
+
+      "The organizational chart of the IT department"
+    ],
+
+    "correct_answers": ["One full attack vector (steps to reach the goal)"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 15 - STRIDE",
+
+    "question": "Match the STRIDE acronym letters to the correct threat categories.",
+
+    "image": null,
+
+    "options": [
+      "Impersonating a thing or entity",
+
+      "Unauthorized altering of code or data",
+
+      "Denying responsibility for past actions",
+
+      "Unauthorized release of data",
+
+      "Impacting service availability",
+
+      "Obtaining unauthorized higher access levels"
+    ],
+
+    "pairs": {
+      "S": "Spoofing",
+
+      "T": "Tampering",
+
+      "R": "Repudiation",
+
+      "I": "Information Disclosure",
+
+      "D": "Denial of Service",
+
+      "E": "Escalation of Privilege"
+    },
+
+    "correct_answers": {
+      "S": "Impersonating a thing or entity",
+
+      "T": "Unauthorized altering of code or data",
+
+      "R": "Denying responsibility for past actions",
+
+      "I": "Unauthorized release of data",
+
+      "D": "Impacting service availability",
+
+      "E": "Escalation of Privilege"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 16 - 1.6.1 Threat modeling and model-reality gaps",
+
+    "question": "What are the two major modeling errors that lead to model-reality gaps?",
+
+    "image": null,
+
+    "options": [
+      "Using too many diagrams and choosing wrong colors",
+
+      "Invalid assumptions and focus on the wrong threats",
+
+      "Hiring too many consultants and overspending on hardware",
+
+      "Using open-source software and failing to patch daily"
+    ],
+
+    "correct_answers": ["Invalid assumptions and focus on the wrong threats"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 19 - SECURITY IS UNOBSERVABLE",
+
+    "question": "The text states that 'security is unobservable.' What does this mean in the context of security testing?",
+
+    "image": null,
+
+    "options": [
+      "Testing can show the presence of security but not its absence.",
+
+      "Functional testing confirms functionality, but security testing cannot generally show the absence of all exploitable artifacts.",
+
+      "Security mechanisms are invisible to the end user.",
+
+      "The source code for security features is always encrypted."
+    ],
+
+    "correct_answers": [
+      "Functional testing confirms functionality, but security testing cannot generally show the absence of all exploitable artifacts."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 20 - P1 SIMPLICITY-AND-NECESSITY",
+
+    "question": "Which design principle suggests keeping designs as simple and small as possible to minimize attack surface?",
+
+    "image": null,
+
+    "options": [
+      "P1: Simplicity-and-Necessity",
+
+      "P2: Safe-Defaults",
+
+      "P3: Open-Design",
+
+      "P13: Defense-in-Depth"
+    ],
+
+    "correct_answers": ["P1: Simplicity-and-Necessity"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 21 - P3 OPEN-DESIGN",
+
+    "question": "What is Kerckhoffs' principle, as related to Open Design (P3)?",
+
+    "image": null,
+
+    "options": [
+      "A system's security should rely entirely on the secrecy of its algorithm.",
+
+      "A system's security should not rely on the secrecy of its design details.",
+
+      "Only the government should have access to cryptographic keys.",
+
+      "Security is only possible with closed-source proprietary software."
+    ],
+
+    "correct_answers": [
+      "A system's security should not rely on the secrecy of its design details."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 21 - P6 LEAST-PRIVILEGE",
+
+    "question": "The principle of 'Least-Privilege' (P6) states that you should:",
+
+    "image": null,
+
+    "options": [
+      "Give every user administrative rights to ensure they can work efficiently",
+
+      "Allocate the fewest privileges needed for a task and for the shortest duration necessary",
+
+      "Only use passwords with 4 digits to make them easy to remember",
+
+      "Use the same password for all system accounts to reduce management complexity"
+    ],
+
+    "correct_answers": [
+      "Allocate the fewest privileges needed for a task and for the shortest duration necessary"
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 23 - P13 DEFENSE-IN-DEPTH",
+
+    "question": "Which design principle involves building defenses in multiple independent layers to avoid single points of failure?",
+
+    "image": null,
+
+    "options": [
+      "P5: Isolated-Compartments",
+
+      "P13: Defense-in-Depth",
+
+      "P15: Datatype-Validation",
+
+      "P16: Remnant-Removal"
+    ],
+
+    "correct_answers": ["P13: Defense-in-Depth"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  }
+]

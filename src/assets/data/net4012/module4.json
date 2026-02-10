@@ -58,7 +58,7 @@
       "Interpreters/processors, memory, and communications links"
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -83,7 +83,7 @@
 
     "correct_answers": ["Overprovisioning"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -175,7 +175,7 @@
 
     "correct_answers": ["abstraction"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -203,7 +203,7 @@
       "It allows for the dynamic assignment of resources across different applications."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -259,7 +259,7 @@
 
     "correct_answers": ["Aggregation"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -287,7 +287,7 @@
 
     "correct_answers": ["Eliminating the need for any physical hardware"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -313,7 +313,7 @@
 
     "correct_answers": ["Virtual Machine Monitor"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -339,7 +339,7 @@
 
     "correct_answers": ["Virtual Machines (VMs)"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -365,7 +365,7 @@
 
     "correct_answers": ["Directly on top of the hardware"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -391,7 +391,7 @@
 
     "correct_answers": ["Distributed shared memory (DSM)"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -417,7 +417,7 @@
 
     "correct_answers": ["They don't use a hypervisor."],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -489,7 +489,7 @@
       "When you need to manage a variety of different operating systems."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -553,7 +553,7 @@
       "Malware inserted between the physical hardware and an OS."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -571,7 +571,7 @@
 
     "correct_answers": ["OpenStack"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   }

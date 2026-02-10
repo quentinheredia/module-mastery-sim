@@ -1,0 +1,561 @@
+[
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 2 - Firewalls and Tunnels",
+
+    "question": "Which of the following are primary goals of computer security mentioned in the context of perimeter-based defenses?",
+
+    "image": null,
+
+    "options": [
+      "Protecting data and passwords in transit",
+
+      "Protecting resources from unauthorized network access and use",
+
+      "Preserving the integrity and availability of hosts",
+
+      "Providing unlimited bandwidth to all internal users"
+    ],
+
+    "correct_answers": [
+      "Protecting data and passwords in transit",
+
+      "Protecting resources from unauthorized network access and use",
+
+      "Preserving the integrity and availability of hosts"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 3 - Packet-filter firewalls",
+
+    "question": "A packet-filter firewall that drops a packet and attempts to inform the source by sending a TCP RST or ICMP 'destination unreachable' is performing which action?",
+
+    "image": null,
+
+    "options": ["ALLOW", "DROP", "REJECT", "LOG"],
+
+    "correct_answers": ["REJECT"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 3 - Packet-filter firewalls",
+
+    "question": "Which five TCP/IP header fields are most commonly used for efficient packet-filter matching rules?",
+
+    "image": null,
+
+    "options": [
+      "src_addr, src_port, dst_addr, dst_port, protocol",
+
+      "src_addr, TTL, dst_addr, packet size, checksum",
+
+      "identification, flags, fragment offset, window size, protocol",
+
+      "version, header length, type of service, total length, options"
+    ],
+
+    "correct_answers": ["src_addr, src_port, dst_addr, dst_port, protocol"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 4 - Stateless and Stateful Filters",
+
+    "question": "What is the primary difference between a stateless and a stateful packet filter?",
+
+    "image": null,
+
+    "options": [
+      "Stateless filters use a state table, while stateful filters process packets independently.",
+
+      "Stateless filters process each packet independently; stateful filters track connection details to process later packets.",
+
+      "Stateless filters only look at the IP layer; stateful filters only look at the application layer.",
+
+      "Stateless filters are always hardware-based; stateful filters are always software-based."
+    ],
+
+    "correct_answers": [
+      "Stateless filters process each packet independently; stateful filters track connection details to process later packets."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 4 - Default-Deny Rulesets",
+
+    "question": "Which security principle motivates the use of default-deny firewall rulesets?",
+
+    "image": null,
+
+    "options": [
+      "Complete Mediation",
+
+      "Safe Defaults",
+
+      "Isolated Compartments",
+
+      "Least Privilege"
+    ],
+
+    "correct_answers": ["Safe Defaults"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 6 - Limitations",
+
+    "question": "Which of the following are recognized limitations of traditional firewalls?",
+
+    "image": null,
+
+    "options": [
+      "Topological limitations where perimeters are no longer clearly defined",
+
+      "Little protection from malicious insiders",
+
+      "Ineffectiveness against tunneling one protocol through another",
+
+      "Inability to inspect content when it is encrypted",
+
+      "Ability to detect all drive-by downloads automatically"
+    ],
+
+    "correct_answers": [
+      "Topological limitations where perimeters are no longer clearly defined",
+
+      "Little protection from malicious insiders",
+
+      "Ineffectiveness against tunneling one protocol through another",
+
+      "Inability to inspect content when it is encrypted"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 7 - Dedicated Firewalls",
+
+    "question": "Match the advantage of dedicated firewalls to its description.",
+
+    "image": null,
+
+    "options": [
+      "Reduced functionality avoids often-exploited features and simplifies hardening.",
+
+      "Administered by specialists rather than generic administrators.",
+
+      "Provides defense-in-depth as an inline device.",
+
+      "Uses mandatory two-factor authentication instead of user-chosen passwords."
+    ],
+
+    "pairs": {
+      "A": "Smaller attack surface",
+
+      "B": "Specialist expertise",
+
+      "C": "Absence of regular-user accounts",
+
+      "D": "Physical isolation"
+    },
+
+    "correct_answers": {
+      "A": "Reduced functionality avoids often-exploited features and simplifies hardening.",
+
+      "B": "Administered by specialists rather than generic administrators.",
+
+      "C": "Uses mandatory two-factor authentication instead of user-chosen passwords.",
+
+      "D": "Provides defense-in-depth as an inline device."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 8 - Proxy Firewalls",
+
+    "question": "Which type of proxy generically relays connections through a single proxy point by allowing or denying the connection and then relaying bytes without content inspection?",
+
+    "image": null,
+
+    "options": [
+      "Application-level filter",
+
+      "Circuit-level proxy",
+
+      "Packet filter",
+
+      "Stateful inspection router"
+    ],
+
+    "correct_answers": ["Circuit-level proxy"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 10 - Application-level filters",
+
+    "question": "What is a primary characteristic of an application-level gateway?",
+
+    "image": null,
+
+    "options": [
+      "It only examines network and transport headers.",
+
+      "It leverages detailed understanding of specific protocols to examine and possibly alter application data.",
+
+      "It is faster than a simple packet filter because it uses less processing power.",
+
+      "It provides inherent encryption for all proxied connections."
+    ],
+
+    "correct_answers": [
+      "It leverages detailed understanding of specific protocols to examine and possibly alter application data."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 11 - Bastion Hosts and DMZs",
+
+    "question": "A subnetwork located between an external hostile network and the internal network to be protected is called a:",
+
+    "image": "/images/quizzes/4011_1/Chapter10_Page11.png",
+
+    "options": [
+      "Dual-homed host",
+
+      "Network DMZ (Demilitarized Zone)",
+
+      "Screening router",
+
+      "Intranet"
+    ],
+
+    "correct_answers": ["Network DMZ (Demilitarized Zone)"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 12 - SSH: Secure Shell",
+
+    "question": "What does SSH provide to secure communications?",
+
+    "image": null,
+
+    "options": [
+      "A built-in shell for all operating systems",
+
+      "An encrypted tunnel to reach a shell or other programs",
+
+      "A replacement for the physical layer of the network stack",
+
+      "A way to bypass all firewalls automatically"
+    ],
+
+    "correct_answers": [
+      "An encrypted tunnel to reach a shell or other programs"
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 13 - Three Protocols Composing SSH",
+
+    "question": "Which component of SSH enables the use of a single encrypted tunnel for multiple purposes by assigning logical channel numbers?",
+
+    "image": null,
+
+    "options": [
+      "Transport layer protocol",
+
+      "User authentication protocol",
+
+      "Connection protocol",
+
+      "SOCKS library"
+    ],
+
+    "correct_answers": ["Connection protocol"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 14 - SSH Server Authentication",
+
+    "question": "In the SSH 'Trust on First Use' (TOFU) model, how can a user preclude active middle-person attacks?",
+
+    "image": null,
+
+    "options": [
+      "By using a password",
+
+      "By cross-checking the fingerprint of the host key through an independent channel",
+
+      "By disabling the firewall",
+
+      "By using a different port than 22"
+    ],
+
+    "correct_answers": [
+      "By cross-checking the fingerprint of the host key through an independent channel"
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 15 - SSH Port Forwarding",
+
+    "question": "In local port forwarding, what is the purpose of the '-L' option in the command 'ssh -L listen_port:host:hostport sshd_host'?",
+
+    "image": "/images/quizzes/4011_1/Chapter10_Page15.png",
+
+    "options": [
+      "It tells the remote server to listen for inbound connections.",
+
+      "It tells the local ssh client to listen for data on a specific local port and send it through the tunnel.",
+
+      "It logs all traffic to a local file.",
+
+      "It disables encryption for that specific port."
+    ],
+
+    "correct_answers": [
+      "It tells the local ssh client to listen for data on a specific local port and send it through the tunnel."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 18 - Virtual Private Networks",
+
+    "question": "A VPN unites physically distant users or subnetworks over shared public links using which of the following?",
+
+    "image": "/images/quizzes/4011_1/Chapter10_Page18.png",
+
+    "options": [
+      "Physical isolation",
+
+      "Encrypted tunnels",
+
+      "Special-purpose protocols",
+
+      "Authentication-based access control"
+    ],
+
+    "correct_answers": [
+      "Encrypted tunnels",
+
+      "Special-purpose protocols",
+
+      "Authentication-based access control"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 19 - VPN Designs",
+
+    "question": "Which VPN design provides end-to-end security where the VPN endpoints are the final destination hosts?",
+
+    "image": "/images/quizzes/4011_1/Chapter10_Page19.png",
+
+    "options": [
+      "Tunnel mode",
+
+      "Transport mode",
+
+      "Circuit mode",
+
+      "Application mode"
+    ],
+
+    "correct_answers": ["Transport mode"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 20 - IPsec",
+
+    "question": "What is the primary motivation for the IPsec protocol suite?",
+
+    "image": "/images/quizzes/4011_1/Chapter10_Page20.png",
+
+    "options": [
+      "To provide security services at the application layer.",
+
+      "To provide network-layer security services inherited by all transport and application layer protocols.",
+
+      "To replace TCP with a more secure alternative.",
+
+      "To manage MAC addresses on a local area network."
+    ],
+
+    "correct_answers": [
+      "To provide network-layer security services inherited by all transport and application layer protocols."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 20 - IPsec Details",
+
+    "question": "Match the IPsec protocol component to its function.",
+
+    "image": null,
+
+    "options": [
+      "Automates key establishment using Diffie-Hellman.",
+
+      "Provides data origin authentication (MAC) for the payload and immutable header fields.",
+
+      "Allows encryption of the IPsec payload and provides authentication services."
+    ],
+
+    "pairs": {
+      "A": "IKE",
+
+      "B": "AH",
+
+      "C": "ESP"
+    },
+
+    "correct_answers": {
+      "A": "Automates key establishment using Diffie-Hellman.",
+
+      "B": "Provides data origin authentication (MAC) for the payload and immutable header fields.",
+
+      "C": "Allows encryption of the IPsec payload and provides authentication services."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 22 - IPsec Tunnel Mode",
+
+    "question": "In IPsec tunnel mode, the entire original IP datagram is encapsulated as the IPsec payload.",
+
+    "image": null,
+
+    "options": ["True", "False"],
+
+    "correct_answers": ["True"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 24 - TCP and UDP",
+
+    "question": "Which transport-layer protocol is connection-oriented and provides reliable, bi-directional flows of bytes?",
+
+    "image": null,
+
+    "options": ["IP", "UDP", "TCP", "ICMP"],
+
+    "correct_answers": ["TCP"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  }
+]

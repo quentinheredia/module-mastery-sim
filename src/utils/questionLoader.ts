@@ -39,6 +39,13 @@ import net4012lecture5 from "@/assets/data/net4012/module5.json";
 import net4012lecture6 from "@/assets/data/net4012/module6.json";
 import net4012inclass from "@/assets/data/net4012/module7.json";
 
+// NET4000 Course Data
+import net4000test1 from "@/assets/data/net4000/test1.json";
+
+// NET4011 Course Data
+import net4011chapter1 from "@/assets/data/net4011/chapter1.json";
+import net4011chapter10 from "@/assets/data/net4011/chapter10.json";
+
 // Organize data by course
 const courseData: Record<string, Question[]> = {
   net4009: [...examAdditional, ...quiz2, ...quiz3, ...quiz4] as Question[],
@@ -54,6 +61,10 @@ const courseData: Record<string, Question[]> = {
     ...net4012lecture6,
     ...net4012inclass,
   ] as Question[],
+
+  net4000: [...net4000test1] as Question[],
+
+  net4011: [...net4011chapter1, ...net4011chapter10] as Question[],
 };
 
 // Standardized module names for NET4009

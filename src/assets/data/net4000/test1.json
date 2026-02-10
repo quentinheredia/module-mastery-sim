@@ -1,0 +1,631 @@
+[
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 16 - OSI Model",
+
+    "question": "Which of the following statements accurately describe the principles of the OSI Model?",
+
+    "image": null,
+
+    "options": [
+      "Each layer provides features to the layer above it.",
+
+      "Data is passed between layers through a process called encapsulation.",
+
+      "Each layer is independent and does not rely on the layer below it.",
+
+      "A Layer N's header is part of Layer N-1's payload.",
+
+      "The model consists of 5 layers developed in the late 1990s."
+    ],
+
+    "correct_answers": [
+      "Each layer provides features to the layer above it.",
+
+      "Data is passed between layers through a process called encapsulation.",
+
+      "A Layer N's header is part of Layer N-1's payload."
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 18 - Layer 1 - PHY Layer",
+
+    "question": "Which hardware component is typically responsible for handling Layer 1 technologies like 1000BaseT4 or Wifi radio modulation?",
+
+    "image": null,
+
+    "options": [
+      "A Network Switch",
+
+      "A dedicated PHY hardware component",
+
+      "The CPU's ALU",
+
+      "A software bridge",
+
+      "The Linux Kernel Scheduler"
+    ],
+
+    "correct_answers": ["A dedicated PHY hardware component"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 20 - Ethernet - Layer 2",
+
+    "question": "What is the maximum allowable size for an Ethernet payload according to the standard frame structure?",
+
+    "image": null,
+
+    "options": [
+      "64 bytes",
+
+      "1522 bytes",
+
+      "1504 bytes",
+
+      "12 bytes",
+
+      "1492 bytes"
+    ],
+
+    "correct_answers": ["1504 bytes"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 21 - Network Bridging",
+
+    "question": "Match the following network bridging terms to their appropriate descriptions.",
+
+    "image": null,
+
+    "options": [
+      "Stores Port to Address associations",
+
+      "Interconnects multiple network segments at Layer 2",
+
+      "A hardware chip often used in dedicated network switches",
+
+      "Logic used by transparent switches to learn associations"
+    ],
+
+    "pairs": {
+      "A": "Network Bridge",
+
+      "B": "ASIC",
+
+      "C": "FDB",
+
+      "D": "Monitoring Port Traffic"
+    },
+
+    "correct_answers": {
+      "A": "Interconnects multiple network segments at Layer 2",
+
+      "B": "A hardware chip often used in dedicated network switches",
+
+      "C": "Stores Port to Address associations",
+
+      "D": "Logic used by transparent switches to learn associations"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 24 - VLAN - 802.1Q",
+
+    "question": "In an 802.1Q VLAN tag, how many bits are used to represent the VLAN ID?",
+
+    "image": null,
+
+    "options": ["3 bits", "1 bit", "12 bits", "16 bits", "8 bits"],
+
+    "correct_answers": ["12 bits"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 26 - Transport Layer",
+
+    "question": "Which of the following are characteristics of the User Datagram Protocol (UDP)?",
+
+    "image": null,
+
+    "options": [
+      "Connection-oriented",
+
+      "Guarantees message ordering",
+
+      "Connection-less",
+
+      "Unreliable (no delivery guarantee)",
+
+      "Sends datagrams with clear boundaries"
+    ],
+
+    "correct_answers": [
+      "Connection-less",
+
+      "Unreliable (no delivery guarantee)",
+
+      "Sends datagrams with clear boundaries"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 28 - Layers 5, 6 and 7",
+
+    "question": "Why are Layers 5, 6, and 7 (Session, Presentation, and Application) considered 'less relevant' for the specific training covered in these slides?",
+
+    "image": null,
+
+    "options": [
+      "They are not used in modern networking.",
+
+      "They are not handled by the Linux kernel.",
+
+      "They are only used in Windows-based systems.",
+
+      "They do not use headers.",
+
+      "They are replaced by eBPF."
+    ],
+
+    "correct_answers": ["They are not handled by the Linux kernel."],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 38 - Kernel Bypass",
+
+    "question": "What is a primary characteristic of Kernel Bypass techniques like DPDK?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "They rely heavily on the standard Linux networking stack.",
+
+      "They circumvent the networking stack to run an alternative implementation in userspace.",
+
+      "They are the only way to use Wifi drivers.",
+
+      "They are fully supported by the Linux kernel community.",
+
+      "They require writing drivers in the kernel-side only."
+    ],
+
+    "correct_answers": [
+      "They circumvent the networking stack to run an alternative implementation in userspace."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 44 - Network devices in Linux",
+
+    "question": "Unlike block or character devices, where are network interfaces typically listed in the Linux filesystem?",
+
+    "image": null,
+
+    "options": [
+      "/dev/net",
+
+      "/sys/class/net",
+
+      "/etc/network/interfaces",
+
+      "/proc/net/dev",
+
+      "/var/run/net"
+    ],
+
+    "correct_answers": ["/sys/class/net"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 45 - struct net_device",
+
+    "question": "The 'struct net_device' can represent which of the following types of interfaces?",
+
+    "image": null,
+
+    "options": [
+      "Physical interfaces managed by a device driver",
+
+      "Virtual interfaces like VLANs",
+
+      "Software components like bridges",
+
+      "A hardware-only ASIC memory register",
+
+      "Logical conduits that pass altered packets"
+    ],
+
+    "correct_answers": [
+      "Physical interfaces managed by a device driver",
+
+      "Virtual interfaces like VLANs",
+
+      "Software components like bridges",
+
+      "Logical conduits that pass altered packets"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 57 - Network Namespaces",
+
+    "question": "Which of the following is true regarding Network Namespaces (netns)?",
+
+    "image": null,
+
+    "options": [
+      "They share the same global routing table.",
+
+      "They are used by containers for isolation.",
+
+      "Each namespace has its own set of ARP tables and memory pools.",
+
+      "Netdevs can easily pass traffic between namespaces without virtual pairs.",
+
+      "A loopback interface (lo) is created automatically in all netns."
+    ],
+
+    "correct_answers": [
+      "They are used by containers for isolation.",
+
+      "Each namespace has its own set of ARP tables and memory pools.",
+
+      "A loopback interface (lo) is created automatically in all netns."
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 62 - tun and tap interfaces",
+
+    "question": "Match the virtual interface type to its function.",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "Operates at the IP level (Layer 3)",
+
+      "Operates at the Ethernet level (Layer 2)",
+
+      "Accessed via /dev/net/tun to feed data from userspace",
+
+      "Used for userspace tunnel/VPN implementations"
+    ],
+
+    "pairs": {
+      "A": "tun mode",
+
+      "B": "tap mode",
+
+      "C": "Userspace interaction",
+
+      "D": "Common Use Case"
+    },
+
+    "correct_answers": {
+      "A": "Operates at the IP level (Layer 3)",
+
+      "B": "Operates at the Ethernet level (Layer 2)",
+
+      "C": "Accessed via /dev/net/tun to feed data from userspace",
+
+      "D": "Used for userspace tunnel/VPN implementations"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 86 - binding a socket",
+
+    "question": "When calling 'bind()', which family-specific structure is used to associate an IPv4 address and port with a socket?",
+
+    "image": null,
+
+    "options": [
+      "struct sockaddr",
+
+      "struct in_addr",
+
+      "struct sockaddr_in",
+
+      "struct socket_addr_v4",
+
+      "struct ifreq"
+    ],
+
+    "correct_answers": ["struct sockaddr_in"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 89 - Socket queues",
+
+    "question": "What happens to incoming network packets if a socket's receive queue is full?",
+
+    "image": null,
+
+    "options": [
+      "They are buffered in the CPU cache.",
+
+      "They are dropped.",
+
+      "The sender is automatically notified via a hardware interrupt.",
+
+      "They are redirected to the error queue.",
+
+      "The kernel increases the queue size automatically."
+    ],
+
+    "correct_answers": ["They are dropped."],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 91 - send() and recv()",
+
+    "question": "Which flag is used with 'recv()' to read a message from the queue without actually consuming it?",
+
+    "image": null,
+
+    "options": ["MSG_TRUNC", "MSG_DONTWAIT", "MSG_PEEK", "MSG_MORE", "MSG_OOB"],
+
+    "correct_answers": ["MSG_PEEK"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 97 - Timestamping",
+
+    "question": "Where are TX (transmit) timestamps made accessible to a userspace application?",
+
+    "image": null,
+
+    "options": [
+      "The standard socket receive queue",
+
+      "The socket's error queue",
+
+      "The /sys/class/net statistics file",
+
+      "The ancillary data of the write() syscall",
+
+      "A dedicated netlink notification"
+    ],
+
+    "correct_answers": ["The socket's error queue"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 99 - Sockets in the kernel",
+
+    "question": "In the kernel, which structure provides the internal representation of a socket used by the network stack to maintain queues and locks?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "struct file",
+
+      "struct socket",
+
+      "struct sock",
+
+      "struct proto_ops",
+
+      "struct sk_buff"
+    ],
+
+    "correct_answers": ["struct sock"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 104 - struct sk_buff (1)",
+
+    "question": "The 'struct sk_buff' object contains which of the following metadata?",
+
+    "image": null,
+
+    "options": [
+      "Origin/destination struct sock",
+
+      "Origin/destination struct net_device",
+
+      "The full application-layer character encoding",
+
+      "Arrival timestamp",
+
+      "Redirection flags"
+    ],
+
+    "correct_answers": [
+      "Origin/destination struct sock",
+
+      "Origin/destination struct net_device",
+
+      "Arrival timestamp",
+
+      "Redirection flags"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 135 - Netfilter hooks",
+
+    "question": "Match the Netfilter hook to the point in the packet's lifecycle where it triggers.",
+
+    "image": null,
+
+    "options": [
+      "Filter as soon as the packet is received",
+
+      "Filter before taking a routing decision",
+
+      "Filter packets forwarded to the outside",
+
+      "Filter all outgoing packets after routing"
+    ],
+
+    "pairs": {
+      "A": "ingress",
+
+      "B": "pre-routing",
+
+      "C": "forward",
+
+      "D": "post-routing"
+    },
+
+    "correct_answers": {
+      "A": "Filter as soon as the packet is received",
+
+      "B": "Filter before taking a routing decision",
+
+      "C": "Filter packets forwarded to the outside",
+
+      "D": "Filter all outgoing packets after routing"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "TEST 1",
+
+    "source": "Slide 144 - Traffic flows",
+
+    "question": "What parameters typically define a Layer 4 (N-tuple) flow for classification purposes?",
+
+    "image": null,
+
+    "options": [
+      "Source and Destination IP addresses",
+
+      "Source and Destination MAC addresses",
+
+      "Source and Destination Ports",
+
+      "The CPU core index",
+
+      "The VLAN ID (if applicable)"
+    ],
+
+    "correct_answers": [
+      "Source and Destination IP addresses",
+
+      "Source and Destination Ports",
+
+      "The VLAN ID (if applicable)"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  }
+]

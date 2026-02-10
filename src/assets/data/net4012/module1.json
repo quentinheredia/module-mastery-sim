@@ -88,7 +88,7 @@
 
     "correct_answers": ["At least 5,000 servers and 10,000 square feet"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -112,7 +112,7 @@
 
     "correct_answers": ["China Telecom Data Center"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -136,7 +136,7 @@
 
     "correct_answers": ["Servers (CPU, memory, disk)"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -198,7 +198,7 @@
       "40% of all operating costs come from energy consumption."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -282,7 +282,7 @@
 
     "correct_answers": ["60%"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   }
