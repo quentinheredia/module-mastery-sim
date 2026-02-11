@@ -11,7 +11,7 @@
       "d) all of the above"
     ],
     "correct_answers": ["d) all of the above"],
-    "question_type": "single choice",
+    "question_type": "single_choice",
     "points": 1
   },
   {
@@ -28,7 +28,7 @@
     "correct_answers": [
       "a) you can ask cooperating ISPs to filer that source IP upstream"
     ],
-    "question_type": "single choice",
+    "question_type": "single_choice",
     "points": 1
   },
   {
@@ -43,7 +43,7 @@
       "d) easier to expand"
     ],
     "correct_answers": ["c) more convenience"],
-    "question_type": "single choice",
+    "question_type": "single_choice",
     "points": 1
   },
   {
@@ -58,7 +58,7 @@
       "d) ordered delivery of packets"
     ],
     "correct_answers": ["c) server authentication"],
-    "question_type": "single choice",
+    "question_type": "single_choice",
     "points": 1
   }
 ]
