@@ -7,11 +7,12 @@ import { QuestionCard } from "@/components/quiz/QuestionCard";
 import { ProgressBar } from "@/components/quiz/ProgressBar";
 import { Header } from "@/components/layout/Header";
 import { courseColorClasses } from "@/components/layout/CourseSelector";
-import { ArrowLeft, ArrowRight, Home, RotateCcw, BookOpen, Layers, Eye, Keyboard, Filter } from "lucide-react";
+import { ArrowLeft, ArrowRight, Home, RotateCcw, BookOpen, Layers, Eye, Keyboard, Filter, Search } from "lucide-react";
 import { getAvailableModules, loadQuestions, shuffleArray, checkAnswer } from "@/utils/questionLoader";
 import { Question, UserAnswer, MatchingPairs, CourseColor } from "@/types/quiz";
 import { useCourse } from "@/contexts/CourseContext";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 
 type QuestionTypeFilter = "all" | "matching" | "multiple_answer" | "multiple_choice";
 
@@ -20,6 +21,7 @@ const Practice = () => {
   const { activeCourse } = useCourse();
   const [selectedModule, setSelectedModule] = useState<string>("all");
   const [selectedQuestionType, setSelectedQuestionType] = useState<QuestionTypeFilter>("all");
+  const [searchQuery, setSearchQuery] = useState("");
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
@@ -33,11 +35,11 @@ const Practice = () => {
 
   useEffect(() => {
     if (isStarted && activeCourse) {
-      loadQuestionsForModule(selectedModule, selectedQuestionType);
+      loadQuestionsForModule(selectedModule, selectedQuestionType, searchQuery);
     }
-  }, [selectedModule, selectedQuestionType, isStarted, activeCourse]);
+  }, [selectedModule, selectedQuestionType, searchQuery, isStarted, activeCourse]);
 
-  const loadQuestionsForModule = (module: string, questionType: QuestionTypeFilter) => {
+  const loadQuestionsForModule = (module: string, questionType: QuestionTypeFilter, search: string = "") => {
     let allQuestions = loadQuestions(courseId);
     
     // Filter by module
@@ -48,6 +50,17 @@ const Practice = () => {
     // Filter by question type (only for NET4005)
     if (isNet4005 && questionType !== "all") {
       filtered = filtered.filter(q => q.question_type === questionType);
+    }
+
+    // Filter by search query
+    if (search.trim()) {
+      const lowerSearch = search.toLowerCase().trim();
+      filtered = filtered.filter(q => {
+        const questionText = q.question.toLowerCase();
+        const optionsText = q.options?.map(o => o.toLowerCase()).join(" ") || "";
+        const explanationText = (q.explanation || "").toLowerCase();
+        return questionText.includes(lowerSearch) || optionsText.includes(lowerSearch) || explanationText.includes(lowerSearch);
+      });
     }
     
     const shuffled = shuffleArray(filtered);
@@ -63,7 +76,27 @@ const Practice = () => {
 
   const handleStart = () => {
     setIsStarted(true);
-    loadQuestionsForModule(selectedModule, selectedQuestionType);
+    loadQuestionsForModule(selectedModule, selectedQuestionType, searchQuery);
+  };
+
+  const getSearchResultCount = () => {
+    let allQuestions = loadQuestions(courseId);
+    let filtered = selectedModule === "all" 
+      ? allQuestions 
+      : allQuestions.filter(q => q.module === selectedModule);
+    if (isNet4005 && selectedQuestionType !== "all") {
+      filtered = filtered.filter(q => q.question_type === selectedQuestionType);
+    }
+    if (searchQuery.trim()) {
+      const lowerSearch = searchQuery.toLowerCase().trim();
+      filtered = filtered.filter(q => {
+        const questionText = q.question.toLowerCase();
+        const optionsText = q.options?.map(o => o.toLowerCase()).join(" ") || "";
+        const explanationText = (q.explanation || "").toLowerCase();
+        return questionText.includes(lowerSearch) || optionsText.includes(lowerSearch) || explanationText.includes(lowerSearch);
+      });
+    }
+    return filtered.length;
   };
 
   const getQuestionTypeCount = (type: QuestionTypeFilter) => {
@@ -253,13 +286,36 @@ const Practice = () => {
                   </div>
                 )}
 
+                {/* Search Filter */}
+                <div>
+                  <label className="text-sm font-medium mb-2 flex items-center gap-2">
+                    <Search className="h-4 w-4" />
+                    Search Questions
+                  </label>
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Filter by keyword (e.g. SSH, firewall, OSPF...)"
+                      className="h-12 pl-10 rounded-xl border-border/50 bg-background/50"
+                    />
+                  </div>
+                  {searchQuery.trim() && (
+                    <p className="text-xs text-muted-foreground mt-1.5">
+                      {getSearchResultCount()} question{getSearchResultCount() !== 1 ? 's' : ''} found
+                    </p>
+                  )}
+                </div>
+
                 <Button 
                   size="lg" 
                   className={`w-full ${courseColors.dot} text-white border-transparent hover:opacity-90 shadow-elevation-sm transition-all duration-300`}
                   onClick={handleStart}
+                  disabled={searchQuery.trim() !== "" && getSearchResultCount() === 0}
                 >
                   <BookOpen className="mr-2 h-5 w-5" />
-                  Start Practice Session
+                  Start Practice Session{searchQuery.trim() ? ` (${getSearchResultCount()})` : ''}
                 </Button>
               </div>
             </Card>
