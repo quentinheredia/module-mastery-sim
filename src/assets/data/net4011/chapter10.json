@@ -1324,5 +1324,139 @@
     "question_type": "single_choice",
 
     "points": 1
+  },
+  {
+    "module": "NET4011 - Chapter 10",
+    "source": "Page 12-19 - SSH and VPN Tunnels",
+    "question": "Match the following characteristics and protocols to whether they are primarily associated with SSH (Secure Shell) or a VPN (Virtual Private Network) Tunnel.",
+    "image": null,
+    "options": ["SSH (Secure Shell)", "VPN (Virtual Private Network) Tunnel"],
+    "pairs": {
+      "A": "Often used to bridge physically distant private networks across a public channel[cite: 847, 1305, 1306].",
+      "B": "A lightweight technology that provides an encrypted tunnel to access a remote shell or specific programs[cite: 1118, 1283].",
+      "C": "Can operate in 'Transport mode' (host-to-host) or 'Tunnel mode' (network-to-network)[cite: 1302, 1303, 1414].",
+      "D": "Typically uses port 22 and provides secure alternatives to 'r-utilities' like rlogin and rcp[cite: 1121, 1127, 1264, 1266].",
+      "E": "Often implemented using the IPsec protocol suite at the network layer[cite: 1283, 1353, 1354].",
+      "F": "Employs a connection protocol that multiplexes multiple logical channels over a single encrypted connection[cite: 1149, 1151, 1152]."
+    },
+    "correct_answers": {
+      "A": "VPN (Virtual Private Network) Tunnel",
+      "B": "SSH (Secure Shell)",
+      "C": "VPN (Virtual Private Network) Tunnel",
+      "D": "SSH (Secure Shell)",
+      "E": "VPN (Virtual Private Network) Tunnel",
+      "F": "SSH (Secure Shell)"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 19, 21-22 - IPsec Modes",
+
+    "question": "Match the following characteristics and structural details to the correct IPsec operation mode.",
+
+    "image": null,
+
+    "options": ["Transport Mode", "Tunnel Mode"],
+
+    "pairs": {
+      "A": "Provides end-to-end security where VPN endpoints are the final destination.",
+      "B": "The entire original IP datagram (including the original header) is encapsulated as the IPsec payload.",
+      "C": "Used primarily for network-to-network or host-to-network VPN architectures.",
+      "D": "The IPsec header is inserted between the original IP header and the original payload.",
+      "E": "Requires a new (outer) IP header for routing between security gateways.",
+      "F": "Endpoints are typically security gateways; packets are unprotected once they leave the gateway for the internal network."
+    },
+
+    "correct_answers": {
+      "A": "Transport Mode",
+
+      "B": "Tunnel Mode",
+
+      "C": "Tunnel Mode",
+
+      "D": "Transport Mode",
+
+      "E": "Tunnel Mode",
+
+      "F": "Tunnel Mode"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 19, 22 - VPN Architectures",
+
+    "question": "Match the VPN architecture to its corresponding IPsec mode and use case.",
+
+    "image": null,
+
+    "options": [
+      "Transport Mode - Host-to-host",
+
+      "Tunnel Mode - Network-to-network",
+
+      "Tunnel Mode - Host-to-network"
+    ],
+
+    "pairs": {
+      "A": "Bridge private networks across a public channel using security gateways.",
+      "B": "Provides end-to-end security between two final destination hosts.",
+      "C": "Allows a remote employee to access the enterprise network as if physically local.",
+      "D": "Uses an 'in-host gateway' to add or remove VPN security at the remote end."
+    },
+
+    "correct_answers": {
+      "A": "Tunnel Mode - Network-to-network",
+
+      "B": "Transport Mode - Host-to-host",
+
+      "C": "Tunnel Mode - Host-to-network",
+
+      "D": "Tunnel Mode - Host-to-network"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 21-22 - IPsec Headers",
+
+    "question": "Which of the following statements regarding the structural differences between IPsec modes are correct?",
+
+    "image": null,
+
+    "options": [
+      "In Transport mode, the original IP header is moved to become the inner header.",
+      "In Tunnel mode, a new outer IP header is added to the packet.",
+      "In Transport mode, only the original payload is encrypted when using ESP.",
+      "Tunnel mode encapsulates the entire original IP datagram, making it an 'IP-in-IP' tunnel.",
+      "Transport mode cannot be used if one endpoint is a network gateway because no second-stage delivery address remains."
+    ],
+
+    "correct_answers": [
+      "In Tunnel mode, a new outer IP header is added to the packet",
+
+      "In Transport mode, only the original payload is encrypted when using ESP",
+
+      "Tunnel mode encapsulates the entire original IP datagram, making it an 'IP-in-IP' tunnel",
+
+      "Transport mode cannot be used if one endpoint is a network gateway because no second-stage delivery address remains"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
   }
 ]
