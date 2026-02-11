@@ -44,7 +44,7 @@
 
     "correct_answers": ["REJECT"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -70,7 +70,7 @@
 
     "correct_answers": ["src_addr, src_port, dst_addr, dst_port, protocol"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -98,7 +98,7 @@
       "Stateless filters process each packet independently; stateful filters track connection details to process later packets."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -124,7 +124,7 @@
 
     "correct_answers": ["Safe Defaults"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -230,7 +230,7 @@
 
     "correct_answers": ["Circuit-level proxy"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -258,7 +258,7 @@
       "It leverages detailed understanding of specific protocols to examine and possibly alter application data."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -284,7 +284,7 @@
 
     "correct_answers": ["Network DMZ (Demilitarized Zone)"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -312,7 +312,7 @@
       "An encrypted tunnel to reach a shell or other programs"
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -338,7 +338,7 @@
 
     "correct_answers": ["Connection protocol"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -366,7 +366,7 @@
       "By cross-checking the fingerprint of the host key through an independent channel"
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -394,7 +394,7 @@
       "It tells the local ssh client to listen for data on a specific local port and send it through the tunnel."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -452,7 +452,7 @@
 
     "correct_answers": ["Transport mode"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -480,7 +480,7 @@
       "To provide network-layer security services inherited by all transport and application layer protocols."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -536,7 +536,7 @@
 
     "correct_answers": ["True"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -554,7 +554,7 @@
 
     "correct_answers": ["TCP"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -571,7 +571,7 @@
 
     "correct_answers": ["Inbound"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -599,7 +599,7 @@
       "Traffic cannot bypass the firewall in either direction."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -617,7 +617,7 @@
 
     "correct_answers": ["DROP"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -645,7 +645,7 @@
       "The action specified by the first rule whose condition it satisfies."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -673,7 +673,7 @@
       "To ensure the packet is part of an established connection and stop unsolicited inbound packets."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -701,7 +701,7 @@
       "To implement a 'default deny' policy for any packet matching no other rules."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -719,7 +719,7 @@
 
     "correct_answers": ["Chokepoint"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -747,7 +747,7 @@
       "Wireless access points bypassing enterprise management."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -775,7 +775,7 @@
       "The client sends a command that makes the server open a connection back to the client."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -803,7 +803,7 @@
       "Inconvenient prompts often provide insufficient details for users to make informed choices."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -847,7 +847,7 @@
 
     "correct_answers": ["The firewall proxy"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -913,7 +913,7 @@
       "Two distinct network interfaces and two network addresses."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -941,7 +941,7 @@
       "Exposed to a hostile network and specifically hardened against attack."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -985,7 +985,7 @@
 
     "correct_answers": ["Transport layer protocol"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1011,7 +1011,7 @@
 
     "correct_answers": ["It forks an SSH child process on the local host."],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1039,7 +1039,7 @@
       "It was free and conveniently located between the ports for FTP (21) and Telnet (23)."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1057,7 +1057,7 @@
 
     "correct_answers": ["The Morris worm"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1085,7 +1085,7 @@
       "Encapsulating one protocol (the inner) within another protocol (the outer)."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1113,7 +1113,7 @@
       "Historical private networks used costly exclusive-access leased lines, while VPNs use shared public links secured by cryptography."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1141,7 +1141,7 @@
       "It prevents effective content-based filtering because patterns in the data cannot be detected."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1169,7 +1169,7 @@
       "The shared state (agreed algorithms, keys) between endpoints for one communication direction."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1195,7 +1195,7 @@
 
     "correct_answers": ["AH (Authentication Header)"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1221,7 +1221,7 @@
 
     "correct_answers": ["In the ESP trailer"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1277,7 +1277,7 @@
 
     "correct_answers": ["128 bits"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1295,7 +1295,7 @@
 
     "correct_answers": ["SYN=1, ACK=1"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1321,7 +1321,7 @@
 
     "correct_answers": ["Type 8 (Echo Request)"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   }
