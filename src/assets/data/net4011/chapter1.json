@@ -661,5 +661,733 @@
     "question_type": "single choice",
 
     "points": 1
+  },
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 2 - 1.1 Fundamental goals of computer security",
+
+    "question": "Which of the following are included in the text's definition of 'computer' for the purposes of security analysis?",
+
+    "image": null,
+
+    "options": [
+      "Personal computers and laptops ",
+      "Mobile devices such as tablets and smartphones ",
+      "Network devices like firewalls, routers, and switches ",
+      "Back-end servers containing databases ",
+      "All of the above "
+    ],
+
+    "correct_answers": ["All of the above "],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 3 - 1) confidentiality",
+
+    "question": "Confidentiality applies to non-public information in which states?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "Only while stored on a hard drive (at rest) ",
+      "Only while being transmitted over a network (in transit) ",
+      "Both at rest and in transit ",
+      "Only when encrypted by a third party "
+    ],
+
+    "correct_answers": ["Both at rest and in transit "],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 3 - 2) integrity",
+
+    "question": "Which technical mechanisms are specifically mentioned as ways to combat malicious integrity violations?",
+
+    "image": null,
+
+    "options": [
+      "Access controls ",
+      "Cryptographic checksums ",
+      "Error correction codes ",
+      "Both access controls and cryptographic checksums "
+    ],
+
+    "correct_answers": ["Both access controls and cryptographic checksums "],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 3 - 4) availability",
+
+    "question": "Beyond hardware and software reliability, what does the goal of 'availability' require protection from?",
+
+    "image": null,
+
+    "options": [
+      "Intentional deletion and disruption ",
+      "Denial of service (DoS) attacks ",
+      "Procedural storage errors ",
+      "Both intentional disruption and denial of service attacks "
+    ],
+
+    "correct_answers": [
+      "Both intentional disruption and denial of service attacks "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 3 - 1.1. Fundamental goals of computer security",
+
+    "question": "In the context of security, what is a 'principal'?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "The primary security officer of a corporation ",
+      "Agents representing users, communicating entities, or system processes ",
+      "The main server in a network topology ",
+      "A set of rules defined in a security policy "
+    ],
+
+    "correct_answers": [
+      "Agents representing users, communicating entities, or system processes "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 4 - 5) authentication",
+
+    "question": "What is the specific difference between 'entity authentication' and 'data origin authentication'?",
+
+    "image": null,
+
+    "options": [
+      "Entity authentication verifies the identity of a principal in a transaction; data origin authentication verifies the source of data ",
+      "Entity authentication involves hardware; data origin authentication involves software ",
+      "Data origin authentication implies confidentiality; entity authentication does not ",
+      "There is no difference; they are two names for the same process "
+    ],
+
+    "correct_answers": [
+      "Entity authentication verifies the identity of a principal in a transaction; data origin authentication verifies the source of data "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 4 - CONFIDENTIALITY VS. PRIVACY",
+
+    "question": "Which of the following best describes 'anonymity' as defined in the text?",
+
+    "image": null,
+
+    "options": [
+      "The protection of personally sensitive information ",
+      "The property that one's actions or involvement are not linkable to a public identity ",
+      "The use of encryption to hide message contents ",
+      "The ability to deny having taken an action "
+    ],
+
+    "correct_answers": [
+      "The property that one's actions or involvement are not linkable to a public identity "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 5 - THEORY, PRACTICE",
+
+    "question": "In theoretical terms, a security policy defines each possible system state as either:",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "Online or Offline ",
+      "Authorized (secure) or Unauthorized (non-secure) ",
+      "Encrypted or Cleartext ",
+      "Trusted or Trustworthy "
+    ],
+
+    "correct_answers": ["Authorized (secure) or Unauthorized (non-secure) "],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 5 - THREAT",
+
+    "question": "A 'credible threat' is characterized by having both:",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "A vulnerability and an exploit ",
+      "Capable means and intentions ",
+      "A target and a motive ",
+      "A virus and a network path "
+    ],
+
+    "correct_answers": ["Capable means and intentions "],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 6 - 1.3 Risk, risk assessment, and modeling expected losses",
+
+    "question": "Why is 'qualitative' risk assessment often used instead of 'quantitative' assessment?",
+
+    "image": null,
+
+    "options": [
+      "Precise numerical estimates are rarely possible in practice ",
+      "Qualitative assessment is more complex and thorough ",
+      "Quantitative assessment is only for physical security ",
+      "Most organizations do not care about numerical losses "
+    ],
+
+    "correct_answers": [
+      "Precise numerical estimates are rarely possible in practice "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 7 - ESTIMATING UNKNOWNS",
+
+    "question": "According to the text, the overall risk R for a category of assets is computed by:",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "Multiplying the highest threat by the highest vulnerability ",
+      "Summing across combinations of threats and vulnerabilities ",
+      "Subtracting the cost of defense from the asset value ",
+      "Averaging the probability of all recorded incidents "
+    ],
+
+    "correct_answers": [
+      "Summing across combinations of threats and vulnerabilities "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 8 - RISK ASSESSMENT CHALLENGES",
+
+    "question": "Which of the following is a barrier to accurate quantitative risk assessment for computer security?",
+
+    "image": null,
+
+    "options": [
+      "Incomplete knowledge of vulnerabilities ",
+      "Difficulty in quantifying intangible assets like reputation ",
+      "The evolving motivation and capabilities of human attackers ",
+      "All of the above "
+    ],
+
+    "correct_answers": ["All of the above "],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 11 - SECURITY ANALYSIS",
+
+    "question": "When should security analysis ideally begin in a product's lifecycle?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "During the deployment phase ",
+      "Early in the product's lifecycle, in parallel with design ",
+      "Only after the first vulnerability is reported ",
+      "After the final testing phase is complete "
+    ],
+
+    "correct_answers": [
+      "Early in the product's lifecycle, in parallel with design "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 12 - 1.5.1 Diagram-driven threat modeling",
+
+    "question": "In diagram-driven threat modeling, what is the purpose of drawing 'trust domains'?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "To identify areas with different trust assumptions and expectations ",
+      "To show the physical location of servers ",
+      "To list all authorized users by name ",
+      "To illustrate the speed of data flow "
+    ],
+
+    "correct_answers": [
+      "To identify areas with different trust assumptions and expectations "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 13 - 1.5.2 Attack trees for threat modeling",
+
+    "question": "In an attack tree, what does an 'AND' node signify?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "That any one of the children nodes can achieve the goal ",
+      "That all children nodes are jointly necessary to meet the parent goal ",
+      "That the attack path is currently infeasible ",
+      "That the attack requires a specific type of malware "
+    ],
+
+    "correct_answers": [
+      "That all children nodes are jointly necessary to meet the parent goal "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 14 - 1.5.2 Attack trees for threat modeling",
+
+    "question": "Which of the following is true regarding the 'asymmetry' between attackers and defenders?",
+
+    "image": null,
+
+    "options": [
+      "Attackers must defend all nodes, while defenders only need one path ",
+      "An attacker needs only find one way to break in, while the defender must defend against all viable attacks ",
+      "Attackers have larger budgets than defenders ",
+      "Defenders use automated tools while attackers always work manually "
+    ],
+
+    "correct_answers": [
+      "An attacker needs only find one way to break in, while the defender must defend against all viable attacks "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 15 - ATTACK/THREAT CHECKLISTS",
+
+    "question": "What is a major disadvantage of using pre-constructed fixed attack checklists?",
+
+    "image": null,
+
+    "options": [
+      "They are too short to be useful ",
+      "They do not take into account unique details and assumptions of a specific target system ",
+      "They are only available for government agencies ",
+      "They require too much creative thinking from the analyst "
+    ],
+
+    "correct_answers": [
+      "They do not take into account unique details and assumptions of a specific target system "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 17 - 1.6.1 Threat modeling and model-reality gaps",
+
+    "question": "The 'Phishing one-time passwords' example shows that a security scheme can be defeated by:",
+
+    "image": null,
+
+    "options": [
+      "Brute-forcing the one-time password ",
+      "Tricking users into visiting a fraudulent site and entering multiple passwords ",
+      "Physically stealing the password list from the user's home ",
+      "Hacking the bank's central database "
+    ],
+
+    "correct_answers": [
+      "Tricking users into visiting a fraudulent site and entering multiple passwords "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 18 - ITERATIVE PROCESS: EVOLVING THREAT MODELS",
+
+    "question": "What are the two core assumptions of the original Internet threat model?",
+
+    "image": null,
+
+    "options": [
+      "Endpoints are trustworthy, and the communications link is unsecured ",
+      "All users are authenticated, and data is always encrypted ",
+      "Firewalls are impenetrable, and passwords are long ",
+      "Attackers are outside the network, and servers are physical "
+    ],
+
+    "correct_answers": [
+      "Endpoints are trustworthy, and the communications link is unsecured "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 21 - P2 SAFE-DEFAULTS",
+
+    "question": "According to principle P2 (Safe-Defaults), access control should be configured as:",
+
+    "image": null,
+
+    "options": [
+      "Allow-by-default ",
+      "Deny-by-default ",
+      "Optional-by-default ",
+      "Password-required-by-default "
+    ],
+
+    "correct_answers": ["Deny-by-default "],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 21 - P4 COMPLETE-MEDIATION",
+
+    "question": "What does 'Complete-Mediation' (P4) require for every access to an object?",
+
+    "image": null,
+
+    "options": [
+      "Encryption of the request ",
+      "Verification of proper authority immediately before access is granted ",
+      "Logging the request in an audit trail ",
+      "Approval by a human administrator "
+    ],
+
+    "correct_answers": [
+      "Verification of proper authority immediately before access is granted "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 21 - P5 ISOLATED-COMPARTMENTS",
+
+    "question": "What is the primary goal of the 'Isolated-Compartments' (P5) principle?",
+
+    "image": null,
+
+    "options": [
+      "To make the system faster ",
+      "To limit damage when failures occur and protect against escalation of privileges ",
+      "To ensure users can work from home ",
+      "To eliminate the need for passwords "
+    ],
+
+    "correct_answers": [
+      "To limit damage when failures occur and protect against escalation of privileges "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 22 - P9 TIME-TESTED-TOOLS",
+
+    "question": "Why is it discouraged for amateurs to design their own security tools (P9)?",
+
+    "image": null,
+
+    "options": [
+      "It is too expensive ",
+      "Security design and implementation is difficult to get right even for experts ",
+      "Government regulations prohibit it ",
+      "It makes the software too large "
+    ],
+
+    "correct_answers": [
+      "Security design and implementation is difficult to get right even for experts "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 22 - P10 LEAST-SURPRISE",
+
+    "question": "The 'Least-Surprise' principle (P10) aims to align designs with:",
+
+    "image": null,
+
+    "options": [
+      "The latest industry trends ",
+      "Users' mental models of their protection goals ",
+      "The highest possible level of encryption ",
+      "The organization's financial budget "
+    ],
+
+    "correct_answers": ["Users' mental models of their protection goals "],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 23 - P15 DATATYPE-VALIDATION",
+
+    "question": "According to P15, input sanitization is used to address which types of attacks?",
+
+    "image": null,
+
+    "options": [
+      "Denial of Service (DoS) ",
+      "Code injection and command injection ",
+      "Phishing and social engineering ",
+      "Hardware keylogging "
+    ],
+
+    "correct_answers": ["Code injection and command injection "],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 23 - P16 REMNANT-REMOVAL",
+
+    "question": "What is the difference between common file deletion and 'secure deletion' (P16)?",
+
+    "image": null,
+
+    "options": [
+      "Secure deletion only works on cloud storage ",
+      "Common deletion removes directory entries, while secure deletion makes content unrecoverable even by forensic tools ",
+      "Common deletion is faster; secure deletion is cheaper ",
+      "There is no difference between the two "
+    ],
+
+    "correct_answers": [
+      "Common deletion removes directory entries, while secure deletion makes content unrecoverable even by forensic tools "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 24 - P20 RELUCTANT-ALLOCATION",
+
+    "question": "The 'Reluctant-Allocation' principle (P20) primarily aims to avoid which type of attack?",
+
+    "image": null,
+
+    "options": [
+      "Spoofing ",
+      "Denial of Service (DoS) ",
+      "Privilege escalation ",
+      "Information disclosure "
+    ],
+
+    "correct_answers": ["Denial of Service (DoS) "],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 24 - HP1 SECURITY-BY-DESIGN",
+
+    "question": "Why is 'Security-by-Design' (HP1) preferred over retro-fitting security as an add-on?",
+
+    "image": "/images/quizzes/4012_1/",
+
+    "options": [
+      "Add-on security is cheaper ",
+      "Secure design often requires core architectural support that is absent if added later ",
+      "Retro-fitting is impossible in modern hardware ",
+      "Add-on features are always blocked by firewalls "
+    ],
+
+    "correct_answers": [
+      "Secure design often requires core architectural support that is absent if added later "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 24 - HP2 DESIGN-FOR-EVOLUTION",
+
+    "question": "What does 'algorithm agility' refer to in the context of HP2?",
+
+    "image": null,
+
+    "options": [
+      "The speed at which an algorithm can encrypt data ",
+      "Graceful upgrades of crypto algorithms with minimal impact on related components ",
+      "The ability of an algorithm to detect malware ",
+      "Using multiple different algorithms for the same task "
+    ],
+
+    "correct_answers": [
+      "Graceful upgrades of crypto algorithms with minimal impact on related components "
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 1",
+
+    "source": "Page 24 - VERIFY FIRST",
+
+    "question": "What is the computer security version of the 'trust but verify' maxim?",
+
+    "image": null,
+
+    "options": [
+      "Trust and then verify ",
+      "Verify first (before trusting) ",
+      "Never trust, never verify ",
+      "Verify only if an attack occurs "
+    ],
+
+    "correct_answers": ["Verify first (before trusting) "],
+
+    "question_type": "single choice",
+
+    "points": 1
   }
 ]

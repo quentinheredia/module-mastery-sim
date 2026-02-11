@@ -557,5 +557,772 @@
     "question_type": "single choice",
 
     "points": 1
+  },
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 3 - 10.1 Packet-filter firewalls",
+
+    "question": "In the basic network firewall model shown in Figure 10.1, packets arriving at the internal network from the Internet are classified as:",
+
+    "image": "/images/quizzes/4011_1/",
+
+    "options": ["Inbound", "Outbound", "Extruded", "Filtered"],
+
+    "correct_answers": ["Inbound"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 3 - 10.1 Packet-filter firewalls",
+
+    "question": "According to the principle of COMPLETE-MEDIATION (P4), the design intent of a firewall is that:",
+
+    "image": null,
+
+    "options": [
+      "Traffic can bypass the firewall in the outbound direction only.",
+
+      "Traffic cannot bypass the firewall in either direction.",
+
+      "Internal users are automatically trusted and not mediated.",
+
+      "The firewall only mediates inbound traffic."
+    ],
+
+    "correct_answers": [
+      "Traffic cannot bypass the firewall in either direction."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 3 - Packet-filter rules and actions",
+
+    "question": "Which firewall action silently discards a packet without informing the source?",
+
+    "image": null,
+
+    "options": ["ALLOW", "DROP", "REJECT", "LOG"],
+
+    "correct_answers": ["DROP"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 3 - Packet-filter rules and actions",
+
+    "question": "In a 'first-matching rule' firewall, what action is taken if a packet satisfies the conditions of multiple rules?",
+
+    "image": null,
+
+    "options": [
+      "The action of the rule with the highest priority number.",
+
+      "The action specified by the first rule whose condition it satisfies.",
+
+      "The action of the last rule in the list.",
+
+      "The packet is dropped by default to be safe."
+    ],
+
+    "correct_answers": [
+      "The action specified by the first rule whose condition it satisfies."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 4 - Example (Packet-filtering rules)",
+
+    "question": "In Table 10.1, why do rules 8 and 9 check for the presence of the ACK flag to allow inbound HTTP responses?",
+
+    "image": null,
+
+    "options": [
+      "To ensure the packet is part of an established connection and stop unsolicited inbound packets.",
+
+      "To verify that the packet payload is encrypted.",
+
+      "To bypass the need for IP address verification.",
+
+      "To speed up the processing of DNS queries."
+    ],
+
+    "correct_answers": [
+      "To ensure the packet is part of an established connection and stop unsolicited inbound packets."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 5 - Table 10.1",
+
+    "question": "In the provided packet-filtering rule examples (Table 10.1), what is the function of 'Rule Z'?",
+
+    "image": null,
+
+    "options": [
+      "To allow all traffic that was not explicitly denied.",
+
+      "To implement a 'default deny' policy for any packet matching no other rules.",
+
+      "To log every packet that passes through the firewall.",
+
+      "To synchronize internal clocks with a global time server."
+    ],
+
+    "correct_answers": [
+      "To implement a 'default deny' policy for any packet matching no other rules."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 5 - Firewalls as Chokepoints",
+
+    "question": "The concept of forcing all network traffic through a single narrow passageway for monitoring and control is known as a:",
+
+    "image": null,
+
+    "options": ["Chokepoint", "Switch", "Backbone", "Vulnerability"],
+
+    "correct_answers": ["Chokepoint"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 6 - Limitations",
+
+    "question": "Which of the following is an example of a topological limitation of firewalls mentioned in the text?",
+
+    "image": null,
+
+    "options": [
+      "Wireless access points bypassing enterprise management.",
+
+      "The use of high-speed fiber optic cables.",
+
+      "The transition from IPv4 to IPv6.",
+
+      "The lack of memory in modern routers."
+    ],
+
+    "correct_answers": [
+      "Wireless access points bypassing enterprise management."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 6 - Example (FTP normal mode)",
+
+    "question": "Why does 'normal mode' FTP violate the standard firewall rule of refusing externally originated TCP connections?",
+
+    "image": null,
+
+    "options": [
+      "The client sends a command that makes the server open a connection back to the client.",
+
+      "The server requires the client to use port 80.",
+
+      "FTP does not use IP addresses for routing.",
+
+      "The server uses UDP for data transfer instead of TCP."
+    ],
+
+    "correct_answers": [
+      "The client sends a command that makes the server open a connection back to the client."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 7 - Personal and Distributed Firewalls",
+
+    "question": "What is a major disadvantage of the 'user prompt' approach in personal firewalls?",
+
+    "image": null,
+
+    "options": [
+      "It makes the system vulnerable to hardware failure.",
+
+      "Inconvenient prompts often provide insufficient details for users to make informed choices.",
+
+      "It requires a constant connection to a central server.",
+
+      "It only works for inbound traffic, not outbound."
+    ],
+
+    "correct_answers": [
+      "Inconvenient prompts often provide insufficient details for users to make informed choices."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 8 - Proxy Firewall Requirements",
+
+    "question": "Which two properties are critical for firewall proxies to be effective and user-friendly?",
+
+    "image": null,
+
+    "options": ["Transparency", "Performance", "Complexity", "Anonymity"],
+
+    "correct_answers": ["Transparency", "Performance"],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 9 - Circuit-level proxy firewall",
+
+    "question": "In the circuit-level proxy model (Figure 10.2), what does the external server see as the originator of the connection?",
+
+    "image": "/images/quizzes/4011_1/",
+
+    "options": [
+      "The internal end-user client",
+
+      "The firewall proxy",
+
+      "The enterprise DNS server",
+
+      "A random IP address from the pool"
+    ],
+
+    "correct_answers": ["The firewall proxy"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 9 - Firewall proxy with proxy-aware clients",
+
+    "question": "Match the component of the early 1990s circuit-level proxy solution to its description.",
+
+    "image": null,
+
+    "options": [
+      "The proxy server daemon running on the gateway.",
+
+      "The network protocol used between the client and daemon.",
+
+      "The library used to modify client applications to be proxy-aware."
+    ],
+
+    "pairs": {
+      "A": "sockd",
+
+      "B": "SOCKS",
+
+      "C": "SOCKS library"
+    },
+
+    "correct_answers": {
+      "A": "The proxy server daemon running on the gateway.",
+
+      "B": "The network protocol used between the client and daemon.",
+
+      "C": "The library used to modify client applications to be proxy-aware."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 11 - Bastion Hosts and Dual-Homed Hosts",
+
+    "question": "A dual-homed host is defined as a computer that has:",
+
+    "image": null,
+
+    "options": [
+      "One network interface and two IP addresses.",
+
+      "Two distinct network interfaces and two network addresses.",
+
+      "Two processors and one network interface.",
+
+      "A backup battery and two power supplies."
+    ],
+
+    "correct_answers": [
+      "Two distinct network interfaces and two network addresses."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 11 - Bastion Hosts and Dual-Homed Hosts",
+
+    "question": "According to the medieval castle analogy, a 'bastion host' is a host that is:",
+
+    "image": null,
+
+    "options": [
+      "Hidden deep within the internal network.",
+
+      "Exposed to a hostile network and specifically hardened against attack.",
+
+      "Used only for storing unencrypted backups.",
+
+      "Disconnected from all networks for safety."
+    ],
+
+    "correct_answers": [
+      "Exposed to a hostile network and specifically hardened against attack."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 13 - Table 10.2",
+
+    "question": "Which of the following were historical 'Berkeley r-utilities' that SSH was designed to replace?",
+
+    "image": null,
+
+    "options": ["rsh", "rlogin", "rcp", "http"],
+
+    "correct_answers": ["rsh", "rlogin", "rcp"],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 13 - Three Protocols Composing SSH",
+
+    "question": "Which part of the SSH implementation is responsible for negotiating cryptographic parameters and keys?",
+
+    "image": null,
+
+    "options": [
+      "Transport layer protocol",
+
+      "User authentication protocol",
+
+      "Connection protocol",
+
+      "Application layer"
+    ],
+
+    "correct_answers": ["Transport layer protocol"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 16 - How SCP Works",
+
+    "question": "When using SCP to transfer a file, what action does the local SCP client software take first?",
+
+    "image": "/images/quizzes/4011_1/",
+
+    "options": [
+      "It sends the file via cleartext UDP.",
+
+      "It forks an SSH child process on the local host.",
+
+      "It requests a Kerberos ticket.",
+
+      "It broadcasts an ARP request."
+    ],
+
+    "correct_answers": ["It forks an SSH child process on the local host."],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 17 - Port 22 for SSH",
+
+    "question": "Why did Tatu Ylönen request port 22 for SSH?",
+
+    "image": null,
+
+    "options": [
+      "It was the first port available in the registry.",
+
+      "It was free and conveniently located between the ports for FTP (21) and Telnet (23).",
+
+      "It matches the number of bits in a standard block cipher.",
+
+      "It was a requirement from the Internet Architecture Board."
+    ],
+
+    "correct_answers": [
+      "It was free and conveniently located between the ports for FTP (21) and Telnet (23)."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 17 - 'Trusted' Login Hosts",
+
+    "question": "Which famous malware exploited the transitive trust in historical Unix 'trusted hosts' mechanisms?",
+
+    "image": null,
+
+    "options": ["Stuxnet", "The Morris worm", "WannaCry", "The Melissa virus"],
+
+    "correct_answers": ["The Morris worm"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 18 - Tunneling",
+
+    "question": "In networking, 'tunneling' refers to:",
+
+    "image": "/images/quizzes/4011_1/",
+
+    "options": [
+      "Physically burying network cables underground.",
+
+      "Encapsulating one protocol (the inner) within another protocol (the outer).",
+
+      "Increasing the speed of a connection by using multiple routers.",
+
+      "Scanning for open ports on a remote server."
+    ],
+
+    "correct_answers": [
+      "Encapsulating one protocol (the inner) within another protocol (the outer)."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 18 - Virtual Private Networks",
+
+    "question": "What is the primary difference between a historical private network and a modern Virtual Private Network (VPN)?",
+
+    "image": null,
+
+    "options": [
+      "VPNs use physical isolation, while historical networks used encryption.",
+
+      "Historical private networks used costly exclusive-access leased lines, while VPNs use shared public links secured by cryptography.",
+
+      "VPNs only allow one user at a time.",
+
+      "Historical private networks were much faster."
+    ],
+
+    "correct_answers": [
+      "Historical private networks used costly exclusive-access leased lines, while VPNs use shared public links secured by cryptography."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 19 - Limitations of Encrypted Tunnels",
+
+    "question": "How does the use of encrypted tunnels affect network monitoring at gateways?",
+
+    "image": null,
+
+    "options": [
+      "It makes monitoring much easier.",
+
+      "It prevents effective content-based filtering because patterns in the data cannot be detected.",
+
+      "It automatically logs all user passwords.",
+
+      "It has no effect on network-based monitoring."
+    ],
+
+    "correct_answers": [
+      "It prevents effective content-based filtering because patterns in the data cannot be detected."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 20 - IPsec: IKE",
+
+    "question": "In IPsec, what does a 'Security Association' (SA) represent?",
+
+    "image": null,
+
+    "options": [
+      "The shared state (agreed algorithms, keys) between endpoints for one communication direction.",
+
+      "A group of users authorized to use the VPN.",
+
+      "The physical location of the network gateway.",
+
+      "The list of blocked IP addresses."
+    ],
+
+    "correct_answers": [
+      "The shared state (agreed algorithms, keys) between endpoints for one communication direction."
+    ],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 20 - IPsec: AH",
+
+    "question": "Which IPsec component provides data origin authentication for the entire payload and immutable header fields, but does not provide encryption?",
+
+    "image": "/images/quizzes/4011_1/",
+
+    "options": [
+      "IKE",
+
+      "AH (Authentication Header)",
+
+      "ESP (Encapsulating Security Payload)",
+
+      "SOCKS"
+    ],
+
+    "correct_answers": ["AH (Authentication Header)"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 21 - IPsec: ESP",
+
+    "question": "Where is the MAC for authentication located in an IPsec ESP packet?",
+
+    "image": "/images/quizzes/4011_1/",
+
+    "options": [
+      "In the IP header",
+
+      "In the ESP header",
+
+      "In the ESP trailer",
+
+      "In the Padding field"
+    ],
+
+    "correct_answers": ["In the ESP trailer"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 23 - IPsec Challenges",
+
+    "question": "Match the IPsec deployment approach to its definition.",
+
+    "image": null,
+
+    "options": [
+      "Incorporating IPsec into the host's core TCP/IP network stack.",
+
+      "Inserting a shim layer between existing network and link layers.",
+
+      "Deploying IPsec through introduction of inline hardware."
+    ],
+
+    "pairs": {
+      "A": "OS kernel build-in",
+
+      "B": "Bump in the stack",
+
+      "C": "Bump in the wire"
+    },
+
+    "correct_answers": {
+      "A": "Incorporating IPsec into the host's core TCP/IP network stack.",
+
+      "B": "Inserting a shim layer between existing network and link layers.",
+
+      "C": "Deploying IPsec through introduction of inline hardware."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 23 - IP and Addresses",
+
+    "question": "What is the length of an IPv6 address?",
+
+    "image": null,
+
+    "options": ["32 bits", "64 bits", "128 bits", "256 bits"],
+
+    "correct_answers": ["128 bits"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 24 - TCP Header, TCP Connection Set-up",
+
+    "question": "In the TCP three-way handshake, what are the flags set in the second message (sent from server to client)?",
+
+    "image": "/images/quizzes/4011_1/",
+
+    "options": ["SYN=1, ACK=0", "SYN=1, ACK=1", "SYN=0, ACK=1", "FIN=1, ACK=1"],
+
+    "correct_answers": ["SYN=1, ACK=1"],
+
+    "question_type": "single choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "NET4011 - Chapter 10",
+
+    "source": "Page 25 - ICMP",
+
+    "question": "Which ICMP message type is used by the ping utility to test host reachability?",
+
+    "image": null,
+
+    "options": [
+      "Type 3 (Destination Unreachable)",
+
+      "Type 5 (Redirect)",
+
+      "Type 8 (Echo Request)",
+
+      "Type 11 (Time Exceeded)"
+    ],
+
+    "correct_answers": ["Type 8 (Echo Request)"],
+
+    "question_type": "single choice",
+
+    "points": 1
   }
 ]
