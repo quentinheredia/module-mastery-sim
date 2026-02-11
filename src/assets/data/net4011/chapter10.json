@@ -565,7 +565,7 @@
 
     "question": "In the basic network firewall model shown in Figure 10.1, packets arriving at the internal network from the Internet are classified as:",
 
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
 
     "options": ["Inbound", "Outbound", "Extruded", "Filtered"],
 
@@ -833,7 +833,7 @@
 
     "question": "In the circuit-level proxy model (Figure 10.2), what does the external server see as the originator of the connection?",
 
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
 
     "options": [
       "The internal end-user client",
@@ -997,7 +997,7 @@
 
     "question": "When using SCP to transfer a file, what action does the local SCP client software take first?",
 
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
 
     "options": [
       "It sends the file via cleartext UDP.",
@@ -1069,7 +1069,7 @@
 
     "question": "In networking, 'tunneling' refers to:",
 
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
 
     "options": [
       "Physically burying network cables underground.",
@@ -1181,7 +1181,7 @@
 
     "question": "Which IPsec component provides data origin authentication for the entire payload and immutable header fields, but does not provide encryption?",
 
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
 
     "options": [
       "IKE",
@@ -1207,7 +1207,7 @@
 
     "question": "Where is the MAC for authentication located in an IPsec ESP packet?",
 
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
 
     "options": [
       "In the IP header",
@@ -1289,7 +1289,7 @@
 
     "question": "In the TCP three-way handshake, what are the flags set in the second message (sent from server to client)?",
 
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
 
     "options": ["SYN=1, ACK=0", "SYN=1, ACK=1", "SYN=0, ACK=1", "FIN=1, ACK=1"],
 
