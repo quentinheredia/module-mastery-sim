@@ -45,6 +45,8 @@ import net4000test1 from "@/assets/data/net4000/test1.json";
 // NET4011 Course Data
 import net4011chapter1 from "@/assets/data/net4011/chapter1.json";
 import net4011chapter10 from "@/assets/data/net4011/chapter10.json";
+import net4011quiz1 from "@/assets/data/net4011/quiz1.json";
+import net4011quiz2 from "@/assets/data/net4011/quiz2.json";
 
 // Organize data by course
 const courseData: Record<string, Question[]> = {
@@ -64,7 +66,12 @@ const courseData: Record<string, Question[]> = {
 
   net4000: [...net4000test1] as Question[],
 
-  net4011: [...net4011chapter1, ...net4011chapter10] as Question[],
+  net4011: [
+    ...net4011chapter1,
+    ...net4011chapter10,
+    ...net4011quiz1,
+    ...net4011quiz2,
+  ] as Question[],
 };
 
 // Standardized module names for NET4009

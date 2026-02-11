@@ -1,0 +1,64 @@
+[
+  {
+    "module": "Quiz 2",
+    "source": "Quiz 2",
+    "question": "What is a major disadvantage for a personal firewall",
+    "image": null,
+    "options": [
+      "a) it could slow down the host",
+      "b) it does not provide enough information to make informed decisions",
+      "c) it could push the user to find a way around it if it has poor usability",
+      "d) all of the above"
+    ],
+    "correct_answers": ["d) all of the above"],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Quiz 2",
+    "source": "Quiz 2",
+    "question": "Why would a packet filter be a very effective defence tool if you identify an offending source IP?",
+    "image": null,
+    "options": [
+      "a) you can ask cooperating ISPs to filer that source IP upstream",
+      "b) it is faster to filter based on source IP than any other field",
+      "c) source IP is part of the layer 7 firewall criteria",
+      "d) this will help block malicious FTP traffic"
+    ],
+    "correct_answers": [
+      "a) you can ask cooperating ISPs to filer that source IP upstream"
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Quiz 2",
+    "source": "Quiz 2",
+    "question": "In the allow-all vs deny-all approaches, what is an advantage of the allow-all approach?",
+    "image": null,
+    "options": [
+      "a) Better security",
+      "b) faster",
+      "c) more convenience",
+      "d) easier to expand"
+    ],
+    "correct_answers": ["c) more convenience"],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Quiz 2",
+    "source": "Quiz 2",
+    "question": "What is a main function of the transport layer protocol of SSH",
+    "image": null,
+    "options": [
+      "a) congestion control",
+      "b) reliable delivery of packets",
+      "c) server authentication",
+      "d) ordered delivery of packets"
+    ],
+    "correct_answers": ["c) server authentication"],
+    "question_type": "single choice",
+    "points": 1
+  }
+]

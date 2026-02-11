@@ -1,0 +1,67 @@
+[
+  {
+    "module": "Quiz 1",
+    "source": "Quiz 1",
+    "question": "Select the best statement among the following",
+    "image": null,
+    "options": [
+      "a) Your system is secure if it is obscure enough for an attacker to figure out",
+      "b) Assume the system is known to the attacker but do not reveal tactical defence details",
+      "c) Reveal everything you have about your system to the world"
+    ],
+    "correct_answers": [
+      "b) Assume the system is known to the attacker but do not reveal tactical defence details"
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Quiz 1",
+    "source": "Quiz 1",
+    "question": "To make sure the receiver of a message you are sending can verify the integrity of the message content",
+    "image": null,
+    "options": [
+      "a) You encrypt it with your public key before sending it",
+      "b) You encrypt it with your private key before sending it",
+      "c) You hash it first, then encrypt the hash with your public key and send the encrypted hash with the message",
+      "d) You hash it first, then you send the hash with the message"
+    ],
+    "correct_answers": [
+      "d) You hash it first, then you send the hash with the message"
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Quiz 1",
+    "source": "Quiz 1",
+    "question": "To make sure the receiver of message you are sending can verify the identity of the sender",
+    "image": null,
+    "options": [
+      "a) You encrypt it with your public key before sending it",
+      "b) You encrypt it with your private key before sending it",
+      "c) You hash it first, then encrypt the hash with your private key and send the encrypted hash with the message",
+      "d) You hash it first, then you send the hash with the message"
+    ],
+    "correct_answers": [
+      "c) You hash it first, then encrypt the hash with your private key and send the encrypted hash with the message"
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Quiz 1",
+    "source": "Quiz 1",
+    "question": "Public Key Cryptography requires",
+    "image": null,
+    "options": [
+      "a) Two identical keys",
+      "b) One secret key that both parties know",
+      "c) A public key and a private key",
+      "d) One public key"
+    ],
+    "correct_answers": ["c) A public key and a private key"],
+    "question_type": "single choice",
+    "points": 1
+  }
+]
