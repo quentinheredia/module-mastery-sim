@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Scenario } from "@/assets/data/net4011/scenarios";
 import {
   Accordion,
@@ -7,13 +7,17 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
-import { BookOpen, HelpCircle, Lightbulb } from "lucide-react";
+import { BookOpen, HelpCircle, Lightbulb, Eye, EyeOff } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import ReactMarkdown from "react-markdown";
 
 interface ScenarioCardProps {
   scenario: Scenario;
 }
 
 export const ScenarioCard: React.FC<ScenarioCardProps> = ({ scenario }) => {
+  const [showAnswer, setShowAnswer] = useState(false);
+
   return (
     <Card variant="glass" className="overflow-hidden animate-fade-up">
       <Accordion type="single" collapsible>
@@ -78,6 +82,33 @@ export const ScenarioCard: React.FC<ScenarioCardProps> = ({ scenario }) => {
                   </div>
                 </div>
               </div>
+
+              {/* Answer Section */}
+              {scenario.answer && (
+                <div className="pt-2 border-t border-border/50">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setShowAnswer(!showAnswer)}
+                    className="mb-3 gap-2"
+                  >
+                    {showAnswer ? (
+                      <>
+                        <EyeOff className="h-4 w-4" /> Hide Answer
+                      </>
+                    ) : (
+                      <>
+                        <Eye className="h-4 w-4" /> Show Answer
+                      </>
+                    )}
+                  </Button>
+                  {showAnswer && (
+                    <div className="rounded-lg bg-primary/5 border border-primary/20 p-4 animate-fade-up prose prose-sm dark:prose-invert max-w-none">
+                      <ReactMarkdown>{scenario.answer}</ReactMarkdown>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </AccordionContent>
         </AccordionItem>
