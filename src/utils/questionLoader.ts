@@ -48,6 +48,12 @@ import net4011chapter10 from "@/assets/data/net4011/chapter10.json";
 import net4011quiz1 from "@/assets/data/net4011/quiz1.json";
 import net4011quiz2 from "@/assets/data/net4011/quiz2.json";
 
+// NET 4010  Course Data
+import net4010week2 from "@/assets/data/net4010/week2.json";
+import net4010week3 from "@/assets/data/net4010/week3.json";
+import net4010week4 from "@/assets/data/net4010/week4.json";
+import net4010week6 from "@/assets/data/net4010/week6.json";
+
 // Organize data by course
 const courseData: Record<string, Question[]> = {
   net4009: [...examAdditional, ...quiz2, ...quiz3, ...quiz4] as Question[],
@@ -71,6 +77,13 @@ const courseData: Record<string, Question[]> = {
     ...net4011chapter10,
     ...net4011quiz1,
     ...net4011quiz2,
+  ] as Question[],
+
+  net4010: [
+    ...net4010week2,
+    ...net4010week3,
+    ...net4010week4,
+    ...net4010week6,
   ] as Question[],
 };
 

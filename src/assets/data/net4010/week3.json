@@ -1,0 +1,557 @@
+[
+  {
+    "module": "SMN - Winter 2026 - Week 3.1 - 01-20-2026",
+    "source": "Slide 6 - Wireless Networks - Design Challenges",
+    "question": "Which of the following are design challenges for wireless networks?",
+    "image": null,
+    "options": [
+      "Capacity-limited broadcast medium.",
+      "Constantly changing traffic patterns and user locations.",
+      "Heterogeneous applications with hard constraints.",
+      "Energy and delay constraints across all protocol layers.",
+      "Guided copper cables are too heavy."
+    ],
+    "correct_answers": [
+      "Capacity-limited broadcast medium.",
+      "Constantly changing traffic patterns and user locations.",
+      "Heterogeneous applications with hard constraints.",
+      "Energy and delay constraints across all protocol layers."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.1 - 01-20-2026",
+    "source": "Slide 12 - Cellular Networks",
+    "question": "Match the cellular generation to its defining technology/standard.",
+    "image": null,
+    "options": [
+      "Analog signal",
+      "GSM (TDMA) / PCS-IS-95 (CDMA)",
+      "CDMA2000 / UMTS (W-CDMA)",
+      "LTE / WiMAX (OFDMA)",
+      "NR 5G"
+    ],
+    "pairs": {
+      "A": "First Generation",
+      "B": "Second Generation",
+      "C": "Third Generation",
+      "D": "Fourth Generation",
+      "E": "Fifth Generation"
+    },
+    "correct_answers": {
+      "A": "Analog signal",
+      "B": "GSM (TDMA) / PCS-IS-95 (CDMA)",
+      "C": "CDMA2000 / UMTS (W-CDMA)",
+      "D": "LTE / WiMAX (OFDMA)",
+      "E": "NR 5G"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.1 - 01-20-2026",
+    "source": "Slide 16 - Future Trends",
+    "question": "Which trend is expected to enable autonomous and adaptable networks in the future? ",
+    "image": null,
+    "options": [
+      "Further network densification",
+      "Network Intelligence and 'AI everywhere'",
+      "Holographic telepresence",
+      "Device-centric architectures"
+    ],
+    "correct_answers": ["Network Intelligence and 'AI everywhere'"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.1 - 01-20-2026",
+    "source": "Slide 20 - Electromagnetic Waves",
+    "question": "In an electromagnetic wave, the electric and magnetic fields are ________ to each other and to the direction of propagation.",
+    "image": "",
+    "options": ["Parallel", "Perpendicular", "Inverse", "Randomly oriented"],
+    "correct_answers": ["Perpendicular"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.1 - 01-20-2026",
+    "source": "Slide 21 - Electromagnetic wave spectrum",
+    "question": "Higher-frequency electromagnetic waves have which properties?",
+    "image": "[Image of the electromagnetic spectrum]",
+    "options": [
+      "They are more energetic.",
+      "They feature faster energy attenuation.",
+      "They have shorter transmission distances.",
+      "They exhibit stronger direct radiation capabilities.",
+      "They have longer wavelengths than radio waves."
+    ],
+    "correct_answers": [
+      "They are more energetic.",
+      "They feature faster energy attenuation.",
+      "They have shorter transmission distances.",
+      "They exhibit stronger direct radiation capabilities."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.1 - 01-20-2026",
+    "source": "Slide 24 - Periodic signal - sine wave",
+    "question": "In the fundamental analog sine wave equation $s(t) = A sin(2\\pi ft + \\varphi)$, what does 'A' represent?",
+    "image": null,
+    "options": ["Frequency", "Phase", "Peak amplitude", "Wavelength"],
+    "correct_answers": ["Peak amplitude"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.1 - 01-20-2026",
+    "source": "Slide 35 - Wireless Spectrum",
+    "question": "Match the multiple access scheme to its method of sharing spectrum.",
+    "image": null,
+    "options": [
+      "Each user has their own small slice of time.",
+      "Each user has their own small slice of frequency.",
+      "Users share spectrum using unique codes."
+    ],
+    "pairs": {
+      "A": "TDMA",
+      "B": "FDMA",
+      "C": "CDMA"
+    },
+    "correct_answers": {
+      "A": "Each user has their own small slice of time.",
+      "B": "Each user has their own small slice of frequency.",
+      "C": "Users share spectrum using unique codes."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.1 - 01-20-2026",
+    "source": "Slide 36 - Frequency ranges",
+    "question": "Which frequency range is suitable for omnidirectional applications?",
+    "image": null,
+    "options": [
+      "30 MHz to 1 GHz (Radio range)",
+      "1 GHz to 100 GHz (Microwave)",
+      "300 GHz to 20,000 GHz (Infrared)",
+      "Above 20,000 GHz"
+    ],
+    "correct_answers": ["30 MHz to 1 GHz (Radio range)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.1 - 01-20-2026",
+    "source": "Slide 43 - Attenuation",
+    "question": "Why does attenuation cause distortion in signals comprising many frequency components? ",
+    "image": null,
+    "options": [
+      "All frequencies travel at different speeds.",
+      "Attenuation is greater at higher frequencies.",
+      "Lower frequencies are blocked by oxygen.",
+      "Signals lose phase in a vacuum."
+    ],
+    "correct_answers": ["Attenuation is greater at higher frequencies."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.1 - 01-20-2026",
+    "source": "Slide 50 - Fading in Mobile Environment",
+    "question": "What is 'frequency-selective fading'?",
+    "image": "[Image showing frequency selective fading vs flat fading]",
+    "options": [
+      "Fading that affects all frequencies identically.",
+      "Fading where different frequencies fluctuate differently.",
+      "Fading that only happens at night.",
+      "Fading that is caused by antenna gain."
+    ],
+    "correct_answers": [
+      "Fading where different frequencies fluctuate differently."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 5 - Channel Capacity",
+    "question": "Which factors are involved in determining channel capacity?",
+    "image": null,
+    "options": [
+      "Data rate (bps)",
+      "Bandwidth (Hertz)",
+      "Noise level",
+      "Error rate",
+      "Antenna color"
+    ],
+    "correct_answers": [
+      "Data rate (bps)",
+      "Bandwidth (Hertz)",
+      "Noise level",
+      "Error rate"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 6 - Transmission media",
+    "question": "Match the transmission media types to their definitions.",
+    "image": null,
+    "options": [
+      "Waves are guided along a solid medium like copper or fiber.",
+      "Provides a means of transmitting signals through atmosphere or space without guidance."
+    ],
+    "pairs": {
+      "A": "Guided media",
+      "B": "Unguided media"
+    },
+    "correct_answers": {
+      "A": "Waves are guided along a solid medium like copper or fiber.",
+      "B": "Provides a means of transmitting signals through atmosphere or space without guidance."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 7 - Transmission in unguided media",
+    "question": "In unguided media, how do signal propagation characteristics change with frequency?",
+    "image": null,
+    "options": [
+      "Lower frequencies are omnidirectional; higher frequencies can be focused into directional beams.",
+      "Higher frequencies are omnidirectional; lower frequencies are always directional.",
+      "All frequencies in unguided media are strictly omnidirectional.",
+      "Frequency does not affect directionality."
+    ],
+    "correct_answers": [
+      "Lower frequencies are omnidirectional; higher frequencies can be focused into directional beams."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 12 - Wireless Communications Fundamentals - Antenna",
+    "question": "What is an isotropic antenna? [cite: 533]",
+    "image": null,
+    "options": [
+      "A highly directional parabolic antenna.",
+      "A point in space that radiates power in all directions equally.",
+      "An antenna used only for reception.",
+      "An antenna that only works in the mmWave range."
+    ],
+    "correct_answers": [
+      "A point in space that radiates power in all directions equally."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 14 - Sectorized Antennas for Cellular networks",
+    "question": "What is a key benefit of cell sectoring using directional antennas?",
+    "image": "",
+    "options": [
+      "It eliminates the need for a base station.",
+      "It makes it easier to adjust transmission power to match terrain without increasing interference.",
+      "It allows for omnidirectional signal propagation at high frequencies.",
+      "It reduces the number of users per cell."
+    ],
+    "correct_answers": [
+      "It makes it easier to adjust transmission power to match terrain without increasing interference."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 17 - Multiple Input Multiple Output (MIMO)",
+    "question": "Match the MIMO application to its intended benefit.",
+    "image": "",
+    "options": [
+      "Improved system performance via diversity.",
+      "Higher data rates via multilayer transmission.",
+      "Improved coverage (less cells needed).",
+      "Improved capacity (more users per cell)."
+    ],
+    "pairs": {
+      "A": "Diversity",
+      "B": "SU-MIMO",
+      "C": "Beam-forming",
+      "D": "MU-MIMO"
+    },
+    "correct_answers": {
+      "A": "Improved system performance via diversity.",
+      "B": "Higher data rates via multilayer transmission.",
+      "C": "Improved coverage (less cells needed).",
+      "D": "Improved capacity (more users per cell)."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 19 - Antenna Gain",
+    "question": "What does a 3dB antenna gain represent?",
+    "image": null,
+    "options": [
+      "Obtaining more output power than input power.",
+      "Increased directionality by radiating more power in a given direction at the expense of other directions.",
+      "A decrease in signal strength by half.",
+      "The conversion of light energy into radio waves."
+    ],
+    "correct_answers": [
+      "Increased directionality by radiating more power in a given direction at the expense of other directions."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 21 - Beamforming",
+    "question": "Which of the following are advantages of beamforming?",
+    "image": "",
+    "options": [
+      "Higher Signal-to-Noise Ratio (SNR)",
+      "Interference prevention and rejection",
+      "Higher Network Efficiency",
+      "Allows signals to travel faster than light",
+      "Eliminates the need for antennas"
+    ],
+    "correct_answers": [
+      "Higher Signal-to-Noise Ratio (SNR)",
+      "Interference prevention and rejection",
+      "Higher Network Efficiency"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 26 - Wireless Propagation Modes",
+    "question": "Match the propagation mode to its frequency range/characteristic.",
+    "image": "",
+    "options": [
+      "Below 2 MHz; follows the contour of the earth.",
+      "2 to 30 MHz; refracted from the ionosphere back to earth.",
+      "Above 30 MHz; requires transmit/receive antennas to be within effective LoS."
+    ],
+    "pairs": {
+      "A": "Ground wave propagation",
+      "B": "Sky wave propagation",
+      "C": "Line-of-sight (LOS) propagation"
+    },
+    "correct_answers": {
+      "A": "Below 2 MHz; follows the contour of the earth.",
+      "B": "2 to 30 MHz; refracted from the ionosphere back to earth.",
+      "C": "Above 30 MHz; requires transmit/receive antennas to be within effective LoS."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 28 - Optical and Radio Line of Sight",
+    "question": "Why is the Radio Line of Sight (LoS) generally longer than the Optical LoS?",
+    "image": "[Image showing optical vs radio line of sight curvature]",
+    "options": [
+      "Radio waves travel faster than light.",
+      "Microwaves are bent (refracted) by the atmosphere with the curvature of the earth.",
+      "Antennas are always taller than the optical horizon.",
+      "The earth is flat for radio waves."
+    ],
+    "correct_answers": [
+      "Microwaves are bent (refracted) by the atmosphere with the curvature of the earth."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 31 - RF Behaviors",
+    "question": "Match the RF behavior to its physical interaction.",
+    "image": "",
+    "options": [
+      "Signal encounters a surface much larger than its wavelength.",
+      "Signal hits an object of order of wavelength or less.",
+      "Signal 'bends' around sharp edges of an impenetrable body."
+    ],
+    "pairs": {
+      "A": "Reflection",
+      "B": "Scattering",
+      "C": "Diffraction"
+    },
+    "correct_answers": {
+      "A": "Signal encounters a surface much larger than its wavelength.",
+      "B": "Signal hits an object of order of wavelength or less.",
+      "C": "Signal 'bends' around sharp edges of an impenetrable body."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 33 - LOS Transmissions - Most significant impairments",
+    "question": "What is 'Free Space Path Loss'? [cite: 791, 793]",
+    "image": null,
+    "options": [
+      "The absorption of signals by oxygen.",
+      "The weakening of a signal because its energy is spread out over a larger area as it travels.",
+      "Interference caused by other radio stations.",
+      "The complete blocking of a signal by a wall."
+    ],
+    "correct_answers": [
+      "The weakening of a signal because its energy is spread out over a larger area as it travels."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 38 - Noise",
+    "question": "Which noise type is uniformly distributed across the frequency spectrum and often called 'white noise'?",
+    "image": null,
+    "options": [
+      "Intermodulation noise",
+      "Thermal noise",
+      "Cross talk",
+      "Impulse noise"
+    ],
+    "correct_answers": ["Thermal noise"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 39 - Atmospheric Absorption",
+    "question": "Which atmospheric components contribute most to attenuation in specific frequency ranges?",
+    "image": null,
+    "options": [
+      "Nitrogen (~10 GHz)",
+      "Water vapor (~22 GHz)",
+      "Oxygen (30-60 GHz)",
+      "Argon (~5 GHz)",
+      "Carbon Dioxide (~100 GHz)"
+    ],
+    "correct_answers": ["Water vapor (~22 GHz)", "Oxygen (30-60 GHz)"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 40 - Multipath",
+    "question": "What is a common result of multipath propagation in mobile networks?",
+    "image": "",
+    "options": [
+      "The signal strength increases linearly with distance.",
+      "Multiple copies of the signal with varying delays are received, potentially causing interference.",
+      "The signal travels in a straight line with no obstructions.",
+      "Antennas become omnidirectional regardless of design."
+    ],
+    "correct_answers": [
+      "Multiple copies of the signal with varying delays are received, potentially causing interference."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 43 - Fading in Mobile Environment",
+    "question": "Match the fading type to its characteristic.",
+    "image": "",
+    "options": [
+      "Slowly changing waveform.",
+      "Rapid changes in received power.",
+      "All frequencies fluctuate similarly."
+    ],
+    "pairs": {
+      "A": "Large-scale fading",
+      "B": "Small-scale fading",
+      "C": "Flat fading"
+    },
+    "correct_answers": {
+      "A": "Slowly changing waveform.",
+      "B": "Rapid changes in received power.",
+      "C": "All frequencies fluctuate similarly."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 45 - Implications on 5G",
+    "question": "What frequency range is designated as mmWave for the 5G air interface?",
+    "image": "",
+    "options": [
+      "300 MHz to 3 GHz",
+      "3 GHz to 30 GHz",
+      "30 GHz to 300 GHz",
+      "300 GHz to 3 THz"
+    ],
+    "correct_answers": ["30 GHz to 300 GHz"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 46 - Implications on 5G - main propagation impairments",
+    "question": "Why are mmWaves more susceptible to 'blocking'?",
+    "image": null,
+    "options": [
+      "They have very long wavelengths.",
+      "They are more vulnerable to being stopped by certain types of solid objects than lower-frequency waves.",
+      "They only propagate through water.",
+      "They are omnidirectional and hit everything."
+    ],
+    "correct_answers": [
+      "They are more vulnerable to being stopped by certain types of solid objects than lower-frequency waves."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 46 - Implications on 5G - main propagation impairments",
+    "question": "Which of the following are significant propagation impairments for 5G mmWave systems?",
+    "image": null,
+    "options": [
+      "Free Space Loss",
+      "Rain losses",
+      "Foliage losses",
+      "Blocking by solid objects",
+      "Ionospheric refraction below 2 MHz"
+    ],
+    "correct_answers": [
+      "Free Space Loss",
+      "Rain losses",
+      "Foliage losses",
+      "Blocking by solid objects"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "SMN - Winter 2026 - Week 3.2 - 01-22-2026",
+    "source": "Slide 47 - Implications on 5G",
+    "question": "What are the practical implications of using mmWave in 5G?",
+    "image": null,
+    "options": [
+      "Limited coverage per cell site.",
+      "Difficulties with non-line-of-sight (NLOS) paths.",
+      "Challenges with mobile use due to beam tracking.",
+      "Unlimited range through mountains.",
+      "Zero path loss."
+    ],
+    "correct_answers": [
+      "Limited coverage per cell site.",
+      "Difficulties with non-line-of-sight (NLOS) paths.",
+      "Challenges with mobile use due to beam tracking."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  }
+]

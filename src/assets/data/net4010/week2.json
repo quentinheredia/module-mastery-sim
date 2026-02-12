@@ -1,0 +1,1128 @@
+[
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 7 - Attack surfaces",
+
+    "question": "Which of the following best describes an 'attack surface' in a system?",
+
+    "image": null,
+
+    "options": [
+      "The total number of encryption keys used by the system",
+
+      "The reachable and exploitable vulnerabilities in a system representing its 'total exposure'",
+
+      "A graphical representation of the hierarchy of an attacker's goals",
+
+      "The physical perimeter security surrounding a data center"
+    ],
+
+    "correct_answers": [
+      "The reachable and exploitable vulnerabilities in a system representing its 'total exposure'"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 8 - Attack surfaces",
+
+    "question": "Match the attack surface type to its corresponding vulnerability category.",
+
+    "image": null,
+
+    "options": [
+      "Vulnerabilities in application, utilities, or operating system code",
+
+      "Vulnerabilities over an enterprise network, wide-area network, or the Internet",
+
+      "Vulnerabilities created by personnel or outsiders, such as social engineering"
+    ],
+
+    "pairs": {
+      "A": "Network attack surface",
+
+      "B": "Software attack surface",
+
+      "C": "Human attack surface"
+    },
+
+    "correct_answers": {
+      "A": "Vulnerabilities over an enterprise network, wide-area network, or the Internet",
+
+      "B": "Vulnerabilities in application, utilities, or operating system code",
+
+      "C": "Vulnerabilities created by personnel or outsiders, such as social engineering"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 9 - Attack surfaces",
+
+    "question": "Based on the security defense-in-depth and attack surface matrix, which quadrant represents the highest security risk?",
+
+    "image": "/images/quizzes/4010/2.1_Page9.png",
+
+    "options": [
+      "Small attack surface and Deep layering",
+
+      "Large attack surface and Shallow layering",
+
+      "Small attack surface and Shallow layering",
+
+      "Large attack surface and Deep layering"
+    ],
+
+    "correct_answers": ["Large attack surface and Shallow layering"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 11 - Attack Trees",
+
+    "question": "Who popularized the use of attack trees for cybersecurity?",
+
+    "image": null,
+
+    "options": ["Ratko Kovacina", "Bruce Schneier", "W. Stallings", "Yi Qian"],
+
+    "correct_answers": ["Bruce Schneier"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 12 - Attack Trees",
+
+    "question": "In an attack tree, what is represented by an 'AND Gate'?",
+
+    "image": null,
+
+    "options": [
+      "Success in any one child node leads to success of the parent",
+
+      "Success in all child nodes is required for the parent node to succeed",
+
+      "A node that represents a physical security breach only",
+
+      "The root goal of the entire attack"
+    ],
+
+    "correct_answers": [
+      "Success in all child nodes is required for the parent node to succeed"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 13 - Attack trees - how to develop it",
+
+    "question": "Which of the following are attributes that can be assigned to leaf nodes to analyze an attack tree mathematically? (Select all that apply)",
+
+    "image": null,
+
+    "options": [
+      "Cost",
+
+      "Difficulty",
+
+      "Probability",
+
+      "Color code",
+
+      "Gatekeeper ID"
+    ],
+
+    "correct_answers": ["Cost", "Difficulty", "Probability"],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 18 - How to use attack trees?",
+
+    "question": "What does the 'Minimum Cut' (Min-Cut) in an attack tree determine?",
+
+    "image": null,
+
+    "options": [
+      "The fastest possible path to the root node",
+
+      "The smallest set of nodes that must be broken to make the root goal impossible",
+
+      "The cheapest way for an attacker to exploit the system",
+
+      "The maximum number of leaf nodes a tree can have"
+    ],
+
+    "correct_answers": [
+      "The smallest set of nodes that must be broken to make the root goal impossible"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 21 - Model for Network Security",
+
+    "question": "According to the Model for Network Security, what is required to use the model effectively?",
+
+    "image": "/images/quizzes/4010/2.1_Page21.png",
+
+    "options": [
+      "Designing a suitable algorithm for security transformation",
+
+      "Generating secret information (keys) used by the algorithm",
+
+      "Developing methods to distribute and share secret information",
+
+      "Specifying a protocol for principals to use the transformation and secret information",
+
+      "All of the above"
+    ],
+
+    "correct_answers": ["All of the above"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 26 - Trust and Trustworthiness",
+
+    "question": "How is 'Trust' defined in the context of system reliability?",
+
+    "image": null,
+
+    "options": [
+      "The measurable evidence that a system is worthy",
+
+      "The willingness of a Trustor to rely on a Trustee under conditions of risk",
+
+      "A set of encryption protocols used by the 5G core",
+
+      "The physical location of a network component"
+    ],
+
+    "correct_answers": [
+      "The willingness of a Trustor to rely on a Trustee under conditions of risk"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 28 - Trust and Trustworthiness",
+
+    "question": "What occurs when a system 'under-trusts' a node?",
+
+    "image": null,
+
+    "options": [
+      "It leads to 'Rogue NodeB' attacks",
+
+      "It leads to Denial of Service or inefficiency",
+
+      "The system becomes perfectly secure",
+
+      "The attack surface is automatically reduced"
+    ],
+
+    "correct_answers": ["It leads to Denial of Service or inefficiency"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 30 - Wireless Network Security",
+
+    "question": "Which factor contributes to higher security risk in wireless networks due to broadcast communications?",
+
+    "image": null,
+
+    "options": ["Mobility", "Resources", "Channel", "Accessibility"],
+
+    "correct_answers": ["Channel"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 33 - Summary of Vulnerabilities in Wireless Networks",
+
+    "question": "Match the attack type to its specific category.",
+
+    "image": null,
+
+    "options": [
+      "PHY Attack",
+
+      "Network Attack",
+
+      "Application Attack",
+
+      "MAC Attack"
+    ],
+
+    "pairs": {
+      "A": "Jamming",
+
+      "B": "IP Spoofing",
+
+      "C": "SQL Injection",
+
+      "D": "MAC Spoofing"
+    },
+
+    "correct_answers": {
+      "A": "PHY Attack",
+
+      "B": "Network Attack",
+
+      "C": "Application Attack",
+
+      "D": "MAC Attack"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 34 - Threat Models for Mobile Networks",
+
+    "question": "What are the components of the STRIDE model developed by Microsoft?",
+
+    "image": null,
+
+    "options": [
+      "Spoofing, Tempering, Repudiation, Information Disclosure, DoS, Elevation of Privilege",
+
+      "Security, Trust, Reliability, Integrity, Defense, Efficiency",
+
+      "Signal, Transport, Radio, Interference, Data, Encryption",
+
+      "Scanning, Targeting, Reconnaissance, Infiltration, Delivery, Exploitation"
+    ],
+
+    "correct_answers": [
+      "Spoofing, Tempering, Repudiation, Information Disclosure, DoS, Elevation of Privilege"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 34 - Threat Models for Mobile Networks",
+
+    "question": "Which threat framework is modeled after MITRE ATT&CK but specialized for telecommunications and 5G?",
+
+    "image": null,
+
+    "options": ["STRIDE", "MITRE FIGHT", "GSMA MOTIFT", "X.800"],
+
+    "correct_answers": ["MITRE FIGHT"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 35 - Threat Models for Mobile Networks",
+
+    "question": "The GSMA MOTIFT framework covers which mobile generations?",
+
+    "image": null,
+
+    "options": [
+      "5G only",
+
+      "4G and 5G only",
+
+      "2G, 3G, 4G and 5G",
+
+      "3G and 4G only"
+    ],
+
+    "correct_answers": ["2G, 3G, 4G and 5G"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 37 - Trustworthiness of Mobile Networks",
+
+    "question": "Match the NIST definition adaptation to its mobile network context.",
+
+    "image": null,
+
+    "options": [
+      "The ability to deliver stable and predictable performance in expected conditions",
+
+      "The ability to withstand instability and gracefully return to performance",
+
+      "The ability to prevent entities from gaining access to personal data",
+
+      "The ability to ensure absence of catastrophic consequences on life or property"
+    ],
+
+    "pairs": {
+      "A": "Reliability",
+
+      "B": "Resilience",
+
+      "C": "Privacy",
+
+      "D": "Safety"
+    },
+
+    "correct_answers": {
+      "A": "The ability to deliver stable and predictable performance in expected conditions",
+
+      "B": "The ability to withstand instability and gracefully return to performance",
+
+      "C": "The ability to prevent entities from gaining access to personal data",
+
+      "D": "The ability to ensure absence of catastrophic consequences on life or property"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 38 - Security and CIA Triad in Wireless",
+
+    "question": "What does the 'CIA Triad' stand for in wireless security?",
+
+    "image": null,
+
+    "options": [
+      "Control, Information, Access",
+
+      "Confidentiality, Integrity, Availability",
+
+      "Communication, Intelligence, Authentication",
+
+      "Cloud, Infrastructure, Applications"
+    ],
+
+    "correct_answers": ["Confidentiality, Integrity, Availability"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 39 - Integrity in Secure Wireless Architecture",
+
+    "question": "Which of the following is an example of implementing 'Integrity' in wireless architecture?",
+
+    "image": null,
+
+    "options": [
+      "Encryption of user traffic between an AP and controller",
+
+      "Verifying software packages by comparing hashes",
+
+      "Redundant power supplies for wired infrastructure",
+
+      "Segmentation of networks"
+    ],
+
+    "correct_answers": ["Verifying software packages by comparing hashes"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 42 - Authentication in Wireless Architecture",
+
+    "question": "Which entities must be authenticated within a wireless architecture? (Select all that apply)",
+
+    "image": null,
+
+    "options": [
+      "End users",
+
+      "Wireless endpoints (devices)",
+
+      "Administrative users",
+
+      "Servers",
+
+      "Wireless infrastructure components (APs)"
+    ],
+
+    "correct_answers": [
+      "End users",
+
+      "Wireless endpoints (devices)",
+
+      "Administrative users",
+
+      "Servers",
+
+      "Wireless infrastructure components (APs)"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.1  - 2026-01-13",
+
+    "source": "Slide 43 - Security Trends and Challenges in Mobile Wireless Networks",
+
+    "question": "Which trend leads to an increased 'security distance' between devices and infrastructure, tempting selfish behavior?",
+
+    "image": null,
+
+    "options": [
+      "Centralized architectures",
+
+      "Transition from single-hopping to multi-hopping",
+
+      "Miniaturization of devices",
+
+      "Pervasiveness of networks"
+    ],
+
+    "correct_answers": ["Transition from single-hopping to multi-hopping"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 6",
+
+    "question": "Which threat model is modeled after the MITRE ATT&CK framework but specialized for telecommunications and 5G?",
+
+    "image": null,
+
+    "options": ["STRIDE", "MITRE FIGHT", "GSMA MOTIF", "3GPP TS 33.501"],
+
+    "correct_answers": ["MITRE FIGHT"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 7",
+
+    "question": "Match the STRIDE category to its correct description.",
+
+    "image": null,
+
+    "options": [
+      "Involves illegally accessing and using another user's information like username and password.",
+
+      "Involves the malicious modification of data.",
+
+      "An unprivileged user gains privileged access to compromise the system.",
+
+      "Making a network temporarily unavailable or unusable for valid users.",
+
+      "Exposure of information to individuals who are not supposed to have access to it."
+    ],
+
+    "pairs": {
+      "A": "Spoofing",
+
+      "B": "Tampering",
+
+      "C": "Information Disclosure",
+
+      "D": "Denial of Service",
+
+      "E": "Elevation of Privilege"
+    },
+
+    "correct_answers": {
+      "A": "Involves illegally accessing and using another user's information like username and password.",
+
+      "B": "Involves the malicious modification of data.",
+
+      "C": "Exposure of information to individuals who are not supposed to have access to it.",
+
+      "D": "Making a network temporarily unavailable or unusable for valid users.",
+
+      "E": "An unprivileged user gains privileged access to compromise the system."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 9",
+
+    "question": "In the GSMA MOTIF framework, how are 'Actors' primarily categorized?",
+
+    "image": null,
+
+    "options": [
+      "By IP address and MAC address",
+
+      "By Motivation and Sophistication",
+
+      "By Tactic and Technique",
+
+      "By Protocol and Asset"
+    ],
+
+    "correct_answers": ["By Motivation and Sophistication"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 8",
+
+    "question": "Which generations of mobile networks are covered by the GSMA MOTIF framework?",
+
+    "image": null,
+
+    "options": [
+      "5G only",
+
+      "4G and 5G only",
+
+      "2G, 3G, 4G and 5G",
+
+      "1G through 5G"
+    ],
+
+    "correct_answers": ["2G, 3G, 4G and 5G"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 6",
+
+    "question": "According to MITRE FIGHT, what are the three maturity levels for a technique?",
+
+    "image": null,
+
+    "options": [
+      "Initial, Intermediate, Advanced",
+
+      "Theoretical, PoC, Observed",
+
+      "Low, Medium, High",
+
+      "Exploited, Patched, Mitigated"
+    ],
+
+    "correct_answers": ["Theoretical, PoC, Observed"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 10",
+
+    "question": "When analyzing a 'Fake Base Station' attack, which framework focuses on 'Compliance' and the security procedures (like AKA) that should have prevented it?",
+
+    "image": null,
+
+    "options": ["STRIDE", "MITRE FIGHT", "GSMA MOTIF", "3GPP (TS 33.501)"],
+
+    "correct_answers": ["3GPP (TS 33.501)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 7",
+
+    "question": "What does 'Non-Repudiation' refer to in the context of the STRIDE model?",
+
+    "image": null,
+
+    "options": [
+      "The ability of an intruder to read data in transit",
+
+      "The ability of a system to counter repudiation threats",
+
+      "Gaining privileged access to a system",
+
+      "The malicious modification of data"
+    ],
+
+    "correct_answers": [
+      "The ability of a system to counter repudiation threats"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 9",
+
+    "question": "Which of the following are examples of 'Assets' as defined in the MOTIF framework?",
+
+    "image": null,
+
+    "options": [
+      "UE (User Equipment)",
+
+      "AMF/UPF",
+
+      "Subscriber Identity (SUPI)",
+
+      "Organized Crime",
+
+      "Network Outage"
+    ],
+
+    "correct_answers": [
+      "UE (User Equipment)",
+
+      "AMF/UPF",
+
+      "Subscriber Identity (SUPI)"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 10",
+
+    "question": "Which framework classifies a Rogue Access Point attack under 'Spoofing & Information Disclosure' and focuses on 'Identity'?",
+
+    "image": null,
+
+    "options": ["STRIDE", "MITRE FIGHT", "GSMA MOTIF", "3GPP TS 33.501"],
+
+    "correct_answers": ["STRIDE"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 6",
+
+    "question": "Under the MITRE FIGHT framework, what is the recommended mitigation for the 'Signal overshadowing' technique?",
+
+    "image": null,
+
+    "options": [
+      "Logging and Auditing",
+
+      "Signal Integrity Protection",
+
+      "Encrypt Sensitive Information",
+
+      "User Training",
+
+      "Multi-factor Authentication"
+    ],
+
+    "correct_answers": [
+      "Signal Integrity Protection",
+
+      "Encrypt Sensitive Information"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 9",
+
+    "question": "Match the MOTIF taxonomy component to its definition.",
+
+    "image": null,
+
+    "options": [
+      "The specific mobile network component or subscriber identity being exploited.",
+
+      "The individual or group conducting the adversarial operation.",
+
+      "The final result of the attack from the perspective of the operator or user."
+    ],
+
+    "pairs": {
+      "A": "The Threat Actor",
+
+      "B": "The Asset",
+
+      "C": "The Outcome"
+    },
+
+    "correct_answers": {
+      "A": "The individual or group conducting the adversarial operation.",
+
+      "B": "The specific mobile network component or subscriber identity being exploited.",
+
+      "C": "The final result of the attack from the perspective of the operator or user."
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 14",
+
+    "question": "A hacker sends 'De-auth' packets to a smart TV to drop its Wi-Fi connection. Which STRIDE category does this attack fall under?",
+
+    "image": null,
+
+    "options": [
+      "Tampering",
+
+      "Repudiation",
+
+      "Denial of Service",
+
+      "Elevation of Privilege"
+    ],
+
+    "correct_answers": ["Denial of Service"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 9",
+
+    "question": "In the MOTIF framework, which impact category describes a situation involving 'Fraud/Financial Loss'?",
+
+    "image": null,
+
+    "options": [
+      "Privacy Breach",
+
+      "Network Outage",
+
+      "Outcome",
+
+      "Unauthorized Configuration"
+    ],
+
+    "correct_answers": ["Outcome"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 7",
+
+    "question": "Which STRIDE category describes an attacker penetrating all system defenses and becoming part of the trusted system itself?",
+
+    "image": null,
+
+    "options": [
+      "Spoofing",
+
+      "Information Disclosure",
+
+      "Denial of Service",
+
+      "Elevation of Privilege"
+    ],
+
+    "correct_answers": ["Elevation of Privilege"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 6",
+
+    "question": "In the MITRE FIGHT matrix, 'Initial Access' is a tactic. Which of the following is an associated technique mentioned in the slides?",
+
+    "image": null,
+
+    "options": [
+      "SQL Injection",
+
+      "False Base Station",
+
+      "Phishing",
+
+      "Man-in-the-middle"
+    ],
+
+    "correct_answers": ["False Base Station"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 13",
+
+    "question": "An 'Evil Twin' attack (setting up a Wi-Fi router with the same SSID as a legitimate one) is primarily categorized as what in the STRIDE model?",
+
+    "image": null,
+
+    "options": [
+      "Repudiation",
+
+      "Spoofing",
+
+      "Tampering",
+
+      "Elevation of Privilege"
+    ],
+
+    "correct_answers": ["Spoofing"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 4",
+
+    "question": "What is the deadline for students to email the group members list and chosen topic to the instructor?",
+
+    "image": null,
+
+    "options": [
+      "January 6, 11:59 PM",
+
+      "January 13, 11:59 PM",
+
+      "January 15, 11:59 PM",
+
+      "February 3, 11:59 PM"
+    ],
+
+    "correct_answers": ["January 15, 11:59 PM"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 10",
+
+    "question": "Match the framework focus to its respective objective regarding a 'Fake Base Station' attack.",
+
+    "image": null,
+
+    "options": [
+      "What property of the system is broken?",
+
+      "How exactly did the hacker do it?",
+
+      "Who is the actor and what was the damage?",
+
+      "Which protocol failed?"
+    ],
+
+    "pairs": {
+      "A": "STRIDE",
+
+      "B": "MITRE FIGHT",
+
+      "C": "GSMA MOTIF",
+
+      "D": "3GPP (TS 33.501)"
+    },
+
+    "correct_answers": {
+      "A": "What property of the system is broken?",
+
+      "B": "How exactly did the hacker do it?",
+
+      "C": "Who is the actor and what was the damage?",
+
+      "D": "Which protocol failed?"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 15",
+
+    "question": "An employee creates an 'Open Bridge' by plugging an unmanaged router into a corporate ethernet port. In STRIDE, this could lead to which of the following?",
+
+    "image": null,
+
+    "options": [
+      "Information Disclosure",
+
+      "Elevation of Privilege",
+
+      "Tampering",
+
+      "Spoofing"
+    ],
+
+    "correct_answers": ["Information Disclosure", "Elevation of Privilege"],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "SMN Winter 2026 - Week 2.2 - 2026-01-15",
+
+    "source": "SMN Winter 2026 - Week 2.2 - 2026-01-15 - Page 3",
+
+    "question": "In the NET 4010 course schedule, during which weeks is the Mid-Term exam scheduled?",
+
+    "image": null,
+
+    "options": ["Week 4", "Week 5", "Week 6", "Week 12"],
+
+    "correct_answers": ["Week 6"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  }
+]

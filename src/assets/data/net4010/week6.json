@@ -1,0 +1,583 @@
+[
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 7 - Building blocks of the cellular networks",
+
+    "question": "What is the primary responsibility of a Base Station within a Radio Access Network (RAN)?",
+
+    "image": null,
+
+    "options": [
+      "Providing networking services to distribution networks",
+
+      "Radio transmission and reception to or from user equipment",
+
+      "Originating and terminating functions for calls",
+
+      "Managing global roaming for mobile devices"
+    ],
+
+    "correct_answers": [
+      "Radio transmission and reception to or from user equipment"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 8 - Building blocks of the cellular networks",
+
+    "question": "Which component is specifically used by cellular service providers for originating and terminating functions for calls to or from customers?",
+
+    "image": null,
+
+    "options": [
+      "E-UTRAN",
+
+      "Mobile Switching Center (MSC)",
+
+      "Radio Unit (RU)",
+
+      "Air Interface"
+    ],
+
+    "correct_answers": ["Mobile Switching Center (MSC)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 9 - Operation of Cellular Systems",
+
+    "question": "Match the cellular system channel type to its correct function.",
+
+    "image": null,
+
+    "options": [
+      "Used to exchange information for setting up and maintaining connections",
+
+      "Used to carry a voice or data connection between users"
+    ],
+
+    "pairs": {
+      "A": "Control channels",
+
+      "B": "Traffic channels"
+    },
+
+    "correct_answers": {
+      "A": "Used to exchange information for setting up and maintaining connections",
+
+      "B": "Used to carry a voice or data connection between users"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 10 - Operation of Cellular Systems",
+
+    "question": "During the 'Mobile unit initialization' step, what is the first action taken by the device?",
+
+    "image": null,
+
+    "options": [
+      "Initiate a handshake with the MSC",
+
+      "Request a traffic channel assignment",
+
+      "Scan and select the strongest setup control channel",
+
+      "Establish a connection to the PSTN"
+    ],
+
+    "correct_answers": ["Scan and select the strongest setup control channel"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 11 - Operation of Cellular Systems",
+
+    "question": "According to the slides, what occurs during the 'Paging' step of cellular operations?",
+
+    "image": null,
+
+    "options": [
+      "The mobile unit requests a handoff",
+
+      "Each Base Station transmits a paging signal on its own assigned paging channel",
+
+      "The MSC tears down the original connection",
+
+      "The user equipment selects a modulation scheme"
+    ],
+
+    "correct_answers": [
+      "Each Base Station transmits a paging signal on its own assigned paging channel"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 5 - Building blocks",
+
+    "question": "Match the cellular generation to its specific Radio Access Network (RAN) architecture.",
+
+    "image": null,
+
+    "options": ["GERAN", "UTRAN", "E-UTRAN", "NG-RAN"],
+
+    "pairs": {
+      "A": "2G",
+
+      "B": "3G",
+
+      "C": "4G",
+
+      "D": "5G"
+    },
+
+    "correct_answers": {
+      "A": "GERAN",
+
+      "B": "UTRAN",
+
+      "C": "E-UTRAN",
+
+      "D": "NG-RAN"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 12 - Cell Site",
+
+    "question": "What are the primary functions provided by the Radio Unit (RU) and Base-Band Unit (BBU)?",
+
+    "image": null,
+
+    "options": [
+      "Radio signal modulation and demodulation",
+
+      "Power amplification",
+
+      "Signal processing",
+
+      "Frequency filtering",
+
+      "Global Roaming management"
+    ],
+
+    "correct_answers": [
+      "Radio signal modulation and demodulation",
+
+      "Power amplification",
+
+      "Signal processing",
+
+      "Frequency filtering"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 15 - Mobility Management and Handover",
+
+    "question": "Mobility Management consists of which two main components?",
+
+    "image": null,
+
+    "options": [
+      "Location Management",
+
+      "Frequency Reuse Management",
+
+      "Handover Management",
+
+      "Battery Conservation Management"
+    ],
+
+    "correct_answers": ["Location Management", "Handover Management"],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 16 - Handover (Handoff)",
+
+    "question": "Which term refers to a handover where the original connection is broken before the new one is made?",
+
+    "image": null,
+
+    "options": [
+      "Soft Handover",
+
+      "Vertical Handover",
+
+      "Hard Handover",
+
+      "Mobile Unit assisted HO"
+    ],
+
+    "correct_answers": ["Hard Handover"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 16 - Handover (Handoff)",
+
+    "question": "Match the handover type to its definition.",
+
+    "image": null,
+
+    "options": [
+      "Mobility between cells of the same system (same RAT)",
+
+      "Move between different technologies, protocols or service providers"
+    ],
+
+    "pairs": {
+      "A": "Horizontal Handover",
+
+      "B": "Vertical Handover"
+    },
+
+    "correct_answers": {
+      "A": "Mobility between cells of the same system (same RAT)",
+
+      "B": "Move between different technologies, protocols or service providers"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 20 - Handover Management",
+
+    "question": "During the 'HO Execution' phase of handover management, what specific event occurs?",
+
+    "image": null,
+
+    "options": [
+      "User preferences are applied to the application",
+
+      "The system predicts characteristics for available RANs",
+
+      "The original connection is torn down and data is re-routed to the new connection",
+
+      "The mobile unit scans for the strongest setup channel"
+    ],
+
+    "correct_answers": [
+      "The original connection is torn down and data is re-routed to the new connection"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 21 - Handover decision criteria - categories",
+
+    "question": "Which of the following are considered 'Network Metrics' for handover decision criteria?",
+
+    "image": null,
+
+    "options": [
+      "Remaining battery power",
+
+      "Available bandwidth",
+
+      "Received signal strength",
+
+      "Screen size and resolution",
+
+      "Network load"
+    ],
+
+    "correct_answers": [
+      "Available bandwidth",
+
+      "Received signal strength",
+
+      "Network load"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 23 - Performance of the handover process - performance metrics",
+
+    "question": "What does the 'Call Dropping Probability' represent in the context of handover performance?",
+
+    "image": null,
+
+    "options": [
+      "The probability that a new call is blocked due to high load",
+
+      "The probability that an admitted call is not dropped before termination",
+
+      "The probability that a call is terminated due to handover",
+
+      "The duration it takes for a user to move to a new point of attachment"
+    ],
+
+    "correct_answers": [
+      "The probability that a call is terminated due to handover"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 24 - Performance of the handover process - performance metrics",
+
+    "question": "Define 'Interruption Duration' as it relates to handover performance metrics.",
+
+    "image": null,
+
+    "options": [
+      "The number of handovers per unit time",
+
+      "The time length during handover where the mobile unit is not connected to any PoA",
+
+      "The duration to move from a handover point to a connection point",
+
+      "The probability of unsuccessful handover execution"
+    ],
+
+    "correct_answers": [
+      "The time length during handover where the mobile unit is not connected to any PoA"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 25 - Dynamic Power Control",
+
+    "question": "In Spread Spectrum systems (CDMA), why is it desirable to minimize power in the transmitted signal?",
+
+    "image": null,
+
+    "options": [
+      "To increase background noise",
+
+      "To minimize co-channel interference",
+
+      "To impact battery life and health",
+
+      "To equalize received power levels at the Base Station"
+    ],
+
+    "correct_answers": [
+      "To minimize co-channel interference",
+
+      "To equalise received power levels at the Base Station"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 26 - Dynamic Power Control",
+
+    "question": "Which type of power control depends solely on the mobile units and assumes forward/reverse link signal strengths are correlated?",
+
+    "image": null,
+
+    "options": [
+      "Closed-loop power control",
+
+      "Hysteresis power control",
+
+      "Open-loop power control",
+
+      "Vertical handover control"
+    ],
+
+    "correct_answers": ["Open-loop power control"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 26 - Dynamic Power Control",
+
+    "question": "Closed-loop power control adjusts signal strength based on which reverse channel performance metrics?",
+
+    "image": null,
+
+    "options": [
+      "Received SNR/BER",
+
+      "Screen resolution",
+
+      "Received packet error rate",
+
+      "Received signal power level"
+    ],
+
+    "correct_answers": [
+      "Received SNR/BER",
+
+      "Received packet error rate",
+
+      "Received signal power level"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 13 - Typical Cell Site (Base Station) components",
+
+    "question": "What is the name of the fiber interface used between the Remote Radio Head (RRH) and the Base-Band Unit (BBU)?",
+
+    "image": "/images/quizzes/4010/6.1_Page13.png",
+
+    "options": [
+      "Ethernet/IP",
+
+      "PSTN",
+
+      "Common Public Radio Interface (CPRI)",
+
+      "Mobile Backhaul"
+    ],
+
+    "correct_answers": ["Common Public Radio Interface (CPRI)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 18 - Handoff between 2 cells",
+
+    "question": "What is the purpose of the 'Hysteresis' mechanism (H) in a handoff decision?",
+
+    "image": "/images/quizzes/4010/6.1_page18.png",
+
+    "options": [
+      "To increase the speed of the handoff",
+
+      "To prevent frequent handoffs between two base stations (ping-pong effect)",
+
+      "To decrease the transmitted power of the mobile unit",
+
+      "To block calls during high network load"
+    ],
+
+    "correct_answers": [
+      "To prevent frequent handoffs between two base stations (ping-pong effect)"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 6.1 02-10-2026",
+
+    "source": "Slide 3 - Deliverables – NET 4010",
+
+    "question": "Based on the course schedule, when is the Mid-Term exam scheduled?",
+
+    "image": null,
+
+    "options": [
+      "Week 4 (January 27 & 29)",
+
+      "Week 5 (February 3 & 5)",
+
+      "Week 6 (February 10 & 12)",
+
+      "Week 11 (March 17 & 19)"
+    ],
+
+    "correct_answers": ["Week 6 (February 10 & 12)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  }
+]

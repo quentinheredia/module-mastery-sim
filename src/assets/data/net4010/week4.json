@@ -1,0 +1,1113 @@
+[
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 6",
+
+    "question": "Which of the following describes the modulation process in a transmitting station?",
+
+    "image": null,
+
+    "options": [
+      "The process of converting analog signals into digital bits",
+
+      "The modification of carrier signal parameters such as amplitude, frequency, or phase based on the symbol",
+
+      "The encryption of source data to ensure privacy",
+
+      "The removal of noise from the air interface"
+    ],
+
+    "correct_answers": [
+      "The modification of carrier signal parameters such as amplitude, frequency, or phase based on the symbol"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 9",
+
+    "question": "What is a primary disadvantage of the Amplitude Shift Keying (ASK) modulation technique?",
+
+    "image": null,
+
+    "options": [
+      "It requires excessive bandwidth",
+
+      "It is highly complex to implement",
+
+      "It is susceptible to sudden gain changes",
+
+      "It cannot represent binary 0"
+    ],
+
+    "correct_answers": ["It is susceptible to sudden gain changes"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 13",
+
+    "question": "Which of the following are characteristics of Quadrature Phase Shift Keying (QPSK)?",
+
+    "image": null,
+
+    "options": [
+      "It uses four signal states to transmit two bits per symbol",
+
+      "It requires more bandwidth than BPSK",
+
+      "It is used in UMTS and IEEE 802.11 networks",
+
+      "It utilizes an In-Phase (I) and Quadrature-Phase (Q) axis"
+    ],
+
+    "correct_answers": [
+      "It uses four signal states to transmit two bits per symbol",
+
+      "It is used in UMTS and IEEE 802.11 networks",
+
+      "It utilizes an In-Phase (I) and Quadrature-Phase (Q) axis"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 16",
+
+    "question": "As the number of bits per symbol increases in higher-order modulation like 256QAM, what is the trade-off?",
+
+    "image": null,
+
+    "options": [
+      "The signal becomes less susceptible to noise",
+
+      "The Bit Error Rate (BER) decreases",
+
+      "The susceptibility to noise and interference increases",
+
+      "The complexity of the carrier oscillator decreases"
+    ],
+
+    "correct_answers": [
+      "The susceptibility to noise and interference increases"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 21",
+
+    "question": "In a Frequency Division Duplex (FDD) system, how are the forward and reverse links managed?",
+
+    "image": null,
+
+    "options": [
+      "They use the same frequency but different time slots",
+
+      "The forward link frequency (F1) and reverse link frequency (F2) are different",
+
+      "Signals are transmitted sequentially like a ping-pong game",
+
+      "They share a single frequency without any separation"
+    ],
+
+    "correct_answers": [
+      "The forward link frequency (F1) and reverse link frequency (F2) are different"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 23",
+
+    "question": "What is the primary characteristic of Time Division Duplex (TDD)?",
+
+    "image": null,
+
+    "options": [
+      "It requires two separate frequency bands",
+
+      "Forward and reverse links use the same frequency",
+
+      "Signals are transmitted continuously in parallel",
+
+      "It is immune to propagation delay"
+    ],
+
+    "correct_answers": ["Forward and reverse links use the same frequency"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 28",
+
+    "question": "Match the MAC protocol category to its specific example or description.",
+
+    "image": null,
+
+    "options": [
+      "TDMA, FDMA",
+
+      "Aloha, CSMA/CD",
+
+      "Token Ring, Polling",
+
+      "Divides channel into exclusive pieces"
+    ],
+
+    "pairs": {
+      "A": "Channel Partitioning",
+
+      "B": "Random Access",
+
+      "C": "Taking Turns",
+
+      "D": "Partitioning Mechanism"
+    },
+
+    "correct_answers": {
+      "A": "TDMA, FDMA",
+
+      "B": "Aloha, CSMA/CD",
+
+      "C": "Token Ring, Polling",
+
+      "D": "Divides channel into exclusive pieces"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 31",
+
+    "question": "What is the maximum theoretical throughput of Pure (unslotted) ALOHA?",
+
+    "image": null,
+
+    "options": ["37%", "100%", "18.4%", "50%"],
+
+    "correct_answers": ["18.4%"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 32",
+
+    "question": "In Slotted ALOHA, what action is taken if a collision occurs?",
+
+    "image": null,
+
+    "options": [
+      "The packet is discarded immediately",
+
+      "The node retransmits in the current slot",
+
+      "The node retransmits in future slots with probability p",
+
+      "The system switches to FDMA mode"
+    ],
+
+    "correct_answers": [
+      "The node retransmits in future slots with probability p"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 34",
+
+    "question": "Which scenario defines the 'Hidden Terminal Problem'?",
+
+    "image": null,
+
+    "options": [
+      "Nodes A and C can hear each other but not Node B",
+
+      "Node B is out of range of all other nodes",
+
+      "Nodes A and C cannot hear each other but their transmissions collide at Node B",
+
+      "A node is physically hidden behind a mountain and cannot transmit at all"
+    ],
+
+    "correct_answers": [
+      "Nodes A and C cannot hear each other but their transmissions collide at Node B"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 35",
+
+    "question": "What is the specific sequence used to solve the Hidden Terminal Problem in CSMA/CA?",
+
+    "image": null,
+
+    "options": [
+      "ACK -> DATA",
+
+      "RTS (Request-to-Send) -> CTS (Clear-to-Send)",
+
+      "SYN -> SYN-ACK",
+
+      "POLL -> RESPONSE"
+    ],
+
+    "correct_answers": ["RTS (Request-to-Send) -> CTS (Clear-to-Send)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 37",
+
+    "question": "Why are 'guard bands' necessary in Frequency Division Multiplexing (FDM)?",
+
+    "image": null,
+
+    "options": [
+      "To increase the total bandwidth",
+
+      "To prevent overlapping and interference between adjacent carrier frequencies",
+
+      "To provide a path for the clock synchronization signal",
+
+      "To encrypt the individual channels"
+    ],
+
+    "correct_answers": [
+      "To prevent overlapping and interference between adjacent carrier frequencies"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 39",
+
+    "question": "According to the slides, what is the primary distinction between multiplexing and multiple access?",
+
+    "image": null,
+
+    "options": [
+      "There is no distinction; they are identical terms",
+
+      "Multiplexing is a Link Layer function; Multiple Access is Physical Layer",
+
+      "Multiplexing is a Physical Layer function; Multiple Access is a Link Layer function",
+
+      "Multiplexing only uses time; Multiple Access only uses codes"
+    ],
+
+    "correct_answers": [
+      "Multiplexing is a Physical Layer function; Multiple Access is a Link Layer function"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 41",
+
+    "question": "Which feature is supported by TDMA but not by standard static TDM?",
+
+    "image": null,
+
+    "options": [
+      "Synchronized switches",
+
+      "Alternating patterns",
+
+      "Demand assignment (assignment of slots changes over time)",
+
+      "Exclusive frequency use"
+    ],
+
+    "correct_answers": [
+      "Demand assignment (assignment of slots changes over time)"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 45",
+
+    "question": "In the GSM TDM example, what is the duration of one 'guard time'?",
+
+    "image": null,
+
+    "options": [
+      "4.615 msec",
+
+      "576.9 µsec",
+
+      "30.5 µsec (approx. 8.25 bits)",
+
+      "26 bits"
+    ],
+
+    "correct_answers": ["30.5 µsec (approx. 8.25 bits)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 18",
+
+    "question": "Which of the following are standard modulation schemes for 5G Uplink according to 3GPP?",
+
+    "image": null,
+
+    "options": ["π/2-BPSK", "QPSK", "1024QAM", "256QAM"],
+
+    "correct_answers": ["π/2-BPSK", "QPSK", "256QAM"],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 11",
+
+    "question": "In Binary Phase Shift Keying (BPSK), how is a 'binary 0' represented mathematically?",
+
+    "image": null,
+
+    "options": [
+      "A cos(2πfct)",
+
+      "0 (absence of carrier)",
+
+      "-A cos(2πfct)",
+
+      "A cos(2πfct + π/2)"
+    ],
+
+    "correct_answers": ["-A cos(2πfct)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 12",
+
+    "question": "How does Differential PSK (DPSK) determine the phase of the current bit?",
+
+    "image": null,
+
+    "options": [
+      "By using a fixed absolute reference phase",
+
+      "By shifting phase with reference to the previous bit",
+
+      "By checking the amplitude of the signal",
+
+      "By using a different carrier frequency"
+    ],
+
+    "correct_answers": ["By shifting phase with reference to the previous bit"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 25",
+
+    "question": "What is the primary goal of Medium Access Control (MAC) protocols?",
+
+    "image": null,
+
+    "options": [
+      "To maximize transmit power",
+
+      "To prevent collisions while maximizing throughput and minimizing delay",
+
+      "To encrypt all wireless traffic",
+
+      "To increase the number of base stations"
+    ],
+
+    "correct_answers": [
+      "To prevent collisions while maximizing throughput and minimizing delay"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.1 01-27-2026",
+
+    "source": "2026 SMN Week 4.1 01-27-2026 - Page 29",
+
+    "question": "Which type of MAC protocol is described as 'efficient at low load' because a single node can fully utilize the channel?",
+
+    "image": null,
+
+    "options": [
+      "Channel partitioning",
+
+      "Static allocation",
+
+      "Random access",
+
+      "Token-based"
+    ],
+
+    "correct_answers": ["Random access"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 5",
+
+    "question": "What is the primary purpose of Spread Spectrum technology?",
+
+    "image": null,
+
+    "options": [
+      "To reduce the bandwidth of the signal for efficiency",
+
+      "To spread information over a wider bandwidth to prevent jamming and interception",
+
+      "To increase the power levels of the transmitter",
+
+      "To eliminate the need for channel encoding"
+    ],
+
+    "correct_answers": [
+      "To spread information over a wider bandwidth to prevent jamming and interception"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 11",
+
+    "question": "In Direct Sequence Spread Spectrum (DSSS), what is a 'chip'?",
+
+    "image": null,
+
+    "options": [
+      "A small piece of hardware in the base station",
+
+      "A bit in the pseudonoise (PN) sequence used for spreading",
+
+      "The final output data bit after decoding",
+
+      "A frequency channel in a hopping sequence"
+    ],
+
+    "correct_answers": [
+      "A bit in the pseudonoise (PN) sequence used for spreading"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 14",
+
+    "question": "In Code Division Multiple Access (CDMA), how is a '0' bit transmitted by User A if their code is <c1, c2, c3, c4, c5, c6>?",
+
+    "image": null,
+
+    "options": [
+      "By sending the code as a chip pattern",
+
+      "By sending the complement of the code: <-c1, -c2, -c3, -c4, -c5, -c6>",
+
+      "By sending all zeros",
+
+      "By changing the hopping frequency"
+    ],
+
+    "correct_answers": [
+      "By sending the complement of the code: <-c1, -c2, -c3, -c4, -c5, -c6>"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 17",
+
+    "question": "In the CDMA example, what happens when a receiver using User A's code attempts to decode a signal sent by User B?",
+
+    "image": null,
+
+    "options": [
+      "It results in a value of 6, indicating a '1' bit",
+
+      "It results in a value of -6, indicating a '0' bit",
+
+      "It results in a value of 0, meaning the unwanted signal is ignored",
+
+      "The system crashes due to interference"
+    ],
+
+    "correct_answers": [
+      "It results in a value of 0, meaning the unwanted signal is ignored"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 21",
+
+    "question": "What is the primary function of a RAKE receiver?",
+
+    "image": null,
+
+    "options": [
+      "To prevent frequency hopping",
+
+      "To recover and combine signals from multiple paths in a multipath environment",
+
+      "To increase the transmission power of the mobile unit",
+
+      "To block all signals except the dominant one"
+    ],
+
+    "correct_answers": [
+      "To recover and combine signals from multiple paths in a multipath environment"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 22",
+
+    "question": "Which of the following are listed as advantages of CDMA?",
+
+    "image": null,
+
+    "options": [
+      "Multipath fading is substantially reduced",
+
+      "No absolute limit on the number of users",
+
+      "Easy addition of more users",
+
+      "Decreased battery life for mobile units"
+    ],
+
+    "correct_answers": [
+      "Multipath fading is substantially reduced",
+
+      "No absolute limit on the number of users",
+
+      "Easy addition of more users"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 26",
+
+    "question": "How does Orthogonal Frequency Division Multiplex (OFDM) achieve high-speed data transmission?",
+
+    "image": null,
+
+    "options": [
+      "By using a single high-power carrier frequency",
+
+      "By dividing a channel into multiple orthogonal subchannels and sending parallel low-speed data",
+
+      "By increasing the bandwidth of a single serial stream",
+
+      "By eliminating the need for a modulator"
+    ],
+
+    "correct_answers": [
+      "By dividing a channel into multiple orthogonal subchannels and sending parallel low-speed data"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 29",
+
+    "question": "What is the theoretical bandwidth saving of Orthogonal multicarrier techniques compared to conventional multicarrier techniques?",
+
+    "image": null,
+
+    "options": ["10%", "25%", "50%", "90%"],
+
+    "correct_answers": ["50%"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 30",
+
+    "question": "Match the OFDM-related issue to its definition.",
+
+    "image": null,
+
+    "options": [
+      "Occurs when subcarriers are out of phase",
+
+      "Interference because frequencies are spaced closely"
+    ],
+
+    "pairs": {
+      "A": "Peak to Average Power Ratio (PAPR)",
+
+      "B": "Intercarrier Interference (ICI)"
+    },
+
+    "correct_answers": {
+      "A": "Occurs when subcarriers are out of phase",
+
+      "B": "Interference because frequencies are spaced closely"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 31",
+
+    "question": "What is a key difference between OFDM and OFDMA?",
+
+    "image": null,
+
+    "options": [
+      "OFDM uses codes, OFDMA uses time",
+
+      "OFDM subcarriers are for a single data source; OFDMA allows different users to use subsets of carriers",
+
+      "OFDMA is only used in 2G networks",
+
+      "OFDM is contention-based, OFDMA is collision-free"
+    ],
+
+    "correct_answers": [
+      "OFDM subcarriers are for a single data source; OFDMA allows different users to use subsets of carriers"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 33",
+
+    "question": "What is the 'frequency reuse' principle in cellular networks?",
+
+    "image": null,
+
+    "options": [
+      "Adjacent cells always use the same frequency band",
+
+      "Distant cells can reuse the same frequency band to avoid interference",
+
+      "Every cell in a city uses the exact same frequency simultaneously",
+
+      "Frequencies are only used once and never repeated in the network"
+    ],
+
+    "correct_answers": [
+      "Distant cells can reuse the same frequency band to avoid interference"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 37",
+
+    "question": "Which of the following are benefits of frequency reuse?",
+
+    "image": null,
+
+    "options": [
+      "Solves spectral congestion and increases user capacity",
+
+      "Enables high capacity in a limited spectrum allocation",
+
+      "Requires high-power transmitters to cover the entire city",
+
+      "Enables the use of low power transmitters"
+    ],
+
+    "correct_answers": [
+      "Solves spectral congestion and increases user capacity",
+
+      "Enables high capacity in a limited spectrum allocation",
+
+      "Enables the use of low power transmitters"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 40",
+
+    "question": "According to the frequency reuse formula $N = i^2 + j^2 + ij$, which of the following are possible cluster sizes (N)?",
+
+    "image": null,
+
+    "options": [
+      "1, 3, 4, 7, 9",
+
+      "2, 5, 6, 8, 10",
+
+      "10, 20, 30",
+
+      "Only prime numbers"
+    ],
+
+    "correct_answers": ["1, 3, 4, 7, 9"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 43",
+
+    "question": "What is 'Cell Splitting'?",
+
+    "image": null,
+
+    "options": [
+      "A bug in the network that disconnects users",
+
+      "The process of dividing an existing cell into multiple smaller cells with their own base stations",
+
+      "Sharing a single mobile device between two users",
+
+      "Allocating half a frequency to one user and half to another"
+    ],
+
+    "correct_answers": [
+      "The process of dividing an existing cell into multiple smaller cells with their own base stations"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 45",
+
+    "question": "Match the cellular generation to its specific Access Network component.",
+
+    "image": null,
+
+    "options": ["GERAN", "UTRAN", "E-UTRAN", "NG-RAN"],
+
+    "pairs": {
+      "A": "2G",
+
+      "B": "3G",
+
+      "C": "4G",
+
+      "D": "5G"
+    },
+
+    "correct_answers": {
+      "A": "GERAN",
+
+      "B": "UTRAN",
+
+      "C": "E-UTRAN",
+
+      "D": "NG-RAN"
+    },
+
+    "question_type": "matching",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 50",
+
+    "question": "What is the difference between a Hard Handover (HHO) and a Soft Handover (SHO)?",
+
+    "image": null,
+
+    "options": [
+      "HHO is 'make before break'; SHO is 'break before make'",
+
+      "HHO is 'break before make'; SHO is 'make before break'",
+
+      "HHO only happens in 5G; SHO is for 2G",
+
+      "There is no difference"
+    ],
+
+    "correct_answers": [
+      "HHO is 'break before make'; SHO is 'make before break'"
+    ],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 55",
+
+    "question": "Which handover performance metric represents the probability that a new call is blocked due to high load on BS traffic capacity?",
+
+    "image": null,
+
+    "options": [
+      "Call dropping probability",
+
+      "Call blocking probability",
+
+      "Interruption duration",
+
+      "Handover delay"
+    ],
+
+    "correct_answers": ["Call blocking probability"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 57",
+
+    "question": "Why is it desirable to minimize transmission power in mobile units?",
+
+    "image": null,
+
+    "options": [
+      "To maximize co-channel interference",
+
+      "To minimize impact on health and battery life",
+
+      "To increase the complexity of the base station",
+
+      "To reduce the signal-to-noise ratio"
+    ],
+
+    "correct_answers": ["To minimize impact on health and battery life"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 58",
+
+    "question": "In 'Closed-loop power control', what metrics are used to adjust signal strength?",
+
+    "image": null,
+
+    "options": [
+      "Received SNR (Signal-to-Noise Ratio)",
+
+      "Bit Error Rate (BER)",
+
+      "Battery temperature",
+
+      "Received packet error rate"
+    ],
+
+    "correct_answers": [
+      "Received SNR (Signal-to-Noise Ratio)",
+
+      "Bit Error Rate (BER)",
+
+      "Received packet error rate"
+    ],
+
+    "question_type": "multiple_answer",
+
+    "points": 1
+  },
+
+  {
+    "module": "2026 SMN Week 4.2 01-29-2026",
+
+    "source": "2026 SMN Week 4.2 01-29-2026 - Page 13",
+
+    "question": "Direct Sequence Spread Spectrum (DSSS) often uses which modulation technique for spreading as shown in the spectrum diagrams?",
+
+    "image": null,
+
+    "options": [
+      "Frequency Modulation (FM)",
+
+      "Binary Phase Shift Keying (BPSK)",
+
+      "Amplitude Modulation (AM)",
+
+      "Morse Code"
+    ],
+
+    "correct_answers": ["Binary Phase Shift Keying (BPSK)"],
+
+    "question_type": "single_choice",
+
+    "points": 1
+  }
+]
