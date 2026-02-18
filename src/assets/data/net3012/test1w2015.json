@@ -118,15 +118,15 @@
   {
     "module": "Midterm1W15-WithAnswers.pdf",
     "source": "Midterm1W15-WithAnswers.pdf Page 4",
-    "question": "Which of the following is true regarding VPRN (Layer 3 VPN) as illustrated in the provided diagrams?",
-    "image": "/images/quizzes/4011_1/",
+    "question": "Study the diagram carefully. What kind(s) of VPN service is/are illustrated? Justify your answer based on the diagram.",
+    "image": "/images/exam/3012/q9_2015",
     "options": [
-      "Customer framing is preserved intact.",
-      "Customer framing is discarded.",
-      "Service labels are always different at each hop.",
-      "It acts as a virtual switch rather than a router."
+      "VPRN, Customer framing is preserved intact.",
+      "VPLS, Customer framing is discarded.",
+      "VPRN, Customer framing is discarded.",
+      "VPLS, Customer framing is preserved."
     ],
-    "correct_answers": ["Customer framing is discarded."],
+    "correct_answers": ["VPRN, Customer framing is discarded."],
     "question_type": "single_choice",
     "points": 1
   },

@@ -38,7 +38,7 @@
     "module": "Midterm1W16-WithAnswers.pdf",
     "source": "Midterm1W16-WithAnswers.pdf Page 2",
     "question": "Match the following MPLS router types to the primary label operation they perform. ",
-    "image": "/images/quizzes/4011_1/",
+    "image": "/images/exam/3012/q3_2016",
     "options": ["Push ", "Swap ", "Pop "],
     "pairs": {
       "A": "iLER",
@@ -57,7 +57,7 @@
     "module": "Midterm1W16-WithAnswers.pdf",
     "source": "Midterm1W16-WithAnswers.pdf Page 2",
     "question": "Which data table is exclusively used by a 'P' (LSR) router for forwarding MPLS packets? ",
-    "image": "/images/quizzes/4011_1/",
+    "image": "/images/exam/3012/q4_2016",
     "options": ["RIB ", "Route Table ", "LIB ", "LFIB "],
     "correct_answers": ["LFIB "],
     "question_type": "single_choice",
@@ -141,8 +141,8 @@
   {
     "module": "Midterm1W16-WithAnswers.pdf",
     "source": "Midterm1W16-WithAnswers.pdf Page 4",
-    "question": "Which of the following are valid names for the label used at the very top of an MPLS label stack? ",
-    "image": "/images/quizzes/4011_1/",
+    "question": "Which of the following are valid names for the label (Marked with an asterisk) used at the very top of an MPLS label stack? ",
+    "image": "/images/exam/3012/q10_2016",
     "options": [
       "Service Label",
       "Inner Label",
@@ -183,11 +183,11 @@
     "module": "Midterm1W16-WithAnswers.pdf",
     "source": "Midterm1W16-WithAnswers.pdf Page 5",
     "question": "In an MPLS L3 VPN, what happens to the customer's L2 frame when it reaches the iLER? ",
-    "image": "/images/quizzes/4011_1/",
+    "image": "/images/exam/3012/q13_2016",
     "options": [
       "It is preserved intact throughout the tunnel ",
       "The L2 header is stripped ",
-      "A new L2 header is added and encapsulated inside the service label",
+      "A new L2 header is added and encapsul   ated inside the service label",
       "The L2 frame is converted to ATM"
     ],
     "correct_answers": ["The L2 header is stripped "],
@@ -198,7 +198,7 @@
     "module": "Midterm1W16-WithAnswers.pdf",
     "source": "Midterm1W16-WithAnswers.pdf Page 5",
     "question": "What is a primary difference between L3 VPN and VPLS frame handling? ",
-    "image": "/images/quizzes/4011_1/",
+    "image": "/images/exam/3012/q13_2016",
     "options": [
       "L3 VPN preserves customer L3 TTL; VPLS decrements it",
       "L3 VPN strips customer L2; VPLS preserves customer L2 ",

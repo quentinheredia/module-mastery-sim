@@ -3,7 +3,7 @@
     "module": "Midterm1W14-WithAnswers.pdf",
     "source": "Midterm1W14-WithAnswers.pdf Page 2",
     "question": "What is the primary cause of hyper-aggregation in a network?",
-    "image": "/images/quizzes/4011_1/",
+    "image": "/images/exam/3012/q1_2014",
     "options": [
       "The use of multiple paths with equal cost.",
       "The tendency of an IGP to send all traffic over the same links based on lowest cost.",
@@ -213,7 +213,7 @@
     "module": "Midterm1W14-WithAnswers.pdf",
     "source": "Midterm1W14-WithAnswers.pdf Page 5",
     "question": "Why are 6 LSPs required to implement full connectivity for two clients between two branch offices in the provided scenario?",
-    "image": "/images/quizzes/4011_1/",
+    "image": "/images/exam/3012/q12_2014",
     "options": [
       "LSPs are bidirectional, so 3 are needed for 2 connections.",
       "LSPs are unidirectional; 2 per client for service (4) and 2 for transport (2).",
