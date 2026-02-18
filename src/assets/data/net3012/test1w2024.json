@@ -1,0 +1,360 @@
+[
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 2",
+    "question": "Which protocols are responsible for signaling labels for L2 VPN and L3 VPN services?",
+    "image": null,
+    "options": [
+      "L2 VPN: t-LDP; L3 VPN: MP-BGP",
+      "L2 VPN: MP-BGP; L3 VPN: t-LDP",
+      "L2 VPN: RSVP; L3 VPN: LDP",
+      "L2 VPN: LDP; L3 VPN: RSVP"
+    ],
+    "correct_answers": ["L2 VPN: t-LDP; L3 VPN: MP-BGP"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 3",
+    "question": "Match the MPLS header field to its correct bit length.",
+    "image": "/images/quizzes/4011_1/",
+    "options": ["20 bits", "3 bits", "1 bit", "8 bits"],
+    "pairs": {
+      "A": "Label",
+      "B": "Exp (Experimental/QoS)",
+      "C": "S (Bottom of Stack)",
+      "D": "TTL (Time to Live)"
+    },
+    "correct_answers": {
+      "A": "20 bits",
+      "B": "3 bits",
+      "C": "1 bit",
+      "D": "8 bits"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 3",
+    "question": "Which of the following are valid LDP message types as identified in the source material?",
+    "image": null,
+    "options": [
+      "Initialization",
+      "KeepAlive",
+      "Label Mapping",
+      "Label Withdraw",
+      "Label Release",
+      "Notification"
+    ],
+    "correct_answers": [
+      "Initialization",
+      "KeepAlive",
+      "Label Mapping",
+      "Label Withdraw",
+      "Label Release",
+      "Notification"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 4",
+    "question": "Why is the LDP session depicted on Page 4 considered 'Targeted LDP' rather than 'Link LDP'?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "The DstIP is a unicast address",
+      "The DstIP is a multicast address",
+      "The session peers are not directly connected",
+      "The session uses TCP port 646",
+      "The session uses UDP port 646"
+    ],
+    "correct_answers": [
+      "The DstIP is a unicast address",
+      "The session peers are not directly connected"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 4",
+    "question": "In LDP session initiation, which router acts as the client to initiate the peering session?",
+    "image": null,
+    "options": [
+      "The router with the higher IP address",
+      "The router with the lower IP address",
+      "The ingress LER",
+      "The egress LER"
+    ],
+    "correct_answers": ["The router with the higher IP address"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 4",
+    "question": "Match the VPN service type to the 'virtual hardware' it creates.",
+    "image": null,
+    "options": [
+      "Virtual wire (e.g., epipe)",
+      "Virtual switch",
+      "Virtual router"
+    ],
+    "pairs": {
+      "A": "VPWS",
+      "B": "VPLS",
+      "C": "VPRN"
+    },
+    "correct_answers": {
+      "A": "Virtual wire (e.g., epipe)",
+      "B": "Virtual switch",
+      "C": "Virtual router"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 6",
+    "question": "Which terms are used as synonyms for the first label used to encapsulate a user payload in an MPLS VPN?",
+    "image": null,
+    "options": [
+      "Service label",
+      "Bottom label",
+      "Inner label",
+      "Transport label",
+      "Outer label"
+    ],
+    "correct_answers": ["Service label", "Bottom label", "Inner label"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 6",
+    "question": "Match the LSP role to its correct synonym.",
+    "image": null,
+    "options": ["iLER / Head end", "eLER / Tail end"],
+    "pairs": {
+      "A": "Starting point of an LSP",
+      "B": "Ending point of an LSP"
+    },
+    "correct_answers": {
+      "A": "iLER / Head end",
+      "B": "eLER / Tail end"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 6",
+    "question": "What is the correct flow direction for labels and data in an MPLS network?",
+    "image": null,
+    "options": [
+      "Labels flow downstream; Data flows upstream",
+      "Labels flow upstream; Data flows downstream",
+      "Both flow upstream",
+      "Both flow downstream"
+    ],
+    "correct_answers": ["Labels flow upstream; Data flows downstream"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 6",
+    "question": "Identify which RSVP messages flow downstream.",
+    "image": null,
+    "options": [
+      "PATH",
+      "PATH Tear",
+      "RESV error",
+      "RESV",
+      "RESV Tear",
+      "PATH error"
+    ],
+    "correct_answers": ["PATH", "PATH Tear", "RESV error"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 6",
+    "question": "Identify which RSVP messages flow upstream.",
+    "image": null,
+    "options": [
+      "RESV",
+      "RESV Tear",
+      "PATH error",
+      "PATH",
+      "PATH Tear",
+      "RESV error"
+    ],
+    "correct_answers": ["RESV", "RESV Tear", "PATH error"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 7",
+    "question": "In the context of ERO Expansion, what does 'Partial CSPF' refer to?",
+    "image": null,
+    "options": [
+      "A path calculation that only spans a single area",
+      "A path calculation for the entire LSP across all areas",
+      "A calculation used only by LDP routers",
+      "A calculation that ignores bandwidth constraints"
+    ],
+    "correct_answers": ["A path calculation that only spans a single area"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 7",
+    "question": "In inter-area Traffic Engineering using ERO Expansion, how is the path beyond the last hop of an area specified?",
+    "image": null,
+    "options": [
+      "As a 'strict' hop",
+      "As a 'loose' hop",
+      "As a multicast group",
+      "As an Opaque LSA"
+    ],
+    "correct_answers": ["As a 'loose' hop"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 7",
+    "question": "What is the role of the Area Border Router (ABR) in the ERO Expansion Method?",
+    "image": null,
+    "options": [
+      "It terminates the LSP session entirely",
+      "It runs CSPF to calculate a path through its own area upon receiving a PATH message with a loose hop",
+      "It modifies the service label of the VPN",
+      "It converts RSVP signals into LDP signals"
+    ],
+    "correct_answers": [
+      "It runs CSPF to calculate a path through its own area upon receiving a PATH message with a loose hop"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 7",
+    "question": "What does the acronym 'MBB' stand for in the context of MPLS LSPs?",
+    "image": null,
+    "options": [
+      "Management by Boundary",
+      "Make Before Break",
+      "Message Bit Binding",
+      "Multiprotocol Backbone Bridge"
+    ],
+    "correct_answers": ["Make Before Break"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 7",
+    "question": "To which protocol(s) does the 'Make Before Break' (MBB) mechanism apply?",
+    "image": null,
+    "options": [
+      "RSVP only",
+      "LDP only",
+      "Both RSVP and LDP",
+      "Neither RSVP nor LDP"
+    ],
+    "correct_answers": ["RSVP only"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 7",
+    "question": "What is the primary goal of the 'Make Before Break' (MBB) sequence?",
+    "image": null,
+    "options": [
+      "To change the LSP path while minimizing or eliminating packet loss",
+      "To increase the bandwidth of an existing LSP",
+      "To ensure that all routers use the same label value",
+      "To reset the TCP session between LDP peers"
+    ],
+    "correct_answers": [
+      "To change the LSP path while minimizing or eliminating packet loss"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 3",
+    "question": "Which of the following attributes are used for choosing a Traffic Engineering (TE) path?",
+    "image": null,
+    "options": [
+      "TE metrics",
+      "Bandwidth",
+      "Strict/loose hops",
+      "Admin groups",
+      "Hop limit"
+    ],
+    "correct_answers": [
+      "TE metrics",
+      "Bandwidth",
+      "Strict/loose hops",
+      "Admin groups",
+      "Hop limit"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 3",
+    "question": "Match the MPLS header field to its primary purpose.",
+    "image": null,
+    "options": [
+      "Designates the FEC / eLER / LSP path",
+      "Used for QoS priority handling",
+      "Identifies if it is the last label in the stack",
+      "Used for loop prevention"
+    ],
+    "pairs": {
+      "A": "Label",
+      "B": "Exp",
+      "C": "S",
+      "D": "TTL"
+    },
+    "correct_answers": {
+      "A": "Designates the FEC / eLER / LSP path",
+      "B": "Used for QoS priority handling",
+      "C": "Identifies if it is the last label in the stack",
+      "D": "Used for loop prevention"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-WithAnswers.pdf",
+    "source": "Midterm1W24-WithAnswers.pdf Page 2",
+    "question": "According to Nokia material, what is the specific limit on how many service tunnels a single MPLS transport tunnel can carry?",
+    "image": null,
+    "options": [
+      "There is no specific limit (often described as 'many')",
+      "255",
+      "1024",
+      "65535"
+    ],
+    "correct_answers": [
+      "There is no specific limit (often described as 'many')"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

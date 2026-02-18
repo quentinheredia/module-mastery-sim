@@ -12,7 +12,7 @@
     "correct_answers": [
       "b) Assume the system is known to the attacker but do not reveal tactical defence details"
     ],
-    "question_type": "single choice",
+    "question_type": "single_choice",
     "points": 1
   },
   {
@@ -29,7 +29,7 @@
     "correct_answers": [
       "d) You hash it first, then you send the hash with the message"
     ],
-    "question_type": "single choice",
+    "question_type": "single_choice",
     "points": 1
   },
   {
@@ -46,7 +46,7 @@
     "correct_answers": [
       "c) You hash it first, then encrypt the hash with your private key and send the encrypted hash with the message"
     ],
-    "question_type": "single choice",
+    "question_type": "single_choice",
     "points": 1
   },
   {
@@ -61,7 +61,7 @@
       "d) One public key"
     ],
     "correct_answers": ["c) A public key and a private key"],
-    "question_type": "single choice",
+    "question_type": "single_choice",
     "points": 1
   }
 ]

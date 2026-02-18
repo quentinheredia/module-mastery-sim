@@ -78,7 +78,7 @@
       "Something trustworthy deserves confidence because it will reliably meet expectations, while something trusted is simply relied upon, whether that confidence is deserved or not."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -106,7 +106,7 @@
       "Relative to a security policy that specifies allowed and disallowed rules and practices"
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -178,7 +178,7 @@
       "The expected loss due to harmful future events over a fixed time period"
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -206,7 +206,7 @@
       "R: Risk; T: Threats; V: Vulnerabilities; C: Asset Value/Impact"
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -234,7 +234,7 @@
       "The total cost of the new defense exceeds the anticipated benefits (lower expected losses)"
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -378,7 +378,7 @@
       "Testing that proceeds without the use of insights from design documents or source code"
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -440,7 +440,7 @@
 
     "correct_answers": ["One full attack vector (steps to reach the goal)"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -522,7 +522,7 @@
 
     "correct_answers": ["Invalid assumptions and focus on the wrong threats"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -550,7 +550,7 @@
       "Functional testing confirms functionality, but security testing cannot generally show the absence of all exploitable artifacts."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -576,7 +576,7 @@
 
     "correct_answers": ["P1: Simplicity-and-Necessity"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -604,7 +604,7 @@
       "A system's security should not rely on the secrecy of its design details."
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -632,7 +632,7 @@
       "Allocate the fewest privileges needed for a task and for the shortest duration necessary"
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -658,7 +658,7 @@
 
     "correct_answers": ["P13: Defense-in-Depth"],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -681,7 +681,7 @@
 
     "correct_answers": ["All of the above "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -704,7 +704,7 @@
 
     "correct_answers": ["Both at rest and in transit "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -727,7 +727,7 @@
 
     "correct_answers": ["Both access controls and cryptographic checksums "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -752,7 +752,7 @@
       "Both intentional disruption and denial of service attacks "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -777,7 +777,7 @@
       "Agents representing users, communicating entities, or system processes "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -802,7 +802,7 @@
       "Entity authentication verifies the identity of a principal in a transaction; data origin authentication verifies the source of data "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -827,7 +827,7 @@
       "The property that one's actions or involvement are not linkable to a public identity "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -850,7 +850,7 @@
 
     "correct_answers": ["Authorized (secure) or Unauthorized (non-secure) "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -873,7 +873,7 @@
 
     "correct_answers": ["Capable means and intentions "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -898,7 +898,7 @@
       "Precise numerical estimates are rarely possible in practice "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -923,7 +923,7 @@
       "Summing across combinations of threats and vulnerabilities "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -946,7 +946,7 @@
 
     "correct_answers": ["All of the above "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -971,7 +971,7 @@
       "Early in the product's lifecycle, in parallel with design "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -996,7 +996,7 @@
       "To identify areas with different trust assumptions and expectations "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1021,7 +1021,7 @@
       "That all children nodes are jointly necessary to meet the parent goal "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1046,7 +1046,7 @@
       "An attacker needs only find one way to break in, while the defender must defend against all viable attacks "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1071,7 +1071,7 @@
       "They do not take into account unique details and assumptions of a specific target system "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1096,7 +1096,7 @@
       "Tricking users into visiting a fraudulent site and entering multiple passwords "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1121,7 +1121,7 @@
       "Endpoints are trustworthy, and the communications link is unsecured "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1144,7 +1144,7 @@
 
     "correct_answers": ["Deny-by-default "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1169,7 +1169,7 @@
       "Verification of proper authority immediately before access is granted "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1194,7 +1194,7 @@
       "To limit damage when failures occur and protect against escalation of privileges "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1219,7 +1219,7 @@
       "Security design and implementation is difficult to get right even for experts "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1242,7 +1242,7 @@
 
     "correct_answers": ["Users' mental models of their protection goals "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1265,7 +1265,7 @@
 
     "correct_answers": ["Code injection and command injection "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1290,7 +1290,7 @@
       "Common deletion removes directory entries, while secure deletion makes content unrecoverable even by forensic tools "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1313,7 +1313,7 @@
 
     "correct_answers": ["Denial of Service (DoS) "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1338,7 +1338,7 @@
       "Secure design often requires core architectural support that is absent if added later "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1363,7 +1363,7 @@
       "Graceful upgrades of crypto algorithms with minimal impact on related components "
     ],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   },
@@ -1386,7 +1386,7 @@
 
     "correct_answers": ["Verify first (before trusting) "],
 
-    "question_type": "single choice",
+    "question_type": "single_choice",
 
     "points": 1
   }

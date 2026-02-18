@@ -1,0 +1,350 @@
+[
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 2",
+    "question": "Which two mechanisms of MPLS provide High Availability by recovering and reconverging faster than the IGP? ",
+    "image": null,
+    "options": [
+      "Fast re-route and secondary LSPs ",
+      "LDP and RSVP ",
+      "RIB and LIB ",
+      "ECMP and static routes "
+    ],
+    "correct_answers": ["Fast re-route and secondary LSPs "],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 2",
+    "question": "Which MPLS protocol is suitable for reducing or eliminating hyper-aggregation and why? ",
+    "image": null,
+    "options": [
+      "LDP, because it automatically balances traffic across all available paths. ",
+      "RSVP only, because hyper-aggregation is caused by the IGP/LDP always choosing the same path. ",
+      "ECMP, because it distributes traffic across equal-cost paths to solve the problem permanently. ",
+      "Static LSPs, because they override the dynamic routing table. "
+    ],
+    "correct_answers": [
+      "RSVP only, because hyper-aggregation is caused by the IGP/LDP always choosing the same path. "
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 2",
+    "question": "Match the following MPLS header fields to their size/length. ",
+    "image": null,
+    "options": ["20 bits ", "3 bits ", "1 bit ", "8 bits "],
+    "pairs": {
+      "A": "Label ",
+      "B": "Experimental (Exp) ",
+      "C": "Bottom of Stack (S) ",
+      "D": "Time To Live (TTL) "
+    },
+    "correct_answers": {
+      "A": "20 bits ",
+      "B": "3 bits ",
+      "C": "1 bit ",
+      "D": "8 bits "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 2",
+    "question": "Why would LDP be preferred over RSVP for implementing a BGP-free core? ",
+    "image": null,
+    "options": [
+      "LDP is more secure for internal traffic. ",
+      "LDP provides a full-mesh of LSPs by default, whereas every RSVP LSP is built individually. ",
+      "RSVP does not support Traffic Engineering. ",
+      "LDP uses less CPU power than RSVP. "
+    ],
+    "correct_answers": [
+      "LDP provides a full-mesh of LSPs by default, whereas every RSVP LSP is built individually. "
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 2",
+    "question": "In a Nokia router, which data table is primarily used in the Data Plane by a 'P' router (LSR) to forward MPLS packets? ",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "RIB (Routing Information Base) ",
+      "LIB (Label Information Base) ",
+      "LFIB (Label Forwarding Information Base) ",
+      "Route Table "
+    ],
+    "correct_answers": ["LFIB (Label Forwarding Information Base) "],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 3",
+    "question": "When examining LDP prefix bindings, what does the presence of a 'Pop' operation indicate about the router where the command was executed? ",
+    "image": null,
+    "options": [
+      "The router is the ingress Label Edge Router (iLER). ",
+      "The router is an intermediate Label Switch Router (LSR). ",
+      "The router is the egress Label Edge Router (eLER) for that specific FEC. ",
+      "The router has ECMP disabled. "
+    ],
+    "correct_answers": [
+      "The egress Label Edge Router (eLER) for that specific FEC. "
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 3",
+    "question": "In a default 'per-platform' label space, why must every prefix have a unique Ingress Label (IngLbl) offered to peers? ",
+    "image": null,
+    "options": [
+      "To allow for ECMP paths. ",
+      "Because each prefix represents a unique FEC and must have a unique identifier for that platform. ",
+      "To prevent TTL loops. ",
+      "Because LDP peers do not share a common database. "
+    ],
+    "correct_answers": [
+      "Because each prefix represents a unique FEC and must have a unique identifier for that platform. "
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 4",
+    "question": "Match the LDP label space types to their definitions. ",
+    "image": null,
+    "options": [
+      "The same label value is distributed to all peers for a given FEC. ",
+      "Every interface has its own completely separate set of labels. ",
+      "Labels are only unique within a specific LDP session. ",
+      "Used for Cell mode MPLS. "
+    ],
+    "pairs": {
+      "A": "Per-platform Label Space ",
+      "B": "Per-interface Label Space ",
+      "C": "Frame mode MPLS usage ",
+      "D": "Cell mode MPLS usage "
+    },
+    "correct_answers": {
+      "A": "The same label value is distributed to all peers for a given FEC. ",
+      "B": "Every interface has its own completely separate set of labels. ",
+      "C": "The same label value is distributed to all peers for a given FEC. ",
+      "D": "Every interface has its own completely separate set of labels. "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 4",
+    "question": "What is the effect on the IP TTL field of a customer's packet when traversing an ePipe service? ",
+    "image": null,
+    "options": [
+      "The TTL is decremented by 1 at each MPLS hop. ",
+      "There is no change in TTL because an ePipe behaves like a virtual 'wire'. ",
+      "The TTL is only decremented in uniform mode. ",
+      "The TTL is decremented only at the ingress and egress routers. "
+    ],
+    "correct_answers": [
+      "There is no change in TTL because an ePipe behaves like a virtual 'wire'. "
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 4",
+    "question": "Which protocol is specifically used to signal labels for Layer 2 services like ePipes? ",
+    "image": null,
+    "options": ["Link LDP ", "Targeted-LDP (T-LDP) ", "MP-BGP ", "RSVP "],
+    "correct_answers": ["Targeted-LDP (T-LDP) "],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 4",
+    "question": "In a scenario with two parallel links between routers (like R2 and R4), how many LDP sessions are typically formed by default? ",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "Two, one for each physical link. ",
+      "None, LDP requires a single logical interface. ",
+      "One, because the Transport Address (usually the system interface) is identical on both links. ",
+      "Four, including backup sessions. "
+    ],
+    "correct_answers": [
+      "One, because the Transport Address (usually the system interface) is identical on both links. "
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 5",
+    "question": "The LDP Identifier (LDP ID) is a two-part field. What are the lengths of these two parts? ",
+    "image": null,
+    "options": [
+      "32-bit LSR ID and 16-bit Label Space ID ",
+      "4 bytes for LSR ID and 2 bytes for Label Space ID ",
+      "6 bytes for the entire field ",
+      "All of the above "
+    ],
+    "correct_answers": ["All of the above "],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 5",
+    "question": "What is the primary reason for using 'Implicit NULL' or 'Explicit NULL' labels? ",
+    "image": null,
+    "options": [
+      "To increase the speed of the core network. ",
+      "To reduce processing requirements on the PE router, which might be a smaller, lower-end model. ",
+      "To prevent BGP routing loops. ",
+      "To enable full-mesh LSPs. "
+    ],
+    "correct_answers": [
+      "To reduce processing requirements on the PE router, which might be a smaller, lower-end model. "
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 5",
+    "question": "Match the Special Use Label to its function or characteristic. ",
+    "image": null,
+    "options": [
+      "Value of 3; requests Penultimate Hop Popping (PHP) from upstream. ",
+      "Value of 0; requests upstream to use a specific label to preserve QoS/EXP bits. ",
+      "Value of 2; used for IPv6 Explicit NULL. ",
+      "No transport labels are used on the customer data to egress. "
+    ],
+    "pairs": {
+      "A": "Implicit NULL ",
+      "B": "Explicit NULL ",
+      "C": "IPv6 Explicit NULL ",
+      "D": "Implicit NULL outcome "
+    },
+    "correct_answers": {
+      "A": "Value of 3; requests Penultimate Hop Popping (PHP) from upstream. ",
+      "B": "Value of 0; requests upstream to use a specific label to preserve QoS/EXP bits. ",
+      "C": "Value of 2; used for IPv6 Explicit NULL. ",
+      "D": "No transport labels are used on the customer data to egress. "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 6",
+    "question": "When two routers exchange LDP messages, which one initiates the peering session and how is it chosen? ",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "The router with the lowest IP address. ",
+      "The router with the highest Transport Address initiates the peering. ",
+      "It is chosen randomly to balance load. ",
+      "Both routers initiate simultaneously using UDP. "
+    ],
+    "correct_answers": [
+      "The router with the highest Transport Address initiates the peering. "
+    ],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 6",
+    "question": "Match the LDP message type to the Layer 4 transport protocol used. ",
+    "image": null,
+    "options": ["UDP; destination port 646. ", "TCP; destination port 646. "],
+    "pairs": {
+      "A": "Hello messages ",
+      "B": "Initialization messages "
+    },
+    "correct_answers": {
+      "A": "UDP; destination port 646. ",
+      "B": "TCP; destination port 646. "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 6",
+    "question": "When testing an LSP, why does the test response return via the IGP rather than the LSP? ",
+    "image": null,
+    "options": [
+      "The IGP is always faster for small control packets. ",
+      "LSPs are unidirectional, so a return LSP may not exist. ",
+      "Returning via an LSP would inadvertently test a pair of LSPs, complicating failure analysis. ",
+      "Both B and C are correct. "
+    ],
+    "correct_answers": ["Both B and C are correct. "],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 7",
+    "question": "Which of the following services will always leave the customer's IP TTL unchanged, regardless of pipe or uniform mode settings? ",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "L3 VPN (VPRN). ",
+      "L2 VPN (VPWS or VPLS). ",
+      "BGP-free core LSPs. ",
+      "RSVP-TE paths. "
+    ],
+    "correct_answers": ["L2 VPN (VPWS or VPLS). "],
+    "question_type": "single choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 7",
+    "question": "Match the service type to the protocol used to exchange its service labels. ",
+    "image": null,
+    "options": ["MP-BGP ", "T-LDP ", "RSVP or LDP "],
+    "pairs": {
+      "A": "Layer 3 VPN Service Labels ",
+      "B": "Layer 2 VPN Service Labels ",
+      "C": "Transport Labels (for either service) "
+    },
+    "correct_answers": {
+      "A": "MP-BGP ",
+      "B": "T-LDP ",
+      "C": "RSVP or LDP "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W17-WithAnswers.pdf",
+    "source": "Midterm1W17-WithAnswers.pdf Page 8",
+    "question": "According to the static and dynamic label ranges, which of the following is true? ",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "Labels 215-217 are valid for dynamic LDP assignment. ",
+      "Label 11350 is a valid value for statically assigned services. ",
+      "Labels 215-217 are valid values for static LSPs. ",
+      "Dynamic labels are assigned from the range 32 - 1,023. "
+    ],
+    "correct_answers": [
+      "Label 11350 is a valid value for statically assigned services. ",
+      "Labels 215-217 are valid values for static LSPs. "
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  }
+]

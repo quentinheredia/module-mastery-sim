@@ -1,0 +1,337 @@
+[
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 2",
+    "question": "Match the following label handling attributes to their descriptions as used in MPLS protocols.",
+    "image": null,
+    "options": [
+      "Labels for all known FECs are given out to all neighbours without a request.",
+      "Labels for a specific FEC are only given out upon request by an upstream router.",
+      "Labels are given out only if the router has a downstream label.",
+      "Unused labels are discarded to conserve memory.",
+      "All labels are saved, whether used or not, using more memory."
+    ],
+    "pairs": {
+      "A": "Downstream-unsolicited (Distribution)",
+      "B": "Downstream-on-demand (Distribution)",
+      "C": "Ordered control (Control)",
+      "D": "Conservative retention (Retention)",
+      "E": "Liberal retention (Retention)"
+    },
+    "correct_answers": {
+      "A": "Labels for all known FECs are given out to all neighbours without a request.",
+      "B": "Labels for a specific FEC are only given out upon request by an upstream router.",
+      "C": "Labels are given out only if the router has a downstream label.",
+      "D": "Unused labels are discarded to conserve memory.",
+      "E": "All labels are saved, whether used or not, using more memory."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 2",
+    "question": "Which combination of attributes is used by LDP for label handling?",
+    "image": null,
+    "options": [
+      "Downstream unsolicited; ordered; liberal",
+      "Downstream on demand; ordered; conservative",
+      "Downstream unsolicited; independent; liberal",
+      "Downstream on demand; independent; conservative"
+    ],
+    "correct_answers": ["Downstream unsolicited; ordered; liberal"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 2",
+    "question": "Which combination of attributes is used by RSVP for label handling?",
+    "image": null,
+    "options": [
+      "Downstream unsolicited; ordered; liberal",
+      "Downstream on demand; ordered; conservative",
+      "Downstream unsolicited; independent; liberal",
+      "Downstream on demand; independent; conservative"
+    ],
+    "correct_answers": ["Downstream on demand; ordered; conservative"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 3",
+    "question": "Does targeted LDP provide a full mesh of tunnels like link LDP does?",
+    "image": null,
+    "options": [
+      "Yes, it automatically establishes sessions with all nodes.",
+      "No, because all peering sessions must be administratively configured.",
+      "Yes, but only within a single OSPF area.",
+      "No, it only supports point-to-point connections between adjacent routers."
+    ],
+    "correct_answers": [
+      "No, because all peering sessions must be administratively configured."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 3",
+    "question": "Match the following RSVP-TE path selection mechanisms to their descriptions.",
+    "image": null,
+    "options": [
+      "Follows normal IGP routes for LSP path selection.",
+      "Uses administratively configured hop metrics.",
+      "Specifies nodes that the path must traverse, either immediately or eventually.",
+      "Ensures requested capacity is available from a 'book-keeping' perspective.",
+      "Links are tagged with attributes to be mandatory or excluded."
+    ],
+    "pairs": {
+      "A": "Follow the IGP",
+      "B": "TE Metric",
+      "C": "Strict and Loose hops",
+      "D": "Bandwidth",
+      "E": "Admin groups"
+    },
+    "correct_answers": {
+      "A": "Follows normal IGP routes for LSP path selection.",
+      "B": "Uses administratively configured hop metrics.",
+      "C": "Specifies nodes that the path must traverse, either immediately or eventually.",
+      "D": "Ensures requested capacity is available from a 'book-keeping' perspective.",
+      "E": "Links are tagged with attributes to be mandatory or excluded."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 3",
+    "question": "What is the primary purpose of the 'Router Alert' option in the IP header of RSVP request messages?",
+    "image": null,
+    "options": [
+      "To prevent loops by alerting the router to discard the packet.",
+      "To identify that every transit router must pass the packet to the control plane for processing.",
+      "To signal that the packet should bypass the LFIB lookup.",
+      "To increase the priority of the packet in the data plane."
+    ],
+    "correct_answers": [
+      "To identify that every transit router must pass the packet to the control plane for processing."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 3",
+    "question": "Which RSVP messages are responsible for clearing out the Path State Block (PSB) and Reservation State Block (RSB)?",
+    "image": null,
+    "options": [
+      "PATH and RESV",
+      "PATH Tear and RESV Tear",
+      "PATH Error and RESV Error",
+      "Hello and Notify"
+    ],
+    "correct_answers": ["PATH Tear and RESV Tear"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 3",
+    "question": "Match the LDP label management messages to their respective roles.",
+    "image": null,
+    "options": [
+      "Advertises a label for a particular FEC.",
+      "Invalidates a label for a FEC that is no longer reachable.",
+      "Serves as an acknowledgement of a label withdraw message."
+    ],
+    "pairs": {
+      "A": "Label mapping",
+      "B": "Label withdraw",
+      "C": "Label release"
+    },
+    "correct_answers": {
+      "A": "Advertises a label for a particular FEC.",
+      "B": "Invalidates a label for a FEC that is no longer reachable.",
+      "C": "Serves as an acknowledgement of a label withdraw message."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 4",
+    "question": "Which of the following protocols can be used as the L2 transport for MPLS and its data?",
+    "image": null,
+    "options": ["ATM", "Frame Relay", "Ethernet", "GRE", "All of the above"],
+    "correct_answers": ["All of the above"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 4",
+    "question": "Which IGPs are compatible with RSVP-TE?",
+    "image": null,
+    "options": ["RIP", "EIGRP", "OSPF", "ISIS", "BGP"],
+    "correct_answers": ["OSPF", "ISIS"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 5",
+    "question": "Match the router role in an MPLS path to its primary label operation.",
+    "image": "/images/quizzes/4011_1/",
+    "options": ["Push", "Swap", "Pop"],
+    "pairs": {
+      "A": "iLER (Ingress)",
+      "B": "LSR (Transit)",
+      "C": "eLER (Egress)"
+    },
+    "correct_answers": {
+      "A": "Push",
+      "B": "Swap",
+      "C": "Pop"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 6",
+    "question": "What is the value and name of the label that indicates a packet must be passed to the control plane for processing?",
+    "image": null,
+    "options": [
+      "Label 0: Explicit Null",
+      "Label 1: Router Alert",
+      "Label 2: IPv6 Explicit Null",
+      "Label 3: Implicit Null"
+    ],
+    "correct_answers": ["Label 1: Router Alert"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 7",
+    "question": "What would a standard IP router do if it received a frame containing an MPLS ethertype but had no MPLS implementation?",
+    "image": null,
+    "options": [
+      "Forward the packet using the RIB.",
+      "Pop the label and look at the IP header.",
+      "Drop the packet because it has no way to process it.",
+      "Send an ICMP Redirect message to the sender."
+    ],
+    "correct_answers": ["Drop the packet because it has no way to process it."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 7",
+    "question": "When an MPLS router decrements a label's TTL, which label(s) in the stack are affected?",
+    "image": null,
+    "options": [
+      "Only the top label",
+      "Only the bottom label",
+      "Both the top and bottom labels",
+      "The entire label stack"
+    ],
+    "correct_answers": ["Only the top label"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 8",
+    "question": "Why is LDP often considered unsuitable for hyper-aggregation issues compared to RSVP-TE?",
+    "image": null,
+    "options": [
+      "LDP has too much signaling overhead.",
+      "LDP always follows the IGP, so it cannot avoid congested IGP-selected paths.",
+      "LDP does not support liberal label retention.",
+      "LDP labels are unidirectional."
+    ],
+    "correct_answers": [
+      "LDP always follows the IGP, so it cannot avoid congested IGP-selected paths."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 8",
+    "question": "Which CLI command would you use to view 'redundant entries' (non-active bindings) in the Label Information Base (LIB) for LDP?",
+    "image": null,
+    "options": [
+      "show router ldp bindings active",
+      "show router ldp bindings",
+      "show router mpls lfib",
+      "show router fib"
+    ],
+    "correct_answers": ["show router ldp bindings"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 9",
+    "question": "In an MPLS transport tunnel carrying multiple services, which router typically originates the Service (Bottom) label?",
+    "image": "/images/quizzes/4011_1/",
+    "options": ["The iLER", "The LSR", "The eLER", "The Customer CE"],
+    "correct_answers": ["The eLER"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 9",
+    "question": "Match the label space type to the corresponding MPLS mode.",
+    "image": null,
+    "options": ["Per platform", "Per interface"],
+    "pairs": {
+      "A": "Frame mode",
+      "B": "Cell mode"
+    },
+    "correct_answers": {
+      "A": "Per platform",
+      "B": "Per interface"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 10",
+    "question": "What is the value and function of the 'Implicit Null' label?",
+    "image": null,
+    "options": [
+      "Value 0; signaled and used in the data plane for eLER processing.",
+      "Value 3; signaled in the control plane but never used in the data plane.",
+      "Value 1; used to alert transit routers to process the packet.",
+      "Value 7; used for OAM loopback testing."
+    ],
+    "correct_answers": [
+      "Value 3; signaled in the control plane but never used in the data plane."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W20-WithAnswers.pdf",
+    "source": "Midterm1W20-WithAnswers.pdf Page 11",
+    "question": "Where is the Forwarding Equivalence Class (FEC) lookup performed in an LSP-enabled network versus a standard IGP network?",
+    "image": null,
+    "options": [
+      "IGP: Every hop; LSP: Every hop",
+      "IGP: iLER only; LSP: Every hop",
+      "IGP: Every hop; LSP: iLER only",
+      "IGP: iLER only; LSP: iLER only"
+    ],
+    "correct_answers": ["IGP: Every hop; LSP: iLER only"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

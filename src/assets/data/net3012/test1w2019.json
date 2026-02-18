@@ -1,0 +1,315 @@
+[
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 2",
+    "question": "Which of the following are recognized drivers for implementing MPLS?",
+    "image": null,
+    "options": [
+      "Improved forwarding performance ",
+      "Traffic Engineering applications ",
+      "Building a BGP Free Core ",
+      "Triple Play Solutions ",
+      "All of the above "
+    ],
+    "correct_answers": ["All of the above "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 2",
+    "question": "Which MPLS driver specifically utilizes t-LDP for its implementation?",
+    "image": null,
+    "options": [
+      "Improving forwarding performance ",
+      "Layer 2 (L2) services ",
+      "BGP-free core ",
+      "Traffic Engineering "
+    ],
+    "correct_answers": ["Layer 2 (L2) services "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 2",
+    "question": "Match the following MPLS header fields to their respective bit lengths.",
+    "image": null,
+    "options": ["20 bits ", "3 bits ", "1 bit ", "8 bits "],
+    "pairs": {
+      "A": "Label ",
+      "B": "Experimental (Exp) ",
+      "C": "Bottom-of-Stack (S) ",
+      "D": "Time-to-Live (TTL) "
+    },
+    "correct_answers": {
+      "A": "20 bits ",
+      "B": "3 bits ",
+      "C": "1 bit ",
+      "D": "8 bits "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 2",
+    "question": "Match the router role description to its synonym.",
+    "image": null,
+    "options": [
+      "Head-end or iLER ",
+      "Tail-end, eLER, or terminate router ",
+      "Intermediate hop or LSR "
+    ],
+    "pairs": {
+      "A": "Originates an LSP ",
+      "B": "Terminates an LSP and originates labels for a FEC ",
+      "C": "Swaps labels along an established path "
+    },
+    "correct_answers": {
+      "A": "Head-end or iLER ",
+      "B": "Tail-end, eLER, or terminate router ",
+      "C": "Intermediate hop or LSR "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 3",
+    "question": "Which protocol's LIB (Label Information Base) is most likely to match its LFIB (Label Forwarding Information Base) exactly due to conservative label retention?",
+    "image": null,
+    "options": ["LDP ", "RSVP ", "OSPF ", "BGP "],
+    "correct_answers": ["RSVP "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 3",
+    "question": "Which command is considered the best to confirm that user data is actually being forwarded over an LSP, as it identifies which hops are used for outbound traffic?",
+    "image": null,
+    "options": [
+      "Regular IP ping ",
+      "Regular IP traceroute ",
+      "OAM LSP ping ",
+      "OAM LSP trace "
+    ],
+    "correct_answers": ["Regular IP traceroute "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 3",
+    "question": "If an ISP provides bi-directional connectivity for two TCP-based content providers using LSPs, how many LSPs are required in total?",
+    "image": null,
+    "options": ["1 LSP ", "2 LSPs ", "4 LSPs ", "8 LSPs "],
+    "correct_answers": ["4 LSPs "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 3",
+    "question": "Why are OAM commands for RSVP-TE LSPs more likely to experience asymmetric routing than those for LDP LSPs?",
+    "image": null,
+    "options": [
+      "LDP always follows the IGP path, whereas RSVP-TE may be engineered to a non-IGP path. ",
+      "RSVP-TE uses UDP for the return path. ",
+      "LDP uses conservative label retention. ",
+      "OAM commands only test the return path. "
+    ],
+    "correct_answers": [
+      "LDP always follows the IGP path, whereas RSVP-TE may be engineered to a non-IGP path. "
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 4",
+    "question": "In the t-LDP peering diagram, what is the destination port used for 'Hello' messages to establish adjacency?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "UDP Port 646 ",
+      "TCP Port 646 ",
+      "TCP Port 50362 ",
+      "UDP Port 50362 "
+    ],
+    "correct_answers": ["UDP Port 646 "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 4",
+    "question": "What is the specific name for the Layer 3 address (e.g., 10.10.10.1) used in LDP initialization and keepalive messages?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "Interface Address ",
+      "Transport Address ",
+      "System Loopback ",
+      "Peering Identifier "
+    ],
+    "correct_answers": ["Transport Address "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 4",
+    "question": "Which of the following controls must be enabled to activate Traffic Engineering (TE) for RSVP?",
+    "image": null,
+    "options": [
+      "Enable traffic-engineering in the IGP ",
+      "Specify cspf within the LSP definition ",
+      "Enable RSVP on the system interface ",
+      "A and B ",
+      "All of the above "
+    ],
+    "correct_answers": ["A and B "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 5",
+    "question": "In a datagram transiting an MPLS tunnel between R1 and R2, which label is typically placed at the bottom of the stack?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "Transport Label ",
+      "Service Label ",
+      "IP Header ",
+      "L2 Provider Frame "
+    ],
+    "correct_answers": ["Service Label "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 6",
+    "question": "For a VPRN (Layer 3 VPN) service, what happens to the customer's Layer 2 framing during transit through the provider network?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "It is delivered unchanged to the eLER. ",
+      "It is stripped at the iLER and replaced at the eLER. ",
+      "It is encapsulated within the service label only. ",
+      "It is discarded and not replaced. "
+    ],
+    "correct_answers": [
+      "It is stripped at the iLER and replaced at the eLER. "
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 6",
+    "question": "Which VPN service delivers the every single bit of the customer datagram, including L2 framing, unchanged to the eLER?",
+    "image": "/images/quizzes/4011_1/",
+    "options": ["VPRN ", "VPWS or VPLS ", "LDP-shortcuts ", "BGP-free core "],
+    "correct_answers": ["VPWS or VPLS "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 7",
+    "question": "What layers of traffic are transported over an LDP-shortcut according to the ARP table evidence?",
+    "image": null,
+    "options": [
+      "Layer 2 and above ",
+      "Layer 3 and above ",
+      "Layer 4 and above only ",
+      "Provider L2 framing only "
+    ],
+    "correct_answers": ["Layer 3 and above "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 8",
+    "question": "In the provided LIB tables, how many labels did R1 distribute to its neighbors?",
+    "image": null,
+    "options": ["Two ", "Three ", "Four ", "Six "],
+    "correct_answers": ["Four "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 8",
+    "question": "Match the following label distribution attributes to their descriptions.",
+    "image": null,
+    "options": [
+      "Labels are given out for all known FECs to all neighbors without a request. ",
+      "Labels are only given out upon request by an upstream router. ",
+      "Labels are only given out if the router has a downstream label. ",
+      "Unused labels are discarded to save memory. "
+    ],
+    "pairs": {
+      "A": "Downstream-unsolicited (LDP) ",
+      "B": "Downstream-on-demand (RSVP) ",
+      "C": "Ordered control ",
+      "D": "Conservative retention "
+    },
+    "correct_answers": {
+      "A": "Labels are given out for all known FECs to all neighbors without a request. ",
+      "B": "Labels are only given out upon request by an upstream router. ",
+      "C": "Ordered control ",
+      "D": "Conservative retention "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 9",
+    "question": "What is the proper name for the MPLS label range 32 - 1,023?",
+    "image": null,
+    "options": [
+      "Reserved for future use ",
+      "Static LSPs ",
+      "Statically assigned services ",
+      "Dynamically assigned "
+    ],
+    "correct_answers": ["Static LSPs "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 9",
+    "question": "If a router's ingress and egress label values for a specific FEC are identical, is this relationship usually necessary or random?",
+    "image": null,
+    "options": [
+      "Necessarily identical due to Ordered Control. ",
+      "Necessarily identical due to Per-platform label space. ",
+      "Completely random, as ingress labels are handed out and egress labels are received. ",
+      "Random unless the router is an LSR. "
+    ],
+    "correct_answers": [
+      "Completely random, as ingress labels are handed out and egress labels are received. "
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W19-WithAnswers.pdf",
+    "source": "Midterm1W19-WithAnswers.pdf Page 9",
+    "question": "In the R4 label table, why is the row '160 200 R3' considered invalid or impossible?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "R3 is not a direct next-hop from R4. ",
+      "Label 160 is reserved for static services. ",
+      "The egress label must always be POP for R4. ",
+      "The ingress label is missing. "
+    ],
+    "correct_answers": ["R3 is not a direct next-hop from R4. "],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

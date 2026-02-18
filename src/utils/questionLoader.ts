@@ -53,6 +53,25 @@ import net4010week2 from "@/assets/data/net4010/week2.json";
 import net4010week3 from "@/assets/data/net4010/week3.json";
 import net4010week4 from "@/assets/data/net4010/week4.json";
 import net4010week6 from "@/assets/data/net4010/week6.json";
+import net4010midterm from "@/assets/data/net4010/midterm.json";
+
+// NET 3012 Course Data
+import test1w2014 from "@/assets/data/net3012/test1w2014.json";
+import test1w2015 from "@/assets/data/net3012/test1w2015.json";
+import test1w2016 from "@/assets/data/net3012/test1w2016.json";
+import test1w2017 from "@/assets/data/net3012/test1w2017.json";
+import test1w2018 from "@/assets/data/net3012/test1w2018.json";
+import test1w2019 from "@/assets/data/net3012/test1w2019.json";
+import test1w2020 from "@/assets/data/net3012/test1w2020.json";
+import test2w2014 from "@/assets/data/net3012/test2w2014.json";
+//import test2w2015 from "@/assets/data/net3012/test2w2015.json";
+//import test2w2016 from "@/assets/data/net3012/test2w2016.json";
+//import test2w2017 from "@/assets/data/net3012/test2w2017.json";
+//import test2w2018 from "@/assets/data/net3012/test2w2018.json";
+//import test2w2019 from "@/assets/data/net3012/test2w2019.json";
+//import test2w2020 from "@/assets/data/net3012/test2w2020.json";
+import test1w2024 from "@/assets/data/net3012/test1w2024.json";
+import test1w2024mc from "@/assets/data/net3012/test1w2024mc.json";
 
 // Organize data by course
 const courseData: Record<string, Question[]> = {
@@ -84,6 +103,26 @@ const courseData: Record<string, Question[]> = {
     ...net4010week3,
     ...net4010week4,
     ...net4010week6,
+    ...net4010midterm,
+  ] as Question[],
+
+  net3012: [
+    ...test1w2014,
+    ...test1w2015,
+    ...test1w2016,
+    ...test1w2017,
+    ...test1w2018,
+    ...test1w2019,
+    ...test1w2020,
+    ...test2w2014,
+    //...test2w2015,
+    //...test2w2016,
+    //...test2w2017,
+    //...test2w2018,
+    //...test2w2019,
+    //...test2w2020,
+    ...test1w2024,
+    ...test1w2024mc,
   ] as Question[],
 };
 

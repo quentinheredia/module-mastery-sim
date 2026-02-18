@@ -1,0 +1,320 @@
+[
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 2",
+    "question": "Which two mechanisms in MPLS provide 'traffic protection' by recovering and reconverging faster than the IGP? ",
+    "image": null,
+    "options": [
+      "Ordered control mode and TTL ",
+      "Fast re-route and secondary LSPs ",
+      "LIB and LFIB ",
+      "Link LDP and Targeted-LDP "
+    ],
+    "correct_answers": ["Fast re-route and secondary LSPs "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 2",
+    "question": "Match the following loop protection methods in MPLS to their specific purpose. ",
+    "image": null,
+    "options": [
+      "Intended to prevent loops from being created in the first place ",
+      "Intended to control any loops that get created by accident "
+    ],
+    "pairs": {
+      "A": "Ordered control mode",
+      "B": "TTL field in MPLS header"
+    },
+    "correct_answers": {
+      "A": "Intended to prevent loops from being created in the first place ",
+      "B": "Intended to control any loops that get created by accident "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 2",
+    "question": "Match the following MPLS router types to the primary label operation they perform. ",
+    "image": "/images/quizzes/4011_1/",
+    "options": ["Push ", "Swap ", "Pop "],
+    "pairs": {
+      "A": "iLER",
+      "B": "LSR",
+      "C": "eLER"
+    },
+    "correct_answers": {
+      "A": "Push ",
+      "B": "Swap ",
+      "C": "Pop "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 2",
+    "question": "Which data table is exclusively used by a 'P' (LSR) router for forwarding MPLS packets? ",
+    "image": "/images/quizzes/4011_1/",
+    "options": ["RIB ", "Route Table ", "LIB ", "LFIB "],
+    "correct_answers": ["LFIB "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 3",
+    "question": "Match the 'Special Use' MPLS labels to their specific values. ",
+    "image": null,
+    "options": ["0 ", "1 ", "2 ", "3 "],
+    "pairs": {
+      "A": "Explicit NULL (for IPv4)",
+      "B": "Router Alert",
+      "C": "Explicit NULL (for IPv6)",
+      "D": "Implicit NULL"
+    },
+    "correct_answers": {
+      "A": "0 ",
+      "B": "1 ",
+      "C": "2 ",
+      "D": "3 "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 3",
+    "question": "What is the numeric range for labels that are dynamically assigned by MPLS protocols? ",
+    "image": null,
+    "options": ["0 - 15 ", "32,768 - 131,071 ", "1,024 - 4,096", "16 - 32,767"],
+    "correct_answers": ["32,768 - 131,071 "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 3",
+    "question": "In an Ethernet II frame, where are the MPLS headers placed? ",
+    "image": null,
+    "options": [
+      "Before the destination MAC address",
+      "Between the IP header and the TCP/UDP payload",
+      "Immediately after the frame header (after dst+src MAC and ethertype) ",
+      "At the very end of the frame after the payload"
+    ],
+    "correct_answers": [
+      "Immediately after the frame header (after dst+src MAC and ethertype) "
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 3",
+    "question": "What is the size of the 'Label' field in a standard MPLS header? ",
+    "image": null,
+    "options": ["3 bits ", "8 bits ", "20 bits ", "32 bits"],
+    "correct_answers": ["20 bits "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 3",
+    "question": "How effective is LDP in achieving a 'BGP-free' core? ",
+    "image": null,
+    "options": [
+      "Not effective because it doesn't support iBGP",
+      "It provides little benefit as it always follows the IGP ",
+      "It is excellent because it provides the full-mesh connectivity needed for iBGP ",
+      "It only works if ECMP is disabled"
+    ],
+    "correct_answers": [
+      "It is excellent because it provides the full-mesh connectivity needed for iBGP "
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 4",
+    "question": "Which of the following are valid names for the label used at the very top of an MPLS label stack? ",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "Service Label",
+      "Inner Label",
+      "Transport Label ",
+      "Bottom Label"
+    ],
+    "correct_answers": ["Transport Label "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 4",
+    "question": "Which of the following are optimizations used for RSVP session refresh? ",
+    "image": null,
+    "options": [
+      "Hello Protocol ",
+      "Refresh randomization ",
+      "Msg ID + ACK ",
+      "Summary Refresh ",
+      "All of the above "
+    ],
+    "correct_answers": ["All of the above "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 4",
+    "question": "What is the maximum number of LSP-paths that may be associated with a single RSVP-based LSP that is up/up? ",
+    "image": null,
+    "options": ["1 ", "2", "8 ", "16"],
+    "correct_answers": ["8 "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 5",
+    "question": "In an MPLS L3 VPN, what happens to the customer's L2 frame when it reaches the iLER? ",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "It is preserved intact throughout the tunnel ",
+      "The L2 header is stripped ",
+      "A new L2 header is added and encapsulated inside the service label",
+      "The L2 frame is converted to ATM"
+    ],
+    "correct_answers": ["The L2 header is stripped "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 5",
+    "question": "What is a primary difference between L3 VPN and VPLS frame handling? ",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "L3 VPN preserves customer L3 TTL; VPLS decrements it",
+      "L3 VPN strips customer L2; VPLS preserves customer L2 ",
+      "L3 VPN adds a service label; VPLS does not",
+      "VPLS is not compatible with transport tunnels"
+    ],
+    "correct_answers": [
+      "L3 VPN strips customer L2; VPLS preserves customer L2 "
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 6",
+    "question": "Match the MPLS tunneling modes to their effect on the customer's IP TTL. ",
+    "image": null,
+    "options": [
+      "Customer TTL gets decremented at every hop ",
+      "Customer TTL is decremented only at iLER and eLER, effectively hiding the LSRs "
+    ],
+    "pairs": {
+      "A": "Uniform mode",
+      "B": "Pipe mode"
+    },
+    "correct_answers": {
+      "A": "Customer TTL gets decremented at every hop ",
+      "B": "Customer TTL is decremented only at iLER and eLER, effectively hiding the LSRs "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 6",
+    "question": "Which statement correctly describes a difference between Link LDP and Targeted-LDP (T-LDP)? ",
+    "image": null,
+    "options": [
+      "Link LDP uses unicast; T-LDP uses multicast",
+      "Link LDP is for service labels; T-LDP is for transport tunnels",
+      "Link LDP requires directly connected neighbors; T-LDP has no such restriction ",
+      "Link LDP neighbors must be explicitly configured; T-LDP is discovery-based"
+    ],
+    "correct_answers": [
+      "Link LDP requires directly connected neighbors; T-LDP has no such restriction "
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 6",
+    "question": "Match the LDP message type to the connection it maintains. ",
+    "image": null,
+    "options": [
+      "Sent over UDP to maintain the adjacency ",
+      "Sent over TCP to maintain the session "
+    ],
+    "pairs": {
+      "A": "Hello messages",
+      "B": "Keep-alive messages"
+    },
+    "correct_answers": {
+      "A": "Sent over UDP to maintain the adjacency ",
+      "B": "Sent over TCP to maintain the session "
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 6",
+    "question": "What happens if neighboring LDP routers have mismatched configured Hello timeout values? ",
+    "image": null,
+    "options": [
+      "The adjacency fails to form",
+      "Both neighbors use the lowest configured value ",
+      "The session resets every 60 seconds",
+      "The routers default to a 3-second timeout"
+    ],
+    "correct_answers": ["Both neighbors use the lowest configured value "],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 7",
+    "question": "In per-platform label space, why might multiple prefix bindings show identical label values for the same FEC? ",
+    "image": null,
+    "options": [
+      "It is purely coincidental",
+      "Any/all interfaces receive the same label for a given FEC on that platform ",
+      "The router has run out of dynamic labels",
+      "ECMP is active"
+    ],
+    "correct_answers": [
+      "Any/all interfaces receive the same label for a given FEC on that platform "
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W16-WithAnswers.pdf",
+    "source": "Midterm1W16-WithAnswers.pdf Page 8",
+    "question": "What is Penultimate Hop Popping (PHP) and why is it used? ",
+    "image": null,
+    "options": [
+      "It is a loop prevention mechanism for high-speed links",
+      "It is the popping of labels just before the tunnel destination to reduce resource load on 'small' LER devices ",
+      "It is a method of encryption for private IP addresses",
+      "It is a BGP optimization for urban cell tower sites"
+    ],
+    "correct_answers": [
+      "It is the popping of labels just before the tunnel destination to reduce resource load on 'small' LER devices "
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

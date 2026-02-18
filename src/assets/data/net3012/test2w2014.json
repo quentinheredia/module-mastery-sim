@@ -1,0 +1,290 @@
+[
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 2",
+    "question": "What is the one parameter for RSVP path selection that is included in the 'path' specification?",
+    "image": null,
+    "options": [
+      "Bandwidth",
+      "Loose / strict hop specification",
+      "TE metrics",
+      "Link coloring",
+      "SRLG"
+    ],
+    "correct_answers": ["Loose / strict hop specification"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 2",
+    "question": "Which of the following are parameters that can be used for Traffic Engineering (TE)?",
+    "image": null,
+    "options": [
+      "Bandwidth",
+      "Number of hops",
+      "Link coloring",
+      "TE metrics",
+      "All of the above"
+    ],
+    "correct_answers": ["All of the above"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 2",
+    "question": "What mechanism (or object) does RSVP use to communicate the explicit path to downstream routers?",
+    "image": null,
+    "options": [
+      "Label Request Object",
+      "Explicit Route Object (ERO)",
+      "Path Selection Object",
+      "Hop Limit Object"
+    ],
+    "correct_answers": ["Explicit Route Object (ERO)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 2",
+    "question": "What parameter must be specified or configured for Traffic Engineering (TE) parameters to actually be used in determining the LSP path?",
+    "image": null,
+    "options": ["LDP", "OSPF", "CSPF", "RSVP"],
+    "correct_answers": ["CSPF"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 2",
+    "question": "Based on the reference topology, why would a path specification with 'hop 10 10.10.10.4 strict' and 'hop 20 10.10.10.6 strict' fail for an LSP from R1 to R6?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "Missing R2 or R3 as an intermediate hop",
+      "Invalid IP addresses",
+      "R6 is unreachable",
+      "Strict hops are not supported"
+    ],
+    "correct_answers": ["Missing R2 or R3 as an intermediate hop"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 3",
+    "question": "Match the following troubleshooting tools to their characteristics.",
+    "image": null,
+    "options": [
+      "Uni-directional test at the LSP level",
+      "Uni-directional test at the SDP level",
+      "Bi-directional test at the service level",
+      "Standard bi-directional IP connectivity test"
+    ],
+    "pairs": {
+      "A": "oam lsp-ping",
+      "B": "oam sdp-ping",
+      "C": "cpe-ping",
+      "D": "ping"
+    },
+    "correct_answers": {
+      "A": "Uni-directional test at the LSP level",
+      "B": "Uni-directional test at the SDP level",
+      "C": "Bi-directional test at the service level",
+      "D": "Standard bi-directional IP connectivity test"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 3",
+    "question": "What is the specific MPLS-related 'trace' command used to help understand LSP paths and unanticipated changes?",
+    "image": null,
+    "options": ["tracert", "oam lsp-trace", "mpls-trace", "sdp-trace"],
+    "correct_answers": ["oam lsp-trace"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 3",
+    "question": "By what mechanism are Traffic Engineering (TE) properties propagated through an OSPF network?",
+    "image": null,
+    "options": [
+      "Type 1 LSAs",
+      "Type 5 LSAs",
+      "Opaque or Type 10 LSAs",
+      "Type 7 LSAs"
+    ],
+    "correct_answers": ["Opaque or Type 10 LSAs"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 3",
+    "question": "What is a restriction on the propagation of Traffic Engineering (TE) properties in OSPF?",
+    "image": null,
+    "options": [
+      "They propagate across the entire AS",
+      "They are intra-area only",
+      "They only propagate to the ABR",
+      "They are limited to the backbone area (Area 0)"
+    ],
+    "correct_answers": ["They are intra-area only"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 3",
+    "question": "Which of these routing protocols is capable of carrying Traffic Engineering (TE) properties?",
+    "image": null,
+    "options": ["RIP", "BGP", "IS-IS", "EIGRP"],
+    "correct_answers": ["IS-IS"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 4",
+    "question": "What default mechanism does RSVP use as a 'keep-alive' for the LSPs it creates?",
+    "image": null,
+    "options": [
+      "Hello packets",
+      "Path and Resv messages",
+      "Keep-alive timers",
+      "LDP messages"
+    ],
+    "correct_answers": ["Path and Resv messages"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 4",
+    "question": "In the context of this course, what does the acronym 'TED' stand for?",
+    "image": null,
+    "options": [
+      "Traffic Error Database",
+      "Traffic Engineering Database",
+      "Technical Engineering Design",
+      "Topology Exchange Diagram"
+    ],
+    "correct_answers": ["Traffic Engineering Database"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 4",
+    "question": "Match the LSP path description sections to their definitions.",
+    "image": null,
+    "options": [
+      "Admin configured in path statement",
+      "Determined by the CSPF algorithm taking TE constraints into account",
+      "Obtained from the RSVP RRO; resulting path currently active"
+    ],
+    "pairs": {
+      "A": "ExplicitHops",
+      "B": "ComputedHops",
+      "C": "Actual Hops"
+    },
+    "correct_answers": {
+      "A": "Admin configured in path statement",
+      "B": "Determined by the CSPF algorithm taking TE constraints into account",
+      "C": "Obtained from the RSVP RRO; resulting path currently active"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 4",
+    "question": "Which of the following are recognized uses for MPLS as discussed in the course materials?",
+    "image": null,
+    "options": ["BGP shortcuts", "6PE", "IGP shortcuts", "All of the above"],
+    "correct_answers": ["All of the above"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 4",
+    "question": "In the SR OS, what is the maximum number of link 'colours' (admin groups) that may exist?",
+    "image": null,
+    "options": ["16", "32", "64", "128"],
+    "correct_answers": ["32"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 5",
+    "question": "What is the maximum number of link 'colours' that may be applied to a single link in the SR OS?",
+    "image": null,
+    "options": ["1", "5", "10", "32"],
+    "correct_answers": ["5"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 5",
+    "question": "For Type 10 LSAs, what are the two top-level TLV sub-types they contain?",
+    "image": null,
+    "options": [
+      "Router and Link",
+      "Path and Reserved",
+      "LSP and SDP",
+      "Area and Metric"
+    ],
+    "correct_answers": ["Router and Link"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 5",
+    "question": "When defining a distributed ePipe service, which item is considered globally significant?",
+    "image": null,
+    "options": ["Customer ID", "Service ID", "SDP ID", "VC-ID"],
+    "correct_answers": ["VC-ID"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 6",
+    "question": "What is the primary difference between a local ePipe service and a distributed ePipe service?",
+    "image": null,
+    "options": [
+      "Local requires BGP, distributed uses OSPF",
+      "Local won't have/need an SDP, distributed uses exactly one SDP",
+      "Local uses tags, distributed is untagged",
+      "Local is for voice, distributed is for data"
+    ],
+    "correct_answers": [
+      "Local won't have/need an SDP, distributed uses exactly one SDP"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm2W14-WithAnswers.pdf",
+    "source": "Midterm2W14-WithAnswers.pdf Page 6",
+    "question": "In the context of SAP encapsulation, what does 'Null encapsulation' specifically mean?",
+    "image": null,
+    "options": [
+      "The service is disabled",
+      "No Q-tags (Dot1q or QinQ) are used",
+      "The VLAN number is set to 4095",
+      "Only management traffic is allowed"
+    ],
+    "correct_answers": ["No Q-tags (Dot1q or QinQ) are used"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

@@ -1,0 +1,364 @@
+[
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 3-4",
+    "question": "The Cyclic Prefix (CP) is added in the time domain and does not change the fundamental carrier frequency. True or False?",
+    "image": null,
+    "options": ["True", "False"],
+    "correct_answers": ["True"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 6-7",
+    "question": "What is the primary function of the 'Cyclic Prefix' (CP) when dealing with Multipath Delay Spread?",
+    "image": "",
+    "options": [
+      "It tells the receiver which user is transmitting.",
+      "It acts as a buffer to ensure that the 'tail' of one symbol doesn't overlap with the 'head' of the next",
+      "It increases the frequency of the carrier",
+      "It encrypts the start of the packet."
+    ],
+    "correct_answers": [
+      "It acts as a buffer to ensure that the 'tail' of one symbol doesn't overlap with the 'head' of the next"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 8-9",
+    "question": "What is an isotropic antenna?",
+    "image": "",
+    "options": [
+      "An antenna that radiates power only in a single narrow beam",
+      "A theoretical antenna that radiates power equally in all directions",
+      "An antenna used exclusively for 5G mmWave",
+      "An antenna that only receives signals but does not transmit"
+    ],
+    "correct_answers": [
+      "A theoretical antenna that radiates power equally in all directions"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 10-11",
+    "question": "What information is available from a radiation pattern?",
+    "image": "",
+    "options": [
+      "The frequency and wavelength of the signal",
+      "The data rate in bits per second",
+      "A graphical representation of the radiation properties of an antenna as a function of space coordinates",
+      "The cost of the antenna hardware"
+    ],
+    "correct_answers": [
+      "A graphical representation of the radiation properties of an antenna as a function of space coordinates"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 13-15",
+    "question": "What is multipath fading?",
+    "image": "",
+    "options": [
+      "The loss of signal due to the battery dying",
+      "Fading that occurs in any environment where there is multipath propagation, often creating complex transmission effects in mobile environments",
+      "The intentional reduction of signal power to save energy",
+      "A security attack where multiple paths are blocked by an attacker"
+    ],
+    "correct_answers": [
+      "Fading that occurs in any environment where there is multipath propagation, often creating complex transmission effects in mobile environments"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 16-17",
+    "question": "Which of the following are main sources of loss for mmWave transmission?",
+    "image": null,
+    "options": [
+      "Free space loss",
+      "Atmospheric gaseous losses",
+      "Rain losses",
+      "Foliage losses",
+      "Encryption overhead"
+    ],
+    "correct_answers": [
+      "Free space loss",
+      "Atmospheric gaseous losses",
+      "Rain losses",
+      "Foliage losses"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 18-20",
+    "question": "What are the advantages of beamforming?",
+    "image": "[Image comparing legacy antenna coverage vs 3D beamforming with massive MIMO]",
+    "options": [
+      "Higher SNR through highly directional transmission",
+      "Interference prevention and rejection (prevailing over CCI)",
+      "Higher network efficiency allowing denser deployments",
+      "Lowering the carrier frequency for better wall penetration"
+    ],
+    "correct_answers": [
+      "Higher SNR through highly directional transmission",
+      "Interference prevention and rejection (prevailing over CCI)",
+      "Higher network efficiency allowing denser deployments"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 21-22",
+    "question": "Match the four elements of beam management for downlink transmission to their definitions.",
+    "image": null,
+    "options": [
+      "BS transmits beams in a sequence for UE measurement",
+      "UE evaluates the quality of received signals",
+      "UE selects the optimal beam pair",
+      "UE sends measurement info back to the gNB"
+    ],
+    "pairs": {
+      "A": "Beam sweeping",
+      "B": "Beam measurement",
+      "C": "Beam determination",
+      "D": "Beam reporting"
+    },
+    "correct_answers": {
+      "A": "BS transmits beams in a sequence for UE measurement",
+      "B": "UE evaluates the quality of received signals",
+      "C": "UE selects the optimal beam pair",
+      "D": "UE sends measurement info back to the gNB"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 23-24",
+    "question": "Match the rate type to its correct definition.",
+    "image": null,
+    "options": [
+      "Rate at which bits are transmitted (bps)",
+      "Number of signal units or symbols per second (baud)"
+    ],
+    "pairs": {
+      "A": "Data rate",
+      "B": "Modulation rate"
+    },
+    "correct_answers": {
+      "A": "Rate at which bits are transmitted (bps)",
+      "B": "Number of signal units or symbols per second (baud)"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 25-27",
+    "question": "What is the difference between OFDM and OFDMA?",
+    "image": "[Image comparing OFDM and OFDMA subcarrier allocation over time]",
+    "options": [
+      "OFDM uses one subcarrier, OFDMA uses many",
+      "OFDMA divides subcarriers into groups (subchannels) that can be assigned to different receivers/transmitters",
+      "OFDM is only for 2G, OFDMA is only for 5G",
+      "There is no difference"
+    ],
+    "correct_answers": [
+      "OFDMA divides subcarriers into groups (subchannels) that can be assigned to different receivers/transmitters"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 28-29",
+    "question": "In an attack tree representing a Man-in-the-Middle (MitM) attack, which action is considered a 'Leaf Node'?",
+    "image": null,
+    "options": [
+      "Compromise data integrity",
+      "Bypass network security",
+      "Execute an ARP-cache poisoning script",
+      "Eavesdrop on user credentials"
+    ],
+    "correct_answers": ["Execute an ARP-cache poisoning script"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 30-31",
+    "question": "In the STRIDE model, modifying firmware to include a backdoor is which type of threat?",
+    "image": null,
+    "options": ["DoS", "Tampering", "Spoofing", "Information Disclosure"],
+    "correct_answers": ["Tampering"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 32-33",
+    "question": "As signal frequency increases (e.g., moving to 5G mmWave), the signal is generally able to pass through walls more easily. True or False?",
+    "image": null,
+    "options": ["True", "False"],
+    "correct_answers": ["False"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Midterm Practice - Page 34-35",
+    "question": "An attacker deletes logs of their unauthorized access to hide their trail. Which STRIDE category does this fall under?",
+    "image": null,
+    "options": ["Repudiation", "DoS", "Spoofing", "Information Disclosure"],
+    "correct_answers": ["Repudiation"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Assignment #1 - Midterm Prep - Page 6-7",
+    "question": "Explain the difference between Beamforming and MIMO. From a security perspective, why is digital beamforming considered a 'physical layer security' enhancement compared to omnidirectional broadcasting?",
+    "image": "",
+    "options": [
+      "MIMO uses multiple antennas for throughput; Beamforming directs signals to users. Security: Beamforming concentrates energy in a narrow 'pencil beam,' reducing the attack surface.",
+      "MIMO is for security; Beamforming is for speed. Security: MIMO encrypts the signal 360°.",
+      "MIMO directs signals; Beamforming increases bandwidth. Security: Beamforming makes signals look like noise.",
+      "There is no difference between the two; they both broadcast omnidirectionally."
+    ],
+    "correct_answers": [
+      "MIMO uses multiple antennas for throughput; Beamforming directs signals to users. Security: Beamforming concentrates energy in a narrow 'pencil beam,' reducing the attack surface."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Assignment #1 - Midterm Prep - Page 8-9",
+    "question": "Explain how the Cyclic Prefix (CP) in an OFDM symbol is used to mitigate the effects of Inter-Symbol Interference (ISI) caused by multipath fading.",
+    "image": "",
+    "options": [
+      "The CP increases the power of the signal to punch through walls.",
+      "The CP acts as a temporal buffer; delayed echoes fall into the guard interval and do not corrupt the next data symbol.",
+      "The CP changes the frequency of the carrier to avoid interference.",
+      "The CP tells the receiver which user is transmitting to avoid collisions."
+    ],
+    "correct_answers": [
+      "The CP acts as a temporal buffer; delayed echoes fall into the guard interval and do not corrupt the next data symbol."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Assignment #1 - Midterm Prep - Page 10-11",
+    "question": "Which component of the STRIDE threat model is concerned with an attacker gaining unauthorized access to sensitive V2I (Vehicle-to-Infrastructure) data like location or speed?",
+    "image": null,
+    "options": [
+      "Elevation of Privilege",
+      "Information Disclosure",
+      "Repudiation",
+      "Spoofing"
+    ],
+    "correct_answers": ["Information Disclosure"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Assignment #1 - Midterm Prep - Page 12-13",
+    "question": "An attacker sets up a Wi-Fi Access Point with the exact same SSID as a nearby coffee shop to intercept user traffic. This is known as:",
+    "image": null,
+    "options": ["Evil attack", "Rogue AP", "Jamming", "Sinkhole Attack"],
+    "correct_answers": ["Rogue AP"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Assignment #1 - Midterm Prep - Page 14-15",
+    "question": "DSSS (Direct-Sequence Spread Spectrum) uses a 'spreading' sequence to increase the bandwidth of the signal, making it look like low-level noise to unauthorized listeners. True or False?",
+    "image": null,
+    "options": ["True", "False"],
+    "correct_answers": ["True"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Assignment #1 - Midterm Prep - Page 16-17",
+    "question": "In a TDMA system, if two users transmit in the exact same time slot on the same frequency, what occurs?",
+    "image": "",
+    "options": [
+      "Collision / Interference",
+      "Power Increase",
+      "Frequency Hopping",
+      "Automatic Beamforming"
+    ],
+    "correct_answers": ["Collision / Interference"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Assignment #1 - Midterm Prep - Page 18-19",
+    "question": "In wireless communications, what does 'Noise' (specifically Thermal Noise / Johnson-Nyquist noise) typically refer to?",
+    "image": null,
+    "options": [
+      "Random electronic fluctuations in the receiver's hardware",
+      "The overhead of the MAC layer headers",
+      "Intentional jamming from a bad actor",
+      "The sound of wind hitting the antenna"
+    ],
+    "correct_answers": [
+      "Random electronic fluctuations in the receiver's hardware"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Assignment #1 - Midterm Prep - Page 20-21",
+    "question": "An attacker uses a device that senses when a control packet is being sent and immediately transmits noise to disrupt only that specific packet. What is this attack called?",
+    "image": null,
+    "options": [
+      "Reactive Jamming",
+      "Constant Jamming",
+      "Frequency Hopping",
+      "Path Loss Simulation"
+    ],
+    "correct_answers": ["Reactive Jamming"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Assignment #1 - Midterm Prep - Page 22-23",
+    "question": "In the STRIDE model, an attacker who modifies a firmware update to include a backdoor is committing which type of threat?",
+    "image": null,
+    "options": ["DoS", "Tampering", "Spoofing", "Information Disclosure"],
+    "correct_answers": ["Tampering"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm Practice",
+    "source": "Assignment #1 - Midterm Prep - Page 24-25",
+    "question": "In 5G, 'Beam Management' is used to track movement. If an attacker performs a 'Beam-Stealing' attack (redirecting the beam away from the legitimate user), which STRIDE category does this primarily fall under?",
+    "image": null,
+    "options": ["Tampering", "Information Disclosure", "DoS", "Repudiation"],
+    "correct_answers": ["DoS"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

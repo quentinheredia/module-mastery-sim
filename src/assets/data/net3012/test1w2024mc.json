@@ -1,0 +1,335 @@
+[
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 1",
+    "question": "In an MPLS topology with multiple VPN services between two points, which statements regarding label propagation are true?",
+    "image": null,
+    "options": [
+      "The service label (per LSP) stays the same through the entire path",
+      "The transport labels are identical for all services along each segment of the path",
+      "The service labels are identical for all services along each segment of the path",
+      "The transport label (per LSP) stays the same through the entire path",
+      "Both the service and the transport label are 'random' and vary at each hop"
+    ],
+    "correct_answers": [
+      "The service label (per LSP) stays the same through the entire path",
+      "The transport labels are identical for all services along each segment of the path"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 1",
+    "question": "Regarding a Nokia router, what is the purpose of the command: 'tools perform router mpls cspf...'?",
+    "image": null,
+    "options": [
+      "It enables an LSP",
+      "It forces the resignalling of an LSP",
+      "It checks whether a particular LSP is possible",
+      "It's used with LDP",
+      "It's used with RSVP"
+    ],
+    "correct_answers": [
+      "It checks whether a particular LSP is possible",
+      "It's used with RSVP"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 1",
+    "question": "Identify the restriction(s) on the propagation of Traffic Engineering (TE) properties in a network.",
+    "image": null,
+    "options": [
+      "All routers must be Opaque capable",
+      "All routers must have Traffic Engineering enabled",
+      "They flow intra-area only",
+      "The flow extra-area only",
+      "They flow upstream only"
+    ],
+    "correct_answers": [
+      "All routers must be Opaque capable",
+      "They flow intra-area only"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 1",
+    "question": "In which direction(s) are labels signaled and used within an MPLS network?",
+    "image": null,
+    "options": [
+      "Labels are signaled upstream",
+      "Labels are signaled downstream",
+      "Labels are used upstream",
+      "Labels are used downstream",
+      "None of the other answers is correct"
+    ],
+    "correct_answers": [
+      "Labels are signaled upstream",
+      "Labels are used downstream"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 2",
+    "question": "Which parts of a router are responsible for signaling and using MPLS labels?",
+    "image": null,
+    "options": [
+      "Labels are signaled via the management plane",
+      "Labels are signaled via the data plane",
+      "Labels are used by the control plane",
+      "Labels are signaled via the control plane",
+      "Labels are used by the data plane"
+    ],
+    "correct_answers": [
+      "Labels are signaled via the control plane",
+      "Labels are used by the data plane"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 2",
+    "question": "Which specific alert is used in connection with MPLS LSPs?",
+    "image": null,
+    "options": [
+      "oam Alert message",
+      "MPLS Alert label",
+      "IP header Alert",
+      "RSVP Alert message",
+      "LDP Alert message"
+    ],
+    "correct_answers": ["MPLS Alert label"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 2",
+    "question": "Which objects or database entries are involved in maintaining an RSVP session?",
+    "image": null,
+    "options": ["PSB", "RSB", "ERO", "LFIB", "LIB"],
+    "correct_answers": ["PSB", "RSB"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 2",
+    "question": "Which of the following are signaled only end-to-end in an MPLS topology rather than formed from a chain of point-to-point sessions?",
+    "image": null,
+    "options": ["IGP", "LDP/RSVP", "LSP", "T-LDP", "MP-BGP"],
+    "correct_answers": ["T-LDP", "MP-BGP"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 2",
+    "question": "Which of the following is true about using OAM ping and OAM trace commands on a Nokia router?",
+    "image": null,
+    "options": [
+      "The requests use the LSP and the replies use plain IP",
+      "The replies use the LSP and the requests use plain IP",
+      "OAM trace uses an Alert label, OAM ping does not",
+      "They both always show all LSR hops",
+      "None of the other answers is correct"
+    ],
+    "correct_answers": [
+      "The requests use the LSP and the replies use plain IP"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 2",
+    "question": "Which labels can be popped by the egress router without performing a lookup?",
+    "image": null,
+    "options": ["0", "3", "300", "3300", "524300"],
+    "correct_answers": ["0", "3"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 3",
+    "question": "Which protocol is used to signal MPLS transport labels?",
+    "image": null,
+    "options": [
+      "Multiprotocol BGP",
+      "Targeted LDP",
+      "GRE",
+      "RSVP",
+      "All the answers"
+    ],
+    "correct_answers": ["RSVP"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 3",
+    "question": "What terms define a Forwarding Equivalence Class (FEC)?",
+    "image": null,
+    "options": [
+      "Packets forwarded in the same manner",
+      "Packets forwarded over the same path",
+      "Packets forwarded with the same forwarding treatment",
+      "Packets always forwarded with both a service and a transport label",
+      "Packets always forwarded with either a service or a transport label but not both"
+    ],
+    "correct_answers": [
+      "Packets forwarded in the same manner",
+      "Packets forwarded over the same path",
+      "Packets forwarded with the same forwarding treatment"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 3",
+    "question": "On a Nokia LDP router, which labels received from peers are discarded and not entered into the Label Information Base (LIB)?",
+    "image": null,
+    "options": [
+      "None: all labels are retained",
+      "Labels that don't match the import policy are discarded",
+      "Labels must match both the import and export policy to be retained",
+      "Labels that don't match the export policy are discarded",
+      "Labels that lead towards the IGP egress path are discarded"
+    ],
+    "correct_answers": ["None: all labels are retained"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 3",
+    "question": "An MPLS router is signaled a label of 3 (implicit null) from its downstream router. What action will it take when receiving a data packet for this LSP?",
+    "image": null,
+    "options": [
+      "Perform label swapping and transmit with label 3",
+      "Push the label of 3 and transmit the packet",
+      "Silently discard the packet",
+      "Extract the data packet to the CPM for OAM options",
+      "Pop the outer label and forward the data packet to the next-hop"
+    ],
+    "correct_answers": [
+      "Pop the outer label and forward the data packet to the next-hop"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 3",
+    "question": "What is the maximum number of labels in the label stack that a Label Switch Router (LSR) will modify for MPLS VPN frames?",
+    "image": null,
+    "options": [
+      "At most one",
+      "Exactly one",
+      "At least one",
+      "At most two",
+      "Exactly two"
+    ],
+    "correct_answers": ["Exactly one"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 4",
+    "question": "Match the following MPLS special use labels to their standard decimal values.",
+    "image": null,
+    "options": ["0", "1", "2", "3"],
+    "pairs": {
+      "A": "Explicit Null (IPv4)",
+      "B": "Router Alert",
+      "C": "Explicit Null (IPv6)",
+      "D": "Implicit Null"
+    },
+    "correct_answers": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 4",
+    "question": "In an LDP-over-RSVP tunnel scenario, which labels remain identical across all hops?",
+    "image": null,
+    "options": [
+      "Inner labels",
+      "Outer labels",
+      "LDP labels",
+      "RSVP labels",
+      "All labels change at some point"
+    ],
+    "correct_answers": ["All labels change at some point"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 4",
+    "question": "If Link LDP is used between R1, R2, and R3, where R1 has two links to R2 and one link to R3, how many Link LDP sessions will R2 have?",
+    "image": null,
+    "options": ["1", "2", "3", "4", "There is not enough information"],
+    "correct_answers": ["1"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 4",
+    "question": "Which statement describes packets egressing a CE router directly connected to a PE in an MPLS VPN environment?",
+    "image": null,
+    "options": [
+      "The packets are unlabeled",
+      "The packets have one outer transport label and one inner service label",
+      "The packets have one inner transport label and one outer service label",
+      "There is not enough information to answer the question"
+    ],
+    "correct_answers": ["The packets are unlabeled"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W24-MC-Answers.pdf",
+    "source": "Midterm1W24-MC-Answers.pdf Page 5",
+    "question": "Match the RSVP message types to their behavior during LSP teardown or signaling.",
+    "image": null,
+    "options": [
+      "Sent from head end to tail end, intercepted by each router along the path.",
+      "Sent from the head end towards the tail end when an operator shuts down the LSP.",
+      "A message type used to signal errors in the path.",
+      "Carries label binding information."
+    ],
+    "pairs": {
+      "A": "Path Tear",
+      "B": "Path Error",
+      "C": "Resv Tear",
+      "D": "Path"
+    },
+    "correct_answers": {
+      "A": "Sent from head end to tail end, intercepted by each router along the path.",
+      "B": "A message type used to signal errors in the path.",
+      "C": "Sent from the head end towards the tail end when an operator shuts down the LSP.",
+      "D": "Carries label binding information."
+    },
+    "question_type": "matching",
+    "points": 1
+  }
+]

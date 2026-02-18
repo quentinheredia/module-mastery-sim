@@ -1,0 +1,302 @@
+[
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 2",
+    "question": "Match the following MPLS router roles to their primary label operation.",
+    "image": "/images/quizzes/4011_1/",
+    "options": ["Push", "Swap", "Pop"],
+    "pairs": {
+      "A": "iLER (Ingress Label Edge Router)",
+      "B": "LSR (Label Switch Router)",
+      "C": "eLER (Egress Label Edge Router)"
+    },
+    "correct_answers": {
+      "A": "Push",
+      "B": "Swap",
+      "C": "Pop"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 2",
+    "question": "An MPLS egress router performs two lookups to process a packet. What is the correct order of these lookups?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "IP forwarding lookup, then Label lookup",
+      "Label lookup, then IP forwarding lookup",
+      "MAC address lookup, then Label lookup",
+      "RIB lookup, then LIB lookup"
+    ],
+    "correct_answers": ["Label lookup, then IP forwarding lookup"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 3",
+    "question": "Which field in the IP header of an RSVP PATH message alerts intermediate routers to pass the message to the control plane?",
+    "image": "/images/quizzes/4011_1/",
+    "options": ["TTL", "Option = Rtr Alert", "Protocol ID", "DSCP bits"],
+    "correct_answers": ["Option = Rtr Alert"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 3",
+    "question": "Which protocols contribute information specifically used to populate the LFIB (Label Forwarding Information Base)?",
+    "image": null,
+    "options": ["RIP and OSPF", "BGP and IS-IS", "LDP and RSVP", "TCP and UDP"],
+    "correct_answers": ["LDP and RSVP"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 3",
+    "question": "The definition of a Forwarding Equivalence Class (FEC) includes which of the following aspects?",
+    "image": null,
+    "options": [
+      "Forwarded in the same manner",
+      "Forwarded over the same path",
+      "Forwarded with the same forwarding treatment",
+      "All of the above"
+    ],
+    "correct_answers": ["All of the above"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 3",
+    "question": "Match the networking technology to the location where FEC lookup is performed.",
+    "image": null,
+    "options": [
+      "At every router along the path",
+      "Only at the iLER (Ingress Label Edge Router)"
+    ],
+    "pairs": {
+      "A": "Pure IP Routing",
+      "B": "MPLS Label Switching"
+    },
+    "correct_answers": {
+      "A": "At every router along the path",
+      "B": "Only at the iLER (Ingress Label Edge Router)"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 4",
+    "question": "Which protocols can be used specifically for the distribution of transport labels?",
+    "image": "/images/quizzes/4011_1/",
+    "options": ["LDP", "RSVP", "MP-BGP", "LDP and RSVP"],
+    "correct_answers": ["LDP and RSVP"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 4",
+    "question": "In an MPLS VPN with Traffic Engineering, which labels are distributed using the 'Downstream on Demand' method?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "Service labels (S1, S2)",
+      "Transport labels (T1, T2)",
+      "MAC addresses",
+      "IP headers"
+    ],
+    "correct_answers": ["Transport labels (T1, T2)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 5",
+    "question": "How many Layer 2 headers typically appear in a PDU within an LSR for an MPLS L3 VPN service running over Ethernet?",
+    "image": null,
+    "options": ["0", "1", "2", "3"],
+    "correct_answers": ["1"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 5",
+    "question": "What is the key property of OAM commands (like lsp-trace) regarding the return path of responses?",
+    "image": null,
+    "options": [
+      "Responses return via the same LSP path",
+      "Responses are routed back via the IGP",
+      "Responses return via a secondary LSP",
+      "Responses are dropped at the eLER"
+    ],
+    "correct_answers": ["Responses are routed back via the IGP"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 5",
+    "question": "Which parameter acts as a switch to influence whether TTL values are propagated from the IP header to the MPLS label stack?",
+    "image": null,
+    "options": [
+      "IGP shortcuts",
+      "Pipe vs Uniform mode",
+      "LDP prefix target",
+      "RSVP path name"
+    ],
+    "correct_answers": ["Pipe vs Uniform mode"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 6",
+    "question": "For a Layer 2 service, what is the effect on the customer IP TTL value when operating in Uniform mode compared to Pipe mode?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "Uniform mode decrements customer TTL at every hop",
+      "Pipe mode hides intermediate hops from customer TTL",
+      "There is no difference; customer TTL remains unchanged in both modes for L2 services",
+      "Uniform mode resets customer TTL to 255"
+    ],
+    "correct_answers": [
+      "There is no difference; customer TTL remains unchanged in both modes for L2 services"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 7",
+    "question": "In a networking context, what is referred to by the term 'Triple Play'?",
+    "image": null,
+    "options": [
+      "Routing, Switching, and Bridging",
+      "Voice, Video, and Data",
+      "TCP, UDP, and ICMP",
+      "iLER, LSR, and eLER"
+    ],
+    "correct_answers": ["Voice, Video, and Data"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 7",
+    "question": "Why would an egress router request Penultimate Hop Popping (PHP)?",
+    "image": null,
+    "options": [
+      "To increase the security of the label stack",
+      "To avoid a performance penalty of doing both a label lookup and an IP routing lookup",
+      "To force traffic onto a secondary LSP",
+      "To enable multicast support"
+    ],
+    "correct_answers": [
+      "To avoid a performance penalty of doing both a label lookup and an IP routing lookup"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 7",
+    "question": "When an RSVP session timeout occurs at an intermediate router (LSR), which messages are sent to tear down the LSP?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "HELLO messages",
+      "PATH TEAR and RESV TEAR",
+      "KEEP-ALIVE messages",
+      "ICMP Unreachable"
+    ],
+    "correct_answers": ["PATH TEAR and RESV TEAR"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 8",
+    "question": "Which pair of RSVP optimizations provides protection against lost messages in busy networks?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "Triple Play and PHP",
+      "Msg-ID and ACK Requirement",
+      "RIB and LIB sync",
+      "TCP Handshake and UDP Discovery"
+    ],
+    "correct_answers": ["Msg-ID and ACK Requirement"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 8",
+    "question": "Which Special Use label is sent by an ultimate router to request PHP (Penultimate Hop Popping)?",
+    "image": null,
+    "options": [
+      "Label 0 (Explicit Null)",
+      "Label 1 (Router Alert)",
+      "Label 3 (Implicit Null)",
+      "Label 7 (RSVP Preference)"
+    ],
+    "correct_answers": ["Label 3 (Implicit Null)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 8",
+    "question": "In Nokia SR OS, what are the default preference values used to ensure RSVP and LDP tunnels are preferred over regular IP routing?",
+    "image": null,
+    "options": [
+      "RSVP = 10, LDP = 15",
+      "RSVP = 7, LDP = 9",
+      "RSVP = 1, LDP = 5",
+      "RSVP = 100, LDP = 200"
+    ],
+    "correct_answers": ["RSVP = 7, LDP = 9"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 8",
+    "question": "How does an intermediate router distinguish between a regular IP packet and MPLS data plane traffic?",
+    "image": null,
+    "options": [
+      "By checking the TTL value",
+      "By examining the Ethertype field (e.g., 0x8847 for MPLS)",
+      "By looking at the Source IP address",
+      "By the size of the PDU"
+    ],
+    "correct_answers": [
+      "By examining the Ethertype field (e.g., 0x8847 for MPLS)"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W18-WithAnswers.pdf",
+    "source": "Midterm1W18-WithAnswers.pdf Page 9",
+    "question": "Match the Nokia SR OS command to its purpose in route redistribution.",
+    "image": null,
+    "options": [
+      "Define the redistribution policy",
+      "Activate or export the policy into a protocol"
+    ],
+    "pairs": {
+      "A": "policy-options / policy-statement",
+      "B": "export {policy-name}"
+    },
+    "correct_answers": {
+      "A": "Define the redistribution policy",
+      "B": "Activate or export the policy into a protocol"
+    },
+    "question_type": "matching",
+    "points": 1
+  }
+]

@@ -1,0 +1,329 @@
+[
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 2",
+    "question": "In the context of provider networks, what does the term 'converged' mean?",
+    "image": null,
+    "options": [
+      "The physical network uses multiple protocols to ensure redundancy.",
+      "A single physical network is built and maintained to carry multiple types of traffic that previously required separate networks.",
+      "The network can automatically switch between ATM and Frame Relay based on congestion.",
+      "All customers are required to use the same networking technology to connect to the provider."
+    ],
+    "correct_answers": [
+      "A single physical network is built and maintained to carry multiple types of traffic that previously required separate networks."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 2",
+    "question": "Match the following multi-point VPN services to their descriptions.",
+    "image": null,
+    "options": [
+      "A virtual 'switch' with 'ports' anywhere within the service provider's network.",
+      "A virtual router with ports anywhere within the service provider's network."
+    ],
+    "pairs": {
+      "A": "VPLS",
+      "B": "VPRN"
+    },
+    "correct_answers": {
+      "A": "A virtual 'switch' with 'ports' anywhere within the service provider's network.",
+      "B": "A virtual router with ports anywhere within the service provider's network."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 2",
+    "question": "What is the primary advantage of Traffic Engineering (TE) in an MPLS network?",
+    "image": null,
+    "options": [
+      "It automatically selects the shortest IGP path for all traffic.",
+      "It allows administrators to avoid hyper-aggregation by distributing traffic across links that might otherwise remain under-used.",
+      "It simplifies the network by reducing the number of labels required.",
+      "It ensures that all packets in a session follow the exact same physical path as the IGP."
+    ],
+    "correct_answers": [
+      "It allows administrators to avoid hyper-aggregation by distributing traffic across links that might otherwise remain under-used."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 3",
+    "question": "Which of the following elements are part of the definition of an MPLS Forwarding Equivalence Class (FEC)?",
+    "image": null,
+    "options": [
+      "A group of IP packets forwarded in the same manner.",
+      "Packets forwarded over the same path.",
+      "Packets receiving the same forwarding treatment.",
+      "All of the above."
+    ],
+    "correct_answers": ["All of the above."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 3",
+    "question": "Match the following MPLS label terms to their equivalent synonyms.",
+    "image": null,
+    "options": ["Transport, Outer, Top", "Service, Inner, Bottom"],
+    "pairs": {
+      "A": "Transport Label equivalents",
+      "B": "Service Label equivalents"
+    },
+    "correct_answers": {
+      "A": "Transport, Outer, Top",
+      "B": "Service, Inner, Bottom"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 3",
+    "question": "How does an MPLS router on an Ethernet interface distinguish between a conventional IP routed packet and an MPLS switched packet?",
+    "image": null,
+    "options": [
+      "By looking at the IP header version field.",
+      "By checking the Ethernet 'ethertype' field value.",
+      "By inspecting the TTL value of the packet.",
+      "By determining if the packet is unicast or multicast."
+    ],
+    "correct_answers": ["By checking the Ethernet 'ethertype' field value."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 3",
+    "question": "How many service tunnels can a single MPLS transport tunnel carry?",
+    "image": null,
+    "options": [
+      "Exactly 1",
+      "Exactly 255",
+      "Many/Lots (no specific fixed limit defined)",
+      "Exactly 7"
+    ],
+    "correct_answers": ["Many/Lots (no specific fixed limit defined)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 4",
+    "question": "Which of the following is true regarding VPRN (Layer 3 VPN) as illustrated in the provided diagrams?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "Customer framing is preserved intact.",
+      "Customer framing is discarded.",
+      "Service labels are always different at each hop.",
+      "It acts as a virtual switch rather than a router."
+    ],
+    "correct_answers": ["Customer framing is discarded."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 4",
+    "question": "In an MPLS label stack, what does the 'S' bit indicate when it is set?",
+    "image": null,
+    "options": [
+      "The label is a Service label.",
+      "The label is for a Static LSP.",
+      "The label is at the bottom of the stack.",
+      "The label requires special processing in the control plane."
+    ],
+    "correct_answers": ["The label is at the bottom of the stack."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 4",
+    "question": "Which two packet fields are handled differently depending on whether 'pipe mode' or 'uniform mode' is used in MPLS?",
+    "image": null,
+    "options": [
+      "IP Address and Port Number",
+      "TTL and DSCP (QoS value)",
+      "Ethertype and MAC Address",
+      "Payload Length and Checksum"
+    ],
+    "correct_answers": ["TTL and DSCP (QoS value)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 4",
+    "question": "What is the primary effect of 'pipe mode' on a customer's IP TTL value as it passes through a provider's LSR routers?",
+    "image": null,
+    "options": [
+      "The TTL is decremented at every LSR hop.",
+      "The TTL value is reset to 255 at the ingress.",
+      "The TTL value is not decremented by LSRs, making the provider network 'invisible' to the customer.",
+      "The TTL is only decremented if the packet is an OAM packet."
+    ],
+    "correct_answers": [
+      "The TTL value is not decremented by LSRs, making the provider network 'invisible' to the customer."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 4",
+    "question": "Match the following MPLS label ranges to their correct usage.",
+    "image": null,
+    "options": [
+      "Reserved (Special Use) Labels",
+      "Reserved for static LSPs",
+      "Statically assigned for services",
+      "Dynamically assigned by MPLS protocols"
+    ],
+    "pairs": {
+      "A": "0 - 15",
+      "B": "32 - 1,023",
+      "C": "2,048 - 18,431",
+      "D": "32,768 - 131,071"
+    },
+    "correct_answers": {
+      "A": "Reserved (Special Use) Labels",
+      "B": "Reserved for static LSPs",
+      "C": "Statically assigned for services",
+      "D": "Dynamically assigned by MPLS protocols"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 5",
+    "question": "What is the purpose of Penultimate Hop Popping (PHP) in MPLS?",
+    "image": null,
+    "options": [
+      "To increase the security of the label stack.",
+      "To reduce the processing load on the egress Label Edge Router (eLER).",
+      "To ensure that service labels are never exposed.",
+      "To allow the iLER to determine the path more quickly."
+    ],
+    "correct_answers": [
+      "To reduce the processing load on the egress Label Edge Router (eLER)."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 5",
+    "question": "Which MPLS label distribution control mode ensures a loop-free LSP path?",
+    "image": null,
+    "options": [
+      "Independent control mode",
+      "Ordered control mode",
+      "Dynamic control mode",
+      "Manual control mode"
+    ],
+    "correct_answers": ["Ordered control mode"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 5",
+    "question": "What is the specific function of the Router Alert Label (Label 1) in MPLS?",
+    "image": null,
+    "options": [
+      "It indicates the end of the label stack.",
+      "It tells the receiving router to pass the packet to the control plane for processing.",
+      "It alerts the router that the packet is a high-priority video stream.",
+      "It triggers an immediate decrement of the TTL."
+    ],
+    "correct_answers": [
+      "It tells the receiving router to pass the packet to the control plane for processing."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 5",
+    "question": "Which label distribution method (e.g., used by RSVP) requires the iLER to request and wait for a label before forwarding data?",
+    "image": null,
+    "options": [
+      "Downstream Unsolicited",
+      "Downstream On Demand",
+      "Upstream Unsolicited",
+      "Upstream On Demand"
+    ],
+    "correct_answers": ["Downstream On Demand"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 5",
+    "question": "Match the LDP concept to the transport protocol used to establish it.",
+    "image": null,
+    "options": ["Multicast UDP 'Hello' messages", "Unicast TCP messages"],
+    "pairs": {
+      "A": "LDP Adjacency",
+      "B": "LDP Session"
+    },
+    "correct_answers": {
+      "A": "Multicast UDP 'Hello' messages",
+      "B": "Unicast TCP messages"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 5",
+    "question": "When relating planes and traffic flow in MPLS, which of the following is correct?",
+    "image": null,
+    "options": [
+      "Labels flow downstream via the data plane.",
+      "Data flows upstream via the control plane.",
+      "Labels flow upstream via the control plane.",
+      "Data and labels both flow downstream via the data plane."
+    ],
+    "correct_answers": ["Labels flow upstream via the control plane."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 6",
+    "question": "When testing an LSP, why does the test response typically return via the IGP rather than the LSP itself?",
+    "image": null,
+    "options": [
+      "The IGP is faster than the LSP for small packets.",
+      "LSPs are unidirectional, and a return LSP might not exist or would test a combined pair, complicating failure determination.",
+      "LSPs only support data traffic, not OAM response traffic.",
+      "Return traffic is automatically blocked by the egress router on an LSP."
+    ],
+    "correct_answers": [
+      "LSPs are unidirectional, and a return LSP might not exist or would test a combined pair, complicating failure determination."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W15-WithAnswers.pdf",
+    "source": "Midterm1W15-WithAnswers.pdf Page 6",
+    "question": "What single protocol is used to exchange labels for both transport tunnels (Link LDP) and service tunnels (Targeted LDP)?",
+    "image": null,
+    "options": ["RSVP", "BGP", "LDP", "OSPF"],
+    "correct_answers": ["LDP"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

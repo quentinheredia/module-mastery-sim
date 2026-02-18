@@ -1,0 +1,340 @@
+[
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 2",
+    "question": "What is the primary cause of hyper-aggregation in a network?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "The use of multiple paths with equal cost.",
+      "The tendency of an IGP to send all traffic over the same links based on lowest cost.",
+      "A failure in the MPLS control plane.",
+      "The manual configuration of static routes."
+    ],
+    "correct_answers": [
+      "The tendency of an IGP to send all traffic over the same links based on lowest cost."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 2",
+    "question": "How does Traffic Engineering (TE) help alleviate hyper-aggregation?",
+    "image": null,
+    "options": [
+      "By increasing the bandwidth of saturated links.",
+      "By allowing path selection based on criteria other than cost to balance traffic.",
+      "By disabling the IGP to prevent automatic routing.",
+      "By forcing all traffic into a single high-capacity tunnel."
+    ],
+    "correct_answers": [
+      "By allowing path selection based on criteria other than cost to balance traffic."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 2",
+    "question": "Match the MPLS VPN service to its description.",
+    "image": null,
+    "options": [
+      "Simulates a point-to-point 'wire' or virtual point-to-point connection.",
+      "Acts as a virtual 'switch' with ports across the provider network.",
+      "Acts as a virtual router with ports across the provider network."
+    ],
+    "pairs": {
+      "A": "VLL (Layer 1 VPN)",
+      "B": "VPLS (Layer 2 VPN)",
+      "C": "VPRN (Layer 3 VPN)"
+    },
+    "correct_answers": {
+      "A": "Simulates a point-to-point 'wire' or virtual point-to-point connection.",
+      "B": "Acts as a virtual 'switch' with ports across the provider network.",
+      "C": "Acts as a virtual router with ports across the provider network."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 2",
+    "question": "Match the MPLS label operation to its definition.",
+    "image": null,
+    "options": [
+      "An MPLS header is inserted into a frame.",
+      "An existing MPLS header is exchanged for a new one.",
+      "An MPLS header is removed from a frame."
+    ],
+    "pairs": {
+      "A": "PUSH",
+      "B": "SWAP",
+      "C": "POP"
+    },
+    "correct_answers": {
+      "A": "An MPLS header is inserted into a frame.",
+      "B": "An existing MPLS header is exchanged for a new one.",
+      "C": "An MPLS header is removed from a frame."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 3",
+    "question": "Which database is created in the control plane by protocols like LDP or RSVP?",
+    "image": null,
+    "options": [
+      "LFIB (Label Forwarding Information Base)",
+      "LIB (Label Information Base)",
+      "RIB (Routing Information Base)",
+      "FIB (Forwarding Information Base)"
+    ],
+    "correct_answers": ["LIB (Label Information Base)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 3",
+    "question": "What is the primary function of the LFIB?",
+    "image": null,
+    "options": [
+      "Storing reachability information from the IGP.",
+      "Storing all labels received from peers in the control plane.",
+      "Forwarding frames along a Label Switched Path (LSP) in the data plane.",
+      "Generating PATH messages for RSVP."
+    ],
+    "correct_answers": [
+      "Forwarding frames along a Label Switched Path (LSP) in the data plane."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 4",
+    "question": "Match the MPLS header field to its size or description.",
+    "image": null,
+    "options": [
+      "20 bits; used for forwarding traffic.",
+      "3 bits; used for marking traffic with QoS bits.",
+      "1 bit; Bottom of Stack flag.",
+      "8 bits; Time To Live measured in MPLS hops."
+    ],
+    "pairs": {
+      "A": "Label",
+      "B": "Exp (Experimental)",
+      "C": "S",
+      "D": "TTL"
+    },
+    "correct_answers": {
+      "A": "20 bits; used for forwarding traffic.",
+      "B": "3 bits; used for marking traffic with QoS bits.",
+      "C": "1 bit; Bottom of Stack flag.",
+      "D": "8 bits; Time To Live measured in MPLS hops."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 4",
+    "question": "In 'pipe mode', what happens to the TTL in a customer packet as it passes through 10 LSR routers?",
+    "image": null,
+    "options": [
+      "It is decremented by 1 at each hop.",
+      "It is decremented by 10 at the first hop.",
+      "Nothing happens to the customer TTL.",
+      "It is reset to 255 at the ingress."
+    ],
+    "correct_answers": ["Nothing happens to the customer TTL."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 4",
+    "question": "Which set of characteristics defines LDP's label handling?",
+    "image": null,
+    "options": [
+      "Downstream on Demand, Ordered, Conservative retention",
+      "Downstream Unsolicited, Ordered, Liberal retention",
+      "Upstream Unsolicited, Independent, Liberal retention",
+      "Downstream Unsolicited, Independent, Conservative retention"
+    ],
+    "correct_answers": ["Downstream Unsolicited, Ordered, Liberal retention"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 4",
+    "question": "Which protocol uses the 'Downstream On Demand' label distribution method?",
+    "image": null,
+    "options": ["LDP", "OSPF", "RSVP", "BGP"],
+    "correct_answers": ["RSVP"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 4",
+    "question": "What is an absolute requirement for MPLS to function correctly in a network?",
+    "image": null,
+    "options": [
+      "A complete and converged IGP.",
+      "A dedicated hardware VPN concentrator.",
+      "The use of IPv6 for all internal links.",
+      "Strict hop-by-hop manual path configuration."
+    ],
+    "correct_answers": ["A complete and converged IGP."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 5",
+    "question": "Match the LDP type to the tunnel it is typically used for.",
+    "image": null,
+    "options": ["Used for Transport tunnels.", "Used for Service tunnels."],
+    "pairs": {
+      "A": "Link LDP",
+      "B": "Targeted LDP (T-LDP)"
+    },
+    "correct_answers": {
+      "A": "Used for Transport tunnels.",
+      "B": "Used for Service tunnels."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 5",
+    "question": "Why are 6 LSPs required to implement full connectivity for two clients between two branch offices in the provided scenario?",
+    "image": "/images/quizzes/4011_1/",
+    "options": [
+      "LSPs are bidirectional, so 3 are needed for 2 connections.",
+      "LSPs are unidirectional; 2 per client for service (4) and 2 for transport (2).",
+      "6 is the default limit for LSPs in any MPLS network.",
+      "Each client requires 3 LSPs for primary, secondary, and backup."
+    ],
+    "correct_answers": [
+      "LSPs are unidirectional; 2 per client for service (4) and 2 for transport (2)."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 5",
+    "question": "Which Layer 4 protocol is used to establish LDP sessions?",
+    "image": null,
+    "options": ["UDP", "TCP", "ICMP", "SCTP"],
+    "correct_answers": ["TCP"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 6",
+    "question": "In an LDP bindings table, what does a label marked with 'N' (Not In Use) signify?",
+    "image": null,
+    "options": [
+      "The label has been withdrawn by the peer.",
+      "The peer is not reachable via any IGP path.",
+      "The label was received, but the peer is not the next-hop for that FEC in the IGP.",
+      "The router has run out of label space."
+    ],
+    "correct_answers": [
+      "The label was received, but the peer is not the next-hop for that FEC in the IGP."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 6",
+    "question": "In the provided LDP bindings output for R1, why do the first two rows have no egress details?",
+    "image": null,
+    "options": [
+      "R1 is the eLER for itself, so no further forwarding is required.",
+      "The egress interface has failed.",
+      "A SWAP operation is pending.",
+      "The labels are being withheld by the neighbor."
+    ],
+    "correct_answers": [
+      "R1 is the eLER for itself, so no further forwarding is required."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 7",
+    "question": "Match the RSVP state block to its function.",
+    "image": null,
+    "options": [
+      "Stores details of a PATH request upon receipt.",
+      "Stores label information and matches a corresponding PATH request."
+    ],
+    "pairs": {
+      "A": "PSB (Path State Block)",
+      "B": "RSB (Reservation State Block)"
+    },
+    "correct_answers": {
+      "A": "Stores details of a PATH request upon receipt.",
+      "B": "Stores label information and matches a corresponding PATH request."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 7",
+    "question": "How does RSVP prevent sessions from timing out?",
+    "image": null,
+    "options": [
+      "By using a keep-alive timer of 1 second.",
+      "By periodically repeating the PATH and RESV message sequence.",
+      "By monitoring interface status constantly.",
+      "By using a secondary transport protocol for heartbeat."
+    ],
+    "correct_answers": [
+      "By periodically repeating the PATH and RESV message sequence."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 7",
+    "question": "Which command is used to verify if an RSVP LSP is operational?",
+    "image": null,
+    "options": [
+      "ping <destination>",
+      "show router mpls lsp",
+      "oam lsp-ping <lsp-name>",
+      "traceroute <destination>"
+    ],
+    "correct_answers": ["oam lsp-ping <lsp-name>"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Midterm1W14-WithAnswers.pdf",
+    "source": "Midterm1W14-WithAnswers.pdf Page 7",
+    "question": "What common configuration error prevents an RSVP LSP from becoming active?",
+    "image": null,
+    "options": [
+      "Incorrect TTL value.",
+      "The path or LSP is in a 'shutdown' state.",
+      "Using the wrong IGP protocol.",
+      "Too many LSRs in the path."
+    ],
+    "correct_answers": ["The path or LSP is in a 'shutdown' state."],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]
