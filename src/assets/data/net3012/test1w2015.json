@@ -119,7 +119,7 @@
     "module": "Midterm1W15-WithAnswers.pdf",
     "source": "Midterm1W15-WithAnswers.pdf Page 4",
     "question": "Study the diagram carefully. What kind(s) of VPN service is/are illustrated? Justify your answer based on the diagram.",
-    "image": "/images/exam/3012/q9_2015",
+    "image": "/images/exam/net3012/q9_2015.png",
     "options": [
       "VPRN, Customer framing is preserved intact.",
       "VPLS, Customer framing is discarded.",

@@ -73,7 +73,7 @@
     "module": "Midterm1W17-WithAnswers.pdf",
     "source": "Midterm1W17-WithAnswers.pdf Page 2",
     "question": "In a Nokia router, which data table is primarily used in the Data Plane by a 'P' router (LSR) to forward MPLS packets? ",
-    "image": "/images/exam/3012/q4_2016",
+    "image": "/images/exam/net3012/q4_2016.png",
     "options": [
       "RIB (Routing Information Base) ",
       "LIB (Label Information Base) ",
@@ -175,7 +175,7 @@
     "module": "Midterm1W17-WithAnswers.pdf",
     "source": "Midterm1W17-WithAnswers.pdf Page 4",
     "question": "In a scenario with two parallel links between routers (like R2 and R4), how many LDP sessions are typically formed by default? ",
-    "image": "/images/exam/3012/q10_2016",
+    "image": "/images/exam/net3012/q10_2017.png",
     "options": [
       "Two, one for each physical link. ",
       "None, LDP requires a single logical interface. ",
@@ -250,7 +250,7 @@
     "module": "Midterm1W17-WithAnswers.pdf",
     "source": "Midterm1W17-WithAnswers.pdf Page 6",
     "question": "When two routers exchange LDP messages, which one initiates the peering session and how is it chosen? ",
-    "image": "/images/exam/3012/q12_2017",
+    "image": "/images/exam/net3012/q12_2017.png",
     "options": [
       "The router with the lowest IP address. ",
       "The router with the highest Transport Address initiates the peering. ",
@@ -333,7 +333,7 @@
     "module": "Midterm1W17-WithAnswers.pdf",
     "source": "Midterm1W17-WithAnswers.pdf Page 8",
     "question": "According to the static and dynamic label ranges, which of the following is true? ",
-    "image": "/images/exam/3012/q15_2017",
+    "image": "/images/exam/net3012/q15_2017.png",
     "options": [
       "Labels 215-217 are valid for dynamic LDP assignment. ",
       "Label 11350 is a valid value for statically assigned services. ",
