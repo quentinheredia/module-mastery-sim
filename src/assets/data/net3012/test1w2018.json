@@ -3,7 +3,7 @@
     "module": "Midterm1W18-WithAnswers.pdf",
     "source": "Midterm1W18-WithAnswers.pdf Page 2",
     "question": "Match the following MPLS router roles to their primary label operation.",
-    "image": "/images/quizzes/4011_1/",
+    "image": "/images/exam/net3012/q3_2016.png",
     "options": ["Push", "Swap", "Pop"],
     "pairs": {
       "A": "iLER (Ingress Label Edge Router)",
@@ -22,7 +22,7 @@
     "module": "Midterm1W18-WithAnswers.pdf",
     "source": "Midterm1W18-WithAnswers.pdf Page 2",
     "question": "An MPLS egress router performs two lookups to process a packet. What is the correct order of these lookups?",
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
     "options": [
       "IP forwarding lookup, then Label lookup",
       "Label lookup, then IP forwarding lookup",
@@ -37,7 +37,7 @@
     "module": "Midterm1W18-WithAnswers.pdf",
     "source": "Midterm1W18-WithAnswers.pdf Page 3",
     "question": "Which field in the IP header of an RSVP PATH message alerts intermediate routers to pass the message to the control plane?",
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
     "options": ["TTL", "Option = Rtr Alert", "Protocol ID", "DSCP bits"],
     "correct_answers": ["Option = Rtr Alert"],
     "question_type": "single_choice",
@@ -92,7 +92,7 @@
     "module": "Midterm1W18-WithAnswers.pdf",
     "source": "Midterm1W18-WithAnswers.pdf Page 4",
     "question": "Which protocols can be used specifically for the distribution of transport labels?",
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
     "options": ["LDP", "RSVP", "MP-BGP", "LDP and RSVP"],
     "correct_answers": ["LDP and RSVP"],
     "question_type": "single_choice",
@@ -102,7 +102,7 @@
     "module": "Midterm1W18-WithAnswers.pdf",
     "source": "Midterm1W18-WithAnswers.pdf Page 4",
     "question": "In an MPLS VPN with Traffic Engineering, which labels are distributed using the 'Downstream on Demand' method?",
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
     "options": [
       "Service labels (S1, S2)",
       "Transport labels (T1, T2)",
@@ -157,7 +157,7 @@
     "module": "Midterm1W18-WithAnswers.pdf",
     "source": "Midterm1W18-WithAnswers.pdf Page 6",
     "question": "For a Layer 2 service, what is the effect on the customer IP TTL value when operating in Uniform mode compared to Pipe mode?",
-    "image": "/images/quizzes/4011_1/",
+    "image": null,
     "options": [
       "Uniform mode decrements customer TTL at every hop",
       "Pipe mode hides intermediate hops from customer TTL",
@@ -206,7 +206,7 @@
     "module": "Midterm1W18-WithAnswers.pdf",
     "source": "Midterm1W18-WithAnswers.pdf Page 7",
     "question": "When an RSVP session timeout occurs at an intermediate router (LSR), which messages are sent to tear down the LSP?",
-    "image": "/images/quizzes/4011_1/",
+    "image": "/images/exam/net3012/q12_2018.png",
     "options": [
       "HELLO messages",
       "PATH TEAR and RESV TEAR",
@@ -221,7 +221,7 @@
     "module": "Midterm1W18-WithAnswers.pdf",
     "source": "Midterm1W18-WithAnswers.pdf Page 8",
     "question": "Which pair of RSVP optimizations provides protection against lost messages in busy networks?",
-    "image": "/images/quizzes/4011_1/",
+    "image": "/images/exam/net3012/q3_2018.png",
     "options": [
       "Triple Play and PHP",
       "Msg-ID and ACK Requirement",
