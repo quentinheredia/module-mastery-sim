@@ -1,0 +1,74 @@
+[
+  {
+    "module": "W2024_Final_Exam_RSVP",
+    "source": "FinalExam-VerA-2024.pdf Page 2",
+    "question": "An LSP is configured for fast reroute with default settings in a network of Nokia 7750 SRs with enough redundant paths to fully protect the LSP. Which of the following best describes the expected behavior?",
+    "image": null,
+    "options": [
+      "All hops will show link protection.",
+      "All hops will show node protection.",
+      "The last hop will show link protection, and all other hops will show node protection.",
+      "None of the hops will be protected."
+    ],
+    "correct_answers": ["The last hop will show link protection, and all other hops will show node protection."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_RSVP",
+    "source": "FinalExam-VerA-2024.pdf Page 5",
+    "question": "An LSP is provisioned with a totally loose primary LSP::Path and a non-standby totally loose secondary LSP::Path. Assuming that there are multiple disjoint paths between the head and tail end routers, which statement is true?",
+    "image": null,
+    "options": [
+      "The primary LSP::Path will use the path with the shortest CSPF cost, and the secondary LSP::Path will use the path with the next shortest CSPF cost.",
+      "Shared risk link groups should be used to ensure path diversity.",
+      "Admin groups should be used to ensure path diversity.",
+      "The primary LSP::Path and secondary LSP::Paths will use the same hops.",
+      "All above statements are incorrect because the secondary is not signaled."
+    ],
+    "correct_answers": ["The primary LSP::Path and secondary LSP::Paths will use the same hops."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_RSVP",
+    "source": "FinalExam-VerA-2024.pdf Page 6",
+    "question": "An LSP is configured with a totally loose primary LSP::Path and a totally loose standby secondary LSP::Path. If there are at least two unequal cost totally disjoint paths between the head and tail end routers, which statement below is incorrect?",
+    "image": null,
+    "options": [
+      "The LSP::Paths should be made disjoint by the use of strict hops, admin groups, or SRLGs.",
+      "The secondary LSP::Path will take the second least cost path between the head and tail end routers.",
+      "All of the above statements are correct.",
+      "The secondary LSP::Path is operationally up."
+    ],
+    "correct_answers": ["The secondary LSP::Path will take the second least cost path between the head and tail end routers."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_RSVP",
+    "source": "FinalExam-VerA-2024.pdf Page 7",
+    "question": "Consider a router that could be a PLR for two established protected LSPs that have the same tail end router. Which statement best describes the detour LSPs originated by the PLR?",
+    "image": null,
+    "options": [
+      "The PLR originates one detour LSP that follows the shortest CSPF path to the destination.",
+      "If both protected LSPs have identical paths, the PLR originates one detour LSP; otherwise, two detour LSPs are originated.",
+      "If both protected LSPs have the same head end router, the PLR originates one detour LSP; otherwise, two detour LSPs are originated.",
+      "The PLR originates two detour LSPs that follow the shortest CSPF path to the destination.",
+      "None of the above statements are correct."
+    ],
+    "correct_answers": ["If both protected LSPs have identical paths, the PLR originates one detour LSP; otherwise, two detour LSPs are originated."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_RSVP",
+    "source": "FinalExam-VerA-2024.pdf Page 8",
+    "question": "What RSVP object reduces refresh message processing by allowing the receiver to easily identify a message that contains unchanged state information?",
+    "image": null,
+    "options": ["Message ID", "PATH", "Summary Refresh", "RESV", "ACK"],
+    "correct_answers": ["Message ID"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

@@ -72,6 +72,15 @@ import test2w2014 from "@/assets/data/net3012/test2w2014.json";
 //import test2w2020 from "@/assets/data/net3012/test2w2020.json";
 import test1w2024 from "@/assets/data/net3012/test1w2024.json";
 import test1w2024mc from "@/assets/data/net3012/test1w2024mc.json";
+import examw2026VPLS from "@/assets/data/net3012/examw2026_VPLS.json";
+import examw2026SA from "@/assets/data/net3012/examw2026_SA.json";
+import examw2026MPLS from "@/assets/data/net3012/examw2026_MPLS.json";
+import examw2026VPRN from "@/assets/data/net3012/examw2026_VPRN.json";
+import finalexam2024SA from "@/assets/data/net3012/finalexam2024_SA.json";
+import finalexam2024MPLS from "@/assets/data/net3012/finalexam2024_MPLS.json";
+import finalexam2024RSVP from "@/assets/data/net3012/finalexam2024_RSVP.json";
+import finalexam2024VPLS from "@/assets/data/net3012/finalexam2024_VPLS.json";
+import finalexam2024VPRN from "@/assets/data/net3012/finalexam2024_VPRN.json";
 
 // Organize data by course
 const courseData: Record<string, Question[]> = {
@@ -123,6 +132,15 @@ const courseData: Record<string, Question[]> = {
     //...test2w2020,
     ...test1w2024,
     ...test1w2024mc,
+    ...examw2026VPLS,
+    ...examw2026SA,
+    ...examw2026MPLS,
+    ...examw2026VPRN,
+    ...finalexam2024SA,
+    ...finalexam2024MPLS,
+    ...finalexam2024RSVP,
+    ...finalexam2024VPLS,
+    ...finalexam2024VPRN,
   ] as Question[],
 };
 

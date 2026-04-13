@@ -1,0 +1,73 @@
+[
+  {
+    "module": "W2026_Final_Exam_SA",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which of the following statements about the components of a distributed service on a Nokia 7750 SR is TRUE?",
+    "image": null,
+    "options": [
+      "Each service must use a separate SDP.",
+      "An SAP can be used by multiple services on a router.",
+      "An SAP can only be created on an access port.",
+      "The VC IDs at both ends of a service can be different."
+    ],
+    "correct_answers": ["An SAP can only be created on an access port."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_SA",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Consider a network that is providing MPLS VPN services. Which statement best describes packets sent from the CE router to the PE router?",
+    "image": null,
+    "options": [
+      "The packets are unlabeled.",
+      "The packets have an outer transport label and an inner service label.",
+      "The packets have an outer service label and an inner transport label.",
+      "The answer depends on the type of VPN service provided by the MPLS network."
+    ],
+    "correct_answers": ["The packets are unlabeled."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_SA",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "A dot1Q SAP 1/1/1:* configured on an Epipe service on a Nokia 7750 SR has an MTU of 1518 bytes. What should the configured value of the service MTU be so that the Epipe carries full-size Ethernet frames received on the default SAP?",
+    "image": null,
+    "options": ["1510", "1514"],
+    "correct_answers": ["1514"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_SA",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which of the following most accurately describes when service labels are signalled for an epipe?",
+    "image": null,
+    "options": [
+      "Service labels are signalled when the SDP has been created at both ends.",
+      "Service labels are signalled when the epipe service has been administratively enabled at one end.",
+      "Service labels are signalled when the epipe service has been administratively enabled at both ends.",
+      "Service labels are signalled when the epipe service has been administratively enabled and the SDP binding has been created in the service at both ends.",
+      "Service labels are signalled when the epipe service has been administratively enabled and a SAP and SDP binding have been created in the service at both ends."
+    ],
+    "correct_answers": ["Service labels are signalled when the epipe service has been administratively enabled and the SDP binding has been created in the service at both ends."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_SA",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "An epipe SAP on a PE router receives a frame carrying an IP packet from a CE router that is too large for the service. What action does the PE router take?",
+    "image": null,
+    "options": [
+      "It silently discards the frame.",
+      "It discards the frame and sends a notification to the CE router.",
+      "It fragments the frame as long as the do-not-fragment bit is not set.",
+      "It truncates the frame to fit the service MTU."
+    ],
+    "correct_answers": ["It silently discards the frame."],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

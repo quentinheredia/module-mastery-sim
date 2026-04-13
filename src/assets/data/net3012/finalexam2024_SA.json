@@ -1,0 +1,273 @@
+[
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 2",
+    "question": "Consider an IES service that has a spoke termination to an epipe service with a service MTU of 9,000 bytes. How should the IES interface MTU be configured?",
+    "image": null,
+    "options": [
+      "The IES MTU should be configured to exactly 9,000 bytes.",
+      "The IES MTU should be configured to exactly 8,986 bytes.",
+      "The IES MTU should be configured to any value less than 9,000 bytes.",
+      "The IES MTU should be configured to any value greater than 9,000 bytes.",
+      "The IES MTU should be configured to exactly 9,014 bytes."
+    ],
+    "correct_answers": ["The IES MTU should be configured to exactly 8,986 bytes."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 2",
+    "question": "Which of the following is a true statement about the configuration of services on the Nokia 7750 SR?",
+    "image": null,
+    "options": [
+      "An SDP can use GRE encapsulation for some services and MPLS for others.",
+      "One SDP can support multiple different service types.",
+      "One SDP can support multiple services, but they must all be the same type of service.",
+      "A new SDP must be configured for any new service that is configured.",
+      "None of the above statements are true."
+    ],
+    "correct_answers": ["One SDP can support multiple different service types."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 2",
+    "question": "Which statement is false regarding the traffic sent between two PE routers of a VPRN in a service provider network that uses RSVP-TE?",
+    "image": null,
+    "options": [
+      "The traffic has an MPLS service label.",
+      "The traffic has the IP header sent by the CE router.",
+      "The traffic has an MPLS transport label.",
+      "The traffic has the Layer 2 header sent by the CE router.",
+      "None of the above statements are false."
+    ],
+    "correct_answers": ["The traffic has the Layer 2 header sent by the CE router."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 3",
+    "question": "Which of the following best describes the encapsulation of the service payload on an IP/MPLS service network with Ethernet links?",
+    "image": null,
+    "options": [
+      "The service payload is encapsulated in an Ethernet frame with a service label.",
+      "The service payload is encapsulated in an Ethernet frame with a transport label and a service label.",
+      "The service payload is encapsulated in an Ethernet frame.",
+      "The service payload is encapsulated in an Ethernet frame with an IP header and a service label."
+    ],
+    "correct_answers": ["The service payload is encapsulated in an Ethernet frame with a transport label and a service label."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 3",
+    "question": "An Ethernet frame with a single VLAN tag ingresses an epipe service with a Q-in-Q-encapsulated SAP: 1/1/2:20.*  The frame egresses the epipe service on SAP 1/1/3:20.10. What are the VLAN tag values after the frame egresses the service?",
+    "image": null,
+    "options": [
+      "There will be three tags from outer to inner: 20, 10, and the original tag.",
+      "The frame will not be accepted at the ingress SAP because it has only a single tag.",
+      "There will be a single tag of 10.",
+      "There will be a single tag of 20.",
+      "There will be an outer tag of 20 and an inner tag of 10."
+    ],
+    "correct_answers": ["There will be an outer tag of 20 and an inner tag of 10."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 3",
+    "question": "Consider a network of four routers that are used to provide an epipe service. The transport tunnels used for the service traverse all four routers. Which statement is correct regarding service configuration?",
+    "image": null,
+    "options": [
+      "The epipe service has to be configured on two routers.",
+      "The epipe service has to be configured on the CE routers.",
+      "The epipe service has to be configured on one router.",
+      "The epipe service has to be configured on the P routers.",
+      "The epipe service has to be configured on all four routers."
+    ],
+    "correct_answers": ["The epipe service has to be configured on two routers."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 3",
+    "question": "An IES spoke termination is used to connect a CE router to an IES interface through an epipe service. Which statement is correct regarding the IP address configuration?",
+    "image": null,
+    "options": [
+      "The IP address of the CE router interface should be the same as the IP address of the IES interface.",
+      "The IP address of the CE router interface should be on the same subnet as the IP address of the IES interface.",
+      "The IP address of the CE router interface should be on a different subnet from the IP address of the IES interface.",
+      "The IP address configuration depends on whether the IES has been configured in switched or routed mode.",
+      "None of the above statements are correct."
+    ],
+    "correct_answers": ["The IP address of the CE router interface should be on the same subnet as the IP address of the IES interface."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 4",
+    "question": "What is a good definition of a Provider Edge router?",
+    "image": null,
+    "options": [
+      "It has at least one interface inside the provider domain.",
+      "It has all interfaces external to the provider domain.",
+      "It has at most one interface inside the provider domain.",
+      "It has all interfaces internal to the provider domain.",
+      "It has at most one interface outside the provider domain."
+    ],
+    "correct_answers": ["It has at least one interface inside the provider domain."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 4",
+    "question": "Consider an epipe service on a network of Nokia 7750 SRs. All network ports have an MTU of 9,212 bytes. The epipe service and access ports use default MTU settings. The SAPs on both ends are configured with SAP 1/1/2:20. An administrator changes the CLI syntax on both ends to SAP 1/1/4:20.*. What additional configuration does the administrator need to make for the service to function correctly?",
+    "image": null,
+    "options": [
+      "The MTU of the access port used by the SAP needs to be increased.",
+      "The service MTU of the epipe service needs to be increased.",
+      "The SAP MTU of the service needs to be increased.",
+      "The MTU of the network ports needs to be increased.",
+      "No other configuration is required."
+    ],
+    "correct_answers": ["The MTU of the access port used by the SAP needs to be increased."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 4",
+    "question": "Which of the following best describes the behavior of the default SAP?",
+    "image": null,
+    "options": [
+      "The default SAP receives all untagged frames.",
+      "The default SAP receives all tagged frames.",
+      "The default SAP receives all untagged frames and all tagged frames not received by another SAP.",
+      "The default SAP receives all frames.",
+      "The default SAP receives all untagged frames and all frames with a VLAN tag of 0."
+    ],
+    "correct_answers": ["The default SAP receives all untagged frames and all tagged frames not received by another SAP."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 6",
+    "question": "Which statement best characterizes an epipe service from a customer's point of view?",
+    "image": null,
+    "options": [
+      "The service provider network appears as a single MPLS switch between two customer locations.",
+      "The service provider network appears as a Layer 2 switch between customer locations.",
+      "The service provider network appears as a single IP router between customer locations.",
+      "The service provider network appears as a leased line between two customer locations.",
+      "None of the above statements are correct."
+    ],
+    "correct_answers": ["The service provider network appears as a leased line between two customer locations."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 8",
+    "question": "Which of the following statements about the number of routers required for an epipe service is true?",
+    "image": null,
+    "options": [
+      "An epipe service may be configured on any number of PE routers.",
+      "An epipe service may be configured on either one or two PE routers.",
+      "An epipe service is configured on only one PE router.",
+      "An epipe service must be configured on exactly two PE routers.",
+      "An epipe service is not configured on the PE router, only on the CE routers."
+    ],
+    "correct_answers": ["An epipe service may be configured on either one or two PE routers."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 9",
+    "question": "Which of the following is NOT a feature of a service router such as the Nokia 7750 SR?",
+    "image": null,
+    "options": [
+      "The ability to perform accounting operations based on a specific customer or service.",
+      "The ability to restrict or monitor specific traffic based on customer or service.",
+      "The ability to provide quality of service based on a specific customer or service.",
+      "The ability to analyze and troubleshoot problems from the perspective of a service.",
+      "All of the above are primary features of a service router."
+    ],
+    "correct_answers": ["All of the above are primary features of a service router."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 11",
+    "question": "Which of the following statements is false regarding the MTUs used for an epipe service?",
+    "image": null,
+    "options": [
+      "Epipe services configured on the same PE can have different service MTUs.",
+      "The service MTU must be less than or equal to the path MTU.",
+      "The path MTU must be greater than the MTU of every network port in the transport path.",
+      "SAP MTUs must be greater than or equal to the service MTU.",
+      "None of the above statements are false."
+    ],
+    "correct_answers": ["The path MTU must be greater than the MTU of every network port in the transport path."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 11",
+    "question": "Which of the following is a true statement about an IP/MPLS service network?",
+    "image": null,
+    "options": [
+      "The service provider must provision multiple service instances in order to provide redundancy for a customer.",
+      "GRE can only be used for a Layer 3 service such as VPRN.",
+      "Layer 2 and Layer 3 services such as VPLS and VPRN can both be provisioned on the same IP/MPLS network.",
+      "The CE routers connected to the service network must support MPLS.",
+      "A new transport tunnel must be configured for each service."
+    ],
+    "correct_answers": ["Layer 2 and Layer 3 services such as VPLS and VPRN can both be provisioned on the same IP/MPLS network."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 11",
+    "question": "An epipe on a PE router receives a frame carrying an IP packet from a CE router that is too large for the service. What action will the PE router take?",
+    "image": null,
+    "options": [
+      "It will discard the frame and send a notification to the CE router.",
+      "It will fragment the frame as long as the do-not-fragment bit is not set.",
+      "It will always fragment the frame.",
+      "It will silently discard the frame.",
+      "None of the above answers are correct."
+    ],
+    "correct_answers": ["It will silently discard the frame."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_SA",
+    "source": "FinalExam-VerA-2024.pdf Page 12",
+    "question": "Which of the following statements concerning Internet Enhanced Services (IES) on a Nokia 7750 SR is FALSE?",
+    "image": null,
+    "options": [
+      "An IES can have a spoke termination to an epipe.",
+      "An IES can use a SAP.",
+      "An IES can use a mesh SDP.",
+      "An IES can have a spoke termination to a VPLS.",
+      "An IES can be advertised into an IGP."
+    ],
+    "correct_answers": ["An IES can use a mesh SDP."],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

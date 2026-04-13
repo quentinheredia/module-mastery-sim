@@ -1,0 +1,66 @@
+[
+  {
+    "module": "W2024_Final_Exam_VPRN",
+    "source": "FinalExam-VerA-2024.pdf Page 2",
+    "question": "Which of the following statements about a VPRN is false?",
+    "image": null,
+    "options": [
+      "Layer 2 is independent - it allows different L2 connectivity at different sites.",
+      "It simplifies the routing topology at customer sites.",
+      "None of the other answers is correct.",
+      "Different sites belonging to the same customer can use the same IP subnets.",
+      "Allows the usage of overlapping private IP address space between different customers."
+    ],
+    "correct_answers": ["Different sites belonging to the same customer can use the same IP subnets."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPRN",
+    "source": "FinalExam-VerA-2024.pdf Page 6",
+    "question": "Consider a VPRN configured on two Nokia 7750 SR PE routers, R1 and R2. R1 and its CE router use BGP (PE-CE protocol) to exchange routing information. R2 and its CE router use static routes to forward traffic to and from the VPRN. Both sites share all available routing information with each other. Which of the statements below is false?",
+    "image": null,
+    "options": [
+      "An export policy is not required on R2 to advertise routes to the directly connected CE router.",
+      "An export policy must be configured to advertise routes between the PE routers.",
+      "The BGP session between R1 and its CE router must be enabled with the IPv4 or IPv6 address family.",
+      "An export policy must be configured on R1 to advertise routes to the directly connected CE router.",
+      "None of the above statements are false."
+    ],
+    "correct_answers": ["An export policy must be configured to advertise routes between the PE routers."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPRN",
+    "source": "FinalExam-VerA-2024.pdf Page 7",
+    "question": "Which statement concerning route distinguishers on the Nokia 7750 SR is true?",
+    "image": null,
+    "options": [
+      "Route distinguishers are used to determine which routes a VPRN should import.",
+      "Different route distinguishers can be used for the same VPRN on different PE routers.",
+      "P routers only need to be aware of route distinguishers that belong to VPRNs for which they transit traffic.",
+      "A route distinguisher is 96 bits in length.",
+      "CE routers must be configured with the correct route distinguishers for the VPRN with which they are associated."
+    ],
+    "correct_answers": ["Different route distinguishers can be used for the same VPRN on different PE routers."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPRN",
+    "source": "FinalExam-VerA-2024.pdf Page 8",
+    "question": "Consider a network of Nokia 7750 SRs that contains four PE routers, six CE routers, and eight P routers. Assuming that the network is only used to provide VPRN services, which routers need to be configured with SAPs?",
+    "image": null,
+    "options": [
+      "All PE routers.",
+      "All P routers.",
+      "All CE routers.",
+      "All P and CE routers.",
+      "All PE, CE, and P routers."
+    ],
+    "correct_answers": ["All PE routers."],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "module": "W2024_Final_Exam_MPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 4",
+    "question": "What functions can CSPF perform? Choose the best two answers.",
+    "image": null,
+    "options": [
+      "It calculates intermediate hops to reach a loose hop.",
+      "It checks that strict hops are valid.",
+      "It re-orders loose hops (only) for an optimal path.",
+      "It re-orders strict hops (only) for an optimal path.",
+      "It re-orders strict and loose hops for an optimal path."
+    ],
+    "correct_answers": [
+      "It calculates intermediate hops to reach a loose hop.",
+      "It checks that strict hops are valid."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_MPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 5",
+    "question": "Which of the statements below is incorrect? Choose the one best answer.",
+    "image": null,
+    "options": [
+      "Link LDP peers do not have to be directly connected.",
+      "Link LDP is used to signal transport labels.",
+      "T-LDP is used to signal service labels.",
+      "T-LDP peers do not have to be directly connected.",
+      "All of the above statements are correct."
+    ],
+    "correct_answers": ["Link LDP peers do not have to be directly connected."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_MPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 7",
+    "question": "Consider a LDP-over-RSVP tunnel with two hops/three routers within a single area. Which labels remain identical across all hops? Choose the best two answers.",
+    "image": null,
+    "options": [
+      "RSVP labels",
+      "LDP labels",
+      "All labels remain identical",
+      "Inner-most labels",
+      "Outer labels"
+    ],
+    "correct_answers": ["LDP labels", "Inner-most labels"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_MPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 9",
+    "question": "Which of the following protocols can be used to signal service labels for a VPLS service?",
+    "image": null,
+    "options": ["LDP", "RSVP-TE", "GRE", "OSPF", "None of the above protocols can be used to signal service labels for a VPLS service."],
+    "correct_answers": ["LDP"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_MPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 9",
+    "question": "There are lots of labels flowing around inside an MPLS network. Which part of the router is responsible for each flow? Choose all that apply.",
+    "image": null,
+    "options": [
+      "Labels are signalled via the management plane.",
+      "Labels are signalled via the control plane.",
+      "Labels are signalled via the data plane.",
+      "Labels are used by the data plane.",
+      "Labels are used by the control plane."
+    ],
+    "correct_answers": ["Labels are signalled via the control plane.", "Labels are used by the data plane."],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_MPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 11",
+    "question": "Which statement(s) below is/are correct about LSP-ping? Choose all that apply.",
+    "image": null,
+    "options": [
+      "LSP-ping follows the tunnel from the target.",
+      "LSP-ping follows the tunnel to the target.",
+      "LSP-ping follows the IGP path to the target.",
+      "LSP-ping follows the IGP path from the target.",
+      "Trick question! None of the statements is completely true."
+    ],
+    "correct_answers": ["LSP-ping follows the tunnel to the target.", "LSP-ping follows the IGP path from the target."],
+    "question_type": "multiple_answer",
+    "points": 1
+  }
+]

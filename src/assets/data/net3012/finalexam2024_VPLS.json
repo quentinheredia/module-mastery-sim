@@ -1,0 +1,156 @@
+[
+  {
+    "module": "W2024_Final_Exam_VPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 5",
+    "question": "Which of the following describes a difference in the behavior of a regular Ethernet switch and a VPLS?",
+    "image": null,
+    "options": [
+      "SAPs with different VLAN values in a VPLS are treated as being in the same broadcast domain. On an Ethernet switch, different VLAN values are treated as separate broadcast domains.",
+      "SAPs with different VLAN values in a VPLS are treated as separate broadcast domains. On an Ethernet switch, different VLAN values are treated as being in the same broadcast domain.",
+      "Traffic to known multicast and broadcast addresses is flooded to all destinations in a VPLS but only to specific ports in an Ethernet switch.",
+      "Unknown unicast traffic is flooded to all destinations in a VPLS but is discarded in an Ethernet switch.",
+      "None of the above statements correctly describe a difference between a VPLS and an Ethernet switch."
+    ],
+    "correct_answers": ["SAPs with different VLAN values in a VPLS are treated as being in the same broadcast domain. On an Ethernet switch, different VLAN values are treated as separate broadcast domains."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 5",
+    "question": "Consider a network of Nokia 7750 SRs used to provide VPRN services. There are four PE routers and five P routers in the network. Each PE router has two VPRN services configured. How many T-LDP sessions are required in the network?",
+    "image": null,
+    "options": [
+      "Twelve T-LDP sessions are required.",
+      "Four T-LDP sessions are required.",
+      "Thirty-six T-LDP sessions are required.",
+      "Eight T-LDP sessions are required.",
+      "No T-LDP sessions are required."
+    ],
+    "correct_answers": ["No T-LDP sessions are required."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 7",
+    "question": "Which statement best describes the forwarding behavior of known unicast traffic that is received on a spoke SDP on a Nokia 7750 SR?",
+    "image": null,
+    "options": [
+      "The traffic is flooded to all spoke SDPs in the same service.",
+      "The traffic is flooded to all spoke SDPs and SAPs in the same service.",
+      "The traffic is flooded to all mesh SDPs and SAPs in the same service.",
+      "The traffic is flooded to all SDP bindings and SAPs configured on the router.",
+      "None of the above statements are correct."
+    ],
+    "correct_answers": ["None of the above statements are correct."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 8",
+    "question": "Which of the following best describes how a VPLS populates the MAC FDB?",
+    "image": null,
+    "options": [
+      "The network administrator programs the FDB with the MAC address of the attached devices.",
+      "The PE router uses ARP to discover the MAC addresses of attached devices.",
+      "The PE router examines the source MAC address of received frames.",
+      "The PE router examines the destination MAC address of received frames.",
+      "There is no MAC learning; unicast traffic is flooded to all destinations in the VPLS."
+    ],
+    "correct_answers": ["The PE router examines the source MAC address of received frames."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 9",
+    "question": "Consider a VPLS metro network that has four PE routers. Two VPLS instances are created on every PE router. If only mesh SDPs are used in the network, what is the total number of T-LDP sessions required?",
+    "image": null,
+    "options": [
+      "Eight T-LDP sessions are required.",
+      "Twenty-four T-LDP sessions are required.",
+      "Twelve T-LDP sessions are required.",
+      "Four T-LDP sessions are required.",
+      "Six T-LDP sessions are required."
+    ],
+    "correct_answers": ["Six T-LDP sessions are required."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 11",
+    "question": "What is the default service MTU for a VPLS on an Nokia 7750 SR if all SAPs have a dot1Q encapsulation?",
+    "image": null,
+    "options": ["1,504 bytes", "1,514 bytes", "1,500 bytes", "1,522 bytes", "1,518 bytes"],
+    "correct_answers": ["1,514 bytes"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 12",
+    "question": "In which direction are service labels distributed (not transportation labels)?",
+    "image": null,
+    "options": [
+      "Downstream from the tail end.",
+      "None of the other answers is correct; service labels are handled by GRE.",
+      "From head end to tail end.",
+      "From the tail end to head end.",
+      "Upstream from the head end."
+    ],
+    "correct_answers": ["From the tail end to head end."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 12",
+    "question": "Which of the following is correct about a Route Distinguisher? Choose all that apply.",
+    "image": null,
+    "options": [
+      "It's a 4 byte value in the middle of the 64 bit VPN field.",
+      "It's added to 32 bit or 128 bit prefixes.",
+      "It's a 64 bit field that's split into 3 sub-fields.",
+      "It's added to 32 bit or 128 bit customer addresses.",
+      "None of the above is correct."
+    ],
+    "correct_answers": ["It's added to 32 bit or 128 bit prefixes.", "It's a 64 bit field that's split into 3 sub-fields.", "It's added to 32 bit or 128 bit customer addresses."],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 12",
+    "question": "Which statement best characterizes a VPLS from a customer's point of view?",
+    "image": null,
+    "options": [
+      "The service provider network appears as a single MPLS switch between customer locations.",
+      "The service provider network appears as a Layer 2 switch between customer locations.",
+      "The service provider network appears as a leased line between customer locations.",
+      "The service provider network appears as a single IP router between customer locations.",
+      "None of the above statements are correct."
+    ],
+    "correct_answers": ["The service provider network appears as a Layer 2 switch between customer locations."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2024_Final_Exam_VPLS",
+    "source": "FinalExam-VerA-2024.pdf Page 12",
+    "question": "Which statement is correct regarding the VC ID that needs to be configured on spoke and mesh SDPs in a VPLS on a Nokia 7750 SR?",
+    "image": null,
+    "options": [
+      "Mesh SDPs don't use a VC ID.",
+      "Spoke SDPs must have a VC ID that is equal to the VPLS service ID.",
+      "Mesh SDPs must have a VC ID that is equal to the VPLS service ID.",
+      "The VC ID used on both ends of a spoke SDP must match.",
+      "None of the above statements are correct."
+    ],
+    "correct_answers": ["The VC ID used on both ends of a spoke SDP must match."],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

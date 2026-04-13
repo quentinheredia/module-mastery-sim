@@ -1,0 +1,78 @@
+[
+  {
+    "module": "W2026_Final_Exam_MPLS",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which of the following statements about CSPF is FALSE?",
+    "image": null,
+    "options": [
+      "CSPF is used to make a path calculation with additional administrative constraints.",
+      "The CSPF calculation is always performed on every LSP signalled by RSVP-TE.",
+      "The head-end router performs the CSPF calculation for an LSP.",
+      "CSPF consults the TED to calculate the LSP path."
+    ],
+    "correct_answers": ["The CSPF calculation is always performed on every LSP signalled by RSVP-TE."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_MPLS",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "In a network of Nokia routers running LDP, all routers advertise labels to their peers. Which labels, if any, are discarded by the receiving router and not added to the LIB?",
+    "image": null,
+    "options": [
+      "Any label that doesn't match an import policy.",
+      "Any label that doesn't match an export policy.",
+      "Any label received from a router that is not the next hop for the FEC.",
+      "No labels are discarded; they are all added to the LIB."
+    ],
+    "correct_answers": ["No labels are discarded; they are all added to the LIB."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_MPLS",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "An MPLS router is signalled a label of 3 for a FEC by its downstream router. What does the router do when it receives a data packet for this FEC from an upstream router?",
+    "image": null,
+    "options": [
+      "It performs a label SWAP and transmits the data packet with a label of 3.",
+      "It PUSHes a label of 3 and transmits the data packet.",
+      "It silently discards the packet.",
+      "It POPs the outer label and forwards the data packet to the downstream router."
+    ],
+    "correct_answers": ["It POPs the outer label and forwards the data packet to the downstream router."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_MPLS",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which statement is TRUE regarding a 6PE network running over Nokia 7750 SAs?",
+    "image": null,
+    "options": [
+      "The outer label is an MPLS transport label and the inner label is an IPv6 implicit null label.",
+      "The outer label is an MPLS transport label and the inner label is an IPv4 implicit null label.",
+      "It is used by a service provider to tunnel IPv6 traffic over an IPv4 MPLS network.",
+      "It is used by a service provider to tunnel IPv4 traffic over an IPv6 network."
+    ],
+    "correct_answers": ["It is used by a service provider to tunnel IPv6 traffic over an IPv4 MPLS network."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_MPLS",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which of the following attributes is NOT carried in an OSPF Type 10 LSA?",
+    "image": null,
+    "options": [
+      "Maximum bandwidth",
+      "IGP metric",
+      "Administrative groups",
+      "Unreserved bandwidth",
+      "Maximum reservable bandwidth"
+    ],
+    "correct_answers": ["IGP metric"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

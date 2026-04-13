@@ -1,0 +1,108 @@
+[
+  {
+    "module": "W2026_Final_Exam_VPRN",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which of the following statements about a VPRN service label is TRUE?",
+    "image": null,
+    "options": [
+      "It is pushed onto customer packets by the CE.",
+      "It is used to identify which VPRN a packet belongs to.",
+      "It contains the customer's IP address.",
+      "It is exchanged for a transport label during transport."
+    ],
+    "correct_answers": ["It is used to identify which VPRN a packet belongs to."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_VPRN",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which of the following statements about route distinguishers is FALSE?",
+    "image": null,
+    "options": [
+      "A route distinguisher is an identifier used by the VPN-IPv4 family to ensure that IP prefixes are globally unique.",
+      "A route distinguisher is appended to an IPv4 prefix to form a 12-byte VPN-IPv4 prefix.",
+      "PE routers append route distinguishers to IPv4 prefixes received from local CEs over VPRN interfaces.",
+      "A VPRN DATA packet carries a route distinguisher in its VPN IPv4 destination address."
+    ],
+    "correct_answers": ["A route distinguisher is appended to an IPv4 prefix to form a 12-byte VPN-IPv4 prefix."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_VPRN",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which statement is FALSE regarding the traffic sent between two PE routers of a VPRN that uses RSVP-TE?",
+    "image": null,
+    "options": [
+      "The traffic has an MPLS transport label.",
+      "The traffic has an MPLS service label.",
+      "The traffic has the Layer 2 header sent by the CE router.",
+      "The traffic has the IP header sent by the CE router.",
+      "None of the above statements is false."
+    ],
+    "correct_answers": ["None of the above statements is false."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_VPRN",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which of the following statements regarding an IES spoke termination to an epipe service is FALSE?",
+    "image": null,
+    "options": [
+      "Targeted LDP is used to signal service labels for the IES spoke termination.",
+      "A SAP must be configured in the IES interface.",
+      "The service ID of the IES and epipe service can be different.",
+      "The VC ID between the spoke-SDP in the IES interface and the epipe must match."
+    ],
+    "correct_answers": ["The service ID of the IES and epipe service can be different."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_VPRN",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Consider a VPRN configured on two Nokia 7750 SR PE routers, R1 and R2. R1 uses BGP for PE-CE routing; R2 uses static routes. Both sites share all routing information. Which statement is FALSE?",
+    "image": null,
+    "options": [
+      "The BGP session between R1 and its CE router must be enabled for the IPv4 address family.",
+      "An export policy must be configured in the VPRN on R1 to advertise routes to its directly connected CE router.",
+      "An export policy is not required on R2 to advertise routes to the directly connected CE router.",
+      "An export policy must be configured to advertise VPN-IPv4 routes between the PE routers."
+    ],
+    "correct_answers": ["An export policy must be configured to advertise VPN-IPv4 routes between the PE routers."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_VPRN",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which of the following best describes the purpose of the route target?",
+    "image": null,
+    "options": [
+      "The route target is added to the IPv4 or IPv6 prefix to create a unique VPN-IPv4 or VPN-IPv6 prefix.",
+      "The route target is used by the CE router to identify routes to be taken from its route table and advertised to the PE router.",
+      "The route target is used by the PE router to identify routes to be taken from MP-BGP and installed in the VRF.",
+      "The route target is used by the PE router to identify routes to be taken from the VRF and advertised to the CE router."
+    ],
+    "correct_answers": ["The route target is used by the PE router to identify routes to be taken from MP-BGP and installed in the VRF."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_VPRN",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "The 'show router bgp routes vpn-ipv4' command on router R1 shows that some MP-BGP routes have been received from R2, but they do not appear in the VRF as expected. What is the most likely reason?",
+    "image": null,
+    "options": [
+      "The MP-BGP peering session between R1 and R2 is not operational.",
+      "The route distinguisher configured for the VPRN on R2 does not match the value configured on R1.",
+      "The transport tunnel between R1 and R2 is not operational.",
+      "The route distinguisher has not been configured in the VPRN on R2."
+    ],
+    "correct_answers": ["The route distinguisher has not been configured in the VPRN on R2."],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

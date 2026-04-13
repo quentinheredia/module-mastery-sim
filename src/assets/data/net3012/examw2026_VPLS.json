@@ -1,0 +1,42 @@
+[
+  {
+    "module": "W2026_Final_Exam_VPLS",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "What of the following services provide a Layer 2 multipoint to multipoint VPN service?",
+    "image": null,
+    "options": ["VPWS", "VPLS", "VPRN", "IES"],
+    "correct_answers": ["VPLS"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_VPLS",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which of the following best describes how a VPLS populates the MAC forwarding database (FDB) with the MAC address of the attached devices?",
+    "image": null,
+    "options": [
+      "The network administrator programs the FDB with the MAC address of the attached devices.",
+      "The PE router uses ARP to discover the MAC addresses of attached devices.",
+      "The PE router examines the source MAC address of received frames.",
+      "There is no MAC learning; unicast traffic is flooded to all destinations in the VPLS."
+    ],
+    "correct_answers": ["The PE router examines the source MAC address of received frames."],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "W2026_Final_Exam_VPLS",
+    "source": "3012 EXAM_W2026_VersionA_Answers.pdf",
+    "question": "Which of the following best describes the forwarding of BUM traffic received on a spoke-SDP in a VPLS service?",
+    "image": null,
+    "options": [
+      "The traffic is flooded to all SAPs and spoke-SDPs in the service.",
+      "The traffic is flooded to all SAPs, spoke-SDPs and mesh-SDPs in the service.",
+      "The traffic is flooded to all SAPs, spoke-SDPs and mesh-SDPs in all VPLS services configured on the router.",
+      "None of the statements above are correct."
+    ],
+    "correct_answers": ["The traffic is flooded to all SAPs, spoke-SDPs and mesh-SDPs in the service."],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]
