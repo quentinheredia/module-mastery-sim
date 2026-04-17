@@ -59,6 +59,9 @@ import net4010week9_1 from "@/assets/data/net4010/week9_1.json";
 import net4010week9_2 from "@/assets/data/net4010/week9_2.json";
 import net4010week11_2 from "@/assets/data/net4010/week11_2.json";
 import net4010week12_1 from "@/assets/data/net4010/week12_1.json";
+import net4010week12_2 from "@/assets/data/net4010/week12_2.json";
+import net4010week13_1 from "@/assets/data/net4010/week13_1.json";
+import net4010exam from "@/assets/data/net4010/exam.json";
 
 // NET 3012 Course Data
 import test1w2014 from "@/assets/data/net3012/test1w2014.json";
@@ -123,6 +126,9 @@ const courseData: Record<string, Question[]> = {
     ...net4010week9_2,
     ...net4010week11_2,
     ...net4010week12_1,
+    ...net4010week12_2,
+    ...net4010week13_1,
+    ...net4010exam,
   ] as Question[],
 
   net3012: [

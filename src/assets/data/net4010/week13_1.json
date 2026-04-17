@@ -1,0 +1,174 @@
+[
+  {
+    "module": "Week 13.1 - MEC & Wireless LAN",
+    "source": "2026 SMN Week 13.1 -08667d24.pdf",
+    "question": "Which organization defined the Multi-access Edge Computing (MEC) architecture concept?",
+    "image": null,
+    "options": [
+      "ETSI (European Telecommunications Standards Institute)",
+      "3GPP (3rd Generation Partnership Project)",
+      "IEEE (Institute of Electrical and Electronics Engineers)",
+      "IETF (Internet Engineering Task Force)",
+      "ITU (International Telecommunication Union)"
+    ],
+    "correct_answers": ["ETSI (European Telecommunications Standards Institute)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 13.1 - MEC & Wireless LAN",
+    "source": "2026 SMN Week 13.1 -08667d24.pdf",
+    "question": "What is Local Breakout (LBO) in the context of MEC?",
+    "image": null,
+    "options": [
+      "Routing data plane traffic locally to cloud services without crossing the full breadth of the core network",
+      "A method for breaking out of a VPN tunnel at the local branch office",
+      "A technique that forces all traffic through a centralized security inspection point",
+      "A protocol for local AP management without a WLC",
+      "A feature that bypasses authentication for trusted local devices"
+    ],
+    "correct_answers": ["Routing data plane traffic locally to cloud services without crossing the full breadth of the core network"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 13.1 - MEC & Wireless LAN",
+    "source": "2026 SMN Week 13.1 -08667d24.pdf",
+    "question": "Which of the following are key advantages of deploying MEC architecture? Choose all that apply.",
+    "image": null,
+    "options": [
+      "Enabling URLLC use cases targeting 1ms latency",
+      "Reducing backhaul traffic through optimized traffic offload",
+      "Better quality of experience (QoE) via edge cache functionality",
+      "Eliminating the need for 5G core network functions",
+      "Replacing radio access network infrastructure entirely"
+    ],
+    "correct_answers": [
+      "Enabling URLLC use cases targeting 1ms latency",
+      "Reducing backhaul traffic through optimized traffic offload",
+      "Better quality of experience (QoE) via edge cache functionality"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 13.1 - MEC & Wireless LAN",
+    "source": "2026 SMN Week 13.1 -08667d24.pdf",
+    "question": "Which MEC design principle states that a MEC application needs to run at the appropriate physical location at any point in time, accounting for compute, storage, network, and latency requirements?",
+    "image": null,
+    "options": [
+      "Smart application location",
+      "NFV alignment",
+      "Mobility support",
+      "Deployment independence",
+      "Application mobility to/from an external system"
+    ],
+    "correct_answers": ["Smart application location"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 13.1 - MEC & Wireless LAN",
+    "source": "2026 SMN Week 13.1 -08667d24.pdf",
+    "question": "What frequency bands do WLANs operate in? Choose all that apply.",
+    "image": null,
+    "options": [
+      "2.4 GHz",
+      "5 GHz",
+      "6 GHz",
+      "700 MHz",
+      "28 GHz"
+    ],
+    "correct_answers": [
+      "2.4 GHz",
+      "5 GHz",
+      "6 GHz"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 13.1 - MEC & Wireless LAN",
+    "source": "2026 SMN Week 13.1 -08667d24.pdf",
+    "question": "Which Wi-Fi generation introduced support for the 6 GHz frequency band?",
+    "image": null,
+    "options": [
+      "Wi-Fi 6E (802.11ax)",
+      "Wi-Fi 5 (802.11ac)",
+      "Wi-Fi 4 (802.11n)",
+      "Wi-Fi 6 (802.11ax without 6 GHz)",
+      "Wi-Fi 7 (802.11be)"
+    ],
+    "correct_answers": ["Wi-Fi 6E (802.11ax)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 13.1 - MEC & Wireless LAN",
+    "source": "2026 SMN Week 13.1 -08667d24.pdf",
+    "question": "What is the MAC layer access protocol used in 802.11 WLANs to coordinate transmission among devices sharing the same channel?",
+    "image": null,
+    "options": [
+      "CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)",
+      "CSMA/CD (Carrier Sense Multiple Access with Collision Detection)",
+      "TDMA (Time Division Multiple Access)",
+      "FDMA (Frequency Division Multiple Access)",
+      "ALOHA"
+    ],
+    "correct_answers": ["CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 13.1 - MEC & Wireless LAN",
+    "source": "2026 SMN Week 13.1 -08667d24.pdf",
+    "question": "What is Split MAC in the context of centralized WLAN architecture?",
+    "image": null,
+    "options": [
+      "An architecture for the CAPWAP protocol that splits 802.11 functions between the controller-based AP and the WLC",
+      "A method of splitting MAC addresses between two APs for load balancing",
+      "A security technique that uses two separate MAC addresses for encryption",
+      "A feature that splits the MAC layer between wired and wireless segments",
+      "A protocol that divides MAC filtering between the RADIUS server and the AP"
+    ],
+    "correct_answers": ["An architecture for the CAPWAP protocol that splits 802.11 functions between the controller-based AP and the WLC"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 13.1 - MEC & Wireless LAN",
+    "source": "2026 SMN Week 13.1 -08667d24.pdf",
+    "question": "Which of the following functions are handled by the Wireless LAN Controller (WLC) in a centralized WLAN architecture? Choose all that apply.",
+    "image": null,
+    "options": [
+      "802.11 association and reassociation (roaming)",
+      "Radio frequency (RF) management",
+      "Security management",
+      "Wireless encryption and decryption of 802.11 frames",
+      "Transmission of beacon frames"
+    ],
+    "correct_answers": [
+      "802.11 association and reassociation (roaming)",
+      "Radio frequency (RF) management",
+      "Security management"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 13.1 - MEC & Wireless LAN",
+    "source": "2026 SMN Week 13.1 -08667d24.pdf",
+    "question": "What is Layer 2 intercontroller roaming in a centralized WLAN architecture?",
+    "image": null,
+    "options": [
+      "The client roams between APs associated with different WLCs but remains on the same VLAN and subnet, keeping its IP address",
+      "The client roams between APs and is assigned a new IP address on a different subnet",
+      "The client roams between two APs on the same WLC without leaving the building",
+      "The client disconnects from Wi-Fi and reconnects to a cellular network",
+      "The client moves between two BSSIDs but stays connected to the same AP"
+    ],
+    "correct_answers": ["The client roams between APs associated with different WLCs but remains on the same VLAN and subnet, keeping its IP address"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

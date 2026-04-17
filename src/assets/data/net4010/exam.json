@@ -1,0 +1,337 @@
+[
+  {
+    "module": "Final Exam Practice",
+    "source": "06-Secure_Mobile_Networking__NET4010A.pdf - Slide 4",
+    "question": "What are the main elements of a cellular system?",
+    "image": null,
+    "options": [
+      "Base station, Air interface, Radio access network (RAN), and Core network",
+      "WiFi Access Point, Ethernet cable, and Cloud server",
+      "Satellite, Fiber optics, and Personal computer",
+      "Public Switched Telephone Network (PSTN) only"
+    ],
+    "correct_answers": [
+      "Base station, Air interface, Radio access network (RAN), and Core network"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "06-Secure_Mobile_Networking__NET4010A.pdf - Slide 6",
+    "question": "What is the primary difference between a control channel and a traffic channel?",
+    "image": null,
+    "options": [
+      "Control channels carry voice data; traffic channels carry setup info",
+      "Control channels are used for setting up/maintaining calls and relationships; traffic channels carry voice or data between users",
+      "Traffic channels are for internal network signaling; control channels are for user browsing",
+      "There is no functional difference; they are used interchangeably"
+    ],
+    "correct_answers": [
+      "Control channels are used for setting up/maintaining calls and relationships; traffic channels carry voice or data between users"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "06-Secure_Mobile_Networking__NET4010A.pdf - Slide 10",
+    "question": "Match the base station type to its primary air interface technology.",
+    "image": null,
+    "options": [
+      "CDMA-based and uses a Radio Network Controller (RNC)",
+      "OFDMA-based and embeds its own control functionality"
+    ],
+    "pairs": {
+      "A": "NodeB",
+      "B": "eNodeB"
+    },
+    "correct_answers": {
+      "A": "CDMA-based and uses a Radio Network Controller (RNC)",
+      "B": "OFDMA-based and embeds its own control functionality"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "06-Secure_Mobile_Networking__NET4010A.pdf - Slide 12",
+    "question": "What is the primary function of the X2 interface in LTE-Advanced?",
+    "image": null,
+    "options": [
+      "Connecting the base station to the core network",
+      "Enabling eNodeBs to interact directly with each other for mobility and interference coordination",
+      "Providing the wireless link to the mobile phone",
+      "Encrypting user data for internet browsing"
+    ],
+    "correct_answers": [
+      "Enabling eNodeBs to interact directly with each other for mobility and interference coordination"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "06-Secure_Mobile_Networking__NET4010A.pdf - Slide 18",
+    "question": "In 2G GSM networks, authentication was unidirectional. What security vulnerability did this create?",
+    "image": null,
+    "options": [
+      "It allowed attackers to use False Base Stations (IMSI catchers) because the user did not authenticate the network",
+      "It made the battery drain faster",
+      "It prevented users from roaming globally",
+      "It forced all data to be encrypted by the SIM card"
+    ],
+    "correct_answers": [
+      "It allowed attackers to use False Base Stations (IMSI catchers) because the user did not authenticate the network"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "06-Secure_Mobile_Networking__NET4010A.pdf - Slide 20",
+    "question": "How did 3G (UMTS) address the 'False Base Station' vulnerability found in 2G?",
+    "image": null,
+    "options": [
+      "By removing all base stations",
+      "By introducing Mutual Authentication using the AKA protocol, where the USIM verifies a Network Authentication Token (AUTN)",
+      "By using GPS to verify the tower location",
+      "By encrypting the physical tower"
+    ],
+    "correct_answers": [
+      "By introducing Mutual Authentication using the AKA protocol, where the USIM verifies a Network Authentication Token (AUTN)"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "06-Secure_Mobile_Networking__NET4010A.pdf - Slide 22",
+    "question": "5G Millimeter Wave (mmWave) has a longer range than 4G, requiring fewer small cells. True or False?",
+    "image": null,
+    "options": ["True", "False"],
+    "correct_answers": ["False"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "06-Secure_Mobile_Networking__NET4010A.pdf - Slide 24",
+    "question": "Match the network segment to its physical path description in 5G.",
+    "image": null,
+    "options": [
+      "Path between centralized radio controllers and remote radio units (<20 km)",
+      "Path between CUs and DUs (typically 20-40 km)",
+      "Path between base station systems and the core network (up to hundreds of km)"
+    ],
+    "pairs": {
+      "A": "Fronthaul",
+      "B": "Midhaul",
+      "C": "Backhaul"
+    },
+    "correct_answers": {
+      "A": "Path between centralized radio controllers and remote radio units (<20 km)",
+      "B": "Path between CUs and DUs (typically 20-40 km)",
+      "C": "Path between base station systems and the core network (up to hundreds of km)"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "06-Secure_Mobile_Networking__NET4010A.pdf - Slide 32",
+    "question": "In 4G, encryption terminates at the eNodeB (the tower) rather than deep in the network. What is the security implication?",
+    "image": null,
+    "options": [
+      "It is more secure because the tower is closer",
+      "It is potentially less secure because keys are stored at the 'Edge' (tower), making them easier to physically access",
+      "There is no implication because 4G doesn't use keys",
+      "The MME handles all encryption for the user plane"
+    ],
+    "correct_answers": [
+      "It is potentially less secure because keys are stored at the 'Edge' (tower), making them easier to physically access"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "07-Secure_Mobile_Networking__NET4010A.pdf - Slide 3",
+    "question": "What is the primary role of the Non-Access Stratum (NAS) layer?",
+    "image": null,
+    "options": [
+      "Managing the wireless connection directly at the antenna",
+      "Managing mobility, security, and sessions between the UE and the Core Network transparently through the RAN",
+      "Controlling the physical radio frequency",
+      "Handling data routing between two different mobile phones"
+    ],
+    "correct_answers": [
+      "Managing mobility, security, and sessions between the UE and the Core Network transparently through the RAN"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "07-Secure_Mobile_Networking__NET4010A.pdf - Slide 5",
+    "question": "Why is the Master Secret Key (K) never transmitted over the radio interface?",
+    "image": null,
+    "options": [
+      "It is too large for wireless transmission",
+      "To prevent cloning; it remains isolated in the tamper-proof USIM and the Home Network AuC/UDM",
+      "It is only needed for billing, not security",
+      "The MME generates a new one every 10 seconds"
+    ],
+    "correct_answers": [
+      "To prevent cloning; it remains isolated in the tamper-proof USIM and the Home Network AuC/UDM"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "07-Secure_Mobile_Networking__NET4010A.pdf - Slide 23",
+    "question": "In 5G Standalone (SA), the Subscription Concealed Identifier (SUCI) is sent in cleartext. True or False?",
+    "image": null,
+    "options": ["True", "False"],
+    "correct_answers": ["False"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "07-Secure_Mobile_Networking__NET4010A.pdf - Slide 31",
+    "question": "What requirement must be met for a successful Layer 2 (L2) Roam in a WLAN architecture?",
+    "image": null,
+    "options": [
+      "Both APs must be from different manufacturers",
+      "The user must change their IP address manually",
+      "Both source and target APs must be mapped to the same VLAN and IP Subnet",
+      "The user must be in a 5G coverage area"
+    ],
+    "correct_answers": [
+      "Both source and target APs must be mapped to the same VLAN and IP Subnet"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "07-Secure_Mobile_Networking__NET4010A.pdf - Slide 35",
+    "question": "What is the defining characteristic of an Autonomous (Fat) Access Point?",
+    "image": null,
+    "options": [
+      "It requires a constant WLC connection to function",
+      "It is a self-contained unit that handles management, security, and data switching locally",
+      "It cannot use encryption",
+      "It is only for 2.4 GHz"
+    ],
+    "correct_answers": [
+      "It is a self-contained unit that handles management, security, and data switching locally"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "FEPrep_3.pdf - Page 1",
+    "question": "In a Split-MAC architecture, which task is handled by the Lightweight AP (LAP) rather than the WLC?",
+    "image": null,
+    "options": [
+      "User authentication",
+      "Real-time activities like ACKs, beaconing, and MAC-level retransmissions",
+      "Global security policy storage",
+      "Client mobility management"
+    ],
+    "correct_answers": [
+      "Real-time activities like ACKs, beaconing, and MAC-level retransmissions"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "FEPrep_3.pdf - Page 2",
+    "question": "What happens to user data if the CAPWAP tunnel is lost but the AP is in FlexConnect mode?",
+    "image": null,
+    "options": [
+      "All users are disconnected",
+      "The AP locally switches data to the local Ethernet port, maintaining local functionality",
+      "The AP becomes a 5G tower",
+      "Encryption is removed"
+    ],
+    "correct_answers": [
+      "The AP locally switches data to the local Ethernet port, maintaining local functionality"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "FEPrep_3.pdf - Page 3",
+    "question": "What risk is introduced by the 'Distributed Attack Surface' in MEC?",
+    "image": null,
+    "options": [
+      "Fewer towers are needed",
+      "Sensitive functions (like UPF) are distributed to thousands of edge locations, increasing physical target sites",
+      "Encryption is no longer possible",
+      "The core network becomes too slow"
+    ],
+    "correct_answers": [
+      "Sensitive functions (like UPF) are distributed to thousands of edge locations, increasing physical target sites"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "FEPrep_3.pdf - Page 4",
+    "question": "What is the primary purpose of the 'AUTN' (Authentication Token) in 4G/LTE?",
+    "image": null,
+    "options": [
+      "To speed up internet connection",
+      "Mutual Authentication - it allows the UE to verify the network is legitimate",
+      "To assign an IP address",
+      "To encrypt YouTube data"
+    ],
+    "correct_answers": [
+      "Mutual Authentication - it allows the UE to verify the network is legitimate"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "FEPrep_3.pdf - Page 6",
+    "question": "In 5G, what is the specific role of the SIDF (Subscription Identifier De-concealing Function)?",
+    "image": null,
+    "options": [
+      "It stores the master key K",
+      "It decrypts the SUCI (Concealed ID) to reveal the SUPI (Permanent ID) within the Home Network",
+      "It generates random numbers for 4G",
+      "It manages billing for roaming"
+    ],
+    "correct_answers": [
+      "It decrypts the SUCI (Concealed ID) to reveal the SUPI (Permanent ID) within the Home Network"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Final Exam Practice",
+    "source": "FEPrep_3.pdf - Page 7",
+    "question": "Moving to an O-RAN environment expands the attack surface. Why?",
+    "image": null,
+    "options": [
+      "It uses more electricity",
+      "Moving from a closed 'black box' to open, software-defined systems increases entry points and requires Zero Trust",
+      "Single-vendor systems are easier to hack",
+      "The distance between CU and DU is too short"
+    ],
+    "correct_answers": [
+      "Moving from a closed 'black box' to open, software-defined systems increases entry points and requires Zero Trust"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]
