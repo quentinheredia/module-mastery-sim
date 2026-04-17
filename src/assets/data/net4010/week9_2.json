@@ -1,0 +1,168 @@
+[
+  {
+    "module": "Week 9.2 - 5G Fundamentals",
+    "source": "2026 SMN Week 9.2 03-10-2026.pdf",
+    "question": "Which three primary use case categories define 5G (IMT-2020)?",
+    "image": null,
+    "options": [
+      "eMBB, mMTC, URLLC",
+      "eMBB, D2D, V2X",
+      "IoT, eMBB, URLLC",
+      "mMTC, V2X, eMBB",
+      "URLLC, D2D, IoT"
+    ],
+    "correct_answers": ["eMBB, mMTC, URLLC"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.2 - 5G Fundamentals",
+    "source": "2026 SMN Week 9.2 03-10-2026.pdf",
+    "question": "What does eMBB stand for in the context of 5G use cases?",
+    "image": null,
+    "options": [
+      "Enhanced Mobile Broadband",
+      "Extended Machine-Based Broadband",
+      "Evolved Massive Broadband",
+      "Enhanced Multi-Band Bearer",
+      "Efficient Mobile Bandwidth"
+    ],
+    "correct_answers": ["Enhanced Mobile Broadband"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.2 - 5G Fundamentals",
+    "source": "2026 SMN Week 9.2 03-10-2026.pdf",
+    "question": "What does URLLC stand for in the context of 5G use cases?",
+    "image": null,
+    "options": [
+      "Ultra-Reliable Low Latency Communication",
+      "Unified Radio Link Layer Communication",
+      "Universal Remote Low Latency Control",
+      "Ultra-Range Low Loss Communication",
+      "User-Responsive Latency-Limited Channel"
+    ],
+    "correct_answers": ["Ultra-Reliable Low Latency Communication"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.2 - 5G Fundamentals",
+    "source": "2026 SMN Week 9.2 03-10-2026.pdf",
+    "question": "What does mMTC stand for in the context of 5G use cases?",
+    "image": null,
+    "options": [
+      "Massive Machine Type Communication",
+      "Multi-Mode Traffic Channel",
+      "Mobile Machine-to-Cloud",
+      "Managed Multi-Tier Connectivity",
+      "Medium Machine Type Communication"
+    ],
+    "correct_answers": ["Massive Machine Type Communication"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.2 - 5G Fundamentals",
+    "source": "2026 SMN Week 9.2 03-10-2026.pdf",
+    "question": "How many key capabilities are defined for IMT-2020 (5G) by the ITU?",
+    "image": null,
+    "options": [
+      "8",
+      "5",
+      "6",
+      "10",
+      "12"
+    ],
+    "correct_answers": ["8"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.2 - 5G Fundamentals",
+    "source": "2026 SMN Week 9.2 03-10-2026.pdf",
+    "question": "Which organizations are primarily responsible for 5G standardization? Choose the best two answers.",
+    "image": null,
+    "options": [
+      "3GPP",
+      "ITU",
+      "IETF",
+      "IEEE",
+      "ETSI"
+    ],
+    "correct_answers": ["3GPP", "ITU"],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 9.2 - 5G Fundamentals",
+    "source": "2026 SMN Week 9.2 03-10-2026.pdf",
+    "question": "Which 5G use case category best describes autonomous vehicles and industrial automation requiring very low latency and high reliability?",
+    "image": null,
+    "options": [
+      "URLLC",
+      "eMBB",
+      "mMTC",
+      "V2X",
+      "D2D"
+    ],
+    "correct_answers": ["URLLC"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.2 - 5G Fundamentals",
+    "source": "2026 SMN Week 9.2 03-10-2026.pdf",
+    "question": "Which 5G use case category best describes smart city sensors and IoT devices requiring massive connectivity with low power?",
+    "image": null,
+    "options": [
+      "mMTC",
+      "eMBB",
+      "URLLC",
+      "NB-IoT",
+      "D2D"
+    ],
+    "correct_answers": ["mMTC"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.2 - 5G Fundamentals",
+    "source": "2026 SMN Week 9.2 03-10-2026.pdf",
+    "question": "Which 5G use case category best describes 4K/8K video streaming and VR/AR applications?",
+    "image": null,
+    "options": [
+      "eMBB",
+      "URLLC",
+      "mMTC",
+      "V2X",
+      "MEC"
+    ],
+    "correct_answers": ["eMBB"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.2 - 5G Fundamentals",
+    "source": "2026 SMN Week 9.2 03-10-2026.pdf",
+    "question": "Which of the following are among the 8 key capabilities of IMT-2020? Choose all that apply.",
+    "image": null,
+    "options": [
+      "Peak data rate",
+      "User experienced data rate",
+      "Latency",
+      "Connection density",
+      "Energy efficiency"
+    ],
+    "correct_answers": [
+      "Peak data rate",
+      "User experienced data rate",
+      "Latency",
+      "Connection density",
+      "Energy efficiency"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  }
+]

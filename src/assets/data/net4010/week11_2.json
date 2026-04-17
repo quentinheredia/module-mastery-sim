@@ -1,0 +1,172 @@
+[
+  {
+    "module": "Week 11.2 - 5G RAN",
+    "source": "2026 SMN Week 11.2 03-19-2026.pdf",
+    "question": "What are the two main frequency ranges defined for 5G NR?",
+    "image": null,
+    "options": [
+      "FR1 (sub-7 GHz) and FR2 (mmWave 24-100 GHz)",
+      "FR1 (sub-1 GHz) and FR2 (sub-6 GHz)",
+      "FR1 (1-6 GHz) and FR2 (6-30 GHz)",
+      "FR1 (700 MHz-3.5 GHz) and FR2 (3.5-6 GHz)",
+      "FR1 (sub-3 GHz) and FR2 (3-30 GHz)"
+    ],
+    "correct_answers": ["FR1 (sub-7 GHz) and FR2 (mmWave 24-100 GHz)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 11.2 - 5G RAN",
+    "source": "2026 SMN Week 11.2 03-19-2026.pdf",
+    "question": "Which of the following are challenges associated with mmWave (FR2) frequencies? Choose all that apply.",
+    "image": null,
+    "options": [
+      "High path loss over distance",
+      "Poor penetration through walls and obstacles",
+      "Requires highly directional antennas (beamforming)",
+      "Susceptible to atmospheric absorption",
+      "Lower bandwidth than sub-6 GHz"
+    ],
+    "correct_answers": [
+      "High path loss over distance",
+      "Poor penetration through walls and obstacles",
+      "Requires highly directional antennas (beamforming)",
+      "Susceptible to atmospheric absorption"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 11.2 - 5G RAN",
+    "source": "2026 SMN Week 11.2 03-19-2026.pdf",
+    "question": "Which type of MIMO uses a large number of antennas at the base station to simultaneously serve multiple users?",
+    "image": null,
+    "options": [
+      "Massive MIMO",
+      "SU-MIMO",
+      "2x2 MIMO",
+      "SISO",
+      "MRC"
+    ],
+    "correct_answers": ["Massive MIMO"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 11.2 - 5G RAN",
+    "source": "2026 SMN Week 11.2 03-19-2026.pdf",
+    "question": "What is the main advantage of FR1 (sub-7 GHz) over FR2 (mmWave) for 5G deployments?",
+    "image": null,
+    "options": [
+      "Better coverage and building penetration",
+      "Higher peak data rates",
+      "More available spectrum",
+      "Lower latency",
+      "Less interference"
+    ],
+    "correct_answers": ["Better coverage and building penetration"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 11.2 - 5G RAN",
+    "source": "2026 SMN Week 11.2 03-19-2026.pdf",
+    "question": "What is the main advantage of FR2 (mmWave) over FR1 for 5G deployments?",
+    "image": null,
+    "options": [
+      "Very high bandwidth enabling peak data rates",
+      "Better coverage over long distances",
+      "Lower cost deployment",
+      "Improved indoor coverage",
+      "No need for beamforming"
+    ],
+    "correct_answers": ["Very high bandwidth enabling peak data rates"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 11.2 - 5G RAN",
+    "source": "2026 SMN Week 11.2 03-19-2026.pdf",
+    "question": "What technique is critical for mmWave 5G deployments to overcome high path loss?",
+    "image": null,
+    "options": [
+      "Beamforming",
+      "Carrier Aggregation",
+      "CDMA spreading",
+      "OFDM",
+      "Frequency hopping"
+    ],
+    "correct_answers": ["Beamforming"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 11.2 - 5G RAN",
+    "source": "2026 SMN Week 11.2 03-19-2026.pdf",
+    "question": "Which MIMO configuration simultaneously serves multiple users on the same time-frequency resources?",
+    "image": null,
+    "options": [
+      "MU-MIMO (Multi-User MIMO)",
+      "SU-MIMO (Single-User MIMO)",
+      "SISO",
+      "MISO",
+      "Diversity MIMO"
+    ],
+    "correct_answers": ["MU-MIMO (Multi-User MIMO)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 11.2 - 5G RAN",
+    "source": "2026 SMN Week 11.2 03-19-2026.pdf",
+    "question": "How has the evolution of cellular antennas progressed toward 5G? Choose the best answer.",
+    "image": null,
+    "options": [
+      "From single omnidirectional antennas to large multi-element active antenna arrays",
+      "From large arrays to small single antennas",
+      "From MIMO to SISO for better coverage",
+      "From active to passive antenna systems",
+      "From high-frequency to low-frequency operation only"
+    ],
+    "correct_answers": ["From single omnidirectional antennas to large multi-element active antenna arrays"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 11.2 - 5G RAN",
+    "source": "2026 SMN Week 11.2 03-19-2026.pdf",
+    "question": "What is the mmWave frequency range defined for 5G FR2?",
+    "image": null,
+    "options": [
+      "24 GHz to 100 GHz",
+      "6 GHz to 24 GHz",
+      "30 GHz to 300 GHz",
+      "3 GHz to 30 GHz",
+      "10 GHz to 60 GHz"
+    ],
+    "correct_answers": ["24 GHz to 100 GHz"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 11.2 - 5G RAN",
+    "source": "2026 SMN Week 11.2 03-19-2026.pdf",
+    "question": "Which of the following statements about 5G NR frequency ranges are correct? Choose all that apply.",
+    "image": null,
+    "options": [
+      "FR1 provides better coverage but lower peak data rates than FR2",
+      "FR2 provides higher bandwidth but shorter range than FR1",
+      "mmWave deployments typically require denser small cell infrastructure",
+      "FR1 is commonly used for wide-area macro cell coverage",
+      "FR2 frequencies can easily penetrate buildings without signal loss"
+    ],
+    "correct_answers": [
+      "FR1 provides better coverage but lower peak data rates than FR2",
+      "FR2 provides higher bandwidth but shorter range than FR1",
+      "mmWave deployments typically require denser small cell infrastructure",
+      "FR1 is commonly used for wide-area macro cell coverage"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  }
+]

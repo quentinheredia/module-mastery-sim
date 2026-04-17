@@ -1,0 +1,221 @@
+[
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "Which 3GPP specification is the primary security standard for LTE/EPS?",
+    "image": null,
+    "options": [
+      "TS 33.401",
+      "TS 33.402",
+      "TS 22.278",
+      "TS 36.331",
+      "TS 23.401"
+    ],
+    "correct_answers": ["TS 33.401"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "How many distinct security feature groups (types) are defined in the LTE security architecture?",
+    "image": null,
+    "options": [
+      "5",
+      "3",
+      "4",
+      "6",
+      "2"
+    ],
+    "correct_answers": ["5"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "Which LTE security feature type covers Network Access Security?",
+    "image": null,
+    "options": [
+      "Type I",
+      "Type II",
+      "Type III",
+      "Type IV",
+      "Type V"
+    ],
+    "correct_answers": ["Type I"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "How many distinct keys are used in the LTE key hierarchy?",
+    "image": null,
+    "options": [
+      "5",
+      "3",
+      "7",
+      "4",
+      "6"
+    ],
+    "correct_answers": ["5"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "What is the length of the master key K in the LTE key hierarchy?",
+    "image": null,
+    "options": [
+      "128 bits",
+      "64 bits",
+      "256 bits",
+      "512 bits",
+      "192 bits"
+    ],
+    "correct_answers": ["128 bits"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "What is the length of the K_ASME key in LTE?",
+    "image": null,
+    "options": [
+      "256 bits",
+      "128 bits",
+      "64 bits",
+      "512 bits",
+      "384 bits"
+    ],
+    "correct_answers": ["256 bits"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "What cryptographic function is used as the Key Derivation Function (KDF) in LTE?",
+    "image": null,
+    "options": [
+      "HMAC based on SHA-256",
+      "MD5",
+      "AES-128 CBC",
+      "SHA-1 HMAC",
+      "RSA-2048"
+    ],
+    "correct_answers": ["HMAC based on SHA-256"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "Which of the following correctly describes the LTE key derivation chain? Choose all that apply.",
+    "image": null,
+    "options": [
+      "K → CK, IK → K_ASME",
+      "K_ASME → K_eNB",
+      "K_eNB → K_UPenc, K_RRCint, K_RRCenc",
+      "K_ASME → K_NASenc, K_NASint",
+      "K → K_ASME directly (no intermediate step)"
+    ],
+    "correct_answers": [
+      "K → CK, IK → K_ASME",
+      "K_ASME → K_eNB",
+      "K_eNB → K_UPenc, K_RRCint, K_RRCenc",
+      "K_ASME → K_NASenc, K_NASint"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "Why are SIM cards NOT allowed in LTE networks?",
+    "image": null,
+    "options": [
+      "SIM cards only support one-way authentication and use weaker keys",
+      "SIM cards are physically too large for LTE devices",
+      "SIM cards do not support IP-based communication",
+      "SIM cards cannot store a subscriber identity",
+      "SIM cards are not manufactured anymore"
+    ],
+    "correct_answers": ["SIM cards only support one-way authentication and use weaker keys"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "What is the purpose of the GUTI in LTE security?",
+    "image": null,
+    "options": [
+      "It is a Globally Unique Temporary Identifier used instead of the IMSI to protect user identity",
+      "It is the key used to derive NAS encryption keys",
+      "It identifies the P-GW assigned to the UE",
+      "It is the authentication token sent during AKA",
+      "It uniquely identifies the eNodeB in the network"
+    ],
+    "correct_answers": ["It is a Globally Unique Temporary Identifier used instead of the IMSI to protect user identity"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "How many steps are in the LTE AKA (Authentication and Key Agreement) procedure?",
+    "image": null,
+    "options": [
+      "11",
+      "5",
+      "7",
+      "9",
+      "13"
+    ],
+    "correct_answers": ["11"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "Which of the following are threats to LTE network security? Choose all that apply.",
+    "image": null,
+    "options": [
+      "Rogue base stations (fake eNodeBs)",
+      "Jamming attacks on the radio interface",
+      "Femtocell attacks",
+      "Backhaul eavesdropping",
+      "Malware on UEs, RAN, or Core"
+    ],
+    "correct_answers": [
+      "Rogue base stations (fake eNodeBs)",
+      "Jamming attacks on the radio interface",
+      "Femtocell attacks",
+      "Backhaul eavesdropping",
+      "Malware on UEs, RAN, or Core"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 9.1 - 4G LTE Security",
+    "source": "2026 SMN Week 9.1 03-03-2026.pdf",
+    "question": "How did the security trust model evolve from 2G to 4G LTE?",
+    "image": null,
+    "options": [
+      "2G mutual trust → 3G user distrust → 4G 'in doubt, all distrust'",
+      "2G no auth → 3G mutual trust → 4G user distrust",
+      "2G user distrust → 3G mutual trust → 4G full trust",
+      "2G one-way auth → 3G no auth → 4G mutual auth",
+      "Trust model has not changed across generations"
+    ],
+    "correct_answers": ["2G mutual trust → 3G user distrust → 4G 'in doubt, all distrust'"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

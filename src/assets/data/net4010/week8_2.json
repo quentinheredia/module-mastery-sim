@@ -1,0 +1,215 @@
+[
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "Which of the following best describes the Evolved Packet System (EPS)?",
+    "image": null,
+    "options": [
+      "EPS = E-UTRAN + EPC",
+      "EPS = eNodeB + MME",
+      "EPS = UMTS + GSM core",
+      "EPS = RNC + SGSN",
+      "EPS = E-UTRAN + SGSN"
+    ],
+    "correct_answers": ["EPS = E-UTRAN + EPC"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "Which nodes make up the Evolved Packet Core (EPC)? Choose all that apply.",
+    "image": null,
+    "options": [
+      "MME (Mobility Management Entity)",
+      "S-GW (Serving Gateway)",
+      "P-GW (PDN Gateway)",
+      "HSS (Home Subscriber Server)",
+      "RNC (Radio Network Controller)"
+    ],
+    "correct_answers": [
+      "MME (Mobility Management Entity)",
+      "S-GW (Serving Gateway)",
+      "P-GW (PDN Gateway)",
+      "HSS (Home Subscriber Server)"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "Which LTE interface carries control plane signaling between the eNodeB and the MME?",
+    "image": null,
+    "options": [
+      "S1-MME",
+      "S1-U",
+      "S11",
+      "S5/S8",
+      "X2"
+    ],
+    "correct_answers": ["S1-MME"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "Which LTE interface carries user plane data between the eNodeB and the Serving Gateway?",
+    "image": null,
+    "options": [
+      "S1-U",
+      "S1-MME",
+      "S11",
+      "SGi",
+      "S6a"
+    ],
+    "correct_answers": ["S1-U"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "What is the interface between the MME and the S-GW called?",
+    "image": null,
+    "options": [
+      "S11",
+      "S1-MME",
+      "S6a",
+      "S5",
+      "SGi"
+    ],
+    "correct_answers": ["S11"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "What interface connects the P-GW to external packet data networks (e.g., the Internet)?",
+    "image": null,
+    "options": [
+      "SGi",
+      "S5/S8",
+      "S11",
+      "S1-U",
+      "S6a"
+    ],
+    "correct_answers": ["SGi"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "What is the LTE downlink multiple access scheme?",
+    "image": null,
+    "options": [
+      "OFDMA",
+      "SC-FDMA",
+      "CDMA",
+      "TDMA",
+      "WCDMA"
+    ],
+    "correct_answers": ["OFDMA"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "How many subcarriers are in one Physical Resource Block (PRB) in LTE?",
+    "image": null,
+    "options": [
+      "12",
+      "7",
+      "6",
+      "14",
+      "15"
+    ],
+    "correct_answers": ["12"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "What is the Transmission Time Interval (TTI) duration in LTE?",
+    "image": null,
+    "options": [
+      "1 ms",
+      "10 ms",
+      "0.5 ms",
+      "5 ms",
+      "2 ms"
+    ],
+    "correct_answers": ["1 ms"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "What key architectural change was made in LTE compared to UMTS/3G?",
+    "image": null,
+    "options": [
+      "The RNC was removed, making the architecture flat with intelligence moved to the eNodeB",
+      "The MSC was added to handle mobility",
+      "The SGSN was replaced with the eNodeB",
+      "Circuit-switched core was retained for voice",
+      "The eNodeB was replaced by the NodeB"
+    ],
+    "correct_answers": ["The RNC was removed, making the architecture flat with intelligence moved to the eNodeB"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "Which LTE protocol layer is responsible for ciphering and integrity protection of user data?",
+    "image": null,
+    "options": [
+      "PDCP",
+      "RLC",
+      "MAC",
+      "PHY",
+      "RRC"
+    ],
+    "correct_answers": ["PDCP"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "What is the maximum number of Component Carriers (CC) allowed in LTE-Advanced Carrier Aggregation?",
+    "image": null,
+    "options": [
+      "5",
+      "3",
+      "4",
+      "2",
+      "8"
+    ],
+    "correct_answers": ["5"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 8.2 - 4G LTE Architecture",
+    "source": "2026 SMN Week 8.2 02-26-2026.pdf",
+    "question": "Which interface connects neighboring eNodeBs for handover coordination in LTE?",
+    "image": null,
+    "options": [
+      "X2",
+      "S1",
+      "S11",
+      "Uu",
+      "S6a"
+    ],
+    "correct_answers": ["X2"],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "module": "Week 12.1 - 5G Core, QoS, Network Slicing",
+    "source": "2026 SMN Week 12.1 03-24-2026.pdf",
+    "question": "What architectural paradigm does the 5G Core (5GC) use, replacing the point-to-point architecture of 4G EPC?",
+    "image": null,
+    "options": [
+      "Service-Based Architecture (SBA)",
+      "Point-to-Point Architecture",
+      "Hierarchical Node Architecture",
+      "Mesh Network Architecture",
+      "Centralized Control Architecture"
+    ],
+    "correct_answers": ["Service-Based Architecture (SBA)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 12.1 - 5G Core, QoS, Network Slicing",
+    "source": "2026 SMN Week 12.1 03-24-2026.pdf",
+    "question": "What protocol is used for user plane data tunneling in the 5G Core?",
+    "image": null,
+    "options": [
+      "GTP-U (GPRS Tunneling Protocol - User Plane)",
+      "IPsec",
+      "GRE",
+      "MPLS",
+      "VXLAN"
+    ],
+    "correct_answers": ["GTP-U (GPRS Tunneling Protocol - User Plane)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 12.1 - 5G Core, QoS, Network Slicing",
+    "source": "2026 SMN Week 12.1 03-24-2026.pdf",
+    "question": "What is a PDU Session in the 5G Core?",
+    "image": null,
+    "options": [
+      "A logical connection between the UE and a Data Network providing IP connectivity",
+      "A physical radio bearer between the UE and gNB",
+      "A management session between the SMF and AMF",
+      "A security tunnel between the UE and UPF",
+      "A signaling session between the gNB and the AMF"
+    ],
+    "correct_answers": ["A logical connection between the UE and a Data Network providing IP connectivity"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 12.1 - 5G Core, QoS, Network Slicing",
+    "source": "2026 SMN Week 12.1 03-24-2026.pdf",
+    "question": "What identifier is used in the 5G QoS framework to mark and differentiate QoS flows?",
+    "image": null,
+    "options": [
+      "QFI (QoS Flow Identifier)",
+      "DSCP",
+      "VLAN tag",
+      "Bearer ID",
+      "TEID"
+    ],
+    "correct_answers": ["QFI (QoS Flow Identifier)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 12.1 - 5G Core, QoS, Network Slicing",
+    "source": "2026 SMN Week 12.1 03-24-2026.pdf",
+    "question": "In the 5G QoS model, what is the mapping relationship between QoS flows and radio bearers?",
+    "image": null,
+    "options": [
+      "Multiple QoS flows can be mapped to a single radio bearer",
+      "One QoS flow maps to exactly one radio bearer always",
+      "Radio bearers are not used in 5G; only QoS flows exist",
+      "Each radio bearer must carry exactly one QoS flow",
+      "QoS flows are terminated at the gNB and not carried over radio"
+    ],
+    "correct_answers": ["Multiple QoS flows can be mapped to a single radio bearer"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 12.1 - 5G Core, QoS, Network Slicing",
+    "source": "2026 SMN Week 12.1 03-24-2026.pdf",
+    "question": "What is Network Slicing in 5G?",
+    "image": null,
+    "options": [
+      "The ability to create multiple logical networks over a shared physical infrastructure, each tailored to specific use cases",
+      "The division of the radio spectrum into frequency slices for different operators",
+      "A technique to reduce interference by slicing the cell into sectors",
+      "The partitioning of the core network into control and user planes",
+      "A method to slice bandwidth between subscribers on a shared bearer"
+    ],
+    "correct_answers": ["The ability to create multiple logical networks over a shared physical infrastructure, each tailored to specific use cases"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 12.1 - 5G Core, QoS, Network Slicing",
+    "source": "2026 SMN Week 12.1 03-24-2026.pdf",
+    "question": "Which 5G Core Network Functions are involved in PDU session establishment? Choose all that apply.",
+    "image": null,
+    "options": [
+      "AMF (Access and Mobility Management Function)",
+      "SMF (Session Management Function)",
+      "UPF (User Plane Function)",
+      "PCF (Policy Control Function)",
+      "AUSF (Authentication Server Function)"
+    ],
+    "correct_answers": [
+      "AMF (Access and Mobility Management Function)",
+      "SMF (Session Management Function)",
+      "UPF (User Plane Function)",
+      "PCF (Policy Control Function)"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 12.1 - 5G Core, QoS, Network Slicing",
+    "source": "2026 SMN Week 12.1 03-24-2026.pdf",
+    "question": "Which 5G use case benefits most from network slicing with a dedicated low-latency slice?",
+    "image": null,
+    "options": [
+      "URLLC (e.g., industrial automation, autonomous vehicles)",
+      "eMBB (e.g., video streaming)",
+      "mMTC (e.g., IoT sensors)",
+      "Voice over NR (VoNR)",
+      "Fixed Wireless Access (FWA)"
+    ],
+    "correct_answers": ["URLLC (e.g., industrial automation, autonomous vehicles)"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 12.1 - 5G Core, QoS, Network Slicing",
+    "source": "2026 SMN Week 12.1 03-24-2026.pdf",
+    "question": "What is the role of the UPF (User Plane Function) in the 5G Core?",
+    "image": null,
+    "options": [
+      "Anchor point for user plane data, performs packet routing and forwarding",
+      "Manages UE registration and mobility",
+      "Handles authentication and security context",
+      "Controls policy and charging rules",
+      "Manages radio resource allocation at the gNB"
+    ],
+    "correct_answers": ["Anchor point for user plane data, performs packet routing and forwarding"],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 12.1 - 5G Core, QoS, Network Slicing",
+    "source": "2026 SMN Week 12.1 03-24-2026.pdf",
+    "question": "Which of the following correctly describes the 5G Service-Based Architecture (SBA)? Choose all that apply.",
+    "image": null,
+    "options": [
+      "Network Functions communicate via standardized service-based interfaces",
+      "Each Network Function exposes services that other NFs can consume",
+      "SBA uses RESTful HTTP/2-based APIs between Network Functions",
+      "NFs are tightly coupled and communicate only with predetermined partners",
+      "SBA enables flexibility and modularity in deploying network functions"
+    ],
+    "correct_answers": [
+      "Network Functions communicate via standardized service-based interfaces",
+      "Each Network Function exposes services that other NFs can consume",
+      "SBA uses RESTful HTTP/2-based APIs between Network Functions",
+      "SBA enables flexibility and modularity in deploying network functions"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  }
+]
