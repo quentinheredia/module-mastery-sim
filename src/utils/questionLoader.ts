@@ -41,7 +41,11 @@ import net4012chapter6 from "@/assets/data/net4012/chapter6.json";
 import net4012optimization from "@/assets/data/net4012/optimization.json";
 import net4012loadbalancing from "@/assets/data/net4012/load_balancing.json";
 import net4012vmmigration from "@/assets/data/net4012/vm_migration.json";
+import net4012securityscheduling from "@/assets/data/net4012/security_aware_scheduling.json";
 import net4012inclass from "@/assets/data/net4012/module7.json";
+import net4012datareplication from "@/assets/data/net4012/data_replication.json";
+import net4012blockchain from "@/assets/data/net4012/blockchain.json";
+import net4012blockchainapp from "@/assets/data/net4012/blockchain_app.json";
 
 // NET4000 Course Data
 import net4000test1 from "@/assets/data/net4000/test1.json";
@@ -108,7 +112,11 @@ const courseData: Record<string, Question[]> = {
     ...net4012optimization,
     ...net4012loadbalancing,
     ...net4012vmmigration,
+    ...net4012securityscheduling,
     ...net4012inclass,
+    ...net4012datareplication,
+    ...net4012blockchain,
+    ...net4012blockchainapp,
   ] as Question[],
 
   net4000: [...net4000test1] as Question[],

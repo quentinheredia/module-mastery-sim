@@ -1,0 +1,386 @@
+[
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 2",
+    "question": "Why did task scheduling become a security problem in modern distributed systems?",
+    "image": null,
+    "options": [
+      "Resources are increasingly shared, geographically distributed, heterogeneous, and partially trusted.",
+      "Cloud networks eliminated the need for encryption.",
+      "All nodes are now fully trusted by default.",
+      "Task execution speed became the only relevant constraint."
+    ],
+    "correct_answers": [
+      "Resources are increasingly shared, geographically distributed, heterogeneous, and partially trusted."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 2",
+    "question": "Which of the following does a task placement decision influence as a security-relevant decision?",
+    "image": null,
+    "options": [
+      "Where sensitive data is processed",
+      "Exposure to co-tenancy and isolation risks",
+      "System attack surface and availability",
+      "The underlying programming language of the node"
+    ],
+    "correct_answers": [
+      "Where sensitive data is processed",
+      "Exposure to co-tenancy and isolation risks",
+      "System attack surface and availability"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 3",
+    "question": "What are typical resource property inputs for security-aware task scheduling?",
+    "image": null,
+    "options": [
+      "Trust or reputation level",
+      "Security capabilities",
+      "Processing speed and cost",
+      "Source code compilation time"
+    ],
+    "correct_answers": [
+      "Trust or reputation level",
+      "Security capabilities",
+      "Processing speed and cost"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Pages 3-4",
+    "question": "Match the method of integrating security into the scheduling decision with its description.",
+    "image": null,
+    "pairs": {
+      "A": "As a constraint",
+      "B": "As an optimization objective",
+      "C": "As overhead-aware modeling",
+      "D": "As policy or rule matching"
+    },
+    "options": [
+      "Acts as a feasibility gate, e.g., only scheduling tasks on nodes with a minimum security level.",
+      "Aims to minimize risk while minimizing time or cost.",
+      "Explicitly models the delay, energy, and cost added by encryption or verification.",
+      "Dictates private tasks only execute on approved domains or node classes."
+    ],
+    "correct_answers": {
+      "A": "Acts as a feasibility gate, e.g., only scheduling tasks on nodes with a minimum security level.",
+      "B": "Aims to minimize risk while minimizing time or cost.",
+      "C": "Explicitly models the delay, energy, and cost added by encryption or verification.",
+      "D": "Dictates private tasks only execute on approved domains or node classes."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 4",
+    "question": "What are the three independent dimensions in the taxonomy of security-aware scheduling research?",
+    "image": null,
+    "options": [
+      "Frameworks & Environments, Security Considerations, Optimization & Algorithmic Solutions",
+      "Cloud, Fog, Edge",
+      "Confidentiality, Integrity, Availability",
+      "Heuristics, Meta-heuristics, Machine Learning"
+    ],
+    "correct_answers": [
+      "Frameworks & Environments, Security Considerations, Optimization & Algorithmic Solutions"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 5",
+    "question": "Under Dimension 1 (Frameworks & Environments), which of the following are considered Computing Structures?",
+    "image": null,
+    "options": [
+      "Cloud",
+      "Fog",
+      "Edge",
+      "Multi-cloud / Hybrid architectures",
+      "Dependent tasks"
+    ],
+    "correct_answers": [
+      "Cloud",
+      "Fog",
+      "Edge",
+      "Multi-cloud / Hybrid architectures"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 6",
+    "question": "Within the CIA Security Objectives for scheduling, what does Integrity aim to achieve?",
+    "image": null,
+    "options": [
+      "Prevent tampering or malicious computation",
+      "Ensure sensitive tasks execute on sufficiently trusted resources",
+      "Maintain service continuity despite failures or attacks",
+      "Minimize the physical footprint of servers"
+    ],
+    "correct_answers": [
+      "Prevent tampering or malicious computation"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 7",
+    "question": "Match the Security Attribute-Guided Assignment type to its characteristic.",
+    "image": null,
+    "pairs": {
+      "A": "Trust level-based assignment",
+      "B": "Tag-based assignment",
+      "C": "Policy scope-based assignment",
+      "D": "Resilience-based assignment"
+    },
+    "options": [
+      "Numeric trust scores guide placement.",
+      "Uses categorical labels like public / private.",
+      "Predefined placement rules per task class or tenant.",
+      "Placement is designed to tolerate compromise or failure."
+    ],
+    "correct_answers": {
+      "A": "Numeric trust scores guide placement.",
+      "B": "Uses categorical labels like public / private.",
+      "C": "Predefined placement rules per task class or tenant.",
+      "D": "Placement is designed to tolerate compromise or failure."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 7",
+    "question": "What distinguishes Dynamic Risk Models from Static Risk Models?",
+    "image": null,
+    "options": [
+      "Dynamic models update trust over time and use behavior-based adjustments.",
+      "Dynamic models rely exclusively on predefined trust or risk levels.",
+      "Dynamic models do not assess risk probability.",
+      "Dynamic models completely ignore runtime behavior."
+    ],
+    "correct_answers": [
+      "Dynamic models update trust over time and use behavior-based adjustments."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 8",
+    "question": "According to Dimension 3 (Optimization & Algorithmic Solutions), which of the following are typically modeled as Objectives?",
+    "image": null,
+    "options": [
+      "Time (latency / makespan)",
+      "Monetary cost",
+      "Energy consumption",
+      "Security thresholds",
+      "Deadlines"
+    ],
+    "correct_answers": [
+      "Time (latency / makespan)",
+      "Monetary cost",
+      "Energy consumption"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 9",
+    "question": "In the Case Study involving Jawade et al. (DAGWO), what specific Algorithm Solution is utilized?",
+    "image": null,
+    "options": [
+      "A Hybrid Meta-Heuristic combining Grey Wolf Optimization and Dragonfly Algorithm",
+      "Non-dominated Sorting Genetic Algorithm III (NSGA-III)",
+      "Modified-Fuzzy-based multi-objective Particle Swarm Optimization (M-FUPE)",
+      "A centralized Round-Robin heuristic"
+    ],
+    "correct_answers": [
+      "A Hybrid Meta-Heuristic combining Grey Wolf Optimization and Dragonfly Algorithm"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 9",
+    "question": "Which of the following are considered VM Attributes in the DAGWO multi-cloud environment case study?",
+    "image": null,
+    "options": [
+      "VM processing speed (MIPS)",
+      "VM CPU count (VCPU)",
+      "VM price",
+      "VM security service level (SSqJ)",
+      "Instruction length (insl)"
+    ],
+    "correct_answers": [
+      "VM processing speed (MIPS)",
+      "VM CPU count (VCPU)",
+      "VM price",
+      "VM security service level (SSqJ)"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 10",
+    "question": "In the S-FOS Resilient Task Scheduling System Case Study, what is the stated Security Objective?",
+    "image": null,
+    "options": [
+      "Detect and mitigate UDP DDoS and port scanning attacks.",
+      "Encrypt all data packets using AES-256.",
+      "Achieve generic confidentiality and integrity across clouds.",
+      "Minimize the monetary cost of execution."
+    ],
+    "correct_answers": [
+      "Detect and mitigate UDP DDoS and port scanning attacks."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 10",
+    "question": "How does the S-FOS system style its security integration?",
+    "image": null,
+    "options": [
+      "Security acts as a validation gate before scheduling, and only valid requests are scheduled.",
+      "Security is optimized strictly after all performance metrics are met.",
+      "It completely bypasses security if latency thresholds are exceeded.",
+      "It assigns tasks randomly and validates security post-execution."
+    ],
+    "correct_answers": [
+      "Security acts as a validation gate before scheduling, and only valid requests are scheduled."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 11",
+    "question": "In the S-FOS Case Study, what technique is used in the Security-Side Algorithm for Task classification?",
+    "image": null,
+    "options": [
+      "Fuzzy logic-based inference method",
+      "Grey Wolf Optimization",
+      "Simulated Annealing",
+      "Blockchain ledger verification"
+    ],
+    "correct_answers": [
+      "Fuzzy logic-based inference method"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 11",
+    "question": "Which of the following metrics were used to evaluate the S-FOS system?",
+    "image": null,
+    "options": [
+      "Response time",
+      "Network utilization",
+      "Detection accuracy",
+      "Instruction length (insl)"
+    ],
+    "correct_answers": [
+      "Response time",
+      "Network utilization",
+      "Detection accuracy"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 12",
+    "question": "According to the presentation's \"Research Trends,\" how do many works primarily treat security?",
+    "image": null,
+    "options": [
+      "As a feasibility constraint first, then optimize performance",
+      "As an afterthought to be added post-deployment",
+      "As the only objective, ignoring performance entirely",
+      "As a completely dynamic variable that cannot be modeled"
+    ],
+    "correct_answers": [
+      "As a feasibility constraint first, then optimize performance"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 12",
+    "question": "Based on current literature trends, which CIA objective receives strong emphasis, resulting in fewer comprehensive CIA-integrated models?",
+    "image": null,
+    "options": [
+      "Confidentiality",
+      "Integrity",
+      "Availability",
+      "Non-repudiation"
+    ],
+    "correct_answers": [
+      "Confidentiality"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Page 12",
+    "question": "Which of the following are listed as Open Challenges and Future Directions in security-aware task scheduling?",
+    "image": null,
+    "options": [
+      "Standardizing risk/security metrics and threat assumptions",
+      "Managing multi-objective trade-offs at realistic scale",
+      "Modeling and bounding security overhead explicitly in scheduling decisions",
+      "Moving completely away from cloud-based environments to solely edge computing"
+    ],
+    "correct_answers": [
+      "Standardizing risk/security metrics and threat assumptions",
+      "Managing multi-objective trade-offs at realistic scale",
+      "Modeling and bounding security overhead explicitly in scheduling decisions"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Security-Aware Task Scheduling",
+    "source": "Security_Aware_Task_Scheduling_ITEC4012.pdf, Pages 9-10",
+    "question": "Match the specific security characteristics to the correct Case Study discussed in the lecture.",
+    "image": null,
+    "pairs": {
+      "A": "Uses Trust level-based assignment",
+      "B": "Uses Resilience-based assignment",
+      "C": "Employs Static Risk Assessment",
+      "D": "Employs Dynamic Risk Assessment"
+    },
+    "options": [
+      "DAGWO Multi-Cloud Framework",
+      "S-FOS SDN-Based IoT-Fog Scheduler"
+    ],
+    "correct_answers": {
+      "A": "DAGWO Multi-Cloud Framework",
+      "B": "S-FOS SDN-Based IoT-Fog Scheduler",
+      "C": "DAGWO Multi-Cloud Framework",
+      "D": "S-FOS SDN-Based IoT-Fog Scheduler"
+    },
+    "question_type": "matching",
+    "points": 1
+  }
+]

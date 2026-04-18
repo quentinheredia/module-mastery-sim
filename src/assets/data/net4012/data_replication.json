@@ -1,0 +1,361 @@
+[
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 2, Slide 3",
+"question": "Which of the following are listed as benefits of replication technology?",
+"image": null,
+"options": [
+"Increase Data Availability",
+"Decrease Data Security",
+"Lower Communication Latency",
+"Improve Performance (Optimize Response time)"
+],
+"correct_answers": [
+"Increase Data Availability",
+"Lower Communication Latency",
+"Improve Performance (Optimize Response time)"
+],
+"question_type": "multiple_answer",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 2, Slide 4",
+"question": "What is one of the challenges of Replica Management in the Cloud mentioned in the slides?",
+"image": null,
+"options": [
+"Determining what should be replicated, data or services?",
+"Ensuring replicas are never replaced.",
+"Increasing energy consumption deliberately.",
+"Preventing fault tolerance."
+],
+"correct_answers": [
+"Determining what should be replicated, data or services?"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 2, Slide 4",
+"question": "Which factors increase the cost of data replication according to the challenges slide?",
+"image": null,
+"options": [
+"Energy",
+"Communication",
+"User satisfaction",
+"Software licensing"
+],
+"correct_answers": [
+"Energy",
+"Communication"
+],
+"question_type": "multiple_answer",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 3, Slide 5",
+"question": "In the context of the Hadoop Distributed File System (HDFS), what happens if a node fails?",
+"image": null,
+"options": [
+"The entire cluster goes down.",
+"Data is re-replicated automatically.",
+"The user must manually restore the data.",
+"The NameNode restarts the node."
+],
+"correct_answers": [
+"Data is re-replicated automatically."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 4, Slide 7",
+"question": "Match the Replica Placement Policy component to its description in HDFS.",
+"image": null,
+"options": [
+"Contains multiple nodes, typical latency within is smaller.",
+"Where the first replica is typically placed.",
+"Where the second replica is placed to guard against entire rack failure."
+],
+"pairs": {
+"A": "Rack",
+"B": "Local node",
+"C": "Different rack"
+},
+"correct_answers": {
+"A": "Contains multiple nodes, typical latency within is smaller.",
+"B": "Where the first replica is typically placed.",
+"C": "Where the second replica is placed to guard against entire rack failure."
+},
+"question_type": "matching",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 4, Slide 8",
+"question": "What is the primary motivation for Data Replication in Hadoop?",
+"image": null,
+"options": [
+"Decreasing storage costs",
+"Availability in case of node and rack failure",
+"Speeding up data generation",
+"Reducing the number of network switches"
+],
+"correct_answers": [
+"Availability in case of node and rack failure"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 5, Slide 9",
+"question": "What is a major limitation of the random replica placement policy regarding load balancing?",
+"image": null,
+"options": [
+"It completely ignores node capabilities.",
+"It makes it hard to maintain load balance and guarantee fair use among data nodes.",
+"It places all replicas on a single rack.",
+"It requires excessive manual intervention."
+],
+"correct_answers": [
+"It makes it hard to maintain load balance and guarantee fair use among data nodes."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 5, Slide 9",
+"question": "According to the slides, what does 'Uneven block placement' imply?",
+"image": null,
+"options": [
+"All nodes process data at the exact same speed.",
+"Some nodes contain a great deal of replicas while others have only a few.",
+"Replicas are perfectly distributed across all racks.",
+"Network bandwidth is optimized."
+],
+"correct_answers": [
+"Some nodes contain a great deal of replicas while others have only a few."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 5, Slide 10",
+"question": "How does the Fair Share Replica Placement Policy aim to solve the problem of uneven placement?",
+"image": null,
+"options": [
+"By placing all replicas on the fastest nodes.",
+"By making the data nodes fairly share the replicas.",
+"By randomly placing replicas without constraints.",
+"By disabling replication entirely."
+],
+"correct_answers": [
+"By making the data nodes fairly share the replicas."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 5, Slide 10",
+"question": "What happens if a node's capability is higher under the Fair Share Replica Placement Policy?",
+"image": null,
+"options": [
+"It should hold fewer replicas.",
+"It is ignored during placement.",
+"It should hold more replicas.",
+"It is shut down to save power."
+],
+"correct_answers": [
+"It should hold more replicas."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 6, Slide 11",
+"question": "Match the formula component to its definition in the Fair Share Replica Placement Policy.",
+"image": null,
+"options": [
+"Number of blocks managed by HDFS",
+"Number of current copies in HDFS",
+"Available disk space of node k",
+"Ideal number of replicas a node with space 'sk' should have"
+],
+"pairs": {
+"A": "B",
+"B": "C",
+"C": "s_{k}",
+"D": "e_{k}"
+},
+"correct_answers": {
+"A": "Number of blocks managed by HDFS",
+"B": "Number of current copies in HDFS",
+"C": "Available disk space of node k",
+"D": "Ideal number of replicas a node with space 'sk' should have"
+},
+"question_type": "matching",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 6, Slide 11",
+"question": "What is the formula used to calculate the ideal number of replicas (e_{k}) for node k?",
+"image": null,
+"options": [
+"e_{k} = (B \\cdot C) \\cdot s_{k}",
+"e_{k} = (B \\cdot C \\cdot s_{k}) / S",
+"e_{k} = B / (C \\cdot s_{k})",
+"e_{k} = S / (B \\cdot C)"
+],
+"correct_answers": [
+"e_{k} = (B \\cdot C \\cdot s_{k}) / S"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 6, Slide 12",
+"question": "In the algorithm proposed for Fair Share Replica Placement, when is a node considered 'free'?",
+"image": null,
+"options": [
+"When the number of assigned replicas 'o_k' is strictly equal to 'e_k'.",
+"When the number of assigned replicas 'o_k' is strictly less than 'e_k'.",
+"When 'o_k' is greater than 'e_k'.",
+"When the node has no disk space left."
+],
+"correct_answers": [
+"When the number of assigned replicas 'o_k' is strictly less than 'e_k'."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 6, Slide 12",
+"question": "Which of the following are parameters considered in the Fair Share Algorithm?",
+"image": null,
+"options": [
+"Block size",
+"Total space of HDFS cluster",
+"Node capability (e.g., storage capacity)",
+"User password"
+],
+"correct_answers": [
+"Total space of HDFS cluster",
+"Node capability (e.g., storage capacity)"
+],
+"question_type": "multiple_answer",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 8, Slide 15",
+"question": "In the Performance Evaluation settings, what is the 'Total Number of Nodes' used for Scenario Two?",
+"image": null,
+"options": [
+"6000",
+"3",
+"18,000",
+"800"
+],
+"correct_answers": [
+"800"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 8, Slide 16",
+"question": "Based on the evaluation of using a random replica placement policy, how is the replica distribution described?",
+"image": null,
+"options": [
+"Perfectly even",
+"Uneven with number of blocks on each node ranging from 2 to 40",
+"Uneven with number of blocks on each node ranging from 15 to 25",
+"Identical across all racks"
+],
+"correct_answers": [
+"Uneven with number of blocks on each node ranging from 2 to 40"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 3, Slide 5",
+"question": "What is the role of the NameNode in HDFS as shown in the slide architecture?",
+"image": null,
+"options": [
+"It stores the actual data blocks.",
+"It manages the file system namespace and metadata.",
+"It acts as a client application.",
+"It performs the computation tasks."
+],
+"correct_answers": [
+"It manages the file system namespace and metadata."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 3, Slide 6",
+"question": "What is meant by 'Rack Awareness' in HDFS Data Replication?",
+"image": null,
+"options": [
+"The system knows the color of the physical racks.",
+"The NameNode determines the rack ID each DataNode belongs to.",
+"The system alerts the user if a rack is moved.",
+"The DataNodes communicate directly without the NameNode."
+],
+"correct_answers": [
+"The NameNode determines the rack ID each DataNode belongs to."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 3, Slide 6",
+"question": "Why is rack awareness important for replica placement?",
+"image": null,
+"options": [
+"To ensure all replicas are placed on the exact same rack to minimize latency.",
+"To ensure replicas are distributed across different racks to prevent data loss if an entire rack fails.",
+"To keep track of power usage per rack.",
+"To organize nodes alphabetically by rack name."
+],
+"correct_answers": [
+"To ensure replicas are distributed across different racks to prevent data loss if an entire rack fails."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Data Replication in Cloud.pdf",
+"source": "Page 2, Slide 3",
+"question": "Which of the following is NOT a benefit of replication technology listed in the slides?",
+"image": null,
+"options": [
+"Increase Data Availability",
+"Improve System Reliability",
+"Increase Single Point of Failure",
+"Enhance Fault Tolerance"
+],
+"correct_answers": [
+"Increase Single Point of Failure"
+],
+"question_type": "single_choice",
+"points": 1
+}
+]

@@ -1,0 +1,371 @@
+[
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 2 - Summarize the Previous Lecture",
+    "question": "What does Blockchain primarily solve according to the lecture summary?",
+    "image": null,
+    "options": [
+      "High throughput data processing",
+      "Trust and audit",
+      "Low latency data-plane tasks",
+      "Data storage capacity limits"
+    ],
+    "correct_answers": [
+      "Trust and audit"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 2 - Summarize the Previous Lecture",
+    "question": "When is the use of blockchain recommended in a system architecture?",
+    "image": null,
+    "options": [
+      "When there is multi-party collaboration",
+      "When there is complete mutual trust",
+      "When there is limited trust",
+      "When there is a need for verifiable history",
+      "When high throughput is required"
+    ],
+    "correct_answers": [
+      "When there is multi-party collaboration",
+      "When there is limited trust",
+      "When there is a need for verifiable history"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 2 - Summarize the Previous Lecture",
+    "question": "What is blockchain NOT designed for?",
+    "image": null,
+    "options": [
+      "Shared state consistency",
+      "Trust and audit",
+      "High throughput / low latency data-plane tasks",
+      "Multi-party collaboration"
+    ],
+    "correct_answers": [
+      "High throughput / low latency data-plane tasks"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 4 - Blockchain in Cloud/Fog",
+    "question": "In a Cloud/Fog environment, what handles control and governance-related matters such as access control and accountability?",
+    "image": null,
+    "options": [
+      "The Primary Execution Layer",
+      "The Second Trust Layer",
+      "The Data Plane",
+      "The OpenFlow Switch"
+    ],
+    "correct_answers": [
+      "The Second Trust Layer"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 4 - Blockchain in Cloud/Fog",
+    "question": "Which of the following are examples of items handled by the Second Trust Layer?",
+    "image": null,
+    "options": [
+      "Access control",
+      "Accountability",
+      "SLA enforcement and settlement",
+      "High-frequency algorithmic trading"
+    ],
+    "correct_answers": [
+      "Access control",
+      "Accountability",
+      "SLA enforcement and settlement"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 4 - Placement Rules",
+    "question": "Match the data types to whether they are suitable for on-chain or off-chain placement.",
+    "image": null,
+    "options": [
+      "Suitable for on-chain",
+      "Not suitable for on-chain"
+    ],
+    "pairs": {
+      "A": "Results and credentials of task/resource allocation",
+      "B": "Real-time control signals, flow table updates",
+      "C": "SLA-related key metric summaries",
+      "D": "Raw sensor data, video streams"
+    },
+    "correct_answers": {
+      "A": "Suitable for on-chain",
+      "B": "Not suitable for on-chain",
+      "C": "Suitable for on-chain",
+      "D": "Not suitable for on-chain"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 6 - Cross-domain resource sharing",
+    "question": "In Cross-domain resource sharing, what is the proposed blockchain solution for billing disputes and lack of transparency?",
+    "image": null,
+    "options": [
+      "Moving all raw data to a centralized cloud",
+      "Using Proof of Work mining exclusively",
+      "Smart contracts for logic, on-chain recording of SLA & payment",
+      "Disabling off-chain computation entirely"
+    ],
+    "correct_answers": [
+      "Smart contracts for logic, on-chain recording of SLA & payment"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 8 - Fog/Edge Federated Learning",
+    "question": "How does blockchain address the issue of malicious nodes poisoning the model in Fog/Edge Federated Learning?",
+    "image": null,
+    "options": [
+      "By running all model training directly on-chain.",
+      "By recording the model hash on-chain and utilizing a reputation mechanism via smart contract.",
+      "By deleting the model when a malicious node is detected.",
+      "By converting the model to a centralized database."
+    ],
+    "correct_answers": [
+      "By recording the model hash on-chain and utilizing a reputation mechanism via smart contract."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 10 - Data Provenance & Integrity",
+    "question": "To ensure data provenance and integrity while avoiding storage bloat, where is the actual data typically stored?",
+    "image": null,
+    "options": [
+      "On-chain",
+      "In the smart contract",
+      "Off-chain",
+      "In the block header"
+    ],
+    "correct_answers": [
+      "Off-chain"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 10 - Data Provenance & Integrity",
+    "question": "What specific element of the data is placed on-chain to ensure medical or financial logs are not tampered with?",
+    "image": null,
+    "options": [
+      "The full raw log",
+      "The hash of the data",
+      "The user's password",
+      "The access control list"
+    ],
+    "correct_answers": [
+      "The hash of the data"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 12 - Access Control & Identity (IAM)",
+    "question": "What does DID stand for in the context of Access Control & Identity on the blockchain?",
+    "image": null,
+    "options": [
+      "Decentralized Identifier",
+      "Data Integrity Daemon",
+      "Distributed Interface Domain",
+      "Dynamic Identity Device"
+    ],
+    "correct_answers": [
+      "Decentralized Identifier"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 18 - How does it map to Blockchain?",
+    "question": "In the S-FOS Framework Revisited, how does the architecture map to Blockchain functions?",
+    "image": null,
+    "options": [
+      "SDN Controller uses smart contracts for access control and recording task status.",
+      "Blockchain provides auditability for scheduling decisions.",
+      "Blockchain executes the heavy fuzzy logic classification.",
+      "Blockchain entirely replaces the SDN Controller."
+    ],
+    "correct_answers": [
+      "SDN Controller uses smart contracts for access control and recording task status.",
+      "Blockchain provides auditability for scheduling decisions."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 20 - The Oracle Problem",
+    "question": "What is the core issue described by the \"Oracle Problem\"?",
+    "image": null,
+    "options": [
+      "Blockchain databases grow too large to store on edge devices.",
+      "Blockchain is a closed loop and cannot natively read external (off-chain) data.",
+      "Smart contracts execute too slowly for real-time routing.",
+      "Oracles require excessive Proof of Work to function."
+    ],
+    "correct_answers": [
+      "Blockchain is a closed loop and cannot natively read external (off-chain) data."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 22 - Why is Oracle important in Cloud/Fog?",
+    "question": "Why is an Oracle critical for enforcing SLAs in Cloud/Fog environments?",
+    "image": null,
+    "options": [
+      "It executes the raw computational workload for the user.",
+      "It feeds required off-chain monitoring data (e.g., CPU usage, latency) to the smart contract.",
+      "It replaces the need for a blockchain entirely.",
+      "It increases the block size to accommodate large logs."
+    ],
+    "correct_answers": [
+      "It feeds required off-chain monitoring data (e.g., CPU usage, latency) to the smart contract."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 31 - Detailed Process (7 steps)",
+    "question": "In Step 5 (Monitoring Result Reporting), what specific metrics does the monitoring system collect to evaluate the SLA?",
+    "image": null,
+    "options": [
+      "Latency (p50/p95/p99, jitter)",
+      "Availability (uptime/heartbeat)",
+      "Completion rate",
+      "Error rate",
+      "Cryptocurrency market cap"
+    ],
+    "correct_answers": [
+      "Latency (p50/p95/p99, jitter)",
+      "Availability (uptime/heartbeat)",
+      "Completion rate",
+      "Error rate"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 31 - Detailed Process (7 steps)",
+    "question": "During the Monitoring Result Reporting step, what does the Oracle output directly to the blockchain (on-chain)?",
+    "image": null,
+    "options": [
+      "The raw log data",
+      "signed_report (signature)",
+      "hash(report)",
+      "The complete VM execution state"
+    ],
+    "correct_answers": [
+      "signed_report (signature)",
+      "hash(report)"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 31 - Detailed Process (7 steps)",
+    "question": "In the detailed SLA process, where is the raw log stored for evidence collection in case of disputes?",
+    "image": null,
+    "options": [
+      "In the block header",
+      "In the smart contract state",
+      "In off-chain object storage",
+      "In the user's local wallet"
+    ],
+    "correct_answers": [
+      "In off-chain object storage"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 32 - Detailed Process (7 steps)",
+    "question": "In Step 6 (Automatic Contract Settlement/Penalty), what action is taken if the smart contract determines the SLA was NOT met?",
+    "image": null,
+    "options": [
+      "The blockchain halts all operations.",
+      "The provider is penalized (withhold deposit/refund/reputation downgrade).",
+      "The Oracle is deleted from the network.",
+      "The user is charged double the fee."
+    ],
+    "correct_answers": [
+      "The provider is penalized (withhold deposit/refund/reputation downgrade)."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slide 33 - Detailed Process (7 steps)",
+    "question": "In Step 7 (Audit Trail), what actions can either party take in the event of a dispute?",
+    "image": null,
+    "options": [
+      "Use the on-chain hash to verify if the off-chain report has been tampered with.",
+      "Trace back who accepted the order and when.",
+      "Arbitrate according to the governance mechanism.",
+      "Permanently delete the block containing the error."
+    ],
+    "correct_answers": [
+      "Use the on-chain hash to verify if the off-chain report has been tampered with.",
+      "Trace back who accepted the order and when.",
+      "Arbitrate according to the governance mechanism."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Cloud_blockchiain_app  -  Compatibility Mode.pdf",
+    "source": "Slides 25-31 - Detailed Process (7 steps)",
+    "question": "Match the step number to its corresponding action in the Cloud/Fog SLA Smart Contract process.",
+    "image": null,
+    "options": [
+      "SLA formulation",
+      "Deposit/Staking",
+      "Task Submission",
+      "Monitoring Result Reporting"
+    ],
+    "pairs": {
+      "A": "Step 1",
+      "B": "Step 2",
+      "C": "Step 3",
+      "D": "Step 5"
+    },
+    "correct_answers": {
+      "A": "SLA formulation",
+      "B": "Deposit/Staking",
+      "C": "Task Submission",
+      "D": "Monitoring Result Reporting"
+    },
+    "question_type": "matching",
+    "points": 1
+  }
+]

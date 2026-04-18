@@ -1,0 +1,361 @@
+[
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 2",
+"question": "What is Blockchain primarily described as in the introductory overview?",
+"image": null,
+"options": [
+"A faster database",
+"A distributed trust coordination mechanism and auditable record mechanism",
+"A hardware virtualization tool",
+"A deep learning model for logs"
+],
+"correct_answers": [
+"A distributed trust coordination mechanism and auditable record mechanism"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 3",
+"question": "From an engineering perspective, if a system features a single-organization internal management and a trusted central controller, which solution is often better?",
+"image": null,
+"options": [
+"A proof-of-work blockchain",
+"A traditional standard database + backup + audit logs",
+"A Byzantine Fault Tolerant consensus network",
+"A decentralized smart contract system"
+],
+"correct_answers": [
+"A traditional standard database + backup + audit logs"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 6",
+"question": "Which of the following are listed as differences between Blockchain and traditional distributed databases?",
+"image": null,
+"options": [
+"Trust model",
+"Governance",
+"Data replication",
+"Network communication",
+"Performance priority"
+],
+"correct_answers": [
+"Trust model",
+"Governance",
+"Performance priority"
+],
+"question_type": "multiple_answer",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 5",
+"question": "What are the two key terms or components mentioned for a transaction?",
+"image": null,
+"options": [
+"Payload (Content) and Digital Signature",
+"Block header and Merkle Tree",
+"Hash pointer and Ledger",
+"Proof of Work and Proof of Stake"
+],
+"correct_answers": [
+"Payload (Content) and Digital Signature"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 5",
+"question": "Match the structural design elements of a block to their concepts.",
+"image": null,
+"options": [
+"A set of transactions",
+"A simplified explanation for organizing Tx1, Tx2, Tx3, Tx4",
+"Contains the hash of the previous block"
+],
+"pairs": {
+"A": "Block body",
+"B": "Merkle Tree",
+"C": "prev_hash"
+},
+"correct_answers": {
+"A": "A set of transactions",
+"B": "A simplified explanation for organizing Tx1, Tx2, Tx3, Tx4",
+"C": "Contains the hash of the previous block"
+},
+"question_type": "matching",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 7",
+"question": "What does \"consensus\" mean in the context of blockchain?",
+"image": null,
+"options": [
+"Agree on one global order",
+"Encrypt all data payloads securely",
+"Ensure maximum throughput",
+"Compress the ledger storage"
+],
+"correct_answers": [
+"Agree on one global order"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 8",
+"question": "What are the two guarantees provided by consensus?",
+"image": null,
+"options": [
+"Safety (no two decided values)",
+"Liveness (eventually decide)",
+"Privacy (encrypted payloads)",
+"Throughput (unlimited TPS)"
+],
+"correct_answers": [
+"Safety (no two decided values)",
+"Liveness (eventually decide)"
+],
+"question_type": "multiple_answer",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 9",
+"question": "In a Permissionless Consensus like Proof of Work, what method is used to limit the right to propose blocks and prevent flooding?",
+"image": null,
+"options": [
+"A \"computation lottery\"",
+"A trusted central controller",
+"A closed membership list",
+"A round-robin scheduler"
+],
+"correct_answers": [
+"A \"computation lottery\""
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 10",
+"question": "Which consensus assumption allows nodes to crash and the network to fluctuate, but assumes nodes will NOT maliciously tamper with or lie?",
+"image": null,
+"options": [
+"Crash Fault Tolerant (CFT)",
+"Byzantine Fault Tolerant (BFT)",
+"Proof of Work (PoW)",
+"Proof of Stake (PoS)"
+],
+"correct_answers": [
+"Crash Fault Tolerant (CFT)"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 11",
+"question": "According to the classic threshold for Byzantine Fault Tolerant (BFT) consensus, how many consensus nodes (N) are typically needed to tolerate 'f' Byzantine faults?",
+"image": null,
+"options": [
+"N >= 3f + 1",
+"N >= 2f + 1",
+"N >= f + 1",
+"N = 4f"
+],
+"correct_answers": [
+"N >= 3f + 1"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 11",
+"question": "Which type of consensus algorithm is recommended for cross-organizational collaboration with potential malicious intent or disputes?",
+"image": null,
+"options": [
+"BFT (PBFT-like)",
+"CFT (Raft/Paxos-like)",
+"Single database",
+"Centralized logging"
+],
+"correct_answers": [
+"BFT (PBFT-like)"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 13",
+"question": "Throughput in blockchain is constrained by which of the following?",
+"image": null,
+"options": [
+"Block size/batching strategy",
+"Message complexity of the consensus protocol",
+"Node processing capacity and disk writing capacity",
+"The \"smartness\" of the AI"
+],
+"correct_answers": [
+"Block size/batching strategy",
+"Message complexity of the consensus protocol",
+"Node processing capacity and disk writing capacity"
+],
+"question_type": "multiple_answer",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 12",
+"question": "Why is blockchain NOT suitable for \"strong real-time\" data plane closed-loop control?",
+"image": null,
+"options": [
+"Confirmation latency requires multiple consensus rounds multiplied by RTT.",
+"It does not support smart contracts natively.",
+"It requires a trusted central controller.",
+"Throughput is infinitely scalable."
+],
+"correct_answers": [
+"Confirmation latency requires multiple consensus rounds multiplied by RTT."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 14",
+"question": "What are the two costs associated with the storage trade-off in blockchain caused by ledger growth and replicated history?",
+"image": null,
+"options": [
+"Storage bloat and Synchronization costs",
+"Hardware failure and CPU overheating",
+"Proof of Work and Proof of Stake",
+"Centralization and Licensing fees"
+],
+"correct_answers": [
+"Storage bloat and Synchronization costs"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 15",
+"question": "What is a Smart Contract as defined in the lecture?",
+"image": null,
+"options": [
+"Code that runs on the blockchain to enforce shared rules and update shared state.",
+"A legal document signed by two parties offline.",
+"An AI model that predicts network traffic.",
+"A jack-of-all-trades backend service."
+],
+"correct_answers": [
+"Code that runs on the blockchain to enforce shared rules and update shared state."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 16",
+"question": "Which of the following are listed as common uses of Smart Contracts?",
+"image": null,
+"options": [
+"SLA Enforcement",
+"Access Control & Authorization",
+"Settlement & Billing",
+"Provenance / Integrity Anchoring",
+"High-frequency low-latency video streaming"
+],
+"correct_answers": [
+"SLA Enforcement",
+"Access Control & Authorization",
+"Settlement & Billing",
+"Provenance / Integrity Anchoring"
+],
+"question_type": "multiple_answer",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 16",
+"question": "What is the most common design rule in engineering regarding data and computation on the blockchain?",
+"image": null,
+"options": [
+"On-chain for rules and proofs; off-chain for data and heavy computation.",
+"On-chain for data and heavy computation; off-chain for rules and proofs.",
+"All data and computation must be on-chain.",
+"All rules and proofs must be off-chain."
+],
+"correct_answers": [
+"On-chain for rules and proofs; off-chain for data and heavy computation."
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Pages 10-11",
+"question": "Match the fault-tolerant consensus type to its correct characteristics.",
+"image": null,
+"options": [
+"Fast, high throughput, suitable for single organizations.",
+"Allows for malicious nodes, higher communication overhead O(N^2)."
+],
+"pairs": {
+"A": "CFT (Crash Fault Tolerant)",
+"B": "BFT (Byzantine Fault Tolerant)"
+},
+"correct_answers": {
+"A": "Fast, high throughput, suitable for single organizations.",
+"B": "Allows for malicious nodes, higher communication overhead O(N^2)."
+},
+"question_type": "matching",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 5",
+"question": "What is the relationship that accurately describes how blocks are linked together in a blockchain?",
+"image": null,
+"options": [
+"Block k contains prev_hash = H(Block k-1)",
+"Block k contains prev_hash = H(Block k+1)",
+"Block k contains payload = H(Block k-1)",
+"Block k contains Merkle Root = H(Block k)"
+],
+"correct_answers": [
+"Block k contains prev_hash = H(Block k-1)"
+],
+"question_type": "single_choice",
+"points": 1
+},
+{
+"module": "Cloud_blockchiain.pdf",
+"source": "Cloud_blockchiain.pdf, Page 13",
+"question": "In order to mitigate the bandwidth trade-off, what approach is suggested for edge devices?",
+"image": null,
+"options": [
+"Exclude edge devices from full broadcasting and consensus by limiting consensus nodes to a small number of committee/ordering nodes.",
+"Force all edge devices to participate in Proof of Work.",
+"Increase the block size limit on all edge devices.",
+"Store all replicated history directly on the edge devices."
+],
+"correct_answers": [
+"Exclude edge devices from full broadcasting and consensus by limiting consensus nodes to a small number of committee/ordering nodes."
+],
+"question_type": "single_choice",
+"points": 1
+}
+]

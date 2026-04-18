@@ -1,0 +1,375 @@
+[
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 2",
+    "question": "What is one of the primary reasons given for using Hadoop on large clusters?",
+    "image": null,
+    "options": [
+      "Nodes fail every day and failure is expected.",
+      "The number of nodes in a cluster is constant.",
+      "It is inexpensive to build reliability into individual applications.",
+      "It requires proprietary, closed-source licenses."
+    ],
+    "correct_answers": [
+      "Nodes fail every day and failure is expected."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 3",
+    "question": "In what year did Hadoop become an Apache Top Level Project?",
+    "image": null,
+    "options": [
+      "2004",
+      "2006",
+      "2008",
+      "2009"
+    ],
+    "correct_answers": [
+      "2008"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 4",
+    "question": "Which of the following companies are listed as users of Hadoop?",
+    "image": null,
+    "options": [
+      "Facebook",
+      "Google",
+      "Yahoo!",
+      "Amazon EMR",
+      "Apple"
+    ],
+    "correct_answers": [
+      "Facebook",
+      "Google",
+      "Yahoo!",
+      "Amazon EMR"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 5",
+    "question": "Which of the following use cases are identified for Hadoop?",
+    "image": null,
+    "options": [
+      "Log processing",
+      "Real-time video rendering",
+      "Search",
+      "Data Warehouse",
+      "Desktop publishing"
+    ],
+    "correct_answers": [
+      "Log processing",
+      "Search",
+      "Data Warehouse"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 7",
+    "question": "What is the role of the NameNode in the HDFS Architecture?",
+    "image": null,
+    "options": [
+      "It stores the actual data blocks.",
+      "It manages the file system namespace and metadata.",
+      "It processes MapReduce tasks.",
+      "It acts as a load balancer for DataNodes."
+    ],
+    "correct_answers": [
+      "It manages the file system namespace and metadata."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 8",
+    "question": "Which of the following are characteristics of the NameNode?",
+    "image": null,
+    "options": [
+      "It maps a file name to a set of blocks.",
+      "It executes read/write requests from clients.",
+      "It maps a block to the DataNodes where it resides.",
+      "It stores metadata only in memory, not on disk."
+    ],
+    "correct_answers": [
+      "It maps a file name to a set of blocks.",
+      "It maps a block to the DataNodes where it resides."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 9",
+    "question": "Match the HDFS component to its primary function regarding data.",
+    "image": null,
+    "pairs": {
+      "A": "DataNode",
+      "B": "NameNode",
+      "C": "Zookeeper"
+    },
+    "options": [
+      "Stores data in the local file system.",
+      "Manages cluster metadata.",
+      "Coordinates distributed applications."
+    ],
+    "correct_answers": {
+      "A": "Stores data in the local file system.",
+      "B": "Manages cluster metadata.",
+      "C": "Coordinates distributed applications."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 9",
+    "question": "What is the purpose of the block report sent by the DataNode?",
+    "image": null,
+    "options": [
+      "To request new data blocks from the NameNode.",
+      "To report the health of the physical hard drive.",
+      "To list the blocks hosted on that specific DataNode.",
+      "To confirm the successful execution of a Map task."
+    ],
+    "correct_answers": [
+      "To list the blocks hosted on that specific DataNode."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 10",
+    "question": "In the context of HDFS replica placement, where are the three replicas typically placed?",
+    "image": null,
+    "options": [
+      "One on the client's node, two on random nodes in the cluster.",
+      "One on a node in the local rack, one on a different node in the local rack, one on a node in a different rack.",
+      "All three on the same node to ensure fast local access.",
+      "All three on different racks to maximize fault tolerance, ignoring network bandwidth."
+    ],
+    "correct_answers": [
+      "One on a node in the local rack, one on a different node in the local rack, one on a node in a different rack."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 12",
+    "question": "When a client reads data from HDFS, from which DataNode does it typically fetch the data?",
+    "image": null,
+    "options": [
+      "Always from the DataNode on the remote rack.",
+      "From the NameNode directly.",
+      "From the closest DataNode.",
+      "From a randomly selected DataNode containing a replica."
+    ],
+    "correct_answers": [
+      "From the closest DataNode."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 13",
+    "question": "What is the primary function of the CheckpointNode?",
+    "image": null,
+    "options": [
+      "To execute MapReduce jobs.",
+      "To fetch FsImage and EditLog from the NameNode to create a new FsImage.",
+      "To act as an active backup for the NameNode in case of failure.",
+      "To store the actual data blocks and perform heartbeats."
+    ],
+    "correct_answers": [
+      "To fetch FsImage and EditLog from the NameNode to create a new FsImage."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 14",
+    "question": "How does HDFS ensure data correctness?",
+    "image": null,
+    "options": [
+      "By relying on the underlying hardware's ECC memory.",
+      "By using an end-to-end checksum calculated by the client.",
+      "By storing data redundantly in memory.",
+      "By running a continuous background verification task on the NameNode."
+    ],
+    "correct_answers": [
+      "By using an end-to-end checksum calculated by the client."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 16",
+    "question": "Which of the following are components of the NameNode Metadata?",
+    "image": null,
+    "options": [
+      "Data blocks",
+      "List of files",
+      "List of Blocks for each file",
+      "List of DataNodes for each block",
+      "Client applications"
+    ],
+    "correct_answers": [
+      "List of files",
+      "List of Blocks for each file",
+      "List of DataNodes for each block"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 16",
+    "question": "Which part of the NameNode metadata is NOT kept on disk?",
+    "image": null,
+    "options": [
+      "The entire metadata",
+      "List of files",
+      "List of Blocks for each file",
+      "List of DataNodes for each block"
+    ],
+    "correct_answers": [
+      "List of DataNodes for each block"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 17",
+    "question": "Match the DataNode failure type to the corresponding NameNode action.",
+    "image": null,
+    "pairs": {
+      "A": "Heartbeat fails",
+      "B": "Corrupt block reported",
+      "C": "Block report shows missing block"
+    },
+    "options": [
+      "DataNode is marked as dead and its blocks are replicated.",
+      "NameNode instructs DataNode to delete the block.",
+      "NameNode initiates replication for the under-replicated block."
+    ],
+    "correct_answers": {
+      "A": "DataNode is marked as dead and its blocks are replicated.",
+      "B": "NameNode instructs DataNode to delete the block.",
+      "C": "NameNode initiates replication for the under-replicated block."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 18",
+    "question": "What is the purpose of the DataNode Cluster Rebalancer?",
+    "image": null,
+    "options": [
+      "To balance the CPU load across DataNodes.",
+      "To automatically move data from heavily utilized DataNodes to lightly utilized ones.",
+      "To restart failed DataNodes.",
+      "To redistribute metadata across multiple NameNodes."
+    ],
+    "correct_answers": [
+      "To automatically move data from heavily utilized DataNodes to lightly utilized ones."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 19",
+    "question": "When configuring a Hadoop cluster, which of the following locations can be used to store NameNode metadata?",
+    "image": null,
+    "options": [
+      "Local disk only.",
+      "Multiple local disks.",
+      "A remote NFS mount.",
+      "A dedicated DataNode."
+    ],
+    "correct_answers": [
+      "Multiple local disks.",
+      "A remote NFS mount."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 23",
+    "question": "Match the Hadoop subproject to its description.",
+    "image": null,
+    "pairs": {
+      "A": "HBase",
+      "B": "Hive",
+      "C": "Zookeeper",
+      "D": "Mahout"
+    },
+    "options": [
+      "Columnar datastore",
+      "Relational database",
+      "Distributed applications coordinator",
+      "Machine learning"
+    ],
+    "correct_answers": {
+      "A": "Columnar datastore",
+      "B": "Relational database",
+      "C": "Distributed applications coordinator",
+      "D": "Machine learning"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 25",
+    "question": "At the time of the presentation, what was the ingest rate for the HDFS cluster at Facebook?",
+    "image": null,
+    "options": [
+      "2 PB raw capacity per day",
+      "2 TB compressed per day",
+      "10 TB compressed per day",
+      "12 Million files per day"
+    ],
+    "correct_answers": [
+      "2 TB compressed per day"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Hadoop & HDFS Architecture",
+    "source": "dhrubahadoopsnia-090927085149-phpapp01.pdf, Page 20",
+    "question": "What functionality allows point-in-time copies of the file system?",
+    "image": null,
+    "options": [
+      "Snapshots",
+      "Append",
+      "Rebalancing",
+      "Checkpointing"
+    ],
+    "correct_answers": [
+      "Snapshots"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]
