@@ -1,0 +1,368 @@
+[
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 1, Slide 2",
+    "question": "What is VM live migration as defined in the lecture?",
+    "image": null,
+    "options": [
+      "Moving VM instances across distinct physical hosts with little or no downtime",
+      "Backing up a virtual machine to an offline storage disk",
+      "Upgrading the OS of a virtual machine",
+      "Transferring process-level data without moving the OS"
+    ],
+    "correct_answers": [
+      "Moving VM instances across distinct physical hosts with little or no downtime"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 2, Slide 4",
+    "question": "Which of the following is a reason for offline migration rather than online migration?",
+    "image": null,
+    "options": [
+      "Balancing Host workloads",
+      "Different processor types preventing online migration",
+      "Targeting a particular VM Host",
+      "Vacating a VM Host system"
+    ],
+    "correct_answers": [
+      "Different processor types preventing online migration"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 2, Slide 3",
+    "question": "Which of the following are listed as reasons for Online VM migration?",
+    "image": null,
+    "options": [
+      "Vacating a VM Host system",
+      "Different processor types",
+      "Balancing Host workloads",
+      "Source VM not supporting online migration"
+    ],
+    "correct_answers": [
+      "Vacating a VM Host system",
+      "Balancing Host workloads"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 5, Slide 11",
+    "question": "Why is OS-level migration preferred over process-level migration?",
+    "image": null,
+    "options": [
+      "It requires more residual dependencies.",
+      "It avoids residual dependencies so the original host can be powered off.",
+      "Operators need to manually control the software within the VM.",
+      "It strictly prevents transferring in-memory state."
+    ],
+    "correct_answers": [
+      "It avoids residual dependencies so the original host can be powered off."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Pages 3-4, Slides 5-9",
+    "question": "Match the cloud or virtualization platform to its migration characteristic.",
+    "image": null,
+    "pairs": {
+      "A": "Amazon-AWS",
+      "B": "VMWare",
+      "C": "RackSpace",
+      "D": "Microsoft-Hyper-V"
+    },
+    "options": [
+      "Migration from EC2 to Virtual Private Cloud (VPC)",
+      "Moving VM from one physical server to another using vMotion",
+      "Migration from a cloud provider to an in-house server",
+      "Microsoft's solution for virtualization in Windows Server"
+    ],
+    "correct_answers": {
+      "A": "Migration from EC2 to Virtual Private Cloud (VPC)",
+      "B": "Moving VM from one physical server to another using vMotion",
+      "C": "Migration from a cloud provider to an in-house server",
+      "D": "Microsoft's solution for virtualization in Windows Server"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 6, Slide 12",
+    "question": "What are the primary design challenges associated with Virtual Machine Live Migration?",
+    "image": null,
+    "options": [
+      "Minimize service downtime",
+      "Maximize migration duration",
+      "Minimize migration duration",
+      "Avoid disrupting running service",
+      "Ensure residual dependencies are kept"
+    ],
+    "correct_answers": [
+      "Minimize service downtime",
+      "Minimize migration duration",
+      "Avoid disrupting running service"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 6, Slide 13",
+    "question": "Which live migration techniques are listed in the presentation?",
+    "image": null,
+    "options": [
+      "Pre-copy live migration",
+      "Post-copy live migration",
+      "Hybrid live migration",
+      "Process-level live migration"
+    ],
+    "correct_answers": [
+      "Pre-copy live migration",
+      "Post-copy live migration",
+      "Hybrid live migration"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 8, Slide 17",
+    "question": "In pre-copy migration, what happens during the 'Transferring Memory State' phase?",
+    "image": null,
+    "options": [
+      "Iteratively copy the memory contents",
+      "Transfer the application's disk state asynchronously",
+      "Establish layer-2 connectivity",
+      "VM is paused to copy the final memory state"
+    ],
+    "correct_answers": [
+      "Iteratively copy the memory contents",
+      "VM is paused to copy the final memory state"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 9, Slide 18",
+    "question": "Under the traditional Xen approach to memory transfer, the algorithm iterates until which of the following conditions is met?",
+    "image": null,
+    "options": [
+      "A limit of 30 iterations is reached.",
+      "It has sent exactly 2 times the VM's total memory.",
+      "The target host is shut down.",
+      "No pages remain to be sent."
+    ],
+    "correct_answers": [
+      "A limit of 30 iterations is reached."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 10, Slide 20",
+    "question": "What heuristic is utilized by the 'Smart Stop and Copy' method to decide when to stop iterating?",
+    "image": null,
+    "options": [
+      "It tracks the number of pages remaining and looks for local minima in the history window.",
+      "It copies pages strictly based on random selection.",
+      "It disables background copying to prioritize page faults.",
+      "It terminates migration after exactly 10 iterations."
+    ],
+    "correct_answers": [
+      "It tracks the number of pages remaining and looks for local minima in the history window."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 10, Slide 21",
+    "question": "What is the primary benefit of using page Deltas during migration?",
+    "image": null,
+    "options": [
+      "It forces synchronous replication of the remote disk.",
+      "It reduces bandwidth consumed by sending only the changes that happened in the pages.",
+      "It guarantees zero downtime for running services.",
+      "It switches the migration from pre-copy to post-copy automatically."
+    ],
+    "correct_answers": [
+      "It reduces bandwidth consumed by sending only the changes that happened in the pages."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 12, Slide 25",
+    "question": "What is another term used for Post-copy Migration?",
+    "image": null,
+    "options": [
+      "Lazy copy",
+      "Aggressive copy",
+      "Iterative copy",
+      "Synchronous copy"
+    ],
+    "correct_answers": [
+      "Lazy copy"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 12, Slide 25",
+    "question": "During post-copy migration, what ensures that every page is copied even if it wasn't required during a page fault?",
+    "image": null,
+    "options": [
+      "Background copying",
+      "Layer-2 connectivity",
+      "ARP redirection",
+      "Smart Stop and Copy"
+    ],
+    "correct_answers": [
+      "Background copying"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 12, Slide 25",
+    "question": "Match the disadvantage to its corresponding migration technique.",
+    "image": null,
+    "pairs": {
+      "A": "Pre-copy (Disadvantage 1)",
+      "B": "Post-copy (Disadvantage 1)",
+      "C": "Post-copy (Disadvantage 2)",
+      "D": "Pre-copy (Disadvantage 2)"
+    },
+    "options": [
+      "Considerably long migration time",
+      "Large number of network-bound page faults",
+      "Probability of unrecoverable failure",
+      "Large amount of data to be transferred"
+    ],
+    "correct_answers": {
+      "A": "Considerably long migration time",
+      "B": "Large number of network-bound page faults",
+      "C": "Probability of unrecoverable failure",
+      "D": "Large amount of data to be transferred"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 13, Slide 28",
+    "question": "What causes Traffic Contention during VM migration?",
+    "image": null,
+    "options": [
+      "Competition for bandwidth amongst migration traffic and all other network traffics",
+      "Using different processor types on the source and target hosts",
+      "Failing to establish layer-2 connectivity",
+      "Stopping the VM prematurely"
+    ],
+    "correct_answers": [
+      "Competition for bandwidth amongst migration traffic and all other network traffics"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 13, Slide 28",
+    "question": "According to the examples of traffic contention, what does outgoing traffic primarily contend with?",
+    "image": null,
+    "options": [
+      "Pre-copy migration in source hosts",
+      "Post-copy migration in destination hosts",
+      "Hybrid migration in destination hosts",
+      "Offline migration in source hosts"
+    ],
+    "correct_answers": [
+      "Pre-copy migration in source hosts"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 15, Slide 30",
+    "question": "What are common approaches to solve traffic contention during migration?",
+    "image": null,
+    "options": [
+      "Setting a limit on the VM's total migration time or data amount",
+      "Setting a limit on the rate of transfer in the migration traffic",
+      "Using strictly offline migration",
+      "Eliminating background copying"
+    ],
+    "correct_answers": [
+      "Setting a limit on the VM's total migration time or data amount",
+      "Setting a limit on the rate of transfer in the migration traffic"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 17, Slide 34",
+    "question": "In the context of Traffic-Sensitive Migration, what is a Traffic Profile used for?",
+    "image": null,
+    "options": [
+      "Recording the rate of network traffic according to each VM to calculate traffic contention",
+      "Logging the downtime of the master processor",
+      "Tracking CPU temperature on the destination host",
+      "Counting the number of iterations in a pre-copy cycle"
+    ],
+    "correct_answers": [
+      "Recording the rate of network traffic according to each VM to calculate traffic contention"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 15, Slide 30",
+    "question": "What is the trade-off of prematurely terminating pre-copy iterative rounds to reduce network overhead?",
+    "image": null,
+    "options": [
+      "Increasing downtime",
+      "Decreasing total migration time",
+      "Increasing available memory",
+      "Reducing unrecoverable failures"
+    ],
+    "correct_answers": [
+      "Increasing downtime"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Week 7 - 2 - Virtual Machine Migration",
+    "source": "Week 7 - 2 - Virtual Machine Migration.pdf, Page 5, Slide 10",
+    "question": "What are the stated purposes of Red Hat live VM migrations?",
+    "image": null,
+    "options": [
+      "Maintenance, load balancing, or power saving",
+      "Switching from Linux to Windows automatically",
+      "Forcing asynchronous copies exclusively",
+      "Converting process-level migrations to OS-level"
+    ],
+    "correct_answers": [
+      "Maintenance, load balancing, or power saving"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

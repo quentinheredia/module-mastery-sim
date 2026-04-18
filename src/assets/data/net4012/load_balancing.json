@@ -1,0 +1,391 @@
+[
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 1, Slide 2",
+    "question": "Which of the following are stated goals of load balancing?",
+    "image": null,
+    "options": [
+      "Optimize resource utilization",
+      "Maximize throughput",
+      "Minimize response time",
+      "Avoid overload of any single resource",
+      "Eliminate the need for network security"
+    ],
+    "correct_answers": [
+      "Optimize resource utilization",
+      "Maximize throughput",
+      "Minimize response time",
+      "Avoid overload of any single resource"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 3, Slide 5",
+    "question": "In order to do work, what must a Server Load Balancer (SLB) do?",
+    "image": null,
+    "options": [
+      "Know servers - IP/port, availability",
+      "Understand details of some protocols (e.g., FTP, SIP, etc)",
+      "Re-write packets as they pass through via NAT",
+      "Assign tasks to different processors using a global pressure grid"
+    ],
+    "correct_answers": [
+      "Know servers - IP/port, availability",
+      "Understand details of some protocols (e.g., FTP, SIP, etc)",
+      "Re-write packets as they pass through via NAT"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 4, Slide 7",
+    "question": "According to the Server Load Balancing Goal, when is a load considered balanced?",
+    "image": null,
+    "options": [
+      "If no processes are idle",
+      "If the throughput reaches 10 Gbps",
+      "If all servers have an equal amount of RAM available",
+      "If network address translation is disabled"
+    ],
+    "correct_answers": [
+      "If no processes are idle"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 5, Slide 8",
+    "question": "The load balancing problem can be reduced to which NP-complete problem?",
+    "image": null,
+    "options": [
+      "The traveling salesperson problem",
+      "The bin-packing problem",
+      "The knapsack problem",
+      "The longest path problem"
+    ],
+    "correct_answers": [
+      "The bin-packing problem"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 6, Slide 10",
+    "question": "Match the load balancing categories to their definitions.",
+    "image": null,
+    "pairs": {
+      "A": "Static",
+      "B": "Dynamic",
+      "C": "Semi-dynamic"
+    },
+    "options": [
+      "Load assigned before application runs",
+      "Load assigned as applications run",
+      "Application periodically suspended and load balanced"
+    ],
+    "correct_answers": {
+      "A": "Load assigned before application runs",
+      "B": "Load assigned as applications run",
+      "C": "Application periodically suspended and load balanced"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 6, Slide 11",
+    "question": "Match the Server Load Balancing algorithm categories to their descriptions.",
+    "image": null,
+    "pairs": {
+      "A": "Adaptive",
+      "B": "Stable",
+      "C": "Symmetric",
+      "D": "Effective"
+    },
+    "options": [
+      "If they adapt to system load levels using thresholds",
+      "If load balancing traffic is independent of load levels",
+      "If both senders and receivers initiate action",
+      "If load balancing overhead is minimal"
+    ],
+    "correct_answers": {
+      "A": "If they adapt to system load levels using thresholds",
+      "B": "If load balancing traffic is independent of load levels",
+      "C": "If both senders and receivers initiate action",
+      "D": "If load balancing overhead is minimal"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 7, Slide 13",
+    "question": "Which of the following are listed as disadvantages of Static Load Balancing?",
+    "image": null,
+    "options": [
+      "Predicting execution times is often not knowable",
+      "Affect of communication dynamics is often ignored",
+      "The number of iterations required by processors to converge is indeterminate",
+      "It requires a global pressure grid"
+    ],
+    "correct_answers": [
+      "Predicting execution times is often not knowable",
+      "Affect of communication dynamics is often ignored",
+      "The number of iterations required by processors to converge is indeterminate"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 7, Slide 13",
+    "question": "Which of the following are examples of Partitioning algorithms used in Static Load Balancing?",
+    "image": null,
+    "options": [
+      "Recursive Bisection",
+      "Simulated Annealing",
+      "Genetic Algorithms",
+      "Multi-level Contraction and Refinement",
+      "Adaptive Contracting"
+    ],
+    "correct_answers": [
+      "Recursive Bisection",
+      "Simulated Annealing",
+      "Genetic Algorithms",
+      "Multi-level Contraction and Refinement"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 8, Slide 14",
+    "question": "Match the predominant Server Load-Balancing Algorithms to their operational methods.",
+    "image": null,
+    "pairs": {
+      "A": "least connections",
+      "B": "weighted least connections",
+      "C": "round robin",
+      "D": "weighted round robin"
+    },
+    "options": [
+      "Server with smallest number of flows gets the new flow request.",
+      "Associate a strength for each server and distribute load based on all servers in the farm.",
+      "Round robin thru the servers in server farm.",
+      "Give each server a specific number of flows in a row."
+    ],
+    "correct_answers": {
+      "A": "Server with smallest number of flows gets the new flow request.",
+      "B": "Associate a strength for each server and distribute load based on all servers in the farm.",
+      "C": "Round robin thru the servers in server farm.",
+      "D": "Give each server a specific number of flows in a row."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 8, Slide 15",
+    "question": "In Centralized Dynamic Load Balancing, what is the term for when processes ask for more work while still working?",
+    "image": null,
+    "options": [
+      "Double buffering",
+      "Adaptive contracting",
+      "Receiver initiated balancing",
+      "Thrashing"
+    ],
+    "correct_answers": [
+      "Double buffering"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 9, Slide 16",
+    "question": "Match the processor types in a Centralized Load Balancing (Work Pool) Algorithm to their tasks.",
+    "image": null,
+    "pairs": {
+      "A": "Master Processor",
+      "B": "Slave Processor"
+    },
+    "options": [
+      "Maintains the work pool (queue, heap, etc.)",
+      "Perform task and then ask for another"
+    ],
+    "correct_answers": {
+      "A": "Maintains the work pool (queue, heap, etc.)",
+      "B": "Perform task and then ask for another"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 9, Slide 17",
+    "question": "In Decentralized Dynamic Load Balancing, which of the following is true regarding how processes detect their state?",
+    "image": null,
+    "options": [
+      "Processes detect that their workload is low.",
+      "Processes sense an overload condition when new tasks are spawned.",
+      "Processes sense an overload condition when a sudden increase in task load occurs.",
+      "A master processor monitors all slave states simultaneously."
+    ],
+    "correct_answers": [
+      "Processes detect that their workload is low.",
+      "Processes sense an overload condition when new tasks are spawned.",
+      "Processes sense an overload condition when a sudden increase in task load occurs."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 10, Slide 19",
+    "question": "Match the Decentralized Mechanism to when it is most effective.",
+    "image": null,
+    "pairs": {
+      "A": "Receiver Initiated",
+      "B": "Sender Initiated"
+    },
+    "options": [
+      "Effective when the average load is heavy",
+      "Effective when the average load is light"
+    ],
+    "correct_answers": {
+      "A": "Effective when the average load is heavy",
+      "B": "Effective when the average load is light"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 10, Slide 19",
+    "question": "What is a disadvantage of a Sender Initiated decentralized mechanism when loads are heavy?",
+    "image": null,
+    "options": [
+      "Can cause thrashing",
+      "Causes the master node to crash",
+      "It requires a request frequency threshold",
+      "It ignores the average load completely"
+    ],
+    "correct_answers": [
+      "Can cause thrashing"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 11, Slide 20",
+    "question": "Which of the following are true statements regarding Global vs. Local process selection?",
+    "image": null,
+    "options": [
+      "Global involves all the processors of the network.",
+      "Global may require expensive global synchronization.",
+      "Local involves only neighbor processes.",
+      "Local is easier to manage and has less overhead than the global approach.",
+      "Local guarantees that the overall load will always be perfectly balanced."
+    ],
+    "correct_answers": [
+      "Global involves all the processors of the network.",
+      "Global may require expensive global synchronization.",
+      "Local involves only neighbor processes.",
+      "Local is easier to manage and has less overhead than the global approach."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 11, Slide 21",
+    "question": "In the context of process selection, which neighbor selection algorithm requires issuing bids to neighbors where the best bid wins?",
+    "image": null,
+    "options": [
+      "Adaptive Contracting",
+      "Random",
+      "Round Robin",
+      "Gradient Algorithm"
+    ],
+    "correct_answers": [
+      "Adaptive Contracting"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 12, Slide 22",
+    "question": "When choosing thresholds for a low load condition (when a process is about to go idle), what is the primary goal?",
+    "image": null,
+    "options": [
+      "Prevent idleness, not achieve perfect balance",
+      "Ensure all servers have exactly equal connections",
+      "Minimize load balancing overhead at the master node",
+      "Issue bids to all network nodes simultaneously"
+    ],
+    "correct_answers": [
+      "Prevent idleness, not achieve perfect balance"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 12, Slide 23",
+    "question": "When the system load is high and the goal is to prevent thrashing, what type of threshold works well?",
+    "image": null,
+    "options": [
+      "An exponentially growing threshold",
+      "A low threshold constant",
+      "A static global threshold",
+      "A randomized threshold limit"
+    ],
+    "correct_answers": [
+      "An exponentially growing threshold"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 13, Slide 24",
+    "question": "In the Gradient Algorithm, what Node Data Structures are maintained for each neighbor?",
+    "image": null,
+    "options": [
+      "Distance, in hops, to the nearest lightly-loaded process",
+      "A load status flag indicating if the current processor is lightly-loaded, or normal",
+      "The IP address of the master processor",
+      "The bid value for the adaptive contracting handshake"
+    ],
+    "correct_answers": [
+      "Distance, in hops, to the nearest lightly-loaded process",
+      "A load status flag indicating if the current processor is lightly-loaded, or normal"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Load Balancing in Cloud and Data Center Networks",
+    "source": "Load Balancing in Cloud and Data Center Networks.pdf, Page 13, Slide 24",
+    "question": "How is Local Synchronization handled in the Gradient Algorithm?",
+    "image": null,
+    "options": [
+      "Node status changes are multicast to its neighbors",
+      "The master node polls all slaves iteratively",
+      "Spawned jobs are sent strictly via random selection",
+      "A global pressure grid is rebuilt every millisecond"
+    ],
+    "correct_answers": [
+      "Node status changes are multicast to its neighbors"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

@@ -1,0 +1,382 @@
+[
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 2",
+    "question": "What are the three basic criteria for the evaluation of a computing system?",
+    "image": null,
+    "options": [
+      "Functionality, Performance, and Cost",
+      "Reliability, Scalability, and Availability",
+      "Throughput, Latency, and Bandwidth",
+      "Security, Privacy, and Integrity"
+    ],
+    "correct_answers": [
+      "Functionality, Performance, and Cost"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 2",
+    "question": "Match the following resource allocation concepts to their correct definitions.",
+    "image": null,
+    "pairs": {
+      "A": "Policy",
+      "B": "Mechanisms",
+      "C": "Scheduling"
+    },
+    "options": [
+      "Principles guiding decisions.",
+      "The means to implement policies.",
+      "Deciding how to allocate resources of a system."
+    ],
+    "correct_answers": {
+      "A": "Principles guiding decisions.",
+      "B": "The means to implement policies.",
+      "C": "Deciding how to allocate resources of a system."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 3",
+    "question": "Match the Cloud Resource Management (CRM) policies to their appropriate descriptions.",
+    "image": null,
+    "pairs": {
+      "A": "Admission control",
+      "B": "Capacity allocation",
+      "C": "Load balancing",
+      "D": "Energy optimization",
+      "E": "Quality of service (QoS) guarantees"
+    },
+    "options": [
+      "Prevent the system from accepting workload in violation of high-level system policies.",
+      "Allocate resources for individual activations of a service.",
+      "Distribute the workload evenly among the servers.",
+      "Minimization of energy consumption.",
+      "Ability to satisfy timing or other conditions specified by a Service Level Agreement."
+    ],
+    "correct_answers": {
+      "A": "Prevent the system from accepting workload in violation of high-level system policies.",
+      "B": "Allocate resources for individual activations of a service.",
+      "C": "Distribute the workload evenly among the servers.",
+      "D": "Minimization of energy consumption.",
+      "E": "Ability to satisfy timing or other conditions specified by a Service Level Agreement."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 4",
+    "question": "What constitutes the outputs in the control theory application to cloud resource management?",
+    "image": null,
+    "options": [
+      "The resource allocations to the individual applications.",
+      "Sensors used to estimate relevant measures of performance.",
+      "The offered workload and the policies for admission control.",
+      "Dynamic thresholds based on time averages."
+    ],
+    "correct_answers": [
+      "The resource allocations to the individual applications."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 4",
+    "question": "Which of the following are considered inputs in the control system applied to cloud resource management?",
+    "image": null,
+    "options": [
+      "The offered workload",
+      "Policies for admission control",
+      "Energy optimization policies",
+      "Resource allocations to the individual applications",
+      "Sensors used to estimate relevant measures"
+    ],
+    "correct_answers": [
+      "The offered workload",
+      "Policies for admission control",
+      "Energy optimization policies"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 5",
+    "question": "In the structure of a cloud controller, what do the variables 'r' and 's' represent?",
+    "image": null,
+    "options": [
+      "The weighting factors of the performance index.",
+      "The high and low thresholds for processor utilization.",
+      "The state feedback regarding the current state.",
+      "The external traffic disturbance."
+    ],
+    "correct_answers": [
+      "The weighting factors of the performance index."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 5",
+    "question": "Which of the following components are part of the cloud controller structure?",
+    "image": null,
+    "options": [
+      "Predictive filter",
+      "Optimal controller",
+      "Queuing dynamics",
+      "Workload generator",
+      "Power assignment"
+    ],
+    "correct_answers": [
+      "Predictive filter",
+      "Optimal controller",
+      "Queuing dynamics"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 6",
+    "question": "Match the types of controllers to their specific functions in design decisions.",
+    "image": null,
+    "pairs": {
+      "A": "Application controllers",
+      "B": "Cloud controllers"
+    },
+    "options": [
+      "Determine if additional resources are needed.",
+      "Arbitrate requests for resources and allocates the physical resources."
+    ],
+    "correct_answers": {
+      "A": "Determine if additional resources are needed.",
+      "B": "Arbitrate requests for resources and allocates the physical resources."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 6",
+    "question": "When choosing between fine versus coarse control, what trade-off is made regarding system state parameters?",
+    "image": null,
+    "options": [
+      "The accuracy of parameters is traded for the efficiency of implementation.",
+      "Throughput is traded for minimized turnaround time.",
+      "Cost is traded for improved functionality.",
+      "Energy optimization is traded for QoS guarantees."
+    ],
+    "correct_answers": [
+      "The accuracy of parameters is traded for the efficiency of implementation."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 7",
+    "question": "According to the Proportional thresholding algorithm, when should the system request additional virtual machines?",
+    "image": null,
+    "options": [
+      "When the average value of the CPU utilization over the current time slice exceeds the high threshold.",
+      "When the average value of the CPU utilization over the current time slice falls below the low threshold.",
+      "When the predictive filter forecasts an external traffic disturbance.",
+      "When a hard deadline is approaching."
+    ],
+    "correct_answers": [
+      "When the average value of the CPU utilization over the current time slice exceeds the high threshold."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 7",
+    "question": "According to the Proportional thresholding algorithm, when should the system release a virtual machine?",
+    "image": null,
+    "options": [
+      "When the average value of the CPU utilization over the current time slice falls below the low threshold.",
+      "When the average value of the CPU utilization over the current time slice exceeds the high threshold.",
+      "When the optimal controller receives state feedback.",
+      "When the batch system objective has been met."
+    ],
+    "correct_answers": [
+      "When the average value of the CPU utilization over the current time slice falls below the low threshold."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 7",
+    "question": "What are the conclusions drawn from proportional thresholding regarding dynamic thresholds?",
+    "image": null,
+    "options": [
+      "Dynamic thresholds perform better than static ones, and two thresholds are better than one.",
+      "Static thresholds perform better than dynamic ones, and one threshold is sufficient.",
+      "Dynamic thresholds perform equally to static ones, but one threshold is better.",
+      "Static thresholds and dynamic thresholds are incomparable in this algorithm."
+    ],
+    "correct_answers": [
+      "Dynamic thresholds perform better than static ones, and two thresholds are better than one."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 8",
+    "question": "Which of the following are methods for coordinating power and performance management?",
+    "image": null,
+    "options": [
+      "Use separate controllers/managers for the two objectives.",
+      "Use a joint utility function for power and performance.",
+      "Use a single threshold based on historical processor utilization.",
+      "Disable the predictive filter to save energy."
+    ],
+    "correct_answers": [
+      "Use separate controllers/managers for the two objectives.",
+      "Use a joint utility function for power and performance."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 9",
+    "question": "What information is fed into the autonomous performance and power managers to ensure prescribed performance and energy optimization?",
+    "image": null,
+    "options": [
+      "Performance and power data",
+      "Dynamic and static thresholds",
+      "Hard and soft deadlines",
+      "Workload generator outputs"
+    ],
+    "correct_answers": [
+      "Performance and power data"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 10",
+    "question": "At which of the following levels is cloud scheduling responsible for resource sharing?",
+    "image": null,
+    "options": [
+      "A server can be shared among several virtual machines.",
+      "A virtual machine could support several applications.",
+      "An application may consist of multiple threads.",
+      "A user can be shared across multiple hardware nodes."
+    ],
+    "correct_answers": [
+      "A server can be shared among several virtual machines.",
+      "A virtual machine could support several applications.",
+      "An application may consist of multiple threads."
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 10",
+    "question": "Match the type of system to the objectives of its scheduler.",
+    "image": null,
+    "pairs": {
+      "A": "Batch system",
+      "B": "Real-time system"
+    },
+    "options": [
+      "Maximize throughput and minimize turnaround time.",
+      "Meet the deadlines and be predictable."
+    ],
+    "correct_answers": {
+      "A": "Maximize throughput and minimize turnaround time.",
+      "B": "Meet the deadlines and be predictable."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 10",
+    "question": "Which of the following are common algorithms used for best effort applications?",
+    "image": null,
+    "options": [
+      "Round-robin",
+      "First-Come-First-Serve (FCFS)",
+      "Shortest-Job-First (SJF)",
+      "Priority algorithms",
+      "Proportional thresholding"
+    ],
+    "correct_answers": [
+      "Round-robin",
+      "First-Come-First-Serve (FCFS)",
+      "Shortest-Job-First (SJF)",
+      "Priority algorithms"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 11",
+    "question": "Match the type of deadline to its characteristics.",
+    "image": null,
+    "pairs": {
+      "A": "Hard deadlines",
+      "B": "Soft deadlines"
+    },
+    "options": [
+      "Strict, with penalties, and expressed precisely as milliseconds or seconds.",
+      "More of a guideline, can be missed by fractions of units, and generally has no penalties."
+    ],
+    "correct_answers": {
+      "A": "Strict, with penalties, and expressed precisely as milliseconds or seconds.",
+      "B": "More of a guideline, can be missed by fractions of units, and generally has no penalties."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 11",
+    "question": "What is a characteristic consequence of missing a soft deadline?",
+    "image": null,
+    "options": [
+      "In general, there are no penalties.",
+      "Other tasks which depend on it are immediately failed.",
+      "The system terminates the virtual machine.",
+      "There are severe financial penalties."
+    ],
+    "correct_answers": [
+      "In general, there are no penalties."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Chapter 6 - Cloud Resource Management",
+    "source": "Chapter6 - for NET 4012.pdf, Page 3",
+    "question": "Which cloud resource management policy defines the ability to satisfy timing or other conditions specified by a Service Level Agreement?",
+    "image": null,
+    "options": [
+      "Quality of service (QoS) guarantees",
+      "Energy optimization",
+      "Admission control",
+      "Load balancing"
+    ],
+    "correct_answers": [
+      "Quality of service (QoS) guarantees"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  }
+]

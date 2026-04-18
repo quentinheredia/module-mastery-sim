@@ -1,0 +1,376 @@
+[
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 2, Slide 3",
+    "question": "According to the slides, what is the definition of optimization?",
+    "image": null,
+    "options": [
+      "Best decision + Constraints + Objective",
+      "Algorithms + Variables + Output",
+      "Minimizing cost + Maximizing profit",
+      "Linear equations + Curves"
+    ],
+    "correct_answers": [
+      "Best decision + Constraints + Objective"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 2, Slide 2",
+    "question": "Which of the following areas are listed to show why optimization matters?",
+    "image": null,
+    "options": [
+      "Routing",
+      "Cloud scheduling",
+      "Logistics",
+      "Social Media Management",
+      "Finance"
+    ],
+    "correct_answers": [
+      "Routing",
+      "Cloud scheduling",
+      "Logistics",
+      "Finance"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 3, Slide 5",
+    "question": "Match the optimization components to their descriptions.",
+    "image": null,
+    "pairs": {
+      "A": "Variables",
+      "B": "Objective",
+      "C": "Constraints",
+      "D": "Feasible region",
+      "E": "Optimal solution"
+    },
+    "options": [
+      "decision variable -> x",
+      "what we optimize",
+      "conditions that must be met",
+      "all valid solutions",
+      "best feasible point"
+    ],
+    "correct_answers": {
+      "A": "decision variable -> x",
+      "B": "what we optimize",
+      "C": "conditions that must be met",
+      "D": "all valid solutions",
+      "E": "best feasible point"
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 3, Slide 4",
+    "question": "In the general formulation of optimization, what represents the objective function?",
+    "image": null,
+    "options": [
+      "Min f(x)",
+      "gi(x) <= 0",
+      "hj(x) = 0",
+      "x >= 0"
+    ],
+    "correct_answers": [
+      "Min f(x)"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 3, Slide 4",
+    "question": "In the general formulation, which equations or inequalities are used to represent limits or conditions that must be met?",
+    "image": null,
+    "options": [
+      "gi(x) <= 0",
+      "hj(x) = 0",
+      "Min f(x)",
+      "Max f(y)"
+    ],
+    "correct_answers": [
+      "gi(x) <= 0",
+      "hj(x) = 0"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 4, Slide 6",
+    "question": "In the linear programming example for optimizing Cloud VM Resources, what is the objective function to maximize profit?",
+    "image": null,
+    "options": [
+      "P = 10x + 15y",
+      "P = 2x + 4y",
+      "P = 3x + 2y",
+      "P = 16x + 12y"
+    ],
+    "correct_answers": [
+      "P = 10x + 15y"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 4, Slide 6",
+    "question": "In the Cloud VM Resources example, what are the sign restrictions indicating you cannot have negative VMs?",
+    "image": null,
+    "options": [
+      "x >= 0, y >= 0",
+      "x <= 0, y <= 0",
+      "x > 1, y > 1",
+      "x = 0, y = 0"
+    ],
+    "correct_answers": [
+      "x >= 0, y >= 0"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 5, Slide 8",
+    "question": "What is a key characteristic of Nonlinear optimization (NLP)?",
+    "image": null,
+    "options": [
+      "It solves problems with curves, products, or powers.",
+      "It only uses linear equations for objectives.",
+      "It ensures strictly proportional relationships.",
+      "It guarantees finding the best solution quickly."
+    ],
+    "correct_answers": [
+      "It solves problems with curves, products, or powers."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 5, Slide 9",
+    "question": "What is the primary difference between Convex and Nonconvex problems regarding minimums?",
+    "image": null,
+    "options": [
+      "Convex has one minimum, Nonconvex has many.",
+      "Convex has many minimums, Nonconvex has one.",
+      "Both have infinite minimums.",
+      "Neither has a minimum."
+    ],
+    "correct_answers": [
+      "Convex has one minimum, Nonconvex has many."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 5, Slide 9",
+    "question": "Why are non-convex problems often necessary for complex machine learning tasks despite being NP-hard?",
+    "image": null,
+    "options": [
+      "A \"good enough\" local solution is acceptable.",
+      "They always find the global optimal point.",
+      "They utilize proportional relationships.",
+      "They eliminate all constraints."
+    ],
+    "correct_answers": [
+      "A \"good enough\" local solution is acceptable."
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 6, Slide 10",
+    "question": "Which of the following are listed as optimization problems specifically in cloud systems?",
+    "image": null,
+    "options": [
+      "VM placement",
+      "Load balancing",
+      "Scheduling",
+      "Energy minimization",
+      "Database indexing"
+    ],
+    "correct_answers": [
+      "VM placement",
+      "Load balancing",
+      "Scheduling",
+      "Energy minimization"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 6, Slide 11",
+    "question": "When the objective is \"min makespan\" with constraints like \"each task assigned once\" and \"capacity limits\", what does the problem become?",
+    "image": null,
+    "options": [
+      "An integer optimization problem",
+      "A simple linear problem",
+      "An unconstrained optimization problem",
+      "A continuous feasible region problem"
+    ],
+    "correct_answers": [
+      "An integer optimization problem"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 7, Slide 12",
+    "question": "Cloud optimization often balances latency, cost, energy, fairness, and bandwidth. What type of optimization is this called?",
+    "image": null,
+    "options": [
+      "Multi-objective optimization",
+      "Single-variable optimization",
+      "Unconstrained optimization",
+      "Proportional thresholding"
+    ],
+    "correct_answers": [
+      "Multi-objective optimization"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 7, Slide 13",
+    "question": "Because real-world cloud optimization is NP-hard, large-scale, dynamic, and uncertain, what do we use to solve it?",
+    "image": null,
+    "options": [
+      "Heuristics",
+      "Exact integer algorithms",
+      "Simple linear programming exclusively",
+      "Graphical interpretation only"
+    ],
+    "correct_answers": [
+      "Heuristics"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 8, Slide 14",
+    "question": "In the in-class activity for constrained minimization, what is the constraint provided for minimizing f(x,y) = x^2 + y^2?",
+    "image": null,
+    "options": [
+      "x + y >= 2",
+      "x + y <= 2",
+      "x^2 + y^2 = 2",
+      "x - y >= 0"
+    ],
+    "correct_answers": [
+      "x + y >= 2"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 8, Slide 15",
+    "question": "According to the key takeaways, what matters more than algorithms in optimization?",
+    "image": null,
+    "options": [
+      "Modeling matters more than algorithms",
+      "Hardware matters more than algorithms",
+      "Virtual machines matter more than algorithms",
+      "Bandwidth matters more than algorithms"
+    ],
+    "correct_answers": [
+      "Modeling matters more than algorithms"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 8, Slide 15",
+    "question": "Which type of problems are described as \"friendly\" in the key takeaways?",
+    "image": null,
+    "options": [
+      "Convex problems are friendly",
+      "Nonconvex problems are friendly",
+      "NP-hard problems are friendly",
+      "Multi-objective problems are friendly"
+    ],
+    "correct_answers": [
+      "Convex problems are friendly"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 8, Slide 15",
+    "question": "According to the key takeaways, what dominates the real world?",
+    "image": null,
+    "options": [
+      "Nonconvex problems dominate real world",
+      "Convex problems dominate real world",
+      "Linear programming dominates real world",
+      "Simple integers dominate real world"
+    ],
+    "correct_answers": [
+      "Nonconvex problems dominate real world"
+    ],
+    "question_type": "single_choice",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 5, Slides 8-9",
+    "question": "Match the optimization term with its characteristic from the text.",
+    "image": null,
+    "pairs": {
+      "A": "Linear optimization (LP)",
+      "B": "Nonlinear optimization (NLP)",
+      "C": "Convex problems",
+      "D": "Non-convex problems"
+    },
+    "options": [
+      "Finds best outcome using linear equations.",
+      "Solves problems with curves, products, or powers.",
+      "Provide guarantees of finding the best solution quickly.",
+      "Are generally NP-hard and have many minimums."
+    ],
+    "correct_answers": {
+      "A": "Finds best outcome using linear equations.",
+      "B": "Solves problems with curves, products, or powers.",
+      "C": "Provide guarantees of finding the best solution quickly.",
+      "D": "Are generally NP-hard and have many minimums."
+    },
+    "question_type": "matching",
+    "points": 1
+  },
+  {
+    "module": "Intro to Optimization in Cloud",
+    "source": "Intro to Optimization in Cloud.pdf, Page 7, Slide 13",
+    "question": "Which of the following describes the real-world difficulty of cloud optimization?",
+    "image": null,
+    "options": [
+      "NP-hard",
+      "Large-scale",
+      "Dynamic",
+      "Uncertain",
+      "Always convex"
+    ],
+    "correct_answers": [
+      "NP-hard",
+      "Large-scale",
+      "Dynamic",
+      "Uncertain"
+    ],
+    "question_type": "multiple_answer",
+    "points": 1
+  }
+]

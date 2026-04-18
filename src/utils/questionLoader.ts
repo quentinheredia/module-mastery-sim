@@ -37,6 +37,10 @@ import net4012lecture3 from "@/assets/data/net4012/module3.json";
 import net4012lecture4 from "@/assets/data/net4012/module4.json";
 import net4012lecture5 from "@/assets/data/net4012/module5.json";
 import net4012lecture6 from "@/assets/data/net4012/module6.json";
+import net4012chapter6 from "@/assets/data/net4012/chapter6.json";
+import net4012optimization from "@/assets/data/net4012/optimization.json";
+import net4012loadbalancing from "@/assets/data/net4012/load_balancing.json";
+import net4012vmmigration from "@/assets/data/net4012/vm_migration.json";
 import net4012inclass from "@/assets/data/net4012/module7.json";
 
 // NET4000 Course Data
@@ -59,9 +63,6 @@ import net4010week9_1 from "@/assets/data/net4010/week9_1.json";
 import net4010week9_2 from "@/assets/data/net4010/week9_2.json";
 import net4010week11_2 from "@/assets/data/net4010/week11_2.json";
 import net4010week12_1 from "@/assets/data/net4010/week12_1.json";
-import net4010week12_2 from "@/assets/data/net4010/week12_2.json";
-import net4010week13_1 from "@/assets/data/net4010/week13_1.json";
-import net4010exam from "@/assets/data/net4010/exam.json";
 
 // NET 3012 Course Data
 import test1w2014 from "@/assets/data/net3012/test1w2014.json";
@@ -103,6 +104,10 @@ const courseData: Record<string, Question[]> = {
     ...net4012lecture4,
     ...net4012lecture5,
     ...net4012lecture6,
+    ...net4012chapter6,
+    ...net4012optimization,
+    ...net4012loadbalancing,
+    ...net4012vmmigration,
     ...net4012inclass,
   ] as Question[],
 
@@ -126,9 +131,6 @@ const courseData: Record<string, Question[]> = {
     ...net4010week9_2,
     ...net4010week11_2,
     ...net4010week12_1,
-    ...net4010week12_2,
-    ...net4010week13_1,
-    ...net4010exam,
   ] as Question[],
 
   net3012: [
